@@ -83,20 +83,20 @@
     <!-- ============ COLONNE DROITE : résultats ============ -->
     <section class="col col-right">
 
-      <div class="panel" id="section-stats">
-        <h2 class="panel-title">Résumé des effets cumulés</h2>
-        <p class="panel-sub">
-          Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.
-        </p>
-        <div id="stats-grid" class="stats-grid"></div>
-      </div>
-
       <div class="panel" id="section-z">
         <h2 class="panel-title">Bilan Cap Z (équipe)</h2>
         <p class="panel-sub">
           Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.
         </p>
         <div id="z-bilan" class="z-bilan"></div>
+      </div>
+
+      <div class="panel" id="section-stats">
+        <h2 class="panel-title">Résumé des effets cumulés</h2>
+        <p class="panel-sub">
+          Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.
+        </p>
+        <div id="stats-grid" class="stats-grid"></div>
       </div>
 
       <div class="panel" id="section-passifs">
@@ -153,8 +153,8 @@
   <nav class="mobile-tabbar" aria-label="Navigation rapide">
     <a href="#section-team" data-target="section-team" class="active">Équipe</a>
     <a href="#section-build" data-target="section-build">Build</a>
-    <a href="#section-stats" data-target="section-stats">Stats</a>
     <a href="#section-z" data-target="section-z">Cap Z</a>
+    <a href="#section-stats" data-target="section-stats">Stats</a>
   </nav>
 
   <!-- ============ PUBS LATÉRALES (skyscrapers 160×600) ============ -->
