@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Fond -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0c0d11"/>
+      <stop offset="100%" stop-color="#14161c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ff5722"/>
+      <stop offset="100%" stop-color="#ff8a3d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%"   stop-color="#ff5722" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff5722" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Barre accent gauche -->
+  <rect x="80" y="200" width="6" height="230" rx="3" fill="url(#accent)"/>
+
+  <!-- Glyph DBL -->
+  <rect x="100" y="195" width="80" height="80" rx="16" fill="url(#accent)"/>
+  <text x="140" y="249" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="white" text-anchor="middle" letter-spacing="1">DBL</text>
+
+  <!-- Titre principal -->
+  <text x="205" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="white" letter-spacing="-1">DBL Optimizer</text>
+
+  <!-- Tagline -->
+  <text x="205" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" fill="#b4b6bf">Team Builder &amp; Items Optimization</text>
+
+  <!-- Features pills -->
+  <rect x="205" y="355" width="165" height="40" rx="20" fill="#1d2029"/>
+  <text x="288" y="381" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ff5722" text-anchor="middle">⚡ Cap Z</text>
+
+  <rect x="385" y="355" width="175" height="40" rx="20" fill="#1d2029"/>
+  <text x="473" y="381" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#b4b6bf" text-anchor="middle">🏆 157 Zenkais</text>
+
+  <rect x="575" y="355" width="175" height="40" rx="20" fill="#1d2029"/>
+  <text x="663" y="381" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#b4b6bf" text-anchor="middle">🎮 Items &amp; Stats</text>
+
+  <!-- URL -->
+  <text x="205" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="500" fill="#80838f">dbl-optimizer.com</text>
+</svg>
