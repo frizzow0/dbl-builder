@@ -139,6 +139,7 @@
     team: Array.from({ length: 6 }, emptyTeamSlot),
     activeSlot: 0,           // perso actuellement édité dans l'UI
     leaderSlot: 0,           // perso désigné comme leader
+    noLeader: false,         // true = simule une équipe sans leader (bypass désactivé)
     conditions: {},          // tag => nombre de membres (saisie utilisateur, reste global)
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalRarityFilter: null,
@@ -147,6 +148,21 @@
     charRarityFilter: null,
     charElementFilter: null,
   };
+
+  // Retourne l'index effectif du leader (-1 si mode "sans leader" activé).
+  function effectiveLeaderSlot() {
+    return state.noLeader ? -1 : state.leaderSlot;
+  }
+
+  // Retourne le Set des IDs de personnages déjà placés dans l'équipe,
+  // en excluant le slot actif (pour autoriser le remplacement).
+  function getUsedCharIds() {
+    const ids = new Set();
+    state.team.forEach((slot, i) => {
+      if (i !== state.activeSlot && slot.character) ids.add(slot.character.id);
+    });
+    return ids;
+  }
 
   // ===== ACCESSEURS D'ALIAS (perso actif) =====
   // Pour ne pas tout réécrire en `state.team[state.activeSlot].xxx`, on expose
@@ -236,7 +252,7 @@
     if (!target || !target.character) return [];
 
     const targetTrio = Math.floor(targetSlotIdx / 3);
-    const targetIsLeader = targetSlotIdx === state.leaderSlot;
+    const targetIsLeader = targetSlotIdx === effectiveLeaderSlot();
 
     const items = [];
     for (let i = 0; i < state.team.length; i++) {
@@ -244,7 +260,7 @@
       if (!sender.character) continue;
 
       const senderTrio = Math.floor(i / 3);
-      const senderIsLeader = i === state.leaderSlot;
+      const senderIsLeader = i === effectiveLeaderSlot();
       const leaderInvolved =
         targetIsLeader ||
         (senderIsLeader && senderTrio === targetTrio);
@@ -451,18 +467,21 @@
       return;
     }
 
+    const usedIds = getUsedCharIds();
     charSuggestionsEl.innerHTML = matches
       .map((p) => {
+        const isTaken = usedIds.has(p.id);
         const elementClass = `elem-${(p.element || "").toLowerCase()}`;
         const img = p.image
           ? `<img class="char-suggestion-img" src="${p.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
           : `<div class="char-suggestion-img char-suggestion-img-placeholder">?</div>`;
         return `
-          <li data-char-id="${p.id}" class="${elementClass}">
+          <li data-char-id="${p.id}" class="${elementClass}${isTaken ? " is-taken" : ""}" ${isTaken ? 'aria-disabled="true"' : ''}>
             ${img}
             <span class="char-suggestion-element">${p.element || ""}</span>
             <span class="char-suggestion-name">${p.nom.trim()}</span>
             <small class="char-suggestion-code">${p.cardCode || ""} · ${p.rarete}</small>
+            ${isTaken ? '<span class="char-taken-badge">Déjà dans l\'équipe</span>' : ""}
           </li>
         `;
       })
@@ -541,7 +560,7 @@
     charZAbilityEl.classList.remove("hidden");
     const tiers = active.character.zAbilities || active.character.zAbilitiesZenkai;
     const conds = getEffectiveConditionsFor(active.character);
-    const activeIsLeader = state.activeSlot === state.leaderSlot;
+    const activeIsLeader = state.activeSlot === effectiveLeaderSlot();
 
     const pills = tiers
       .map((z) => {
@@ -685,6 +704,7 @@
     const slots = state.team.map((slot, i) => {
       const c = slot.character;
       const isActive = i === state.activeSlot;
+      // On garde le marquage visuel du leader désigné, mais grisé si noLeader actif
       const isLeader = i === state.leaderSlot;
       const empty = !c;
       const elementClass = c ? `elem-${(c.element || "").toLowerCase()}` : "";
@@ -696,7 +716,7 @@
       const nbItems = slot.items.filter(Boolean).length;
       return `
         <div class="team-card ${isActive ? "is-active" : ""} ${empty ? "is-empty" : ""} ${elementClass}" data-team-slot="${i}">
-          <button class="team-leader-toggle ${isLeader ? "is-leader" : ""}" data-leader-toggle="${i}" title="Désigner comme Leader" type="button">★</button>
+          <button class="team-leader-toggle ${isLeader ? "is-leader" : ""} ${state.noLeader ? "is-leader-disabled" : ""}" data-leader-toggle="${i}" title="Désigner comme Leader" type="button">★</button>
           ${img}
           <div class="team-card-info">
             <div class="team-card-name" title="${name}">${name}</div>
@@ -713,7 +733,9 @@
     `;
     // Mise à jour du titre du panel build
     const activeChar = active.character;
-    buildTitleEl.innerHTML = `Build du Slot ${state.activeSlot + 1}${activeChar ? ` — <span style="color:var(--accent)">${activeChar.nom.trim()}</span>` : ""}${state.activeSlot === state.leaderSlot ? " <span class=\"build-title-leader\">★ Leader</span>" : ""}`;
+    const showLeaderBadge = !state.noLeader && state.activeSlot === state.leaderSlot;
+    buildTitleEl.innerHTML = `Build du Slot ${state.activeSlot + 1}${activeChar ? ` — <span style="color:var(--accent)">${activeChar.nom.trim()}</span>` : ""}${showLeaderBadge ? " <span class=\"build-title-leader\">★ Leader</span>" : ""}`;
+    renderNoLeaderBtn();
   }
 
   teamGridEl.addEventListener("click", (e) => {
@@ -752,6 +774,7 @@
   charSuggestionsEl.addEventListener("click", (e) => {
     const li = e.target.closest("li[data-char-id]");
     if (!li) return;
+    if (li.classList.contains("is-taken")) return; // déjà dans l'équipe
     const p = PERSONNAGES.find((p) => p.id === li.dataset.charId);
     if (p) selectCharacter(p);
   });
@@ -1500,7 +1523,7 @@
 
     const perCharSection = occupied
       .map((slot) => {
-        const isLeader = slot.idx === state.leaderSlot;
+        const isLeader = slot.idx === effectiveLeaderSlot();
         const trio = Math.floor(slot.idx / 3);
         const zItems = buildTeamZItemsFor(slot.idx);
         const conds = getEffectiveConditionsFor(slot.character);
@@ -1511,10 +1534,10 @@
           const isSelf = zi.sourceSlot === slot.idx;
           const senderSlot = state.team[zi.sourceSlot];
           const senderTrio = Math.floor(zi.sourceSlot / 3);
-          const senderIsLeader = zi.sourceSlot === state.leaderSlot;
+          const senderIsLeader = zi.sourceSlot === effectiveLeaderSlot();
           // Indique si cette source a été bypassée par le leader (sender ou target leader, même trio cible)
           const wasBypassed =
-            (slot.idx === state.leaderSlot) ||
+            (slot.idx === effectiveLeaderSlot()) ||
             (senderIsLeader && senderTrio === trio);
 
           // Pour l'affichage, on prend les lignes ORIGINALES (lignesAll)
@@ -1608,6 +1631,24 @@
     renderSlots();
     renderResults();
   }
+
+  // ===== BOUTON "SANS LEADER" =====
+  const noLeaderBtn = document.getElementById("no-leader-btn");
+
+  function renderNoLeaderBtn() {
+    if (!noLeaderBtn) return;
+    noLeaderBtn.classList.toggle("is-active", state.noLeader);
+    noLeaderBtn.innerHTML = state.noLeader
+      ? "★ Réactiver le leader"
+      : "★ Désactiver le leader";
+  }
+
+  noLeaderBtn.addEventListener("click", () => {
+    state.noLeader = !state.noLeader;
+    renderTeamGrid();       // met à jour les étoiles + appelle renderNoLeaderBtn
+    renderCharZAbility();   // met à jour le badge "Leader bypass"
+    renderResults();        // recalcule les Cap Z sans leader
+  });
 
   // ===== MOTION DESIGN =====
   // Vanilla JS — GPU only (transform + opacity). Aucune dépendance.
