@@ -679,6 +679,11 @@
   }
 
   function selectCharacter(p) {
+    // Garde de sécurité : bloquer les doublons même si l'UI ne l'a pas stoppé
+    if (p) {
+      const key = charKey(p);
+      if (key && getUsedCharIds().has(key)) return;
+    }
     active.character = p || null;
     active.zTier = 4; // reset au max à chaque nouveau perso
     charSearchEl.value = "";
@@ -1647,11 +1652,61 @@
   function renderNoLeaderBtn() {
     if (!noLeaderBtn) return;
     noLeaderBtn.classList.toggle("is-active", state.noLeader);
+
+    // Styles appliqués directement en JS pour contourner les conflits de cascade CSS.
+    // Le reset global `button {}` et `all: unset` se disputent la priorité selon les
+    // navigateurs — l'inline style gagne toujours.
+    const active_ = state.noLeader;
+    noLeaderBtn.style.cssText = [
+      "display:flex",
+      "align-items:center",
+      "gap:8px",
+      "width:100%",
+      "padding:12px 20px",
+      "background:" + (active_ ? "var(--accent-tint-2)" : "var(--surface-2)"),
+      "color:"       + (active_ ? "var(--accent)"       : "var(--text-soft)"),
+      "font-family:var(--font-body)",
+      "font-size:12px",
+      "font-weight:600",
+      "letter-spacing:.02em",
+      "cursor:pointer",
+      "border:none",
+      "border-radius:0",
+      "box-sizing:border-box",
+      "user-select:none",
+      "-webkit-user-select:none",
+      "outline:none",
+      "text-align:left",
+      "transition:background 200ms,color 200ms",
+    ].join(";");
+
+    const starEl  = noLeaderBtn.querySelector(".no-leader-star");
     const textEl  = noLeaderBtn.querySelector(".no-leader-text");
     const badgeEl = noLeaderBtn.querySelector(".no-leader-badge");
-    if (textEl)  textEl.textContent  = state.noLeader ? "Réactiver le leader" : "Désactiver le leader";
-    if (badgeEl) badgeEl.textContent = state.noLeader ? "ON"  : "OFF";
-    if (badgeEl) badgeEl.classList.toggle("is-on", state.noLeader);
+
+    if (starEl) {
+      starEl.style.cssText = "font-size:13px;flex-shrink:0;transition:color 200ms;color:" +
+        (active_ ? "var(--accent)" : "var(--muted)");
+    }
+    if (textEl) {
+      textEl.style.cssText = "flex:1";
+      textEl.textContent = active_ ? "Réactiver le leader" : "Désactiver le leader";
+    }
+    if (badgeEl) {
+      badgeEl.textContent = active_ ? "ON" : "OFF";
+      badgeEl.classList.toggle("is-on", active_);
+      badgeEl.style.cssText = [
+        "font-size:10px",
+        "font-weight:700",
+        "letter-spacing:.08em",
+        "padding:2px 7px",
+        "border-radius:999px",
+        "flex-shrink:0",
+        "background:" + (active_ ? "var(--accent)" : "var(--line)"),
+        "color:"       + (active_ ? "#fff"          : "var(--muted)"),
+        "transition:background 200ms,color 200ms",
+      ].join(";");
+    }
   }
 
   noLeaderBtn.addEventListener("click", () => {
