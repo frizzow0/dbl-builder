@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dbl-optimizer.com/sitemap.xml

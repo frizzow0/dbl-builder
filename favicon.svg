@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5722"/>
+      <stop offset="100%" stop-color="#ff8a3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#g)"/>
+  <!-- Highlight interne -->
+  <rect x="2" y="2" width="28" height="14" rx="5" fill="rgba(255,255,255,0.18)"/>
+  <!-- Texte DBL -->
+  <text x="16" y="21.5"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="12" font-weight="800"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="0.5">DBL</text>
+</svg>

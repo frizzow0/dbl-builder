@@ -27,9 +27,29 @@
   <meta name="twitter:description" content="Construis ton équipe DBL, optimise tes items et calcule tes Cap Z en temps réel." />
   <meta name="twitter:image"       content="https://dbl-optimizer.com/og-image.svg" />
 
+  <!-- ── Favicon & PWA ──────────────────────────────────── -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.svg" sizes="any" />
+  <link rel="apple-touch-icon" href="/og-image.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- ============ NOSCRIPT FALLBACK ============ -->
+  <noscript>
+    <style>
+      .noscript-banner { position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+        background: #ff5722; color: #fff; text-align: center; padding: 12px 16px;
+        font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; }
+    </style>
+    <div class="noscript-banner">
+      ⚠️ DBL Optimizer nécessite JavaScript pour fonctionner.
+      Veuillez activer JavaScript dans votre navigateur.
+    </div>
+  </noscript>
+
   <header class="topbar">
     <div class="brand">
       <span class="brand-glyph">DBL</span>
@@ -145,6 +165,8 @@
         id="item-search"
         class="search-input"
         placeholder="Filtrer par nom..."
+        aria-label="Rechercher un item"
+        autocomplete="off"
       />
       <div id="rarity-filters" class="rarity-filters"></div>
       <ul id="item-list" class="item-list"></ul>
@@ -164,6 +186,7 @@
         id="char-search"
         class="search-input"
         placeholder="Rechercher (nom, code, trait)..."
+        aria-label="Rechercher un personnage"
         autocomplete="off"
       />
       <div id="char-filters" class="char-filters"></div>

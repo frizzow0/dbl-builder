@@ -377,11 +377,12 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 }
 .team-card-btn {
   flex: 1;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: .05em;
   text-transform: uppercase;
-  padding: 4px 0;
+  padding: 7px 0;
+  min-height: 32px;
   border-radius: var(--r-pill);
   border: 1px solid rgba(255,255,255,.28);
   background: rgba(255,255,255,.14);
@@ -618,7 +619,7 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .char-selected-clear {
   position: absolute;
   top: 6px; right: 6px;
-  width: 24px; height: 24px;
+  width: 32px; height: 32px;
   border-radius: 50%;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -846,7 +847,7 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   display: block;
   width: max-content;
   max-width: 100%;
-  font-size: 9px;
+  font-size: 11px;
   padding: 2px 7px;
   letter-spacing: .06em;
   margin-bottom: 4px;
@@ -1348,7 +1349,7 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   text-align: center;
 }
 .stat-cell-label {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .04em;
@@ -1363,7 +1364,7 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   margin-top: 3px;
 }
 .stat-cell-gain {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--text-soft);
   margin-top: 2px;
 }
@@ -2263,4 +2264,67 @@ body:has(#item-modal:not(.hidden)) .ad-side {
   .stat-row-split      { animation: none !important; }
   .stat-cell.is-flashing { animation: none !important; }
   .slot-content.is-popping { animation: none !important; }
+}
+
+/* ── Touch targets : hauteur minimum 44px sur mobile ─────────────── */
+@media (max-width: 1023px) {
+  .mobile-tabbar a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .z-pill {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .char-filter-pill {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .rarity-pill {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .slot-content {
+    min-height: 100px;
+  }
+}
+
+/* ── Print : afficher proprement sans animations ni pub ─────────── */
+@media print {
+  /* Masquer éléments non-pertinents */
+  .topbar,
+  .mobile-tabbar,
+  .ad-side,
+  .modal,
+  .team-card-btns,
+  .no-leader-bar,
+  .slot-actions,
+  .btn-close       { display: none !important; }
+
+  /* Fond blanc, texte noir */
+  body             { background: #fff !important; color: #000 !important; padding: 0 !important; }
+  .panel           { box-shadow: none !important; border: 1px solid #ccc !important; }
+  .topbar          { display: none !important; }
+  .layout          { display: block !important; }
+  .col-right       { position: static !important; max-height: none !important; overflow: visible !important; }
+
+  /* Liens visibles */
+  a::after         { content: " (" attr(href) ")"; font-size: 10px; color: #666; }
+
+  /* URL du site en bas de page */
+  body::after {
+    content: "dbl-optimizer.com";
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+  }
 }
