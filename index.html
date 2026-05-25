@@ -27,7 +27,13 @@
       <div class="panel" id="section-team">
         <h2 class="panel-title">Équipe <span class="panel-hint">clique sur + pour ajouter un perso · clique sur une carte pour l'éditer</span></h2>
         <div id="team-grid" class="team-grid"></div>
-        <button id="no-leader-btn" class="no-leader-btn" type="button">★ Désactiver le leader</button>
+        <div class="no-leader-bar">
+          <button id="no-leader-btn" class="no-leader-btn" type="button">
+            <span class="no-leader-star">★</span>
+            <span class="no-leader-text">Désactiver le leader</span>
+            <span class="no-leader-badge">OFF</span>
+          </button>
+        </div>
       </div>
 
       <!-- Build du slot actif : perso + traits + Cap Z + 3 items -->

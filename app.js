@@ -159,9 +159,18 @@
   function getUsedCharIds() {
     const ids = new Set();
     state.team.forEach((slot, i) => {
-      if (i !== state.activeSlot && slot.character) ids.add(slot.character.id);
+      if (i !== state.activeSlot && slot.character) {
+        // Double clé : id en priorité, cardCode en fallback
+        const key = slot.character.id || slot.character.cardCode;
+        if (key) ids.add(key);
+      }
     });
     return ids;
+  }
+
+  // Retourne la clé unique d'un personnage (cohérente avec getUsedCharIds).
+  function charKey(p) {
+    return p.id || p.cardCode || null;
   }
 
   // ===== ACCESSEURS D'ALIAS (perso actif) =====
@@ -470,7 +479,7 @@
     const usedIds = getUsedCharIds();
     charSuggestionsEl.innerHTML = matches
       .map((p) => {
-        const isTaken = usedIds.has(p.id);
+        const isTaken = usedIds.has(charKey(p));
         const elementClass = `elem-${(p.element || "").toLowerCase()}`;
         const img = p.image
           ? `<img class="char-suggestion-img" src="${p.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
@@ -1638,9 +1647,11 @@
   function renderNoLeaderBtn() {
     if (!noLeaderBtn) return;
     noLeaderBtn.classList.toggle("is-active", state.noLeader);
-    noLeaderBtn.innerHTML = state.noLeader
-      ? "★ Réactiver le leader"
-      : "★ Désactiver le leader";
+    const textEl  = noLeaderBtn.querySelector(".no-leader-text");
+    const badgeEl = noLeaderBtn.querySelector(".no-leader-badge");
+    if (textEl)  textEl.textContent  = state.noLeader ? "Réactiver le leader" : "Désactiver le leader";
+    if (badgeEl) badgeEl.textContent = state.noLeader ? "ON"  : "OFF";
+    if (badgeEl) badgeEl.classList.toggle("is-on", state.noLeader);
   }
 
   noLeaderBtn.addEventListener("click", () => {
