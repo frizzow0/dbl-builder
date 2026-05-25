@@ -735,7 +735,15 @@
           <div class="team-card-info">
             <div class="team-card-name" title="${name}">${name}</div>
             <div class="team-card-code">${code}</div>
-            ${empty ? "" : `<div class="team-card-items">${nbItems}/3 items</div>`}
+            ${empty ? "" : `
+              <div class="team-card-footer">
+                <span class="team-card-items">${nbItems}/3 items</span>
+                <div class="team-card-btns">
+                  <button class="team-card-btn" data-card-action="change-char" data-card-slot="${i}" type="button">Changer</button>
+                  <button class="team-card-btn is-danger" data-card-action="remove-char" data-card-slot="${i}" type="button">Retirer</button>
+                </div>
+              </div>
+            `}
           </div>
         </div>
       `;
@@ -761,6 +769,29 @@
       renderResults();
       return;
     }
+
+    // Boutons "Changer" / "Retirer" sur une carte remplie
+    const cardActionBtn = e.target.closest("[data-card-action]");
+    if (cardActionBtn) {
+      e.stopPropagation();
+      const slotIdx = parseInt(cardActionBtn.dataset.cardSlot, 10);
+      state.activeSlot = slotIdx;
+      if (cardActionBtn.dataset.cardAction === "change-char") {
+        renderTeamGrid();
+        renderCharSelected();
+        renderCharTraits();
+        renderCharZAbility();
+        renderBuildState();
+        renderSlots();
+        renderConditions();
+        renderResults();
+        openCharModal();
+      } else if (cardActionBtn.dataset.cardAction === "remove-char") {
+        selectCharacter(null);
+      }
+      return;
+    }
+
     const card = e.target.closest("[data-team-slot]");
     if (!card) return;
     const slotIdx = parseInt(card.dataset.teamSlot, 10);

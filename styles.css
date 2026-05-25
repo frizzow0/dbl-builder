@@ -355,6 +355,12 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   letter-spacing: .04em;
 }
 .team-card.is-empty .team-card-code { color: var(--muted); text-shadow: none; }
+.team-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+}
 .team-card-items {
   font-size: var(--fs-xxs);
   color: rgba(255,255,255,.95);
@@ -362,8 +368,47 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   padding: 2px 6px;
   border-radius: var(--r-pill);
   display: inline-block;
-  margin-top: 4px;
   font-weight: 600;
+  align-self: flex-start;
+}
+.team-card-btns {
+  display: flex;
+  gap: 4px;
+}
+.team-card-btn {
+  flex: 1;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 4px 0;
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.14);
+  color: rgba(255,255,255,.95);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition:
+    background 150ms var(--ease-out-expo),
+    border-color 150ms var(--ease-out-expo);
+  text-align: center;
+}
+.team-card-btn:hover {
+  background: rgba(255,255,255,.28);
+  border-color: rgba(255,255,255,.5);
+}
+.team-card-btn.is-danger {
+  background: rgba(220,38,38,.22);
+  border-color: rgba(220,38,38,.4);
+  color: #fca5a5;
+}
+.team-card-btn.is-danger:hover {
+  background: rgba(220,38,38,.42);
+  border-color: rgba(220,38,38,.65);
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-card-btn { transition: none; }
 }
 
 .team-leader-toggle {
