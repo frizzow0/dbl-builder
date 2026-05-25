@@ -26,7 +26,8 @@
     "garde_contre_degats",
   ];
 
-  const LABELS_CIBLES = {
+  // Fallback FR — utilisé si i18n.js n'est pas encore disponible
+  const _LABELS_FR = {
     attaque_physique:        "Attaque physique",
     attaque_energie:         "Attaque d'énergie",
     defense_physique:        "Défense physique",
@@ -43,6 +44,15 @@
     quantite_regen_force:    "Quantité de régénération",
     garde_contre_degats:     "Garde contre les dégâts",
   };
+  // Proxy dynamique : retourne toujours le label dans la langue courante
+  const LABELS_CIBLES = new Proxy({}, {
+    get(_, key)   { return window.DBL_I18N ? window.DBL_I18N.T('labels.' + key) : (_LABELS_FR[key] || key); },
+    has(_, key)   { return key in _LABELS_FR; },
+    ownKeys()     { return Object.keys(_LABELS_FR); },
+    getOwnPropertyDescriptor(_, key) {
+      return key in _LABELS_FR ? { enumerable: true, configurable: true } : undefined;
+    },
+  });
 
   // Interpole entre valeur_min et valeur_max selon un ratio 0..1 (1 = max)
   function interpolerValeur(ligne, ratio) {

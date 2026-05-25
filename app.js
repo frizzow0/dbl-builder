@@ -6,6 +6,9 @@
   const { ITEMS, STATS, PERSONNAGES } = window.DBL_DATA;
   const { calculerStats, interpolerValeur, conditionRemplie: condRemplieCalc, LABELS_CIBLES, STATS_CIBLES } = window.DBL_CALC;
 
+  // Raccourci traduction — toujours utiliser T() pour les chaînes UI
+  const T = (key, params) => window.DBL_I18N.T(key, params);
+
   // ===== PATCH : CORRECTION DES CONDITIONS ZENKAI Z =====
   // Le scraper a mal interprété les Zenkai Z au format « Attribut : X » et
   // « Classe : Y » : il a extrait les phrases complètes comme tags au lieu
@@ -71,24 +74,16 @@
     if (!tags || !tags.length) return null;
     const groups = tags.map((g) => g.join(" • "));
     if (groups.length === 1) return groups[0];
-    return groups.map((g) => `(${g})`).join(" ou ");
+    return groups.map((g) => `(${g})`).join(` ${T('cond.or')} `);
   }
 
-  // Labels d'affichage pour les raretés
-  const RARITY_LABELS = {
-    platinum:       "PLATINUM",
-    awakenedunique: "UNIQUE ÉVEILLÉ",
-    unique:         "UNIQUE",
-    awakenedgold:   "OR ÉVEILLÉ",
-    gold:           "OR",
-    awakenedsilver: "ARGENT ÉVEILLÉ",
-    silver:         "ARGENT",
-    awakenedbronze: "BRONZE ÉVEILLÉ",
-    bronze:         "BRONZE",
-    iron:           "FER",
-    event:          "ÉVÉNEMENT",
+  // Labels d'affichage pour les raretés — dynamique selon la langue
+  const rarityLabel = (r) => {
+    if (!r) return "";
+    const t = T('rarity.' + r);
+    // Si la clé n'est pas dans le dict, T() retourne la clé brute — on normalise en UPPER
+    return (t && t !== 'rarity.' + r) ? t : r.toUpperCase();
   };
-  const rarityLabel = (r) => RARITY_LABELS[r] || (r || "").toUpperCase();
 
   // ===== ÉTAT GLOBAL =====
   // L'équipe DBL = 2 trios = 6 personnages. Chaque slot a son propre build
@@ -346,7 +341,7 @@
         items.push({
           id: `_z_${kind}_${i}_${tier}`,
           nom: isSelf
-            ? `${label} ${tierLab} (soi)`
+            ? `${label} ${tierLab} (${T('item.self')})`
             : `${label} ${tierLab} — ${sender.character.nom.trim()} (slot ${i + 1})`,
           isVirtual: true,
           isZBonus: true,
@@ -362,24 +357,26 @@
       // 1) Cap Z classique — utilise le tier choisi par l'utilisateur
       if (sender.character.zAbilities) {
         const z = sender.character.zAbilities.find((z) => z.tier === sender.zTier);
-        if (z) pushZItem(z.lignes, "Cap. Z", "z", sender.zTier);
+        if (z) pushZItem(z.lignes, T('z.capz.label'), "z", sender.zTier);
       }
       // 2) Cap Z Zenkai — TOUJOURS au max (tier IV), s'ajoute en plus
       if (sender.character.zAbilitiesZenkai) {
         const zk = sender.character.zAbilitiesZenkai.find((z) => z.tier === 4);
-        if (zk) pushZItem(zk.lignes, "Cap. Z Zenkai", "zenkai", 4);
+        if (zk) pushZItem(zk.lignes, `${T('z.capz.label')} Zenkai`, "zenkai", 4);
       }
     }
     return items;
   }
 
   // ===== FORMATAGE =====
-  const fmtInt = (n) => Math.round(n).toLocaleString("fr-FR");
-  const fmtPct = (n) => n.toFixed(2).replace(".", ",") + "%";
+  const fmtInt   = (n) => Math.round(n).toLocaleString(window.DBL_I18N?.getLang() === 'en' ? 'en-US' : 'fr-FR');
+  // Séparateur décimal selon la langue : virgule en FR, point en EN
+  const fmtDec   = (s) => window.DBL_I18N?.getLang() === 'en' ? s : s.replace(".", ",");
+  const fmtPct   = (n) => fmtDec(n.toFixed(2)) + "%";
   const fmtRange = (l) =>
     l.valeur_min === l.valeur_max
-      ? `${l.valeur_max.toFixed(2)}%`
-      : `${l.valeur_min.toFixed(2)} ~ ${l.valeur_max.toFixed(2)}%`;
+      ? `${fmtDec(l.valeur_max.toFixed(2))}%`
+      : `${fmtDec(l.valeur_min.toFixed(2))} ~ ${fmtDec(l.valeur_max.toFixed(2))}%`;
 
   // ===== HELPERS =====
   function statLabel(statKey) {
@@ -417,7 +414,7 @@
   // openCharModal/closeCharModal : ouvre la modale pour le slot actif.
   // L'utilisateur arrive ici depuis le « + » d'un team slot (vide).
   function openCharModal() {
-    charModalTitleEl.textContent = `Personnage — Slot ${state.activeSlot + 1}`;
+    charModalTitleEl.textContent = T('charmodal.title', { n: state.activeSlot + 1 });
     charSearchEl.value = "";
     renderCharFilters();
     renderCharSuggestions("");
@@ -479,13 +476,13 @@
       counts.el[p.element] = (counts.el[p.element] || 0) + 1;
     }
     const rarPills = [
-      `<button class="char-filter-pill ${state.charRarityFilter === null ? "active" : ""}" data-char-rarity="">Toutes</button>`,
+      `<button class="char-filter-pill ${state.charRarityFilter === null ? "active" : ""}" data-char-rarity="">${T('filter.all')}</button>`,
       ...CHAR_RARITIES.filter((r) => counts.rar[r]).map(
         (r) => `<button class="char-filter-pill ${state.charRarityFilter === r ? "active" : ""}" data-char-rarity="${r}">${r} <span class="pill-count">${counts.rar[r]}</span></button>`,
       ),
     ];
     const elPills = [
-      `<button class="char-filter-pill char-elem-pill ${state.charElementFilter === null ? "active" : ""}" data-char-element="">Tous</button>`,
+      `<button class="char-filter-pill char-elem-pill ${state.charElementFilter === null ? "active" : ""}" data-char-element="">${T('filter.all')}</button>`,
       ...CHAR_ELEMENTS.filter((el) => counts.el[el]).map(
         (el) => `<button class="char-filter-pill char-elem-pill elem-${el.toLowerCase()} ${state.charElementFilter === el ? "active" : ""}" data-char-element="${el}">${el} <span class="pill-count">${counts.el[el]}</span></button>`,
       ),
@@ -521,7 +518,7 @@
     }
 
     if (matches.length === 0) {
-      charSuggestionsEl.innerHTML = `<li class="char-suggestion-empty">Aucun personnage trouvé</li>`;
+      charSuggestionsEl.innerHTML = `<li class="char-suggestion-empty">${T('char.notfound')}</li>`;
       return;
     }
 
@@ -539,7 +536,7 @@
             <span class="char-suggestion-element">${p.element || ""}</span>
             <span class="char-suggestion-name">${p.nom.trim()}</span>
             <small class="char-suggestion-code">${p.cardCode || ""} · ${p.rarete}</small>
-            ${isTaken ? '<span class="char-taken-badge">Déjà dans l\'équipe</span>' : ""}
+            ${isTaken ? `<span class="char-taken-badge">${T('char.taken')}</span>` : ""}
           </li>
         `;
       })
@@ -585,7 +582,7 @@
           <div class="char-selected-name">${p.nom.trim()}</div>
           <div class="char-selected-code">${p.cardCode || ""} · ${p.rarete}</div>
         </div>
-        <button class="char-selected-clear" data-action="clear-char" type="button" aria-label="Désélectionner">×</button>
+        <button class="char-selected-clear" data-action="clear-char" type="button" aria-label="${T('char.deselect')}">×</button>
       </div>
     `;
   }
@@ -599,7 +596,7 @@
     charTraitsEl.classList.remove("hidden");
     const traits = active.character.traits || [];
     charTraitsEl.innerHTML = `
-      <div class="char-traits-head">Traits (${traits.length})</div>
+      <div class="char-traits-head">${T('char.traits', { n: traits.length })}</div>
       <div class="char-traits-pills">
         ${traits.map((t) => `<span class="trait-pill">${t}</span>`).join("")}
       </div>
@@ -648,17 +645,17 @@
     const renderHeader = (g) => {
       if (g.est_passif) return "";
       if (!g.condition) {
-        return `<div class="z-group-header is-nocond">Toujours actif :</div>`;
+        return `<div class="z-group-header is-nocond">${T('z.always')}</div>`;
       }
       const tags = g.condition.tags_requis || [];
-      const sep = g.condition.mode === "and" ? " et " : " ou ";
-      const prefix = g.condition.mode === "and" ? "À la fois " : "";
+      const sep = ` ${g.condition.mode === "and" ? T('cond.and') : T('cond.or')} `;
+      const prefix = g.condition.mode === "and" ? T('cond.allof') + " " : "";
       const tagPills = tags
         .map((t) => `<span class="z-cond-tag">${t}</span>`)
         .join(`<span class="z-cond-sep">${sep.trim()}</span>`);
       const ok = activeIsLeader || condRemplieCalc({ condition: g.condition }, conds);
       const leaderBadge = activeIsLeader && !condRemplieCalc({ condition: g.condition }, conds)
-        ? ` <span class="z-leader-bypass" title="Activé via le privilège Leader">★ Leader bypass</span>`
+        ? ` <span class="z-leader-bypass" title="${T('z.leadertitle')}">${T('z.leaderbadge')}</span>`
         : "";
       return `
         <div class="z-group-header ${ok ? "is-ok" : "is-ko"}">
@@ -697,14 +694,14 @@
 
     // Section Z classique — tier choisi par l'utilisateur
     const zCur = active.character.zAbilities?.find((z) => z.tier === active.zTier);
-    const zSection = zCur ? renderZSection(zCur.lignes, `Cap. Z ${Z_LABEL[active.zTier - 1]}`, false) : "";
+    const zSection = zCur ? renderZSection(zCur.lignes, `${T('z.capz.label')} ${Z_LABEL[active.zTier - 1]}`, false) : "";
     // Section Z Zenkai — TOUJOURS au max (tier IV)
     const zkCur = active.character.zAbilitiesZenkai?.find((z) => z.tier === 4);
-    const zkSection = zkCur ? renderZSection(zkCur.lignes, "Cap. Z Zenkai IV (max)", true) : "";
+    const zkSection = zkCur ? renderZSection(zkCur.lignes, T('z.zenkai.label'), true) : "";
 
     charZAbilityEl.innerHTML = `
       <div class="char-zability-head">
-        <span class="char-zability-label">Cap. Z${active.character.isZenkai ? " + Zenkai" : ""}</span>
+        <span class="char-zability-label">${T('z.capz.label')}${active.character.isZenkai ? " + Zenkai" : ""}</span>
         <div class="char-zability-pills">${pills}</div>
       </div>
       ${zSection}
@@ -774,12 +771,12 @@
       const img = c && c.image
         ? `<img class="team-card-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
         : `<div class="team-card-img team-card-img-empty">+</div>`;
-      const name = c ? c.nom.trim() : "Vide";
-      const code = c ? `${c.cardCode || ""} · Z ${["I","II","III","IV"][slot.zTier - 1]}` : "Cliquer pour ajouter";
+      const name = c ? c.nom.trim() : T('team.card.empty');
+      const code = c ? `${c.cardCode || ""} · Z ${["I","II","III","IV"][slot.zTier - 1]}` : T('team.card.add');
       const nbItems = slot.items.filter(Boolean).length;
       return `
         <div class="team-card ${isActive ? "is-active" : ""} ${empty ? "is-empty" : ""} ${elementClass}" data-team-slot="${i}">
-          <button class="team-leader-toggle ${isLeader ? "is-leader" : ""} ${state.noLeader ? "is-leader-disabled" : ""}" data-leader-toggle="${i}" title="Désigner comme Leader" type="button">★</button>
+          <button class="team-leader-toggle ${isLeader ? "is-leader" : ""} ${state.noLeader ? "is-leader-disabled" : ""}" data-leader-toggle="${i}" title="${T('team.leader.title')}" type="button">★</button>
           ${img}
           <div class="team-card-info">
             <div class="team-card-name" title="${name}">${name}</div>
@@ -788,8 +785,8 @@
               <div class="team-card-footer">
                 <span class="team-card-items">${nbItems}/3 items</span>
                 <div class="team-card-btns">
-                  <button class="team-card-btn" data-card-action="change-char" data-card-slot="${i}" type="button">Changer</button>
-                  <button class="team-card-btn is-danger" data-card-action="remove-char" data-card-slot="${i}" type="button">Retirer</button>
+                  <button class="team-card-btn" data-card-action="change-char" data-card-slot="${i}" type="button">${T('slot.change')}</button>
+                  <button class="team-card-btn is-danger" data-card-action="remove-char" data-card-slot="${i}" type="button">${T('slot.remove')}</button>
                 </div>
               </div>
             `}
@@ -799,13 +796,13 @@
     });
     teamGridEl.innerHTML = `
       <div class="team-trio">${slots.slice(0, 3).join("")}</div>
-      <div class="team-trio-sep">Trio A ↑ · Trio B ↓</div>
+      <div class="team-trio-sep">${T('team.sep')}</div>
       <div class="team-trio">${slots.slice(3, 6).join("")}</div>
     `;
     // Mise à jour du titre du panel build
     const activeChar = active.character;
     const showLeaderBadge = !state.noLeader && state.activeSlot === state.leaderSlot;
-    buildTitleEl.innerHTML = `Build du Slot ${state.activeSlot + 1}${activeChar ? ` — <span style="color:var(--accent)">${activeChar.nom.trim()}</span>` : ""}${showLeaderBadge ? " <span class=\"build-title-leader\">★ Leader</span>" : ""}`;
+    buildTitleEl.innerHTML = `${T('build.title', { n: state.activeSlot + 1 })}${activeChar ? ` — <span style="color:var(--accent)">${activeChar.nom.trim()}</span>` : ""}${showLeaderBadge ? ` <span class="build-title-leader">${T('build.leader')}</span>` : ""}`;
     renderNoLeaderBtn();
   }
 
@@ -902,7 +899,7 @@
 
   function openItemModal(slotIdx) {
     state.modalSlot = slotIdx;
-    modalTitle.textContent = `Choisir un item — Slot ${slotIdx + 1}`;
+    modalTitle.textContent = T('itemmodal.title.slot', { n: slotIdx + 1 });
     itemSearch.value = "";
     state.modalSearch = "";
     // Active automatiquement le filtre "Compatibles" si un perso est sélectionné.
@@ -965,13 +962,13 @@
     const presentes = ordre.filter((r) => counts[r]);
     const total = ITEMS.length;
     const pills = [
-      `<button class="rarity-pill ${state.modalRarityFilter === null ? "active" : ""}" data-rarity-filter="">Tous <span class="pill-count">${total}</span></button>`,
+      `<button class="rarity-pill ${state.modalRarityFilter === null ? "active" : ""}" data-rarity-filter="">${T('filter.all')} <span class="pill-count">${total}</span></button>`,
       ...presentes.map((r) => `<button class="rarity-pill ${state.modalRarityFilter === r ? "active" : ""}" data-rarity-filter="${r}">${rarityLabel(r)} <span class="pill-count">${counts[r]}</span></button>`),
     ];
     // Pill "Compatibles seulement" — visible uniquement si un perso est sélectionné
     if (active.character) {
       const compatCount = ITEMS.filter((it) => isCompatible(it, active.character)).length;
-      pills.push(`<button class="rarity-pill compat-pill ${state.modalCompatOnly ? "active" : ""}" data-compat-only="1">✓ Compatibles <span class="pill-count">${compatCount}</span></button>`);
+      pills.push(`<button class="rarity-pill compat-pill ${state.modalCompatOnly ? "active" : ""}" data-compat-only="1">${T('filter.compat')} <span class="pill-count">${compatCount}</span></button>`);
     }
     rarityFiltersEl.innerHTML = pills.join("");
   }
@@ -1016,7 +1013,7 @@
     });
 
     if (matches.length === 0) {
-      itemList.innerHTML = `<li style="color: var(--text-soft); cursor: default; grid-column: 1 / -1; padding: 14px; text-align: center;">Aucun item trouvé</li>`;
+      itemList.innerHTML = `<li style="color: var(--text-soft); cursor: default; grid-column: 1 / -1; padding: 14px; text-align: center;">${T('item.notfound')}</li>`;
       return;
     }
 
@@ -1031,10 +1028,10 @@
         }
         const renderLigneModal = (l) => {
           if (l.est_passif) {
-            return `<div><span class="passive-marker">⚡ Passif :</span> ${l.description_passif}</div>`;
+            return `<div><span class="passive-marker">⚡ ${T('passif.label')} :</span> ${l.description_passif}</div>`;
           }
           const cond = l.condition ? ` <em style="color:var(--text-soft)">(${l.condition.description})</em>` : "";
-          const val = l.valeur_max.toFixed(2).replace(".", ",");
+          const val = fmtDec(l.valeur_max.toFixed(2));
           return `<div>+${val}% ${statLabel(l.stat)}${cond}</div>`;
         };
         const slotsOrdered = Object.keys(lignesParSlot).map(Number).sort((a, b) => a - b);
@@ -1054,16 +1051,16 @@
           : `<div class="item-img item-img-placeholder">?</div>`;
         const tagsLine = formatTagsPorteur(it.tagsPorteur);
         const tagsHTML = tagsLine
-          ? `<div class="item-tags-porteur" title="Compatible avec : ${tagsLine}">${tagsLine}</div>`
+          ? `<div class="item-tags-porteur" title="${T('slot.compatible')} ${tagsLine}">${tagsLine}</div>`
           : "";
         const compat = isCompatible(it, active.character);
         let compatBadge = "";
         let compatClass = "";
         if (compat === true) {
-          compatBadge = `<span class="compat-badge compat-yes" title="Compatible avec ${active.character.nom.trim()}">✓</span>`;
+          compatBadge = `<span class="compat-badge compat-yes" title="${T('item.compat.yes', { name: active.character.nom.trim() })}">✓</span>`;
           compatClass = "is-compat";
         } else if (compat === false) {
-          compatBadge = `<span class="compat-badge compat-no" title="Incompatible avec ${active.character.nom.trim()}">✗</span>`;
+          compatBadge = `<span class="compat-badge compat-no" title="${T('item.compat.no', { name: active.character.nom.trim() })}">✗</span>`;
           compatClass = "is-incompat";
         }
         return `
@@ -1079,7 +1076,7 @@
                   ${tagsHTML}
                 </div>
               </div>
-              <button class="item-toggle" data-toggle="${it.id}" aria-label="Voir les détails" type="button">▾</button>
+              <button class="item-toggle" data-toggle="${it.id}" aria-label="${T('item.details')}" type="button">▾</button>
             </div>
             <div class="item-lignes hidden" data-lignes="${it.id}">${lignes}</div>
           </li>
@@ -1142,7 +1139,7 @@
 
       if (!item) {
         el.className = "slot-content empty";
-        el.innerHTML = "+ Choisir un item";
+        el.innerHTML = T('slot.choose');
         el.onclick = () => openItemModal(i);
         continue;
       }
@@ -1178,7 +1175,7 @@
             `).join("");
             return `
               <div class="slot-ligne-or">
-                <div class="slot-ligne-or-head"><span class="bullet">⚡</span>Choix aléatoire — sélectionne ta ligne :</div>
+                <div class="slot-ligne-or-head"><span class="bullet">⚡</span>${T('slot.or.head')}</div>
                 <div class="slot-ligne-or-options">${altsHTML}</div>
               </div>
             `;
@@ -1212,7 +1209,7 @@
 
       const slotTagsLine = formatTagsPorteur(item.tagsPorteur);
       const slotTagsHTML = slotTagsLine
-        ? `<div class="slot-item-tags">Compatible : ${slotTagsLine}</div>`
+        ? `<div class="slot-item-tags">${T('slot.compatible')} ${slotTagsLine}</div>`
         : "";
       el.innerHTML = `
         <div class="slot-item-rarete">${rarityLabel(item.rarete)}</div>
@@ -1220,8 +1217,8 @@
         ${slotTagsHTML}
         <div class="slot-lignes">${slotsHTML}</div>
         <div class="slot-actions">
-          <button class="btn" data-action="change" data-slot="${i}">Changer</button>
-          <button class="btn danger" data-action="clear" data-slot="${i}">Retirer</button>
+          <button class="btn" data-action="change" data-slot="${i}">${T('slot.change')}</button>
+          <button class="btn danger" data-action="clear" data-slot="${i}">${T('slot.remove')}</button>
         </div>
       `;
     }
@@ -1283,8 +1280,8 @@
         return `
           <div class="cond-row">
             <div class="cond-info">
-              <div class="cond-label">« ${tag} » dans l'équipe ${ok ? "<span class='cond-ok'>✓</span>" : "<span class='cond-ko'>✗</span>"}</div>
-              <div class="cond-hint">Auto : <strong>${autoVal}</strong> · Seuil requis : ${maxSeuil}</div>
+              <div class="cond-label">${T('cond.inteam', { tag })} ${ok ? "<span class='cond-ok'>✓</span>" : "<span class='cond-ko'>✗</span>"}</div>
+              <div class="cond-hint">${T('cond.auto')} <strong>${autoVal}</strong> · ${T('cond.threshold')} ${maxSeuil}</div>
             </div>
             <input type="number" min="0" max="6" value="${userVal}" data-tag="${tag}" title="Override manuel (compte effectif = max(auto, manuel))" />
           </div>
@@ -1307,30 +1304,30 @@
   const passifsZone = document.getElementById("passifs-zone");
   const inactiveZone = document.getElementById("inactive-zone");
 
-    // Stats regroupées par catégorie thématique
+    // Stats regroupées par catégorie thématique — labels recalculés selon la langue
     const DISPLAY_GROUPS = [
       {
         slug: "vie",
-        titre: "Vie",
+        titre: T('group.vie'),
         stats: [
-          { cible: "force",                 label: "Force" },
-          { cible: "quantite_regen_force",  label: "Quantité de régénération" },
+          { cible: "force",                 label: T('stat.force') },
+          { cible: "quantite_regen_force",  label: T('stat.regen') },
         ],
       },
       {
         slug: "attaque",
-        titre: "Attaque",
+        titre: T('group.attaque'),
         stats: [
           { cible: "attaque_physique",      label: "Strike ATK" },
           { cible: "attaque_energie",       label: "Blast ATK" },
           { cible: "critique",              label: "Critical Rate" },
-          { cible: "degats_tech_spe",       label: "Dégâts technique spéciale" },
-          { cible: "degats_ultime",         label: "Dégâts technique ultime" },
+          { cible: "degats_tech_spe",       label: T('stat.tech_spe') },
+          { cible: "degats_ultime",         label: T('stat.ultime') },
         ],
       },
       {
         slug: "defense",
-        titre: "Défense",
+        titre: T('group.defense'),
         stats: [
           { cible: "defense_physique",      label: "Strike DEF" },
           { cible: "defense_energie",       label: "Blast DEF" },
@@ -1338,7 +1335,7 @@
       },
       {
         slug: "utilitaire",
-        titre: "Utilitaire",
+        titre: T('group.utilitaire'),
         stats: [
           { cible: "vitesse_regen_ki",      label: "Ki Recover" },
           { cible: "vanish_recover",        label: "Vanish Recover" },
@@ -1351,8 +1348,8 @@
     const noItems = active.items.every((s) => !s);
     const noZ = buildTeamZItemsFor(state.activeSlot).length === 0;
     if (noItems && noZ) {
-      statsGrid.innerHTML = `<p class="placeholder" style="color: var(--text-soft); font-size: 13px; margin: 0;">Équipe au moins un item (ou sélectionne un perso) pour voir le résumé des effets.</p>`;
-      passifsZone.innerHTML = `<p class="placeholder">Aucun effet passif.</p>`;
+      statsGrid.innerHTML = `<p class="placeholder" style="color: var(--text-soft); font-size: 13px; margin: 0;">${T('stats.placeholder')}</p>`;
+      passifsZone.innerHTML = `<p class="placeholder">${T('passif.none')}</p>`;
       inactiveZone.innerHTML = "";
       return;
     }
@@ -1411,8 +1408,8 @@
             <div class="stat-row-val"><span class="stat-empty">—</span></div>
           </div>`;
       }
-      const fmtMult = (v) => "× " + v.toFixed(3).replace(".", ",");
-      const fmtGain = (v) => "+" + v.toFixed(2).replace(".", ",") + "%";
+      const fmtMult = (v) => "× " + fmtDec(v.toFixed(3));
+      const fmtGain = (v) => "+" + fmtDec(v.toFixed(2)) + "%";
       const cell = (cls, label, source) => {
         if (!source || !source.hasBonus) {
           return `<div class="stat-cell ${cls} stat-cell-dim">
@@ -1427,11 +1424,11 @@
         </div>`;
       };
       const cells =
-        cell("stat-cell-item-base", "Items (base)", sib) +
-        cell("stat-cell-z",         "Cap Z",        szc) +
-        cell("stat-cell-z-zenkai",  "Cap Z Zenkai", szk) +
-        cell("stat-cell-item-pur",  "Items (pur)",  sip) +
-        cell("stat-cell-total",     "Total",        s);
+        cell("stat-cell-item-base", T('cell.items.base'), sib) +
+        cell("stat-cell-z",         T('cell.capz'),       szc) +
+        cell("stat-cell-z-zenkai",  T('cell.zenkai'),     szk) +
+        cell("stat-cell-item-pur",  T('cell.items.pur'),  sip) +
+        cell("stat-cell-total",     T('cell.total'),      s);
       return `
         <div class="stat-row stat-row-split">
           <div class="stat-row-label">${label}</div>
@@ -1455,7 +1452,7 @@
 
     // --- Passifs ---
     if (result.passifs.length === 0) {
-      passifsZone.innerHTML = `<p class="placeholder">Aucun effet passif sur les items équipés.</p>`;
+      passifsZone.innerHTML = `<p class="placeholder">${T('passifs.equipped.none')}</p>`;
     } else {
       // Regroupement par item (clé = slot + nom) pour ne pas dupliquer
       // l'entête « source » à chaque ligne.
@@ -1502,13 +1499,13 @@
         .map(
           (c) => `
           <div class="callout inactive">
-            <div class="callout-tag">❓ Inactif</div>
+            <div class="callout-tag">${T('inactive.tag')}</div>
             <div>
               <div class="callout-body">
                 <strong>+${fmtPct(c.valeur).replace("%","")}% ${c.statLabel}</strong> — ${c.description}
               </div>
               <div class="callout-source">
-                Source : ${c.itemNom} (slot ${c.slot + 1}) — ${c.valeurActuelle}/${c.seuil} « ${c.tag} »
+                ${T('source.prefix')} ${c.itemNom} (slot ${c.slot + 1}) — ${c.valeurActuelle}/${c.seuil} « ${c.tag} »
               </div>
             </div>
           </div>
@@ -1521,29 +1518,33 @@
   // ===== BILAN CAP Z =====
   const zBilanEl = document.getElementById("z-bilan");
   // Toutes les stats potentiellement affectées par des Cap Z (cohérent avec DISPLAY_GROUPS)
-  const Z_BILAN_STATS = [
-    { cible: "force",                 label: "Force" },
-    { cible: "quantite_regen_force",  label: "Régénération" },
-    { cible: "attaque_physique",      label: "Strike ATK" },
-    { cible: "attaque_energie",       label: "Blast ATK" },
-    { cible: "critique",              label: "Critical" },
-    { cible: "degats_infliges",       label: "Dégâts" },
-    { cible: "degats_energie_infliges", label: "Dégâts énergie" },
-    { cible: "degats_tech_spe",       label: "Dégâts spé." },
-    { cible: "degats_ultime",         label: "Dégâts ultime" },
-    { cible: "defense_physique",      label: "Strike DEF" },
-    { cible: "defense_energie",       label: "Blast DEF" },
-    { cible: "garde_contre_degats",   label: "Garde" },
-    { cible: "vitesse_regen_ki",      label: "Ki Recover" },
-    { cible: "vanish_recover",        label: "Vanish" },
-  ];
+  // Fonction pour que les labels soient recalculés selon la langue courante
+  function getZBilanStats() {
+    return [
+      { cible: "force",                   label: T('zbilan.force') },
+      { cible: "quantite_regen_force",    label: T('zbilan.regen') },
+      { cible: "attaque_physique",        label: "Strike ATK" },
+      { cible: "attaque_energie",         label: "Blast ATK" },
+      { cible: "critique",               label: "Critical" },
+      { cible: "degats_infliges",         label: T('zbilan.degats') },
+      { cible: "degats_energie_infliges", label: T('zbilan.degats_energie') },
+      { cible: "degats_tech_spe",         label: T('zbilan.degats_spe') },
+      { cible: "degats_ultime",           label: T('zbilan.degats_ultime') },
+      { cible: "defense_physique",        label: "Strike DEF" },
+      { cible: "defense_energie",         label: "Blast DEF" },
+      { cible: "garde_contre_degats",     label: T('zbilan.garde') },
+      { cible: "vitesse_regen_ki",        label: "Ki Recover" },
+      { cible: "vanish_recover",          label: "Vanish" },
+    ];
+  }
 
   function renderZBilan() {
+    const Z_BILAN_STATS = getZBilanStats();
     const occupied = state.team
       .map((s, i) => ({ ...s, idx: i }))
       .filter((s) => s.character);
     if (occupied.length === 0) {
-      zBilanEl.innerHTML = `<p class="placeholder">Aucun perso dans l'équipe.</p>`;
+      zBilanEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
       return;
     }
 
@@ -1571,18 +1572,18 @@
       .sort((a, b) => b[1].totalGain - a[1].totalGain);
 
     const totauxHTML = orderedTotals.length === 0
-      ? `<p class="placeholder">Aucun bonus Z chiffrable sur l'équipe.</p>`
+      ? `<p class="placeholder">${T('z.nobonus.team')}</p>`
       : orderedTotals
           .map(([cible, t]) => {
-            const totalFmt = t.totalGain.toFixed(1).replace(".", ",");
+            const totalFmt = fmtDec(t.totalGain.toFixed(1));
             const avg = t.totalGain / t.count;
-            const avgFmt = avg.toFixed(1).replace(".", ",");
-            const maxFmt = t.max.toFixed(1).replace(".", ",");
+            const avgFmt = fmtDec(avg.toFixed(1));
+            const maxFmt = fmtDec(t.max.toFixed(1));
             return `
               <div class="z-totals-row">
                 <div class="z-totals-label">${t.label}</div>
                 <div class="z-totals-total">+${totalFmt}%</div>
-                <div class="z-totals-detail">${t.count} perso · moy. +${avgFmt}% · max +${maxFmt}%</div>
+                <div class="z-totals-detail">${T('z.totals.row', { n: t.count, avg: avgFmt, max: maxFmt })}</div>
               </div>
             `;
           })
@@ -1596,12 +1597,12 @@
 
     const totauxSection = `
       <div class="z-grand-total">
-        <div class="z-grand-total-label">Total global équipe</div>
+        <div class="z-grand-total-label">${T('z.total.label')}</div>
         <div class="z-grand-total-value">+${grandTotalFmt}%</div>
-        <div class="z-grand-total-detail">${grandLinesCount} applications de Z sur ${grandStatsCount} stats</div>
+        <div class="z-grand-total-detail">${T('z.total.detail', { n: grandLinesCount, m: grandStatsCount })}</div>
       </div>
       <div class="z-totals">
-        <div class="z-totals-title">Totaux par stat (équipe)</div>
+        <div class="z-totals-title">${T('z.totals.title')}</div>
         ${totauxHTML}
       </div>
     `;
@@ -1610,8 +1611,8 @@
     const condLabel = (l) => {
       if (!l.condition) return null;
       const tags = l.condition.tags_requis || [];
-      const sep = l.condition.mode === "and" ? " et " : " ou ";
-      const prefix = l.condition.mode === "and" ? "à la fois " : "";
+      const sep = ` ${l.condition.mode === "and" ? T('cond.and') : T('cond.or')} `;
+      const prefix = l.condition.mode === "and" ? T('cond.allof').toLowerCase() + " " : "";
       return prefix + tags.join(sep);
     };
 
@@ -1661,9 +1662,9 @@
             .filter((l) => wasBypassed || !l.condition || condRemplieCalc(l, conds))
             .length;
 
-          const senderNom = isSelf ? "Soi" : (senderSlot.character?.nom.trim() || "?");
+          const senderNom = isSelf ? T('item.self') : (senderSlot.character?.nom.trim() || "?");
           const tierLab = ["I", "II", "III", "IV"][zi.tier - 1];
-          const trioLab = senderTrio === 0 ? "Trio A" : "Trio B";
+          const trioLab = senderTrio === 0 ? T('trio.a') : T('trio.b');
           const bypassBadge = wasBypassed
             ? ` <span class="z-leader-bypass">★ Leader bypass</span>`
             : "";
@@ -1675,7 +1676,7 @@
                 <span class="z-source-cov">${activeLines}/${totalLines} lignes</span>
                 ${bypassBadge}
               </div>
-              <div class="z-source-lines">${linesHTML || '<span class="placeholder">Aucune ligne chiffrable</span>'}</div>
+              <div class="z-source-lines">${linesHTML || `<span class="placeholder">${T('z.noline')}</span>`}</div>
             </div>
           `;
         }).join("");
@@ -1685,8 +1686,8 @@
           .map(({ cible, label }) => {
             const s = result.stats[cible];
             if (!s || !s.hasBonus) return null;
-            const multFmt = s.multTotal.toFixed(3).replace(".", ",");
-            const gainFmt = s.gainPct.toFixed(2).replace(".", ",");
+            const multFmt = fmtDec(s.multTotal.toFixed(3));
+            const gainFmt = fmtDec(s.gainPct.toFixed(2));
             return `<div class="z-bilan-stat"><span class="z-bilan-stat-label">${label}</span><span class="z-bilan-stat-mult">×${multFmt} <small>(+${gainFmt}%)</small></span></div>`;
           })
           .filter(Boolean)
@@ -1704,13 +1705,13 @@
               <div class="z-bilan-name">
                 ${isLeader ? `<span class="z-bilan-star">★</span>` : ""}
                 <strong>${slot.character.nom.trim()}</strong>
-                <span class="z-bilan-tier">Cap Z ${tierLab}</span>
-                <span class="z-bilan-trio">${trio === 0 ? "Trio A" : "Trio B"}</span>
+                <span class="z-bilan-tier">${T('z.tier.label')} ${tierLab}</span>
+                <span class="z-bilan-trio">${trio === 0 ? T('trio.a') : T('trio.b')}</span>
               </div>
             </div>
             <div class="z-bilan-sources-detail">${sourcesBlocks}</div>
-            <div class="z-bilan-total-label">Cumul stats (Cap Z uniquement)</div>
-            <div class="z-bilan-stats">${bonusList || `<span class="placeholder">Aucun bonus Z cumulable</span>`}</div>
+            <div class="z-bilan-total-label">${T('z.bilan.cumul')}</div>
+            <div class="z-bilan-stats">${bonusList || `<span class="placeholder">${T('z.bilan.nobonus')}</span>`}</div>
           </div>
         `;
       })
@@ -1770,10 +1771,10 @@
     }
     if (textEl) {
       textEl.style.cssText = "flex:1";
-      textEl.textContent = active_ ? "Réactiver le leader" : "Désactiver le leader";
+      textEl.textContent = active_ ? T('leader.activate') : T('leader.deactivate');
     }
     if (badgeEl) {
-      badgeEl.textContent = active_ ? "ON" : "OFF";
+      badgeEl.textContent = active_ ? T('leader.on') : T('leader.off');
       badgeEl.classList.toggle("is-on", active_);
       badgeEl.style.cssText = [
         "font-size:10px",
@@ -1848,6 +1849,15 @@
       el.classList.add('is-popping');
     });
   }
+
+  // ===== CHANGEMENT DE LANGUE =====
+  // Re-render complet quand l'utilisateur bascule FR ↔ EN
+  window.addEventListener('dbl-lang-changed', () => {
+    renderTeamGrid();
+    renderCharPicker();
+    renderBuildState();
+    renderAll();
+  });
 
   // ===== INIT =====
   renderTeamGrid();

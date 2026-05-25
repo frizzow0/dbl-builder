@@ -64,6 +64,12 @@
         <p class="brand-sub">Team Builder &amp; Items Optimization</p>
       </div>
     </div>
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">
+      <span class="lang-icon">🌐</span>
+      <span class="lang-current">FR</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-next">EN</span>
+    </button>
   </header>
 
   <!-- ============ PUB LEADERBOARD — sous topbar (728×90 desktop) ============ -->
@@ -84,7 +90,7 @@
 
       <!-- Équipe : 6 personnages = 2 trios. Clic vide = ajout, clic rempli = sélection -->
       <div class="panel" id="section-team">
-        <h2 class="panel-title">Équipe <span class="panel-hint">clique sur + pour ajouter un perso · clique sur une carte pour l'éditer</span></h2>
+        <h2 class="panel-title"><span data-i18n="panel.team.title">Équipe</span> <span class="panel-hint" data-i18n="panel.team.hint">clique sur + pour ajouter un perso · clique sur une carte pour l'éditer</span></h2>
         <div id="team-grid" class="team-grid"></div>
         <div class="no-leader-bar">
           <button id="no-leader-btn" class="no-leader-btn" type="button">
@@ -107,11 +113,11 @@
         <!-- État vide : message + bouton -->
         <div id="build-empty" class="build-empty hidden">
           <div class="build-empty-icon">＋</div>
-          <p class="build-empty-text">Ce slot est vide.</p>
-          <button class="btn build-empty-btn" type="button" data-action="open-char-modal">Ajouter un personnage</button>
+          <p class="build-empty-text" data-i18n="build.empty.text">Ce slot est vide.</p>
+          <button class="btn build-empty-btn" type="button" data-action="open-char-modal" data-i18n="build.empty.btn">Ajouter un personnage</button>
         </div>
 
-        <h3 class="build-subhead">Items équipés <span class="panel-hint">max 3</span></h3>
+        <h3 class="build-subhead"><span data-i18n="panel.build.subhead">Items équipés</span> <span class="panel-hint" data-i18n="panel.build.hint">max 3</span></h3>
         <div class="slots">
           <div class="slot" data-slot="0">
             <div class="slot-header">Slot 1</div>
@@ -130,8 +136,8 @@
 
       <!-- Conditions d'équipe -->
       <div id="conditions-panel" class="panel hidden">
-        <h2 class="panel-title">Composition d'équipe</h2>
-        <p class="panel-sub">
+        <h2 class="panel-title" data-i18n="panel.conditions.title">Composition d'équipe</h2>
+        <p class="panel-sub" data-i18n="panel.conditions.sub">
           Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.
         </p>
         <div id="conditions-inputs"></div>
@@ -155,8 +161,8 @@
     <section class="col col-right">
 
       <div class="panel" id="section-z">
-        <h2 class="panel-title">Bilan Cap Z (équipe)</h2>
-        <p class="panel-sub">
+        <h2 class="panel-title" data-i18n="panel.z.title">Bilan Cap Z (équipe)</h2>
+        <p class="panel-sub" data-i18n="panel.z.sub">
           Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.
         </p>
         <div id="z-bilan" class="z-bilan"></div>
@@ -175,15 +181,15 @@
       </div>
 
       <div class="panel" id="section-stats">
-        <h2 class="panel-title">Résumé des effets cumulés</h2>
-        <p class="panel-sub">
+        <h2 class="panel-title" data-i18n="panel.stats.title">Résumé des effets cumulés</h2>
+        <p class="panel-sub" data-i18n-html="panel.stats.sub">
           Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.
         </p>
         <div id="stats-grid" class="stats-grid"></div>
       </div>
 
       <div class="panel" id="section-passifs">
-        <h2 class="panel-title">Effets non calculés</h2>
+        <h2 class="panel-title" data-i18n="panel.passifs.title">Effets non calculés</h2>
         <div id="passifs-zone" class="callout-zone">
           <p class="placeholder">Aucun effet passif sur les items équipés.</p>
         </div>
@@ -219,6 +225,8 @@
         placeholder="Filtrer par nom..."
         aria-label="Rechercher un item"
         autocomplete="off"
+        data-i18n-placeholder="modal.item.search.ph"
+        data-i18n-aria-label="modal.item.search.aria"
       />
       <div id="rarity-filters" class="rarity-filters"></div>
       <ul id="item-list" class="item-list"></ul>
@@ -240,6 +248,8 @@
         placeholder="Rechercher (nom, code, trait)..."
         aria-label="Rechercher un personnage"
         autocomplete="off"
+        data-i18n-placeholder="modal.char.search.ph"
+        data-i18n-aria-label="modal.char.search.aria"
       />
       <div id="char-filters" class="char-filters"></div>
       <ul id="char-suggestions" class="char-modal-list"></ul>
@@ -248,10 +258,10 @@
 
   <!-- ============ MOBILE TABBAR ============ -->
   <nav class="mobile-tabbar" aria-label="Navigation rapide">
-    <a href="#section-team" data-target="section-team" class="active">Équipe</a>
-    <a href="#section-build" data-target="section-build">Build</a>
-    <a href="#section-z" data-target="section-z">Cap Z</a>
-    <a href="#section-stats" data-target="section-stats">Stats</a>
+    <a href="#section-team" data-target="section-team" class="active" data-i18n="nav.team">Équipe</a>
+    <a href="#section-build" data-target="section-build" data-i18n="nav.build">Build</a>
+    <a href="#section-z" data-target="section-z" data-i18n="nav.capz">Cap Z</a>
+    <a href="#section-stats" data-target="section-stats" data-i18n="nav.stats">Stats</a>
   </nav>
 
   <!-- ============ PUBS LATÉRALES — skyscrapers 160×600 ============ -->
@@ -275,6 +285,8 @@
   </div>
 
   <!-- ============ SCRIPTS ============ -->
+  <!-- i18n doit être chargé AVANT calc.js et app.js pour que T() soit disponible -->
+  <script src="i18n.js"></script>
   <script src="items.js"></script>
   <script src="characters.js"></script>
   <script src="data.js"></script>
