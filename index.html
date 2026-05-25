@@ -33,6 +33,12 @@
   <link rel="apple-touch-icon" href="/og-image.svg" />
   <link rel="manifest" href="/site.webmanifest" />
 
+  <!-- ── Google AdSense ─────────────────────────────────── -->
+  <!-- Auto Ads activés : Google place automatiquement des annonces.  -->
+  <!-- Les <ins> manuels ci-dessous permettent un contrôle précis.    -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919"
+       crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -59,6 +65,18 @@
       </div>
     </div>
   </header>
+
+  <!-- ============ PUB LEADERBOARD — sous topbar (728×90 desktop) ============ -->
+  <!-- ⚠️ Remplacer data-ad-slot="XXXXXXXXXX" par ton Slot ID (AdSense → Annonces → Par bloc) -->
+  <div class="ad-leaderboard" aria-label="Espace publicitaire">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3800762846820919"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 
   <main class="layout">
 
@@ -120,6 +138,20 @@
         <div id="conditions-inputs"></div>
       </div>
 
+      <!-- ── PUB IN-CONTENT (colonne gauche, après les panels) ──────────────── -->
+      <!-- Visible sur mobile (colonnes empilées) et desktop < 1024px            -->
+      <!-- ⚠️ Remplacer data-ad-slot="XXXXXXXXXX" par ton Slot ID                -->
+      <div class="ad-in-content" aria-label="Espace publicitaire">
+        <span class="ad-in-content__label">Publicité</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3800762846820919"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
     </section>
 
     <!-- ============ COLONNE DROITE : résultats ============ -->
@@ -131,6 +163,20 @@
           Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.
         </p>
         <div id="z-bilan" class="z-bilan"></div>
+      </div>
+
+      <!-- ── PUB RECTANGLE — entre Bilan Cap Z et Résumé des effets ────────── -->
+      <!-- Format responsive, visible sur toutes tailles                         -->
+      <!-- ⚠️ Remplacer data-ad-slot="XXXXXXXXXX" par ton Slot ID                -->
+      <div class="ad-in-content" aria-label="Espace publicitaire">
+        <span class="ad-in-content__label">Publicité</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3800762846820919"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
       <div class="panel" id="section-stats">
@@ -151,6 +197,17 @@
 
     </section>
   </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p>
+      DBL Optimizer est un outil communautaire non officiel, sans affiliation avec Bandai Namco ou Dragon Ball Legends.
+    </p>
+    <nav aria-label="Liens du site">
+      <a href="/privacy.html">Politique de confidentialité</a>
+    </nav>
+    <p class="site-footer__copy">© 2026 dbl-optimizer.com</p>
+  </footer>
 
   <!-- ============ MODALE DE SÉLECTION D'ITEM ============ -->
   <div id="item-modal" class="modal hidden">
@@ -202,22 +259,24 @@
     <a href="#section-stats" data-target="section-stats">Stats</a>
   </nav>
 
-  <!-- ============ PUBS LATÉRALES (skyscrapers 160×600) ============ -->
-  <!-- Visibles uniquement à partir de 1760px de large              -->
-  <!-- Pour activer AdSense : remplacer le contenu interne par :    -->
-  <!--   <ins class="adsbygoogle" ...></ins>                        -->
-  <!--   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+  <!-- ============ PUBS LATÉRALES — skyscrapers 160×600 ============ -->
+  <!-- Visibles uniquement à partir de 1760px de large               -->
+  <!-- ⚠️ Remplacer data-ad-slot="XXXXXXXXXX" par ton Slot ID         -->
 
   <div class="ad-side ad-side--left" aria-label="Espace publicitaire">
-    <div class="ad-side__icon">📣</div>
-    <span class="ad-side__label">Publicité</span>
-    <span class="ad-side__sub">160 × 600</span>
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-3800762846820919"
+         data-ad-slot="XXXXXXXXXX"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
   <div class="ad-side ad-side--right" aria-label="Espace publicitaire">
-    <div class="ad-side__icon">📣</div>
-    <span class="ad-side__label">Publicité</span>
-    <span class="ad-side__sub">160 × 600</span>
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-3800762846820919"
+         data-ad-slot="XXXXXXXXXX"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
   <!-- ============ SCRIPTS ============ -->

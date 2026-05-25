@@ -1967,115 +1967,116 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   body { padding-bottom: 20px; }
 }
 
-/* ===================== 18. PUBS LATÉRALES (SKYSCRAPERS)  ===================== */
+/* ===================== 18. PUBLICITÉS  ===================== */
 
-/* Masqué par défaut — n'apparaît que si l'écran est assez large.
-   Calcul : layout max 1400px + 2 × (160px ad + 16px gap) = 1752px
-   → seuil 1760px pour un confort de ~4px de chaque côté.             */
-.ad-side {
-  display: none;
+/* ── Leaderboard sous topbar (728×90 desktop, responsive mobile) ── */
+.ad-leaderboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--s-2) var(--s-4) 0;
+  text-align: center;
+  min-height: 0;   /* pas de réserve si Google ne charge pas */
 }
+/* Masquer à l'impression et dans les modales */
+@media print { .ad-leaderboard { display: none !important; } }
+body:has(#char-modal:not(.hidden)) .ad-leaderboard,
+body:has(#item-modal:not(.hidden)) .ad-leaderboard { display: none !important; }
+
+/* ── Zones in-content (rectangle entre panels) ──────────────────── */
+.ad-in-content {
+  position: relative;
+  padding: var(--s-1) 0;
+  text-align: center;
+  min-height: 0;
+}
+.ad-in-content__label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: .55;
+  margin-bottom: 4px;
+  user-select: none;
+  pointer-events: none;
+}
+/* Cache si AdSense ne charge pas (pas de hauteur fantôme) */
+.ad-in-content:empty,
+.ad-in-content ins[style*="height: 0"] { display: none; }
+@media print { .ad-in-content { display: none !important; } }
+body:has(#char-modal:not(.hidden)) .ad-in-content,
+body:has(#item-modal:not(.hidden)) .ad-in-content { display: none !important; }
+
+/* ── PUBS LATÉRALES (SKYSCRAPERS 160×600)  ──────────────────────── */
+/* Masqué par défaut — visible seulement ≥ 1760px                    */
+.ad-side { display: none; }
 
 @media (min-width: 1760px) {
   .ad-side {
-    /* Collé juste à l'extérieur du layout centré à max 1400px */
     position: fixed;
-    top: 64px;                 /* sous le topbar (~63px de hauteur) */
+    top: 64px;          /* sous le topbar (~63px) */
     width: 160px;
     height: 600px;
-    z-index: 30;               /* sous topbar (40) et modales (50)  */
-
-    /* Visuel placeholder */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border-radius: var(--r-3);
-    border: 1px dashed var(--line-strong);
-    background: var(--surface-2);
+    z-index: 30;
+    display: block;
     overflow: hidden;
-
-    /* Texture pointillés atténuée */
-    background-image: radial-gradient(circle, var(--line) 1px, transparent 1px);
-    background-size: 14px 14px;
-    box-shadow: inset 0 0 0 2000px var(--surface-2);
-
-    transition: border-color var(--t-hover), box-shadow var(--t-hover);
   }
-
-  .ad-side:hover {
-    border-color: var(--accent);
-    box-shadow: inset 0 0 0 2000px var(--surface-2), 0 0 0 3px var(--accent-tint);
-  }
-
-  /* Position : distance depuis le bord = (vw - 1400) / 2 - 16px gap - 160px */
+  /* Position symétrique en dehors du layout max-1400px */
   .ad-side--left  { left:  calc((100vw - 1400px) / 2 - 176px); }
   .ad-side--right { right: calc((100vw - 1400px) / 2 - 176px); }
 }
 
-/* Badge "PUB" coin supérieur droit ----------------------------------- */
-.ad-side::before {
-  content: 'PUB';
-  position: absolute;
-  top: 7px; right: 9px;
-  font-size: 9px; font-weight: 700;
-  letter-spacing: .1em;
-  color: var(--muted);
-  opacity: .4;
-  pointer-events: none;
-}
-
-/* Icône + labels internes -------------------------------------------- */
-.ad-side__icon {
-  width: 32px; height: 32px;
-  border-radius: var(--r-2);
-  background: var(--line);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 15px;
-  opacity: .5;
-  pointer-events: none; user-select: none;
-}
-.ad-side__label {
-  font-size: var(--fs-xxs);
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  opacity: .7;
-  pointer-events: none; user-select: none;
-}
-.ad-side__sub {
-  font-size: var(--fs-xxs);
-  color: var(--muted);
-  opacity: .4;
-  pointer-events: none; user-select: none;
-}
-
-/* Masquer quand une modale plein écran est ouverte ------------------- */
+/* Masquer quand une modale plein écran est ouverte */
 body:has(#char-modal:not(.hidden)) .ad-side,
-body:has(#item-modal:not(.hidden)) .ad-side {
-  display: none !important;
-}
+body:has(#item-modal:not(.hidden)) .ad-side { display: none !important; }
 
-/* Masquer à l'impression --------------------------------------------- */
+/* Masquer à l'impression */
 @media print { .ad-side { display: none !important; } }
 
-/* ─── Passer à AdSense ────────────────────────────────────────────────
-   1. Dans <head>, ajouter :
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-        ?client=ca-pub-XXXX" crossorigin="anonymous"></script>
-
-   2. Dans chaque .ad-side, remplacer le contenu interne par :
-      <ins class="adsbygoogle"
-           style="display:block;width:160px;height:600px"
-           data-ad-client="ca-pub-XXXX"
-           data-ad-slot="XXXXXXXXXX"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-─────────────────────────────────────────────────────────────────────── */
+/* =====================  19. FOOTER  ===================== */
+.site-footer {
+  max-width: 1400px;
+  margin: var(--s-7) auto 0;
+  padding: var(--s-5) var(--s-4) calc(env(safe-area-inset-bottom, 0px) + var(--s-9) + 16px);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+  text-align: center;
+}
+.site-footer p {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 600px;
+}
+.site-footer nav {
+  display: flex;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.site-footer nav a {
+  font-size: var(--fs-xs);
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: color var(--t-micro);
+}
+.site-footer nav a:hover { color: var(--accent); text-decoration: underline; }
+.site-footer__copy {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin: 0;
+}
+body:has(#char-modal:not(.hidden)) .site-footer,
+body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
+@media print { .site-footer p:first-child { display: block; } }
 
 /* ============================================================
-   19. MOTION DESIGN — Micro-interactions & entrées animées
+   20. MOTION DESIGN — Micro-interactions & entrées animées
    ============================================================ */
 
 /* ── Scroll reveal : panels glissent vers le haut ─────────────────
