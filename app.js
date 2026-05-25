@@ -484,7 +484,7 @@
     const elPills = [
       `<button class="char-filter-pill char-elem-pill ${state.charElementFilter === null ? "active" : ""}" data-char-element="">${T('filter.all')}</button>`,
       ...CHAR_ELEMENTS.filter((el) => counts.el[el]).map(
-        (el) => `<button class="char-filter-pill char-elem-pill elem-${el.toLowerCase()} ${state.charElementFilter === el ? "active" : ""}" data-char-element="${el}">${el} <span class="pill-count">${counts.el[el]}</span></button>`,
+        (el) => `<button class="char-filter-pill char-elem-pill elem-${el.toLowerCase()} ${state.charElementFilter === el ? "active" : ""}" data-char-element="${el}">${T('elem.' + el)} <span class="pill-count">${counts.el[el]}</span></button>`,
       ),
     ];
     charFiltersEl.innerHTML = `
@@ -533,7 +533,7 @@
         return `
           <li data-char-id="${p.id}" class="${elementClass}${isTaken ? " is-taken" : ""}" ${isTaken ? 'aria-disabled="true"' : ''}>
             ${img}
-            <span class="char-suggestion-element">${p.element || ""}</span>
+            <span class="char-suggestion-element">${p.element ? T('elem.' + p.element) : ""}</span>
             <span class="char-suggestion-name">${p.nom.trim()}</span>
             <small class="char-suggestion-code">${p.cardCode || ""} · ${p.rarete}</small>
             ${isTaken ? `<span class="char-taken-badge">${T('char.taken')}</span>` : ""}
@@ -578,7 +578,7 @@
       <div class="char-selected-card ${elementClass}">
         ${img}
         <div class="char-selected-info">
-          <div class="char-selected-element">${p.element || ""}</div>
+          <div class="char-selected-element">${p.element ? T('elem.' + p.element) : ""}</div>
           <div class="char-selected-name">${p.nom.trim()}</div>
           <div class="char-selected-code">${p.cardCode || ""} · ${p.rarete}</div>
         </div>

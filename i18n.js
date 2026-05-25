@@ -61,6 +61,15 @@
     'filter.all':           { fr: 'Tous', en: 'All' },
     'filter.compat':        { fr: '✓ Compatibles', en: '✓ Compatible' },
 
+    // ── Éléments / Attributs ─────────────────────
+    // Codes internes EN → libellés affichés selon la langue
+    'elem.BLU': { fr: 'BLE', en: 'BLU' },  // Bleu
+    'elem.RED': { fr: 'RGE', en: 'RED' },  // Rouge
+    'elem.GRN': { fr: 'VRT', en: 'GRN' },  // Vert
+    'elem.YEL': { fr: 'JAU', en: 'YEL' },  // Jaune
+    'elem.PUR': { fr: 'VIO', en: 'PUR' },  // Violet
+    'elem.LGT': { fr: 'LUM', en: 'LGT' },  // Lumière
+
     // ── Dynamique : items & slots ────────────────
     'itemmodal.title.slot': { fr: 'Choisir un item — Slot {n}', en: 'Choose an item — Slot {n}' },
     'item.notfound':        { fr: 'Aucun item trouvé',      en: 'No item found' },
