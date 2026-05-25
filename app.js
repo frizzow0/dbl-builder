@@ -1010,9 +1010,11 @@
     if (!pick) return;
     const item = ITEMS.find((it) => it.id === pick.dataset.pick);
     if (!item) return;
+    const _animSlot = state.modalSlot; // capture avant closeItemModal (qui null-ise modalSlot)
     active.items[state.modalSlot] = item;
     closeItemModal();
     renderAll();
+    motionPopSlot(_animSlot);
   });
 
   // ===== RENDU : SLOTS =====
@@ -1331,6 +1333,8 @@
         `;
       })
       .join("");
+    motionStaggerStats();
+    motionFlashStats();
 
     // --- Passifs ---
     if (result.passifs.length === 0) {
@@ -1605,10 +1609,64 @@
     renderResults();
   }
 
+  // ===== MOTION DESIGN =====
+  // Vanilla JS — GPU only (transform + opacity). Aucune dépendance.
+  const _rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1. Scroll reveal : panels glissent vers le haut en entrant dans le viewport
+  function motionInitScrollReveal() {
+    if (_rm) return;
+    const panels = document.querySelectorAll('.panel:not(#conditions-panel)');
+    // Masquer instantanément (sans transition) puis révéler avec IO
+    panels.forEach((el, i) => {
+      el.dataset.motion = 'hidden';
+      el.style.setProperty('--reveal-delay', `${Math.min(i, 5) * 70}ms`);
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.dataset.motion = 'visible'; // déclenche la transition CSS
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+    panels.forEach(el => io.observe(el));
+  }
+
+  // 2. Stagger des stat-rows : animation-delay échelonné à chaque recalcul
+  function motionStaggerStats() {
+    if (_rm) return;
+    document.querySelectorAll('.stat-row-split').forEach((row, i) => {
+      row.style.animationDelay = `${i * 40}ms`;
+    });
+  }
+
+  // 3. Flash orange des cellules non-vides au recalcul
+  function motionFlashStats() {
+    if (_rm) return;
+    document.querySelectorAll('.stat-cell:not(.stat-cell-dim)').forEach(cell => {
+      cell.classList.remove('is-flashing');
+      void cell.offsetWidth; // force reflow pour relancer l'animation
+      cell.classList.add('is-flashing');
+    });
+  }
+
+  // 4. Pop-in bounce du slot item après équipement
+  function motionPopSlot(slotIdx) {
+    if (_rm) return;
+    requestAnimationFrame(() => {
+      const el = document.querySelector(`[data-slot-content="${slotIdx}"]`);
+      if (!el) return;
+      el.classList.remove('is-popping');
+      void el.offsetWidth;
+      el.classList.add('is-popping');
+    });
+  }
+
   // ===== INIT =====
   renderTeamGrid();
   renderCharPicker();
   renderCharTraits();
   renderBuildState();
   renderAll();
+  motionInitScrollReveal();
 })();

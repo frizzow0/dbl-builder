@@ -2027,3 +2027,83 @@ body:has(#item-modal:not(.hidden)) .ad-side {
            data-ad-slot="XXXXXXXXXX"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 ─────────────────────────────────────────────────────────────────────── */
+
+/* ============================================================
+   19. MOTION DESIGN — Micro-interactions & entrées animées
+   ============================================================ */
+
+/* ── Scroll reveal : panels glissent vers le haut ─────────────────
+   État "hidden" (appliqué sans transition → instantané)
+   État "visible" (déclenche la transition easeOutExpo)            */
+.panel[data-motion="hidden"] {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.panel[data-motion="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity  520ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+}
+
+/* ── Stat rows stagger : apparition en cascade à chaque recalcul ── */
+@keyframes statRowIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.stat-row-split {
+  /* `backwards` = état `from` appliqué pendant l'animationDelay */
+  animation: statRowIn 340ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* ── Stat cell flash : pulse orange au recalcul ────────────────── */
+@keyframes cellFlash {
+  0%   { background: var(--accent-tint-2); transform: scale(1.04); }
+  100% { background: transparent;          transform: scale(1);    }
+}
+.stat-cell.is-flashing {
+  animation: cellFlash 480ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── Item slot pop-in : bounce easeOutBack à l'équipement ───────── */
+@keyframes slotPopIn {
+  0%   { opacity: 0; transform: scale(0.82) translateY(10px); }
+  65%  {             transform: scale(1.04) translateY(-2px);  }
+  100% { opacity: 1; transform: scale(1)    translateY(0);     }
+}
+.slot-content.is-popping {
+  animation: slotPopIn 400ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── Boutons : press feedback tactile (scale rapide) ────────────── */
+.btn:not(:disabled):active,
+.btn-close:active,
+.rarity-pill:active,
+.or-choice:active,
+[data-action]:active {
+  transform: scale(0.94) !important;
+  transition: transform 80ms linear !important;
+}
+.slot-content.empty:active {
+  transform: scale(0.97) !important;
+  transition: transform 80ms linear !important;
+}
+
+/* ── prefers-reduced-motion : désactivation totale ──────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .panel[data-motion] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .stat-row-split      { animation: none !important; }
+  .stat-cell.is-flashing { animation: none !important; }
+  .slot-content.is-popping { animation: none !important; }
+}
