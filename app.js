@@ -6,6 +6,55 @@
   const { ITEMS, STATS, PERSONNAGES } = window.DBL_DATA;
   const { calculerStats, interpolerValeur, conditionRemplie: condRemplieCalc, LABELS_CIBLES, STATS_CIBLES } = window.DBL_CALC;
 
+  // ===== PATCH : CORRECTION DES CONDITIONS ZENKAI Z =====
+  // Le scraper a mal interprété les Zenkai Z au format « Attribut : X » et
+  // « Classe : Y » : il a extrait les phrases complètes comme tags au lieu
+  // des noms entre guillemets. Ce correcteur tourne une seule fois au
+  // chargement et répare les tags_requis de chaque ligne Zenkai Z cassée.
+  // ------------------------------------------------------------
+  const _ATTR_TO_ELEM = {
+    "Attribut : Bleu":    "BLU",
+    "Attribut : Rouge":   "RED",
+    "Attribut : Vert":    "GRN",
+    "Attribut : Jaune":   "YEL",
+    "Attribut : Violet":  "PUR",
+    "Attribut : Lumière": "LGT",
+    "Attribut : Clair":   "LGT",
+  };
+  function _mapZenkaiTag(raw) {
+    if (_ATTR_TO_ELEM[raw]) return _ATTR_TO_ELEM[raw];
+    // "Classe : X" → "X"  (getTeamTagCounts stocke déjà "X" en direct)
+    const m = raw.match(/^(?:Classe|[ÉE]pisode)\s*:\s*(.+)$/i);
+    if (m) return m[1].trim();
+    return raw;
+  }
+  function _patchZenkaiCond(cond, texteBrut) {
+    if (!cond || !cond.tags_requis) return cond;
+    // Détecte une condition cassée : les tags contiennent des phrases
+    const broken = cond.tags_requis.some(
+      t => t.includes('«') || t.includes('personnage') || /^(Lors|augmente)/i.test(t)
+    );
+    if (!broken) return cond;
+    // Extrait les contenus entre « » depuis les tags et le texteBrut
+    const src = cond.tags_requis.join(' ') + ' ' + (texteBrut || '');
+    const extracted = [...src.matchAll(/«\s*([^»]+?)\s*»/g)].map(m => m[1].trim());
+    if (!extracted.length) return cond;
+    const newTags = [...new Set(extracted.map(_mapZenkaiTag))];
+    const mode = /à la fois|\bà la fois\b/i.test(texteBrut || '') ? "and" : "threshold";
+    return { ...cond, mode, tags_requis: newTags, tag_requis: newTags[0] || cond.tag_requis };
+  }
+  (function _patchAllZenkaiConditions() {
+    for (const p of PERSONNAGES) {
+      if (!p.zAbilitiesZenkai) continue;
+      for (const z of p.zAbilitiesZenkai) {
+        const txt = z.texteBrut || '';
+        for (const l of z.lignes || []) {
+          if (l.condition) l.condition = _patchZenkaiCond(l.condition, txt);
+        }
+      }
+    }
+  })();
+
   // Vrai si l'item est compatible avec le personnage.
   // tagsPorteur est en CNF : [["A","B"], ["C"]] = (A AND B) OR C
   // Un perso "possède" : ses traits + son cardCode.
