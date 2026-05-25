@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff5722" />
+  <title>DBL · Item Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-glyph">DBL</span>
+      <div class="brand-text">
+        <h1>Item Builder</h1>
+        <p class="brand-sub">Équipe, items et Cap Z — bonus cumulés en temps réel.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- ============ COLONNE GAUCHE : configuration ============ -->
+    <section class="col col-left">
+
+      <!-- Équipe : 6 personnages = 2 trios. Clic vide = ajout, clic rempli = sélection -->
+      <div class="panel" id="section-team">
+        <h2 class="panel-title">Équipe <span class="panel-hint">clique sur + pour ajouter un perso · clique sur une carte pour l'éditer</span></h2>
+        <div id="team-grid" class="team-grid"></div>
+      </div>
+
+      <!-- Build du slot actif : perso + traits + Cap Z + 3 items -->
+      <div class="panel" id="section-build">
+        <h2 class="panel-title" id="build-title">Build du Slot 1</h2>
+
+        <!-- Affiché uniquement quand un perso est dans le slot actif -->
+        <div id="char-selected" class="char-selected hidden"></div>
+        <div id="char-traits" class="char-traits hidden"></div>
+        <div id="char-zability" class="char-zability hidden"></div>
+
+        <!-- État vide : message + bouton -->
+        <div id="build-empty" class="build-empty hidden">
+          <div class="build-empty-icon">＋</div>
+          <p class="build-empty-text">Ce slot est vide.</p>
+          <button class="btn build-empty-btn" type="button" data-action="open-char-modal">Ajouter un personnage</button>
+        </div>
+
+        <h3 class="build-subhead">Items équipés <span class="panel-hint">max 3</span></h3>
+        <div class="slots">
+          <div class="slot" data-slot="0">
+            <div class="slot-header">Slot 1</div>
+            <div class="slot-content empty" data-slot-content="0">+ Choisir un item</div>
+          </div>
+          <div class="slot" data-slot="1">
+            <div class="slot-header">Slot 2</div>
+            <div class="slot-content empty" data-slot-content="1">+ Choisir un item</div>
+          </div>
+          <div class="slot" data-slot="2">
+            <div class="slot-header">Slot 3</div>
+            <div class="slot-content empty" data-slot-content="2">+ Choisir un item</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditions d'équipe -->
+      <div id="conditions-panel" class="panel hidden">
+        <h2 class="panel-title">Composition d'équipe</h2>
+        <p class="panel-sub">
+          Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.
+        </p>
+        <div id="conditions-inputs"></div>
+      </div>
+
+    </section>
+
+    <!-- ============ COLONNE DROITE : résultats ============ -->
+    <section class="col col-right">
+
+      <div class="panel" id="section-stats">
+        <h2 class="panel-title">Résumé des effets cumulés</h2>
+        <p class="panel-sub">
+          Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.
+        </p>
+        <div id="stats-grid" class="stats-grid"></div>
+      </div>
+
+      <div class="panel" id="section-z">
+        <h2 class="panel-title">Bilan Cap Z (équipe)</h2>
+        <p class="panel-sub">
+          Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.
+        </p>
+        <div id="z-bilan" class="z-bilan"></div>
+      </div>
+
+      <div class="panel" id="section-passifs">
+        <h2 class="panel-title">Effets non calculés</h2>
+        <div id="passifs-zone" class="callout-zone">
+          <p class="placeholder">Aucun effet passif sur les items équipés.</p>
+        </div>
+        <div id="inactive-zone" class="callout-zone"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ============ MODALE DE SÉLECTION D'ITEM ============ -->
+  <div id="item-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3 id="modal-title">Choisir un item</h3>
+        <button id="modal-close" class="btn-close" aria-label="Fermer">×</button>
+      </div>
+      <input
+        type="text"
+        id="item-search"
+        class="search-input"
+        placeholder="Filtrer par nom..."
+      />
+      <div id="rarity-filters" class="rarity-filters"></div>
+      <ul id="item-list" class="item-list"></ul>
+    </div>
+  </div>
+
+  <!-- ============ MODALE DE SÉLECTION DE PERSONNAGE ============ -->
+  <div id="char-modal" class="modal hidden">
+    <div class="modal-backdrop" data-char-modal-close></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3 id="char-modal-title">Choisir un personnage</h3>
+        <button id="char-modal-close" class="btn-close" aria-label="Fermer">×</button>
+      </div>
+      <input
+        type="text"
+        id="char-search"
+        class="search-input"
+        placeholder="Rechercher (nom, code, trait)..."
+        autocomplete="off"
+      />
+      <div id="char-filters" class="char-filters"></div>
+      <ul id="char-suggestions" class="char-modal-list"></ul>
+    </div>
+  </div>
+
+  <!-- ============ MOBILE TABBAR ============ -->
+  <nav class="mobile-tabbar" aria-label="Navigation rapide">
+    <a href="#section-team" data-target="section-team" class="active">Équipe</a>
+    <a href="#section-build" data-target="section-build">Build</a>
+    <a href="#section-stats" data-target="section-stats">Stats</a>
+    <a href="#section-z" data-target="section-z">Cap Z</a>
+  </nav>
+
+  <!-- ============ PUBS LATÉRALES (skyscrapers 160×600) ============ -->
+  <!-- Visibles uniquement à partir de 1760px de large              -->
+  <!-- Pour activer AdSense : remplacer le contenu interne par :    -->
+  <!--   <ins class="adsbygoogle" ...></ins>                        -->
+  <!--   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+
+  <div class="ad-side ad-side--left" aria-label="Espace publicitaire">
+    <div class="ad-side__icon">📣</div>
+    <span class="ad-side__label">Publicité</span>
+    <span class="ad-side__sub">160 × 600</span>
+  </div>
+
+  <div class="ad-side ad-side--right" aria-label="Espace publicitaire">
+    <div class="ad-side__icon">📣</div>
+    <span class="ad-side__label">Publicité</span>
+    <span class="ad-side__sub">160 × 600</span>
+  </div>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="items.js"></script>
+  <script src="characters.js"></script>
+  <script src="data.js"></script>
+  <script src="calc.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    (function () {
+      const tabs = document.querySelectorAll('.mobile-tabbar a');
+      if (!tabs.length) return;
+      tabs.forEach((a) => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          const el = document.getElementById(a.dataset.target);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+      const sections = Array.from(tabs)
+        .map((a) => document.getElementById(a.dataset.target))
+        .filter(Boolean);
+      const setActive = (id) => {
+        tabs.forEach((a) => a.classList.toggle('active', a.dataset.target === id));
+      };
+      const io = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+          if (visible[0]) setActive(visible[0].target.id);
+        },
+        { threshold: [0.3, 0.6], rootMargin: '-80px 0px -40% 0px' }
+      );
+      sections.forEach((s) => io.observe(s));
+    })();
+  </script>
+</body>
+</html>

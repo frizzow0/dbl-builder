@@ -1,0 +1,20 @@
+# ── Fichiers temporaires du scraper ──────────────────────────────────
+.tmp_*.html
+.cache_scrape/
+.scrape_report.json
+
+# ── Scripts de scraping (Node.js, inutiles sur le site) ──────────────
+scrape.js
+scrape_chars.js
+
+# ── Sessions Claude ───────────────────────────────────────────────────
+.claude/
+
+# ── Previews de design (maquettes internes) ───────────────────────────
+previews/
+
+# ── Divers ────────────────────────────────────────────────────────────
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
