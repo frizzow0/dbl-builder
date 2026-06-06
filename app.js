@@ -4,7 +4,7 @@
 
 (function () {
   const { ITEMS, STATS, PERSONNAGES } = window.DBL_DATA;
-  const { calculerStats, interpolerValeur, conditionRemplie: condRemplieCalc, LABELS_CIBLES, STATS_CIBLES } = window.DBL_CALC;
+  const { calculerStats, interpolerValeur, conditionRemplie: condRemplieCalc, multiplicateurCondition: multCondCalc, LABELS_CIBLES, STATS_CIBLES } = window.DBL_CALC;
 
   // Raccourci traduction — toujours utiliser T() pour les chaînes UI
   const T = (key, params) => window.DBL_I18N.T(key, params);
@@ -54,6 +54,22 @@
         for (const l of z.lignes || []) {
           if (l.condition) l.condition = _patchZenkaiCond(l.condition, txt);
         }
+      }
+    }
+  })();
+
+  // ── PATCH RUNTIME : seuils "si au moins N" mal parsés par le scraper ──────
+  // Le scraper utilisait /si\s+(\d+)/ et ratait le pattern "si au moins N".
+  // On corrige à la volée en relisant la description de chaque condition.
+  (function _fixThresholdSeuils() {
+    const re = /si\s+(?:au\s+moins\s+)?(\d+)\s*[«»]/i;
+    for (const item of ITEMS) {
+      for (const l of item.lignes || []) {
+        if (!l.condition || l.condition.mode !== 'threshold') continue;
+        const m = re.exec(l.condition.description || '');
+        if (!m) continue;
+        const parsed = parseInt(m[1], 10);
+        if (parsed > (l.condition.seuil || 1)) l.condition.seuil = parsed;
       }
     }
   })();
@@ -285,6 +301,90 @@
       counts[k] = Math.max(counts[k] || 0, v);
     }
     return counts;
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // CONDITIONS D'ITEMS : MÉCANIQUE DE SCOPE
+  // ─────────────────────────────────────────────────────────────
+  // Règle 1 — Conditions de classe/trait ("si N « Classe : X » font partie
+  //   des combattants de l'équipe") : elles ne regardent que les 3 combattants
+  //   du MÊME TRIO que le porteur de l'item.
+  // Règle 2 — Conditions "même équipement" ("par combattant portant ce même
+  //   équipement") : elles comptent sur l'ÉQUIPE ENTIÈRE (les 6 slots).
+  //   Le scraper produit mode:"per_member" + tag_requis:null + tags_requis:[].
+  //   On injecte un tag synthétique "__same_item__:${itemId}" pour que le
+  //   moteur calc.js puisse l'évaluer sans modification.
+  // ─────────────────────────────────────────────────────────────
+
+  // Compte les traits uniquement pour les 3 membres du trio du slot donné.
+  // applyOverrides : inclure les overrides manuels (true par défaut).
+  function getTrioTagCountsFor(slotIdx, applyOverrides = true) {
+    const trioStart = Math.floor(slotIdx / 3) * 3;
+    const counts = {};
+    for (let i = trioStart; i < trioStart + 3; i++) {
+      const slot = state.team[i];
+      if (!slot.character) continue;
+      const c = slot.character;
+      for (const trait of c.traits || []) {
+        counts[trait] = (counts[trait] || 0) + 1;
+        const cls = "Classe : " + trait;
+        counts[cls] = (counts[cls] || 0) + 1;
+      }
+      if (c.element) counts[c.element] = (counts[c.element] || 0) + 1;
+      if (c.cardCode) {
+        counts[c.cardCode] = (counts[c.cardCode] || 0) + 1;
+        if (c.nom) {
+          const key = `Personnage : ${c.nom.trim()} (${c.cardCode})`;
+          counts[key] = (counts[key] || 0) + 1;
+        }
+      }
+    }
+    if (applyOverrides) {
+      for (const [k, v] of Object.entries(state.conditions)) {
+        counts[k] = Math.max(counts[k] || 0, v);
+      }
+    }
+    return counts;
+  }
+
+  // Construit le conditions object pour évaluer les items d'un slot :
+  // - Traits/classes  → trio-scoped (avec overrides manuels)
+  // - Même équipement → team-wide via tag synthétique "__same_item__:${id}"
+  function buildItemConditions(slotIdx) {
+    const counts = getTrioTagCountsFor(slotIdx, true);
+    for (const slot of state.team) {
+      for (const item of slot.items) {
+        if (!item) continue;
+        const tag = '__same_item__:' + item.id;
+        counts[tag] = (counts[tag] || 0) + 1;
+      }
+    }
+    return counts;
+  }
+
+  // Clone les items en injectant un tag synthétique sur les lignes
+  // "portant ce même équipement" (mode per_member + tags vides),
+  // afin que calc.js puisse les évaluer normalement.
+  function patchSameItemTags(items) {
+    return items.map(item => {
+      if (!item) return null;
+      const hasSameItem = item.lignes.some(
+        l => l.condition && l.condition.mode === 'per_member' &&
+             !l.condition.tag_requis && (!l.condition.tags_requis || !l.condition.tags_requis.length)
+      );
+      if (!hasSameItem) return item;
+      const syntheticTag = '__same_item__:' + item.id;
+      return {
+        ...item,
+        lignes: item.lignes.map(l => {
+          if (!l.condition || l.condition.mode !== 'per_member' ||
+              l.condition.tag_requis || (l.condition.tags_requis && l.condition.tags_requis.length)) {
+            return l;
+          }
+          return { ...l, condition: { ...l.condition, tag_requis: syntheticTag, tags_requis: [syntheticTag] } };
+        })
+      };
+    });
   }
 
   // Construit la liste des bonus Z appliqués à un slot d'équipe.
@@ -1133,6 +1233,8 @@
 
   // ===== RENDU : SLOTS =====
   function renderSlots() {
+    // Conditions pour l'affichage des lignes : trio-scoped + même équipement team-wide
+    const slotDisplayConditions = buildItemConditions(state.activeSlot);
     for (let i = 0; i < 3; i++) {
       const el = document.querySelector(`[data-slot-content="${i}"]`);
       const item = active.items[i];
@@ -1182,9 +1284,21 @@
           }
           return `<div class="slot-ligne passive"><span class="bullet">⚡</span>${l.description_passif}</div>`;
         }
-        const conditionRemplie = condRemplieCalc(l, getTeamTagCounts());
+        // ── Règle 2 : "même équipement" → patch tag synthétique pour évaluation ──
+        let lineToEval = l;
+        if (l.condition?.mode === 'per_member' && !l.condition.tag_requis &&
+            !(l.condition.tags_requis?.length)) {
+          const syntheticTag = '__same_item__:' + item.id;
+          lineToEval = { ...l, condition: { ...l.condition, tag_requis: syntheticTag, tags_requis: [syntheticTag] } };
+        }
+        const conditionRemplie = condRemplieCalc(lineToEval, slotDisplayConditions);
         const cls = l.condition ? (conditionRemplie ? "active" : "inactive") : "";
-        const valeur = interpolerValeur(l, 1); // toujours max
+        // Pour per_member : afficher la valeur effective (base × count)
+        let valeur = interpolerValeur(l, 1);
+        if (conditionRemplie && lineToEval.condition?.mode === 'per_member') {
+          const mult = multCondCalc(lineToEval, slotDisplayConditions);
+          if (mult > 1) valeur *= mult;
+        }
         const condBadge = l.condition
           ? ` <em style="color:var(--text-soft); font-size:10px">(${l.condition.description})</em>`
           : "";
@@ -1261,7 +1375,8 @@
       return;
     }
     conditionsPanel.classList.remove("hidden");
-    const autoCounts = getTeamTagCounts();
+    // Compte pur du trio (sans overrides) pour l'affichage "auto: N"
+    const autoCounts = getTrioTagCountsFor(state.activeSlot, false);
 
     conditionsInputs.innerHTML = tags
       .map((tag) => {
@@ -1355,11 +1470,11 @@
     }
 
     // Calculs SÉPARÉS pour distinguer ce qui vient des items vs des Cap Z.
-    // Les conditions sont team-wide (auto-détection des traits de toute l'équipe).
+    // Conditions items : trio-scoped pour les traits/classes + team-wide pour "même équipement".
     // Les items "OR" (ex : "ATK énergie OR ATK physique") sont résolus selon le choix utilisateur.
     const zItems = buildTeamZItemsFor(state.activeSlot);
-    const effCond = getTeamTagCounts();
-    const resolvedItems = getActiveItemsWithChoices();
+    const effCond = buildItemConditions(state.activeSlot);
+    const resolvedItems = patchSameItemTags(getActiveItemsWithChoices());
     const itemOnlyItems = resolvedItems.filter(Boolean);
 
     // Split item lines par TYPE (base / pur+direct) pour affichage séparé

@@ -5867,7 +5867,7 @@ window.DBL_ITEMS_SCRAPED = [
         "condition": {
           "description": "si au moins 2 « Style de combat : Type physique » font partie des combattants de l'équipe",
           "mode": "threshold",
-          "seuil": 1,
+          "seuil": 2,
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
@@ -6074,7 +6074,7 @@ window.DBL_ITEMS_SCRAPED = [
         "condition": {
           "description": "si au moins 2 « Épisode : Saga Z - Cell » font partie des combattants de l'équipe",
           "mode": "threshold",
-          "seuil": 1,
+          "seuil": 2,
           "tag_requis": "Épisode : Saga Z - Cell",
           "tags_requis": [
             "Épisode : Saga Z - Cell"
@@ -11971,7 +11971,7 @@ window.DBL_ITEMS_SCRAPED = [
         "condition": {
           "description": "si au moins 2 « Classe : Futur » font partie des combattants de l'équipe",
           "mode": "threshold",
-          "seuil": 1,
+          "seuil": 2,
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
@@ -12032,7 +12032,7 @@ window.DBL_ITEMS_SCRAPED = [
         "condition": {
           "description": "si au moins 2 « Classe : Futur » font partie des combattants de l'équipe",
           "mode": "threshold",
-          "seuil": 1,
+          "seuil": 2,
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
@@ -23788,7 +23788,7 @@ window.DBL_ITEMS_SCRAPED = [
         "condition": {
           "description": "si au moins 2 « Classe : Futur » font partie des combattants de l'équipe",
           "mode": "threshold",
-          "seuil": 1,
+          "seuil": 2,
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
@@ -23803,7 +23803,7 @@ window.DBL_ITEMS_SCRAPED = [
         "condition": {
           "description": "si au moins 2 « Classe : Futur » font partie des combattants de l'équipe",
           "mode": "threshold",
-          "seuil": 1,
+          "seuil": 2,
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
