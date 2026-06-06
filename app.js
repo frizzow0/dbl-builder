@@ -158,27 +158,41 @@
   // Cas laissés en passif : situationnels ("… contre les « X »"), choix "- OR -",
   // et toute formulation de stat non reconnue (défaut sûr).
   (function _convertRangePassives() {
-    const NORM = (s) => s.toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, " ")
-      .replace(/^\s*(votre|vos)\s+/, "").replace(/\.\s*$/, "").trim();
-    // Phrase de stat (normalisée) → clés de stats (couche pur / HP / dégâts directs)
+    // Normalise une phrase de stat en retirant articles/élisions ("l'attaque
+    // d'énergie" → "attaque énergie") pour matcher quel que soit l'ordre des mots.
+    const NORM = (s) => s.toLowerCase().replace(/[’‘]/g, "'")
+      .replace(/\bd'/g, "").replace(/\bl'/g, "")
+      .replace(/\b(la|le|les|du|des|de|votre|vos)\b/g, " ")
+      .replace(/\s+/g, " ").replace(/[.\s]+$/, "").trim();
+    // Phrase normalisée (sans articles) → clés de stats (pur / HP / dégâts directs)
     const PHRASE = {
-      "la défense et l'attaque physique":  ["defense_physique", "attaque_physique"],
-      "la défense et l'attaque d'énergie": ["defense_energie", "attaque_energie"],
-      "l'attaque physique":                ["attaque_physique"],
-      "l'attaque d'énergie":               ["attaque_energie"],
-      "la défense physique":               ["defense_physique"],
-      "la défense d'énergie":              ["defense_energie"],
-      "attaque physique et d'énergie":     ["attaque_physique", "attaque_energie"],
-      "l'attaque physique et d'énergie":   ["attaque_physique", "attaque_energie"],
-      "l'attaque physique et la défense d'énergie": ["attaque_physique", "defense_energie"],
-      "la défense d'énergie et l'attaque physique": ["defense_energie", "attaque_physique"],
-      "l'attaque physique et d'énergie et la défense physique et d'énergie":
+      "défense et attaque physique":  ["defense_physique", "attaque_physique"],
+      "défense et attaque énergie":   ["defense_energie", "attaque_energie"],
+      "attaque physique":             ["attaque_physique"],
+      "attaque énergie":              ["attaque_energie"],
+      "défense physique":             ["defense_physique"],
+      "défense énergie":              ["defense_energie"],
+      "attaque physique et énergie":  ["attaque_physique", "attaque_energie"],
+      "attaque physique et défense énergie": ["attaque_physique", "defense_energie"],
+      "défense énergie et attaque physique": ["defense_energie", "attaque_physique"],
+      "défense physique et énergie":  ["defense_physique", "defense_energie"],
+      "attaque physique et énergie et défense physique et énergie":
         ["attaque_physique", "attaque_energie", "defense_physique", "defense_energie"],
-      "la force max":                      ["force_de_base"],
-      "les dégâts infligés":               ["degats_infliges"],
-      "les dégâts physiques infligés":     ["degats_infliges"],
-      "les dégâts ultimes infligés":       ["degats_ultime"],
+      "force max":                    ["force_de_base"],
+      "dégâts infligés":              ["degats_infliges"],
+      "dégâts physiques infligés":    ["degats_infliges"],
+      "dégâts ultimes infligés":      ["degats_ultime"],
     };
+    const phraseToStats = (p) => PHRASE[NORM(p)] || null;
+    // Construit une condition depuis une clause "« A » [plus/et/ou « B »] …"
+    function buildCond(clause) {
+      const tags = [...clause.matchAll(/«\s*([^»]+?)\s*»/g)].map((x) => x[1].trim());
+      if (!tags.length) return null;
+      const seuilM = clause.match(/au\s+moins\s+(\d+)/i);
+      let mode = "threshold";
+      if (tags.length > 1) mode = /\bou\b/i.test(clause) ? "threshold" : "and";
+      return { mode, seuil: seuilM ? parseInt(seuilM[1], 10) : 1, tag_requis: tags[0], tags_requis: tags };
+    }
     function parseCond(rest) {
       const s = rest;
       // "… par combattant de l'équipe portant ce même équipement" → per_member (même item)
@@ -194,21 +208,12 @@
         const t = m[1].trim();
         return { phrase: s.slice(0, m.index), cond: { mode: "per_member", seuil: 1, tag_requis: t, tags_requis: [t] } };
       }
-      // "… si … « A » [plus|et « B »] … fait partie de l'équipe"
-      //   • 1 tag           → threshold
-      //   • plusieurs « plus/et » → and (tous requis)
-      //   • plusieurs « ou »      → threshold (au moins un)
+      // "… si « A » [plus/et/ou « B »] …" → threshold / and selon la liaison
       const siM = s.match(/\bsi\b/i);
       if (siM) {
-        const phrase = s.slice(0, siM.index);
         const clause = s.slice(siM.index);
         if (/\bcontre\b/i.test(clause)) return null; // situationnel
-        const tags = [...clause.matchAll(/«\s*([^»]+?)\s*»/g)].map((x) => x[1].trim());
-        if (!tags.length) return { phrase, cond: null };
-        const seuilM = clause.match(/au\s+moins\s+(\d+)/i);
-        let mode = "threshold";
-        if (tags.length > 1) mode = /\bou\b/i.test(clause) ? "threshold" : "and";
-        return { phrase, cond: { mode, seuil: seuilM ? parseInt(seuilM[1], 10) : 1, tag_requis: tags[0], tags_requis: tags } };
+        return { phrase: s.slice(0, siM.index), cond: buildCond(clause) };
       }
       if (/\bcontre\b/i.test(s)) return null; // situationnel (selon l'adversaire) → reste passif
       return { phrase: s, cond: null };       // inconditionnel
@@ -218,20 +223,35 @@
       // Aplatir les retours à la ligne (\r\n) qui empêchaient le matching.
       const flat = desc.replace(/\r?\n/g, " ").replace(/\s+/g, " ").trim();
       if (/ - OR - /.test(flat)) return null;
-      const m = flat.match(/^Augmente de\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%\s*(.+)$/i);
-      if (!m) return null;
-      const vmin = parseFloat(m[1].replace(",", "."));
-      const vmax = parseFloat(m[2].replace(",", "."));
-      const pc = parseCond(m[3].replace(/\.\s*$/, ""));
-      if (!pc) return null;
-      const stats = PHRASE[NORM(pc.phrase)];
-      if (!stats) return null; // formulation inconnue → reste passif
-      return stats.map((stat) => ({
-        stat,
-        valeur_min: vmin,
-        valeur_max: vmax,
-        condition: pc.cond ? { ...pc.cond, description: flat } : null,
-      }));
+      // Format 1 : "Augmente de X~Y% STAT [si/par COND]"
+      let m = flat.match(/^Augmente de\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%\s*(.+)$/i);
+      if (m) {
+        const vmin = parseFloat(m[1].replace(",", "."));
+        const vmax = parseFloat(m[2].replace(",", "."));
+        const pc = parseCond(m[3].replace(/\.\s*$/, ""));
+        if (!pc) return null;
+        const stats = phraseToStats(pc.phrase);
+        if (!stats) return null; // formulation inconnue → reste passif
+        return stats.map((stat) => ({ stat, valeur_min: vmin, valeur_max: vmax,
+          condition: pc.cond ? { ...pc.cond, description: flat } : null }));
+      }
+      // Format 2 : "Si/Quand … fait/font partie des combattants de l'équipe, STAT X~Y%"
+      //   (condition de composition d'équipe placée en TÊTE)
+      m = flat.match(/^(?:si|quand)\b(.+?f(?:ait|ont) partie des combattants de l['’]équipe)\s*,\s*(.+?)\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%?\.?$/i);
+      if (m) {
+        if (/\bcontre\b/i.test(flat)) return null;
+        const cond = buildCond(m[1]);
+        if (!cond) return null;
+        const stats = phraseToStats(m[2]);
+        if (!stats) return null;
+        return stats.map((stat) => ({
+          stat,
+          valeur_min: parseFloat(m[3].replace(",", ".")),
+          valeur_max: parseFloat(m[4].replace(",", ".")),
+          condition: { ...cond, description: flat },
+        }));
+      }
+      return null;
     }
     for (const item of ITEMS) {
       if (!item.lignes) continue;
