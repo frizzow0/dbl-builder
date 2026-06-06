@@ -33,11 +33,8 @@
   <link rel="apple-touch-icon" href="/og-image.svg" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- ── Google AdSense ─────────────────────────────────── -->
-  <!-- Auto Ads activés : Google place automatiquement des annonces.  -->
-  <!-- Les <ins> manuels ci-dessous permettent un contrôle précis.    -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919"
-       crossorigin="anonymous"></script>
+  <!-- ── Google AdSense : désactivé pour le moment ──────────
+       (script + emplacements retirés — réactivables via git) -->
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -71,17 +68,6 @@
       <span class="lang-next">EN</span>
     </button>
   </header>
-
-  <!-- ============ PUB LEADERBOARD — sous topbar (728×90 desktop) ============ -->
-  <div class="ad-leaderboard" aria-label="Espace publicitaire">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-3800762846820919"
-         data-ad-slot="9956631661"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
 
   <main class="layout">
 
@@ -143,18 +129,6 @@
         <div id="conditions-inputs"></div>
       </div>
 
-      <!-- ── PUB IN-CONTENT (colonne gauche, après les panels) ──────────────── -->
-      <div class="ad-in-content" aria-label="Espace publicitaire">
-        <span class="ad-in-content__label">Publicité</span>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-3800762846820919"
-             data-ad-slot="5948418132"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-
     </section>
 
     <!-- ============ COLONNE DROITE : résultats ============ -->
@@ -168,16 +142,12 @@
         <div id="z-bilan" class="z-bilan"></div>
       </div>
 
-      <!-- ── PUB RECTANGLE — entre Bilan Cap Z et Résumé des effets ────────── -->
-      <div class="ad-in-content" aria-label="Espace publicitaire">
-        <span class="ad-in-content__label">Publicité</span>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-3800762846820919"
-             data-ad-slot="7261499800"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <div class="panel" id="section-global">
+        <h2 class="panel-title" data-i18n="panel.global.title">Bilan global (Cap Z + items)</h2>
+        <p class="panel-sub" data-i18n="panel.global.sub">
+          Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).
+        </p>
+        <div id="global-bilan" class="z-bilan"></div>
       </div>
 
       <div class="panel" id="section-stats">
@@ -264,34 +234,14 @@
     <a href="#section-stats" data-target="section-stats" data-i18n="nav.stats">Stats</a>
   </nav>
 
-  <!-- ============ PUBS LATÉRALES — skyscrapers 160×600 ============ -->
-  <!-- Visibles uniquement à partir de 1760px de large               -->
-  <!-- ⚠️ Remplacer data-ad-slot="XXXXXXXXXX" par ton Slot ID         -->
-
-  <div class="ad-side ad-side--left" aria-label="Espace publicitaire">
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:160px;height:600px"
-         data-ad-client="ca-pub-3800762846820919"
-         data-ad-slot="XXXXXXXXXX"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <div class="ad-side ad-side--right" aria-label="Espace publicitaire">
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:160px;height:600px"
-         data-ad-client="ca-pub-3800762846820919"
-         data-ad-slot="XXXXXXXXXX"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=5"></script>
-  <script src="items.js?v=5"></script>
-  <script src="characters.js?v=5"></script>
-  <script src="data.js?v=5"></script>
-  <script src="calc.js?v=5"></script>
-  <script src="app.js?v=5"></script>
+  <script src="i18n.js?v=6"></script>
+  <script src="items.js?v=6"></script>
+  <script src="characters.js?v=6"></script>
+  <script src="data.js?v=6"></script>
+  <script src="calc.js?v=6"></script>
+  <script src="app.js?v=6"></script>
 
   <script>
     (function () {

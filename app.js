@@ -74,13 +74,31 @@
     }
   })();
 
+  // Codes d'élément : les persos stockent l'anglais (BLU, RED…),
+  // les items la version française (BLE, RGE…). On mappe EN -> FR pour
+  // qu'une condition porteur sur l'élément matche dans les deux sens.
+  const _ELEM_EN_TO_FR = {
+    BLU: "BLE", RED: "RGE", GRN: "VER",
+    YEL: "JAU", PUR: "VIO", LGT: "LUM",
+  };
+
+  // Tags possédés par un perso : traits + cardCode + élément (EN et alias FR).
+  function ownedTags(character) {
+    const tags = [...(character.traits || []), character.cardCode];
+    if (character.element) {
+      tags.push(character.element);
+      if (_ELEM_EN_TO_FR[character.element]) tags.push(_ELEM_EN_TO_FR[character.element]);
+    }
+    return new Set(tags.filter(Boolean));
+  }
+
   // Vrai si l'item est compatible avec le personnage.
   // tagsPorteur est en CNF : [["A","B"], ["C"]] = (A AND B) OR C
-  // Un perso "possède" : ses traits + son cardCode.
+  // Un perso "possède" : ses traits + son cardCode + son élément.
   function isCompatible(item, character) {
     if (!character) return null; // pas de perso sélectionné = compat inconnue
     if (!item.tagsPorteur || !item.tagsPorteur.length) return true; // aucune restriction
-    const owned = new Set([...(character.traits || []), character.cardCode].filter(Boolean));
+    const owned = ownedTags(character);
     return item.tagsPorteur.some((group) => group.every((tag) => owned.has(tag)));
   }
 
@@ -167,12 +185,13 @@
     return { baseItems, purItems };
   }
 
-  // Retourne active.items mais avec les passifs OR remplacés par la ligne stat choisie.
-  // Utilisé par le calcul ET par le rendu pour rester cohérent.
-  function getActiveItemsWithChoices() {
-    const teamSlot = state.team[state.activeSlot];
+  // Retourne les items d'un slot d'équipe donné avec les passifs OR
+  // remplacés par la ligne stat choisie.
+  function getItemsWithChoicesFor(teamSlotIdx) {
+    const teamSlot = state.team[teamSlotIdx];
+    if (!teamSlot) return [null, null, null];
     const choices = teamSlot.itemChoices || [{}, {}, {}];
-    return active.items.map((item, slotIdx) => {
+    return teamSlot.items.map((item, slotIdx) => {
       if (!item) return null;
       const slotChoices = choices[slotIdx] || {};
       let needsClone = false;
@@ -193,6 +212,12 @@
       });
       return needsClone ? { ...item, lignes } : item;
     });
+  }
+
+  // Retourne active.items mais avec les passifs OR remplacés par la ligne stat choisie.
+  // Utilisé par le calcul ET par le rendu pour rester cohérent.
+  function getActiveItemsWithChoices() {
+    return getItemsWithChoicesFor(state.activeSlot);
   }
 
   const state = {
@@ -1460,6 +1485,7 @@
 
   function renderResults() {
     renderZBilan();
+    renderGlobalBilan();
     const noItems = active.items.every((s) => !s);
     const noZ = buildTeamZItemsFor(state.activeSlot).length === 0;
     if (noItems && noZ) {
@@ -1833,6 +1859,91 @@
       .join("");
 
     zBilanEl.innerHTML = totauxSection + `<div class="z-bilan-grid">${perCharSection}</div>`;
+  }
+
+  // ===== BILAN GLOBAL (Cap Z + items, tout compris) =====
+  const globalBilanEl = document.getElementById("global-bilan");
+
+  // Stats combinées (Cap Z + items) d'un slot d'équipe donné.
+  // Réutilise exactement la logique du calcul combiné de renderResults :
+  // items résolus (OR + tag synthétique "même équipement") + Cap Z reçues,
+  // évalués contre les conditions trio-scoped + team-wide du slot.
+  function getCombinedStatsFor(slotIdx) {
+    const zItems = buildTeamZItemsFor(slotIdx);
+    const resolvedItems = patchSameItemTags(getItemsWithChoicesFor(slotIdx)).filter(Boolean);
+    if (zItems.length === 0 && resolvedItems.length === 0) return null;
+    const conds = buildItemConditions(slotIdx);
+    return calculerStats({ items: [...resolvedItems, ...zItems], conditions: conds }).stats;
+  }
+
+  function renderGlobalBilan() {
+    if (!globalBilanEl) return;
+    const Z_BILAN_STATS = getZBilanStats();
+    const occupied = state.team
+      .map((s, i) => ({ ...s, idx: i }))
+      .filter((s) => s.character);
+    if (occupied.length === 0) {
+      globalBilanEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
+      return;
+    }
+
+    // Totaux par stat sur toute l'équipe (Cap Z + items combinés).
+    const statTotals = {};
+    for (const slot of occupied) {
+      const stats = getCombinedStatsFor(slot.idx);
+      if (!stats) continue;
+      for (const cible of Object.keys(stats)) {
+        const s = stats[cible];
+        if (!s.hasBonus) continue;
+        if (!statTotals[cible]) {
+          statTotals[cible] = { label: s.label, totalGain: 0, count: 0, max: 0 };
+        }
+        statTotals[cible].totalGain += s.gainPct;
+        statTotals[cible].count++;
+        if (s.gainPct > statTotals[cible].max) statTotals[cible].max = s.gainPct;
+      }
+    }
+
+    const orderedTotals = Object.entries(statTotals)
+      .sort((a, b) => b[1].totalGain - a[1].totalGain);
+
+    if (orderedTotals.length === 0) {
+      globalBilanEl.innerHTML = `<p class="placeholder">${T('global.nobonus')}</p>`;
+      return;
+    }
+
+    const totauxHTML = orderedTotals
+      .map(([cible, t]) => {
+        const totalFmt = fmtDec(t.totalGain.toFixed(1));
+        const avg = t.totalGain / t.count;
+        const avgFmt = fmtDec(avg.toFixed(1));
+        const maxFmt = fmtDec(t.max.toFixed(1));
+        return `
+          <div class="z-totals-row">
+            <div class="z-totals-label">${t.label}</div>
+            <div class="z-totals-total">+${totalFmt}%</div>
+            <div class="z-totals-detail">${T('z.totals.row', { n: t.count, avg: avgFmt, max: maxFmt })}</div>
+          </div>
+        `;
+      })
+      .join("");
+
+    const grandTotal = orderedTotals.reduce((sum, [, t]) => sum + t.totalGain, 0);
+    const grandStatsCount = orderedTotals.length;
+    const grandLinesCount = orderedTotals.reduce((sum, [, t]) => sum + t.count, 0);
+    const grandTotalFmt = grandTotal.toFixed(0);
+
+    globalBilanEl.innerHTML = `
+      <div class="z-grand-total is-global">
+        <div class="z-grand-total-label">${T('global.total.label')}</div>
+        <div class="z-grand-total-value">+${grandTotalFmt}%</div>
+        <div class="z-grand-total-detail">${T('global.total.detail', { n: grandLinesCount, m: grandStatsCount })}</div>
+      </div>
+      <div class="z-totals">
+        <div class="z-totals-title">${T('global.totals.title')}</div>
+        ${totauxHTML}
+      </div>
+    `;
   }
 
   // ===== RENDU GLOBAL =====

@@ -1463,6 +1463,14 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   opacity: .85;
 }
 
+/* Variante "tout compris" (Cap Z + items) : dégradé bleu→indigo
+   pour la distinguer de l'orange Cap Z. */
+.z-grand-total.is-global {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  box-shadow: 0 10px 30px -8px rgba(99, 102, 241, .55);
+}
+#section-global .z-totals-total { color: #6366f1; }
+
 .z-totals {
   background: var(--surface-2);
   border: 1px solid var(--line);

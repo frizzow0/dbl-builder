@@ -110,6 +110,15 @@
     'z.total.detail':  { fr: '{n} applications de Z sur {m} stats', en: '{n} Z applications on {m} stats' },
     'z.totals.row':    { fr: '{n} perso · moy. +{avg}% · max +{max}%', en: '{n} chars · avg +{avg}% · max +{max}%' },
 
+    // ── Bilan global (Cap Z + items, tout compris) ──────────
+    'panel.global.title': { fr: 'Bilan global (Cap Z + items)', en: 'Global summary (Z Abilities + items)' },
+    'panel.global.sub':   { fr: 'Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).',
+                            en: 'Everything included: for each character, received Z Abilities AND equipped items are combined (base/pure/direct layers multiplied).' },
+    'global.total.label': { fr: 'Total global (Cap Z + items)', en: 'Grand total (Z + items)' },
+    'global.total.detail':{ fr: '{n} bonus cumulés sur {m} stats', en: '{n} stacked bonuses on {m} stats' },
+    'global.totals.title':{ fr: 'Totaux par stat (tout compris)', en: 'Totals by stat (all included)' },
+    'global.nobonus':     { fr: 'Aucun bonus chiffrable sur l\'équipe.', en: 'No quantifiable bonus on the team.' },
+
     // ── Dynamique : résultats & passifs ──────────
     'stats.placeholder':   { fr: 'Équipe au moins un item (ou sélectionne un perso) pour voir le résumé des effets.',
                               en: 'Equip at least one item (or select a character) to see the effects summary.' },
