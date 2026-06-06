@@ -74,6 +74,62 @@
     }
   })();
 
+  // ── PATCH RUNTIME : fusion des choix "- OR -" éclatés par le scraper ──────
+  // Le scraper coupe parfois un choix « A - OR - B » en 3 lignes :
+  //   [ligne A] / [passif "- OR -"] / [ligne B]
+  // ce qui laisse une ligne "- OR -" orpheline ET fait compter A ET B (alors
+  // que le joueur n'en obtient qu'UN). On recolle ces triplets :
+  //   • STAT || STAT (sans condition) → un passif "Label A X~Y% - OR - Label B…"
+  //     que parseOrPassif transforme en choix (une seule option comptée).
+  //   • PASSIF || PASSIF → un seul passif "A - OR - B" (effets non chiffrés).
+  //   • cas mixtes / en bord → on retire juste le séparateur orphelin.
+  (function _mergeSplitOrPassives() {
+    const isOrSep = (l) => l && l.est_passif && typeof l.description_passif === "string"
+      && /^-*\s*OR\s*-*$/i.test(l.description_passif.trim());
+    const fmtN = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
+    const statPart = (l) => {
+      const meta = STATS[l.stat];
+      if (!meta) return null;
+      return `${meta.label} ${fmtN(l.valeur_min)} ~ ${fmtN(l.valeur_max)}%`;
+    };
+    for (const item of ITEMS) {
+      const L = item.lignes;
+      if (!L || !L.some(isOrSep)) continue;
+      const out = [];
+      for (let k = 0; k < L.length; k++) {
+        const l = L[k];
+        if (isOrSep(l)) {
+          const prev = out[out.length - 1];
+          const next = L[k + 1];
+          const prevStat = prev && !prev.est_passif && prev.condition == null && STATS[prev.stat];
+          const nextStat = next && !next.est_passif && next.condition == null && STATS[next.stat];
+          const prevPas = prev && prev.est_passif && prev.description_passif && !isOrSep(prev);
+          const nextPas = next && next.est_passif && next.description_passif && !isOrSep(next);
+          if (prevStat && nextStat) {
+            out[out.length - 1] = {
+              est_passif: true,
+              description_passif: `${statPart(prev)} - OR - ${statPart(next)}`,
+              slot: prev.slot,
+            };
+            k++; // saute la ligne B (consommée)
+            continue;
+          }
+          if (prevPas && nextPas) {
+            out[out.length - 1] = {
+              ...prev,
+              description_passif: prev.description_passif.trim() + " - OR - " + next.description_passif.trim(),
+            };
+            k++;
+            continue;
+          }
+          continue; // séparateur orphelin (bord / mixte) → on le retire
+        }
+        out.push(l);
+      }
+      item.lignes = out;
+    }
+  })();
+
   // ── PATCH RUNTIME : passifs chiffrables "Augmente de X ~ Y% …" ────────────
   // Le scraper laisse certains bonus conditionnels en texte (est_passif).
   // On les convertit en lignes calculables au MAX (valeur_max = Y), avec leur
@@ -1396,7 +1452,24 @@
               </div>
             `;
           }
-          return `<div class="slot-ligne passive"><span class="bullet">⚡</span>${l.description_passif}</div>`;
+          const passifTxt = (l.description_passif || "");
+          // Passif non chiffré de type "A - OR - B" : on affiche 2 options + séparateur
+          if (passifTxt.includes(" - OR - ")) {
+            const opts = passifTxt.split(" - OR - ");
+            const optsHTML = opts
+              .map((o, idx) => {
+                const sep = idx > 0
+                  ? `<div class="passive-or-sep"><span>${T('cond.or')}</span></div>`
+                  : "";
+                return `${sep}<div class="passive-or-opt">${o.trim().replace(/\r?\n/g, "<br>")}</div>`;
+              })
+              .join("");
+            return `<div class="slot-ligne passive passive-or">
+                      <div class="slot-ligne-or-head"><span class="bullet">⚡</span>${T('slot.or.passive')}</div>
+                      <div class="passive-or-body">${optsHTML}</div>
+                    </div>`;
+          }
+          return `<div class="slot-ligne passive"><span class="bullet">⚡</span>${passifTxt.replace(/\r?\n/g, "<br>")}</div>`;
         }
         // ── Règle 2 : "même équipement" → patch tag synthétique pour évaluation ──
         let lineToEval = l;

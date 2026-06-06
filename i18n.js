@@ -76,6 +76,7 @@
     'slot.choose':          { fr: '+ Choisir un item',      en: '+ Choose an item' },
     'slot.compatible':      { fr: 'Compatible :',           en: 'Compatible:' },
     'slot.or.head':         { fr: 'Choix aléatoire — sélectionne ta ligne :', en: 'Random choice — select your stat:' },
+    'slot.or.passive':      { fr: 'Effet aléatoire — l\'un des deux :', en: 'Random effect — one of the two:' },
     'slot.change':          { fr: 'Changer',                en: 'Change' },
     'slot.remove':          { fr: 'Retirer',                en: 'Remove' },
     'item.compat.yes':      { fr: 'Compatible avec {name}', en: 'Compatible with {name}' },

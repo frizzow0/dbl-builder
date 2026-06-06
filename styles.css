@@ -1210,6 +1210,40 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   font-weight: 700;
   color: var(--text);
 }
+
+/* === Passif "A - OR - B" non chiffré (effet aléatoire) === */
+.slot-ligne.passive.passive-or {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: linear-gradient(180deg, var(--accent-tint), transparent 80%), var(--surface);
+  border: 1px solid var(--accent-tint-2);
+  border-radius: var(--r-2);
+  padding: 8px 10px;
+}
+.passive-or-body { display: flex; flex-direction: column; gap: 4px; }
+.passive-or-opt {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-1);
+  padding: 6px 10px;
+  color: var(--text);
+  font-size: var(--fs-xs);
+  line-height: 1.45;
+}
+.passive-or-sep {
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--fs-xxs); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--accent);
+}
+.passive-or-sep span {
+  padding: 0 8px;
+  position: relative;
+}
+.passive-or-sep::before,
+.passive-or-sep::after {
+  content: ""; flex: 1; height: 1px; background: var(--accent-tint-2);
+}
 .slot-ligne .ligne-cond {
   font-size: var(--fs-xxs);
   background: var(--surface-3);
