@@ -282,7 +282,8 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
     color: var(--text-soft);
   }
 }
-.builder-grid { display: flex; flex-direction: column; gap: var(--s-2); }
+/* flex:1 → la grille occupe toute la hauteur dispo du panel (bas aligné au Résumé) */
+.builder-grid { display: flex; flex-direction: column; gap: var(--s-2); flex: 1 1 auto; }
 
 /* Bandeau de séparation de trio */
 .builder-trio-label {
@@ -301,12 +302,15 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 }
 .builder-grid > .builder-trio-label:first-child { margin-top: 0; }
 
-/* Une ligne = [carte perso | 3 slots items] */
+/* Une ligne = [carte perso | 3 slots items] ; flex:1 1 0 → les lignes se
+   partagent l'espace vertical à parts ÉGALES et comblent parfaitement la grille. */
 .builder-row {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--s-2);
   align-items: stretch;
+  flex: 1 1 0;
+  min-height: 64px;
 }
 @media (min-width: 900px) {
   .builder-row {
@@ -2314,15 +2318,16 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 
 /* ── Barre "Désactiver le leader" ────────────────────────────────── */
 .no-leader-bar {
-  /* margin-top:auto → collée au bas du panel flex ; débord lat./bas annule le padding */
-  margin: auto calc(-1 * var(--s-4)) calc(-1 * var(--s-4));
+  /* Toujours en dernier ; débord lat./bas annule le padding du panel.
+     Le remplissage vertical est désormais pris par .builder-grid (flex:1). */
+  margin: var(--s-4) calc(-1 * var(--s-4)) calc(-1 * var(--s-4));
   border-top: 1px solid var(--line);
   border-radius: 0 0 var(--r-3) var(--r-3);
   overflow: hidden;
 }
 @media (min-width: 1024px) {
   .no-leader-bar {
-    margin: auto calc(-1 * var(--s-5)) calc(-1 * var(--s-5));
+    margin: var(--s-5) calc(-1 * var(--s-5)) calc(-1 * var(--s-5));
   }
 }
 
