@@ -74,6 +74,26 @@
     }
   })();
 
+  // ── CORRECTIONS MANUELLES : erreurs de la donnée source (fr.dblegends.net) ──
+  // Certaines fiches du site contiennent des lignes erronées. On les retire ici
+  // (survit aux re-scrapes, contrairement à une édition d'items.js).
+  // Doit tourner AVANT la fusion "- OR -" pour que le séparateur orphelin
+  // résultant soit ensuite nettoyé automatiquement.
+  (function _manualDataFixes() {
+    // item id → motifs de description_passif à supprimer
+    const REMOVE_PASSIF = {
+      // SPARKING !! - Trunks : Mai (Soutien) : option OR slot 3 fantôme (erreur source)
+      equip_30025: [/détruit 1 carte de l['’]adversaire/i],
+    };
+    for (const item of ITEMS) {
+      const patterns = REMOVE_PASSIF[item.id];
+      if (!patterns || !item.lignes) continue;
+      item.lignes = item.lignes.filter((l) =>
+        !(l.est_passif && l.description_passif && patterns.some((re) => re.test(l.description_passif)))
+      );
+    }
+  })();
+
   // ── PATCH RUNTIME : fusion des choix "- OR -" éclatés par le scraper ──────
   // Le scraper coupe parfois un choix « A - OR - B » en 3 lignes :
   //   [ligne A] / [passif "- OR -"] / [ligne B]
