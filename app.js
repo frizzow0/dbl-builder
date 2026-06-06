@@ -1202,18 +1202,6 @@
     </div>`;
   }
 
-  // Résumé compact des effets cumulés (items + Cap Z) d'un perso, en ligne.
-  function charSummaryHTML(charSlot) {
-    const stats = getCombinedStatsFor(charSlot);
-    if (!stats) return `<div class="builder-summary builder-summary-empty">${T('builder.summary.empty')}</div>`;
-    const chips = Object.values(stats)
-      .filter((s) => s.hasBonus && s.gainPct > 0)
-      .sort((a, b) => b.gainPct - a.gainPct)
-      .map((s) => `<span class="builder-summary-chip">${s.label} <b>+${fmtDec(s.gainPct.toFixed(1))}%</b></span>`)
-      .join("");
-    return `<div class="builder-summary">${chips || `<span class="builder-summary-empty">${T('builder.summary.empty')}</span>`}</div>`;
-  }
-
   function builderRowHTML(charSlot) {
     const slot = state.team[charSlot];
     const isActive = charSlot === state.activeSlot;
@@ -1221,7 +1209,6 @@
       ? `<div class="builder-items">
            <div class="builder-item-icons">${[0, 1, 2].map((j) => itemIconHTML(charSlot, j)).join("")}</div>
            <button class="builder-items-details" data-open-details="${charSlot}" type="button" title="${T('items.details')}" aria-label="${T('items.details')}">▾</button>
-           ${charSummaryHTML(charSlot)}
          </div>`
       : `<div class="builder-items is-disabled">${T('builder.items.empty')}</div>`;
     return `<div class="builder-row ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${items}</div>`;
@@ -1277,6 +1264,13 @@
     if (rmChar) { state.activeSlot = +rmChar.dataset.removeChar; selectCharacter(null); return; }
     const addChar = t.closest("[data-add-char]");
     if (addChar) { state.activeSlot = +addChar.dataset.addChar; renderTeamGrid(); openCharModal(); return; }
+    // Clic ailleurs sur une ligne occupée → sélectionne ce perso (Résumé à droite)
+    const row = t.closest("[data-row]");
+    if (row && state.team[+row.dataset.row].character) {
+      state.activeSlot = +row.dataset.row;
+      renderTeamGrid();
+      renderResults();
+    }
   });
 
   // ===== MODALE DÉTAILS DES ITEMS (par perso) =====

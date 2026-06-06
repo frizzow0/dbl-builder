@@ -71,6 +71,9 @@
 
   <main class="layout">
 
+    <!-- ============ ZONE DU HAUT : builder (persos + items) | Résumé des effets ============ -->
+    <div class="top-zone">
+
     <!-- ============ ZONE DE SAISIE : persos (col 1) + items (col 2) ============ -->
     <section class="panel builder-panel" id="section-build">
       <h2 class="panel-title">
@@ -105,7 +108,18 @@
       </details>
     </section>
 
-    <!-- ============ RÉSULTATS : 4 panneaux côte à côte ============ -->
+      <!-- Résumé des effets cumulés : à droite du builder (perso sélectionné) -->
+      <div class="panel" id="section-stats">
+        <h2 class="panel-title" data-i18n="panel.stats.title">Résumé des effets cumulés</h2>
+        <p class="panel-sub" data-i18n-html="panel.stats.sub">
+          Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.
+        </p>
+        <div id="stats-grid" class="stats-grid"></div>
+      </div>
+
+    </div><!-- /.top-zone -->
+
+    <!-- ============ RÉSULTATS : panneaux côte à côte ============ -->
     <section class="results-row">
 
       <div class="panel" id="section-z">
@@ -122,14 +136,6 @@
           Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).
         </p>
         <div id="global-bilan" class="z-bilan"></div>
-      </div>
-
-      <div class="panel" id="section-stats">
-        <h2 class="panel-title" data-i18n="panel.stats.title">Résumé des effets cumulés</h2>
-        <p class="panel-sub" data-i18n-html="panel.stats.sub">
-          Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.
-        </p>
-        <div id="stats-grid" class="stats-grid"></div>
       </div>
 
       <div class="panel" id="section-passifs">
@@ -222,12 +228,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=17"></script>
-  <script src="items.js?v=17"></script>
-  <script src="characters.js?v=17"></script>
-  <script src="data.js?v=17"></script>
-  <script src="calc.js?v=17"></script>
-  <script src="app.js?v=17"></script>
+  <script src="i18n.js?v=18"></script>
+  <script src="items.js?v=18"></script>
+  <script src="characters.js?v=18"></script>
+  <script src="data.js?v=18"></script>
+  <script src="calc.js?v=18"></script>
+  <script src="app.js?v=18"></script>
 
   <script>
     (function () {
