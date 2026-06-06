@@ -194,18 +194,31 @@
         const t = m[1].trim();
         return { phrase: s.slice(0, m.index), cond: { mode: "per_member", seuil: 1, tag_requis: t, tags_requis: [t] } };
       }
-      // "… si (au moins N)? (un autre|un|une|des|vous êtes un)? « X » …" → threshold
-      m = s.match(/\s*si\s+(?:au\s+moins\s+(\d+)\s+)?(?:un autre|un|une|des|vous [êe]tes un[e]?)?\s*«\s*([^»]+?)\s*».*/i);
-      if (m) {
-        const t = m[2].trim();
-        return { phrase: s.slice(0, m.index), cond: { mode: "threshold", seuil: m[1] ? parseInt(m[1], 10) : 1, tag_requis: t, tags_requis: [t] } };
+      // "… si … « A » [plus|et « B »] … fait partie de l'équipe"
+      //   • 1 tag           → threshold
+      //   • plusieurs « plus/et » → and (tous requis)
+      //   • plusieurs « ou »      → threshold (au moins un)
+      const siM = s.match(/\bsi\b/i);
+      if (siM) {
+        const phrase = s.slice(0, siM.index);
+        const clause = s.slice(siM.index);
+        if (/\bcontre\b/i.test(clause)) return null; // situationnel
+        const tags = [...clause.matchAll(/«\s*([^»]+?)\s*»/g)].map((x) => x[1].trim());
+        if (!tags.length) return { phrase, cond: null };
+        const seuilM = clause.match(/au\s+moins\s+(\d+)/i);
+        let mode = "threshold";
+        if (tags.length > 1) mode = /\bou\b/i.test(clause) ? "threshold" : "and";
+        return { phrase, cond: { mode, seuil: seuilM ? parseInt(seuilM[1], 10) : 1, tag_requis: tags[0], tags_requis: tags } };
       }
       if (/\bcontre\b/i.test(s)) return null; // situationnel (selon l'adversaire) → reste passif
       return { phrase: s, cond: null };       // inconditionnel
     }
     function convert(desc) {
-      if (!desc || / - OR - /.test(desc)) return null;
-      const m = desc.trim().match(/^Augmente de\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%\s*(.+)$/i);
+      if (!desc) return null;
+      // Aplatir les retours à la ligne (\r\n) qui empêchaient le matching.
+      const flat = desc.replace(/\r?\n/g, " ").replace(/\s+/g, " ").trim();
+      if (/ - OR - /.test(flat)) return null;
+      const m = flat.match(/^Augmente de\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%\s*(.+)$/i);
       if (!m) return null;
       const vmin = parseFloat(m[1].replace(",", "."));
       const vmax = parseFloat(m[2].replace(",", "."));
@@ -217,7 +230,7 @@
         stat,
         valeur_min: vmin,
         valeur_max: vmax,
-        condition: pc.cond ? { ...pc.cond, description: desc.trim() } : null,
+        condition: pc.cond ? { ...pc.cond, description: flat } : null,
       }));
     }
     for (const item of ITEMS) {
