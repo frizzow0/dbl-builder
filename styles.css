@@ -2503,7 +2503,7 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   display: flex;
   align-items: center;
   gap: var(--s-2);
-  padding: 8px 10px;
+  padding: 8px 28px 8px 10px; /* marge droite pour ne pas chevaucher l'étoile leader */
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--r-3);
@@ -2539,17 +2539,32 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 }
 .builder-char-code { font-size: var(--fs-xxs); color: var(--text-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-/* Ligne d'outils sous le nom : Z-tier + actions */
+/* Ligne d'outils sous le nom : actions (changer / retirer) */
 .builder-char-tools { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
-.builder-z { display: inline-flex; gap: 2px; }
+
+/* Sélecteur de niveau Cap Z — agrandi, dans l'espace droit de la carte perso */
+.builder-z-large {
+  margin-left: auto;
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+  flex-shrink: 0;
+}
+.builder-z-large-label {
+  font-family: var(--font-display);
+  font-size: var(--fs-xxs); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--text-soft);
+}
+.builder-z { display: inline-flex; gap: 4px; }
 .builder-z-pill {
-  font-size: 10px; font-weight: 700; line-height: 1;
-  padding: 3px 5px; border-radius: var(--r-1);
+  font-size: var(--fs-sm); font-weight: 700; line-height: 1;
+  min-width: 38px; padding: 9px 0; text-align: center;
+  border-radius: var(--r-2);
   background: var(--surface-3); color: var(--text-soft);
   border: 1px solid var(--line);
   transition: all var(--t-micro);
 }
-.builder-z-pill.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.builder-z-pill:hover { border-color: var(--accent-tint-2); color: var(--text); }
+.builder-z-pill.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: var(--shadow-accent); }
 .builder-char-act {
   font-size: 14px; line-height: 1; padding: 3px 6px; border-radius: var(--r-1);
   color: var(--text-soft); border: 1px solid transparent;

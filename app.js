@@ -1194,10 +1194,13 @@
         <div class="builder-char-name" title="${c.nom.trim()}">${c.nom.trim()}</div>
         <div class="builder-char-code">${c.cardCode || ""}</div>
         <div class="builder-char-tools">
-          <span class="builder-z">${zPills}</span>
           <button class="builder-char-act" data-change-char="${charSlot}" title="${T('slot.change')}" type="button">✎</button>
           <button class="builder-char-act is-danger" data-remove-char="${charSlot}" title="${T('slot.remove')}" type="button">✕</button>
         </div>
+      </div>
+      <div class="builder-z-large">
+        <span class="builder-z-large-label">${T('z.capz.label')}</span>
+        <div class="builder-z">${zPills}</div>
       </div>
     </div>`;
   }
