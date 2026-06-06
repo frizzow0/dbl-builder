@@ -1,6 +1,6 @@
 // Auto-généré par scrape.js — ne pas éditer à la main.
 // Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, event)
-// 885 items, généré le 2026-05-23T16:03:52.805Z
+// 892 items, généré le 2026-06-06T15:27:39.187Z
 
 window.DBL_ITEMS_SCRAPED = [
   {
@@ -16965,6 +16965,338 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_2061",
+    "sourceId": "2061",
+    "nom": "Boule de Ki lancée de derrière",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2061",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2061.webp",
+    "tagsPorteur": [
+      [
+        "Saga des films",
+        "Saiyan"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 18,
+        "valeur_max": 30,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 18,
+        "valeur_max": 30,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 6,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 6,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2065",
+    "sourceId": "2065",
+    "nom": "Attaque qui brise une nouvelle limite",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2065",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2065.webp",
+    "tagsPorteur": [
+      [
+        "Saga des films",
+        "Saiyan"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un personnage étant à la fois « Classe : Saiyan » et « Classe : Ennemi puissant » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Saiyan",
+          "tags_requis": [
+            "Classe : Saiyan",
+            "Classe : Ennemi puissant"
+          ]
+        },
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "- OR -",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Augmente de 5.00 ~ 15.00% l'attaque d'énergie\r\nsi un « Classe : Guerrier fusionné » plus « Classe : Ki divin »\r\nfait partie des combattants de l'équipe.",
+        "slot": 2
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si 3 « Épisode : Saga des films » font partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 3,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
+          ]
+        },
+        "slot": 3
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si 3 « Épisode : Saga des films » font partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 3,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
+          ]
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_1941",
+    "sourceId": "1941",
+    "nom": "C'est normal après tout, tu n'es qu'un mortel.",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/1941",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1941.webp",
+    "tagsPorteur": [
+      [
+        "Goku Black",
+        "DBL77-05S"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 10,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 60,
+        "valeur_max": 170,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 70,
+        "valeur_max": 190,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dégâts spéciaux infligés 10.00 ~ 30.00%",
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lorsque vous êtes sur le terrain et que vous subissez une attaque d'art, régénère la force de 1.00 ~ 3.00%.",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors de la transformation, si vous avez 3 cartes ou moins, tire 4 jusqu'à cartes",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Une fois entré en scène, si la jauge unique est pleine, les effets suivants s'activent :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Tire une carte d'art spécial au tour suivant",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Régénère le Ki de 50",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand l'adversaire lance un art spécial, tant que vous n'êtes pas K.O., annule ses bonus d'état (3 fois)",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_1945",
+    "sourceId": "1945",
+    "nom": "Attaque à l'aveugle dans l'eau",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/1945",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1945.webp",
+    "tagsPorteur": [
+      [
+        "Broly",
+        "DBL74-03S"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 10,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 70,
+        "valeur_max": 200,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Si la force restante est de 50% ou moins quand vous subissez une attaque d'art, régénère la force de 10.00 ~ 25.00% (2 fois)",
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 60,
+        "valeur_max": 170,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 35,
+        "valeur_max": 70,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dégâts spéciaux infligés 10.00 ~ 30.00%",
+        "slot": 2
+      },
+      {
+        "stat": "vitesse_regen_ki_de_base",
+        "valeur_min": 30,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Coût de tous les arts -7",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quantité de remplissage de jauge unique +50%",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors de la transformation, annule les désavantages d'attribut (15 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand vous êtes sur le terrain et que l'adversaire active un art spécial, ultime ou d'éveil, réduit de 5 secondes la durée de mise en attente des alliés",
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_50001",
     "sourceId": "50001",
     "nom": "!!!",
@@ -26039,6 +26371,52 @@ window.DBL_ITEMS_SCRAPED = [
             "Style de combat : Type énergie"
           ]
         },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_50204",
+    "sourceId": "50204",
+    "nom": "?!!",
+    "rarete": "awakenedgold",
+    "sourceUrl": "https://fr.dblegends.net/equip/50204",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1280.webp",
+    "tagsPorteur": [
+      [
+        "Broly"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 10,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand un autre personnage étant à la fois « Classe : Saiyan » et « Classe : Ennemi puissant » fait partie des combattants de l'équipe, défense physique 5.00 ~ 12.00%",
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 18,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand un autre personnage étant à la fois « Classe : Saiyan » et « Épisode : Saga des films » fait partie des combattants de l'équipe, attaque physique 5.00 ~ 12.00%",
         "slot": 3
       }
     ]
@@ -43506,6 +43884,105 @@ window.DBL_ITEMS_SCRAPED = [
             "Style de combat : Type défense"
           ]
         },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2059",
+    "sourceId": "2059",
+    "nom": "Puissance divine en approche",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/2059",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2059.webp",
+    "tagsPorteur": [
+      [
+        "Guerrier fusionné"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Augmente de 5.00 ~ 10.00% la défense et l'attaque d'énergie si vous êtes un « Classe : Ki divin ».",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_1700",
+    "sourceId": "1700",
+    "nom": "Tu sais bien que je ne suis pas aussi indulgent que Kakarot",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/1700",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1700.webp",
+    "tagsPorteur": [
+      [
+        "Exclusif aux événements",
+        "Saga Super - La résurrection de Freezer"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 10,
+        "valeur_max": 22,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 10,
+        "valeur_max": 22,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 10,
+        "valeur_max": 22,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 10,
+        "valeur_max": 22,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "degats_tech_spe",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": null,
         "slot": 3
       }
     ]
