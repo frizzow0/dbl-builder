@@ -74,6 +74,95 @@
     }
   })();
 
+  // ── PATCH RUNTIME : passifs chiffrables "Augmente de X ~ Y% …" ────────────
+  // Le scraper laisse certains bonus conditionnels en texte (est_passif).
+  // On les convertit en lignes calculables au MAX (valeur_max = Y), avec leur
+  // condition (threshold / per_member). La fourchette X~Y représente la plage
+  // que le joueur peut obtenir ; on retient la borne haute.
+  // Cas laissés en passif : situationnels ("… contre les « X »"), choix "- OR -",
+  // et toute formulation de stat non reconnue (défaut sûr).
+  (function _convertRangePassives() {
+    const NORM = (s) => s.toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, " ")
+      .replace(/^\s*(votre|vos)\s+/, "").replace(/\.\s*$/, "").trim();
+    // Phrase de stat (normalisée) → clés de stats (couche pur / HP / dégâts directs)
+    const PHRASE = {
+      "la défense et l'attaque physique":  ["defense_physique", "attaque_physique"],
+      "la défense et l'attaque d'énergie": ["defense_energie", "attaque_energie"],
+      "l'attaque physique":                ["attaque_physique"],
+      "l'attaque d'énergie":               ["attaque_energie"],
+      "la défense physique":               ["defense_physique"],
+      "la défense d'énergie":              ["defense_energie"],
+      "attaque physique et d'énergie":     ["attaque_physique", "attaque_energie"],
+      "l'attaque physique et d'énergie":   ["attaque_physique", "attaque_energie"],
+      "l'attaque physique et la défense d'énergie": ["attaque_physique", "defense_energie"],
+      "la défense d'énergie et l'attaque physique": ["defense_energie", "attaque_physique"],
+      "l'attaque physique et d'énergie et la défense physique et d'énergie":
+        ["attaque_physique", "attaque_energie", "defense_physique", "defense_energie"],
+      "la force max":                      ["force_de_base"],
+      "les dégâts infligés":               ["degats_infliges"],
+      "les dégâts physiques infligés":     ["degats_infliges"],
+      "les dégâts ultimes infligés":       ["degats_ultime"],
+    };
+    function parseCond(rest) {
+      const s = rest;
+      // "… par combattant de l'équipe portant ce même équipement" → per_member (même item)
+      if (/portant ce m[êe]me [ée]quipement/i.test(s)) {
+        return {
+          phrase: s.replace(/\s*par combattant de l['’]?[ée]quipe portant ce m[êe]me [ée]quipement.*/i, ""),
+          cond: { mode: "per_member", seuil: 1, tag_requis: null, tags_requis: [] },
+        };
+      }
+      // "… par combattant de l'équipe de « X »" / "… par membre « X » dans l'équipe" → per_member
+      let m = s.match(/\s*par (?:combattant de l['’]?[ée]quipe(?: de)?|membre)\s*«\s*([^»]+?)\s*»(?:\s*dans l['’]?[ée]quipe)?.*/i);
+      if (m) {
+        const t = m[1].trim();
+        return { phrase: s.slice(0, m.index), cond: { mode: "per_member", seuil: 1, tag_requis: t, tags_requis: [t] } };
+      }
+      // "… si (au moins N)? (un autre|un|une|des|vous êtes un)? « X » …" → threshold
+      m = s.match(/\s*si\s+(?:au\s+moins\s+(\d+)\s+)?(?:un autre|un|une|des|vous [êe]tes un[e]?)?\s*«\s*([^»]+?)\s*».*/i);
+      if (m) {
+        const t = m[2].trim();
+        return { phrase: s.slice(0, m.index), cond: { mode: "threshold", seuil: m[1] ? parseInt(m[1], 10) : 1, tag_requis: t, tags_requis: [t] } };
+      }
+      if (/\bcontre\b/i.test(s)) return null; // situationnel (selon l'adversaire) → reste passif
+      return { phrase: s, cond: null };       // inconditionnel
+    }
+    function convert(desc) {
+      if (!desc || / - OR - /.test(desc)) return null;
+      const m = desc.trim().match(/^Augmente de\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%\s*(.+)$/i);
+      if (!m) return null;
+      const vmin = parseFloat(m[1].replace(",", "."));
+      const vmax = parseFloat(m[2].replace(",", "."));
+      const pc = parseCond(m[3].replace(/\.\s*$/, ""));
+      if (!pc) return null;
+      const stats = PHRASE[NORM(pc.phrase)];
+      if (!stats) return null; // formulation inconnue → reste passif
+      return stats.map((stat) => ({
+        stat,
+        valeur_min: vmin,
+        valeur_max: vmax,
+        condition: pc.cond ? { ...pc.cond, description: desc.trim() } : null,
+      }));
+    }
+    for (const item of ITEMS) {
+      if (!item.lignes) continue;
+      let changed = false;
+      const out = [];
+      for (const l of item.lignes) {
+        if (l.est_passif && l.description_passif) {
+          const conv = convert(l.description_passif);
+          if (conv) {
+            for (const nl of conv) out.push({ ...nl, slot: l.slot });
+            changed = true;
+            continue;
+          }
+        }
+        out.push(l);
+      }
+      if (changed) item.lignes = out;
+    }
+  })();
+
   // Codes d'élément : les persos stockent l'anglais (BLU, RED…),
   // les items la version française (BLE, RGE…). On mappe EN -> FR pour
   // qu'une condition porteur sur l'élément matche dans les deux sens.
