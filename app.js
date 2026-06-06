@@ -427,6 +427,7 @@
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
+    zDetailOpen: false,      // accordéon "Détail par perso" ouvert ?
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -1831,34 +1832,25 @@
     ];
 
   // ===== ONGLETS PERSO (pilotent stats cumulées + effets non calculés) =====
-  const charTabsEl = document.getElementById("char-tabs");
-  function renderCharTabs() {
-    if (!charTabsEl) return;
-    const occupied = state.team.map((s, i) => ({ s, i })).filter((o) => o.s.character);
-    if (!occupied.length) {
-      charTabsEl.innerHTML = `<span class="placeholder">${T('team.noperso')}</span>`;
-      return;
-    }
-    // S'assurer que le perso analysé existe (sinon on prend le premier occupé)
-    if (!state.team[state.activeSlot].character) state.activeSlot = occupied[0].i;
-    charTabsEl.innerHTML = occupied.map(({ s, i }) => {
-      const c = s.character;
-      const img = c.image ? `<img src="${c.image}" alt="" onerror="this.style.display='none'"/>` : "";
-      return `<button class="char-tab ${i === state.activeSlot ? 'is-active' : ''}" data-char-tab="${i}" type="button">${img}<span class="char-tab-name">${c.nom.trim()}</span></button>`;
-    }).join("");
+  // S'assure que le perso analysé (activeSlot) pointe sur un perso occupé.
+  function ensureActiveSlot() {
+    if (state.team[state.activeSlot] && state.team[state.activeSlot].character) return;
+    const first = state.team.findIndex((s) => s.character);
+    if (first !== -1) state.activeSlot = first;
   }
-  if (charTabsEl) {
-    charTabsEl.addEventListener("click", (e) => {
-      const tab = e.target.closest("[data-char-tab]");
-      if (!tab) return;
-      state.activeSlot = +tab.dataset.charTab;
-      renderTeamGrid();
-      renderResults();
-    });
+  // Markup des onglets perso (intégrés dans l'accordéon "Détail par perso").
+  function charTabsHTML() {
+    const occupied = state.team.map((s, i) => ({ s, i })).filter((o) => o.s.character);
+    if (!occupied.length) return "";
+    return `<div class="char-tabs">${occupied.map(({ s, i }) => {
+        const c = s.character;
+        const img = c.image ? `<img src="${c.image}" alt="" onerror="this.style.display='none'"/>` : "";
+        return `<button class="char-tab ${i === state.activeSlot ? 'is-active' : ''}" data-char-tab="${i}" type="button">${img}<span class="char-tab-name">${c.nom.trim()}</span></button>`;
+      }).join("")}</div>`;
   }
 
   function renderResults() {
-    renderCharTabs();
+    ensureActiveSlot();
     renderZBilan();
     renderGlobalBilan();
     const noItems = active.items.every((s) => !s);
@@ -2234,11 +2226,29 @@
       .join("");
 
     zBilanEl.innerHTML = totauxSection + `
-      <details class="z-detail-accordion">
+      <details class="z-detail-accordion" ${state.zDetailOpen ? "open" : ""}>
         <summary class="z-detail-summary">${T('z.detail.percar')}</summary>
-        <div class="z-bilan-grid">${perCharSection}</div>
+        <div class="z-detail-body">
+          ${charTabsHTML()}
+          <div class="z-bilan-grid">${perCharSection}</div>
+        </div>
       </details>`;
+    // Conserve l'état ouvert/fermé entre les recalculs + délégation des onglets.
+    const acc = zBilanEl.querySelector(".z-detail-accordion");
+    if (acc) {
+      acc.addEventListener("toggle", () => { state.zDetailOpen = acc.open; });
+    }
   }
+
+  // Délégation : clic sur un onglet perso (dans l'accordéon du bilan Cap Z)
+  zBilanEl.addEventListener("click", (e) => {
+    const tab = e.target.closest("[data-char-tab]");
+    if (!tab) return;
+    state.activeSlot = +tab.dataset.charTab;
+    state.zDetailOpen = true; // garde l'accordéon ouvert après sélection
+    renderTeamGrid();
+    renderResults();
+  });
 
   // ===== BILAN GLOBAL (Cap Z + items, tout compris) =====
   const globalBilanEl = document.getElementById("global-bilan");

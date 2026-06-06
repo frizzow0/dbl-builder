@@ -30,7 +30,7 @@
     'panel.conditions.sub':    { fr: 'Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.',
                                   en: 'Some items have conditional effects. Team compositions are auto-detected from character tags.' },
     'panel.z.title':           { fr: 'Bilan global (Cap Z)', en: 'Global summary (Z Abilities)' },
-    'z.detail.percar':         { fr: 'Détail des Cap Z par perso', en: 'Per-character Z detail' },
+    'z.detail.percar':         { fr: 'Détail par perso', en: 'Per-character detail' },
     'panel.z.sub':             { fr: 'Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.',
                                   en: 'For each character, Z Abilities received (theirs + teammates\' based on conditions). The Leader (★) receives and distributes without restriction.' },
     'panel.stats.title':       { fr: 'Résumé des effets cumulés', en: 'Cumulated Effects Summary' },
