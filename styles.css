@@ -250,11 +250,14 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .col { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
 
 /* ── Zone du haut : builder (persos+items) à gauche, Résumé à droite ── */
-.top-zone { display: grid; grid-template-columns: 1fr; gap: var(--s-4); align-items: start; }
+/* align-items:stretch → les 2 panneaux ont la même hauteur (bas alignés). */
+.top-zone { display: grid; grid-template-columns: 1fr; gap: var(--s-4); align-items: stretch; }
 @media (min-width: 1100px) {
   .top-zone { grid-template-columns: minmax(0, 1.7fr) minmax(320px, 1fr); gap: var(--s-5); }
 }
 .top-zone > .panel { min-width: 0; }
+/* Le builder en colonne flex : la barre "leader" est poussée tout en bas. */
+.builder-panel { display: flex; flex-direction: column; }
 
 /* Colonnes internes du builder : perso (flexible) | items (largeur du contenu) */
 :root { --builder-cols: minmax(0, 1fr) max-content; }
@@ -2311,15 +2314,15 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 
 /* ── Barre "Désactiver le leader" ────────────────────────────────── */
 .no-leader-bar {
-  /* Déborde sur les bords du panel (annule le padding du .panel) */
-  margin: var(--s-4) calc(-1 * var(--s-4)) calc(-1 * var(--s-4));
+  /* margin-top:auto → collée au bas du panel flex ; débord lat./bas annule le padding */
+  margin: auto calc(-1 * var(--s-4)) calc(-1 * var(--s-4));
   border-top: 1px solid var(--line);
   border-radius: 0 0 var(--r-3) var(--r-3);
   overflow: hidden;
 }
 @media (min-width: 1024px) {
   .no-leader-bar {
-    margin: var(--s-5) calc(-1 * var(--s-5)) calc(-1 * var(--s-5));
+    margin: auto calc(-1 * var(--s-5)) calc(-1 * var(--s-5));
   }
 }
 
