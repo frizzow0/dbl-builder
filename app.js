@@ -406,6 +406,7 @@
     conditions: {},          // tag => nombre de membres (saisie utilisateur, reste global)
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
+    detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -1102,8 +1103,21 @@
     return `<div class="slot-ligne ${cls}"><span class="bullet">${conditionRemplie ? "+" : "—"}</span><span class="ligne-text">${fmtPct(valeur)} ${statLabel(l.stat)}</span>${condBadge}</div>`;
   }
 
-  // HTML d'un slot d'item (vide ou rempli) pour le perso `charSlot`
-  function itemSlotHTML(charSlot, itemSlotIdx) {
+  // Icône compacte d'un item dans la ligne builder (vide ou rempli).
+  function itemIconHTML(charSlot, itemSlotIdx) {
+    const item = state.team[charSlot].items[itemSlotIdx];
+    if (!item) {
+      return `<button class="builder-item-icon empty" data-open-item="${charSlot}:${itemSlotIdx}" type="button" title="${T('slot.choose')}">＋</button>`;
+    }
+    const rar = (item.rarete || "").toLowerCase();
+    const img = item.image
+      ? `<img src="${item.image}" alt="${item.nom}" onerror="this.style.display='none'" />`
+      : `<span class="builder-item-icon-fallback">${(item.nom || '?').slice(0, 2)}</span>`;
+    return `<button class="builder-item-icon filled rar-${rar}" data-open-item="${charSlot}:${itemSlotIdx}" type="button" title="${item.nom}">${img}</button>`;
+  }
+
+  // HTML détaillé d'un slot d'item (vide ou rempli) — utilisé dans la modale de détails.
+  function itemDetailHTML(charSlot, itemSlotIdx) {
     const teamSlot = state.team[charSlot];
     const item = teamSlot.items[itemSlotIdx];
     if (!item) {
@@ -1171,7 +1185,10 @@
     const slot = state.team[charSlot];
     const isActive = charSlot === state.activeSlot;
     const items = slot.character
-      ? `<div class="builder-items">${[0, 1, 2].map((j) => itemSlotHTML(charSlot, j)).join("")}</div>`
+      ? `<div class="builder-items">
+           <div class="builder-item-icons">${[0, 1, 2].map((j) => itemIconHTML(charSlot, j)).join("")}</div>
+           <button class="builder-items-details" data-open-details="${charSlot}" type="button" title="${T('items.details')}" aria-label="${T('items.details')}">▾</button>
+         </div>`
       : `<div class="builder-items is-disabled">${T('builder.items.empty')}</div>`;
     return `<div class="builder-row ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${items}</div>`;
   }
@@ -1190,6 +1207,9 @@
 
   builderGridEl.addEventListener("click", (e) => {
     const t = e.target;
+    // Flèche → ouvre la modale de détails des items du perso
+    const det = t.closest("[data-open-details]");
+    if (det) { openDetailsModal(+det.dataset.openDetails); return; }
     // Étoile leader
     const lead = t.closest("[data-leader]");
     if (lead) { e.stopPropagation(); state.leaderSlot = +lead.dataset.leader; renderTeamGrid(); renderResults(); return; }
@@ -1224,6 +1244,66 @@
     const addChar = t.closest("[data-add-char]");
     if (addChar) { state.activeSlot = +addChar.dataset.addChar; renderTeamGrid(); openCharModal(); return; }
   });
+
+  // ===== MODALE DÉTAILS DES ITEMS (par perso) =====
+  const detailsModalEl = document.getElementById("details-modal");
+  const detailsModalBody = document.getElementById("details-modal-body");
+  const detailsModalTitle = document.getElementById("details-modal-title");
+
+  function renderDetailsModal() {
+    const cs = state.detailsCharSlot;
+    if (cs == null || !detailsModalBody) return;
+    const c = state.team[cs].character;
+    if (detailsModalTitle) detailsModalTitle.textContent = c ? T('items.details.title', { name: c.nom.trim() }) : T('items.details');
+    detailsModalBody.innerHTML = `<div class="details-items">${[0, 1, 2].map((j) => itemDetailHTML(cs, j)).join("")}</div>`;
+  }
+  function openDetailsModal(charSlot) {
+    state.detailsCharSlot = charSlot;
+    renderDetailsModal();
+    if (detailsModalEl) detailsModalEl.classList.remove("hidden");
+  }
+  function closeDetailsModal() {
+    if (detailsModalEl) detailsModalEl.classList.add("hidden");
+    state.detailsCharSlot = null;
+  }
+  if (detailsModalEl) {
+    detailsModalEl.querySelector("[data-details-close]")?.addEventListener("click", closeDetailsModal);
+    document.getElementById("details-modal-close")?.addEventListener("click", closeDetailsModal);
+    detailsModalBody.addEventListener("click", (e) => {
+      const t = e.target;
+      // Choix OR
+      const orBtn = t.closest("[data-or-choice]");
+      if (orBtn) {
+        const cs = state.detailsCharSlot;
+        const [slotStr, lineIdxStr, altStr] = orBtn.dataset.orChoice.split(":");
+        const ts = state.team[cs];
+        if (!ts.itemChoices) ts.itemChoices = [{}, {}, {}];
+        if (!ts.itemChoices[+slotStr]) ts.itemChoices[+slotStr] = {};
+        ts.itemChoices[+slotStr][+lineIdxStr] = +altStr;
+        renderDetailsModal();
+        renderAll();
+        return;
+      }
+      // Changer / ajouter → ferme les détails et ouvre le sélecteur d'items
+      const chg = t.closest("[data-item-change]") || t.closest("[data-open-item]");
+      if (chg) {
+        const data = chg.dataset.itemChange || chg.dataset.openItem;
+        const [cs, is] = data.split(":");
+        closeDetailsModal();
+        openItemModal(+cs, +is);
+        return;
+      }
+      // Retirer → on vide et on rafraîchit (modale reste ouverte)
+      const clr = t.closest("[data-item-clear]");
+      if (clr) {
+        const [cs, is] = clr.dataset.itemClear.split(":");
+        state.team[+cs].items[+is] = null;
+        renderAll();
+        renderDetailsModal();
+        return;
+      }
+    });
+  }
 
   // Recherche dans le modal char : filtre la liste à la volée
   charSearchEl.addEventListener("input", () => renderCharSuggestions(charSearchEl.value));

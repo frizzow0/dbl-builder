@@ -23,6 +23,8 @@
     'builder.col.persos':      { fr: 'Personnages',          en: 'Characters' },
     'builder.col.items':       { fr: 'Items équipés (max 3)', en: 'Equipped items (max 3)' },
     'builder.items.empty':     { fr: 'Ajoute un perso pour équiper des items', en: 'Add a character to equip items' },
+    'items.details':           { fr: 'Voir les détails des items', en: 'View item details' },
+    'items.details.title':     { fr: 'Items — {name}', en: 'Items — {name}' },
     'results.detail.label':    { fr: 'Détail par perso :',   en: 'Per-character detail:' },
     'panel.conditions.title':  { fr: 'Composition d\'équipe', en: 'Team Composition' },
     'panel.conditions.sub':    { fr: 'Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.',
