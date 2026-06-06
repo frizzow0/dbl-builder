@@ -71,68 +71,48 @@
 
   <main class="layout">
 
-    <!-- ============ COLONNE GAUCHE : configuration ============ -->
-    <section class="col col-left">
+    <!-- ============ ZONE DE SAISIE : persos (col 1) + items (col 2) ============ -->
+    <section class="panel builder-panel" id="section-build">
+      <h2 class="panel-title">
+        <span data-i18n="panel.builder.title">Équipe &amp; Items</span>
+        <span class="panel-hint" data-i18n="panel.builder.hint">clique sur un perso vide pour l'ajouter · choisis ses items en face</span>
+      </h2>
 
-      <!-- Équipe : 6 personnages = 2 trios. Clic vide = ajout, clic rempli = sélection -->
-      <div class="panel" id="section-team">
-        <h2 class="panel-title"><span data-i18n="panel.team.title">Équipe</span> <span class="panel-hint" data-i18n="panel.team.hint">clique sur + pour ajouter un perso · clique sur une carte pour l'éditer</span></h2>
-        <div id="team-grid" class="team-grid"></div>
-        <div class="no-leader-bar">
-          <button id="no-leader-btn" class="no-leader-btn" type="button">
-            <span class="no-leader-star">★</span>
-            <span class="no-leader-text">Désactiver le leader</span>
-            <span class="no-leader-badge">OFF</span>
-          </button>
-        </div>
+      <div class="builder-head" aria-hidden="true">
+        <span class="builder-head-col" data-i18n="builder.col.persos">Personnages</span>
+        <span class="builder-head-col" data-i18n="builder.col.items">Items équipés (max 3)</span>
       </div>
 
-      <!-- Build du slot actif : perso + traits + Cap Z + 3 items -->
-      <div class="panel" id="section-build">
-        <h2 class="panel-title" id="build-title">Build du Slot 1</h2>
+      <div id="builder-grid" class="builder-grid"></div>
 
-        <!-- Affiché uniquement quand un perso est dans le slot actif -->
-        <div id="char-selected" class="char-selected hidden"></div>
-        <div id="char-traits" class="char-traits hidden"></div>
-        <div id="char-zability" class="char-zability hidden"></div>
-
-        <!-- État vide : message + bouton -->
-        <div id="build-empty" class="build-empty hidden">
-          <div class="build-empty-icon">＋</div>
-          <p class="build-empty-text" data-i18n="build.empty.text">Ce slot est vide.</p>
-          <button class="btn build-empty-btn" type="button" data-action="open-char-modal" data-i18n="build.empty.btn">Ajouter un personnage</button>
-        </div>
-
-        <h3 class="build-subhead"><span data-i18n="panel.build.subhead">Items équipés</span> <span class="panel-hint" data-i18n="panel.build.hint">max 3</span></h3>
-        <div class="slots">
-          <div class="slot" data-slot="0">
-            <div class="slot-header">Slot 1</div>
-            <div class="slot-content empty" data-slot-content="0">+ Choisir un item</div>
-          </div>
-          <div class="slot" data-slot="1">
-            <div class="slot-header">Slot 2</div>
-            <div class="slot-content empty" data-slot-content="1">+ Choisir un item</div>
-          </div>
-          <div class="slot" data-slot="2">
-            <div class="slot-header">Slot 3</div>
-            <div class="slot-content empty" data-slot-content="2">+ Choisir un item</div>
-          </div>
-        </div>
+      <div class="no-leader-bar">
+        <button id="no-leader-btn" class="no-leader-btn" type="button">
+          <span class="no-leader-star">★</span>
+          <span class="no-leader-text">Désactiver le leader</span>
+          <span class="no-leader-badge">OFF</span>
+        </button>
       </div>
 
-      <!-- Conditions d'équipe -->
-      <div id="conditions-panel" class="panel hidden">
-        <h2 class="panel-title" data-i18n="panel.conditions.title">Composition d'équipe</h2>
-        <p class="panel-sub" data-i18n="panel.conditions.sub">
-          Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.
-        </p>
-        <div id="conditions-inputs"></div>
-      </div>
-
+      <!-- Conditions d'équipe (repliable) -->
+      <details id="conditions-panel" class="conditions-accordion">
+        <summary class="conditions-summary">
+          <span class="conditions-summary-title" data-i18n="panel.conditions.title">Composition d'équipe</span>
+          <span class="conditions-summary-hint" data-i18n="panel.conditions.sub">Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.</span>
+        </summary>
+        <div class="conditions-body">
+          <div id="conditions-inputs"></div>
+        </div>
+      </details>
     </section>
 
-    <!-- ============ COLONNE DROITE : résultats ============ -->
-    <section class="col col-right">
+    <!-- ============ ONGLETS PERSO (pilotent les 2 panneaux par-perso) ============ -->
+    <div class="char-tabs-bar">
+      <span class="char-tabs-label" data-i18n="results.detail.label">Détail par perso :</span>
+      <div id="char-tabs" class="char-tabs"></div>
+    </div>
+
+    <!-- ============ RÉSULTATS : 4 panneaux côte à côte ============ -->
+    <section class="results-row">
 
       <div class="panel" id="section-z">
         <h2 class="panel-title" data-i18n="panel.z.title">Bilan Cap Z (équipe)</h2>
@@ -228,20 +208,20 @@
 
   <!-- ============ MOBILE TABBAR ============ -->
   <nav class="mobile-tabbar" aria-label="Navigation rapide">
-    <a href="#section-team" data-target="section-team" class="active" data-i18n="nav.team">Équipe</a>
-    <a href="#section-build" data-target="section-build" data-i18n="nav.build">Build</a>
+    <a href="#section-build" data-target="section-build" class="active" data-i18n="nav.build">Équipe</a>
     <a href="#section-z" data-target="section-z" data-i18n="nav.capz">Cap Z</a>
+    <a href="#section-global" data-target="section-global" data-i18n="nav.global">Global</a>
     <a href="#section-stats" data-target="section-stats" data-i18n="nav.stats">Stats</a>
   </nav>
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=10"></script>
-  <script src="items.js?v=10"></script>
-  <script src="characters.js?v=10"></script>
-  <script src="data.js?v=10"></script>
-  <script src="calc.js?v=10"></script>
-  <script src="app.js?v=10"></script>
+  <script src="i18n.js?v=11"></script>
+  <script src="items.js?v=11"></script>
+  <script src="characters.js?v=11"></script>
+  <script src="data.js?v=11"></script>
+  <script src="calc.js?v=11"></script>
+  <script src="app.js?v=11"></script>
 
   <script>
     (function () {

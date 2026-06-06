@@ -18,6 +18,12 @@
     'panel.build.hint':        { fr: 'max 3',               en: 'max 3' },
     'build.empty.text':        { fr: 'Ce slot est vide.',   en: 'This slot is empty.' },
     'build.empty.btn':         { fr: 'Ajouter un personnage', en: 'Add a character' },
+    'panel.builder.title':     { fr: 'Équipe & Items',       en: 'Team & Items' },
+    'panel.builder.hint':      { fr: 'clique sur un perso vide pour l\'ajouter · choisis ses items en face', en: 'click an empty slot to add a character · pick their items on the right' },
+    'builder.col.persos':      { fr: 'Personnages',          en: 'Characters' },
+    'builder.col.items':       { fr: 'Items équipés (max 3)', en: 'Equipped items (max 3)' },
+    'builder.items.empty':     { fr: 'Ajoute un perso pour équiper des items', en: 'Add a character to equip items' },
+    'results.detail.label':    { fr: 'Détail par perso :',   en: 'Per-character detail:' },
     'panel.conditions.title':  { fr: 'Composition d\'équipe', en: 'Team Composition' },
     'panel.conditions.sub':    { fr: 'Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.',
                                   en: 'Some items have conditional effects. Team compositions are auto-detected from character tags.' },
@@ -35,8 +41,9 @@
     'modal.char.search.ph':    { fr: 'Rechercher (nom, code, trait)...', en: 'Search (name, code, tag)...' },
     'modal.char.search.aria':  { fr: 'Rechercher un personnage', en: 'Search for a character' },
     'nav.team':  { fr: 'Équipe', en: 'Team' },
-    'nav.build': { fr: 'Build',  en: 'Build' },
+    'nav.build': { fr: 'Équipe',  en: 'Team' },
     'nav.capz':  { fr: 'Cap Z',  en: 'Cap Z' },
+    'nav.global':{ fr: 'Global', en: 'Global' },
     'nav.stats': { fr: 'Stats',  en: 'Stats' },
 
     // ── Dynamique : personnages & team ───────────

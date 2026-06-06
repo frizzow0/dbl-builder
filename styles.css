@@ -232,28 +232,86 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 }
 
 /* =====================  5. LAYOUT  ===================== */
+/* Pleine largeur, one-page : tout s'empile et la page entière scrolle. */
 .layout {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: var(--s-4);
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--s-4);
 }
 @media (min-width: 1024px) {
   .layout {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     gap: var(--s-5);
-    padding: var(--s-6);
+    padding: var(--s-5) var(--s-6);
   }
 }
 .col { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
-@media (min-width: 1024px) {
-  .col { gap: var(--s-5); }
-  .col-right { position: sticky; top: 80px; align-self: flex-start; max-height: calc(100vh - 96px); overflow-y: auto; padding-right: 4px; }
-  .col-right::-webkit-scrollbar { width: 8px; }
-  .col-right::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 99px; }
+
+/* ── Zone de saisie : 2 colonnes (persos | items) alignées par ligne ── */
+.builder-panel { width: 100%; }
+.builder-head { display: none; }
+@media (min-width: 900px) {
+  .builder-head {
+    display: grid;
+    grid-template-columns: var(--builder-cols, minmax(240px, 0.85fr) 2fr);
+    gap: var(--s-4);
+    margin-bottom: var(--s-2);
+    padding: 0 var(--s-2);
+  }
+  .builder-head-col {
+    font-family: var(--font-display);
+    font-size: var(--fs-xxs);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 700;
+    color: var(--text-soft);
+  }
 }
+.builder-grid { display: flex; flex-direction: column; gap: var(--s-2); }
+
+/* Bandeau de séparation de trio */
+.builder-trio-label {
+  display: flex; align-items: center; gap: var(--s-3);
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--accent);
+  margin: var(--s-3) 0 2px;
+}
+.builder-trio-label::after {
+  content: ""; flex: 1; height: 1px;
+  background: linear-gradient(90deg, var(--accent-tint-2), transparent);
+}
+.builder-grid > .builder-trio-label:first-child { margin-top: 0; }
+
+/* Une ligne = [carte perso | 3 slots items] */
+.builder-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-2);
+  align-items: stretch;
+}
+@media (min-width: 900px) {
+  .builder-row {
+    grid-template-columns: var(--builder-cols, minmax(240px, 0.85fr) 2fr);
+    gap: var(--s-4);
+  }
+}
+
+/* ── Rangée de résultats : 4 panneaux côte à côte ── */
+.results-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+  align-items: start;
+}
+@media (min-width: 720px)  { .results-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .results-row { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-5); } }
+.results-row .panel { min-width: 0; }
 
 /* =====================  6. PANEL  ===================== */
 .panel {
@@ -2407,3 +2465,160 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
     border-top: 1px solid #eee;
   }
 }
+
+/* =====================  REFONTE : BUILDER ROW  ===================== */
+/* Carte perso compacte (colonne 1 d'une ligne) */
+.builder-char {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 8px 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  transition: border-color var(--t-micro), background var(--t-micro);
+  min-width: 0;
+}
+.builder-char.is-empty {
+  border-style: dashed;
+  cursor: pointer;
+  justify-content: center;
+  color: var(--text-soft);
+}
+.builder-char.is-empty:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
+.builder-row.is-active .builder-char { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent-tint-2) inset; }
+
+.builder-char-img {
+  width: 52px; height: 52px; flex-shrink: 0;
+  border-radius: var(--r-2);
+  object-fit: cover;
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+}
+.builder-char-add-icon {
+  width: 28px; height: 28px; display: grid; place-items: center;
+  font-size: 20px; font-weight: 300; line-height: 1;
+}
+.builder-char-add-text { font-size: var(--fs-sm); font-weight: 600; }
+
+.builder-char-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.builder-char-name {
+  font-weight: 700; font-size: var(--fs-sm);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.builder-char-code { font-size: var(--fs-xxs); color: var(--text-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Ligne d'outils sous le nom : Z-tier + actions */
+.builder-char-tools { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+.builder-z { display: inline-flex; gap: 2px; }
+.builder-z-pill {
+  font-size: 10px; font-weight: 700; line-height: 1;
+  padding: 3px 5px; border-radius: var(--r-1);
+  background: var(--surface-3); color: var(--text-soft);
+  border: 1px solid var(--line);
+  transition: all var(--t-micro);
+}
+.builder-z-pill.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.builder-char-act {
+  font-size: 14px; line-height: 1; padding: 3px 6px; border-radius: var(--r-1);
+  color: var(--text-soft); border: 1px solid transparent;
+}
+.builder-char-act:hover { background: var(--surface-3); color: var(--text); }
+.builder-char-act.is-danger:hover { background: rgba(255,80,80,.14); color: #ff6b6b; }
+
+/* Étoile leader */
+.builder-leader {
+  position: absolute; top: 4px; right: 4px;
+  width: 22px; height: 22px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 12px; line-height: 1;
+  color: var(--muted); background: var(--surface-3); border: 1px solid var(--line);
+  z-index: 2; transition: all var(--t-micro);
+}
+.builder-leader.is-leader { color: #fff; background: var(--accent); border-color: var(--accent); box-shadow: var(--shadow-accent); }
+.builder-leader.is-leader-disabled { opacity: .35; }
+
+/* Élément (liseré gauche coloré) */
+.builder-char.elem-blu { box-shadow: inset 3px 0 0 #3b82f6; }
+.builder-char.elem-red { box-shadow: inset 3px 0 0 #ef4444; }
+.builder-char.elem-grn { box-shadow: inset 3px 0 0 #22c55e; }
+.builder-char.elem-yel { box-shadow: inset 3px 0 0 #eab308; }
+.builder-char.elem-pur { box-shadow: inset 3px 0 0 #a855f7; }
+.builder-char.elem-lgt { box-shadow: inset 3px 0 0 #f5f5f5; }
+
+/* Colonne 2 : 3 slots items côte à côte */
+.builder-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-2);
+  min-width: 0;
+}
+.builder-items.is-disabled {
+  opacity: .4; pointer-events: none;
+  display: grid; place-items: center; grid-template-columns: 1fr;
+  font-size: var(--fs-xs); color: var(--text-soft);
+  border: 1px dashed var(--line); border-radius: var(--r-3); padding: var(--s-3);
+}
+.builder-item {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-2);
+  padding: 8px;
+  min-width: 0;
+  display: flex; flex-direction: column;
+}
+.builder-item.empty {
+  cursor: pointer; align-items: center; justify-content: center;
+  border-style: dashed; color: var(--text-soft); text-align: center;
+  font-size: var(--fs-xs); min-height: 64px;
+  transition: all var(--t-micro);
+}
+.builder-item.empty:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
+
+/* =====================  REFONTE : ONGLETS PERSO  ===================== */
+.char-tabs-bar {
+  display: flex; align-items: center; gap: var(--s-3);
+  flex-wrap: wrap;
+}
+.char-tabs-label {
+  font-family: var(--font-display); font-size: var(--fs-xs); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--text-soft);
+}
+.char-tabs { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; min-width: 0; }
+.char-tab {
+  display: flex; align-items: center; gap: 6px;
+  padding: 5px 10px; border-radius: var(--r-pill);
+  background: var(--surface-2); border: 1px solid var(--line);
+  font-size: var(--fs-xs); font-weight: 600; color: var(--text-soft);
+  transition: all var(--t-micro); max-width: 180px;
+}
+.char-tab:hover { border-color: var(--accent-tint-2); color: var(--text); }
+.char-tab.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.char-tab img { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.char-tab .char-tab-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* =====================  REFONTE : ACCORDÉON CONDITIONS  ===================== */
+.conditions-accordion {
+  margin-top: var(--s-3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  background: var(--surface-2);
+}
+.conditions-accordion[hidden], .conditions-accordion.hidden { display: none; }
+.conditions-summary {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 14px; cursor: pointer; list-style: none;
+  user-select: none;
+}
+.conditions-summary::-webkit-details-marker { display: none; }
+.conditions-summary::before {
+  content: "▸"; position: absolute; margin-left: -2px; color: var(--accent);
+  transition: transform var(--t-micro);
+}
+.conditions-accordion[open] .conditions-summary::before { content: "▾"; }
+.conditions-summary-title {
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-sm);
+  padding-left: 18px;
+}
+.conditions-summary-hint { font-size: var(--fs-xxs); color: var(--text-soft); padding-left: 18px; }
+.conditions-body { padding: 0 14px 14px; }

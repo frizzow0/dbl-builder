@@ -392,6 +392,7 @@
     noLeader: false,         // true = simule une équipe sans leader (bypass désactivé)
     conditions: {},          // tag => nombre de membres (saisie utilisateur, reste global)
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
+    modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -853,6 +854,7 @@
   });
 
   function renderCharSelected() {
+    if (!charSelectedEl) return; // élément retiré par la refonte
     if (!active.character) {
       charSelectedEl.classList.add("hidden");
       charSelectedEl.innerHTML = "";
@@ -878,6 +880,7 @@
   }
 
   function renderCharTraits() {
+    if (!charTraitsEl) return; // élément retiré par la refonte
     if (!active.character) {
       charTraitsEl.classList.add("hidden");
       charTraitsEl.innerHTML = "";
@@ -897,6 +900,7 @@
   const Z_LABEL = ["I", "II", "III", "IV"];
 
   function renderCharZAbility() {
+    if (!charZAbilityEl) return; // élément retiré par la refonte
     if (!active.character || (!active.character.zAbilities?.length && !active.character.zAbilitiesZenkai?.length)) {
       charZAbilityEl.classList.add("hidden");
       charZAbilityEl.innerHTML = "";
@@ -999,13 +1003,7 @@
     `;
   }
 
-  charZAbilityEl.addEventListener("click", (e) => {
-    const btn = e.target.closest("button[data-z-tier]");
-    if (!btn) return;
-    active.zTier = parseInt(btn.dataset.zTier, 10);
-    renderCharZAbility();
-    renderResults();
-  });
+  // (Le sélecteur de niveau Z est désormais intégré à chaque ligne de la grille builder.)
 
   function renderCharPicker() {
     renderCharFilters();
@@ -1038,6 +1036,7 @@
 
   // Affiche soit l'état vide (gros « ＋ »), soit les slots items selon que le slot actif a un perso.
   function renderBuildState() {
+    if (!buildEmptyEl) return; // élément retiré par la refonte
     const hasChar = !!active.character;
     buildEmptyEl.classList.toggle("hidden", hasChar);
     const slotsEl = document.querySelector(".slots");
@@ -1046,104 +1045,171 @@
     if (subheadEl) subheadEl.style.display = hasChar ? "" : "none";
   }
 
-  // ===== TEAM GRID =====
-  const teamGridEl = document.getElementById("team-grid");
-  const buildTitleEl = document.getElementById("build-title");
+  // ===== BUILDER GRID (1 ligne par perso : carte perso | 3 items) =====
+  const builderGridEl = document.getElementById("builder-grid");
 
-  function renderTeamGrid() {
-    const slots = state.team.map((slot, i) => {
-      const c = slot.character;
-      const isActive = i === state.activeSlot;
-      // On garde le marquage visuel du leader désigné, mais grisé si noLeader actif
-      const isLeader = i === state.leaderSlot;
-      const empty = !c;
-      const elementClass = c ? `elem-${(c.element || "").toLowerCase()}` : "";
-      const img = c && c.image
-        ? `<img class="team-card-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
-        : `<div class="team-card-img team-card-img-empty">+</div>`;
-      const name = c ? c.nom.trim() : T('team.card.empty');
-      const code = c ? `${c.cardCode || ""} · Z ${["I","II","III","IV"][slot.zTier - 1]}` : T('team.card.add');
-      const nbItems = slot.items.filter(Boolean).length;
-      return `
-        <div class="team-card ${isActive ? "is-active" : ""} ${empty ? "is-empty" : ""} ${elementClass}" data-team-slot="${i}">
-          <button class="team-leader-toggle ${isLeader ? "is-leader" : ""} ${state.noLeader ? "is-leader-disabled" : ""}" data-leader-toggle="${i}" title="${T('team.leader.title')}" type="button">★</button>
-          ${img}
-          <div class="team-card-info">
-            <div class="team-card-name" title="${name}">${name}</div>
-            <div class="team-card-code">${code}</div>
-            ${empty ? "" : `
-              <div class="team-card-footer">
-                <span class="team-card-items">${nbItems}/3 items</span>
-                <div class="team-card-btns">
-                  <button class="team-card-btn" data-card-action="change-char" data-card-slot="${i}" type="button">${T('slot.change')}</button>
-                  <button class="team-card-btn is-danger" data-card-action="remove-char" data-card-slot="${i}" type="button">${T('slot.remove')}</button>
-                </div>
-              </div>
-            `}
-          </div>
-        </div>
-      `;
+  // Rendu d'une ligne d'effet d'item (reprend la logique de l'ancien renderSlots)
+  function renderItemLigne(l, lineIdx, item, itemSlotIdx, displayConds, slotChoices) {
+    if (l.est_passif) {
+      const alts = parseOrPassif(l.description_passif);
+      if (alts) {
+        const selected = slotChoices[lineIdx] ?? 0;
+        const altsHTML = alts.map((alt, idx) => `
+          <button class="or-choice ${idx === selected ? 'is-selected' : ''}" data-or-choice="${itemSlotIdx}:${lineIdx}:${idx}" type="button">
+            <span class="or-mark">${idx === selected ? '●' : '○'}</span>
+            <span class="or-text">+${alt.valeur_max.toFixed(0)}% <strong>${alt.label}</strong></span>
+          </button>`).join("");
+        return `<div class="slot-ligne-or"><div class="slot-ligne-or-head"><span class="bullet">⚡</span>${T('slot.or.head')}</div><div class="slot-ligne-or-options">${altsHTML}</div></div>`;
+      }
+      const passifTxt = (l.description_passif || "");
+      if (passifTxt.includes(" - OR - ")) {
+        const opts = passifTxt.split(" - OR - ");
+        const optsHTML = opts.map((o, idx) => {
+          const sep = idx > 0 ? `<div class="passive-or-sep"><span>${T('cond.or')}</span></div>` : "";
+          return `${sep}<div class="passive-or-opt">${o.trim().replace(/\r?\n/g, "<br>")}</div>`;
+        }).join("");
+        return `<div class="slot-ligne passive passive-or"><div class="slot-ligne-or-head"><span class="bullet">⚡</span>${T('slot.or.passive')}</div><div class="passive-or-body">${optsHTML}</div></div>`;
+      }
+      return `<div class="slot-ligne passive"><span class="bullet">⚡</span>${passifTxt.replace(/\r?\n/g, "<br>")}</div>`;
+    }
+    let lineToEval = l;
+    if (l.condition?.mode === 'per_member' && !l.condition.tag_requis && !(l.condition.tags_requis?.length)) {
+      const syntheticTag = '__same_item__:' + item.id;
+      lineToEval = { ...l, condition: { ...l.condition, tag_requis: syntheticTag, tags_requis: [syntheticTag] } };
+    }
+    const conditionRemplie = condRemplieCalc(lineToEval, displayConds);
+    const cls = l.condition ? (conditionRemplie ? "active" : "inactive") : "";
+    let valeur = interpolerValeur(l, 1);
+    if (conditionRemplie && lineToEval.condition?.mode === 'per_member') {
+      const mult = multCondCalc(lineToEval, displayConds);
+      if (mult > 1) valeur *= mult;
+    }
+    const condBadge = l.condition
+      ? ` <em style="color:var(--text-soft); font-size:10px">(${l.condition.description})</em>` : "";
+    return `<div class="slot-ligne ${cls}"><span class="bullet">${conditionRemplie ? "+" : "—"}</span><span class="ligne-text">${fmtPct(valeur)} ${statLabel(l.stat)}</span>${condBadge}</div>`;
+  }
+
+  // HTML d'un slot d'item (vide ou rempli) pour le perso `charSlot`
+  function itemSlotHTML(charSlot, itemSlotIdx) {
+    const teamSlot = state.team[charSlot];
+    const item = teamSlot.items[itemSlotIdx];
+    if (!item) {
+      return `<div class="builder-item empty" data-open-item="${charSlot}:${itemSlotIdx}">${T('slot.choose')}</div>`;
+    }
+    const displayConds = buildItemConditions(charSlot);
+    if (!teamSlot.itemChoices) teamSlot.itemChoices = [{}, {}, {}];
+    const slotChoices = teamSlot.itemChoices[itemSlotIdx] || {};
+    const lignesParSlot = {};
+    item.lignes.forEach((l, lineIdx) => {
+      const sn = l.slot || 1;
+      (lignesParSlot[sn] = lignesParSlot[sn] || []).push({ l, lineIdx });
     });
-    teamGridEl.innerHTML = `
-      <div class="team-trio">${slots.slice(0, 3).join("")}</div>
-      <div class="team-trio-sep">${T('team.sep')}</div>
-      <div class="team-trio">${slots.slice(3, 6).join("")}</div>
+    const slotsHTML = Object.keys(lignesParSlot).map(Number).sort((a, b) => a - b).map((sn) => {
+      const label = sn === 4 ? `Slot ${sn} <span class="slot-7">★7</span>` : `Slot ${sn}`;
+      return `<div class="item-slot-group"><div class="item-slot-label">${label}</div><div class="item-slot-lignes">${lignesParSlot[sn].map(({ l, lineIdx }) => renderItemLigne(l, lineIdx, item, itemSlotIdx, displayConds, slotChoices)).join("")}</div></div>`;
+    }).join("");
+    const tagsLine = formatTagsPorteur(item.tagsPorteur);
+    const tagsHTML = tagsLine ? `<div class="slot-item-tags">${T('slot.compatible')} ${tagsLine}</div>` : "";
+    return `<div class="builder-item filled">
+      <div class="slot-item-rarete">${rarityLabel(item.rarete)}</div>
+      <div class="slot-item-name">${item.nom}</div>
+      ${tagsHTML}
+      <div class="slot-lignes">${slotsHTML}</div>
+      <div class="slot-actions">
+        <button class="btn" data-item-change="${charSlot}:${itemSlotIdx}">${T('slot.change')}</button>
+        <button class="btn danger" data-item-clear="${charSlot}:${itemSlotIdx}">${T('slot.remove')}</button>
+      </div>
+    </div>`;
+  }
+
+  // Carte perso compacte (colonne 1)
+  function charCellHTML(charSlot) {
+    const slot = state.team[charSlot];
+    const c = slot.character;
+    if (!c) {
+      return `<div class="builder-char is-empty" data-add-char="${charSlot}">
+        <span class="builder-char-add-icon">＋</span>
+        <span class="builder-char-add-text">${T('team.card.add')}</span>
+      </div>`;
+    }
+    const isLeader = charSlot === state.leaderSlot;
+    const elementClass = `elem-${(c.element || "").toLowerCase()}`;
+    const img = c.image
+      ? `<img class="builder-char-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
+      : `<div class="builder-char-img"></div>`;
+    const zPills = ["I", "II", "III", "IV"].map((lab, idx) =>
+      `<button class="builder-z-pill ${slot.zTier === idx + 1 ? 'active' : ''}" data-ztier="${charSlot}:${idx + 1}" type="button" title="Cap Z ${lab}">${lab}</button>`).join("");
+    return `<div class="builder-char ${elementClass}">
+      <button class="builder-leader ${isLeader ? 'is-leader' : ''} ${state.noLeader ? 'is-leader-disabled' : ''}" data-leader="${charSlot}" title="${T('team.leader.title')}" type="button">★</button>
+      ${img}
+      <div class="builder-char-info">
+        <div class="builder-char-name" title="${c.nom.trim()}">${c.nom.trim()}</div>
+        <div class="builder-char-code">${c.cardCode || ""}</div>
+        <div class="builder-char-tools">
+          <span class="builder-z">${zPills}</span>
+          <button class="builder-char-act" data-change-char="${charSlot}" title="${T('slot.change')}" type="button">✎</button>
+          <button class="builder-char-act is-danger" data-remove-char="${charSlot}" title="${T('slot.remove')}" type="button">✕</button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function builderRowHTML(charSlot) {
+    const slot = state.team[charSlot];
+    const isActive = charSlot === state.activeSlot;
+    const items = slot.character
+      ? `<div class="builder-items">${[0, 1, 2].map((j) => itemSlotHTML(charSlot, j)).join("")}</div>`
+      : `<div class="builder-items is-disabled">${T('builder.items.empty')}</div>`;
+    return `<div class="builder-row ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${items}</div>`;
+  }
+
+  // Nom conservé (renderTeamGrid) pour ne pas casser les appels existants.
+  function renderTeamGrid() {
+    if (!builderGridEl) return;
+    builderGridEl.innerHTML = `
+      <div class="builder-trio-label">${T('trio.a')}</div>
+      ${[0, 1, 2].map(builderRowHTML).join("")}
+      <div class="builder-trio-label">${T('trio.b')}</div>
+      ${[3, 4, 5].map(builderRowHTML).join("")}
     `;
-    // Mise à jour du titre du panel build
-    const activeChar = active.character;
-    const showLeaderBadge = !state.noLeader && state.activeSlot === state.leaderSlot;
-    buildTitleEl.innerHTML = `${T('build.title', { n: state.activeSlot + 1 })}${activeChar ? ` — <span style="color:var(--accent)">${activeChar.nom.trim()}</span>` : ""}${showLeaderBadge ? ` <span class="build-title-leader">${T('build.leader')}</span>` : ""}`;
     renderNoLeaderBtn();
   }
 
-  teamGridEl.addEventListener("click", (e) => {
-    const leaderBtn = e.target.closest("[data-leader-toggle]");
-    if (leaderBtn) {
-      e.stopPropagation();
-      state.leaderSlot = parseInt(leaderBtn.dataset.leaderToggle, 10);
-      renderTeamGrid();
-      renderResults();
+  builderGridEl.addEventListener("click", (e) => {
+    const t = e.target;
+    // Étoile leader
+    const lead = t.closest("[data-leader]");
+    if (lead) { e.stopPropagation(); state.leaderSlot = +lead.dataset.leader; renderTeamGrid(); renderResults(); return; }
+    // Niveau Cap Z
+    const zt = t.closest("[data-ztier]");
+    if (zt) { const [cs, tier] = zt.dataset.ztier.split(":"); state.team[+cs].zTier = +tier; renderTeamGrid(); renderResults(); return; }
+    // Choix OR (passif chiffrable)
+    const orBtn = t.closest("[data-or-choice]");
+    if (orBtn) {
+      const row = orBtn.closest("[data-row]");
+      const charSlot = +row.dataset.row;
+      const [slotStr, lineIdxStr, altStr] = orBtn.dataset.orChoice.split(":");
+      const ts = state.team[charSlot];
+      if (!ts.itemChoices) ts.itemChoices = [{}, {}, {}];
+      if (!ts.itemChoices[+slotStr]) ts.itemChoices[+slotStr] = {};
+      ts.itemChoices[+slotStr][+lineIdxStr] = +altStr;
+      renderAll();
       return;
     }
-
-    // Boutons "Changer" / "Retirer" sur une carte remplie
-    const cardActionBtn = e.target.closest("[data-card-action]");
-    if (cardActionBtn) {
-      e.stopPropagation();
-      const slotIdx = parseInt(cardActionBtn.dataset.cardSlot, 10);
-      state.activeSlot = slotIdx;
-      if (cardActionBtn.dataset.cardAction === "change-char") {
-        renderTeamGrid();
-        renderCharSelected();
-        renderCharTraits();
-        renderCharZAbility();
-        renderBuildState();
-        renderSlots();
-        renderConditions();
-        renderResults();
-        openCharModal();
-      } else if (cardActionBtn.dataset.cardAction === "remove-char") {
-        selectCharacter(null);
-      }
-      return;
-    }
-
-    const card = e.target.closest("[data-team-slot]");
-    if (!card) return;
-    const slotIdx = parseInt(card.dataset.teamSlot, 10);
-    const wasEmpty = !state.team[slotIdx].character;
-    state.activeSlot = slotIdx;
-    // Re-render tout l'éditeur pour refléter le slot actif
-    renderTeamGrid();
-    renderCharSelected();
-    renderCharTraits();
-    renderCharZAbility();
-    renderBuildState();
-    renderSlots();
-    renderConditions();
-    renderResults();
-    // Si le slot était vide, on enchaîne sur la sélection d'un perso via modale
-    if (wasEmpty) openCharModal();
+    // Item : changer / vider / ouvrir (slot vide)
+    const chg = t.closest("[data-item-change]");
+    if (chg) { const [cs, is] = chg.dataset.itemChange.split(":"); openItemModal(+cs, +is); return; }
+    const clr = t.closest("[data-item-clear]");
+    if (clr) { const [cs, is] = clr.dataset.itemClear.split(":"); state.team[+cs].items[+is] = null; renderAll(); return; }
+    const openIt = t.closest("[data-open-item]");
+    if (openIt) { const [cs, is] = openIt.dataset.openItem.split(":"); openItemModal(+cs, +is); return; }
+    // Perso : changer (✎) / retirer (✕) / ajouter (carte vide)
+    const chgChar = t.closest("[data-change-char]");
+    if (chgChar) { state.activeSlot = +chgChar.dataset.changeChar; renderTeamGrid(); renderResults(); openCharModal(); return; }
+    const rmChar = t.closest("[data-remove-char]");
+    if (rmChar) { state.activeSlot = +rmChar.dataset.removeChar; selectCharacter(null); return; }
+    const addChar = t.closest("[data-add-char]");
+    if (addChar) { state.activeSlot = +addChar.dataset.addChar; renderTeamGrid(); openCharModal(); return; }
   });
 
   // Recherche dans le modal char : filtre la liste à la volée
@@ -1166,17 +1232,7 @@
     if (e.key === "Escape" && !charModalEl.classList.contains("hidden")) closeCharModal();
   });
 
-  // Bouton « Ajouter un personnage » de l'état vide du build
-  buildEmptyEl.addEventListener("click", (e) => {
-    if (e.target.closest('[data-action="open-char-modal"]')) openCharModal();
-  });
-
-  // Clic sur le bouton "×" du perso sélectionné dans le build
-  charSelectedEl.addEventListener("click", (e) => {
-    if (e.target.closest('[data-action="clear-char"]')) {
-      selectCharacter(null);
-    }
-  });
+  // (Ajout/suppression de perso désormais gérés via la grille builder.)
 
   // ===== MODALE D'ITEMS =====
   const modal = document.getElementById("item-modal");
@@ -1187,7 +1243,11 @@
 
   const rarityFiltersEl = document.getElementById("rarity-filters");
 
-  function openItemModal(slotIdx) {
+  function openItemModal(charSlot, slotIdx) {
+    // Le perso ciblé devient le perso actif → toute la logique de compatibilité
+    // (active.character) reste correcte sans modification supplémentaire.
+    if (typeof charSlot === "number") state.activeSlot = charSlot;
+    state.modalCharSlot = state.activeSlot;
     state.modalSlot = slotIdx;
     modalTitle.textContent = T('itemmodal.title.slot', { n: slotIdx + 1 });
     itemSearch.value = "";
@@ -1204,6 +1264,7 @@
   function closeItemModal() {
     modal.classList.add("hidden");
     state.modalSlot = null;
+    state.modalCharSlot = null;
   }
 
   // Force taille du modal items (même approche que forceCharModalSize)
@@ -1414,15 +1475,15 @@
     if (!pick) return;
     const item = ITEMS.find((it) => it.id === pick.dataset.pick);
     if (!item) return;
-    const _animSlot = state.modalSlot; // capture avant closeItemModal (qui null-ise modalSlot)
-    active.items[state.modalSlot] = item;
+    const charSlot = state.modalCharSlot ?? state.activeSlot;
+    state.team[charSlot].items[state.modalSlot] = item;
     closeItemModal();
     renderAll();
-    motionPopSlot(_animSlot);
   });
 
-  // ===== RENDU : SLOTS =====
+  // ===== RENDU : SLOTS (legacy — remplacé par la grille builder, conservé en no-op) =====
   function renderSlots() {
+    if (!document.querySelector('[data-slot-content="0"]')) return;
     // Conditions pour l'affichage des lignes : trio-scoped + même équipement team-wide
     const slotDisplayConditions = buildItemConditions(state.activeSlot);
     for (let i = 0; i < 3; i++) {
@@ -1545,45 +1606,34 @@
     }
   }
 
-  // Délégation pour les boutons d'action dans les slots
-  document.querySelector(".slots").addEventListener("click", (e) => {
-    // OR-choice : clic sur une alternative
-    const orBtn = e.target.closest("[data-or-choice]");
-    if (orBtn) {
-      const [slotStr, lineIdxStr, altStr] = orBtn.dataset.orChoice.split(":");
-      const slotIdx = +slotStr;
-      const lineIdx = +lineIdxStr;
-      const alt = +altStr;
-      const teamSlot = state.team[state.activeSlot];
-      if (!teamSlot.itemChoices) teamSlot.itemChoices = [{}, {}, {}];
-      if (!teamSlot.itemChoices[slotIdx]) teamSlot.itemChoices[slotIdx] = {};
-      teamSlot.itemChoices[slotIdx][lineIdx] = alt;
-      renderAll();
-      return;
-    }
-    const btn = e.target.closest("button[data-action]");
-    if (!btn) return;
-    const slot = parseInt(btn.dataset.slot, 10);
-    if (btn.dataset.action === "change") openItemModal(slot);
-    if (btn.dataset.action === "clear") {
-      active.items[slot] = null;
-      renderAll();
-    }
-  });
+  // (Les actions sur les slots d'items sont gérées par la délégation de la grille builder.)
 
   // ===== RENDU : CONDITIONS =====
   const conditionsPanel = document.getElementById("conditions-panel");
   const conditionsInputs = document.getElementById("conditions-inputs");
 
   function renderConditions() {
-    const tags = getRequiredTags();
+    // Team-wide : on collecte les tags requis par les items de TOUTE l'équipe.
+    const tagSet = new Set();
+    state.team.forEach((slot) => {
+      slot.items.forEach((it) => {
+        if (!it) return;
+        it.lignes.forEach((l) => {
+          if (!l.condition) return;
+          const ts = l.condition.tags_requis && l.condition.tags_requis.length
+            ? l.condition.tags_requis : [l.condition.tag_requis];
+          ts.forEach((t) => t && tagSet.add(t));
+        });
+      });
+    });
+    const tags = [...tagSet];
     if (tags.length === 0) {
       conditionsPanel.classList.add("hidden");
       return;
     }
     conditionsPanel.classList.remove("hidden");
-    // Compte pur du trio (sans overrides) pour l'affichage "auto: N"
-    const autoCounts = getTrioTagCountsFor(state.activeSlot, false);
+    // Compte auto sur toute l'équipe (sans overrides) pour l'affichage "auto: N"
+    const autoCounts = getTeamTagCounts();
 
     conditionsInputs.innerHTML = tags
       .map((tag) => {
@@ -1591,10 +1641,12 @@
         const autoVal = autoCounts[tag] || 0;
         const effective = Math.max(userVal, autoVal);
         let seuils = [];
-        active.items.forEach((it) => {
-          if (!it) return;
-          it.lignes.forEach((l) => {
-            if (l.condition && l.condition.tag_requis === tag) seuils.push(l.condition.seuil);
+        state.team.forEach((slot) => {
+          slot.items.forEach((it) => {
+            if (!it) return;
+            it.lignes.forEach((l) => {
+              if (l.condition && l.condition.tag_requis === tag) seuils.push(l.condition.seuil);
+            });
           });
         });
         const maxSeuil = seuils.length ? Math.max(...seuils) : 0;
@@ -1617,7 +1669,7 @@
     if (!input) return;
     const v = parseInt(input.value, 10);
     state.conditions[input.dataset.tag] = isNaN(v) ? 0 : v;
-    renderSlots();
+    renderTeamGrid();
     renderResults();
   });
 
@@ -1665,7 +1717,35 @@
       },
     ];
 
+  // ===== ONGLETS PERSO (pilotent stats cumulées + effets non calculés) =====
+  const charTabsEl = document.getElementById("char-tabs");
+  function renderCharTabs() {
+    if (!charTabsEl) return;
+    const occupied = state.team.map((s, i) => ({ s, i })).filter((o) => o.s.character);
+    if (!occupied.length) {
+      charTabsEl.innerHTML = `<span class="placeholder">${T('team.noperso')}</span>`;
+      return;
+    }
+    // S'assurer que le perso analysé existe (sinon on prend le premier occupé)
+    if (!state.team[state.activeSlot].character) state.activeSlot = occupied[0].i;
+    charTabsEl.innerHTML = occupied.map(({ s, i }) => {
+      const c = s.character;
+      const img = c.image ? `<img src="${c.image}" alt="" onerror="this.style.display='none'"/>` : "";
+      return `<button class="char-tab ${i === state.activeSlot ? 'is-active' : ''}" data-char-tab="${i}" type="button">${img}<span class="char-tab-name">${c.nom.trim()}</span></button>`;
+    }).join("");
+  }
+  if (charTabsEl) {
+    charTabsEl.addEventListener("click", (e) => {
+      const tab = e.target.closest("[data-char-tab]");
+      if (!tab) return;
+      state.activeSlot = +tab.dataset.charTab;
+      renderTeamGrid();
+      renderResults();
+    });
+  }
+
   function renderResults() {
+    renderCharTabs();
     renderZBilan();
     renderGlobalBilan();
     const noItems = active.items.every((s) => !s);
@@ -2130,8 +2210,8 @@
 
   // ===== RENDU GLOBAL =====
   function renderAll() {
+    renderTeamGrid();   // grille builder (persos + items)
     renderConditions();
-    renderSlots();
     renderResults();
   }
 
@@ -2201,7 +2281,6 @@
   noLeaderBtn.addEventListener("click", () => {
     state.noLeader = !state.noLeader;
     renderTeamGrid();       // met à jour les étoiles + appelle renderNoLeaderBtn
-    renderCharZAbility();   // met à jour le badge "Leader bypass"
     renderResults();        // recalcule les Cap Z sans leader
   });
 
