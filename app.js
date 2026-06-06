@@ -2233,7 +2233,11 @@
       })
       .join("");
 
-    zBilanEl.innerHTML = totauxSection + `<div class="z-bilan-grid">${perCharSection}</div>`;
+    zBilanEl.innerHTML = totauxSection + `
+      <details class="z-detail-accordion">
+        <summary class="z-detail-summary">${T('z.detail.percar')}</summary>
+        <div class="z-bilan-grid">${perCharSection}</div>
+      </details>`;
   }
 
   // ===== BILAN GLOBAL (Cap Z + items, tout compris) =====
