@@ -2397,29 +2397,38 @@
     return lines.length ? lines : [String(nom)];
   }
 
-  // Un nœud (cercle + image clippée + anneau + étoile leader + nom sur 2 lignes max).
+  // Un nœud (cercle + image clippée + anneau + étoile leader + nom).
+  // Source : nom sur UNE seule ligne, posé par-dessus les flèches (halo de lisibilité).
+  // Cibles : nom sur 2 lignes max (les nœuds sont étroits, 5 de front).
   function zTreeNode(x, y, r, slot, isSrc) {
     const ch = state.team[slot].character;
     const clip = `ztclip_${slot}`;
     const isLeader = slot === effectiveLeaderSlot();
     const nom = ch.nom.trim();
-    const lineH = 14;
-    const nameY = y + r + 15;
-    // Source (centrée, pleine largeur) → lignes plus longues ; cibles (5 de front) → plus courtes.
-    const nameLines = wrapName(nom, isSrc ? 26 : 15, 2);
-    const tspans = nameLines
-      .map((ln, k) => `<tspan x="${x}" dy="${k === 0 ? 0 : lineH}">${escSvg(ln)}</tspan>`)
-      .join("");
     const img = ch.image
       ? `<image href="${escSvg(ch.image)}" x="${x - r}" y="${y - r}" width="${2 * r}" height="${2 * r}" clip-path="url(#${clip})" preserveAspectRatio="xMidYMid slice"/>`
       : "";
+
+    let nameSVG;
+    if (isSrc) {
+      const line = nom.length > 80 ? nom.slice(0, 79) + "…" : nom;
+      const ny = y + r + 17;
+      nameSVG = `<text x="${x}" y="${ny}" text-anchor="middle" class="ztree-name ztree-name--src"><title>${escSvg(nom)}</title>${escSvg(line)}</text>`;
+    } else {
+      const lineH = 14, nameY = y + r + 15;
+      const tspans = wrapName(nom, 15, 2)
+        .map((ln, k) => `<tspan x="${x}" dy="${k === 0 ? 0 : lineH}">${escSvg(ln)}</tspan>`)
+        .join("");
+      nameSVG = `<text x="${x}" y="${nameY}" text-anchor="middle" class="ztree-name"><title>${escSvg(nom)}</title>${tspans}</text>`;
+    }
+
     return `
       <clipPath id="${clip}"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath>
       <circle cx="${x}" cy="${y}" r="${r}" class="ztree-node-bg"/>
       ${img}
       <circle cx="${x}" cy="${y}" r="${r}" class="ztree-ring ${isSrc ? "ztree-ring--src" : ""}"/>
       ${isLeader ? `<text x="${x}" y="${y - r - 7}" text-anchor="middle" class="ztree-star">★</text>` : ""}
-      <text x="${x}" y="${nameY}" text-anchor="middle" class="ztree-name"><title>${escSvg(nom)}</title>${tspans}</text>`;
+      ${nameSVG}`;
   }
 
   // Construit le SVG complet (1 source en haut, n cibles réparties en bas).

@@ -409,6 +409,11 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .ztree-ring--src { stroke: var(--accent); stroke-width: 4; }
 .ztree-star { fill: var(--accent); font-size: 20px; font-weight: 700; }
 .ztree-name { fill: var(--text-soft); font-size: 13px; font-family: var(--font-body); font-weight: 600; }
+/* Nom de la source : 1 seule ligne, par-dessus les flèches, avec halo (contour couleur fond). */
+.ztree-name--src {
+  fill: var(--text); font-weight: 700;
+  paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round;
+}
 .ztree-pct-bg { fill: var(--surface); }
 .ztree-pct-text { font-size: 12px; font-weight: 700; font-family: var(--font-display); }
 .ztree-legend { display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center; font-size: var(--fs-xxs); color: var(--text-soft); }
