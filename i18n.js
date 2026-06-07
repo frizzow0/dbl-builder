@@ -127,7 +127,7 @@
     'panel.zradar.title':  { fr: 'Profil des stats (Cap Z)', en: 'Stat profile (Z Abilities)' },
     'panel.zradar.sub':    { fr: 'Gain total d\'équipe par stat, en pourcentage.', en: 'Team total gain per stat, in percent.' },
     'panel.globalradar.title': { fr: 'Profil par perso (Cap Z + items)', en: 'Per-character profile (Z + items)' },
-    'panel.globalradar.sub':   { fr: 'Gain par stat, un tracé par personnage.', en: 'Gain per stat, one trace per character.' },
+    'panel.globalradar.sub':   { fr: 'Gain par stat — choisis un perso, ou « Tous » pour le total d\'équipe.', en: 'Gain per stat — pick a character, or "All" for the team total.' },
     'radar.nodata':        { fr: 'Aucune stat boostée pour le moment.', en: 'No boosted stat yet.' },
     'radar.max':           { fr: 'max', en: 'max' },
     'radar.all':           { fr: 'Tous', en: 'All' },

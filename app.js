@@ -2177,78 +2177,47 @@
     }
   }
 
-  // ===== GRAPHIQUE RADAR (étoile) =====
-  const RADAR_KEYS = ["force", "attaque_physique", "attaque_energie", "critique",
-    "degats_infliges", "defense_energie", "defense_physique", "degats_ultime"];
+  // ===== GRAPHIQUE EN BARRES (profil de stats) =====
+  // Plus lisible que le radar quand les écarts sont énormes : chaque stat boostée
+  // a sa barre (proportionnelle au max du graphe) + sa valeur exacte affichée.
   const RADAR_COLORS = ["#ff5722", "#0ea5e9", "#22c55e", "#eab308", "#a855f7", "#ef4444"];
-  function getRadarAxes() {
-    const labels = {
-      force: T('zbilan.force'), attaque_physique: "Strike ATK", attaque_energie: "Blast ATK",
-      critique: "Crit", degats_infliges: T('zbilan.degats'), defense_energie: "Blast DEF",
-      defense_physique: "Strike DEF", degats_ultime: T('zbilan.degats_ultime'),
-    };
-    return RADAR_KEYS.map((key) => ({ key, label: labels[key] || key }));
-  }
-  function _niceMax(v) {
-    if (v <= 0) return 1;
-    for (const s of [5, 10, 20, 25, 50, 100, 150, 200, 300, 400, 500, 750, 1000, 1500, 2000]) if (v <= s) return s;
-    return Math.ceil(v / 500) * 500;
-  }
-  // series : [{ label, color, values: { cible: gainPct } }]
-  function renderRadar(el, series, opts = {}) {
+  // items : [{ label, value }]  (value = gain %)
+  function renderBars(el, items, color) {
     if (!el) return;
-    const axes = getRadarAxes();
-    const hasData = series.some((s) => axes.some((a) => (s.values[a.key] || 0) > 0));
-    if (!hasData) { el.innerHTML = `<div class="radar-empty">${T('radar.nodata')}</div>`; return; }
-    const N = axes.length, size = 300, cx = size / 2, cy = size / 2, r = size / 2 - 48;
-    let max = 0;
-    for (const s of series) for (const a of axes) max = Math.max(max, s.values[a.key] || 0);
-    max = _niceMax(max);
-    const ang = (i) => (Math.PI * 2 * i / N) - Math.PI / 2;
-    const pt = (i, rad) => [cx + rad * Math.cos(ang(i)), cy + rad * Math.sin(ang(i))];
-    let svg = "";
-    for (let g = 1; g <= 4; g++) {
-      svg += `<polygon points="${axes.map((_, i) => pt(i, r * g / 4).map((n) => n.toFixed(1)).join(",")).join(" ")}" class="radar-ring"/>`;
-    }
-    axes.forEach((a, i) => {
-      const [x, y] = pt(i, r);
-      svg += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" class="radar-axis"/>`;
-      const [lx, ly] = pt(i, r + 16);
-      const c = Math.cos(ang(i));
-      const anchor = Math.abs(c) < 0.3 ? "middle" : (c > 0 ? "start" : "end");
-      svg += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anchor}" dominant-baseline="middle" class="radar-label">${a.label}</text>`;
-    });
-    series.forEach((s) => {
-      const pts = axes.map((a, i) => pt(i, r * Math.min((s.values[a.key] || 0) / max, 1)).map((n) => n.toFixed(1)).join(",")).join(" ");
-      svg += `<polygon points="${pts}" fill="${s.color}" fill-opacity="${series.length > 1 ? 0.1 : 0.22}" stroke="${s.color}" stroke-width="2" stroke-linejoin="round"/>`;
-    });
-    const legend = (series.length > 1 && !opts.noLegend)
-      ? `<div class="radar-legend">${series.map((s) => `<span class="radar-legend-item"><span class="radar-legend-swatch" style="background:${s.color}"></span>${s.label}</span>`).join("")}</div>`
-      : "";
-    el.innerHTML = `<svg viewBox="0 0 ${size} ${size}" class="radar-svg" preserveAspectRatio="xMidYMid meet">${svg}</svg>`
-      + `<div class="radar-max">${T('radar.max')} : +${fmtDec(max.toFixed(0))}%</div>${legend}`;
+    const data = (items || []).filter((d) => d.value > 0).sort((a, b) => b.value - a.value);
+    if (!data.length) { el.innerHTML = `<div class="radar-empty">${T('radar.nodata')}</div>`; return; }
+    const max = data[0].value || 1;
+    el.innerHTML = `<div class="bars">${data.map((d) => {
+      const pct = Math.max((d.value / max) * 100, 1.5); // min visible pour les petites valeurs
+      return `<div class="bar-row">
+        <span class="bar-label" title="${d.label}">${d.label}</span>
+        <span class="bar-track"><span class="bar-fill" style="width:${pct.toFixed(1)}%;background:${color}"></span></span>
+        <span class="bar-val">+${fmtDec(d.value.toFixed(1))}%</span>
+      </div>`;
+    }).join("")}</div>`;
   }
   const zRadarEl = document.getElementById("z-radar");
   const globalRadarEl = document.getElementById("global-radar");
 
-  // Radar "par perso" avec sélecteur de perso intégré (chips).
-  // allSeries : [{ slot, label, color, values }]
-  function renderGlobalRadar(allSeries) {
+  // Graphique "par perso" avec sélecteur intégré (chips).
+  // allChar : [{ slot, label, color, items }] ; teamItems : barres "Tous" (équipe).
+  function renderGlobalChart(allChar, teamItems) {
     if (!globalRadarEl) return;
-    if (!allSeries.length) { renderRadar(globalRadarEl, []); return; }
+    if (!allChar.length) { renderBars(globalRadarEl, [], "#6366f1"); return; }
     const sel = state.radarCharSlot;
-    const selValid = sel != null && allSeries.some((s) => s.slot === sel);
-    const shown = selValid ? allSeries.filter((s) => s.slot === sel) : allSeries;
+    const selChar = sel != null ? allChar.find((c) => c.slot === sel) : null;
     const chip = (active, val, color, label) =>
       `<button class="radar-chip ${active ? "is-active" : ""}" data-radar-char="${val}" type="button">`
       + (color ? `<span class="radar-chip-dot" style="background:${color}"></span>` : "")
       + `${label}</button>`;
     const chips = `<div class="radar-picker">
-      ${chip(!selValid, "all", "", T('radar.all'))}
-      ${allSeries.map((s) => chip(selValid && s.slot === sel, s.slot, s.color, s.label)).join("")}
+      ${chip(!selChar, "all", "", T('radar.all'))}
+      ${allChar.map((c) => chip(!!selChar && c.slot === sel, c.slot, c.color, c.label)).join("")}
     </div>`;
     globalRadarEl.innerHTML = chips + `<div class="radar-canvas"></div>`;
-    renderRadar(globalRadarEl.querySelector(".radar-canvas"), shown, { noLegend: true });
+    const canvas = globalRadarEl.querySelector(".radar-canvas");
+    if (selChar) renderBars(canvas, selChar.items, selChar.color);
+    else renderBars(canvas, teamItems, "#6366f1");
   }
   if (globalRadarEl) {
     globalRadarEl.addEventListener("click", (e) => {
@@ -2289,7 +2258,7 @@
       .filter((s) => s.character);
     if (occupied.length === 0) {
       zBilanEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
-      renderRadar(zRadarEl, []);
+      renderBars(zRadarEl, [], "#ff5722");
       return;
     }
 
@@ -2476,10 +2445,9 @@
       acc.addEventListener("toggle", () => { state.zDetailOpen = acc.open; });
     }
 
-    // Radar : gain total d'équipe par stat (Cap Z)
-    const teamValues = {};
-    for (const k of RADAR_KEYS) teamValues[k] = statTotals[k]?.totalGain || 0;
-    renderRadar(zRadarEl, [{ label: "Équipe", color: "#ff5722", values: teamValues }]);
+    // Barres : gain total d'équipe par stat (Cap Z) — toutes stats boostées, triées
+    const teamItems = Object.values(statTotals).map((t) => ({ label: t.label, value: t.totalGain }));
+    renderBars(zRadarEl, teamItems, "#ff5722");
   }
 
   // Délégation : clic sur un onglet perso (dans l'accordéon du bilan Cap Z)
@@ -2515,36 +2483,29 @@
       .filter((s) => s.character);
     if (occupied.length === 0) {
       globalBilanEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
-      renderGlobalRadar([]);
+      renderGlobalChart([], []);
       return;
     }
 
-    // Radar : un tracé par perso (gain combiné Cap Z + items par stat),
-    // avec sélecteur de perso intégré (chips) — voir renderGlobalRadar.
-    const radarSeries = occupied.map((slot, idx) => {
-      const st = getCombinedStatsFor(slot.idx) || {};
-      const values = {};
-      for (const k of RADAR_KEYS) values[k] = st[k]?.gainPct || 0;
-      return { slot: slot.idx, label: slot.character.nom.trim(), color: RADAR_COLORS[idx % RADAR_COLORS.length], values };
-    });
-    renderGlobalRadar(radarSeries);
-
-    // Totaux par stat sur toute l'équipe (Cap Z + items combinés).
+    // Un seul passage : données par perso (barres) + totaux d'équipe (Cap Z + items).
     const statTotals = {};
-    for (const slot of occupied) {
-      const stats = getCombinedStatsFor(slot.idx);
-      if (!stats) continue;
+    const allChar = occupied.map((slot, idx) => {
+      const stats = getCombinedStatsFor(slot.idx) || {};
+      const items = [];
       for (const cible of Object.keys(stats)) {
         const s = stats[cible];
-        if (!s.hasBonus) continue;
-        if (!statTotals[cible]) {
-          statTotals[cible] = { label: s.label, totalGain: 0, count: 0, max: 0 };
-        }
+        if (!s.hasBonus || s.gainPct <= 0) continue;
+        items.push({ label: s.label, value: s.gainPct });
+        if (!statTotals[cible]) statTotals[cible] = { label: s.label, totalGain: 0, count: 0, max: 0 };
         statTotals[cible].totalGain += s.gainPct;
         statTotals[cible].count++;
         if (s.gainPct > statTotals[cible].max) statTotals[cible].max = s.gainPct;
       }
-    }
+      return { slot: slot.idx, label: slot.character.nom.trim(), color: RADAR_COLORS[idx % RADAR_COLORS.length], items };
+    });
+    // Graphique en barres par perso (avec sélecteur) — "Tous" = totaux d'équipe.
+    const teamItems = Object.values(statTotals).map((t) => ({ label: t.label, value: t.totalGain }));
+    renderGlobalChart(allChar, teamItems);
 
     const orderedTotals = Object.entries(statTotals)
       .sort((a, b) => b[1].totalGain - a[1].totalGain);
