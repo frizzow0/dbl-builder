@@ -2673,7 +2673,13 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 }
 .builder-items-details:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
 
-/* Corps de la modale détails : 3 cartes item détaillées */
+/* Corps de la modale détails : scrollable si le contenu dépasse la hauteur */
+#details-modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--s-4);
+}
 .details-items { display: flex; flex-direction: column; gap: var(--s-3); }
 .details-items .builder-item {
   background: var(--surface-2);
