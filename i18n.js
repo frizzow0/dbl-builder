@@ -31,9 +31,8 @@
     'panel.conditions.sub':    { fr: 'Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.',
                                   en: 'Some items have conditional effects. Team compositions are auto-detected from character tags.' },
     'panel.z.title':           { fr: 'Bilan global (Cap Z)', en: 'Global summary (Z Abilities)' },
-    'z.detail.percar':         { fr: 'Détail par perso', en: 'Per-character detail' },
-    'panel.z.sub':             { fr: 'Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.',
-                                  en: 'For each character, Z Abilities received (theirs + teammates\' based on conditions). The Leader (★) receives and distributes without restriction.' },
+    'panel.z.sub':             { fr: 'Total des bonus de Cap Z reçus par l\'équipe. Chaque perso reçoit la sienne + celles des coéquipiers selon les conditions ; le Leader (★) sans restriction.',
+                                  en: 'Total Z Ability bonuses received by the team. Each character gets their own + teammates\' based on conditions; the Leader (★) without restriction.' },
     'panel.stats.title':       { fr: 'Résumé des effets cumulés', en: 'Cumulated Effects Summary' },
     'panel.stats.sub':         { fr: 'Bleu = bonus d\'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.',
                                   en: 'Blue = <em>items</em> bonus. Orange = <em>Z Ability</em> bonus. The equivalent multiplier shows the final gain.' },
@@ -110,17 +109,10 @@
     'z.leadertitle':   { fr: 'Activé via le privilège Leader', en: 'Activated via Leader privilege' },
     'z.capz.label':    { fr: 'Cap. Z',               en: 'Z Abi.' },
     'z.zenkai.label':  { fr: 'Cap. Z Zenkai IV (max)', en: 'Zenkai Z Abi. IV (max)' },
-    'z.tier.label':    { fr: 'Cap Z',                en: 'Z Ability' },
 
     // ── Dynamique : bilan Cap Z ──────────────────
-    'z.bilan.cumul':   { fr: 'Cumul stats (Cap Z uniquement)', en: 'Stats total (Z Abilities only)' },
-    'z.bilan.nobonus': { fr: 'Aucun bonus Z cumulable', en: 'No stackable Z bonus' },
-    'z.noline':        { fr: 'Aucune ligne chiffrable', en: 'No quantifiable line' },
-    'z.nobonus.team':  { fr: 'Aucun bonus Z chiffrable sur l\'équipe.', en: 'No quantifiable Z bonus on the team.' },
     'z.total.label':   { fr: 'Total global équipe',    en: 'Team grand total' },
-    'z.totals.title':  { fr: 'Totaux par stat (équipe)', en: 'Totals by stat (team)' },
     'z.total.detail':  { fr: '{n} applications de Z sur {m} stats', en: '{n} Z applications on {m} stats' },
-    'z.totals.row':    { fr: '{n} perso · moy. +{avg}% · max +{max}%', en: '{n} chars · avg +{avg}% · max +{max}%' },
 
     // ── Bilan global (Cap Z + items, tout compris) ──────────
     'panel.global.title': { fr: 'Bilan global (Cap Z + items)', en: 'Global summary (Z Abilities + items)' },
@@ -181,15 +173,6 @@
     'labels.degats_ultime':           { fr: 'Dégâts tech. ultime',       en: 'Ultimate Move DMG' },
     'labels.quantite_regen_force':    { fr: 'Quantité de régénération',  en: 'HP Regen Amount' },
     'labels.garde_contre_degats':     { fr: 'Garde contre les dégâts',   en: 'Damage Guard' },
-
-    // ── Labels Z_BILAN_STATS ─────────────────────
-    'zbilan.force':         { fr: 'Force',          en: 'Health' },
-    'zbilan.regen':         { fr: 'Régénération',   en: 'HP Regen' },
-    'zbilan.degats':        { fr: 'Dégâts',         en: 'Damage' },
-    'zbilan.degats_energie':{ fr: 'Dégâts énergie', en: 'Energy DMG' },
-    'zbilan.degats_spe':    { fr: 'Dégâts spé.',    en: 'Special DMG' },
-    'zbilan.degats_ultime': { fr: 'Dégâts ultime',  en: 'Ultimate DMG' },
-    'zbilan.garde':         { fr: 'Garde',          en: 'Guard' },
 
     // ── Raretés ──────────────────────────────────
     'rarity.platinum':       { fr: 'PLATINUM',        en: 'PLATINUM' },

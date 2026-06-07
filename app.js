@@ -517,7 +517,6 @@
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
-    zDetailOpen: false,      // accordéon "Détail par perso" ouvert ?
     radarCharSlot: null,     // radar "par perso" : null = tous, sinon un slot précis
     modalRarityFilter: null,
     modalSearch: "",
@@ -1992,17 +1991,6 @@
     const first = state.team.findIndex((s) => s.character);
     if (first !== -1) state.activeSlot = first;
   }
-  // Markup des onglets perso (intégrés dans l'accordéon "Détail par perso").
-  function charTabsHTML() {
-    const occupied = state.team.map((s, i) => ({ s, i })).filter((o) => o.s.character);
-    if (!occupied.length) return "";
-    return `<div class="char-tabs">${occupied.map(({ s, i }) => {
-        const c = s.character;
-        const img = c.image ? `<img src="${c.image}" alt="" onerror="this.style.display='none'"/>` : "";
-        return `<button class="char-tab ${i === state.activeSlot ? 'is-active' : ''}" data-char-tab="${i}" type="button">${img}<span class="char-tab-name">${c.nom.trim()}</span></button>`;
-      }).join("")}</div>`;
-  }
-
   function renderResults() {
     ensureActiveSlot();
     renderZBilan();
@@ -2230,29 +2218,7 @@
 
   // ===== BILAN CAP Z =====
   const zBilanEl = document.getElementById("z-bilan");
-  // Toutes les stats potentiellement affectées par des Cap Z (cohérent avec DISPLAY_GROUPS)
-  // Fonction pour que les labels soient recalculés selon la langue courante
-  function getZBilanStats() {
-    return [
-      { cible: "force",                   label: T('zbilan.force') },
-      { cible: "quantite_regen_force",    label: T('zbilan.regen') },
-      { cible: "attaque_physique",        label: "Strike ATK" },
-      { cible: "attaque_energie",         label: "Blast ATK" },
-      { cible: "critique",               label: "Critical" },
-      { cible: "degats_infliges",         label: T('zbilan.degats') },
-      { cible: "degats_energie_infliges", label: T('zbilan.degats_energie') },
-      { cible: "degats_tech_spe",         label: T('zbilan.degats_spe') },
-      { cible: "degats_ultime",           label: T('zbilan.degats_ultime') },
-      { cible: "defense_physique",        label: "Strike DEF" },
-      { cible: "defense_energie",         label: "Blast DEF" },
-      { cible: "garde_contre_degats",     label: T('zbilan.garde') },
-      { cible: "vitesse_regen_ki",        label: "Ki Recover" },
-      { cible: "vanish_recover",          label: "Vanish" },
-    ];
-  }
-
   function renderZBilan() {
-    const Z_BILAN_STATS = getZBilanStats();
     const occupied = state.team
       .map((s, i) => ({ ...s, idx: i }))
       .filter((s) => s.character);
@@ -2301,118 +2267,7 @@
       </div>
     `;
 
-    // Format compact d'une condition (pour les pills inline)
-    const condLabel = (l) => {
-      if (!l.condition) return null;
-      const tags = l.condition.tags_requis || [];
-      const sep = ` ${l.condition.mode === "and" ? T('cond.and') : T('cond.or')} `;
-      const prefix = l.condition.mode === "and" ? T('cond.allof').toLowerCase() + " " : "";
-      return prefix + tags.join(sep);
-    };
-
-    const perCharSection = occupied
-      .map((slot) => {
-        const isLeader = slot.idx === effectiveLeaderSlot();
-        const trio = Math.floor(slot.idx / 3);
-        const zItems = buildTeamZItemsFor(slot.idx);
-        const conds = getEffectiveConditionsFor(slot.character);
-        const result = calculerStats({ items: zItems, conditions: conds });
-
-        // Pour chaque source Z, on liste ligne par ligne ce qui s'applique
-        const sourcesBlocks = zItems.map((zi) => {
-          const isSelf = zi.sourceSlot === slot.idx;
-          const senderSlot = state.team[zi.sourceSlot];
-          const senderTrio = Math.floor(zi.sourceSlot / 3);
-          const senderIsLeader = zi.sourceSlot === effectiveLeaderSlot();
-          // Indique si cette source a été bypassée par le leader (sender ou target leader, même trio cible)
-          const wasBypassed =
-            (slot.idx === effectiveLeaderSlot()) ||
-            (senderIsLeader && senderTrio === trio);
-
-          // Pour l'affichage, on prend les lignes ORIGINALES (lignesAll)
-          // afin de pouvoir montrer les ✗ pour les lignes non-applicables.
-          const displayLignes = zi.lignesAll || zi.lignes;
-          const linesHTML = displayLignes
-            .filter((l) => !l.est_passif)
-            .map((l) => {
-              const ok = wasBypassed || !l.condition || condRemplieCalc(l, conds);
-              const lab = STATS[l.stat]?.label || l.stat;
-              const val = l.valeur_max.toFixed(0);
-              const cond = condLabel(l);
-              const condHTML = cond
-                ? `<span class="z-detail-cond ${ok ? "is-ok" : "is-ko"}">[${cond}]</span>`
-                : "";
-              return `<div class="z-detail-line ${ok ? "is-ok" : "is-ko"}">
-                <span class="z-detail-mark">${ok ? "✓" : "✗"}</span>
-                <span class="z-detail-stat">+${val}% ${lab}</span>
-                ${condHTML}
-              </div>`;
-            })
-            .join("");
-
-          const totalLines = displayLignes.filter((l) => !l.est_passif).length;
-          const activeLines = displayLignes
-            .filter((l) => !l.est_passif)
-            .filter((l) => wasBypassed || !l.condition || condRemplieCalc(l, conds))
-            .length;
-
-          const senderNom = isSelf ? T('item.self') : (senderSlot.character?.nom.trim() || "?");
-          const tierLab = ["I", "II", "III", "IV"][zi.tier - 1];
-          const trioLab = senderTrio === 0 ? T('trio.a') : T('trio.b');
-          const bypassBadge = wasBypassed
-            ? ` <span class="z-leader-bypass">★ Leader bypass</span>`
-            : "";
-
-          return `
-            <div class="z-source-block ${activeLines === totalLines ? "all-applied" : activeLines === 0 ? "none-applied" : "partial-applied"}">
-              <div class="z-source-head">
-                <span class="z-source-title">${senderNom}${senderIsLeader ? " ★" : ""} <small>(${trioLab}, Z ${tierLab})</small></span>
-                <span class="z-source-cov">${activeLines}/${totalLines} lignes</span>
-                ${bypassBadge}
-              </div>
-              <div class="z-source-lines">${linesHTML || `<span class="placeholder">${T('z.noline')}</span>`}</div>
-            </div>
-          `;
-        }).join("");
-
-        // Cumul stats (compact)
-        const bonusList = Z_BILAN_STATS
-          .map(({ cible, label }) => {
-            const s = result.stats[cible];
-            if (!s || !s.hasBonus) return null;
-            const multFmt = fmtDec(s.multTotal.toFixed(3));
-            const gainFmt = fmtDec(s.gainPct.toFixed(2));
-            return `<div class="z-bilan-stat"><span class="z-bilan-stat-label">${label}</span><span class="z-bilan-stat-mult">×${multFmt} <small>(+${gainFmt}%)</small></span></div>`;
-          })
-          .filter(Boolean)
-          .join("");
-
-        const img = slot.character.image
-          ? `<img class="z-bilan-img" src="${slot.character.image}" alt="" onerror="this.style.display='none'"/>`
-          : `<div class="z-bilan-img"></div>`;
-        const tierLab = ["I", "II", "III", "IV"][slot.zTier - 1];
-
-        return `
-          <div class="z-bilan-row ${isLeader ? "is-leader" : ""}">
-            <div class="z-bilan-head">
-              ${img}
-              <div class="z-bilan-name">
-                ${isLeader ? `<span class="z-bilan-star">★</span>` : ""}
-                <strong>${slot.character.nom.trim()}</strong>
-                <span class="z-bilan-tier">${T('z.tier.label')} ${tierLab}</span>
-                <span class="z-bilan-trio">${trio === 0 ? T('trio.a') : T('trio.b')}</span>
-              </div>
-            </div>
-            <div class="z-bilan-sources-detail">${sourcesBlocks}</div>
-            <div class="z-bilan-total-label">${T('z.bilan.cumul')}</div>
-            <div class="z-bilan-stats">${bonusList || `<span class="placeholder">${T('z.bilan.nobonus')}</span>`}</div>
-          </div>
-        `;
-      })
-      .join("");
-
-    // « Détail par perso » retiré : la cellule Bilan Cap Z = carte total + barres.
-    // (perCharSection / condLabel ci-dessus ne sont plus rendus.)
+    // Cellule Bilan Cap Z = carte du total global + graphique en barres (#z-radar).
     zBilanEl.innerHTML = totauxSection;
 
     // Barres : gain total d'équipe par stat (Cap Z) — toutes stats boostées, triées
@@ -2437,7 +2292,6 @@
 
   function renderGlobalBilan() {
     if (!globalBilanEl) return;
-    const Z_BILAN_STATS = getZBilanStats();
     const occupied = state.team
       .map((s, i) => ({ ...s, idx: i }))
       .filter((s) => s.character);
