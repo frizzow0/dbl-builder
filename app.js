@@ -601,8 +601,13 @@
       const c = slot.character;
       for (const trait of c.traits || []) {
         counts[trait] = (counts[trait] || 0) + 1;
-        const cls = "Classe : " + trait;
-        counts[cls] = (counts[cls] || 0) + 1;
+        // Les conditions d'items gardent leur préfixe de catégorie
+        // ("Classe : X", "Épisode : X", "Style de combat : X"). La catégorie
+        // du trait étant inconnue ici, on ajoute toutes les variantes (les
+        // préfixes non pertinents ne sont jamais référencés par une condition).
+        for (const pre of ["Classe : ", "Épisode : ", "Style de combat : "]) {
+          counts[pre + trait] = (counts[pre + trait] || 0) + 1;
+        }
       }
       if (c.element) counts[c.element] = (counts[c.element] || 0) + 1;
       if (c.cardCode) {
@@ -644,8 +649,13 @@
       const c = slot.character;
       for (const trait of c.traits || []) {
         counts[trait] = (counts[trait] || 0) + 1;
-        const cls = "Classe : " + trait;
-        counts[cls] = (counts[cls] || 0) + 1;
+        // Les conditions d'items gardent leur préfixe de catégorie
+        // ("Classe : X", "Épisode : X", "Style de combat : X"). La catégorie
+        // du trait étant inconnue ici, on ajoute toutes les variantes (les
+        // préfixes non pertinents ne sont jamais référencés par une condition).
+        for (const pre of ["Classe : ", "Épisode : ", "Style de combat : "]) {
+          counts[pre + trait] = (counts[pre + trait] || 0) + 1;
+        }
       }
       if (c.element) counts[c.element] = (counts[c.element] || 0) + 1;
       if (c.cardCode) {
