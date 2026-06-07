@@ -2374,13 +2374,42 @@
     ).join("");
   }
 
-  // Un nœud (cercle + image clippée + anneau + étoile leader + nom).
+  // Découpe un nom en <= maxLines lignes de <= maxChars (par mots ; ellipsis si trop long).
+  function wrapName(nom, maxChars, maxLines) {
+    const words = String(nom).split(/\s+/).filter(Boolean);
+    const lines = [];
+    let cur = "", i = 0;
+    for (; i < words.length; i++) {
+      let w = words[i];
+      if (w.length > maxChars) w = w.slice(0, maxChars - 1) + "…";
+      const tentative = cur ? cur + " " + w : w;
+      if (tentative.length <= maxChars) { cur = tentative; }
+      else {
+        lines.push(cur);
+        if (lines.length === maxLines) { cur = ""; break; }
+        cur = w;
+      }
+    }
+    if (cur && lines.length < maxLines) { lines.push(cur); i++; }
+    if (i < words.length && lines.length && !lines[lines.length - 1].endsWith("…")) {
+      lines[lines.length - 1] = lines[lines.length - 1].replace(/\s+$/, "") + "…";
+    }
+    return lines.length ? lines : [String(nom)];
+  }
+
+  // Un nœud (cercle + image clippée + anneau + étoile leader + nom sur 2 lignes max).
   function zTreeNode(x, y, r, slot, isSrc) {
     const ch = state.team[slot].character;
     const clip = `ztclip_${slot}`;
     const isLeader = slot === effectiveLeaderSlot();
     const nom = ch.nom.trim();
-    const short = nom.length > 16 ? nom.slice(0, 15) + "…" : nom;
+    const lineH = 14;
+    const nameY = y + r + 15;
+    // Source (centrée, pleine largeur) → lignes plus longues ; cibles (5 de front) → plus courtes.
+    const nameLines = wrapName(nom, isSrc ? 26 : 15, 2);
+    const tspans = nameLines
+      .map((ln, k) => `<tspan x="${x}" dy="${k === 0 ? 0 : lineH}">${escSvg(ln)}</tspan>`)
+      .join("");
     const img = ch.image
       ? `<image href="${escSvg(ch.image)}" x="${x - r}" y="${y - r}" width="${2 * r}" height="${2 * r}" clip-path="url(#${clip})" preserveAspectRatio="xMidYMid slice"/>`
       : "";
@@ -2390,14 +2419,14 @@
       ${img}
       <circle cx="${x}" cy="${y}" r="${r}" class="ztree-ring ${isSrc ? "ztree-ring--src" : ""}"/>
       ${isLeader ? `<text x="${x}" y="${y - r - 7}" text-anchor="middle" class="ztree-star">★</text>` : ""}
-      <text x="${x}" y="${y + r + 18}" text-anchor="middle" class="ztree-name"><title>${escSvg(nom)}</title>${escSvg(short)}</text>`;
+      <text x="${x}" y="${nameY}" text-anchor="middle" class="ztree-name"><title>${escSvg(nom)}</title>${tspans}</text>`;
   }
 
   // Construit le SVG complet (1 source en haut, n cibles réparties en bas).
   function buildZTreeSVG(srcSlot, others) {
-    const VBW = 640, VBH = 300;
-    const cx = VBW / 2, cyTop = 60, rTop = 40;
-    const cyBot = 234, rBot = 32;
+    const VBW = 640, VBH = 318;
+    const cx = VBW / 2, cyTop = 56, rTop = 38;
+    const cyBot = 230, rBot = 30;
     const n = others.length;
     const left = 70, right = VBW - 70;
     const xOf = (i) => (n === 1 ? cx : left + i * ((right - left) / (n - 1)));
