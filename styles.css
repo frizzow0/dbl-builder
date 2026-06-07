@@ -395,6 +395,27 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .ztree-legend { display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center; font-size: var(--fs-xxs); color: var(--text-soft); }
 .ztree-legend span { display: inline-flex; align-items: center; gap: 6px; }
 .ztree-legend i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+/* Badge % survolable + infobulle de détail des lignes */
+.ztree-pct { cursor: help; }
+.ztree-tip {
+  position: fixed; z-index: 1200; max-width: 280px;
+  background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: var(--r-3); box-shadow: 0 12px 34px -10px rgba(0,0,0,.45);
+  padding: 10px 12px; font-size: var(--fs-xxs); color: var(--text);
+  pointer-events: none; line-height: 1.35;
+}
+.ztree-tip[hidden] { display: none; }
+.ztree-tip-head { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-xs); }
+.ztree-tip-cov { color: var(--text-soft); margin-bottom: 4px; }
+.ztree-tip-group { margin-top: 6px; }
+.ztree-tip-grouphead { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-soft); font-weight: 700; margin-bottom: 2px; }
+.ztree-tip-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; padding: 1px 0; }
+.ztree-tip-line.is-ko { color: var(--muted); }
+.ztree-tip-mark { font-weight: 700; flex: 0 0 auto; }
+.ztree-tip-line.is-ok .ztree-tip-mark { color: var(--good); }
+.ztree-tip-line.is-ko .ztree-tip-mark { color: var(--muted); }
+.ztree-tip-cond { font-size: 10px; color: var(--text-soft); background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-pill); padding: 0 6px; }
+.ztree-tip-empty { color: var(--muted); }
 
 /* =====================  6. PANEL  ===================== */
 .panel {

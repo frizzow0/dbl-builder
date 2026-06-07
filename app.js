@@ -2420,7 +2420,7 @@
       arrows += `<line x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}" stroke="${col}" stroke-width="3"${dash} marker-end="url(#ztarr_${cov.status})"/>`;
       const mx = sx + (ex - sx) * 0.52, my = sy + (ey - sy) * 0.52;
       const label = cov.status === "na" ? "N/A" : Math.round(cov.ratio * 100) + "%";
-      pcts += `<g><rect x="${(mx - 19).toFixed(1)}" y="${(my - 11).toFixed(1)}" width="38" height="22" rx="11" class="ztree-pct-bg" stroke="${col}"/><text x="${mx.toFixed(1)}" y="${(my + 4).toFixed(1)}" text-anchor="middle" fill="${col}" class="ztree-pct-text">${label}</text></g>`;
+      pcts += `<g class="ztree-pct" data-ztree-edge data-src="${srcSlot}" data-tgt="${o.idx}"><rect x="${(mx - 19).toFixed(1)}" y="${(my - 11).toFixed(1)}" width="38" height="22" rx="11" class="ztree-pct-bg" stroke="${col}"/><text x="${mx.toFixed(1)}" y="${(my + 4).toFixed(1)}" text-anchor="middle" fill="${col}" class="ztree-pct-text">${label}</text></g>`;
     });
 
     const defs = `<defs>${["full", "partial", "none", "na"].map((st) =>
@@ -2473,6 +2473,82 @@
       state.treeCharSlot = +chip.dataset.ztreeChar;
       renderZTree();
     });
+  }
+
+  // — Détail au survol d'un badge % : quelles lignes de la Cap Z de la source
+  //   s'appliquent (✓) ou non (✗) à la cible, avec leurs conditions. —
+  function zCondLabel(l) {
+    if (!l.condition) return null;
+    const tags = l.condition.tags_requis || [];
+    if (!tags.length) return null;
+    const sep = ` ${l.condition.mode === "and" ? T('cond.and') : T('cond.or')} `;
+    return tags.join(sep);
+  }
+
+  function zTreeEdgeDetail(sourceSlot, targetSlot) {
+    const src = state.team[sourceSlot] && state.team[sourceSlot].character;
+    const tgt = state.team[targetSlot] && state.team[targetSlot].character;
+    if (!src || !tgt) return "";
+    const targetIsLeader = targetSlot === effectiveLeaderSlot();
+    const senderIsLeader = sourceSlot === effectiveLeaderSlot();
+    const sameTrio = Math.floor(sourceSlot / 3) === Math.floor(targetSlot / 3);
+    const leaderInvolved = targetIsLeader || (senderIsLeader && sameTrio);
+    const targetConds = getEffectiveConditionsFor(tgt);
+
+    let applied = 0, total = 0, groupsHTML = "";
+    for (const zi of buildTeamZItemsFor(targetSlot)) {
+      if (zi.sourceSlot !== sourceSlot) continue;
+      const lines = (zi.lignesAll || zi.lignes).filter((l) => !l.est_passif);
+      if (!lines.length) continue;
+      const tierLab = ["I", "II", "III", "IV"][zi.tier - 1];
+      const head = zi.kind === "zenkai" ? `${T('z.capz.label')} Zenkai ${tierLab}` : `${T('z.capz.label')} ${tierLab}`;
+      const linesHTML = lines.map((l) => {
+        const ok = leaderInvolved || !l.condition || condRemplieCalc(l, targetConds);
+        total++; if (ok) applied++;
+        const lab = STATS[l.stat] ? STATS[l.stat].label : l.stat;
+        const cond = zCondLabel(l);
+        const condHTML = cond ? `<span class="ztree-tip-cond">${escSvg(cond)}</span>` : "";
+        return `<div class="ztree-tip-line ${ok ? "is-ok" : "is-ko"}"><span class="ztree-tip-mark">${ok ? "✓" : "✗"}</span><span>+${l.valeur_max.toFixed(0)}% ${escSvg(lab)}</span>${condHTML}</div>`;
+      }).join("");
+      groupsHTML += `<div class="ztree-tip-group"><div class="ztree-tip-grouphead">${head}</div>${linesHTML}</div>`;
+    }
+    const pct = total > 0 ? Math.round((applied / total) * 100) : 0;
+    const cov = total > 0 ? `${applied}/${total} ${T('ztree.tip.lines')} · ${pct}%` : T('ztree.tip.noz');
+    return `<div class="ztree-tip-head"><strong>${escSvg(src.nom.trim())}</strong> → <strong>${escSvg(tgt.nom.trim())}</strong></div>`
+      + `<div class="ztree-tip-cov">${cov}</div>`
+      + (groupsHTML || `<div class="ztree-tip-empty">${T('ztree.tip.noz')}</div>`);
+  }
+
+  let ztreeTip = null;
+  function ztreeHideTip() { if (ztreeTip) { ztreeTip.hidden = true; ztreeTip._key = null; } }
+  function ztreeShowTip(x, y) {
+    if (!ztreeTip) return;
+    ztreeTip.hidden = false;
+    const pad = 14, r = ztreeTip.getBoundingClientRect();
+    let left = x + pad, top = y + pad;
+    if (left + r.width > window.innerWidth - 8) left = x - pad - r.width;
+    if (top + r.height > window.innerHeight - 8) top = y - pad - r.height;
+    ztreeTip.style.left = Math.max(8, left) + "px";
+    ztreeTip.style.top = Math.max(8, top) + "px";
+  }
+  if (zTreeEl) {
+    zTreeEl.addEventListener("mousemove", (e) => {
+      const edge = e.target.closest && e.target.closest("[data-ztree-edge]");
+      if (!edge) { ztreeHideTip(); return; }
+      if (!ztreeTip) {
+        ztreeTip = document.createElement("div");
+        ztreeTip.className = "ztree-tip";
+        ztreeTip.hidden = true;
+        document.body.appendChild(ztreeTip);
+      }
+      const key = edge.dataset.src + ":" + edge.dataset.tgt;
+      if (ztreeTip._key !== key) {
+        ztreeTip.innerHTML = zTreeEdgeDetail(+edge.dataset.src, +edge.dataset.tgt);
+        ztreeTip._key = key;
+      }
+      ztreeShowTip(e.clientX, e.clientY);
+    });
+    zTreeEl.addEventListener("mouseleave", ztreeHideTip);
   }
 
   // ===== RENDU GLOBAL =====

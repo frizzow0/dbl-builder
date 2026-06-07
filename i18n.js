@@ -132,6 +132,8 @@
     'ztree.legend.full':   { fr: '100 % reçu', en: '100% received' },
     'ztree.legend.partial':{ fr: 'Partiel', en: 'Partial' },
     'ztree.legend.none':   { fr: '0 % reçu', en: '0% received' },
+    'ztree.tip.lines':     { fr: 'lignes', en: 'lines' },
+    'ztree.tip.noz':       { fr: 'Aucune Cap Z chiffrable.', en: 'No quantifiable Z Ability.' },
     'panel.global.sub':   { fr: 'Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).',
                             en: 'Everything included: for each character, received Z Abilities AND equipped items are combined (base/pure/direct layers multiplied).' },
     'global.total.label': { fr: 'Total global (Cap Z + items)', en: 'Grand total (Z + items)' },
