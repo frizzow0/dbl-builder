@@ -327,8 +327,27 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   align-items: start;
 }
 @media (min-width: 720px)  { .results-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1280px) { .results-row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); } }
+@media (min-width: 1280px) { .results-row { gap: var(--s-5); } }
 .results-row .panel { min-width: 0; }
+
+/* ── Ligne combinée : sélecteur de perso partagé + 2 panneaux (Cap Z+items | Arbre) ── */
+.combo-row { display: flex; flex-direction: column; gap: var(--s-4); }
+@media (min-width: 1280px) { .combo-row { gap: var(--s-5); } }
+.focus-bar {
+  display: flex; align-items: center; justify-content: center; gap: var(--s-3);
+  flex-wrap: wrap;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-4); padding: var(--s-3) var(--s-4); box-shadow: var(--shadow-1);
+}
+.focus-bar-label {
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-xs);
+  text-transform: uppercase; letter-spacing: .06em; color: var(--text-soft);
+}
+.focus-bar .radar-picker { width: auto; flex: 0 1 auto; }
+.combo-panels { display: grid; grid-template-columns: 1fr; gap: var(--s-4); align-items: start; }
+@media (min-width: 720px)  { .combo-panels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .combo-panels { gap: var(--s-5); } }
+.combo-panels .panel { min-width: 0; }
 /* Colonne empilée : panneau + son radar dessous */
 .results-col { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
 @media (min-width: 1280px) { .results-col { gap: var(--s-5); } }
@@ -371,7 +390,6 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .radar-chip .radar-chip-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 .radar-chip:hover { border-color: var(--accent-tint-2); color: var(--text); }
 .radar-chip.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
-.radar-canvas { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); width: 100%; }
 
 /* ── Graphique en barres horizontales (profil de stats) ── */
 .bars { display: flex; flex-direction: column; gap: 6px; width: 100%; }

@@ -517,8 +517,7 @@
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
-    radarCharSlot: null,     // radar "par perso" : null = tous, sinon un slot précis
-    treeCharSlot: null,      // arbre des Cap Z : slot source (null = leader/1er occupé)
+    focusCharSlot: null,     // perso ciblé (profil par perso + arbre Cap Z) ; null = leader/1er
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -1995,6 +1994,7 @@
   function renderResults() {
     ensureActiveSlot();
     renderZBilan();
+    renderFocusPicker();
     renderGlobalBilan();
     renderZTree();
     const noItems = active.items.every((s) => !s);
@@ -2189,33 +2189,15 @@
   const zRadarEl = document.getElementById("z-radar");
   const globalRadarEl = document.getElementById("global-radar");
 
-  // Graphique "par perso" avec sélecteur intégré (chips).
-  // allChar : [{ slot, label, color, items }] ; teamItems : barres "Tous" (équipe).
-  function renderGlobalChart(allChar, teamItems) {
+  // Graphique "par perso" : barres du perso ciblé par le sélecteur partagé.
+  // allChar : [{ slot, label, color, items }].
+  function renderGlobalChart(allChar) {
     if (!globalRadarEl) return;
     if (!allChar.length) { renderBars(globalRadarEl, [], "#6366f1"); return; }
-    const sel = state.radarCharSlot;
-    const selChar = sel != null ? allChar.find((c) => c.slot === sel) : null;
-    const chip = (active, val, color, label) =>
-      `<button class="radar-chip ${active ? "is-active" : ""}" data-radar-char="${val}" type="button">`
-      + (color ? `<span class="radar-chip-dot" style="background:${color}"></span>` : "")
-      + `${label}</button>`;
-    const chips = `<div class="radar-picker">
-      ${chip(!selChar, "all", "", T('radar.all'))}
-      ${allChar.map((c) => chip(!!selChar && c.slot === sel, c.slot, c.color, c.label)).join("")}
-    </div>`;
-    globalRadarEl.innerHTML = chips + `<div class="radar-canvas"></div>`;
-    const canvas = globalRadarEl.querySelector(".radar-canvas");
-    if (selChar) renderBars(canvas, selChar.items, selChar.color);
-    else renderBars(canvas, teamItems, "#6366f1");
-  }
-  if (globalRadarEl) {
-    globalRadarEl.addEventListener("click", (e) => {
-      const chip = e.target.closest("[data-radar-char]");
-      if (!chip) return;
-      state.radarCharSlot = chip.dataset.radarChar === "all" ? null : +chip.dataset.radarChar;
-      renderGlobalBilan();
-    });
+    const occ = allChar.map((c) => ({ idx: c.slot, character: state.team[c.slot].character }));
+    const src = resolveFocusSlot(occ);
+    const sel = allChar.find((c) => c.slot === src) || allChar[0];
+    renderBars(globalRadarEl, sel.items, sel.color);
   }
 
   // ===== BILAN CAP Z =====
@@ -2299,7 +2281,7 @@
       .filter((s) => s.character);
     if (occupied.length === 0) {
       globalBilanEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
-      renderGlobalChart([], []);
+      renderGlobalChart([]);
       return;
     }
 
@@ -2319,9 +2301,8 @@
       }
       return { slot: slot.idx, label: slot.character.nom.trim(), color: RADAR_COLORS[idx % RADAR_COLORS.length], items };
     });
-    // Graphique en barres par perso (avec sélecteur) — "Tous" = totaux d'équipe.
-    const teamItems = Object.values(statTotals).map((t) => ({ label: t.label, value: t.totalGain }));
-    renderGlobalChart(allChar, teamItems);
+    // Barres du perso ciblé par le sélecteur partagé.
+    renderGlobalChart(allChar);
 
     const orderedTotals = Object.entries(statTotals)
       .sort((a, b) => b[1].totalGain - a[1].totalGain);
@@ -2369,13 +2350,28 @@
     return { applied, total, ratio: total > 0 ? applied / total : 0, status };
   }
 
-  // Slot source effectif : mémorisé s'il est toujours occupé, sinon leader, sinon 1er.
-  function resolveTreeSlot(occupied) {
-    const t = state.treeCharSlot;
-    if (t != null && state.team[t] && state.team[t].character) return t;
+  // Perso "ciblé" partagé par le profil par perso ET l'arbre des Cap Z :
+  // mémorisé s'il est toujours occupé, sinon le Leader, sinon le 1er occupé.
+  function resolveFocusSlot(occupied) {
+    const f = state.focusCharSlot;
+    if (f != null && state.team[f] && state.team[f].character) return f;
     const lead = effectiveLeaderSlot();
     if (lead >= 0 && state.team[lead] && state.team[lead].character) return lead;
     return occupied[0].idx;
+  }
+
+  // Sélecteur partagé (chips, par personnage) au-dessus des deux cellules.
+  function renderFocusPicker() {
+    const el = document.getElementById("focus-picker");
+    if (!el) return;
+    const occupied = state.team.map((s, i) => ({ ...s, idx: i })).filter((s) => s.character);
+    if (occupied.length === 0) { el.innerHTML = ""; return; }
+    const src = resolveFocusSlot(occupied);
+    el.innerHTML = occupied.map((c, i) =>
+      `<button class="radar-chip ${c.idx === src ? "is-active" : ""}" data-focus-char="${c.idx}" type="button">`
+      + `<span class="radar-chip-dot" style="background:${RADAR_COLORS[i % RADAR_COLORS.length]}"></span>`
+      + `${c.character.nom.trim()}</button>`
+    ).join("");
   }
 
   // Un nœud (cercle + image clippée + anneau + étoile leader + nom).
@@ -2440,20 +2436,10 @@
       zTreeEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
       return;
     }
-    const colorOf = {};
-    occupied.forEach((c, i) => { colorOf[c.idx] = RADAR_COLORS[i % RADAR_COLORS.length]; });
-    const srcSlot = resolveTreeSlot(occupied);
-
-    // Sélecteur (chips) — même style que le profil par perso.
-    const picker = `<div class="radar-picker">${occupied.map((c) =>
-      `<button class="radar-chip ${c.idx === srcSlot ? "is-active" : ""}" data-ztree-char="${c.idx}" type="button">`
-      + `<span class="radar-chip-dot" style="background:${colorOf[c.idx]}"></span>`
-      + `${c.character.nom.trim()}</button>`
-    ).join("")}</div>`;
-
+    const srcSlot = resolveFocusSlot(occupied);
     const others = occupied.filter((c) => c.idx !== srcSlot);
     if (others.length === 0) {
-      zTreeEl.innerHTML = picker + `<div class="radar-empty">${T('ztree.alone')}</div>`;
+      zTreeEl.innerHTML = `<div class="radar-empty">${T('ztree.alone')}</div>`;
       return;
     }
 
@@ -2463,14 +2449,18 @@
       <span><i style="background:${ZTREE_ARROW.none}"></i>${T('ztree.legend.none')}</span>
     </div>`;
 
-    zTreeEl.innerHTML = picker + buildZTreeSVG(srcSlot, others) + legend;
+    zTreeEl.innerHTML = buildZTreeSVG(srcSlot, others) + legend;
   }
 
-  if (zTreeEl) {
-    zTreeEl.addEventListener("click", (e) => {
-      const chip = e.target.closest("[data-ztree-char]");
+  // Sélecteur partagé : un clic met à jour le profil par perso ET l'arbre.
+  const focusPickerEl = document.getElementById("focus-picker");
+  if (focusPickerEl) {
+    focusPickerEl.addEventListener("click", (e) => {
+      const chip = e.target.closest("[data-focus-char]");
       if (!chip) return;
-      state.treeCharSlot = +chip.dataset.ztreeChar;
+      state.focusCharSlot = +chip.dataset.focusChar;
+      renderFocusPicker();
+      renderGlobalBilan();
       renderZTree();
     });
   }
