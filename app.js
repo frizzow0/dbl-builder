@@ -2411,34 +2411,14 @@
       })
       .join("");
 
-    zBilanEl.innerHTML = totauxSection + `
-      <details class="z-detail-accordion" ${state.zDetailOpen ? "open" : ""}>
-        <summary class="z-detail-summary">${T('z.detail.percar')}</summary>
-        <div class="z-detail-body">
-          ${charTabsHTML()}
-          <div class="z-bilan-grid">${perCharSection}</div>
-        </div>
-      </details>`;
-    // Conserve l'état ouvert/fermé entre les recalculs + délégation des onglets.
-    const acc = zBilanEl.querySelector(".z-detail-accordion");
-    if (acc) {
-      acc.addEventListener("toggle", () => { state.zDetailOpen = acc.open; });
-    }
+    // « Détail par perso » retiré : la cellule Bilan Cap Z = carte total + barres.
+    // (perCharSection / condLabel ci-dessus ne sont plus rendus.)
+    zBilanEl.innerHTML = totauxSection;
 
     // Barres : gain total d'équipe par stat (Cap Z) — toutes stats boostées, triées
     const teamItems = Object.values(statTotals).map((t) => ({ label: t.label, value: t.totalGain }));
     renderBars(zRadarEl, teamItems, "#ff5722");
   }
-
-  // Délégation : clic sur un onglet perso (dans l'accordéon du bilan Cap Z)
-  zBilanEl.addEventListener("click", (e) => {
-    const tab = e.target.closest("[data-char-tab]");
-    if (!tab) return;
-    state.activeSlot = +tab.dataset.charTab;
-    state.zDetailOpen = true; // garde l'accordéon ouvert après sélection
-    renderTeamGrid();
-    renderResults();
-  });
 
   // ===== BILAN GLOBAL (Cap Z + items, tout compris) =====
   const globalBilanEl = document.getElementById("global-bilan");
