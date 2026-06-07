@@ -2285,39 +2285,19 @@
     const orderedTotals = Object.entries(statTotals)
       .sort((a, b) => b[1].totalGain - a[1].totalGain);
 
-    const totauxHTML = orderedTotals.length === 0
-      ? `<p class="placeholder">${T('z.nobonus.team')}</p>`
-      : orderedTotals
-          .map(([cible, t]) => {
-            const totalFmt = fmtDec(t.totalGain.toFixed(1));
-            const avg = t.totalGain / t.count;
-            const avgFmt = fmtDec(avg.toFixed(1));
-            const maxFmt = fmtDec(t.max.toFixed(1));
-            return `
-              <div class="z-totals-row">
-                <div class="z-totals-label">${t.label}</div>
-                <div class="z-totals-total">+${totalFmt}%</div>
-                <div class="z-totals-detail">${T('z.totals.row', { n: t.count, avg: avgFmt, max: maxFmt })}</div>
-              </div>
-            `;
-          })
-          .join("");
-
     // Total global = somme de tous les gainPct sur tous les perso et toutes les stats
     const grandTotal = orderedTotals.reduce((sum, [, t]) => sum + t.totalGain, 0);
     const grandStatsCount = orderedTotals.length;
     const grandLinesCount = orderedTotals.reduce((sum, [, t]) => sum + t.count, 0);
     const grandTotalFmt = grandTotal.toFixed(0);
 
+    // Carte "total global" uniquement : le détail par stat est désormais le
+    // graphique en barres (#z-radar), fusionné dans le même panneau.
     const totauxSection = `
       <div class="z-grand-total">
         <div class="z-grand-total-label">${T('z.total.label')}</div>
         <div class="z-grand-total-value">+${grandTotalFmt}%</div>
         <div class="z-grand-total-detail">${T('z.total.detail', { n: grandLinesCount, m: grandStatsCount })}</div>
-      </div>
-      <div class="z-totals">
-        <div class="z-totals-title">${T('z.totals.title')}</div>
-        ${totauxHTML}
       </div>
     `;
 

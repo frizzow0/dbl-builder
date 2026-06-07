@@ -345,6 +345,8 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   content: ""; width: 4px; height: 16px; border-radius: 4px;
   background: linear-gradient(180deg, #0ea5e9, #6366f1);
 }
+/* Variante Cap Z (orange) */
+.results-subhead--cap::before { background: linear-gradient(180deg, var(--accent), var(--accent-soft)); }
 
 /* ── Graphique radar (étoile) ── */
 .radar { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); }
