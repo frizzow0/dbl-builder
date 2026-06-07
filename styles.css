@@ -381,6 +381,21 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .bar-fill { display: block; height: 100%; border-radius: var(--r-pill); min-width: 3px; transition: width var(--t-micro); }
 .bar-val { font-family: var(--font-display); font-size: var(--fs-xxs); font-weight: 700; color: var(--text); white-space: nowrap; }
 
+/* ── Arbre des Cap Z (propagation source → coéquipiers) ── */
+.ztree { display: flex; flex-direction: column; gap: var(--s-3); align-items: center; width: 100%; }
+.ztree-canvas { width: 100%; display: flex; justify-content: center; }
+.ztree-svg { width: 100%; max-width: 680px; height: auto; overflow: visible; }
+.ztree-node-bg { fill: var(--surface-3); }
+.ztree-ring { fill: none; stroke: var(--line-strong); stroke-width: 3; }
+.ztree-ring--src { stroke: var(--accent); stroke-width: 4; }
+.ztree-star { fill: var(--accent); font-size: 20px; font-weight: 700; }
+.ztree-name { fill: var(--text-soft); font-size: 13px; font-family: var(--font-body); font-weight: 600; }
+.ztree-pct-bg { fill: var(--surface); }
+.ztree-pct-text { font-size: 12px; font-weight: 700; font-family: var(--font-display); }
+.ztree-legend { display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center; font-size: var(--fs-xxs); color: var(--text-soft); }
+.ztree-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.ztree-legend i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+
 /* =====================  6. PANEL  ===================== */
 .panel {
   background: var(--surface);

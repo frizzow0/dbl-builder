@@ -518,6 +518,7 @@
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
     radarCharSlot: null,     // radar "par perso" : null = tous, sinon un slot précis
+    treeCharSlot: null,      // arbre des Cap Z : slot source (null = leader/1er occupé)
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -1995,6 +1996,7 @@
     ensureActiveSlot();
     renderZBilan();
     renderGlobalBilan();
+    renderZTree();
     const noItems = active.items.every((s) => !s);
     const noZ = buildTeamZItemsFor(state.activeSlot).length === 0;
     if (noItems && noZ) {
@@ -2343,6 +2345,134 @@
         <div class="z-grand-total-detail">${T('global.total.detail', { n: grandLinesCount, m: grandStatsCount })}</div>
       </div>
     `;
+  }
+
+  // ===== ARBRE DES CAP Z =====
+  // Visualise la propagation : le perso sélectionné (source, en haut) envoie une
+  // flèche vers chaque coéquipier (cible, en bas). La couleur indique la part des
+  // lignes chiffrables de sa Cap Z qui atteignent la cible :
+  //   vert = 100 % · jaune = partiel · rouge = 0 % · gris = aucune Cap Z chiffrable.
+  const zTreeEl = document.getElementById("ztree");
+  const ZTREE_ARROW = { full: "#22c55e", partial: "#eab308", none: "#ef4444", na: "#94a3b8" };
+  const escSvg = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+  // Couverture de la Cap Z de `sourceSlot` telle que reçue par `targetSlot`.
+  function zCoverageFor(sourceSlot, targetSlot) {
+    let applied = 0, total = 0;
+    for (const zi of buildTeamZItemsFor(targetSlot)) {
+      if (zi.sourceSlot !== sourceSlot) continue;
+      total   += (zi.lignesAll || zi.lignes).filter((l) => !l.est_passif).length;
+      applied += (zi.lignes || []).filter((l) => !l.est_passif).length;
+    }
+    let status = "na";
+    if (total > 0) status = applied >= total ? "full" : applied > 0 ? "partial" : "none";
+    return { applied, total, ratio: total > 0 ? applied / total : 0, status };
+  }
+
+  // Slot source effectif : mémorisé s'il est toujours occupé, sinon leader, sinon 1er.
+  function resolveTreeSlot(occupied) {
+    const t = state.treeCharSlot;
+    if (t != null && state.team[t] && state.team[t].character) return t;
+    const lead = effectiveLeaderSlot();
+    if (lead >= 0 && state.team[lead] && state.team[lead].character) return lead;
+    return occupied[0].idx;
+  }
+
+  // Un nœud (cercle + image clippée + anneau + étoile leader + nom).
+  function zTreeNode(x, y, r, slot, isSrc) {
+    const ch = state.team[slot].character;
+    const clip = `ztclip_${slot}`;
+    const isLeader = slot === effectiveLeaderSlot();
+    const nom = ch.nom.trim();
+    const short = nom.length > 16 ? nom.slice(0, 15) + "…" : nom;
+    const img = ch.image
+      ? `<image href="${escSvg(ch.image)}" x="${x - r}" y="${y - r}" width="${2 * r}" height="${2 * r}" clip-path="url(#${clip})" preserveAspectRatio="xMidYMid slice"/>`
+      : "";
+    return `
+      <clipPath id="${clip}"><circle cx="${x}" cy="${y}" r="${r}"/></clipPath>
+      <circle cx="${x}" cy="${y}" r="${r}" class="ztree-node-bg"/>
+      ${img}
+      <circle cx="${x}" cy="${y}" r="${r}" class="ztree-ring ${isSrc ? "ztree-ring--src" : ""}"/>
+      ${isLeader ? `<text x="${x}" y="${y - r - 7}" text-anchor="middle" class="ztree-star">★</text>` : ""}
+      <text x="${x}" y="${y + r + 18}" text-anchor="middle" class="ztree-name"><title>${escSvg(nom)}</title>${escSvg(short)}</text>`;
+  }
+
+  // Construit le SVG complet (1 source en haut, n cibles réparties en bas).
+  function buildZTreeSVG(srcSlot, others) {
+    const VBW = 640, VBH = 300;
+    const cx = VBW / 2, cyTop = 60, rTop = 40;
+    const cyBot = 234, rBot = 32;
+    const n = others.length;
+    const left = 70, right = VBW - 70;
+    const xOf = (i) => (n === 1 ? cx : left + i * ((right - left) / (n - 1)));
+
+    let arrows = "", pcts = "";
+    others.forEach((o, i) => {
+      const bx = xOf(i), by = cyBot;
+      const dx = bx - cx, dy = by - cyTop;
+      const dist = Math.hypot(dx, dy) || 1;
+      const ux = dx / dist, uy = dy / dist;
+      const sx = cx + ux * rTop, sy = cyTop + uy * rTop;
+      const ex = bx - ux * (rBot + 13), ey = by - uy * (rBot + 13);
+      const cov = zCoverageFor(srcSlot, o.idx);
+      const col = ZTREE_ARROW[cov.status];
+      const dash = cov.status === "na" ? ` stroke-dasharray="5 5"` : "";
+      arrows += `<line x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}" stroke="${col}" stroke-width="3"${dash} marker-end="url(#ztarr_${cov.status})"/>`;
+      const mx = sx + (ex - sx) * 0.52, my = sy + (ey - sy) * 0.52;
+      const label = cov.status === "na" ? "N/A" : Math.round(cov.ratio * 100) + "%";
+      pcts += `<g><rect x="${(mx - 19).toFixed(1)}" y="${(my - 11).toFixed(1)}" width="38" height="22" rx="11" class="ztree-pct-bg" stroke="${col}"/><text x="${mx.toFixed(1)}" y="${(my + 4).toFixed(1)}" text-anchor="middle" fill="${col}" class="ztree-pct-text">${label}</text></g>`;
+    });
+
+    const defs = `<defs>${["full", "partial", "none", "na"].map((st) =>
+      `<marker id="ztarr_${st}" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 Z" fill="${ZTREE_ARROW[st]}"/></marker>`
+    ).join("")}</defs>`;
+
+    const nodes = zTreeNode(cx, cyTop, rTop, srcSlot, true)
+      + others.map((o, i) => zTreeNode(xOf(i), cyBot, rBot, o.idx, false)).join("");
+
+    return `<div class="ztree-canvas"><svg class="ztree-svg" viewBox="0 0 ${VBW} ${VBH}" preserveAspectRatio="xMidYMid meet" role="img">${defs}${arrows}${pcts}${nodes}</svg></div>`;
+  }
+
+  function renderZTree() {
+    if (!zTreeEl) return;
+    const occupied = state.team.map((s, i) => ({ ...s, idx: i })).filter((s) => s.character);
+    if (occupied.length === 0) {
+      zTreeEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
+      return;
+    }
+    const colorOf = {};
+    occupied.forEach((c, i) => { colorOf[c.idx] = RADAR_COLORS[i % RADAR_COLORS.length]; });
+    const srcSlot = resolveTreeSlot(occupied);
+
+    // Sélecteur (chips) — même style que le profil par perso.
+    const picker = `<div class="radar-picker">${occupied.map((c) =>
+      `<button class="radar-chip ${c.idx === srcSlot ? "is-active" : ""}" data-ztree-char="${c.idx}" type="button">`
+      + `<span class="radar-chip-dot" style="background:${colorOf[c.idx]}"></span>`
+      + `${c.character.nom.trim()}</button>`
+    ).join("")}</div>`;
+
+    const others = occupied.filter((c) => c.idx !== srcSlot);
+    if (others.length === 0) {
+      zTreeEl.innerHTML = picker + `<div class="radar-empty">${T('ztree.alone')}</div>`;
+      return;
+    }
+
+    const legend = `<div class="ztree-legend">
+      <span><i style="background:${ZTREE_ARROW.full}"></i>${T('ztree.legend.full')}</span>
+      <span><i style="background:${ZTREE_ARROW.partial}"></i>${T('ztree.legend.partial')}</span>
+      <span><i style="background:${ZTREE_ARROW.none}"></i>${T('ztree.legend.none')}</span>
+    </div>`;
+
+    zTreeEl.innerHTML = picker + buildZTreeSVG(srcSlot, others) + legend;
+  }
+
+  if (zTreeEl) {
+    zTreeEl.addEventListener("click", (e) => {
+      const chip = e.target.closest("[data-ztree-char]");
+      if (!chip) return;
+      state.treeCharSlot = +chip.dataset.ztreeChar;
+      renderZTree();
+    });
   }
 
   // ===== RENDU GLOBAL =====
