@@ -509,7 +509,8 @@
 
   const state = {
     team: Array.from({ length: 6 }, emptyTeamSlot),
-    activeSlot: 0,           // perso actuellement édité dans l'UI
+    activeSlot: 0,           // perso ANALYSÉ (panneaux par-perso : Résumé / Effets non calculés)
+    charTargetSlot: null,    // slot CIBLE d'un ajout/changement de perso (≠ analyse)
     leaderSlot: 0,           // perso désigné comme leader
     noLeader: false,         // true = simule une équipe sans leader (bypass désactivé)
     conditions: {},          // tag => nombre de membres (saisie utilisateur, reste global)
@@ -533,8 +534,9 @@
   // en excluant le slot actif (pour autoriser le remplacement).
   function getUsedCharIds() {
     const ids = new Set();
+    const target = state.charTargetSlot ?? state.activeSlot;
     state.team.forEach((slot, i) => {
-      if (i !== state.activeSlot && slot.character) {
+      if (i !== target && slot.character) {
         // Double clé : id en priorité, cardCode en fallback
         const key = slot.character.id || slot.character.cardCode;
         if (key) ids.add(key);
@@ -866,6 +868,7 @@
   }
   function closeCharModal() {
     charModalEl.classList.add("hidden");
+    state.charTargetSlot = null; // annule une cible d'ajout/changement abandonnée
   }
   // Force le panel à occuper tout le viewport et la liste à prendre tout l'espace restant.
   // Cas typique : si le grid/flex ne s'applique pas (cache CSS, override sournois), JS gagne.
@@ -1168,8 +1171,17 @@
       const key = charKey(p);
       if (key && getUsedCharIds().has(key)) return;
     }
-    active.character = p || null;
-    active.zTier = 4; // reset au max à chaque nouveau perso
+    // Slot cible = celui qu'on édite (ajout/changement) ; par défaut le perso analysé.
+    const target = state.charTargetSlot ?? state.activeSlot;
+    state.team[target].character = p || null;
+    state.team[target].zTier = 4; // reset au max à chaque nouveau perso
+    // On ne déplace le focus d'analyse QUE si le perso analysé n'existe plus
+    // (1er perso, ou on vient de vider le slot analysé). Ajouter un coéquipier
+    // dans un autre slot ne vole donc pas le focus.
+    if (!state.team[state.activeSlot] || !state.team[state.activeSlot].character) {
+      state.activeSlot = target;
+    }
+    state.charTargetSlot = null;
     charSearchEl.value = "";
     closeCharModal();
     renderTeamGrid();
@@ -1378,13 +1390,15 @@
     if (clr) { const [cs, is] = clr.dataset.itemClear.split(":"); state.team[+cs].items[+is] = null; renderAll(); return; }
     const openIt = t.closest("[data-open-item]");
     if (openIt) { const [cs, is] = openIt.dataset.openItem.split(":"); openItemModal(+cs, +is); return; }
-    // Perso : changer (✎) / retirer (✕) / ajouter (carte vide)
+    // Perso : changer (✎) → on édite ET on analyse ce perso
     const chgChar = t.closest("[data-change-char]");
-    if (chgChar) { state.activeSlot = +chgChar.dataset.changeChar; renderTeamGrid(); renderResults(); openCharModal(); return; }
+    if (chgChar) { state.charTargetSlot = +chgChar.dataset.changeChar; state.activeSlot = state.charTargetSlot; renderTeamGrid(); renderResults(); openCharModal(); return; }
+    // Retirer (✕) → on vide ce slot sans toucher au focus d'analyse
     const rmChar = t.closest("[data-remove-char]");
-    if (rmChar) { state.activeSlot = +rmChar.dataset.removeChar; selectCharacter(null); return; }
+    if (rmChar) { state.charTargetSlot = +rmChar.dataset.removeChar; selectCharacter(null); return; }
+    // Ajouter (carte vide) → on cible ce slot mais on GARDE le perso analysé
     const addChar = t.closest("[data-add-char]");
-    if (addChar) { state.activeSlot = +addChar.dataset.addChar; renderTeamGrid(); openCharModal(); return; }
+    if (addChar) { state.charTargetSlot = +addChar.dataset.addChar; renderTeamGrid(); openCharModal(); return; }
     // Clic ailleurs sur une ligne occupée → sélectionne ce perso (Résumé à droite)
     const row = t.closest("[data-row]");
     if (row && state.team[+row.dataset.row].character) {
