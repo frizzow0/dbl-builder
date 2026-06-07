@@ -329,6 +329,21 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 @media (min-width: 720px)  { .results-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1280px) { .results-row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); } }
 .results-row .panel { min-width: 0; }
+/* Colonne empilée : panneau + son radar dessous */
+.results-col { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
+@media (min-width: 1280px) { .results-col { gap: var(--s-5); } }
+
+/* ── Graphique radar (étoile) ── */
+.radar { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); }
+.radar-svg { width: 100%; max-width: 320px; height: auto; overflow: visible; }
+.radar-ring { fill: none; stroke: var(--line); stroke-width: 1; }
+.radar-axis { stroke: var(--line); stroke-width: 1; }
+.radar-label { fill: var(--text-soft); font-size: 9px; font-family: var(--font-body); }
+.radar-max { font-size: var(--fs-xxs); color: var(--text-soft); }
+.radar-legend { display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: center; }
+.radar-legend-item { display: flex; align-items: center; gap: 5px; font-size: var(--fs-xxs); color: var(--text-soft); }
+.radar-legend-swatch { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+.radar-empty { font-size: var(--fs-xs); color: var(--muted); padding: var(--s-4) 0; }
 
 /* =====================  6. PANEL  ===================== */
 .panel {

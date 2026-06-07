@@ -124,6 +124,12 @@
 
     // ── Bilan global (Cap Z + items, tout compris) ──────────
     'panel.global.title': { fr: 'Bilan global (Cap Z + items)', en: 'Global summary (Z Abilities + items)' },
+    'panel.zradar.title':  { fr: 'Profil des stats (Cap Z)', en: 'Stat profile (Z Abilities)' },
+    'panel.zradar.sub':    { fr: 'Gain total d\'équipe par stat, en pourcentage.', en: 'Team total gain per stat, in percent.' },
+    'panel.globalradar.title': { fr: 'Profil par perso (Cap Z + items)', en: 'Per-character profile (Z + items)' },
+    'panel.globalradar.sub':   { fr: 'Gain par stat, un tracé par personnage.', en: 'Gain per stat, one trace per character.' },
+    'radar.nodata':        { fr: 'Aucune stat boostée pour le moment.', en: 'No boosted stat yet.' },
+    'radar.max':           { fr: 'max', en: 'max' },
     'panel.global.sub':   { fr: 'Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).',
                             en: 'Everything included: for each character, received Z Abilities AND equipped items are combined (base/pure/direct layers multiplied).' },
     'global.total.label': { fr: 'Total global (Cap Z + items)', en: 'Grand total (Z + items)' },

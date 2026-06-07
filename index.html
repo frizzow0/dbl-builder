@@ -123,20 +123,34 @@
     <!-- ============ RÉSULTATS : panneaux côte à côte ============ -->
     <section class="results-row">
 
-      <div class="panel" id="section-z">
-        <h2 class="panel-title" data-i18n="panel.z.title">Bilan global (Cap Z)</h2>
-        <p class="panel-sub" data-i18n="panel.z.sub">
-          Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.
-        </p>
-        <div id="z-bilan" class="z-bilan"></div>
+      <div class="results-col">
+        <div class="panel" id="section-z">
+          <h2 class="panel-title" data-i18n="panel.z.title">Bilan global (Cap Z)</h2>
+          <p class="panel-sub" data-i18n="panel.z.sub">
+            Pour chaque perso, les Cap Z reçues (la sienne + celles des coéquipiers selon les conditions). Le Leader (★) reçoit et distribue sans restriction.
+          </p>
+          <div id="z-bilan" class="z-bilan"></div>
+        </div>
+        <div class="panel" id="section-z-radar">
+          <h2 class="panel-title" data-i18n="panel.zradar.title">Profil des stats (Cap Z)</h2>
+          <p class="panel-sub" data-i18n="panel.zradar.sub">Gain total d'équipe par stat, en pourcentage.</p>
+          <div id="z-radar" class="radar"></div>
+        </div>
       </div>
 
-      <div class="panel" id="section-global">
-        <h2 class="panel-title" data-i18n="panel.global.title">Bilan global (Cap Z + items)</h2>
-        <p class="panel-sub" data-i18n="panel.global.sub">
-          Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).
-        </p>
-        <div id="global-bilan" class="z-bilan"></div>
+      <div class="results-col">
+        <div class="panel" id="section-global">
+          <h2 class="panel-title" data-i18n="panel.global.title">Bilan global (Cap Z + items)</h2>
+          <p class="panel-sub" data-i18n="panel.global.sub">
+            Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).
+          </p>
+          <div id="global-bilan" class="z-bilan"></div>
+        </div>
+        <div class="panel" id="section-global-radar">
+          <h2 class="panel-title" data-i18n="panel.globalradar.title">Profil par perso (Cap Z + items)</h2>
+          <p class="panel-sub" data-i18n="panel.globalradar.sub">Gain par stat, un tracé par personnage.</p>
+          <div id="global-radar" class="radar"></div>
+        </div>
       </div>
 
       <div class="panel" id="section-passifs">
@@ -229,12 +243,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=30"></script>
-  <script src="items.js?v=30"></script>
-  <script src="characters.js?v=30"></script>
-  <script src="data.js?v=30"></script>
-  <script src="calc.js?v=30"></script>
-  <script src="app.js?v=30"></script>
+  <script src="i18n.js?v=31"></script>
+  <script src="items.js?v=31"></script>
+  <script src="characters.js?v=31"></script>
+  <script src="data.js?v=31"></script>
+  <script src="calc.js?v=31"></script>
+  <script src="app.js?v=31"></script>
 
   <script>
     (function () {
