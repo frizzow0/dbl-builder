@@ -58,6 +58,80 @@
     }
   })();
 
+  // ── PATCH RUNTIME : passifs Cap Z chiffrables "… augmente de N% …" ─────────
+  // Le scraper laisse certains tiers de Cap Z en texte passif (ex. ULTRA "Cell
+  // Parfait" : tiers 3-4 en passif contenant "augmente de 42% la défense et
+  // l'attaque d'énergie de base des « Cyborg »…"). On les convertit en lignes
+  // chiffrées pour qu'elles soient calculées (et fusionnées par tier ensuite).
+  (function _convertZPassives() {
+    const NORM = (s) => s.toLowerCase().replace(/[’‘]/g, "'")
+      .replace(/\bd'/g, "").replace(/\bl'/g, "")
+      .replace(/\b(la|le|les|du|des|de|votre|vos|aux|au)\b/g, " ")
+      .replace(/\s+/g, " ").trim();
+    const stripPrefix = (t) => t.replace(/^(Classe|Épisode|Episode|Style de combat|Personnage|Attribut)\s*:\s*/i, "").trim();
+    function phraseToStats(phrase) {
+      let p = NORM(phrase);
+      const deBase = /\bbase\b/.test(p);
+      p = p.replace(/\bbase\b/g, "").replace(/\s+/g, " ").trim();
+      const suf = deBase ? "_de_base" : "";
+      if (/dégâts ultimes/.test(p)) return ["degats_ultime"];
+      if (/dégâts.*énergie.*infligés|dégâts.*infligés.*énergie/.test(p)) return ["degats_energie_infliges"];
+      if (/dégâts.*infligés/.test(p)) return ["degats_infliges"];
+      if (/force/.test(p)) return ["force_de_base"];
+      const phys = /physique/.test(p), ener = /énergie|energie/.test(p);
+      const atk = /attaque/.test(p), def = /défense|defense/.test(p);
+      const out = [];
+      if (atk && phys) out.push("attaque_physique" + suf);
+      if (atk && ener) out.push("attaque_energie" + suf);
+      if (def && phys) out.push("defense_physique" + suf);
+      if (def && ener) out.push("defense_energie" + suf);
+      return out.length ? out : null;
+    }
+    function parseZPassive(desc) {
+      if (!desc) return null;
+      const flat = desc.replace(/\r?\n/g, " ").replace(/\s+/g, " ").trim();
+      if (!/augmente de \d/i.test(flat)) return null;
+      if (/\bcontre\b/i.test(flat)) return null; // situationnel → reste passif
+      const parts = flat.split(/augmente de /i).slice(1);
+      const lines = [];
+      for (const piece of parts) {
+        const m = piece.match(/^([\d.,]+)\s*%\s*(.+)$/);
+        if (!m) continue;
+        const val = parseFloat(m[1].replace(",", "."));
+        let rest = m[2].replace(/\s+et\s*$/, "").trim();
+        const tags = [...rest.matchAll(/«\s*([^»]+?)\s*»/g)].map((x) => stripPrefix(x[1].trim()));
+        let statPhrase = rest;
+        const gi = rest.indexOf("«");
+        if (gi >= 0) statPhrase = rest.slice(0, gi);
+        statPhrase = statPhrase.replace(/\s+(par les|par membre|par|des|de|pour les|aux|à)\s*$/i, "").trim();
+        const stats = phraseToStats(statPhrase);
+        if (!stats) return null; // formulation inconnue → on garde le passif tel quel
+        const cond = tags.length
+          ? { mode: "threshold", seuil: 1, tag_requis: tags[0], tags_requis: tags, description: flat }
+          : null;
+        for (const st of stats) lines.push({ stat: st, valeur_min: val, valeur_max: val, condition: cond });
+      }
+      return lines.length ? lines : null;
+    }
+    for (const p of PERSONNAGES) {
+      for (const sets of [p.zAbilities, p.zAbilitiesZenkai]) {
+        if (!sets) continue;
+        for (const z of sets) {
+          if (!z.lignes) continue;
+          const out = [];
+          for (const l of z.lignes) {
+            if (l.est_passif && l.description_passif) {
+              const conv = parseZPassive(l.description_passif);
+              if (conv) { out.push(...conv); continue; }
+            }
+            out.push(l);
+          }
+          z.lignes = out;
+        }
+      }
+    }
+  })();
+
   // ── PATCH RUNTIME : seuils "si au moins N" mal parsés par le scraper ──────
   // Le scraper utilisait /si\s+(\d+)/ et ratait le pattern "si au moins N".
   // On corrige à la volée en relisant la description de chaque condition.
