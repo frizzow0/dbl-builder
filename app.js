@@ -106,9 +106,16 @@
         statPhrase = statPhrase.replace(/\s+(par les|par membre|par|des|de|pour les|aux|à)\s*$/i, "").trim();
         const stats = phraseToStats(statPhrase);
         if (!stats) return null; // formulation inconnue → on garde le passif tel quel
-        const cond = tags.length
-          ? { mode: "threshold", seuil: 1, tag_requis: tags[0], tags_requis: tags, description: flat }
-          : null;
+        let cond = null;
+        if (tags.length) {
+          const clause = rest;
+          const seuilM = clause.match(/au\s+moins\s+(\d+)/i);
+          let seuil = seuilM ? parseInt(seuilM[1], 10) : 1;
+          if (/\bautres?\b/i.test(clause)) seuil += 1; // "un autre" → un de plus que le porteur
+          // AND seulement si "à la fois" ; sinon "des A et des B" = OR (threshold)
+          const mode = (tags.length > 1 && /\bà la fois\b/i.test(clause)) ? "and" : "threshold";
+          cond = { mode, seuil, tag_requis: tags[0], tags_requis: tags, description: flat };
+        }
         for (const st of stats) lines.push({ stat: st, valeur_min: val, valeur_max: val, condition: cond });
       }
       return lines.length ? lines : null;
@@ -132,18 +139,22 @@
     }
   })();
 
-  // ── PATCH RUNTIME : seuils "si au moins N" mal parsés par le scraper ──────
-  // Le scraper utilisait /si\s+(\d+)/ et ratait le pattern "si au moins N".
-  // On corrige à la volée en relisant la description de chaque condition.
+  // ── PATCH RUNTIME : seuils des conditions "threshold" ─────────────────────
+  // (a) "si au moins N « X »" : le scraper ratait le "au moins" → seuil=1 ; on
+  //     relit la description pour fixer N.
+  // (b) "si un AUTRE « X »" / "autre que soi" : le porteur compte déjà, il faut
+  //     donc un membre DE PLUS dans le trio → seuil += 1.
   (function _fixThresholdSeuils() {
-    const re = /si\s+(?:au\s+moins\s+)?(\d+)\s*[«»]/i;
+    const reNum = /si\s+(?:au\s+moins\s+)?(\d+)\s*[«»]/i;
     for (const item of ITEMS) {
       for (const l of item.lignes || []) {
         if (!l.condition || l.condition.mode !== 'threshold') continue;
-        const m = re.exec(l.condition.description || '');
-        if (!m) continue;
-        const parsed = parseInt(m[1], 10);
-        if (parsed > (l.condition.seuil || 1)) l.condition.seuil = parsed;
+        const desc = l.condition.description || '';
+        let seuil = l.condition.seuil || 1;
+        const m = reNum.exec(desc);
+        if (m) seuil = Math.max(seuil, parseInt(m[1], 10));
+        if (/\bautres?\b/i.test(desc)) seuil += 1;
+        l.condition.seuil = seuil;
       }
     }
   })();
@@ -263,9 +274,13 @@
       const tags = [...clause.matchAll(/«\s*([^»]+?)\s*»/g)].map((x) => x[1].trim());
       if (!tags.length) return null;
       const seuilM = clause.match(/au\s+moins\s+(\d+)/i);
-      let mode = "threshold";
-      if (tags.length > 1) mode = /\bou\b/i.test(clause) ? "threshold" : "and";
-      return { mode, seuil: seuilM ? parseInt(seuilM[1], 10) : 1, tag_requis: tags[0], tags_requis: tags };
+      let seuil = seuilM ? parseInt(seuilM[1], 10) : 1;
+      // "si un AUTRE … " / "… autre que soi" : le porteur compte déjà, il faut
+      // donc UN DE PLUS dans le trio → on incrémente le seuil.
+      if (/\bautres?\b/i.test(clause)) seuil += 1;
+      // AND seulement si "plus"/"à la fois" ; sinon "A ou B" / "A et B" = OR
+      const mode = (tags.length > 1 && /\bplus\b|\bà la fois\b/i.test(clause)) ? "and" : "threshold";
+      return { mode, seuil, tag_requis: tags[0], tags_requis: tags };
     }
     function parseCond(rest) {
       const s = rest;
