@@ -626,6 +626,32 @@
   //     ses 2 coéquipiers de trio (avec qui il combat). Aux autres, sa
   //     Z applique les conditions normales (comme un perso lambda).
   // ──────────────────────────────────────────────────────────────
+  // Cumule les lignes d'une Cap Z sur les tiers 1..maxTier.
+  // Le scraper stocke les tiers en DELTAS (chaque tier ne liste que ce qu'il
+  // ajoute/modifie) alors qu'en jeu la Cap Z est cumulative. Sans ça, certains
+  // perso (ex. ULTRA "Cell Parfait") n'ont que des passifs au tier 4 et leurs
+  // boosts chiffrés (placés aux tiers 1-2) étaient ignorés.
+  //  - lignes chiffrées : on garde, PAR STAT, la valeur la plus haute (= tier max) ;
+  //  - passifs : tous, dédupliqués par description.
+  function mergeZLines(sets, maxTier) {
+    const chiffrByStat = new Map();
+    const passifs = [];
+    const seenPassif = new Set();
+    for (const z of sets || []) {
+      if (z.tier > maxTier) continue;
+      for (const l of z.lignes || []) {
+        if (l.est_passif) {
+          const d = (l.description_passif || "").trim();
+          if (d && !seenPassif.has(d)) { seenPassif.add(d); passifs.push(l); }
+          continue;
+        }
+        const prev = chiffrByStat.get(l.stat);
+        if (!prev || (l.valeur_max || 0) > (prev.valeur_max || 0)) chiffrByStat.set(l.stat, l);
+      }
+    }
+    return [...chiffrByStat.values(), ...passifs];
+  }
+
   function buildTeamZItemsFor(targetSlotIdx) {
     const target = state.team[targetSlotIdx];
     if (!target || !target.character) return [];
@@ -680,15 +706,15 @@
         });
       };
 
-      // 1) Cap Z classique — utilise le tier choisi par l'utilisateur
-      if (sender.character.zAbilities) {
-        const z = sender.character.zAbilities.find((z) => z.tier === sender.zTier);
-        if (z) pushZItem(z.lignes, T('z.capz.label'), "z", sender.zTier);
+      // 1) Cap Z classique — cumul des tiers 1..tier choisi (max par stat + passifs)
+      if (sender.character.zAbilities && sender.character.zAbilities.length) {
+        const lignes = mergeZLines(sender.character.zAbilities, sender.zTier);
+        if (lignes.length) pushZItem(lignes, T('z.capz.label'), "z", sender.zTier);
       }
-      // 2) Cap Z Zenkai — TOUJOURS au max (tier IV), s'ajoute en plus
-      if (sender.character.zAbilitiesZenkai) {
-        const zk = sender.character.zAbilitiesZenkai.find((z) => z.tier === 4);
-        if (zk) pushZItem(zk.lignes, `${T('z.capz.label')} Zenkai`, "zenkai", 4);
+      // 2) Cap Z Zenkai — cumul jusqu'au tier IV, s'ajoute en plus
+      if (sender.character.zAbilitiesZenkai && sender.character.zAbilitiesZenkai.length) {
+        const lignes = mergeZLines(sender.character.zAbilitiesZenkai, 4);
+        if (lignes.length) pushZItem(lignes, `${T('z.capz.label')} Zenkai`, "zenkai", 4);
       }
     }
     return items;
