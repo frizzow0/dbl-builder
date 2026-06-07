@@ -2605,12 +2605,8 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   justify-content: flex-start;
   min-width: 0;
 }
-.builder-items.is-disabled {
-  opacity: .4; pointer-events: none;
-  justify-content: center;
-  font-size: var(--fs-xs); color: var(--text-soft);
-  border: 1px dashed var(--line); border-radius: var(--r-3); padding: var(--s-3);
-}
+/* Ligne sans perso : mêmes emplacements que les lignes pleines, mais grisés/inertes */
+.builder-items--locked { opacity: .4; pointer-events: none; }
 .builder-item-icons { display: flex; align-items: stretch; gap: var(--s-2); }
 .builder-item-icon {
   /* Carré dont la hauteur = hauteur de la ligne (stretch) ; largeur = hauteur */
@@ -2632,32 +2628,40 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 .builder-item-icon.empty:hover { color: var(--accent); background: var(--accent-tint); }
 .builder-item-icon-fallback { font-size: var(--fs-xs); font-weight: 700; color: var(--text-soft); text-transform: uppercase; }
 
-/* ── Cadre de rareté (image scrapée de dblegends.net) sur les icônes pleines ──
-   L'art (arrondi) est dessous, le cadre transparent au centre est par-dessus. */
-.builder-item-icon.filled {
-  border: none; background-color: transparent; border-radius: 0;
+/* ── Cadre de rareté (image scrapée de dblegends.net) ─────────────────────────
+   Hôtes : icône de la grille (.builder-item-icon.filled) ET vignette de la
+   modale de sélection (.item-img.is-framed). L'art est inséré dans la fenêtre
+   centrale (82%, arrondi) ; le cadre transparent est dessiné par-dessus. */
+.builder-item-icon.filled,
+.item-img.is-framed {
+  border: none !important; background: transparent !important; border-radius: 0 !important;
   overflow: visible; position: relative;
+  display: grid; place-items: center;
 }
-.builder-item-icon.filled img { border-radius: 16%; }
 .builder-item-icon.filled:hover { box-shadow: none; }
-.builder-item-icon.filled::after {
+.builder-item-icon.filled > img,
+.item-img.is-framed > img {
+  width: 82%; height: 82%; object-fit: cover; border-radius: 12%;
+}
+.builder-item-icon.filled::after,
+.item-img.is-framed::after {
   content: ""; position: absolute; inset: 0;
   background-position: center; background-repeat: no-repeat; background-size: 100% 100%;
   pointer-events: none;
 }
-.builder-item-icon.rar-iron.filled::after           { background-image: url(assets/frames/EqIco_frmIron.webp); }
-.builder-item-icon.rar-bronze.filled::after         { background-image: url(assets/frames/EqIco_frmBronze.webp); }
-.builder-item-icon.rar-silver.filled::after         { background-image: url(assets/frames/EqIco_frmSilver.webp); }
-.builder-item-icon.rar-gold.filled::after           { background-image: url(assets/frames/EqIco_frmGold.webp); }
-.builder-item-icon.rar-unique.filled::after         { background-image: url(assets/frames/EqIco_frmUnique.webp); }
-.builder-item-icon.rar-platinum.filled::after       { background-image: url(assets/frames/EqIco_frmPlatinum.webp); }
-.builder-item-icon.rar-event.filled::after          { background-image: url(assets/frames/EqIco_frmEvent.webp); }
-.builder-item-icon.rar-awakenediron.filled::after   { background-image: url(assets/frames/EqIco_frmSpIron.webp); }
-.builder-item-icon.rar-awakenedbronze.filled::after { background-image: url(assets/frames/EqIco_frmSpBronze.webp); }
-.builder-item-icon.rar-awakenedsilver.filled::after { background-image: url(assets/frames/EqIco_frmSpSilver.webp); }
-.builder-item-icon.rar-awakenedgold.filled::after   { background-image: url(assets/frames/EqIco_frmSpGold.webp); }
-.builder-item-icon.rar-awakenedunique.filled::after { background-image: url(assets/frames/EqIco_frmSpUnique.webp); }
-.builder-item-icon.rar-awakenedevent.filled::after  { background-image: url(assets/frames/EqIco_frmSpEvent.webp); }
+.rar-iron:is(.filled, .is-framed)::after           { background-image: url(assets/frames/EqIco_frmIron.webp); }
+.rar-bronze:is(.filled, .is-framed)::after         { background-image: url(assets/frames/EqIco_frmBronze.webp); }
+.rar-silver:is(.filled, .is-framed)::after         { background-image: url(assets/frames/EqIco_frmSilver.webp); }
+.rar-gold:is(.filled, .is-framed)::after           { background-image: url(assets/frames/EqIco_frmGold.webp); }
+.rar-unique:is(.filled, .is-framed)::after         { background-image: url(assets/frames/EqIco_frmUnique.webp); }
+.rar-platinum:is(.filled, .is-framed)::after       { background-image: url(assets/frames/EqIco_frmPlatinum.webp); }
+.rar-event:is(.filled, .is-framed)::after          { background-image: url(assets/frames/EqIco_frmEvent.webp); }
+.rar-awakenediron:is(.filled, .is-framed)::after   { background-image: url(assets/frames/EqIco_frmSpIron.webp); }
+.rar-awakenedbronze:is(.filled, .is-framed)::after { background-image: url(assets/frames/EqIco_frmSpBronze.webp); }
+.rar-awakenedsilver:is(.filled, .is-framed)::after { background-image: url(assets/frames/EqIco_frmSpSilver.webp); }
+.rar-awakenedgold:is(.filled, .is-framed)::after   { background-image: url(assets/frames/EqIco_frmSpGold.webp); }
+.rar-awakenedunique:is(.filled, .is-framed)::after { background-image: url(assets/frames/EqIco_frmSpUnique.webp); }
+.rar-awakenedevent:is(.filled, .is-framed)::after  { background-image: url(assets/frames/EqIco_frmSpEvent.webp); }
 
 .builder-items-details {
   width: 30px; align-self: stretch; min-height: 56px; flex-shrink: 0;

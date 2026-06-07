@@ -1313,7 +1313,10 @@
            <div class="builder-item-icons">${[0, 1, 2].map((j) => itemIconHTML(charSlot, j)).join("")}</div>
            <button class="builder-items-details" data-open-details="${charSlot}" type="button" title="${T('items.details')}" aria-label="${T('items.details')}">▾</button>
          </div>`
-      : `<div class="builder-items is-disabled">${T('builder.items.empty')}</div>`;
+      : `<div class="builder-items builder-items--locked" aria-hidden="true" title="${T('builder.items.empty')}">
+           <div class="builder-item-icons">${[0, 1, 2].map(() => `<span class="builder-item-icon empty">＋</span>`).join("")}</div>
+           <span class="builder-items-details">▾</span>
+         </div>`;
     return `<div class="builder-row ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${items}</div>`;
   }
 
@@ -1621,9 +1624,10 @@
             `;
           })
           .join("");
-        const img = it.image
-          ? `<img class="item-img" src="${it.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
-          : `<div class="item-img item-img-placeholder">?</div>`;
+        const rar = (it.rarete || "").toLowerCase();
+        const img = `<div class="item-img is-framed rar-${rar}">${it.image
+          ? `<img src="${it.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
+          : `<span class="item-img-placeholder">?</span>`}</div>`;
         const tagsLine = formatTagsPorteur(it.tagsPorteur);
         const tagsHTML = tagsLine
           ? `<div class="item-tags-porteur" title="${T('slot.compatible')} ${tagsLine}">${tagsLine}</div>`
