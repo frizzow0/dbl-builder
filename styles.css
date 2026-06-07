@@ -2631,10 +2631,33 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 }
 .builder-item-icon.empty:hover { color: var(--accent); background: var(--accent-tint); }
 .builder-item-icon-fallback { font-size: var(--fs-xs); font-weight: 700; color: var(--text-soft); text-transform: uppercase; }
-/* Liseré rareté */
-.builder-item-icon.rar-unique, .builder-item-icon.rar-awakenedunique { box-shadow: inset 0 0 0 2px #f59e0b; }
-.builder-item-icon.rar-platinum { box-shadow: inset 0 0 0 2px #22d3ee; }
-.builder-item-icon.rar-gold, .builder-item-icon.rar-awakenedgold { box-shadow: inset 0 0 0 2px #eab308; }
+
+/* ── Cadre de rareté (image scrapée de dblegends.net) sur les icônes pleines ──
+   L'art (arrondi) est dessous, le cadre transparent au centre est par-dessus. */
+.builder-item-icon.filled {
+  border: none; background-color: transparent; border-radius: 0;
+  overflow: visible; position: relative;
+}
+.builder-item-icon.filled img { border-radius: 16%; }
+.builder-item-icon.filled:hover { box-shadow: none; }
+.builder-item-icon.filled::after {
+  content: ""; position: absolute; inset: 0;
+  background-position: center; background-repeat: no-repeat; background-size: 100% 100%;
+  pointer-events: none;
+}
+.builder-item-icon.rar-iron.filled::after           { background-image: url(assets/frames/EqIco_frmIron.webp); }
+.builder-item-icon.rar-bronze.filled::after         { background-image: url(assets/frames/EqIco_frmBronze.webp); }
+.builder-item-icon.rar-silver.filled::after         { background-image: url(assets/frames/EqIco_frmSilver.webp); }
+.builder-item-icon.rar-gold.filled::after           { background-image: url(assets/frames/EqIco_frmGold.webp); }
+.builder-item-icon.rar-unique.filled::after         { background-image: url(assets/frames/EqIco_frmUnique.webp); }
+.builder-item-icon.rar-platinum.filled::after       { background-image: url(assets/frames/EqIco_frmPlatinum.webp); }
+.builder-item-icon.rar-event.filled::after          { background-image: url(assets/frames/EqIco_frmEvent.webp); }
+.builder-item-icon.rar-awakenediron.filled::after   { background-image: url(assets/frames/EqIco_frmSpIron.webp); }
+.builder-item-icon.rar-awakenedbronze.filled::after { background-image: url(assets/frames/EqIco_frmSpBronze.webp); }
+.builder-item-icon.rar-awakenedsilver.filled::after { background-image: url(assets/frames/EqIco_frmSpSilver.webp); }
+.builder-item-icon.rar-awakenedgold.filled::after   { background-image: url(assets/frames/EqIco_frmSpGold.webp); }
+.builder-item-icon.rar-awakenedunique.filled::after { background-image: url(assets/frames/EqIco_frmSpUnique.webp); }
+.builder-item-icon.rar-awakenedevent.filled::after  { background-image: url(assets/frames/EqIco_frmSpEvent.webp); }
 
 .builder-items-details {
   width: 30px; align-self: stretch; min-height: 56px; flex-shrink: 0;
