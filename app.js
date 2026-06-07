@@ -1359,12 +1359,11 @@
   // Nom conservé (renderTeamGrid) pour ne pas casser les appels existants.
   function renderTeamGrid() {
     if (!builderGridEl) return;
-    builderGridEl.innerHTML = `
-      <div class="builder-trio-label">${T('trio.a')}</div>
-      ${[0, 1, 2].map(builderRowHTML).join("")}
-      <div class="builder-trio-label">${T('trio.b')}</div>
-      ${[3, 4, 5].map(builderRowHTML).join("")}
-    `;
+    // Chaque trio dans son propre conteneur → 2 colonnes côte à côte sur écran large
+    // (évite le grand vide entre le nom et les boutons Cap Z quand le builder est pleine largeur).
+    const trio = (label, idxs) =>
+      `<div class="builder-trio"><div class="builder-trio-label">${label}</div>${idxs.map(builderRowHTML).join("")}</div>`;
+    builderGridEl.innerHTML = trio(T('trio.a'), [0, 1, 2]) + trio(T('trio.b'), [3, 4, 5]);
     renderNoLeaderBtn();
   }
 

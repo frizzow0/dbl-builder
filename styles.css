@@ -275,8 +275,14 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
     color: var(--text-soft);
   }
 }
-/* flex:1 → la grille occupe toute la hauteur dispo du panel (bas aligné au Résumé) */
-.builder-grid { display: flex; flex-direction: column; gap: var(--s-2); flex: 1 1 auto; }
+/* 1 colonne par défaut ; 2 colonnes (Trio A | Trio B) sur écran large pour
+   utiliser la largeur sans laisser de grand vide entre le nom et les Cap Z. */
+.builder-grid { display: grid; grid-template-columns: 1fr; gap: var(--s-3); }
+@media (min-width: 1280px) {
+  .builder-grid { grid-template-columns: 1fr 1fr; gap: var(--s-5); align-items: start; }
+  .builder-head { display: none; } /* l'en-tête unique ne s'aligne plus sur 2 colonnes */
+}
+.builder-trio { display: flex; flex-direction: column; gap: var(--s-2); min-width: 0; }
 
 /* Bandeau de séparation de trio */
 .builder-trio-label {
@@ -293,7 +299,7 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   content: ""; flex: 1; height: 1px;
   background: linear-gradient(90deg, var(--accent-tint-2), transparent);
 }
-.builder-grid > .builder-trio-label:first-child { margin-top: 0; }
+.builder-trio > .builder-trio-label:first-child { margin-top: 0; }
 
 /* Une ligne = [carte perso | 3 slots items] ; flex:1 1 0 → les lignes se
    partagent l'espace vertical à parts ÉGALES et comblent parfaitement la grille. */
@@ -302,7 +308,6 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   grid-template-columns: 1fr;
   gap: var(--s-2);
   align-items: stretch;
-  flex: 1 1 0;
   min-height: 64px;
 }
 @media (min-width: 900px) {
