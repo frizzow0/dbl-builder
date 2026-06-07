@@ -249,14 +249,7 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 }
 .col { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
 
-/* ── Zone du haut : builder (persos+items) à gauche, Résumé à droite ── */
-/* align-items:stretch → les 2 panneaux ont la même hauteur (bas alignés). */
-.top-zone { display: grid; grid-template-columns: 1fr; gap: var(--s-4); align-items: stretch; }
-@media (min-width: 1100px) {
-  .top-zone { grid-template-columns: minmax(0, 1.7fr) minmax(320px, 1fr); gap: var(--s-5); }
-}
-.top-zone > .panel { min-width: 0; }
-/* Le builder en colonne flex : la barre "leader" est poussée tout en bas. */
+/* Le builder (pleine largeur) en colonne flex : la barre "leader" est poussée tout en bas. */
 .builder-panel { display: flex; flex-direction: column; }
 
 /* Colonnes internes du builder : perso (flexible) | items (largeur du contenu) */
@@ -399,6 +392,28 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .bar-track { height: 12px; background: var(--surface-3); border-radius: var(--r-pill); overflow: hidden; }
 .bar-fill { display: block; height: 100%; border-radius: var(--r-pill); min-width: 3px; transition: width var(--t-micro); }
 .bar-val { font-family: var(--font-display); font-size: var(--fs-xxs); font-weight: 700; color: var(--text); white-space: nowrap; }
+
+/* ── Résumé des effets cumulés : menu dépliant dans le panneau « Cap Z + items » ── */
+.stats-accordion {
+  margin-top: var(--s-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  background: var(--surface-2);
+}
+.stats-summary {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 14px; cursor: pointer; list-style: none; user-select: none;
+}
+.stats-summary::-webkit-details-marker { display: none; }
+.stats-summary::before {
+  content: "▸"; position: absolute; margin-left: -2px; color: var(--accent);
+  transition: transform var(--t-micro);
+}
+.stats-accordion[open] .stats-summary::before { content: "▾"; }
+.stats-summary-title { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-sm); padding-left: 18px; }
+.stats-summary-hint { font-size: var(--fs-xxs); color: var(--text-soft); padding-left: 18px; }
+.stats-body { padding: 0 14px 14px; }
+.stats-body .panel-sub { margin-top: 0; }
 
 /* ── Arbre des Cap Z (propagation source → coéquipiers) ── */
 .ztree { display: flex; flex-direction: column; gap: var(--s-3); align-items: center; width: 100%; }

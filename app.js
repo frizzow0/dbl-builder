@@ -517,7 +517,6 @@
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
-    focusCharSlot: null,     // perso ciblé (profil par perso + arbre Cap Z) ; null = leader/1er
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -2197,7 +2196,9 @@
     const occ = allChar.map((c) => ({ idx: c.slot, character: state.team[c.slot].character }));
     const src = resolveFocusSlot(occ);
     const sel = allChar.find((c) => c.slot === src) || allChar[0];
-    renderBars(globalRadarEl, sel.items, sel.color);
+    // Barres en bleu/indigo : même famille que le « Résumé des effets cumulés »
+    // (items = bleu) et que la carte de total global, distinct de l'orange Cap Z.
+    renderBars(globalRadarEl, sel.items, "#6366f1");
   }
 
   // ===== BILAN CAP Z =====
@@ -2350,13 +2351,11 @@
     return { applied, total, ratio: total > 0 ? applied / total : 0, status };
   }
 
-  // Perso "ciblé" partagé par le profil par perso ET l'arbre des Cap Z :
-  // mémorisé s'il est toujours occupé, sinon le Leader, sinon le 1er occupé.
+  // Perso ciblé = perso analysé (state.activeSlot), partagé par le profil par perso,
+  // l'arbre des Cap Z, le Résumé détaillé et les effets non calculés.
+  // Garanti occupé par ensureActiveSlot() ; fallback défensif sur le 1er occupé.
   function resolveFocusSlot(occupied) {
-    const f = state.focusCharSlot;
-    if (f != null && state.team[f] && state.team[f].character) return f;
-    const lead = effectiveLeaderSlot();
-    if (lead >= 0 && state.team[lead] && state.team[lead].character) return lead;
+    if (occupied.some((c) => c.idx === state.activeSlot)) return state.activeSlot;
     return occupied[0].idx;
   }
 
@@ -2496,10 +2495,9 @@
     focusPickerEl.addEventListener("click", (e) => {
       const chip = e.target.closest("[data-focus-char]");
       if (!chip) return;
-      state.focusCharSlot = +chip.dataset.focusChar;
-      renderFocusPicker();
-      renderGlobalBilan();
-      renderZTree();
+      state.activeSlot = +chip.dataset.focusChar;
+      renderTeamGrid();   // met à jour la ligne active surlignée dans le builder
+      renderResults();    // recalcule global + arbre + résumé détaillé + effets non calculés
     });
   }
 

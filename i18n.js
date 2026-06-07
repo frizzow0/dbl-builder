@@ -34,6 +34,7 @@
     'panel.z.sub':             { fr: 'Total des bonus de Cap Z reçus par l\'équipe. Chaque perso reçoit la sienne + celles des coéquipiers selon les conditions ; le Leader (★) sans restriction.',
                                   en: 'Total Z Ability bonuses received by the team. Each character gets their own + teammates\' based on conditions; the Leader (★) without restriction.' },
     'panel.stats.title':       { fr: 'Résumé des effets cumulés', en: 'Cumulated Effects Summary' },
+    'stats.detail.hint':       { fr: 'détail par stat (items vs Cap Z)', en: 'per-stat detail (items vs Z)' },
     'panel.stats.sub':         { fr: 'Bleu = bonus d\'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.',
                                   en: 'Blue = <em>items</em> bonus. Orange = <em>Z Ability</em> bonus. The equivalent multiplier shows the final gain.' },
     'panel.passifs.title':     { fr: 'Effets non calculés', en: 'Uncalculated Effects' },
@@ -47,7 +48,6 @@
     'nav.build': { fr: 'Équipe',  en: 'Team' },
     'nav.capz':  { fr: 'Cap Z',  en: 'Cap Z' },
     'nav.global':{ fr: 'Global', en: 'Global' },
-    'nav.stats': { fr: 'Stats',  en: 'Stats' },
 
     // ── Dynamique : personnages & team ───────────
     'charmodal.title':      { fr: 'Personnage — Slot {n}', en: 'Character — Slot {n}' },
