@@ -518,6 +518,7 @@
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
     zDetailOpen: false,      // accordéon "Détail par perso" ouvert ?
+    radarCharSlot: null,     // radar "par perso" : null = tous, sinon un slot précis
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -2194,7 +2195,7 @@
     return Math.ceil(v / 500) * 500;
   }
   // series : [{ label, color, values: { cible: gainPct } }]
-  function renderRadar(el, series) {
+  function renderRadar(el, series, opts = {}) {
     if (!el) return;
     const axes = getRadarAxes();
     const hasData = series.some((s) => axes.some((a) => (s.values[a.key] || 0) > 0));
@@ -2221,7 +2222,7 @@
       const pts = axes.map((a, i) => pt(i, r * Math.min((s.values[a.key] || 0) / max, 1)).map((n) => n.toFixed(1)).join(",")).join(" ");
       svg += `<polygon points="${pts}" fill="${s.color}" fill-opacity="${series.length > 1 ? 0.1 : 0.22}" stroke="${s.color}" stroke-width="2" stroke-linejoin="round"/>`;
     });
-    const legend = series.length > 1
+    const legend = (series.length > 1 && !opts.noLegend)
       ? `<div class="radar-legend">${series.map((s) => `<span class="radar-legend-item"><span class="radar-legend-swatch" style="background:${s.color}"></span>${s.label}</span>`).join("")}</div>`
       : "";
     el.innerHTML = `<svg viewBox="0 0 ${size} ${size}" class="radar-svg" preserveAspectRatio="xMidYMid meet">${svg}</svg>`
@@ -2229,6 +2230,34 @@
   }
   const zRadarEl = document.getElementById("z-radar");
   const globalRadarEl = document.getElementById("global-radar");
+
+  // Radar "par perso" avec sélecteur de perso intégré (chips).
+  // allSeries : [{ slot, label, color, values }]
+  function renderGlobalRadar(allSeries) {
+    if (!globalRadarEl) return;
+    if (!allSeries.length) { renderRadar(globalRadarEl, []); return; }
+    const sel = state.radarCharSlot;
+    const selValid = sel != null && allSeries.some((s) => s.slot === sel);
+    const shown = selValid ? allSeries.filter((s) => s.slot === sel) : allSeries;
+    const chip = (active, val, color, label) =>
+      `<button class="radar-chip ${active ? "is-active" : ""}" data-radar-char="${val}" type="button">`
+      + (color ? `<span class="radar-chip-dot" style="background:${color}"></span>` : "")
+      + `${label}</button>`;
+    const chips = `<div class="radar-picker">
+      ${chip(!selValid, "all", "", T('radar.all'))}
+      ${allSeries.map((s) => chip(selValid && s.slot === sel, s.slot, s.color, s.label)).join("")}
+    </div>`;
+    globalRadarEl.innerHTML = chips + `<div class="radar-canvas"></div>`;
+    renderRadar(globalRadarEl.querySelector(".radar-canvas"), shown, { noLegend: true });
+  }
+  if (globalRadarEl) {
+    globalRadarEl.addEventListener("click", (e) => {
+      const chip = e.target.closest("[data-radar-char]");
+      if (!chip) return;
+      state.radarCharSlot = chip.dataset.radarChar === "all" ? null : +chip.dataset.radarChar;
+      renderGlobalBilan();
+    });
+  }
 
   // ===== BILAN CAP Z =====
   const zBilanEl = document.getElementById("z-bilan");
@@ -2486,18 +2515,19 @@
       .filter((s) => s.character);
     if (occupied.length === 0) {
       globalBilanEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
-      renderRadar(globalRadarEl, []);
+      renderGlobalRadar([]);
       return;
     }
 
-    // Radar : un tracé par perso (gain combiné Cap Z + items par stat)
+    // Radar : un tracé par perso (gain combiné Cap Z + items par stat),
+    // avec sélecteur de perso intégré (chips) — voir renderGlobalRadar.
     const radarSeries = occupied.map((slot, idx) => {
       const st = getCombinedStatsFor(slot.idx) || {};
       const values = {};
       for (const k of RADAR_KEYS) values[k] = st[k]?.gainPct || 0;
-      return { label: slot.character.nom.trim(), color: RADAR_COLORS[idx % RADAR_COLORS.length], values };
+      return { slot: slot.idx, label: slot.character.nom.trim(), color: RADAR_COLORS[idx % RADAR_COLORS.length], values };
     });
-    renderRadar(globalRadarEl, radarSeries);
+    renderGlobalRadar(radarSeries);
 
     // Totaux par stat sur toute l'équipe (Cap Z + items combinés).
     const statTotals = {};

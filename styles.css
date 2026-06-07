@@ -344,6 +344,19 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .radar-legend-item { display: flex; align-items: center; gap: 5px; font-size: var(--fs-xxs); color: var(--text-soft); }
 .radar-legend-swatch { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
 .radar-empty { font-size: var(--fs-xs); color: var(--muted); padding: var(--s-4) 0; }
+/* Sélecteur de perso intégré au radar "par perso" */
+.radar-picker { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; width: 100%; }
+.radar-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: var(--r-pill);
+  background: var(--surface-2); border: 1px solid var(--line);
+  font-size: var(--fs-xxs); font-weight: 600; color: var(--text-soft);
+  transition: all var(--t-micro); max-width: 160px;
+}
+.radar-chip .radar-chip-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.radar-chip:hover { border-color: var(--accent-tint-2); color: var(--text); }
+.radar-chip.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.radar-canvas { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); width: 100%; }
 
 /* =====================  6. PANEL  ===================== */
 .panel {

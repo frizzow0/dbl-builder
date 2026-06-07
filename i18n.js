@@ -130,6 +130,7 @@
     'panel.globalradar.sub':   { fr: 'Gain par stat, un tracé par personnage.', en: 'Gain per stat, one trace per character.' },
     'radar.nodata':        { fr: 'Aucune stat boostée pour le moment.', en: 'No boosted stat yet.' },
     'radar.max':           { fr: 'max', en: 'max' },
+    'radar.all':           { fr: 'Tous', en: 'All' },
     'panel.global.sub':   { fr: 'Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).',
                             en: 'Everything included: for each character, received Z Abilities AND equipped items are combined (base/pure/direct layers multiplied).' },
     'global.total.label': { fr: 'Total global (Cap Z + items)', en: 'Grand total (Z + items)' },
