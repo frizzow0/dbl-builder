@@ -222,7 +222,7 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.4), transparent 60%);
   pointer-events: none;
 }
-.brand-text h1 { font-size: var(--fs-lg); line-height: 1.2; }
+.brand-text .brand-title { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-lg); line-height: 1.2; }
 .brand-text .brand-sub {
   margin: 2px 0 0;
   font-size: var(--fs-xs);
@@ -248,6 +248,18 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   }
 }
 .col { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
+
+/* Intro SEO : titre + description (contenu statique indexable, discret au-dessus du builder) */
+.seo-intro { margin: 0 0 calc(var(--s-2) * -1); }
+.seo-intro h1 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(20px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -.02em;
+  margin: 0;
+}
+.seo-intro p {
+  margin: var(--s-2) 0 0; max-width: 80ch;
+  color: var(--text-soft); font-size: var(--fs-sm); line-height: 1.5;
+}
 
 /* Le builder (pleine largeur) en colonne flex : la barre "leader" est poussée tout en bas. */
 .builder-panel { display: flex; flex-direction: column; }

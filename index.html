@@ -17,7 +17,11 @@
   <meta property="og:url"         content="https://dbl-optimizer.com/" />
   <meta property="og:title"       content="DBL Optimizer — Team Builder &amp; Items Optimization" />
   <meta property="og:description" content="Construis ton équipe DBL, optimise tes items et calcule tes Cap Z en temps réel." />
-  <meta property="og:image"       content="https://dbl-optimizer.com/og-image.svg" />
+  <meta property="og:image"       content="https://dbl-optimizer.com/og-image.png" />
+  <meta property="og:image:type"   content="image/png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="DBL Optimizer — Team Builder &amp; Items Optimization pour Dragon Ball Legends" />
   <meta property="og:locale"      content="fr_FR" />
   <meta property="og:site_name"   content="DBL Optimizer" />
 
@@ -25,7 +29,8 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="DBL Optimizer — Team Builder &amp; Items Optimization" />
   <meta name="twitter:description" content="Construis ton équipe DBL, optimise tes items et calcule tes Cap Z en temps réel." />
-  <meta name="twitter:image"       content="https://dbl-optimizer.com/og-image.svg" />
+  <meta name="twitter:image"       content="https://dbl-optimizer.com/og-image.png" />
+  <meta name="twitter:image:alt"   content="DBL Optimizer — Team Builder &amp; Items Optimization pour Dragon Ball Legends" />
 
   <!-- ── Favicon & PWA ──────────────────────────────────── -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -37,6 +42,41 @@
        (script + emplacements retirés — réactivables via git) -->
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ── Google Search Console : décommente et colle ton token (méthode « balise HTML »),
+       ou préfère la vérification par enregistrement DNS TXT au niveau du domaine.
+  <meta name="google-site-verification" content="TON_TOKEN_ICI" /> -->
+
+  <!-- ── Données structurées (Schema.org) ─────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dbl-optimizer.com/#website",
+        "url": "https://dbl-optimizer.com/",
+        "name": "DBL Optimizer",
+        "description": "Team Builder & Items Optimization pour Dragon Ball Legends",
+        "inLanguage": "fr"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://dbl-optimizer.com/#app",
+        "url": "https://dbl-optimizer.com/",
+        "name": "DBL Optimizer",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "description": "Optimiseur d'équipe et d'items pour Dragon Ball Legends : compose tes deux trios, équipe tes items et calcule en temps réel les bonus de Cap Z, le bilan global et la propagation des Cap Z entre coéquipiers.",
+        "inLanguage": ["fr", "en"],
+        "isAccessibleForFree": true,
+        "image": "https://dbl-optimizer.com/og-image.png",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -57,7 +97,7 @@
     <div class="brand">
       <span class="brand-glyph">DBL</span>
       <div class="brand-text">
-        <h1>DBL Optimizer</h1>
+        <div class="brand-title">DBL Optimizer</div>
         <p class="brand-sub">Team Builder &amp; Items Optimization</p>
       </div>
     </div>
@@ -70,6 +110,12 @@
   </header>
 
   <main class="layout">
+
+    <!-- ── Intro (H1 + description : contenu statique indexable par les moteurs) ── -->
+    <section class="seo-intro">
+      <h1 data-i18n="seo.intro.title">Optimiseur d'équipe &amp; d'items Dragon Ball Legends</h1>
+      <p data-i18n-html="seo.intro.text">DBL Optimizer calcule en temps réel les bonus de <strong>Cap Z</strong> et d'<strong>items</strong> de ton équipe <strong>Dragon Ball Legends</strong> : compose tes deux trios, équipe tes items, et visualise les stats cumulées, le bilan global (Cap&nbsp;Z + items) et la propagation des Cap&nbsp;Z entre coéquipiers.</p>
+    </section>
 
     <!-- ============ ZONE DE SAISIE : persos (col 1) + items (col 2) ============ -->
     <section class="panel builder-panel" id="section-build">
@@ -253,12 +299,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=44"></script>
-  <script src="items.js?v=44"></script>
-  <script src="characters.js?v=44"></script>
-  <script src="data.js?v=44"></script>
-  <script src="calc.js?v=44"></script>
-  <script src="app.js?v=44"></script>
+  <script src="i18n.js?v=45"></script>
+  <script src="items.js?v=45"></script>
+  <script src="characters.js?v=45"></script>
+  <script src="data.js?v=45"></script>
+  <script src="calc.js?v=45"></script>
+  <script src="app.js?v=45"></script>
 
   <script>
     (function () {
