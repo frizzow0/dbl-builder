@@ -517,6 +517,7 @@
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
+    treeMode: "global",      // arbre des Cap Z : "global" (matrice) ou "targeted" (1 source)
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -2465,6 +2466,34 @@
     return `<div class="ztree-canvas"><svg class="ztree-svg" viewBox="0 0 ${VBW} ${VBH}" preserveAspectRatio="xMidYMid meet" role="img">${defs}${arrows}${pcts}${nodes}</svg></div>`;
   }
 
+  // Matrice « globale » : chaque ligne = une source, chaque colonne = une cible.
+  // La case [source][cible] est colorée selon la part de la Cap Z reçue.
+  function buildZMatrix(occupied) {
+    const n = occupied.length;
+    const avatar = (slot, cls) => {
+      const ch = state.team[slot].character;
+      const lead = slot === effectiveLeaderSlot();
+      const img = ch.image
+        ? `<img src="${escSvg(ch.image)}" alt="" onerror="this.style.visibility='hidden'"/>`
+        : `<span class="ztm-ph">${escSvg(ch.nom.trim().slice(0, 2))}</span>`;
+      return `<div class="ztm-head ${cls}" data-tree-focus="${slot}" title="${escSvg(ch.nom.trim())}">${img}${lead ? '<span class="ztm-star">★</span>' : ''}</div>`;
+    };
+    let html = `<div class="ztm" style="grid-template-columns: var(--ztm-head) repeat(${n}, minmax(0, 1fr));">`;
+    html += `<div class="ztm-corner">donne&nbsp;↓<br>reçoit&nbsp;→</div>`;
+    for (const t of occupied) html += avatar(t.idx, "ztm-col");
+    for (const s of occupied) {
+      html += avatar(s.idx, "ztm-row");
+      for (const t of occupied) {
+        if (s.idx === t.idx) { html += `<div class="ztm-cell ztm-self" aria-hidden="true"></div>`; continue; }
+        const cov = zCoverageFor(s.idx, t.idx);
+        const label = cov.status === "na" ? "–" : Math.round(cov.ratio * 100) + "%";
+        html += `<button class="ztm-cell ztm-${cov.status}" type="button" data-ztree-edge data-src="${s.idx}" data-tgt="${t.idx}" data-tree-focus="${s.idx}">${label}</button>`;
+      }
+    }
+    html += `</div>`;
+    return html;
+  }
+
   function renderZTree() {
     if (!zTreeEl) return;
     const occupied = state.team.map((s, i) => ({ ...s, idx: i })).filter((s) => s.character);
@@ -2472,20 +2501,41 @@
       zTreeEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
       return;
     }
-    const srcSlot = resolveFocusSlot(occupied);
-    const others = occupied.filter((c) => c.idx !== srcSlot);
-    if (others.length === 0) {
-      zTreeEl.innerHTML = `<div class="radar-empty">${T('ztree.alone')}</div>`;
-      return;
-    }
-
+    const mode = state.treeMode === "targeted" ? "targeted" : "global";
+    const toggle = `<div class="ztree-toggle">
+      <button class="ztree-tog ${mode === "global" ? "is-active" : ""}" data-tree-mode="global" type="button">${T('ztree.mode.global')}</button>
+      <button class="ztree-tog ${mode === "targeted" ? "is-active" : ""}" data-tree-mode="targeted" type="button">${T('ztree.mode.targeted')}</button>
+    </div>`;
     const legend = `<div class="ztree-legend">
       <span><i style="background:${ZTREE_ARROW.full}"></i>${T('ztree.legend.full')}</span>
       <span><i style="background:${ZTREE_ARROW.partial}"></i>${T('ztree.legend.partial')}</span>
       <span><i style="background:${ZTREE_ARROW.none}"></i>${T('ztree.legend.none')}</span>
     </div>`;
 
-    zTreeEl.innerHTML = buildZTreeSVG(srcSlot, others) + legend;
+    let body;
+    if (mode === "global") {
+      body = buildZMatrix(occupied);
+    } else {
+      const srcSlot = resolveFocusSlot(occupied);
+      const others = occupied.filter((c) => c.idx !== srcSlot);
+      body = others.length ? buildZTreeSVG(srcSlot, others) : `<div class="radar-empty">${T('ztree.alone')}</div>`;
+    }
+    zTreeEl.innerHTML = toggle + body + legend;
+  }
+
+  // Toggle global/ciblé + clic sur un avatar ou une case → vue ciblée sur cette source.
+  if (zTreeEl) {
+    zTreeEl.addEventListener("click", (e) => {
+      const tog = e.target.closest("[data-tree-mode]");
+      if (tog) { state.treeMode = tog.dataset.treeMode; renderZTree(); return; }
+      const foc = e.target.closest("[data-tree-focus]");
+      if (foc) {
+        state.activeSlot = +foc.dataset.treeFocus;
+        state.treeMode = "targeted";
+        renderTeamGrid();
+        renderResults();
+      }
+    });
   }
 
   // Sélecteur partagé : un clic met à jour le profil par perso ET l'arbre.

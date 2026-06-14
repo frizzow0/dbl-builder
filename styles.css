@@ -7,16 +7,16 @@
 
 /* =====================  1. TOKENS  ===================== */
 :root {
-  --bg:           #fafafa;
+  --bg:           #f7f5f2;
   --bg-elev:      #ffffff;
   --surface:      #ffffff;
-  --surface-2:    #f5f5f7;
-  --surface-3:    #ecedf0;
-  --line:         #e6e6ea;
-  --line-strong:  #d4d4da;
-  --text:         #0d0d10;
-  --text-soft:    #5b5b66;
-  --muted:        #8a8a94;
+  --surface-2:    #f3f0ea;
+  --surface-3:    #ebe7df;
+  --line:         #e8e3da;
+  --line-strong:  #d8d2c6;
+  --text:         #1c1d22;
+  --text-soft:    #5f5d68;
+  --muted:        #908d97;
 
   --accent:           #ff5722;
   --accent-soft:      #ff7a18;
@@ -91,37 +91,13 @@
   --t-modal:  360ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:           #0c0d11;
-    --bg-elev:      #14161c;
-    --surface:      #16181f;
-    --surface-2:    #1d2029;
-    --surface-3:    #262a35;
-    --line:         #23262f;
-    --line-strong:  #353945;
-    --text:         #f4f5f8;
-    --text-soft:    #b4b6bf;
-    --muted:        #80838f;
-
-    --accent-tint:    rgba(255, 122, 24, .10);
-    --accent-tint-2:  rgba(255, 122, 24, .18);
-
-    --shadow-1: 0 1px 2px rgba(0,0,0,.4);
-    --shadow-2: 0 6px 24px rgba(0,0,0,.45);
-    --shadow-3: 0 12px 48px rgba(0,0,0,.6);
-    --shadow-accent: 0 10px 32px rgba(255,87,34,.30);
-
-    --good-tint:   rgba(22, 163, 74, .18);
-    --warn-tint:   rgba(217, 119, 6, .18);
-    --danger-tint: rgba(220, 38, 38, .18);
-  }
-}
+/* Thème clair chaleureux forcé (indépendant du réglage clair/sombre de l'OS). */
 
 /* =====================  2. RESET / BASE  ===================== */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html {
+  color-scheme: light;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
@@ -494,6 +470,44 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 .ztree-tip-cond { font-size: 10px; color: var(--text-soft); background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-pill); padding: 0 6px; }
 .ztree-tip-empty { color: var(--muted); }
 
+/* ── Bascule Global / Ciblé ── */
+.ztree-toggle { display: inline-flex; gap: 4px; padding: 4px; border-radius: var(--r-pill); background: var(--surface-2); border: 1px solid var(--line); }
+.ztree-tog {
+  padding: 6px 14px; border-radius: var(--r-pill); border: 0; background: transparent;
+  font-family: var(--font-display); font-size: var(--fs-xs); font-weight: 700; color: var(--text-soft);
+  cursor: pointer; transition: color var(--t-micro), background var(--t-micro);
+}
+.ztree-tog:hover { color: var(--text); }
+.ztree-tog.is-active { background: var(--accent); color: #fff; box-shadow: var(--shadow-accent); }
+
+/* ── Matrice (vue globale) : sources en lignes, cibles en colonnes ── */
+.ztm { display: grid; gap: 5px; width: 100%; --ztm-head: 46px; }
+.ztm-corner {
+  font-size: 9px; line-height: 1.25; font-weight: 700; color: var(--muted);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.ztm-head { position: relative; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.ztm-head img, .ztm-ph {
+  width: 38px; height: 38px; border-radius: 50%; object-fit: cover;
+  background: var(--surface-3); border: 2px solid var(--line-strong);
+  transition: transform var(--t-micro), border-color var(--t-micro);
+}
+.ztm-ph { display: grid; place-items: center; font-size: var(--fs-xs); font-weight: 700; color: var(--text-soft); text-transform: uppercase; }
+.ztm-head:hover img, .ztm-head:hover .ztm-ph { transform: scale(1.1); border-color: var(--accent); }
+.ztm-star { position: absolute; top: -3px; right: 0; font-size: 11px; color: var(--accent); text-shadow: 0 1px 2px rgba(0,0,0,.3); }
+.ztm-cell {
+  display: flex; align-items: center; justify-content: center; min-height: 38px;
+  border: 0; border-radius: var(--r-2); color: #fff;
+  font-family: var(--font-display); font-size: var(--fs-xs); font-weight: 700;
+  cursor: pointer; transition: transform var(--t-micro), filter var(--t-micro), box-shadow var(--t-micro);
+}
+.ztm-cell:hover { transform: scale(1.08); filter: brightness(1.06); box-shadow: var(--shadow-2); z-index: 1; }
+.ztm-full    { background: #22c55e; }
+.ztm-partial { background: #eab308; }
+.ztm-none    { background: #ef4444; }
+.ztm-na      { background: var(--surface-3); color: var(--muted); cursor: pointer; }
+.ztm-self    { background: repeating-linear-gradient(45deg, var(--surface-2), var(--surface-2) 5px, var(--surface-3) 5px, var(--surface-3) 10px); cursor: default; }
+
 /* =====================  6. PANEL  ===================== */
 .panel {
   background: var(--surface);
@@ -793,9 +807,6 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   margin-left: 4px;
   font-size: var(--fs-xxs);
   font-weight: 600;
-}
-@media (prefers-color-scheme: dark) {
-  .pill-count { background: rgba(255,255,255,.10); }
 }
 .char-filter-pill.active .pill-count { background: rgba(255,255,255,.2); }
 
@@ -1593,13 +1604,6 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   background: linear-gradient(90deg, rgba(168,85,247,.06), transparent 40%), var(--surface-2);
 }
 .stat-group-utilitaire .stat-group-title { color: #a855f7; }
-
-@media (prefers-color-scheme: dark) {
-  .stat-group-vie       { background: linear-gradient(90deg, rgba(22,163,74,.10),  transparent 40%), var(--surface-2); }
-  .stat-group-attaque   { background: linear-gradient(90deg, rgba(229,57,53,.10),  transparent 40%), var(--surface-2); }
-  .stat-group-defense   { background: linear-gradient(90deg, rgba(46,125,255,.10), transparent 40%), var(--surface-2); }
-  .stat-group-utilitaire{ background: linear-gradient(90deg, rgba(168,85,247,.10), transparent 40%), var(--surface-2); }
-}
 .stat-group-rows { display: flex; flex-direction: column; gap: 2px; }
 .stat-row {
   padding: var(--s-2);
@@ -2314,6 +2318,29 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   pointer-events: none;
 }
 
+/* ── Motion premium (thème clair) : entrées douces + survol « lift » ── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.seo-intro { animation: fadeUp var(--t-entry) var(--ease-out-expo) both; }
+.combo-row { animation: fadeUp var(--t-entry) var(--ease-out-expo) both; animation-delay: 80ms; }
+
+/* Survol des cartes de résultats : léger soulèvement + ombre plus marquée */
+.results-row > .panel,
+.combo-panels > .panel {
+  transition: transform var(--t-hover) var(--ease-out-expo),
+              box-shadow var(--t-hover) var(--ease-out-expo),
+              border-color var(--t-hover);
+}
+.results-row > .panel:hover,
+.combo-panels > .panel:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
+}
+
+/* Retour tactile au clic */
+.radar-chip:active,
+.ztree-tog:active,
+.builder-z-pill:active { transform: scale(.95); }
+
 /* ── prefers-reduced-motion : désactivation totale ──────────────── */
 @media (prefers-reduced-motion: reduce) {
   .panel[data-motion] {
@@ -2324,6 +2351,10 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   .stat-row-split      { animation: none !important; }
   .stat-cell.is-flashing { animation: none !important; }
   .slot-content.is-popping { animation: none !important; }
+  .seo-intro, .combo-row { animation: none !important; }
+  .results-row > .panel:hover,
+  .combo-panels > .panel:hover { transform: none !important; box-shadow: var(--shadow-1) !important; }
+  .radar-chip:active, .ztree-tog:active, .builder-z-pill:active { transform: none !important; }
 }
 
 /* ── Touch targets : hauteur minimum 44px sur mobile ─────────────── */

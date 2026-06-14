@@ -132,6 +132,8 @@
     'panel.ztree.sub':     { fr: 'Du perso ciblé vers ses coéquipiers : vert = 100 % de sa Cap Z reçue, jaune = partiel, rouge = 0 %.',
                              en: 'From the targeted character to teammates: green = 100% of their Z Ability received, yellow = partial, red = 0%.' },
     'ztree.alone':         { fr: 'Ajoute des coéquipiers pour voir la propagation.', en: 'Add teammates to see propagation.' },
+    'ztree.mode.global':   { fr: 'Vue globale', en: 'Overview' },
+    'ztree.mode.targeted': { fr: 'Vue ciblée', en: 'Focused' },
     'ztree.legend.full':   { fr: '100 % reçu', en: '100% received' },
     'ztree.legend.partial':{ fr: 'Partiel', en: 'Partial' },
     'ztree.legend.none':   { fr: '0 % reçu', en: '0% received' },
