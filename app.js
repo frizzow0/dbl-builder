@@ -313,7 +313,8 @@
       const flat = desc.replace(/\r?\n/g, " ").replace(/\s+/g, " ").trim();
       if (/ - OR - /.test(flat)) return null;
       // Format 1 : "Augmente de X~Y% STAT [si/par COND]"
-      let m = flat.match(/^Augmente de\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%\s*(.+)$/i);
+      // %  optionnel après la borne basse : le site écrit "8.00% ~ 20.00%" depuis 2026.
+      let m = flat.match(/^Augmente de\s+([\d.,]+)\s*%?\s*~\s*([\d.,]+)\s*%\s*(.+)$/i);
       if (m) {
         const vmin = parseFloat(m[1].replace(",", "."));
         const vmax = parseFloat(m[2].replace(",", "."));
@@ -326,7 +327,7 @@
       }
       // Format 2 : "Si/Quand … fait/font partie des combattants de l'équipe, STAT X~Y%"
       //   (condition de composition d'équipe placée en TÊTE)
-      m = flat.match(/^(?:si|quand)\b(.+?f(?:ait|ont) partie des combattants de l['’]équipe)\s*,\s*(.+?)\s+([\d.,]+)\s*~\s*([\d.,]+)\s*%?\.?$/i);
+      m = flat.match(/^(?:si|quand)\b(.+?f(?:ait|ont) partie des combattants de l['’]équipe)\s*,\s*(.+?)\s+([\d.,]+)\s*%?\s*~\s*([\d.,]+)\s*%?\.?$/i);
       if (m) {
         if (/\bcontre\b/i.test(flat)) return null;
         const cond = buildCond(m[1]);
@@ -433,7 +434,9 @@
     const alts = [];
     for (const part of parts) {
       // Pattern : "LABEL X.XX ~ Y.YY%"  (point ou virgule décimale)
-      const m = part.trim().match(/^(.+?)\s+(-?\d+(?:[.,]\d+)?)\s*~\s*(-?\d+(?:[.,]\d+)?)\s*%?\s*$/i);
+      // Le site écrit désormais "4.00% ~ 10.00%" (un % après chaque borne) là où il
+      // écrivait "4.00 ~ 10.00%" → le % de la borne basse est optionnel.
+      const m = part.trim().match(/^(.+?)\s+(-?\d+(?:[.,]\d+)?)\s*%?\s*~\s*(-?\d+(?:[.,]\d+)?)\s*%?\s*$/i);
       if (!m) return null;
       const label = m[1].trim();
       const key = labelToKey[label.toLowerCase()];
