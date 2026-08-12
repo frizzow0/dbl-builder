@@ -1,0 +1,15 @@
+# Cloudflare Pages — en-têtes personnalisés
+# Doc : https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+# Le HTML porte les liens de cache-busting (?v=N) vers les scripts et styles :
+# il doit toujours être revalidé, sinon un HTML périmé chargerait d'anciens assets.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
