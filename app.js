@@ -1366,7 +1366,10 @@
     // Cap Z + items vivent dans un panneau qui se déroule vers la droite au survol
     // de la ligne (ou quand elle est active). Cf. .builder-row-panel dans styles.css.
     const panel = `<div class="builder-row-panel">${slot.character ? zTierHTML(charSlot) : ""}${items}</div>`;
-    return `<div class="builder-row ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${panel}</div>`;
+    // La couleur d'élément est portée par la LIGNE : la tuile et son dépliant
+    // héritent ainsi tous deux de --elem (cf. .builder-row.elem-* dans styles.css).
+    const elementClass = slot.character ? `elem-${(slot.character.element || "").toLowerCase()}` : "";
+    return `<div class="builder-row ${elementClass} ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${panel}</div>`;
   }
 
   // Nom conservé (renderTeamGrid) pour ne pas casser les appels existants.

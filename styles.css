@@ -409,7 +409,7 @@ html { scroll-behavior: smooth; }
     flex-wrap: nowrap; gap: var(--s-4);
     opacity: 0; overflow: hidden;
     background: var(--surface-2);
-    border: 1px solid var(--line); border-left: 0;
+    border: 2px solid var(--line); border-left: 0;
     border-radius: 0 var(--r-3) var(--r-3) 0;
     transition: width var(--t-hover) var(--ease-out-expo),
                 padding var(--t-hover) var(--ease-out-expo),
@@ -419,13 +419,13 @@ html { scroll-behavior: smooth; }
   .builder-row:hover > .builder-row-panel,
   .builder-row:focus-within > .builder-row-panel {
     width: 290px; padding: var(--s-4) var(--s-3); opacity: 1;
-    border-color: var(--accent-tint-2);
+    border-color: var(--elem, var(--accent-tint-2));
   }
   /* La tuile ouvre son flanc droit : plus de coupure entre elle et le dépliant. */
   .builder-row:hover > .builder-char,
   .builder-row:focus-within > .builder-char {
     border-top-right-radius: 0; border-bottom-right-radius: 0;
-    border-right-color: var(--accent-tint-2);
+    border-right-color: transparent;
   }
 
   /* Cap Z et équipements : même axe centré, séparés d'un filet. */
@@ -2566,7 +2566,7 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   gap: var(--s-2);
   padding: 8px 10px;
   background: var(--surface-2);
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
   border-radius: var(--r-3);
   transition: border-color var(--t-micro), background var(--t-micro);
   min-width: 0;
@@ -2578,7 +2578,7 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   color: var(--text-soft);
 }
 .builder-char.is-empty:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
-.builder-row.is-active .builder-char { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent-tint-2) inset; }
+.builder-row.is-active .builder-char { box-shadow: inset 0 0 0 2px var(--accent-tint-2); }
 
 .builder-char-art { flex: 0 0 auto; display: flex; }
 .builder-char-img {
@@ -2656,15 +2656,26 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 .builder-leader:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
 .builder-leader.is-leader { color: #fff; background: var(--accent); border-color: var(--accent); box-shadow: var(--shadow-accent); }
 .builder-leader.is-leader-disabled { opacity: .35; }
-.builder-char:has(.builder-leader.is-leader) { border-color: var(--accent); background: var(--accent-tint); }
+.builder-char:has(.builder-leader.is-leader) { background: var(--accent-tint); }
 
-/* Élément (liseré gauche coloré) */
-.builder-char.elem-blu { box-shadow: inset 3px 0 0 #3b82f6; }
-.builder-char.elem-red { box-shadow: inset 3px 0 0 #ef4444; }
-.builder-char.elem-grn { box-shadow: inset 3px 0 0 #22c55e; }
-.builder-char.elem-yel { box-shadow: inset 3px 0 0 #eab308; }
-.builder-char.elem-pur { box-shadow: inset 3px 0 0 #a855f7; }
-.builder-char.elem-lgt { box-shadow: inset 3px 0 0 #f5f5f5; }
+/* ── Couleur d'élément : elle cercle la tuile ─────────────────────────────
+   --elem est posé sur la LIGNE, pas sur la tuile : la tuile ET son dépliant
+   en héritent, donc la carte ouverte est cerclée d'un seul trait continu. */
+.builder-row.elem-blu { --elem: #3b82f6; }
+.builder-row.elem-red { --elem: #ef4444; }
+.builder-row.elem-grn { --elem: #16a34a; }
+.builder-row.elem-yel { --elem: #e0a800; }
+.builder-row.elem-pur { --elem: #a855f7; }
+/* LGT vaut « blanc » dans le jeu : invisible sur fond clair, rendu en ardoise. */
+.builder-row.elem-lgt { --elem: #7c8699; }
+
+.builder-row > .builder-char { border-color: var(--elem, var(--line)); }
+.builder-row > .builder-char.is-empty:hover { border-color: var(--accent); }
+/* Pastille de palier et chevron s'alignent sur la couleur du personnage. */
+.builder-row[class*="elem-"] .builder-char-ztag {
+  color: var(--elem); border-color: var(--elem);
+  background: color-mix(in srgb, var(--elem) 12%, transparent);
+}
 
 /* Colonne 2 : icônes + flèche, qui remplissent la hauteur de la ligne */
 .builder-items {
