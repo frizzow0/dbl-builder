@@ -41,7 +41,7 @@
   <!-- ── Google AdSense : désactivé pour le moment ──────────
        (script + emplacements retirés — réactivables via git) -->
 
-  <link rel="stylesheet" href="styles.css?v=48" />
+  <link rel="stylesheet" href="styles.css?v=49" />
 
   <!-- ── Google Search Console : décommente et colle ton token (méthode « balise HTML »),
        ou préfère la vérification par enregistrement DNS TXT au niveau du domaine.
@@ -124,11 +124,6 @@
         <span class="panel-hint" data-i18n="panel.builder.hint">clique sur un perso vide pour l'ajouter · choisis ses items en face</span>
       </h2>
 
-      <div class="builder-head" aria-hidden="true">
-        <span class="builder-head-col" data-i18n="builder.col.persos">Personnages</span>
-        <span class="builder-head-col" data-i18n="builder.col.items">Items équipés (max 3)</span>
-      </div>
-
       <div id="builder-grid" class="builder-grid"></div>
 
       <!-- Conditions d'équipe (repliable) -->
@@ -152,8 +147,16 @@
       </div>
     </section>
 
-    <!-- ============ RÉSULTATS — ligne 1 : Bilan Cap Z | Effets non calculés ============ -->
-    <section class="results-row">
+    <!-- Descente vers la section 2 -->
+    <div class="section-jump">
+      <a class="section-jump-btn" href="#step-capz">
+        <span data-i18n="jump.capz">Voir le bilan Cap Z</span>
+        <span class="section-jump-arrow" aria-hidden="true">↓</span>
+      </a>
+    </div>
+
+    <!-- ============ SECTION 2 : Bilan Cap Z · Profil des stats · Effets non calculés ============ -->
+    <section class="results-row" id="step-capz">
 
       <div class="panel" id="section-z">
         <h2 class="panel-title" data-i18n="panel.z.title">Bilan global (Cap Z)</h2>
@@ -176,8 +179,16 @@
 
     </section>
 
-    <!-- ====== RÉSULTATS — ligne 2 : Cap Z + items | Arbre (sélecteur de perso partagé) ====== -->
-    <section class="combo-row">
+    <!-- Descente vers la section 3 -->
+    <div class="section-jump">
+      <a class="section-jump-btn" href="#step-combo">
+        <span data-i18n="jump.combo">Voir le bilan Cap Z + items</span>
+        <span class="section-jump-arrow" aria-hidden="true">↓</span>
+      </a>
+    </div>
+
+    <!-- ====== SECTION 3 : Cap Z + items · Profil par perso · Arbre des Cap Z ====== -->
+    <section class="combo-row" id="step-combo">
       <div class="focus-bar">
         <span class="focus-bar-label" data-i18n="focus.label">Personnage ciblé</span>
         <div id="focus-picker" class="radar-picker"></div>
@@ -303,12 +314,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=48"></script>
-  <script src="items.js?v=48"></script>
-  <script src="characters.js?v=48"></script>
-  <script src="data.js?v=48"></script>
-  <script src="calc.js?v=48"></script>
-  <script src="app.js?v=48"></script>
+  <script src="i18n.js?v=49"></script>
+  <script src="items.js?v=49"></script>
+  <script src="characters.js?v=49"></script>
+  <script src="data.js?v=49"></script>
+  <script src="calc.js?v=49"></script>
+  <script src="app.js?v=49"></script>
 
   <script>
     (function () {

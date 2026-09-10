@@ -1325,8 +1325,6 @@
     const img = c.image
       ? `<img class="builder-char-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
       : `<div class="builder-char-img"></div>`;
-    const zPills = ["I", "II", "III", "IV"].map((lab, idx) =>
-      `<button class="builder-z-pill ${slot.zTier === idx + 1 ? 'active' : ''}" data-ztier="${charSlot}:${idx + 1}" type="button" title="Cap Z ${lab}">${lab}</button>`).join("");
     return `<div class="builder-char ${elementClass}">
       <button class="builder-leader ${isLeader ? 'is-leader' : ''} ${state.noLeader ? 'is-leader-disabled' : ''}" data-leader="${charSlot}" title="${T('team.leader.title')}" type="button">★</button>
       ${img}
@@ -1338,10 +1336,17 @@
           <button class="builder-char-act is-danger" data-remove-char="${charSlot}" title="${T('slot.remove')}" type="button">✕</button>
         </div>
       </div>
-      <div class="builder-z-large">
-        <span class="builder-z-large-label">${T('z.capz.label')}</span>
-        <div class="builder-z">${zPills}</div>
-      </div>
+    </div>`;
+  }
+
+  // Sélecteur de palier Cap Z — vit désormais dans le panneau qui se déroule au survol.
+  function zTierHTML(charSlot) {
+    const slot = state.team[charSlot];
+    const pills = ["I", "II", "III", "IV"].map((lab, idx) =>
+      `<button class="builder-z-pill ${slot.zTier === idx + 1 ? 'active' : ''}" data-ztier="${charSlot}:${idx + 1}" type="button" title="Cap Z ${lab}">${lab}</button>`).join("");
+    return `<div class="builder-z-large">
+      <span class="builder-z-large-label">${T('z.capz.label')}</span>
+      <div class="builder-z">${pills}</div>
     </div>`;
   }
 
@@ -1357,7 +1362,10 @@
            <div class="builder-item-icons">${[0, 1, 2].map(() => `<span class="builder-item-icon empty">＋</span>`).join("")}</div>
            <span class="builder-items-details">▾</span>
          </div>`;
-    return `<div class="builder-row ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${items}</div>`;
+    // Cap Z + items vivent dans un panneau qui se déroule vers la droite au survol
+    // de la ligne (ou quand elle est active). Cf. .builder-row-panel dans styles.css.
+    const panel = `<div class="builder-row-panel">${slot.character ? zTierHTML(charSlot) : ""}${items}</div>`;
+    return `<div class="builder-row ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${panel}</div>`;
   }
 
   // Nom conservé (renderTeamGrid) pour ne pas casser les appels existants.

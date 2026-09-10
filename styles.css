@@ -237,6 +237,41 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
   color: var(--text-soft); font-size: var(--fs-sm); line-height: 1.5;
 }
 
+/* ── Navigation entre les 3 sections de la page (landing → bilans) ── */
+html { scroll-behavior: smooth; }
+#section-build, #step-capz, #step-combo { scroll-margin-top: 84px; }
+
+.section-jump { display: flex; justify-content: center; margin: var(--s-3) 0 var(--s-2); }
+.section-jump-btn {
+  display: inline-flex; align-items: center; gap: var(--s-2);
+  padding: 12px 26px; border-radius: var(--r-pill);
+  background: var(--surface); border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-1);
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-md);
+  color: var(--text); text-decoration: none;
+  transition: transform var(--t-hover) var(--ease-out-expo),
+              box-shadow var(--t-hover) var(--ease-out-expo),
+              border-color var(--t-hover), color var(--t-hover);
+}
+.section-jump-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.section-jump-btn:active { transform: translateY(0); }
+.section-jump-arrow {
+  display: inline-block; font-size: 15px; line-height: 1;
+  animation: jumpBounce 1.9s var(--ease-out-expo) infinite;
+}
+@keyframes jumpBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .section-jump-arrow { animation: none; }
+  .section-jump-btn:hover, .section-jump-btn:active { transform: none; }
+}
+
 /* ── Pages de contenu éditorial (guides, glossaire, FAQ) ── */
 .doc { max-width: 820px; margin: 0 auto; padding: var(--s-6) var(--s-4) calc(var(--s-9) + 80px); }
 .doc-back { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-sm); font-weight: 600; color: var(--accent); text-decoration: none; margin-bottom: var(--s-5); }
@@ -261,35 +296,16 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 /* Le builder (pleine largeur) en colonne flex : la barre "leader" est poussée tout en bas. */
 .builder-panel { display: flex; flex-direction: column; }
 
-/* Colonnes internes du builder : perso (flexible) | items (largeur du contenu) */
-:root { --builder-cols: minmax(0, 1fr) max-content; }
-
-/* ── Zone de saisie : 2 colonnes (persos | items) alignées par ligne ── */
+/* ── Zone de saisie : onglets persos verticaux + panneau qui se déroule ── */
 .builder-panel { width: 100%; }
+/* L'en-tête « Personnages | Items » n'a plus de sens : les items sont dépliables. */
 .builder-head { display: none; }
-@media (min-width: 900px) {
-  .builder-head {
-    display: grid;
-    grid-template-columns: var(--builder-cols);
-    gap: var(--s-4);
-    margin-bottom: var(--s-2);
-    padding: 0 var(--s-2);
-  }
-  .builder-head-col {
-    font-family: var(--font-display);
-    font-size: var(--fs-xxs);
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-weight: 700;
-    color: var(--text-soft);
-  }
-}
-/* 1 colonne par défaut ; 2 colonnes (Trio A | Trio B) sur écran large pour
-   utiliser la largeur sans laisser de grand vide entre le nom et les Cap Z. */
+
+/* 1 colonne par défaut ; 2 colonnes (Trio A | Trio B) seulement quand chaque
+   colonne peut accueillir l'onglet ET son panneau déplié sans être à l'étroit. */
 .builder-grid { display: grid; grid-template-columns: 1fr; gap: var(--s-3); }
-@media (min-width: 1280px) {
+@media (min-width: 1500px) {
   .builder-grid { grid-template-columns: 1fr 1fr; gap: var(--s-5); align-items: start; }
-  .builder-head { display: none; } /* l'en-tête unique ne s'aligne plus sur 2 colonnes */
 }
 .builder-trio { display: flex; flex-direction: column; gap: var(--s-2); min-width: 0; }
 
@@ -310,20 +326,68 @@ h3 { font-size: var(--fs-lg); font-weight: 600; margin: 0; }
 }
 .builder-trio > .builder-trio-label:first-child { margin-top: 0; }
 
-/* Une ligne = [carte perso | 3 slots items] ; flex:1 1 0 → les lignes se
-   partagent l'espace vertical à parts ÉGALES et comblent parfaitement la grille. */
+/* Une ligne = [onglet perso] + [panneau Cap Z + items qui se déroule à droite].
+   Replié par défaut (max-width:0), il s'ouvre au survol, au focus clavier, ou
+   quand la ligne correspond au perso analysé. */
 .builder-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--s-2);
+  display: flex;
   align-items: stretch;
-  min-height: 64px;
+  min-height: 68px;
 }
-@media (min-width: 900px) {
-  .builder-row {
-    grid-template-columns: var(--builder-cols);
-    gap: var(--s-4);
+/* Largeur d'onglet stable : à l'ouverture, le panneau s'AJOUTE à droite au lieu
+   de comprimer l'onglet (sinon le nom se retronque et l'ensemble sautille). */
+.builder-row > .builder-char { flex: 0 1 300px; min-width: 0; }
+.builder-row-panel {
+  display: flex; align-items: center; gap: var(--s-3);
+  flex: 0 0 auto;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width var(--t-hover) var(--ease-out-expo),
+              opacity var(--t-hover) var(--ease-out-expo),
+              margin-left var(--t-hover) var(--ease-out-expo);
+}
+.builder-row:hover > .builder-row-panel,
+.builder-row:focus-within > .builder-row-panel,
+.builder-row.is-active > .builder-row-panel {
+  max-width: 470px;
+  opacity: 1;
+  margin-left: var(--s-3);
+}
+
+/* Indice visuel : chevron qui s'anime à l'ouverture du panneau. */
+.builder-char::after {
+  content: "›";
+  position: absolute; right: 10px; bottom: 4px;
+  font-size: 17px; line-height: 1; color: var(--muted);
+  transition: transform var(--t-hover) var(--ease-out-expo), color var(--t-hover);
+}
+.builder-row:hover > .builder-char::after,
+.builder-row:focus-within > .builder-char::after,
+.builder-row.is-active > .builder-char::after { transform: translateX(3px); color: var(--accent); }
+.builder-char.is-empty::after { content: none; }
+
+/* Dans le panneau, les icônes d'items ont une taille fixe (plus de calage sur la ligne). */
+.builder-row-panel .builder-items { align-items: center; }
+.builder-row-panel .builder-item-icon { width: 50px; height: 50px; min-height: 0; }
+.builder-row-panel .builder-z-pill { min-width: 34px; padding: 8px 0; }
+
+/* Appareils tactiles (aucun survol possible) : le panneau reste ouvert. */
+@media (hover: none) {
+  .builder-row-panel { max-width: none; opacity: 1; margin-left: var(--s-3); }
+  .builder-char::after { content: none; } /* rien à déplier : le panneau est déjà ouvert */
+}
+/* Petit écran : le panneau passe sous l'onglet et reste visible. */
+@media (max-width: 780px) {
+  .builder-row { flex-wrap: wrap; }
+  .builder-char::after { content: none; }
+  .builder-row-panel {
+    max-width: none; opacity: 1; margin-left: 0; width: 100%;
+    padding-top: var(--s-2); flex-wrap: wrap;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .builder-row-panel, .builder-char::after { transition: none !important; }
 }
 
 /* ── Rangée de résultats : panneaux côte à côte ── */
