@@ -296,98 +296,120 @@ html { scroll-behavior: smooth; }
 /* Le builder (pleine largeur) en colonne flex : la barre "leader" est poussée tout en bas. */
 .builder-panel { display: flex; flex-direction: column; }
 
-/* ── Zone de saisie : onglets persos verticaux + panneau qui se déroule ── */
+/* ── Zone de saisie : 6 tuiles verticales en accordéon horizontal ──────────
+   Base (petit écran / tactile) : tuiles empilées, panneau toujours visible.
+   Grand écran AVEC survol : 6 rectangles verticaux côte à côte ; au survol, le
+   panneau se déplie à droite de la tuile et resserre/décale les autres. */
 .builder-panel { width: 100%; }
-/* L'en-tête « Personnages | Items » n'a plus de sens : les items sont dépliables. */
 .builder-head { display: none; }
 
-/* 1 colonne par défaut ; 2 colonnes (Trio A | Trio B) seulement quand chaque
-   colonne peut accueillir l'onglet ET son panneau déplié sans être à l'étroit. */
-.builder-grid { display: grid; grid-template-columns: 1fr; gap: var(--s-3); }
-@media (min-width: 1500px) {
-  .builder-grid { grid-template-columns: 1fr 1fr; gap: var(--s-5); align-items: start; }
-}
+.builder-grid { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
 .builder-trio { display: flex; flex-direction: column; gap: var(--s-2); min-width: 0; }
+.builder-trio-cols { display: flex; flex-direction: column; gap: var(--s-2); min-width: 0; }
 
-/* Bandeau de séparation de trio */
+/* Bandeau de trio */
 .builder-trio-label {
   display: flex; align-items: center; gap: var(--s-3);
   font-family: var(--font-display);
-  font-size: var(--fs-xs);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+  font-size: var(--fs-xs); font-weight: 800;
+  text-transform: uppercase; letter-spacing: .1em;
   color: var(--accent);
-  margin: var(--s-3) 0 2px;
+  margin: 0 0 2px;
 }
 .builder-trio-label::after {
   content: ""; flex: 1; height: 1px;
   background: linear-gradient(90deg, var(--accent-tint-2), transparent);
 }
-.builder-trio > .builder-trio-label:first-child { margin-top: 0; }
 
-/* Une ligne = [onglet perso] + [panneau Cap Z + items qui se déroule à droite].
-   Replié par défaut (max-width:0), il s'ouvre au survol, au focus clavier, ou
-   quand la ligne correspond au perso analysé. */
-.builder-row {
-  display: flex;
-  align-items: stretch;
-  min-height: 68px;
-}
-/* Largeur d'onglet stable : à l'ouverture, le panneau s'AJOUTE à droite au lieu
-   de comprimer l'onglet (sinon le nom se retronque et l'ensemble sautille). */
-.builder-row > .builder-char { flex: 0 1 300px; min-width: 0; }
+/* Une colonne = tuile perso + panneau Cap Z/items */
+.builder-row { display: flex; flex-wrap: wrap; align-items: stretch; min-height: 68px; min-width: 0; }
+.builder-row > .builder-char { flex: 1 1 auto; min-width: 0; }
 .builder-row-panel {
   display: flex; align-items: center; gap: var(--s-3);
-  flex: 0 0 auto;
-  max-width: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-width var(--t-hover) var(--ease-out-expo),
-              opacity var(--t-hover) var(--ease-out-expo),
-              margin-left var(--t-hover) var(--ease-out-expo);
+  width: 100%; padding-top: var(--s-2); flex-wrap: wrap;
 }
-.builder-row:hover > .builder-row-panel,
-.builder-row:focus-within > .builder-row-panel,
-.builder-row.is-active > .builder-row-panel {
-  max-width: 470px;
-  opacity: 1;
-  margin-left: var(--s-3);
-}
-
-/* Indice visuel : chevron qui s'anime à l'ouverture du panneau. */
-.builder-char::after {
-  content: "›";
-  position: absolute; right: 10px; bottom: 4px;
-  font-size: 17px; line-height: 1; color: var(--muted);
-  transition: transform var(--t-hover) var(--ease-out-expo), color var(--t-hover);
-}
-.builder-row:hover > .builder-char::after,
-.builder-row:focus-within > .builder-char::after,
-.builder-row.is-active > .builder-char::after { transform: translateX(3px); color: var(--accent); }
-.builder-char.is-empty::after { content: none; }
-
-/* Dans le panneau, les icônes d'items ont une taille fixe (plus de calage sur la ligne). */
-.builder-row-panel .builder-items { align-items: center; }
 .builder-row-panel .builder-item-icon { width: 50px; height: 50px; min-height: 0; }
 .builder-row-panel .builder-z-pill { min-width: 34px; padding: 8px 0; }
 
-/* Appareils tactiles (aucun survol possible) : le panneau reste ouvert. */
-@media (hover: none) {
-  .builder-row-panel { max-width: none; opacity: 1; margin-left: var(--s-3); }
-  .builder-char::after { content: none; } /* rien à déplier : le panneau est déjà ouvert */
-}
-/* Petit écran : le panneau passe sous l'onglet et reste visible. */
-@media (max-width: 780px) {
-  .builder-row { flex-wrap: wrap; }
-  .builder-char::after { content: none; }
-  .builder-row-panel {
-    max-width: none; opacity: 1; margin-left: 0; width: 100%;
-    padding-top: var(--s-2); flex-wrap: wrap;
+/* ── Accordéon horizontal : uniquement si l'appareil sait survoler ──────────
+   (sur tactile, aucun survol n'est possible → on garde l'empilement ci-dessus) */
+@media (min-width: 1100px) and (hover: hover) {
+  /* La composition d'équipe occupe toute la hauteur de la landing page. */
+  #section-build { min-height: max(520px, calc(100vh - 240px)); }
+  .builder-grid { flex-direction: row; flex: 1; gap: var(--s-5); align-items: stretch; min-height: 0; }
+  /* Demi-largeurs égales, SAUF que le trio contenant la colonne ouverte reçoit
+     en plus la largeur du dépliant : les 6 tuiles se resserrent alors de façon
+     uniforme, au lieu que seul le trio concerné soit comprimé. */
+  .builder-trio {
+    flex: 1 1 0; min-height: 0; min-width: 0;
+    transition: flex-basis var(--t-hover) var(--ease-out-expo);
   }
+  .builder-trio:has(.builder-row:hover),
+  .builder-trio:has(.builder-row:focus-within),
+  .builder-trio:has(.builder-row.is-active) { flex-basis: 298px; }
+  .builder-trio-cols { flex-direction: row; flex: 1; gap: var(--s-2); min-height: 0; }
+  /* Chaque colonne se partage la largeur à parts égales. La colonne ouverte
+     reçoit EN PLUS la largeur du dépliant (flex-basis) : son panneau s'ajoute
+     au lieu d'écraser sa tuile, et les autres colonnes se resserrent/décalent. */
+  .builder-row {
+    flex-wrap: nowrap; flex: 1 1 0; min-width: 0;
+    transition: flex-basis var(--t-hover) var(--ease-out-expo);
+  }
+  .builder-row:hover,
+  .builder-row:focus-within,
+  .builder-row.is-active { flex-basis: 298px; }
+
+  /* Les 6 tuiles se partagent la largeur : à l'ouverture d'un panneau, elles se
+     resserrent et glissent — d'où l'effet « le dépliant déplace les autres ». */
+  .builder-row > .builder-char {
+    flex: 1 1 0; min-width: 84px;
+    flex-direction: column; align-items: center; justify-content: flex-start;
+    gap: var(--s-2);
+    padding: var(--s-4) var(--s-2) var(--s-3);
+    text-align: center;
+    transition: flex-basis var(--t-hover) var(--ease-out-expo),
+                border-color var(--t-micro), background var(--t-micro);
+  }
+  .builder-char-img { width: 76px; height: 76px; }
+  .builder-char-info { align-items: center; text-align: center; width: 100%; }
+  .builder-char-name { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.25; }
+  .builder-char-tools { justify-content: center; }
+
+  /* Le dépliant : 0 → 290px de large, il pousse les tuiles suivantes. */
+  .builder-row-panel {
+    flex: 0 0 auto; width: 0; padding-top: 0; margin-left: 0;
+    flex-direction: column; justify-content: center; align-items: center;
+    flex-wrap: nowrap; gap: var(--s-4);
+    opacity: 0; overflow: hidden;
+    transition: width var(--t-hover) var(--ease-out-expo),
+                opacity var(--t-hover) var(--ease-out-expo),
+                margin-left var(--t-hover) var(--ease-out-expo);
+  }
+  .builder-row:hover > .builder-row-panel,
+  .builder-row:focus-within > .builder-row-panel,
+  .builder-row.is-active > .builder-row-panel {
+    width: 290px; opacity: 1; margin-left: var(--s-2);
+  }
+  .builder-row-panel .builder-items { align-items: center; }
+
+  /* Indice visuel de dépliage */
+  .builder-char::after {
+    content: "›";
+    position: absolute; right: 8px; top: 50%;
+    font-size: 18px; line-height: 1; color: var(--muted);
+    transform: translateY(-50%);
+    transition: color var(--t-hover), transform var(--t-hover) var(--ease-out-expo);
+  }
+  .builder-row:hover > .builder-char::after,
+  .builder-row:focus-within > .builder-char::after,
+  .builder-row.is-active > .builder-char::after {
+    color: var(--accent); transform: translateY(-50%) translateX(3px);
+  }
+  .builder-char.is-empty::after { content: none; }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  .builder-row-panel, .builder-char::after { transition: none !important; }
+  .builder-row-panel, .builder-char::after, .builder-row, .builder-trio, .builder-row > .builder-char { transition: none !important; }
 }
 
 /* ── Rangée de résultats : panneaux côte à côte ── */

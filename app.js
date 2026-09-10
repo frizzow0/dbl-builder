@@ -1373,8 +1373,11 @@
     if (!builderGridEl) return;
     // Chaque trio dans son propre conteneur → 2 colonnes côte à côte sur écran large
     // (évite le grand vide entre le nom et les boutons Cap Z quand le builder est pleine largeur).
+    // .builder-trio-cols : les 3 tuiles d'un trio sont alignées horizontalement
+    // (accordéon) sur grand écran, empilées sur petit écran.
     const trio = (label, idxs) =>
-      `<div class="builder-trio"><div class="builder-trio-label">${label}</div>${idxs.map(builderRowHTML).join("")}</div>`;
+      `<div class="builder-trio"><div class="builder-trio-label">${label}</div>` +
+      `<div class="builder-trio-cols">${idxs.map(builderRowHTML).join("")}</div></div>`;
     builderGridEl.innerHTML = trio(T('trio.a'), [0, 1, 2]) + trio(T('trio.b'), [3, 4, 5]);
     renderNoLeaderBtn();
   }
