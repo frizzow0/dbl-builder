@@ -1327,7 +1327,7 @@
       : `<div class="builder-char-img"></div>`;
     return `<div class="builder-char ${elementClass}">
       <button class="builder-leader ${isLeader ? 'is-leader' : ''} ${state.noLeader ? 'is-leader-disabled' : ''}" data-leader="${charSlot}" title="${T('team.leader.title')}" type="button">★</button>
-      ${img}
+      <div class="builder-char-art">${img}</div>
       <div class="builder-char-info">
         <div class="builder-char-name" title="${c.nom.trim()}">${c.nom.trim()}</div>
         <div class="builder-char-code">${c.cardCode || ""}</div>
