@@ -388,9 +388,16 @@ html { scroll-behavior: smooth; }
     align-items: center; text-align: center;
   }
   .builder-row > .builder-char .builder-char-name {
-    white-space: normal; overflow: visible; text-overflow: clip;
+    white-space: normal; overflow: hidden; text-overflow: clip;
     line-height: 1.25; font-size: var(--fs-lg); font-weight: 800;
     letter-spacing: -.01em; color: var(--text);
+    /* Hauteur figée = 2 lignes, que le nom en fasse une ou trois. */
+    height: 2.5em;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .builder-row > .builder-char .builder-char-name > span {
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+    overflow: hidden;
   }
   .builder-row > .builder-char .builder-leader {
     min-width: 40px; height: 30px; font-size: 15px;
@@ -409,7 +416,7 @@ html { scroll-behavior: smooth; }
     flex-wrap: nowrap; gap: var(--s-4);
     opacity: 0; overflow: hidden;
     background: var(--surface-2);
-    border: 2px solid var(--line); border-left: 0;
+    border: 3px solid var(--line); border-left: 0;
     border-radius: 0 var(--r-3) var(--r-3) 0;
     transition: width var(--t-hover) var(--ease-out-expo),
                 padding var(--t-hover) var(--ease-out-expo),
@@ -2566,7 +2573,7 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   gap: var(--s-2);
   padding: 8px 10px;
   background: var(--surface-2);
-  border: 2px solid var(--line);
+  border: 3px solid var(--line);
   border-radius: var(--r-3);
   transition: border-color var(--t-micro), background var(--t-micro);
   min-width: 0;
