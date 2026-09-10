@@ -344,8 +344,8 @@ html { scroll-behavior: smooth; }
     flex: 1 1 0; min-height: 0; min-width: 0;
     transition: flex-basis var(--t-hover) var(--ease-out-expo);
   }
-  .builder-trio:has(.builder-row:hover),
-  .builder-trio:has(.builder-row:focus-within) { flex-basis: 298px; }
+  .builder-trio:has(.builder-row:not(.is-vacant):hover),
+  .builder-trio:has(.builder-row:not(.is-vacant):focus-within) { flex-basis: 298px; }
   .builder-trio-cols { flex-direction: row; flex: 1; gap: var(--s-2); min-height: 0; }
   /* Chaque colonne se partage la largeur à parts égales. La colonne ouverte
      reçoit EN PLUS la largeur du dépliant (flex-basis) : son panneau s'ajoute
@@ -354,8 +354,10 @@ html { scroll-behavior: smooth; }
     flex-wrap: nowrap; flex: 1 1 0; min-width: 0;
     transition: flex-basis var(--t-hover) var(--ease-out-expo);
   }
-  .builder-row:hover,
-  .builder-row:focus-within { flex-basis: 298px; }
+  /* .is-vacant = colonne sans personnage : rien à déplier, donc aucun
+     mouvement — ni pour elle, ni pour les cinq autres. */
+  .builder-row:not(.is-vacant):hover,
+  .builder-row:not(.is-vacant):focus-within { flex-basis: 298px; }
 
   /* Les 6 tuiles se partagent la largeur : à l'ouverture d'un panneau, elles se
      resserrent et glissent — d'où l'effet « le dépliant déplace les autres ». */
@@ -423,14 +425,14 @@ html { scroll-behavior: smooth; }
                 opacity var(--t-hover) var(--ease-out-expo),
                 border-color var(--t-micro);
   }
-  .builder-row:hover > .builder-row-panel,
-  .builder-row:focus-within > .builder-row-panel {
+  .builder-row:not(.is-vacant):hover > .builder-row-panel,
+  .builder-row:not(.is-vacant):focus-within > .builder-row-panel {
     width: 290px; padding: var(--s-4) var(--s-3); opacity: 1;
     border-color: var(--elem, var(--accent-tint-2));
   }
   /* La tuile ouvre son flanc droit : plus de coupure entre elle et le dépliant. */
-  .builder-row:hover > .builder-char,
-  .builder-row:focus-within > .builder-char {
+  .builder-row:not(.is-vacant):hover > .builder-char,
+  .builder-row:not(.is-vacant):focus-within > .builder-char {
     border-top-right-radius: 0; border-bottom-right-radius: 0;
     border-right-color: transparent;
   }

@@ -1369,7 +1369,9 @@
     // La couleur d'élément est portée par la LIGNE : la tuile et son dépliant
     // héritent ainsi tous deux de --elem (cf. .builder-row.elem-* dans styles.css).
     const elementClass = slot.character ? `elem-${(slot.character.element || "").toLowerCase()}` : "";
-    return `<div class="builder-row ${elementClass} ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${panel}</div>`;
+    // Sans personnage il n'y a rien à déplier : .is-vacant neutralise l'accordéon.
+    const vacant = slot.character ? "" : "is-vacant";
+    return `<div class="builder-row ${elementClass} ${vacant} ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${panel}</div>`;
   }
 
   // Nom conservé (renderTeamGrid) pour ne pas casser les appels existants.
@@ -1386,6 +1388,28 @@
     renderNoLeaderBtn();
   }
 
+  // Reconstruire toute la grille détruit la tuile sous le curseur : le :hover
+  // est perdu puis retrouvé, et le dépliant clignote. Ces deux mises à jour
+  // touchent donc uniquement les éléments concernés, sans toucher au DOM autour.
+  function refreshZTierUI(charSlot) {
+    const row = builderGridEl.querySelector(`.builder-row[data-row="${charSlot}"]`);
+    if (!row) return;
+    const tier = state.team[charSlot].zTier;
+    row.querySelectorAll("[data-ztier]").forEach((b) => {
+      b.classList.toggle("active", +b.dataset.ztier.split(":")[1] === tier);
+    });
+    const tag = row.querySelector(".builder-char-ztag");
+    if (tag) tag.textContent = `${T('z.capz.label')} ${["I", "II", "III", "IV"][tier - 1] || "I"}`;
+  }
+
+  function refreshLeaderUI() {
+    builderGridEl.querySelectorAll("[data-leader]").forEach((b) => {
+      b.classList.toggle("is-leader", +b.dataset.leader === state.leaderSlot);
+      b.classList.toggle("is-leader-disabled", state.noLeader);
+    });
+    renderNoLeaderBtn();
+  }
+
   builderGridEl.addEventListener("click", (e) => {
     const t = e.target;
     // Flèche → ouvre la modale de détails des items du perso
@@ -1393,10 +1417,10 @@
     if (det) { openDetailsModal(+det.dataset.openDetails); return; }
     // Étoile leader
     const lead = t.closest("[data-leader]");
-    if (lead) { e.stopPropagation(); state.leaderSlot = +lead.dataset.leader; renderTeamGrid(); renderResults(); return; }
+    if (lead) { e.stopPropagation(); state.leaderSlot = +lead.dataset.leader; refreshLeaderUI(); renderResults(); return; }
     // Niveau Cap Z
     const zt = t.closest("[data-ztier]");
-    if (zt) { const [cs, tier] = zt.dataset.ztier.split(":"); state.team[+cs].zTier = +tier; renderTeamGrid(); renderResults(); return; }
+    if (zt) { const [cs, tier] = zt.dataset.ztier.split(":"); state.team[+cs].zTier = +tier; refreshZTierUI(+cs); renderResults(); return; }
     // Choix OR (passif chiffrable)
     const orBtn = t.closest("[data-or-choice]");
     if (orBtn) {
