@@ -345,8 +345,7 @@ html { scroll-behavior: smooth; }
     transition: flex-basis var(--t-hover) var(--ease-out-expo);
   }
   .builder-trio:has(.builder-row:hover),
-  .builder-trio:has(.builder-row:focus-within),
-  .builder-trio:has(.builder-row.is-active) { flex-basis: 298px; }
+  .builder-trio:has(.builder-row:focus-within) { flex-basis: 298px; }
   .builder-trio-cols { flex-direction: row; flex: 1; gap: var(--s-2); min-height: 0; }
   /* Chaque colonne se partage la largeur à parts égales. La colonne ouverte
      reçoit EN PLUS la largeur du dépliant (flex-basis) : son panneau s'ajoute
@@ -356,8 +355,7 @@ html { scroll-behavior: smooth; }
     transition: flex-basis var(--t-hover) var(--ease-out-expo);
   }
   .builder-row:hover,
-  .builder-row:focus-within,
-  .builder-row.is-active { flex-basis: 298px; }
+  .builder-row:focus-within { flex-basis: 298px; }
 
   /* Les 6 tuiles se partagent la largeur : à l'ouverture d'un panneau, elles se
      resserrent et glissent — d'où l'effet « le dépliant déplace les autres ». */
@@ -405,8 +403,7 @@ html { scroll-behavior: smooth; }
                 margin-left var(--t-hover) var(--ease-out-expo);
   }
   .builder-row:hover > .builder-row-panel,
-  .builder-row:focus-within > .builder-row-panel,
-  .builder-row.is-active > .builder-row-panel {
+  .builder-row:focus-within > .builder-row-panel {
     width: 290px; opacity: 1; margin-left: var(--s-2);
   }
   .builder-row-panel .builder-items { align-items: center; }
@@ -420,8 +417,7 @@ html { scroll-behavior: smooth; }
     transition: color var(--t-hover), transform var(--t-hover) var(--ease-out-expo);
   }
   .builder-row:hover > .builder-char::after,
-  .builder-row:focus-within > .builder-char::after,
-  .builder-row.is-active > .builder-char::after {
+  .builder-row:focus-within > .builder-char::after {
     color: var(--accent); transform: translateY(-50%) translateX(3px);
   }
   .builder-char.is-empty::after { content: none; }
