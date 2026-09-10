@@ -443,6 +443,16 @@ html { scroll-behavior: smooth; }
     padding-bottom: var(--s-3); border-bottom: 1px solid var(--line);
   }
   .builder-row-panel .builder-z { justify-content: center; }
+  /* Le dépliant est haut et étroit : les 3 emplacements s'y empilent en
+     colonne, ce qui permet de les tripler de taille. (Sur mobile le panneau
+     est large et bas : ils y restent en ligne, cf. la règle de base.) */
+  .builder-row-panel .builder-item-icons {
+    flex-direction: column; gap: var(--s-2);
+    width: 100%; align-items: center;
+  }
+  .builder-row-panel .builder-item-icon {
+    width: min(104px, 100%); height: auto; aspect-ratio: 1; min-height: 0;
+  }
   /* Les 3 emplacements sont centrés sur le même axe que les paliers Cap Z ;
      le bouton « détails » est sorti du flux pour ne pas les décaler. */
   .builder-row-panel .builder-items {
