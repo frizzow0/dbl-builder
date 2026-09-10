@@ -1331,6 +1331,7 @@
       <div class="builder-char-info">
         <div class="builder-char-name" title="${c.nom.trim()}">${c.nom.trim()}</div>
         <div class="builder-char-code">${c.cardCode || ""}</div>
+        <div class="builder-char-ztag">${T('z.capz.label')} ${["I", "II", "III", "IV"][slot.zTier - 1] || "I"}</div>
         <div class="builder-char-tools">
           <button class="builder-char-act" data-change-char="${charSlot}" title="${T('slot.change')}" type="button">✎</button>
           <button class="builder-char-act is-danger" data-remove-char="${charSlot}" title="${T('slot.remove')}" type="button">✕</button>

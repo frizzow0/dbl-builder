@@ -370,10 +370,29 @@ html { scroll-behavior: smooth; }
     transition: flex-basis var(--t-hover) var(--ease-out-expo),
                 border-color var(--t-micro), background var(--t-micro);
   }
-  .builder-char-img { width: 76px; height: 76px; }
-  .builder-char-info { align-items: center; text-align: center; width: 100%; }
-  .builder-char-name { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.25; }
-  .builder-char-tools { justify-content: center; }
+
+  /* La tuile est haute : on répartit le contenu au lieu de tout tasser en haut.
+     Portrait large, puis nom/code/palier, et les actions collées en bas.
+     NB : sélecteurs volontairement spécifiques — les règles de base de
+     .builder-char-* sont déclarées plus loin dans ce fichier. */
+  .builder-row > .builder-char .builder-char-img {
+    width: min(100%, 128px); height: auto; aspect-ratio: 1;
+    border-radius: var(--r-3);
+  }
+  .builder-row > .builder-char .builder-char-info {
+    flex: 1 1 auto; gap: 4px; width: 100%;
+    align-items: center; text-align: center;
+  }
+  .builder-row > .builder-char .builder-char-name {
+    white-space: normal; overflow: visible; text-overflow: clip;
+    line-height: 1.25; font-size: var(--fs-md); font-weight: 700;
+  }
+  .builder-row > .builder-char .builder-char-ztag { align-self: center; margin-top: var(--s-2); }
+  .builder-row > .builder-char .builder-char-tools {
+    justify-content: center; margin-top: auto; padding-top: var(--s-3);
+  }
+  /* Tuile vide : la zone cliquable occupe toute la hauteur */
+  .builder-char.is-empty { justify-content: center; gap: var(--s-2); }
 
   /* Le dépliant : 0 → 290px de large, il pousse les tuiles suivantes. */
   .builder-row-panel {
@@ -2548,6 +2567,16 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .builder-char-code { font-size: var(--fs-xxs); color: var(--text-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Palier de Cap Z visible sur la tuile (sans avoir à déplier) */
+.builder-char-ztag {
+  align-self: flex-start;
+  margin-top: 4px; padding: 2px 9px;
+  border-radius: var(--r-pill);
+  background: var(--accent-tint); color: var(--accent);
+  border: 1px solid var(--accent-tint-2);
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-xxs);
+  white-space: nowrap;
+}
 
 /* Ligne d'outils sous le nom : actions (changer / retirer) */
 .builder-char-tools { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
