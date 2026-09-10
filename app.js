@@ -1326,13 +1326,13 @@
       ? `<img class="builder-char-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
       : `<div class="builder-char-img"></div>`;
     return `<div class="builder-char ${elementClass}">
-      <button class="builder-leader ${isLeader ? 'is-leader' : ''} ${state.noLeader ? 'is-leader-disabled' : ''}" data-leader="${charSlot}" title="${T('team.leader.title')}" type="button">★</button>
       <div class="builder-char-art">${img}</div>
       <div class="builder-char-info">
         <div class="builder-char-name" title="${c.nom.trim()}">${c.nom.trim()}</div>
         <div class="builder-char-code">${c.cardCode || ""}</div>
         <div class="builder-char-ztag">${T('z.capz.label')} ${["I", "II", "III", "IV"][slot.zTier - 1] || "I"}</div>
         <div class="builder-char-tools">
+          <button class="builder-leader ${isLeader ? 'is-leader' : ''} ${state.noLeader ? 'is-leader-disabled' : ''}" data-leader="${charSlot}" title="${T('team.leader.title')}" type="button">★</button>
           <button class="builder-char-act" data-change-char="${charSlot}" title="${T('slot.change')}" type="button">✎</button>
           <button class="builder-char-act is-danger" data-remove-char="${charSlot}" title="${T('slot.remove')}" type="button">✕</button>
         </div>

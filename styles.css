@@ -389,7 +389,11 @@ html { scroll-behavior: smooth; }
   }
   .builder-row > .builder-char .builder-char-name {
     white-space: normal; overflow: visible; text-overflow: clip;
-    line-height: 1.25; font-size: var(--fs-md); font-weight: 700;
+    line-height: 1.25; font-size: var(--fs-lg); font-weight: 800;
+    letter-spacing: -.01em; color: var(--text);
+  }
+  .builder-row > .builder-char .builder-leader {
+    min-width: 40px; height: 30px; font-size: 15px;
   }
   .builder-row > .builder-char .builder-char-ztag { align-self: center; margin-top: var(--s-2); }
   .builder-row > .builder-char .builder-char-tools {
@@ -400,19 +404,45 @@ html { scroll-behavior: smooth; }
 
   /* Le dépliant : 0 → 290px de large, il pousse les tuiles suivantes. */
   .builder-row-panel {
-    flex: 0 0 auto; width: 0; padding-top: 0; margin-left: 0;
+    flex: 0 0 auto; width: 0; padding: 0; margin-left: 0;
     flex-direction: column; justify-content: center; align-items: center;
     flex-wrap: nowrap; gap: var(--s-4);
     opacity: 0; overflow: hidden;
+    background: var(--surface-2);
+    border: 1px solid var(--line); border-left: 0;
+    border-radius: 0 var(--r-3) var(--r-3) 0;
     transition: width var(--t-hover) var(--ease-out-expo),
+                padding var(--t-hover) var(--ease-out-expo),
                 opacity var(--t-hover) var(--ease-out-expo),
-                margin-left var(--t-hover) var(--ease-out-expo);
+                border-color var(--t-micro);
   }
   .builder-row:hover > .builder-row-panel,
   .builder-row:focus-within > .builder-row-panel {
-    width: 290px; opacity: 1; margin-left: var(--s-2);
+    width: 290px; padding: var(--s-4) var(--s-3); opacity: 1;
+    border-color: var(--accent-tint-2);
   }
-  .builder-row-panel .builder-items { align-items: center; }
+  /* La tuile ouvre son flanc droit : plus de coupure entre elle et le dépliant. */
+  .builder-row:hover > .builder-char,
+  .builder-row:focus-within > .builder-char {
+    border-top-right-radius: 0; border-bottom-right-radius: 0;
+    border-right-color: var(--accent-tint-2);
+  }
+
+  /* Cap Z et équipements : même axe centré, séparés d'un filet. */
+  .builder-row-panel .builder-z-large {
+    margin-left: 0; width: 100%; align-items: center;
+    padding-bottom: var(--s-3); border-bottom: 1px solid var(--line);
+  }
+  .builder-row-panel .builder-z { justify-content: center; }
+  /* Les 3 emplacements sont centrés sur le même axe que les paliers Cap Z ;
+     le bouton « détails » est sorti du flux pour ne pas les décaler. */
+  .builder-row-panel .builder-items {
+    position: relative; width: 100%;
+    align-items: center; justify-content: center;
+  }
+  .builder-row-panel .builder-items-details {
+    position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  }
 
   /* Indice visuel de dépliage */
   .builder-char::after {
@@ -2534,7 +2564,7 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
   display: flex;
   align-items: center;
   gap: var(--s-2);
-  padding: 8px 28px 8px 10px; /* marge droite pour ne pas chevaucher l'étoile leader */
+  padding: 8px 10px;
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--r-3);
@@ -2566,7 +2596,7 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 
 .builder-char-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .builder-char-name {
-  font-weight: 700; font-size: var(--fs-sm);
+  font-weight: 800; font-size: var(--fs-md); color: var(--text);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .builder-char-code { font-size: var(--fs-xxs); color: var(--text-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -2616,14 +2646,17 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 
 /* Étoile leader */
 .builder-leader {
-  position: absolute; top: 4px; right: 4px;
-  width: 22px; height: 22px; border-radius: 50%;
-  display: grid; place-items: center; font-size: 12px; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 34px; height: 26px; padding: 0 10px;
+  border-radius: var(--r-pill);
+  font-size: 14px; line-height: 1;
   color: var(--muted); background: var(--surface-3); border: 1px solid var(--line);
-  z-index: 2; transition: all var(--t-micro);
+  transition: all var(--t-micro);
 }
+.builder-leader:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
 .builder-leader.is-leader { color: #fff; background: var(--accent); border-color: var(--accent); box-shadow: var(--shadow-accent); }
 .builder-leader.is-leader-disabled { opacity: .35; }
+.builder-char:has(.builder-leader.is-leader) { border-color: var(--accent); background: var(--accent-tint); }
 
 /* Élément (liseré gauche coloré) */
 .builder-char.elem-blu { box-shadow: inset 3px 0 0 #3b82f6; }
