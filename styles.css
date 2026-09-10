@@ -482,6 +482,105 @@ html { scroll-behavior: smooth; }
   .builder-row-panel, .builder-char::after, .builder-row, .builder-trio, .builder-row > .builder-char { transition: none !important; }
 }
 
+/* ── Bascule de mode de jeu : flottante, centrée en bas, au-dessus de tout ──
+   Le mode change le sens des deux trios : en Classique une équipe titulaire et
+   un banc, en Proud deux trios à égalité départagés par un Trio C. */
+.mode-switch {
+  position: fixed; z-index: 60;
+  left: 50%; bottom: 20px; transform: translateX(-50%);
+  display: flex; gap: 4px; padding: 4px;
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,.28), 0 2px 8px -4px rgba(0,0,0,.16);
+}
+.mode-opt {
+  padding: 8px 20px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-display);
+  font-size: var(--fs-sm); font-weight: 700;
+  letter-spacing: .03em;
+  color: var(--text-soft); background: transparent; border: 0;
+  cursor: pointer;
+  transition: background var(--t-micro), color var(--t-micro);
+}
+.mode-opt:hover { color: var(--text); background: var(--surface-2); }
+.mode-opt.is-on {
+  color: #fff; background: var(--accent);
+  box-shadow: var(--shadow-accent);
+}
+.mode-opt:active { transform: scale(.97); }
+
+/* ── Trio C : visible en mode Proud uniquement ───────────────────────────── */
+.trioc { display: none; }
+body[data-mode="proud"] .trioc {
+  display: block;
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line);
+}
+.trioc-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-3); }
+.trioc-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg); font-weight: 800;
+  letter-spacing: .02em; color: var(--text);
+}
+.trioc-hint { margin: 0; font-size: var(--fs-sm); color: var(--text-soft); }
+.trioc-body { margin-top: var(--s-3); }
+.trioc-msg { margin: 0; font-size: var(--fs-sm); color: var(--muted); }
+.trioc-chips { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.trioc-chip {
+  display: flex; align-items: center; gap: var(--s-2);
+  padding: 6px 14px 6px 6px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  border: 2px solid var(--elem, var(--line));
+  cursor: pointer; text-align: left;
+  transition: background var(--t-micro), border-color var(--t-micro),
+              transform var(--t-micro) var(--ease-out-expo);
+}
+.trioc-chip.elem-blu { --elem: #3b82f6; }
+.trioc-chip.elem-red { --elem: #ef4444; }
+.trioc-chip.elem-grn { --elem: #16a34a; }
+.trioc-chip.elem-yel { --elem: #e0a800; }
+.trioc-chip.elem-pur { --elem: #a855f7; }
+.trioc-chip.elem-lgt { --elem: #7c8699; }
+.trioc-chip:hover:not(:disabled) { transform: translateY(-2px); }
+.trioc-chip.is-on { background: var(--accent-tint); box-shadow: inset 0 0 0 2px var(--accent-tint-2); }
+.trioc-chip.is-locked { opacity: .4; cursor: not-allowed; }
+.trioc-chip-img {
+  width: 38px; height: 38px; flex-shrink: 0;
+  border-radius: 50%; object-fit: cover;
+  background: var(--surface-3); border: 1px solid var(--line);
+}
+.trioc-chip-body { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.trioc-chip-name {
+  font-size: var(--fs-sm); font-weight: 700; color: var(--text);
+  max-width: 190px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.trioc-chip-from {
+  font-family: var(--font-display);
+  font-size: var(--fs-xxs); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+}
+.trioc-foot { display: flex; align-items: center; gap: var(--s-3); margin-top: var(--s-3); }
+.trioc-status { font-size: var(--fs-sm); font-weight: 700; color: var(--text-soft); }
+.trioc-status.is-valid { color: var(--accent); }
+.trioc-clear {
+  font-size: var(--fs-xs); font-weight: 600;
+  padding: 4px 12px; border-radius: var(--r-pill);
+  color: var(--text-soft); background: transparent;
+  border: 1px solid var(--line); cursor: pointer;
+  transition: all var(--t-micro);
+}
+.trioc-clear:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .trioc-chip, .mode-opt { transition: none !important; }
+  .trioc-chip:hover:not(:disabled) { transform: none; }
+}
+
 /* ── Rangée de résultats : panneaux côte à côte ── */
 .results-row {
   display: grid;

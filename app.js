@@ -526,7 +526,32 @@
     modalCompatOnly: false,
     charRarityFilter: null,
     charElementFilter: null,
+    // Mode de jeu. "classic" : une équipe titulaire + un banc. "proud" : deux
+    // trios à égalité, départagés par un Trio C en cas de match nul.
+    mode: loadMode(),
+    trioC: [],               // indices des 3 slots composant le Trio C
   };
+
+  // Le mode survit au rechargement (comme la langue) : c'est un réglage de
+  // joueur, pas un état de composition.
+  function loadMode() {
+    try {
+      const m = localStorage.getItem("dbl-mode");
+      return m === "proud" ? "proud" : "classic";
+    } catch (e) { return "classic"; }
+  }
+  function saveMode() {
+    try { localStorage.setItem("dbl-mode", state.mode); } catch (e) { /* non bloquant */ }
+  }
+
+  // Trio d'appartenance d'un slot : 0 pour les slots 0-2, 1 pour les slots 3-5.
+  const trioOf = (slotIdx) => Math.floor(slotIdx / 3);
+
+  // Libellés des deux trios : ils changent de sens selon le mode.
+  function trioLabel(trioIdx) {
+    if (state.mode === "classic") return T(trioIdx === 0 ? 'trio.main' : 'trio.bench');
+    return T(trioIdx === 0 ? 'trio.a' : 'trio.b');
+  }
 
   // Retourne l'index effectif du leader (-1 si mode "sans leader" activé).
   function effectiveLeaderSlot() {
@@ -1188,6 +1213,8 @@
     const target = state.charTargetSlot ?? state.activeSlot;
     state.team[target].character = p || null;
     state.team[target].zTier = 4; // reset au max à chaque nouveau perso
+    // Un slot vidé ne peut plus faire partie du Trio C.
+    if (!p) state.trioC = state.trioC.filter((i) => i !== target);
     // On ne déplace le focus d'analyse QUE si le perso analysé n'existe plus
     // (1er perso, ou on vient de vider le slot analysé). Ajouter un coéquipier
     // dans un autre slot ne vole donc pas le focus.
@@ -1384,8 +1411,94 @@
     const trio = (label, idxs) =>
       `<div class="builder-trio"><div class="builder-trio-label">${label}</div>` +
       `<div class="builder-trio-cols">${idxs.map(builderRowHTML).join("")}</div></div>`;
-    builderGridEl.innerHTML = trio(T('trio.a'), [0, 1, 2]) + trio(T('trio.b'), [3, 4, 5]);
+    builderGridEl.innerHTML = trio(trioLabel(0), [0, 1, 2]) + trio(trioLabel(1), [3, 4, 5]);
     renderNoLeaderBtn();
+    renderTrioC();
+  }
+
+  // ===== TRIO C (mode Proud) =====
+  // Le troisième match se joue à 3 personnages pris parmi les 6 déjà composés :
+  // 2 issus d'un trio et 1 de l'autre. La règle est tenue par une seule borne —
+  // jamais plus de 2 personnages du même trio — qui, sur un total de 3, force
+  // mécaniquement la répartition 2 + 1.
+  const trioCEl = document.getElementById("trioc-body");
+
+  function trioCLockReason(slotIdx) {
+    if (state.trioC.includes(slotIdx)) return null;   // déjà pris : le clic le retire
+    if (state.trioC.length >= 3) return T('trioc.lock.full');
+    const same = state.trioC.filter((i) => trioOf(i) === trioOf(slotIdx)).length;
+    if (same >= 2) return T('trioc.lock.same');
+    return null;
+  }
+
+  function renderTrioC() {
+    if (!trioCEl) return;
+    const filled = [0, 1, 2, 3, 4, 5].filter((i) => state.team[i].character);
+    if (!filled.length) {
+      trioCEl.innerHTML = '<p class="trioc-msg">' + T('trioc.empty') + '</p>';
+      return;
+    }
+    const chips = filled.map((i) => {
+      const c = state.team[i].character;
+      const on = state.trioC.includes(i);
+      const lock = trioCLockReason(i);
+      const img = c.image
+        ? `<img class="trioc-chip-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
+        : '<span class="trioc-chip-img"></span>';
+      return '<button class="trioc-chip ' + (on ? 'is-on' : '') + ' ' + (lock ? 'is-locked' : '') +
+        ' elem-' + (c.element || "").toLowerCase() + '" data-trioc="' + i + '" type="button"' +
+        ' aria-pressed="' + on + '"' + (lock ? ' disabled title="' + lock + '"' : '') + '>' +
+        img +
+        '<span class="trioc-chip-body">' +
+          '<span class="trioc-chip-name">' + escSvg(c.nom.trim()) + '</span>' +
+          '<span class="trioc-chip-from">' + trioLabel(trioOf(i)) + '</span>' +
+        '</span></button>';
+    }).join("");
+    const n = state.trioC.length;
+    const status = n === 3
+      ? '<span class="trioc-status is-valid">' + T('trioc.valid') + '</span>'
+      : '<span class="trioc-status">' + T('trioc.count').replace("{n}", n) + '</span>';
+    trioCEl.innerHTML =
+      '<div class="trioc-chips">' + chips + '</div>' +
+      '<div class="trioc-foot">' + status +
+      (n ? '<button class="trioc-clear" data-trioc-clear type="button">' + T('trioc.clear') + '</button>' : '') +
+      '</div>';
+  }
+
+  if (trioCEl) {
+    trioCEl.addEventListener("click", (e) => {
+      if (e.target.closest("[data-trioc-clear]")) { state.trioC = []; renderTrioC(); return; }
+      const chip = e.target.closest("[data-trioc]");
+      if (!chip) return;
+      const i = +chip.dataset.trioc;
+      if (state.trioC.includes(i)) state.trioC = state.trioC.filter((x) => x !== i);
+      else if (!trioCLockReason(i)) state.trioC = state.trioC.concat(i);
+      renderTrioC();
+    });
+  }
+
+  // ===== BASCULE DE MODE =====
+  const modeSwitchEl = document.querySelector(".mode-switch");
+
+  function renderModeSwitch() {
+    document.body.dataset.mode = state.mode;
+    if (!modeSwitchEl) return;
+    modeSwitchEl.querySelectorAll("[data-mode]").forEach((b) => {
+      const on = b.dataset.mode === state.mode;
+      b.classList.toggle("is-on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  if (modeSwitchEl) {
+    modeSwitchEl.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-mode]");
+      if (!b || b.dataset.mode === state.mode) return;
+      state.mode = b.dataset.mode;
+      saveMode();
+      renderModeSwitch();
+      renderTeamGrid();   // les libellés des deux trios changent de sens
+    });
   }
 
   // Reconstruire toute la grille détruit la tuile sous le curseur : le :hover
@@ -2800,6 +2913,7 @@
   // ===== CHANGEMENT DE LANGUE =====
   // Re-render complet quand l'utilisateur bascule FR ↔ EN
   window.addEventListener('dbl-lang-changed', () => {
+    renderModeSwitch();
     renderTeamGrid();
     renderCharPicker();
     renderBuildState();
@@ -2807,6 +2921,7 @@
   });
 
   // ===== INIT =====
+  renderModeSwitch();
   renderTeamGrid();
   renderCharPicker();
   renderCharTraits();
