@@ -889,7 +889,6 @@
   const charModalTitleEl = document.getElementById("char-modal-title");
   const charSuggestionsEl = document.getElementById("char-suggestions");
   const charFiltersEl = document.getElementById("char-filters");
-  const charSelectedEl = document.getElementById("char-selected");
   const charTraitsEl = document.getElementById("char-traits");
   const buildEmptyEl = document.getElementById("build-empty");
 
@@ -1049,32 +1048,6 @@
     }
   });
 
-  function renderCharSelected() {
-    if (!charSelectedEl) return; // élément retiré par la refonte
-    if (!active.character) {
-      charSelectedEl.classList.add("hidden");
-      charSelectedEl.innerHTML = "";
-      return;
-    }
-    const p = active.character;
-    const elementClass = `elem-${(p.element || "").toLowerCase()}`;
-    const img = p.image
-      ? `<img class="char-selected-img" src="${p.image}" alt="" onerror="this.style.display='none'" />`
-      : `<div class="char-selected-img char-selected-img-placeholder">?</div>`;
-    charSelectedEl.classList.remove("hidden");
-    charSelectedEl.innerHTML = `
-      <div class="char-selected-card ${elementClass}">
-        ${img}
-        <div class="char-selected-info">
-          <div class="char-selected-element">${p.element ? T('elem.' + p.element) : ""}</div>
-          <div class="char-selected-name">${p.nom.trim()}</div>
-          <div class="char-selected-code">${p.cardCode || ""} · ${p.rarete}</div>
-        </div>
-        <button class="char-selected-clear" data-action="clear-char" type="button" aria-label="${T('char.deselect')}">×</button>
-      </div>
-    `;
-  }
-
   function renderCharTraits() {
     if (!charTraitsEl) return; // élément retiré par la refonte
     if (!active.character) {
@@ -1203,7 +1176,6 @@
 
   function renderCharPicker() {
     renderCharFilters();
-    renderCharSelected();
     renderCharTraits();
     renderCharZAbility();
   }
@@ -1233,7 +1205,6 @@
     charSearchEl.value = "";
     closeCharModal();
     renderTeamGrid();
-    renderCharSelected();
     renderCharTraits();
     renderCharZAbility();
     renderBuildState();

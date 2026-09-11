@@ -57,7 +57,6 @@
     'char.notfound':        { fr: 'Aucun personnage trouvé', en: 'No character found' },
     'char.traits':          { fr: 'Tags ({n})',             en: 'Tags ({n})' },
     'char.taken':           { fr: 'Déjà dans l\'équipe',    en: 'Already in team' },
-    'char.deselect':        { fr: 'Désélectionner',         en: 'Deselect' },
     'team.card.empty':      { fr: 'Vide',                   en: 'Empty' },
     'team.card.add':        { fr: 'Cliquer pour ajouter',   en: 'Click to add' },
     'team.leader.title':    { fr: 'Désigner comme Leader',  en: 'Designate as Leader' },
