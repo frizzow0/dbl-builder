@@ -1609,6 +1609,80 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   #item-modal.is-drawer-open .item-drawer,
   #item-modal.is-drawer-open .item-drawer-scrim { transition: none; }
 }
+/* ── Écran large : grille de 5, détail EN LIGNE comme les tuiles de l'équipe ──
+   30 pistes = PPCM de 5 et 6. Rangée normale : 5 cartes × 6 pistes. Rangée
+   qui porte un détail : ses 5 cartes + le détail, × 5 pistes chacun — le
+   détail prend exactement la taille d'une carte, ses voisines se resserrent.
+   Sous 1100px, le détail passe par le panneau latéral (.item-drawer). */
+@media (min-width: 1100px) {
+  #item-modal .item-list { grid-template-columns: repeat(30, minmax(0, 1fr)) !important; }
+  #item-modal .item-list > li { grid-column: span 6; }
+  #item-modal .item-list > li.in-open-row,
+  #item-modal .item-list > li.item-detail-cell { grid-column: span 5; }
+
+  /* Carte + détail = un seul bloc : le détail comble l'espace de grille et
+     prolonge le contour de la carte, sans couture (même principe que le
+     dépliant des tuiles de l'équipe). */
+  #item-modal .item-list > li.item-detail-cell {
+    position: relative;
+    margin-left: calc(-1 * var(--s-4));
+    border-left: 0;
+    border-radius: 0 var(--r-4) var(--r-4) 0;
+    box-shadow: inset 1px 0 0 var(--line);
+    cursor: default;
+    animation: idcIn 280ms var(--ease-out-expo) both;
+  }
+  #item-modal .item-list > li.item-detail-cell:hover {
+    transform: none; box-shadow: inset 1px 0 0 var(--line);
+  }
+  #item-modal .item-list > li.is-detail-open {
+    border-top-right-radius: 0; border-bottom-right-radius: 0;
+    border-right-color: transparent;
+  }
+  #item-modal .item-list > li.is-detail-open .item-card-art { border-top-right-radius: 0; }
+  #item-modal .item-list > li.is-detail-open:hover { transform: none; box-shadow: none; }
+}
+/* Filet de sécurité : sous le seuil, un détail en ligne resté ouvert (fenêtre
+   rétrécie sans événement de seuil) ne doit jamais casser la grille. */
+@media (max-width: 1099.98px) {
+  #item-modal .item-list > li.item-detail-cell { display: none; }
+}
+/* Le contenu est positionné en absolu : il ne pousse jamais la hauteur de la
+   rangée (celle des cartes) et défile à l'intérieur du détail. */
+.idc-head {
+  position: absolute; top: 0; left: 0; right: 0; height: 44px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 8px 0 16px;
+  border-bottom: 1px solid var(--line);
+}
+.idc-kicker {
+  font-family: var(--font-display);
+  font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text-soft);
+}
+.idc-close { width: 30px; height: 30px; }
+.idc-scroll {
+  position: absolute; top: 44px; left: 0; right: 0; bottom: 0;
+  overflow-y: auto; overscroll-behavior: contain;
+  padding: 12px 14px 14px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.item-detail-cell .idet-stat { padding: 5px 8px; }
+.item-detail-cell .idet-passive { padding: 8px 10px; }
+/* Bouton « Voir les détails » : état déplié lisible, flèche retournée. */
+#item-modal .item-toggle[aria-expanded="true"] {
+  color: var(--accent); background: var(--accent-tint); border-color: var(--accent-tint-2);
+}
+.item-toggle-arrow { display: inline-block; transition: transform var(--t-hover) var(--ease-out-expo); }
+#item-modal .item-toggle[aria-expanded="true"] .item-toggle-arrow { transform: rotate(180deg); }
+@keyframes idcIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #item-modal .item-list > li.item-detail-cell { animation: none; }
+  .item-toggle-arrow { transition: none; }
+}
 #item-modal .rarity-filters {
   padding: var(--s-3) var(--s-4) !important;
   background: var(--surface);

@@ -1680,19 +1680,9 @@
   let drawerItem = null;      // item affiché dans le panneau
   let drawerTrigger = null;   // bouton qui l'a ouvert : le focus y revient
 
-  function itemDetailsHTML(it) {
-    const rar = (it.rarete || "").toLowerCase();
-    const img = it.image
-      ? `<img src="${it.image}" alt="" onerror="this.style.display='none'" />`
-      : `<span class="item-img-placeholder">?</span>`;
-    const tags = formatTagsPorteur(it.tagsPorteur);
-    const compat = isCompatible(it, active.character);
-    const compatLine = compat === true
-      ? `<p class="idet-compat is-yes">✓ ${T('item.compat.yes', { name: active.character.nom.trim() })}</p>`
-      : compat === false
-        ? `<p class="idet-compat is-no">✗ ${T('item.compat.no', { name: active.character.nom.trim() })}</p>`
-        : "";
-
+  // Les lignes d'un item, regroupées par slot interne : partagées par le
+  // panneau latéral et par le détail en ligne de la grille.
+  function itemSlotsHTML(it) {
     const parSlot = {};
     for (const l of it.lignes) {
       const sn = l.slot || 1;
@@ -1722,6 +1712,21 @@
         `<h4 class="idet-slot-head">Slot ${sn}${sn === 4 ? ' <span class="idet-slot-star">★7</span>' : ""}</h4>` +
         parSlot[sn].map(ligne).join("") +
       `</section>`).join("");
+    return slots;
+  }
+
+  function itemDetailsHTML(it) {
+    const rar = (it.rarete || "").toLowerCase();
+    const img = it.image
+      ? `<img src="${it.image}" alt="" onerror="this.style.display='none'" />`
+      : `<span class="item-img-placeholder">?</span>`;
+    const tags = formatTagsPorteur(it.tagsPorteur);
+    const compat = isCompatible(it, active.character);
+    const compatLine = compat === true
+      ? `<p class="idet-compat is-yes">✓ ${T('item.compat.yes', { name: active.character.nom.trim() })}</p>`
+      : compat === false
+        ? `<p class="idet-compat is-no">✗ ${T('item.compat.no', { name: active.character.nom.trim() })}</p>`
+        : "";
 
     return `<div class="idet-hero">` +
         `<div class="idet-art"><div class="item-img is-framed rar-${rar}">${img}</div></div>` +
@@ -1731,10 +1736,11 @@
           (tags ? `<p class="idet-tags">${T('slot.compatible')} ${tags}</p>` : "") +
           compatLine +
         `</div>` +
-      `</div>` + slots;
+      `</div>` + itemSlotsHTML(it);
   }
 
   function openItemDrawer(it, trigger) {
+    closeInlineDetail({ restoreFocus: false });
     drawerItem = it;
     drawerTrigger = trigger || null;
     drawerBodyEl.innerHTML = itemDetailsHTML(it);
@@ -1763,11 +1769,63 @@
     renderAll();
   }
 
+  // ── Détail EN LIGNE (écran large) : comme les tuiles de l'équipe ─────────
+  // Grille de 5 : le détail s'insère juste après sa carte, dans la même
+  // rangée, et y prend la taille d'une carte ; ses voisines se resserrent (la
+  // rangée passe à 6 éléments, cf. la grille à 30 pistes dans styles.css).
+  // Sous 1100px, le panneau latéral — ou la feuille mobile — prend le relais.
+  const ITEM_COLS = 5;                                   // aligné sur styles.css
+  const wideItemGrid = window.matchMedia("(min-width: 1100px)");
+  let inlineDetail = null;                               // { cell, card, trigger, row }
+
+  function closeInlineDetail({ restoreFocus = true } = {}) {
+    if (!inlineDetail) return;
+    const { cell, card, trigger, row } = inlineDetail;
+    inlineDetail = null;
+    cell.remove();
+    row.forEach((c) => c.classList.remove("in-open-row"));
+    card.classList.remove("is-detail-open");
+    trigger.setAttribute("aria-expanded", "false");
+    if (restoreFocus && trigger.isConnected) trigger.focus({ preventScroll: true });
+  }
+
+  function toggleInlineDetail(it, trigger) {
+    const card = trigger.closest("li[data-id]");
+    const memeCarte = !!inlineDetail && inlineDetail.card === card;
+    closeInlineDetail({ restoreFocus: memeCarte });
+    if (memeCarte || !card) return;                      // 2e clic sur la même carte : on referme
+    const cards = [...itemList.querySelectorAll(":scope > li[data-id]")];
+    const start = Math.floor(cards.indexOf(card) / ITEM_COLS) * ITEM_COLS;
+    const row = cards.slice(start, start + ITEM_COLS);
+    const cell = document.createElement("li");
+    cell.className = "item-detail-cell rar-" + (it.rarete || "").toLowerCase();
+    cell.setAttribute("role", "region");
+    cell.setAttribute("aria-label", T('item.drawer.kicker') + " — " + it.nom);
+    cell.innerHTML =
+      `<div class="idc-head"><span class="idc-kicker">${T('item.drawer.kicker')}</span>` +
+      `<button class="btn-close idc-close" type="button" data-inline-close aria-label="${T('item.drawer.close')}">×</button></div>` +
+      `<div class="idc-scroll">${itemSlotsHTML(it)}</div>`;
+    row.forEach((c) => c.classList.add("in-open-row"));
+    card.classList.add("is-detail-open");
+    card.after(cell);
+    trigger.setAttribute("aria-expanded", "true");
+    inlineDetail = { cell, card, trigger, row };
+    cell.querySelector(".idc-close").focus({ preventScroll: true });
+  }
+
+  // Changement de côté du seuil (redimensionnement) : on referme ce qui est ouvert.
+  wideItemGrid.addEventListener("change", () => {
+    closeInlineDetail({ restoreFocus: false });
+    closeItemDrawer({ restoreFocus: false });
+  });
+
   drawerCloseEl.addEventListener("click", () => closeItemDrawer());
   modal.querySelector("[data-drawer-close]").addEventListener("click", () => closeItemDrawer());
   drawerEquipEl.addEventListener("click", () => { if (drawerItem) equipItem(drawerItem); });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("is-drawer-open")) closeItemDrawer();
+    if (e.key !== "Escape") return;
+    if (modal.classList.contains("is-drawer-open")) closeItemDrawer();
+    else if (inlineDetail) closeInlineDetail();
   });
 
   function openItemModal(charSlot, slotIdx) {
@@ -1790,6 +1848,7 @@
 
   function closeItemModal() {
     closeItemDrawer({ restoreFocus: false });
+    closeInlineDetail({ restoreFocus: false });
     modal.classList.add("hidden");
     state.modalSlot = null;
     state.modalCharSlot = null;
@@ -1869,6 +1928,7 @@
   const RARITY_ORDER_MAP = Object.fromEntries(RARITY_ORDER.map((r, i) => [r, i]));
 
   function renderItemList() {
+    inlineDetail = null;   // la liste est reconstruite : un détail ouvert disparaît avec elle
     const q = state.modalSearch.toLowerCase().trim();
     const matches = ITEMS.filter((it) => {
       // Filtre rareté
@@ -1929,7 +1989,7 @@
                 ${tagsHTML}
               </div>
             </div>
-            <button class="item-toggle" data-details="${it.id}" aria-haspopup="dialog" aria-controls="item-drawer" type="button">
+            <button class="item-toggle" data-details="${it.id}" aria-expanded="false" type="button">
               <span>${T('item.details')}</span><span class="item-toggle-arrow" aria-hidden="true">›</span>
             </button>
           </li>
@@ -1960,11 +2020,16 @@
     renderItemList();
   });
   itemList.addEventListener("click", (e) => {
-    // « Voir les détails » : ouvre le panneau latéral — n'effectue pas de sélection
+    // Fermeture du détail en ligne
+    if (e.target.closest("[data-inline-close]")) { closeInlineDetail(); return; }
+    // « Voir les détails » : en ligne sur écran large, panneau latéral sinon —
+    // n'effectue pas de sélection
     const detailsBtn = e.target.closest("button[data-details]");
     if (detailsBtn) {
       const it = ITEMS.find((x) => x.id === detailsBtn.dataset.details);
-      if (it) openItemDrawer(it, detailsBtn);
+      if (!it) return;
+      if (wideItemGrid.matches) toggleInlineDetail(it, detailsBtn);
+      else openItemDrawer(it, detailsBtn);
       return;
     }
     // Sélection : clic sur la zone "pick" (image + nom)
