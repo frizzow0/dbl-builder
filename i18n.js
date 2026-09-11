@@ -79,7 +79,7 @@
     'trioc.empty':          { fr: "Compose d’abord tes trios : le Trio C se choisit parmi tes 6 personnages.",
                               en: 'Build your trios first: Trio C is picked from your 6 characters.' },
     'trioc.count':          { fr: '{n}/3 sélectionnés',     en: '{n}/3 selected' },
-    'trioc.valid':          { fr: 'Trio C complet',         en: 'Trio C complete' },
+    'trioc.valid':          { fr: '✓ Complet',              en: '✓ Complete' },
     'trioc.lock.full':      { fr: "Trio C déjà complet — retire un personnage pour en changer",
                               en: 'Trio C is already full — remove one to swap' },
     'trioc.lock.same':      { fr: "Déjà 2 personnages de ce trio : le troisième doit venir de l’autre",

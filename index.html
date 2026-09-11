@@ -41,7 +41,7 @@
   <!-- ── Google AdSense : désactivé pour le moment ──────────
        (script + emplacements retirés — réactivables via git) -->
 
-  <link rel="stylesheet" href="styles.css?v=68" />
+  <link rel="stylesheet" href="styles.css?v=70" />
 
   <!-- ── Google Search Console : décommente et colle ton token (méthode « balise HTML »),
        ou préfère la vérification par enregistrement DNS TXT au niveau du domaine.
@@ -126,6 +126,19 @@
 
       <div id="builder-grid" class="builder-grid"></div>
 
+      <!-- Trio C (mode Proud uniquement) : sous chaque personnage, un rectangle
+           « TRIO C » le désigne pour le troisième match qui départage une égalité.
+           Règle : 2 personnages d'un trio + 1 de l'autre. -->
+      <section id="trioc" class="trioc" aria-labelledby="trioc-title">
+        <div id="trioc-bar" class="trioc-bar"></div>
+        <div class="trioc-line">
+          <h3 class="trioc-title" id="trioc-title" data-i18n="trioc.title">Trio C</h3>
+          <span id="trioc-status" class="trioc-status" aria-live="polite"></span>
+          <p class="trioc-hint" data-i18n="trioc.hint">En cas d'égalité, un troisième match départage : choisis 2 personnages d'un trio et 1 de l'autre.</p>
+          <button id="trioc-clear" class="trioc-clear" type="button" data-trioc-clear data-i18n="trioc.clear" hidden>Réinitialiser</button>
+        </div>
+      </section>
+
       <!-- Conditions d'équipe (repliable) -->
       <details id="conditions-panel" class="conditions-accordion">
         <summary class="conditions-summary">
@@ -136,16 +149,6 @@
           <div id="conditions-inputs"></div>
         </div>
       </details>
-
-      <!-- Trio C (mode Proud uniquement) : le trio qui départage en cas d'égalité,
-           composé de 2 personnages d'un trio + 1 de l'autre. -->
-      <section id="trioc" class="trioc" aria-labelledby="trioc-title">
-        <div class="trioc-head">
-          <h3 class="trioc-title" id="trioc-title" data-i18n="trioc.title">Trio C</h3>
-          <p class="trioc-hint" data-i18n="trioc.hint">En cas d'égalité, un troisième match départage : choisis 2 personnages d'un trio et 1 de l'autre.</p>
-        </div>
-        <div id="trioc-body" class="trioc-body"></div>
-      </section>
 
       <!-- Barre "Désactiver le leader" : toujours en dernier (collée au bas du panel) -->
       <div class="no-leader-bar">
@@ -346,12 +349,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=68"></script>
-  <script src="items.js?v=68"></script>
-  <script src="characters.js?v=68"></script>
-  <script src="data.js?v=68"></script>
-  <script src="calc.js?v=68"></script>
-  <script src="app.js?v=68"></script>
+  <script src="i18n.js?v=70"></script>
+  <script src="items.js?v=70"></script>
+  <script src="characters.js?v=70"></script>
+  <script src="data.js?v=70"></script>
+  <script src="calc.js?v=70"></script>
+  <script src="app.js?v=70"></script>
 
   <script>
     (function () {

@@ -1402,7 +1402,7 @@
     const elementClass = slot.character ? `elem-${(slot.character.element || "").toLowerCase()}` : "";
     // Sans personnage il n'y a rien à déplier : .is-vacant neutralise l'accordéon.
     const vacant = slot.character ? "" : "is-vacant";
-    return `<div class="builder-row ${elementClass} ${vacant} ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${panel}</div>`;
+    return `<div class="builder-row ${elementClass} ${vacant} ${isActive ? 'is-active' : ''}" data-row="${charSlot}">${charCellHTML(charSlot)}${slot.character ? trioCToggleHTML(charSlot, "inrow") : ""}${panel}</div>`;
   }
 
   // Nom conservé (renderTeamGrid) pour ne pas casser les appels existants.
@@ -1425,7 +1425,13 @@
   // 2 issus d'un trio et 1 de l'autre. La règle est tenue par une seule borne —
   // jamais plus de 2 personnages du même trio — qui, sur un total de 3, force
   // mécaniquement la répartition 2 + 1.
-  const trioCEl = document.getElementById("trioc-body");
+  // Désignation : un rectangle « TRIO C » sous chaque personnage. En écran
+  // large, c'est une barre alignée sous les tuiles, placée HORS d'elles : son
+  // survol n'ouvre aucun dépliant et rien ne bouge sous le curseur au clic.
+  // Tuiles empilées (mobile, tactile) : le rectangle est dans chaque tuile.
+  const trioCBarEl = document.getElementById("trioc-bar");
+  const trioCStatusEl = document.getElementById("trioc-status");
+  const trioCClearEl = document.getElementById("trioc-clear");
 
   function trioCLockReason(slotIdx) {
     if (state.trioC.includes(slotIdx)) return null;   // déjà pris : le clic le retire
@@ -1435,51 +1441,63 @@
     return null;
   }
 
-  function renderTrioC() {
-    if (!trioCEl) return;
-    const filled = [0, 1, 2, 3, 4, 5].filter((i) => state.team[i].character);
-    if (!filled.length) {
-      trioCEl.innerHTML = '<p class="trioc-msg">' + T('trioc.empty') + '</p>';
-      return;
-    }
-    const chips = filled.map((i) => {
-      const c = state.team[i].character;
-      const on = state.trioC.includes(i);
-      const lock = trioCLockReason(i);
-      const img = c.image
-        ? `<img class="trioc-chip-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
-        : '<span class="trioc-chip-img"></span>';
-      return '<button class="trioc-chip ' + (on ? 'is-on' : '') + ' ' + (lock ? 'is-locked' : '') +
-        ' elem-' + (c.element || "").toLowerCase() + '" data-trioc="' + i + '" type="button"' +
-        ' aria-pressed="' + on + '"' + (lock ? ' disabled title="' + lock + '"' : '') + '>' +
-        img +
-        '<span class="trioc-chip-body">' +
-          '<span class="trioc-chip-name">' + escSvg(c.nom.trim()) + '</span>' +
-          '<span class="trioc-chip-from">' + trioLabel(trioOf(i)) + '</span>' +
-        '</span></button>';
-    }).join("");
-    const n = state.trioC.length;
-    const status = n === 3
-      ? '<span class="trioc-status is-valid">' + T('trioc.valid') + '</span>'
-      : '<span class="trioc-status">' + T('trioc.count').replace("{n}", n) + '</span>';
-    trioCEl.innerHTML =
-      '<div class="trioc-chips">' + chips + '</div>' +
-      '<div class="trioc-foot">' + status +
-      (n ? '<button class="trioc-clear" data-trioc-clear type="button">' + T('trioc.clear') + '</button>' : '') +
-      '</div>';
+  // Un rectangle « TRIO C » pour le slot donné (variant : "bar" ou "inrow").
+  function trioCToggleHTML(slotIdx, variant) {
+    return `<button class="trioc-toggle trioc-toggle--${variant}" data-trioc="${slotIdx}" type="button">` +
+      `<span class="trioc-toggle-mark" aria-hidden="true"></span>` +
+      `<span class="trioc-toggle-label">${T('trioc.title')}</span></button>`;
   }
 
-  if (trioCEl) {
-    trioCEl.addEventListener("click", (e) => {
-      if (e.target.closest("[data-trioc-clear]")) { state.trioC = []; renderTrioC(); return; }
-      const chip = e.target.closest("[data-trioc]");
-      if (!chip) return;
-      const i = +chip.dataset.trioc;
-      if (state.trioC.includes(i)) state.trioC = state.trioC.filter((x) => x !== i);
-      else if (!trioCLockReason(i)) state.trioC = state.trioC.concat(i);
-      renderTrioC();
+  // État de tous les rectangles + ligne de statut, SANS reconstruire la grille
+  // (même raison que pour les paliers Cap Z : pas de clignement au clic).
+  function paintTrioC() {
+    document.querySelectorAll("[data-trioc]").forEach((btn) => {
+      const i = +btn.dataset.trioc;
+      const on = state.trioC.includes(i);
+      const lock = trioCLockReason(i);
+      const c = state.team[i].character;
+      btn.classList.toggle("is-on", on);
+      btn.classList.toggle("is-locked", !!lock);
+      btn.disabled = !!lock;
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.title = lock || (c ? `${T('trioc.title')} — ${c.nom.trim()}` : "");
     });
+    const n = state.trioC.length;
+    if (trioCStatusEl) {
+      const aucunPerso = !state.team.some((s) => s.character);
+      trioCStatusEl.textContent = aucunPerso ? T('trioc.empty')
+        : n === 3 ? T('trioc.valid') : T('trioc.count').replace("{n}", n);
+      trioCStatusEl.classList.toggle("is-valid", n === 3);
+    }
+    if (trioCClearEl) trioCClearEl.hidden = n === 0;
   }
+
+  // Appelé à chaque reconstruction de la grille (renderTeamGrid) : la barre
+  // suit la composition. Un slot vide n'a pas de rectangle mais garde sa place,
+  // pour que chaque rectangle reste aligné sous sa tuile.
+  function renderTrioC() {
+    if (trioCBarEl) {
+      const cell = (i) => state.team[i].character
+        ? trioCToggleHTML(i, "bar")
+        : '<span class="trioc-toggle trioc-toggle--bar is-vacant" aria-hidden="true"></span>';
+      trioCBarEl.innerHTML =
+        `<div class="trioc-bar-trio">${[0, 1, 2].map(cell).join("")}</div>` +
+        `<div class="trioc-bar-trio">${[3, 4, 5].map(cell).join("")}</div>`;
+    }
+    paintTrioC();
+  }
+
+  // Un seul écouteur pour la barre, les rectangles des tuiles empilées et
+  // « Réinitialiser » (la grille, elle, ignore ces clics : cf. son écouteur).
+  document.getElementById("section-build")?.addEventListener("click", (e) => {
+    if (e.target.closest("[data-trioc-clear]")) { state.trioC = []; paintTrioC(); return; }
+    const btn = e.target.closest("[data-trioc]");
+    if (!btn || btn.disabled) return;
+    const i = +btn.dataset.trioc;
+    if (state.trioC.includes(i)) state.trioC = state.trioC.filter((x) => x !== i);
+    else if (!trioCLockReason(i)) state.trioC = state.trioC.concat(i);
+    paintTrioC();
+  });
 
   // ===== BASCULE DE MODE =====
   const modeSwitchEl = document.querySelector(".mode-switch");
@@ -1529,6 +1547,9 @@
 
   builderGridEl.addEventListener("click", (e) => {
     const t = e.target;
+    // Rectangle « TRIO C » d'une tuile empilée : géré par l'écouteur du Trio C
+    // (sinon le clic retomberait sur « sélectionner ce perso » et reconstruirait la grille).
+    if (t.closest("[data-trioc]")) return;
     // Flèche → ouvre la modale de détails des items du perso
     const det = t.closest("[data-open-details]");
     if (det) { openDetailsModal(+det.dataset.openDetails); return; }

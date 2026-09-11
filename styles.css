@@ -509,56 +509,76 @@ html { scroll-behavior: smooth; }
 }
 .mode-opt:active { transform: scale(.97); }
 
-/* ── Trio C : visible en mode Proud uniquement ───────────────────────────── */
+/* ── Trio C : visible en mode Proud uniquement ─────────────────────────────
+   Un rectangle « TRIO C » sous chaque personnage. En écran large, c'est une
+   barre alignée sous les tuiles — mêmes largeurs et mêmes écarts qu'elles au
+   repos — placée HORS des tuiles : son survol n'ouvre aucun dépliant, rien
+   ne bouge sous le curseur au moment du clic. Tuiles empilées (mobile,
+   tactile) : le rectangle se place directement sous chaque tuile. */
 .trioc { display: none; }
-body[data-mode="proud"] .trioc {
-  display: block;
-  margin-top: var(--s-4);
-  padding-top: var(--s-4);
-  border-top: 1px solid var(--line);
+body[data-mode="proud"] .trioc { display: block; margin-top: var(--s-3); }
+
+.trioc-bar { display: none; }
+@media (min-width: 1100px) and (hover: hover) {
+  .trioc-bar { display: flex; gap: var(--s-5); }                                   /* = .builder-grid */
+  .trioc-bar-trio { flex: 1 1 0; min-width: 0; display: flex; gap: var(--s-2); }  /* = .builder-trio-cols */
+  .trioc-bar-trio > .trioc-toggle { flex: 1 1 0; min-width: 0; }                  /* = .builder-row */
 }
-.trioc-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-3); }
+.trioc-toggle.trioc-toggle--inrow { display: none; }   /* double classe : bat .trioc-toggle { display: flex } */
+body[data-mode="proud"] .trioc-toggle--inrow { display: flex; flex: 0 0 100%; margin-top: var(--s-2); }
+@media (min-width: 1100px) and (hover: hover) {
+  body[data-mode="proud"] .trioc-toggle--inrow { display: none; }   /* la barre prend le relais */
+}
+
+.trioc-toggle {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 8px 12px;
+  border-radius: var(--r-3);
+  border: 2px dashed var(--line-strong);
+  background: var(--surface-2);
+  color: var(--text-soft);
+  font-family: var(--font-display);
+  font-size: var(--fs-sm); font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--t-micro), border-color var(--t-micro), color var(--t-micro),
+              transform var(--t-micro) var(--ease-out-expo);
+}
+.trioc-toggle:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
+.trioc-toggle:active:not(:disabled) { transform: scale(.98); }
+.trioc-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.trioc-toggle-mark {
+  width: 16px; height: 16px; flex-shrink: 0;
+  display: grid; place-items: center;
+  border-radius: 50%; border: 2px solid currentColor;
+  font-size: 10px; line-height: 1; letter-spacing: 0;
+}
+/* Désigné : aplat d'accent et coche, lisible d'un coup d'œil sous la tuile. */
+.trioc-toggle.is-on,
+.trioc-toggle.is-on:hover:not(:disabled) {
+  border-style: solid; border-color: var(--accent);
+  background: var(--accent); color: #fff;
+  box-shadow: var(--shadow-accent);
+}
+.trioc-toggle.is-on .trioc-toggle-mark { background: #fff; border-color: #fff; color: var(--accent); }
+.trioc-toggle.is-on .trioc-toggle-mark::before { content: "✓"; font-weight: 800; }
+/* Hors règle (3 déjà désignés, ou déjà 2 du même trio) : grisé, motif en infobulle. */
+.trioc-toggle.is-locked { opacity: .4; cursor: not-allowed; }
+/* Slot vide : pas de rectangle, mais sa place est gardée pour l'alignement. */
+.trioc-toggle.is-vacant { visibility: hidden; }
+
+.trioc-line {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-3);
+  margin-top: var(--s-3);
+}
 .trioc-title {
   margin: 0;
   font-family: var(--font-display);
   font-size: var(--fs-lg); font-weight: 800;
   letter-spacing: .02em; color: var(--text);
 }
-.trioc-hint { margin: 0; font-size: var(--fs-sm); color: var(--text-soft); }
-.trioc-body { margin-top: var(--s-3); }
-.trioc-msg { margin: 0; font-size: var(--fs-sm); color: var(--muted); }
-.trioc-chips { display: flex; flex-wrap: wrap; gap: var(--s-2); }
-.trioc-chip {
-  display: flex; align-items: center; gap: var(--s-2);
-  padding: 6px 14px 6px 6px;
-  border-radius: var(--r-pill);
-  background: var(--surface-2);
-  border: 2px solid var(--elem, var(--line));
-  cursor: pointer; text-align: left;
-  transition: background var(--t-micro), border-color var(--t-micro),
-              transform var(--t-micro) var(--ease-out-expo);
-}
-.trioc-chip:hover:not(:disabled) { transform: translateY(-2px); }
-.trioc-chip.is-on { background: var(--accent-tint); box-shadow: inset 0 0 0 2px var(--accent-tint-2); }
-.trioc-chip.is-locked { opacity: .4; cursor: not-allowed; }
-.trioc-chip-img {
-  width: 38px; height: 38px; flex-shrink: 0;
-  border-radius: 50%; object-fit: cover;
-  background: var(--surface-3); border: 1px solid var(--line);
-}
-.trioc-chip-body { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-.trioc-chip-name {
-  font-size: var(--fs-sm); font-weight: 700; color: var(--text);
-  max-width: 190px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.trioc-chip-from {
-  font-family: var(--font-display);
-  font-size: var(--fs-xxs); font-weight: 700;
-  text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
-}
-.trioc-foot { display: flex; align-items: center; gap: var(--s-3); margin-top: var(--s-3); }
 .trioc-status { font-size: var(--fs-sm); font-weight: 700; color: var(--text-soft); }
 .trioc-status.is-valid { color: var(--accent); }
+.trioc-hint { margin: 0; font-size: var(--fs-sm); color: var(--text-soft); }
 .trioc-clear {
   font-size: var(--fs-xs); font-weight: 600;
   padding: 4px 12px; border-radius: var(--r-pill);
@@ -569,8 +589,8 @@ body[data-mode="proud"] .trioc {
 .trioc-clear:hover { border-color: var(--accent); color: var(--accent); }
 
 @media (prefers-reduced-motion: reduce) {
-  .trioc-chip, .mode-opt { transition: none !important; }
-  .trioc-chip:hover:not(:disabled) { transform: none; }
+  .trioc-toggle, .mode-opt { transition: none !important; }
+  .trioc-toggle:active:not(:disabled) { transform: none; }
 }
 
 /* ── Rangée de résultats : panneaux côte à côte ── */
