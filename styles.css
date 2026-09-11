@@ -1446,15 +1446,168 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
 }
 #item-modal .item-toggle:hover { background: var(--accent-tint); color: var(--accent); border-color: var(--accent-tint-2); }
 .item-toggle-arrow { font-size: 12px; line-height: 1; }
-#item-modal .item-lignes:not(.hidden) {
-  border-top: 1px solid var(--line);
-  background: var(--surface);
-  padding: var(--s-2) var(--s-3) var(--s-3);
-  border-radius: 0 0 calc(var(--r-4) - 3px) calc(var(--r-4) - 3px);
-}
 @media (prefers-reduced-motion: reduce) {
   #item-modal .item-list > li:hover,
   #item-modal .item-list > li:hover .item-img { transform: none; }
+}
+/* ── Détail d'un item : panneau latéral, hors de la grille ─────────────────
+   Le détail vivait DANS la carte : l'ouvrir étirait toute la rangée, les
+   cartes d'une rangée de grille partageant la même hauteur. Il glisse
+   désormais par-dessus la liste, qui ne bouge plus d'un pixel. */
+#item-modal { --t-drawer: 340ms; }
+.item-drawer-scrim {
+  position: fixed; inset: 0; z-index: 2;
+  background: rgba(13,13,16,.32);
+  opacity: 0; visibility: hidden;
+  transition: opacity var(--t-drawer) var(--ease-out-expo), visibility 0s linear var(--t-drawer);
+}
+.item-drawer {
+  position: fixed; z-index: 3;
+  top: 0; right: 0; bottom: 0;
+  width: min(460px, 100vw);
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  box-shadow: -30px 0 70px -34px rgba(13,13,16,.5);
+  transform: translateX(100%); visibility: hidden;
+  transition: transform var(--t-drawer) var(--ease-out-expo), visibility 0s linear var(--t-drawer);
+}
+#item-modal.is-drawer-open .item-drawer-scrim {
+  opacity: 1; visibility: visible;
+  transition: opacity var(--t-drawer) var(--ease-out-expo);
+}
+#item-modal.is-drawer-open .item-drawer {
+  transform: none; visibility: visible;
+  transition: transform var(--t-drawer) var(--ease-out-expo);
+}
+.item-drawer-head {
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px 12px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.item-drawer-kicker {
+  font-family: var(--font-display);
+  font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text-soft);
+}
+/* Seul le corps défile : en-tête et bouton « Équiper » restent en place. */
+.item-drawer-body {
+  flex: 1 1 auto; min-height: 0;
+  overflow-y: auto; overscroll-behavior: contain;
+  padding: 20px 20px 28px;
+  display: flex; flex-direction: column; gap: 22px;
+}
+.item-drawer-foot {
+  flex: 0 0 auto;
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+.item-drawer-equip {
+  width: 100%; padding: 12px 16px;
+  border: 0; border-radius: var(--r-3);
+  background: var(--accent); color: #fff;
+  font-family: var(--font-display); font-size: var(--fs-md); font-weight: 700; letter-spacing: .02em;
+  box-shadow: var(--shadow-accent);
+  cursor: pointer;
+  transition: filter var(--t-micro), transform var(--t-micro);
+}
+.item-drawer-equip:hover { filter: brightness(1.06); }
+.item-drawer-equip:active { transform: scale(.98); }
+.item-drawer-equip:focus-visible,
+#item-drawer-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* .btn-close anime « all » : la visibilité héritée du panneau y serait elle
+   aussi animée, et le bouton resterait « hidden » à l'instant où on lui donne
+   le focus — l'appel échoue alors en silence. On exclut donc la visibilité. */
+#item-drawer-close { transition-property: background-color, color, border-color, box-shadow, transform; }
+
+/* En-tête du détail : le visuel dans son cadre, puis l'identité de l'item. */
+.idet-hero { display: flex; gap: 16px; align-items: center; }
+.idet-art {
+  flex: 0 0 auto; width: 136px; height: 136px;
+  display: grid; place-items: center;
+  border-radius: var(--r-4);
+  background:
+    radial-gradient(circle at 50% 55%,
+      color-mix(in srgb, var(--rar, var(--muted)) 34%, transparent) 0%,
+      transparent 68%),
+    var(--surface-2);
+}
+.idet-art .item-img { width: 120px; height: 120px; }
+.idet-id { min-width: 0; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.idet-rarity {
+  padding: 3px 9px; border-radius: var(--r-pill);
+  background: var(--rar, var(--surface-3)); color: var(--rar-ink, var(--text-soft));
+  font-family: var(--font-display); font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .06em;
+}
+.idet-name {
+  margin: 0;
+  font-family: var(--font-body); font-size: var(--fs-xl); font-weight: 800; line-height: 1.25;
+  letter-spacing: -.01em; color: var(--text); text-wrap: balance;
+}
+.idet-tags { margin: 0; font-size: var(--fs-xs); color: var(--text-soft); }
+.idet-compat { margin: 0; font-size: var(--fs-xs); font-weight: 700; }
+.idet-compat.is-yes { color: var(--good); }
+.idet-compat.is-no  { color: var(--danger); }
+
+/* Un bloc par slot interne ; le slot 4 ne se débloque qu'à ★7. */
+.idet-slot { display: flex; flex-direction: column; gap: 6px; }
+.idet-slot-head {
+  display: flex; align-items: center; gap: 8px; margin: 0 0 2px;
+  font-family: var(--font-display); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--text-soft);
+}
+.idet-slot-head::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.idet-slot-star { color: var(--rar, var(--accent)); letter-spacing: 0; }
+.idet-stat {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 7px 10px; border-radius: var(--r-2);
+  background: var(--surface-2);
+  font-size: var(--fs-sm);
+}
+.idet-stat-label { min-width: 0; color: var(--text); }
+.idet-stat-cond { display: block; margin-top: 2px; font-size: var(--fs-xxs); color: var(--text-soft); }
+.idet-stat-val {
+  flex: 0 0 auto;
+  font-family: var(--font-display); font-weight: 700; color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.idet-passive {
+  padding: 10px 12px; border-radius: var(--r-2);
+  background: var(--accent-tint); border: 1px solid var(--accent-tint-2);
+  font-size: var(--fs-sm); line-height: 1.5; color: var(--text);
+}
+.idet-passive-head {
+  margin-bottom: 4px;
+  font-family: var(--font-display); font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+}
+.idet-passive-text { margin: 0; }
+.idet-or-caption { margin: 0 0 6px; font-size: var(--fs-xs); color: var(--text-soft); }
+.idet-or-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.idet-or-list li {
+  padding: 7px 10px; border-radius: var(--r-1);
+  background: var(--surface); border: 1px solid var(--accent-tint-2);
+}
+
+/* Mobile : le panneau devient une feuille qui monte du bas. */
+@media (max-width: 700px) {
+  .item-drawer {
+    top: auto; left: 0; right: 0; width: 100%;
+    max-height: 88vh; max-height: 88dvh;
+    border-left: 0; border-top: 1px solid var(--line);
+    border-radius: var(--r-5) var(--r-5) 0 0;
+    box-shadow: 0 -30px 70px -34px rgba(13,13,16,.5);
+    transform: translateY(100%);
+  }
+  .idet-art { width: 112px; height: 112px; }
+  .idet-art .item-img { width: 100px; height: 100px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .item-drawer, .item-drawer-scrim,
+  #item-modal.is-drawer-open .item-drawer,
+  #item-modal.is-drawer-open .item-drawer-scrim { transition: none; }
 }
 #item-modal .rarity-filters {
   padding: var(--s-3) var(--s-4) !important;
@@ -2329,22 +2482,6 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
 }
 .item-toggle:hover { background: var(--accent-tint); color: var(--accent); }
 
-.item-lignes {
-  padding: var(--s-2) var(--s-3) var(--s-3);
-  border-top: 1px solid var(--line);
-  background: var(--surface);
-  font-size: var(--fs-xs);
-}
-.modal-slot-group + .modal-slot-group { margin-top: var(--s-2); }
-.modal-slot-label {
-  font-size: var(--fs-xxs);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  color: var(--text-soft);
-  margin-bottom: 3px;
-}
-.passive-marker { color: var(--accent); font-weight: 700; }
 
 /* ===================== 16. ANIMATIONS  ===================== */
 @keyframes panelIn {

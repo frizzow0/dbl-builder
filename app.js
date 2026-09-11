@@ -1667,6 +1667,109 @@
 
   const rarityFiltersEl = document.getElementById("rarity-filters");
 
+  // ===== DÉTAIL D'UN ITEM : panneau latéral =====
+  // Le détail vivait DANS la carte : l'ouvrir étirait toute la rangée de la
+  // grille (les cartes d'une rangée partagent la même hauteur). Il s'affiche
+  // désormais dans un panneau qui glisse par-dessus la liste — la grille ne
+  // bouge plus. Il est rendu à la demande : les cartes n'embarquent plus
+  // chacune leur détail caché.
+  const drawerEl = document.getElementById("item-drawer");
+  const drawerBodyEl = document.getElementById("item-drawer-body");
+  const drawerCloseEl = document.getElementById("item-drawer-close");
+  const drawerEquipEl = document.getElementById("item-drawer-equip");
+  let drawerItem = null;      // item affiché dans le panneau
+  let drawerTrigger = null;   // bouton qui l'a ouvert : le focus y revient
+
+  function itemDetailsHTML(it) {
+    const rar = (it.rarete || "").toLowerCase();
+    const img = it.image
+      ? `<img src="${it.image}" alt="" onerror="this.style.display='none'" />`
+      : `<span class="item-img-placeholder">?</span>`;
+    const tags = formatTagsPorteur(it.tagsPorteur);
+    const compat = isCompatible(it, active.character);
+    const compatLine = compat === true
+      ? `<p class="idet-compat is-yes">✓ ${T('item.compat.yes', { name: active.character.nom.trim() })}</p>`
+      : compat === false
+        ? `<p class="idet-compat is-no">✗ ${T('item.compat.no', { name: active.character.nom.trim() })}</p>`
+        : "";
+
+    const parSlot = {};
+    for (const l of it.lignes) {
+      const sn = l.slot || 1;
+      (parSlot[sn] = parSlot[sn] || []).push(l);
+    }
+
+    const ligne = (l) => {
+      if (l.est_passif) {
+        // « - OR - » : un seul de ces effets est tiré au hasard. On les
+        // présente en liste de possibilités plutôt qu'en une phrase continue.
+        const alts = String(l.description_passif || "").split(" - OR - ").map((a) => a.trim()).filter(Boolean);
+        const corps = alts.length > 1
+          ? `<p class="idet-or-caption">${T('item.or.passive')}</p>` +
+            `<ul class="idet-or-list">${alts.map((a) => `<li>${escSvg(a)}</li>`).join("")}</ul>`
+          : `<p class="idet-passive-text">${escSvg(alts[0] || "")}</p>`;
+        return `<div class="idet-passive"><div class="idet-passive-head">⚡ ${T('passif.label')}</div>${corps}</div>`;
+      }
+      const cond = l.condition ? `<span class="idet-stat-cond">${escSvg(l.condition.description)}</span>` : "";
+      return `<div class="idet-stat">` +
+        `<span class="idet-stat-label">${statLabel(l.stat)}${cond}</span>` +
+        `<span class="idet-stat-val">+${fmtDec(l.valeur_max.toFixed(2))}%</span>` +
+        `</div>`;
+    };
+
+    const slots = Object.keys(parSlot).map(Number).sort((a, b) => a - b).map((sn) =>
+      `<section class="idet-slot">` +
+        `<h4 class="idet-slot-head">Slot ${sn}${sn === 4 ? ' <span class="idet-slot-star">★7</span>' : ""}</h4>` +
+        parSlot[sn].map(ligne).join("") +
+      `</section>`).join("");
+
+    return `<div class="idet-hero">` +
+        `<div class="idet-art"><div class="item-img is-framed rar-${rar}">${img}</div></div>` +
+        `<div class="idet-id">` +
+          `<span class="idet-rarity">${rarityLabel(it.rarete)}</span>` +
+          `<h3 class="idet-name" id="item-drawer-title">${escSvg(it.nom)}</h3>` +
+          (tags ? `<p class="idet-tags">${T('slot.compatible')} ${tags}</p>` : "") +
+          compatLine +
+        `</div>` +
+      `</div>` + slots;
+  }
+
+  function openItemDrawer(it, trigger) {
+    drawerItem = it;
+    drawerTrigger = trigger || null;
+    drawerBodyEl.innerHTML = itemDetailsHTML(it);
+    drawerBodyEl.scrollTop = 0;
+    // La classe rar-* fournit --rar au panneau : halo, pastille, étoile ★7.
+    drawerEl.className = "item-drawer rar-" + (it.rarete || "").toLowerCase();
+    drawerEl.setAttribute("aria-hidden", "false");
+    modal.classList.add("is-drawer-open");
+    drawerCloseEl.focus({ preventScroll: true });
+  }
+
+  function closeItemDrawer({ restoreFocus = true } = {}) {
+    if (!modal.classList.contains("is-drawer-open")) return;
+    modal.classList.remove("is-drawer-open");
+    drawerEl.setAttribute("aria-hidden", "true");
+    drawerItem = null;
+    if (restoreFocus && drawerTrigger && drawerTrigger.isConnected) drawerTrigger.focus();
+    drawerTrigger = null;
+  }
+
+  // Équiper un item : depuis la carte comme depuis le panneau de détail.
+  function equipItem(item) {
+    const charSlot = state.modalCharSlot ?? state.activeSlot;
+    state.team[charSlot].items[state.modalSlot] = item;
+    closeItemModal();
+    renderAll();
+  }
+
+  drawerCloseEl.addEventListener("click", () => closeItemDrawer());
+  modal.querySelector("[data-drawer-close]").addEventListener("click", () => closeItemDrawer());
+  drawerEquipEl.addEventListener("click", () => { if (drawerItem) equipItem(drawerItem); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("is-drawer-open")) closeItemDrawer();
+  });
+
   function openItemModal(charSlot, slotIdx) {
     // Le perso ciblé devient le perso actif → toute la logique de compatibilité
     // (active.character) reste correcte sans modification supplémentaire.
@@ -1686,6 +1789,7 @@
   }
 
   function closeItemModal() {
+    closeItemDrawer({ restoreFocus: false });
     modal.classList.add("hidden");
     state.modalSlot = null;
     state.modalCharSlot = null;
@@ -1794,33 +1898,6 @@
 
     itemList.innerHTML = matches
       .map((it) => {
-        // Regroupement par slot interne (1, 2, 3, 4)
-        const lignesParSlot = {};
-        for (const l of it.lignes) {
-          const sn = l.slot || 1;
-          if (!lignesParSlot[sn]) lignesParSlot[sn] = [];
-          lignesParSlot[sn].push(l);
-        }
-        const renderLigneModal = (l) => {
-          if (l.est_passif) {
-            return `<div><span class="passive-marker">⚡ ${T('passif.label')} :</span> ${l.description_passif}</div>`;
-          }
-          const cond = l.condition ? ` <em style="color:var(--text-soft)">(${l.condition.description})</em>` : "";
-          const val = fmtDec(l.valeur_max.toFixed(2));
-          return `<div>+${val}% ${statLabel(l.stat)}${cond}</div>`;
-        };
-        const slotsOrdered = Object.keys(lignesParSlot).map(Number).sort((a, b) => a - b);
-        const lignes = slotsOrdered
-          .map((sn) => {
-            const label = sn === 4 ? `Slot ${sn} <span class="slot-7">★7</span>` : `Slot ${sn}`;
-            return `
-              <div class="modal-slot-group">
-                <div class="modal-slot-label">${label}</div>
-                ${lignesParSlot[sn].map(renderLigneModal).join("")}
-              </div>
-            `;
-          })
-          .join("");
         const rar = (it.rarete || "").toLowerCase();
         const img = `<div class="item-img is-framed rar-${rar}">${it.image
           ? `<img src="${it.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
@@ -1852,10 +1929,9 @@
                 ${tagsHTML}
               </div>
             </div>
-            <button class="item-toggle" data-toggle="${it.id}" aria-expanded="false" type="button">
-              <span>${T('item.details')}</span><span class="item-toggle-arrow" aria-hidden="true">▾</span>
+            <button class="item-toggle" data-details="${it.id}" aria-haspopup="dialog" aria-controls="item-drawer" type="button">
+              <span>${T('item.details')}</span><span class="item-toggle-arrow" aria-hidden="true">›</span>
             </button>
-            <div class="item-lignes hidden" data-lignes="${it.id}">${lignes}</div>
           </li>
         `;
       })
@@ -1884,30 +1960,18 @@
     renderItemList();
   });
   itemList.addEventListener("click", (e) => {
-    // Toggle "voir détails" — n'effectue pas de sélection
-    const toggleBtn = e.target.closest("button[data-toggle]");
-    if (toggleBtn) {
-      const id = toggleBtn.dataset.toggle;
-      const block = itemList.querySelector(`[data-lignes="${id}"]`);
-      if (block) {
-        const open = !block.classList.contains("hidden");
-        block.classList.toggle("hidden", open);
-        // Seule la flèche change : le libellé « Voir les détails » reste en place.
-        const arrow = toggleBtn.querySelector(".item-toggle-arrow") || toggleBtn;
-        arrow.textContent = open ? "▾" : "▴";
-        toggleBtn.setAttribute("aria-expanded", String(!open));
-      }
+    // « Voir les détails » : ouvre le panneau latéral — n'effectue pas de sélection
+    const detailsBtn = e.target.closest("button[data-details]");
+    if (detailsBtn) {
+      const it = ITEMS.find((x) => x.id === detailsBtn.dataset.details);
+      if (it) openItemDrawer(it, detailsBtn);
       return;
     }
     // Sélection : clic sur la zone "pick" (image + nom)
     const pick = e.target.closest("[data-pick]");
     if (!pick) return;
     const item = ITEMS.find((it) => it.id === pick.dataset.pick);
-    if (!item) return;
-    const charSlot = state.modalCharSlot ?? state.activeSlot;
-    state.team[charSlot].items[state.modalSlot] = item;
-    closeItemModal();
-    renderAll();
+    if (item) equipItem(item);
   });
 
   // ===== RENDU : SLOTS (legacy — remplacé par la grille builder, conservé en no-op) =====

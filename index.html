@@ -41,7 +41,7 @@
   <!-- ── Google AdSense : désactivé pour le moment ──────────
        (script + emplacements retirés — réactivables via git) -->
 
-  <link rel="stylesheet" href="styles.css?v=63" />
+  <link rel="stylesheet" href="styles.css?v=66" />
 
   <!-- ── Google Search Console : décommente et colle ton token (méthode « balise HTML »),
        ou préfère la vérification par enregistrement DNS TXT au niveau du domaine.
@@ -288,6 +288,18 @@
       <div id="rarity-filters" class="rarity-filters"></div>
       <ul id="item-list" class="item-list"></ul>
     </div>
+    <!-- Détail d'un item : panneau latéral par-dessus la liste (la grille ne bouge pas) -->
+    <div class="item-drawer-scrim" data-drawer-close></div>
+    <aside id="item-drawer" class="item-drawer" role="dialog" aria-labelledby="item-drawer-title" aria-hidden="true">
+      <div class="item-drawer-head">
+        <span class="item-drawer-kicker" data-i18n="item.drawer.kicker">Détail de l’item</span>
+        <button id="item-drawer-close" class="btn-close" type="button" aria-label="Fermer le détail" data-i18n-aria-label="item.drawer.close">×</button>
+      </div>
+      <div id="item-drawer-body" class="item-drawer-body"></div>
+      <div class="item-drawer-foot">
+        <button id="item-drawer-equip" class="item-drawer-equip" type="button" data-i18n="item.equip">Équiper cet item</button>
+      </div>
+    </aside>
   </div>
 
   <!-- ============ MODALE DÉTAILS DES ITEMS (par perso) ============ -->
@@ -334,12 +346,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=63"></script>
-  <script src="items.js?v=63"></script>
-  <script src="characters.js?v=63"></script>
-  <script src="data.js?v=63"></script>
-  <script src="calc.js?v=63"></script>
-  <script src="app.js?v=63"></script>
+  <script src="i18n.js?v=66"></script>
+  <script src="items.js?v=66"></script>
+  <script src="characters.js?v=66"></script>
+  <script src="data.js?v=66"></script>
+  <script src="calc.js?v=66"></script>
+  <script src="app.js?v=66"></script>
 
   <script>
     (function () {
