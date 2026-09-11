@@ -1216,17 +1216,13 @@
     }
     // Slot cible = celui qu'on édite (ajout/changement) ; par défaut le perso analysé.
     const target = state.charTargetSlot ?? state.activeSlot;
-    if (p) {
-      state.team[target].character = p;
-      state.team[target].zTier = 4; // reset au max à chaque nouveau perso
-    } else {
-      // Retirer un perso vide TOUT le slot : ses items et ses choix de lignes
-      // OR partent avec lui. Sinon ils continuaient de compter dans
-      // « Composition d'équipe » et réapparaissaient au perso suivant.
-      Object.assign(state.team[target], emptyTeamSlot());
-      // Un slot vidé ne peut plus faire partie du Trio C.
-      state.trioC = state.trioC.filter((i) => i !== target);
-    }
+    // Le slot repart toujours vierge — retirer un perso (✕) comme en changer
+    // (✎) : items, choix de lignes OR et palier Cap Z (IV) sont réinitialisés.
+    // Sinon ils comptaient encore dans « Composition d'équipe » et passaient
+    // au perso suivant.
+    Object.assign(state.team[target], emptyTeamSlot(), { character: p || null });
+    // Un slot vidé ne peut plus faire partie du Trio C.
+    if (!p) state.trioC = state.trioC.filter((i) => i !== target);
     // On ne déplace le focus d'analyse QUE si le perso analysé n'existe plus
     // (1er perso, ou on vient de vider le slot analysé). Ajouter un coéquipier
     // dans un autre slot ne vole donc pas le focus.
