@@ -708,6 +708,7 @@
   function buildItemConditions(slotIdx) {
     const counts = getTrioTagCountsFor(slotIdx, true);
     for (const slot of state.team) {
+      if (!slot.character) continue;   // slot vide : ses items ne comptent pas
       for (const item of slot.items) {
         if (!item) continue;
         const tag = '__same_item__:' + item.id;
@@ -1215,10 +1216,17 @@
     }
     // Slot cible = celui qu'on édite (ajout/changement) ; par défaut le perso analysé.
     const target = state.charTargetSlot ?? state.activeSlot;
-    state.team[target].character = p || null;
-    state.team[target].zTier = 4; // reset au max à chaque nouveau perso
-    // Un slot vidé ne peut plus faire partie du Trio C.
-    if (!p) state.trioC = state.trioC.filter((i) => i !== target);
+    if (p) {
+      state.team[target].character = p;
+      state.team[target].zTier = 4; // reset au max à chaque nouveau perso
+    } else {
+      // Retirer un perso vide TOUT le slot : ses items et ses choix de lignes
+      // OR partent avec lui. Sinon ils continuaient de compter dans
+      // « Composition d'équipe » et réapparaissaient au perso suivant.
+      Object.assign(state.team[target], emptyTeamSlot());
+      // Un slot vidé ne peut plus faire partie du Trio C.
+      state.trioC = state.trioC.filter((i) => i !== target);
+    }
     // On ne déplace le focus d'analyse QUE si le perso analysé n'existe plus
     // (1er perso, ou on vient de vider le slot analysé). Ajouter un coéquipier
     // dans un autre slot ne vole donc pas le focus.
@@ -1233,6 +1241,10 @@
     renderCharTraits();
     renderCharZAbility();
     renderBuildState();
+    // Tags requis et comptes dépendent des persos présents : le panneau
+    // « Composition d'équipe » se met à jour (et se masque s'il n'a plus rien
+    // à montrer). Il n'était recalculé que par renderAll().
+    renderConditions();
     renderResults();
     if (!modal.classList.contains("hidden")) {
       renderRarityFilters();
@@ -2195,6 +2207,7 @@
     // Team-wide : on collecte les tags requis par les items de TOUTE l'équipe.
     const tagSet = new Set();
     state.team.forEach((slot) => {
+      if (!slot.character) return;   // slot vide : ses items ne comptent pas
       slot.items.forEach((it) => {
         if (!it) return;
         it.lignes.forEach((l) => {
@@ -2221,6 +2234,7 @@
         const effective = Math.max(userVal, autoVal);
         let seuils = [];
         state.team.forEach((slot) => {
+          if (!slot.character) return;
           slot.items.forEach((it) => {
             if (!it) return;
             it.lignes.forEach((l) => {
