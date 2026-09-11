@@ -540,12 +540,6 @@ body[data-mode="proud"] .trioc {
   transition: background var(--t-micro), border-color var(--t-micro),
               transform var(--t-micro) var(--ease-out-expo);
 }
-.trioc-chip.elem-blu { --elem: #3b82f6; }
-.trioc-chip.elem-red { --elem: #ef4444; }
-.trioc-chip.elem-grn { --elem: #16a34a; }
-.trioc-chip.elem-yel { --elem: #e0a800; }
-.trioc-chip.elem-pur { --elem: #a855f7; }
-.trioc-chip.elem-lgt { --elem: #7c8699; }
 .trioc-chip:hover:not(:disabled) { transform: translateY(-2px); }
 .trioc-chip.is-on { background: var(--accent-tint); box-shadow: inset 0 0 0 2px var(--accent-tint-2); }
 .trioc-chip.is-locked { opacity: .4; cursor: not-allowed; }
@@ -1109,11 +1103,6 @@ body[data-mode="proud"] .trioc {
   font-weight: 600;
   text-transform: uppercase;
 }
-#char-suggestions li.elem-bleu   .char-suggestion-element { background: var(--accent-blue-soft); color: var(--el-bleu); }
-#char-suggestions li.elem-rouge  .char-suggestion-element { background: rgba(229,57,53,.15);   color: var(--el-rouge); }
-#char-suggestions li.elem-vert   .char-suggestion-element { background: rgba(34,197,94,.15);   color: var(--el-vert); }
-#char-suggestions li.elem-jaune  .char-suggestion-element { background: rgba(250,204,21,.2);   color: #ca8a04; }
-#char-suggestions li.elem-violet .char-suggestion-element { background: rgba(168,85,247,.15);  color: var(--el-violet); }
 .char-suggestion-empty {
   padding: var(--s-3); color: var(--text-soft); text-align: center;
   font-size: var(--fs-sm);
@@ -1415,17 +1404,96 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   margin: 0;
 }
 #item-modal .modal-panel .search-input { margin: var(--s-3) var(--s-4) 0 !important; }
+/* ── Sélection de personnage : cartes « artwork d'abord » ─────────────────
+   Ordre de lecture voulu : le visuel (on reconnaît un perso à son artwork),
+   puis le nom, puis la couleur — portée par le contour et une pastille en
+   aplat. Visuels sources en 256x256 : nets à la taille des cartes. */
 #char-modal .char-modal-list {
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
   gap: var(--s-3);
   padding: var(--s-4);
+  align-content: start;
+}
+@media (min-width: 900px) {
+  #char-modal .char-modal-list {
+    grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
+    gap: var(--s-4);
+  }
 }
 #char-modal .char-modal-list li {
-  grid-template-columns: 56px 1fr auto;
-  padding: var(--s-3);
+  position: relative;
+  display: flex; flex-direction: column; gap: 0;
+  align-items: stretch;
+  padding: 0;
+  background: var(--surface);
+  border: 3px solid var(--elem, var(--line));
+  border-radius: var(--r-4);
+  text-align: left;
 }
-#char-modal .char-modal-list .char-suggestion-img { width: 56px; height: 56px; }
-#char-modal .char-modal-list .char-suggestion-name { font-size: var(--fs-md); }
+#char-modal .char-modal-list li:hover {
+  background: var(--surface);
+  border-color: var(--elem, var(--accent));
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -18px var(--elem, rgba(0,0,0,.4));
+}
+/* Le visuel pose sur un halo de sa propre couleur. */
+.char-card-art {
+  position: relative;
+  aspect-ratio: 1;
+  display: grid; place-items: center;
+  overflow: hidden;
+  border-radius: calc(var(--r-4) - 3px) calc(var(--r-4) - 3px) 0 0;
+  background:
+    radial-gradient(circle at 50% 58%,
+      color-mix(in srgb, var(--elem, var(--muted)) 30%, transparent) 0%,
+      transparent 68%),
+    var(--surface-2);
+}
+#char-modal .char-modal-list .char-suggestion-img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  border-radius: 0; background: transparent;
+  transition: transform var(--t-hover) var(--ease-out-expo);
+}
+#char-modal .char-modal-list li:hover .char-suggestion-img { transform: scale(1.06); }
+#char-modal .char-suggestion-element {
+  position: absolute; top: 8px; left: 8px;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  background: var(--elem, var(--surface-3));
+  color: var(--elem-ink, var(--text-soft));
+  font-family: var(--font-display);
+  font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .08em;
+  box-shadow: 0 2px 6px -2px rgba(0,0,0,.3);
+}
+.char-card-body {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--line);
+}
+/* Nom : 3 lignes de haut, figées. À 15px, 2 lignes tronqueraient 34 noms —
+   souvent sur leur fin, là où deux variantes d'un même perso diffèrent ;
+   3 lignes n'en tronquent plus que 2 (nom complet en infobulle). */
+#char-modal .char-modal-list .char-suggestion-name {
+  display: flex; align-items: flex-start;
+  height: 3.75em;
+  font-size: var(--fs-lg); font-weight: 800; line-height: 1.25;
+  letter-spacing: -.01em;
+  color: var(--text);
+}
+#char-modal .char-modal-list .char-suggestion-name > span {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+#char-modal .char-modal-list .char-suggestion-code {
+  margin-top: 0;
+  font-size: var(--fs-xxs); color: var(--muted); letter-spacing: .02em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+@media (prefers-reduced-motion: reduce) {
+  #char-modal .char-modal-list li:hover,
+  #char-modal .char-modal-list li:hover .char-suggestion-img { transform: none; }
+}
 
 .char-traits { margin-top: var(--s-3); }
 .char-traits-head {
@@ -2547,30 +2615,28 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 }
 
 /* ── Perso déjà dans l'équipe (modale char) ─────────────────────── */
-.char-modal-list li.is-taken {
-  opacity: 0.45;
-  cursor: not-allowed;
-  position: relative;
+/* La carte doit rester lisible — on doit comprendre POURQUOI elle est
+   inactive : seul le visuel s'éteint, et le badge se pose en son centre. */
+.char-modal-list li.is-taken { cursor: not-allowed; }
+.char-modal-list li.is-taken .char-suggestion-img { filter: grayscale(1); opacity: .35; }
+.char-modal-list li.is-taken .char-card-body,
+.char-modal-list li.is-taken .char-suggestion-element { opacity: .5; }
+#char-modal .char-modal-list li.is-taken:hover {
+  transform: none; box-shadow: none; background: var(--surface);
 }
-.char-modal-list li.is-taken:hover {
-  background: transparent !important;
-}
+#char-modal .char-modal-list li.is-taken:hover .char-suggestion-img { transform: none; }
 .char-taken-badge {
-  position: absolute;
-  right: var(--s-3);
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: var(--fs-xxs);
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  background: var(--surface-3);
-  border: 1px solid var(--line);
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 11px;
   border-radius: var(--r-pill);
-  padding: 2px 8px;
-  white-space: nowrap;
-  pointer-events: none;
+  font-family: var(--font-display);
+  font-size: var(--fs-xxs); font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--text); background: var(--surface);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 4px 12px -6px rgba(0,0,0,.3);
+  white-space: nowrap; pointer-events: none;
 }
 
 /* ── Motion premium (thème clair) : entrées douces + survol « lift » ── */
@@ -2776,16 +2842,18 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 .builder-leader.is-leader-disabled { opacity: .35; }
 .builder-char:has(.builder-leader.is-leader) { background: var(--accent-tint); }
 
-/* ── Couleur d'élément : elle cercle la tuile ─────────────────────────────
-   --elem est posé sur la LIGNE, pas sur la tuile : la tuile ET son dépliant
-   en héritent, donc la carte ouverte est cerclée d'un seul trait continu. */
-.builder-row.elem-blu { --elem: #3b82f6; }
-.builder-row.elem-red { --elem: #ef4444; }
-.builder-row.elem-grn { --elem: #16a34a; }
-.builder-row.elem-yel { --elem: #e0a800; }
-.builder-row.elem-pur { --elem: #a855f7; }
+/* ── Couleur d'élément : une seule palette pour tout le site ──────────────
+   Portée par la classe .elem-* où qu'elle soit posée : sur la LIGNE du builder
+   (la tuile ET son dépliant en héritent, d'où un contour continu à l'ouverture),
+   sur les chips du Trio C et sur les cartes de la sélection de personnage.
+   --elem-ink = couleur de texte lisible posée sur un aplat de --elem. */
+.elem-blu { --elem: #3b82f6; --elem-ink: #fff; }
+.elem-red { --elem: #ef4444; --elem-ink: #fff; }
+.elem-grn { --elem: #16a34a; --elem-ink: #fff; }
+.elem-yel { --elem: #e0a800; --elem-ink: #2a2100; }
+.elem-pur { --elem: #a855f7; --elem-ink: #fff; }
 /* LGT vaut « blanc » dans le jeu : invisible sur fond clair, rendu en ardoise. */
-.builder-row.elem-lgt { --elem: #7c8699; }
+.elem-lgt { --elem: #7c8699; --elem-ink: #fff; }
 
 .builder-row > .builder-char { border-color: var(--elem, var(--line)); }
 .builder-row > .builder-char.is-empty:hover { border-color: var(--accent); }

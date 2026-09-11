@@ -1013,12 +1013,16 @@
           ? `<img class="char-suggestion-img" src="${p.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
           : `<div class="char-suggestion-img char-suggestion-img-placeholder">?</div>`;
         return `
-          <li data-char-id="${p.id}" class="${elementClass}${isTaken ? " is-taken" : ""}" ${isTaken ? 'aria-disabled="true"' : ''}>
-            ${img}
-            <span class="char-suggestion-element">${p.element ? T('elem.' + p.element) : ""}</span>
-            <span class="char-suggestion-name">${p.nom.trim()}</span>
-            <small class="char-suggestion-code">${p.cardCode || ""} · ${p.rarete}</small>
-            ${isTaken ? `<span class="char-taken-badge">${T('char.taken')}</span>` : ""}
+          <li data-char-id="${p.id}" class="${elementClass}${isTaken ? " is-taken" : ""}" title="${p.nom.trim()}" ${isTaken ? 'aria-disabled="true"' : ''}>
+            <div class="char-card-art">
+              ${img}
+              ${p.element ? `<span class="char-suggestion-element">${T('elem.' + p.element)}</span>` : ""}
+              ${isTaken ? `<span class="char-taken-badge">${T('char.taken')}</span>` : ""}
+            </div>
+            <div class="char-card-body">
+              <span class="char-suggestion-name"><span>${p.nom.trim()}</span></span>
+              <small class="char-suggestion-code">${p.cardCode || ""} · ${p.rarete}</small>
+            </div>
           </li>
         `;
       })
