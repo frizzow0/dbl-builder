@@ -1840,20 +1840,21 @@
           compatClass = "is-incompat";
         }
         return `
-          <li data-id="${it.id}" class="${compatClass}">
-            <div class="item-card-row">
-              <div class="item-pick" data-pick="${it.id}">
+          <li data-id="${it.id}" class="rar-${rar} ${compatClass}" title="${it.nom}">
+            <div class="item-pick" data-pick="${it.id}">
+              <div class="item-card-art">
                 ${img}
-                <div class="item-info">
-                  <div class="item-name" title="${it.nom}">
-                    ${compatBadge}
-                    <span class="item-rarete-pill rarete-${it.rarete}">${rarityLabel(it.rarete)}</span>${it.nom}
-                  </div>
-                  ${tagsHTML}
-                </div>
+                <span class="item-rarete-pill">${rarityLabel(it.rarete)}</span>
+                ${compatBadge}
               </div>
-              <button class="item-toggle" data-toggle="${it.id}" aria-label="${T('item.details')}" type="button">▾</button>
+              <div class="item-card-body">
+                <div class="item-name"><span>${it.nom}</span></div>
+                ${tagsHTML}
+              </div>
             </div>
+            <button class="item-toggle" data-toggle="${it.id}" aria-expanded="false" type="button">
+              <span>${T('item.details')}</span><span class="item-toggle-arrow" aria-hidden="true">▾</span>
+            </button>
             <div class="item-lignes hidden" data-lignes="${it.id}">${lignes}</div>
           </li>
         `;
@@ -1891,7 +1892,10 @@
       if (block) {
         const open = !block.classList.contains("hidden");
         block.classList.toggle("hidden", open);
-        toggleBtn.textContent = open ? "▾" : "▴";
+        // Seule la flèche change : le libellé « Voir les détails » reste en place.
+        const arrow = toggleBtn.querySelector(".item-toggle-arrow") || toggleBtn;
+        arrow.textContent = open ? "▾" : "▴";
+        toggleBtn.setAttribute("aria-expanded", String(!open));
       }
       return;
     }

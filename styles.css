@@ -37,9 +37,7 @@
   --danger-tint: rgba(220, 38, 38, .1);
 
   --rar-unique:     #6366f1;
-  --rar-rare:       #38bdf8;
   --rar-awakened:   #a855f7;
-  --rar-collector:  #f59e0b;
 
   --el-bleu:   #2e7dff;
   --el-rouge:  #e53935;
@@ -1335,67 +1333,128 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   grid-template-columns: 1fr !important;
 }
 #item-modal .modal-backdrop { display: none !important; }
+/* ── Sélection d'item : cartes « visuel d'abord », comme pour les persos ──
+   Le visuel est l'icône DANS son vrai cadre de rareté (.item-img.is-framed).
+   À 120px le cadre est à sa taille native (116-128px) et l'icône, qui en
+   occupe 82 %, tombe à ~98px — sa propre taille native : les deux sont nets. */
 #item-modal .item-list {
   min-height: 0 !important;
   overflow-y: auto !important;
   height: 100% !important;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
   gap: var(--s-3) !important;
   padding: var(--s-4) !important;
+  align-content: start;
 }
-/* Cards items dans le modal fullscreen : layout grid clair comme les cards perso */
+@media (min-width: 900px) {
+  #item-modal .item-list {
+    grid-template-columns: repeat(auto-fill, minmax(208px, 1fr)) !important;
+    gap: var(--s-4) !important;
+  }
+}
+/* PAS d'overflow: hidden sur la carte : dans une grille plus haute que
+   l'écran, il ramène la hauteur minimale de chaque rangée à 0. */
 #item-modal .item-list > li {
-  overflow: visible !important;  /* pas de clip → nom peut wrap */
-  display: flex;
-  flex-direction: column;
+  overflow: visible !important;
+  display: flex; flex-direction: column; align-items: stretch;
+  background: var(--surface);
+  border: 3px solid var(--rar, var(--line));
+  border-radius: var(--r-4);
 }
-#item-modal .item-card-row {
-  display: grid !important;
-  grid-template-columns: 56px 1fr auto;
-  gap: var(--s-3);
-  align-items: center;
-  padding: var(--s-3) !important;
+#item-modal .item-list > li:hover {
+  border-color: var(--rar, var(--accent));
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -18px var(--rar, rgba(0,0,0,.4));
 }
 #item-modal .item-pick {
-  display: contents !important; /* on laisse les enfants prendre les positions du grid */
+  display: flex; flex-direction: column; align-items: stretch; gap: 0;
+  cursor: pointer;
+}
+/* Le visuel pose sur un halo de la couleur de son cadre. */
+.item-card-art {
+  position: relative;
+  height: 152px;
+  display: grid; place-items: center;
+  border-radius: calc(var(--r-4) - 3px) calc(var(--r-4) - 3px) 0 0;
+  background:
+    radial-gradient(circle at 50% 55%,
+      color-mix(in srgb, var(--rar, var(--muted)) 32%, transparent) 0%,
+      transparent 66%),
+    var(--surface-2);
 }
 #item-modal .item-img {
-  width: 56px !important;
-  height: 56px !important;
-  grid-row: span 1;
+  width: 120px !important; height: 120px !important;
+  transition: transform var(--t-hover) var(--ease-out-expo);
 }
-#item-modal .item-info { min-width: 0; }
+#item-modal .item-list > li:hover .item-img { transform: scale(1.05); }
+#item-modal .item-rarete-pill {
+  position: absolute; top: 8px; left: 8px;
+  max-width: calc(100% - 48px);
+  padding: 3px 9px;
+  background: var(--rar, var(--surface-3));
+  color: var(--rar-ink, var(--text-soft));
+  font-family: var(--font-display);
+  font-size: var(--fs-xxs); font-weight: 700; letter-spacing: .06em;
+  box-shadow: 0 2px 6px -2px rgba(0,0,0,.3);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* Compatibilité avec le perso visé : pastille pleine, en haut à droite. */
+#item-modal .compat-badge {
+  position: absolute; top: 8px; right: 8px;
+  width: 24px; height: 24px; margin: 0;
+  font-size: 12px; color: #fff;
+  box-shadow: 0 2px 6px -2px rgba(0,0,0,.3);
+}
+#item-modal .compat-yes { background: var(--good); }
+#item-modal .compat-no  { background: var(--danger); }
+/* Incompatible : le visuel s'éteint, mais la carte reste sélectionnable —
+   l'effet ne s'appliquera simplement pas à ce perso. */
+#item-modal .item-list > li.is-incompat .item-img { filter: grayscale(.85); opacity: .5; }
+#item-modal .item-list > li.is-incompat .item-card-body { opacity: .6; }
+.item-card-body {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+}
+/* Nom : 3 lignes de haut, figées, pour aligner les cartes d'une rangée.
+   Beaucoup de noms d'items sont des répliques : à ~22 caractères par ligne,
+   3 lignes n'en tronquent que 15 sur 914 (nom complet en infobulle). */
 #item-modal .item-name {
-  display: block !important;
-  font-size: var(--fs-md) !important;
-  font-weight: 700;
-  line-height: 1.25;
-  word-break: break-word;
+  display: flex; align-items: flex-start; gap: 0;
+  height: 3.75em;
+  font-family: var(--font-body);
+  font-size: var(--fs-lg); font-weight: 800; line-height: 1.25;
+  letter-spacing: -.01em; color: var(--text);
 }
-/* Rarity pill : sur sa propre ligne au-dessus du nom */
-#item-modal .item-name .item-rarete-pill {
-  display: block;
-  width: max-content;
-  max-width: 100%;
-  font-size: 11px;
-  padding: 2px 7px;
-  letter-spacing: .06em;
-  margin-bottom: 4px;
+#item-modal .item-name > span {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 #item-modal .item-tags-porteur {
-  white-space: normal !important;  /* on laisse les tags wrap */
-  font-size: var(--fs-xxs);
-  line-height: 1.3;
+  margin-top: 0;
+  font-size: var(--fs-xxs); line-height: 1.3; color: var(--muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+/* « Voir les détails » : bouton pleine largeur en pied de carte. */
 #item-modal .item-toggle {
-  align-self: center;
-  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  width: auto; height: auto;
+  margin: 0 10px 10px; padding: 6px 10px;
+  border-radius: var(--r-2);
+  font-size: var(--fs-xs); font-weight: 600;
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--text-soft);
 }
-/* Panneau lignes détaillées (ouvert) : prend tout le bas de la card */
+#item-modal .item-toggle:hover { background: var(--accent-tint); color: var(--accent); border-color: var(--accent-tint-2); }
+.item-toggle-arrow { font-size: 12px; line-height: 1; }
 #item-modal .item-lignes:not(.hidden) {
   border-top: 1px solid var(--line);
   background: var(--surface);
   padding: var(--s-2) var(--s-3) var(--s-3);
+  border-radius: 0 0 calc(var(--r-4) - 3px) calc(var(--r-4) - 3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  #item-modal .item-list > li:hover,
+  #item-modal .item-list > li:hover .item-img { transform: none; }
 }
 #item-modal .rarity-filters {
   padding: var(--s-3) var(--s-4) !important;
@@ -2195,13 +2254,7 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   animation: itemIn var(--t-entry) var(--ease-out-expo) both;
 }
 .item-list > li:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--accent-tint-2); }
-.item-list > li.compat-no { opacity: .5; }
 
-.item-card-row {
-  display: flex; align-items: stretch;
-  padding: var(--s-2);
-  gap: var(--s-2);
-}
 .item-pick {
   display: flex; gap: var(--s-2); flex: 1; align-items: center;
   cursor: pointer; min-width: 0;
@@ -2214,7 +2267,6 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   flex-shrink: 0;
 }
 .item-img-placeholder { display: grid; place-items: center; color: var(--muted); }
-.item-info { flex: 1; min-width: 0; }
 .item-name {
   font-family: var(--font-display);
   font-size: var(--fs-sm);
@@ -2232,11 +2284,22 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   background: var(--surface-3);
   color: var(--text-soft);
 }
-.item-rarete-pill.rarete-awakenedunique  { background: rgba(168,85,247,.15); color: var(--rar-awakened); }
-.item-rarete-pill.rarete-unique           { background: rgba(99,102,241,.15);  color: var(--rar-unique); }
-.item-rarete-pill.rarete-extremerare      { background: rgba(56,189,248,.15);  color: var(--rar-rare); }
-.item-rarete-pill.rarete-rare             { background: rgba(56,189,248,.12);  color: var(--rar-rare); }
-.item-rarete-pill.rarete-collector        { background: rgba(245,158,11,.18);  color: var(--rar-collector); }
+/* ── Couleur de rareté : prélevée sur les vrais cadres du jeu ─────────────
+   Teinte moyenne, pondérée par la saturation, de chaque assets/frames/*.webp.
+   Exception : les cadres Unique sont irisés et leur moyenne donne un kaki
+   terne — on garde les teintes Unique du projet. --rar-ink = texte lisible
+   posé sur un aplat de --rar (foncé sur les teintes claires). */
+.rar-platinum       { --rar: #7ec5f5; --rar-ink: #10222e; }
+.rar-awakenedunique { --rar: var(--rar-awakened); --rar-ink: #fff; }
+.rar-unique         { --rar: var(--rar-unique); --rar-ink: #fff; }
+.rar-awakenedgold   { --rar: #caa52a; --rar-ink: #231a00; }
+.rar-gold           { --rar: #d4ad34; --rar-ink: #231a00; }
+.rar-awakenedsilver { --rar: #8896a8; --rar-ink: #14181f; }
+.rar-silver         { --rar: #7b8a9d; --rar-ink: #14181f; }
+.rar-awakenedbronze { --rar: #8b634e; --rar-ink: #fff; }
+.rar-bronze         { --rar: #7b563e; --rar-ink: #fff; }
+.rar-iron           { --rar: #71706b; --rar-ink: #fff; }
+.rar-event          { --rar: #e16711; --rar-ink: #1f0e02; }
 .item-tags-porteur {
   font-size: var(--fs-xxs);
   color: var(--text-soft);
