@@ -1,9 +1,10 @@
 /* =========================================================
-   DBL Item Builder — Direction C "Z Era"
-   Light/dark auto · Accent Orange Z · Outfit + Space Grotesk
+   DBL Optimizer — Direction « Carte collector »
+   Papier, encre, or, violet holo · Bricolage Grotesque + Figtree
+   (jetons redéfinis par la couche finale, en fin de fichier)
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap');
 
 /* =====================  1. TOKENS  ===================== */
 :root {
@@ -3024,3 +3025,201 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 }
 .conditions-summary-hint { font-size: var(--fs-xxs); color: var(--text-soft); padding-left: 18px; }
 .conditions-body { padding: 0 14px 14px; }
+
+/* =====================  DIRECTION C · CARTE COLLECTOR  =====================
+   Couche finale de la refonte visuelle : elle redéfinit les jetons (le reste
+   de la feuille les suit) puis habille les éléments phares. Papier blanc et
+   encre ; OR pour la valeur (Cap Z, totaux, leader) ; VIOLET HOLO pour
+   l'interaction ; bande holographique en signature, façon carte à
+   collectionner. Tailles relevées : texte de base 16px, rien sous 13px. */
+:root {
+  /* Matière : papier, encre, parchemin pour les incrustations */
+  --bg:          #F3F1EC;
+  --bg-elev:     #FFFFFF;
+  --surface:     #FFFFFF;
+  --surface-2:   #F7F5F0;
+  --surface-3:   #EDE9E0;
+  --line:        #E4E0D6;
+  --line-strong: #CFC9BC;
+  --text:        #14141A;
+  --text-soft:   #4E4C57;
+  --muted:       #7D7A86;
+
+  /* Interaction : violet holo (le blanc reste lisible dessus) */
+  --accent:        #7C5CFF;
+  --accent-soft:   #9D84FF;
+  --accent-1:      #B8A6FF;
+  --accent-glow:   rgba(124, 92, 255, .35);
+  --accent-tint:   rgba(124, 92, 255, .08);
+  --accent-tint-2: rgba(124, 92, 255, .18);
+  --shadow-accent: 0 8px 24px rgba(124, 92, 255, .22);
+
+  /* Valeur : or. Cap Z = or partout (barres, Résumé, total) ; items = indigo. */
+  --gold:      #E0B84A;
+  --gold-deep: #B8901F;
+  --gold-ink:  #3D2E05;
+  --capz:      #C99A1D;
+  --items:     #6366F1;
+  --holo-h: linear-gradient(90deg, #3DD6F5, #7C5CFF 50%, #FF6FB5);
+  --holo-v: linear-gradient(180deg, #3DD6F5, #7C5CFF 50%, #FF6FB5);
+
+  --font-body:    'Figtree', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Bricolage Grotesque', var(--font-body);
+
+  /* Échelle relevée : plus rien sous 13px */
+  --fs-xxs: 13px;
+  --fs-xs:  13px;
+  --fs-sm:  14px;
+  --fs-md:  15px;
+  --fs-lg:  17px;
+  --fs-xl:  20px;
+  --fs-2xl: 26px;
+  --fs-3xl: 34px;
+  --fs-4xl: 46px;
+  --fs-5xl: 60px;
+
+  --r-3: 16px;
+  --r-4: 20px;
+  --shadow-1: 0 1px 0 rgba(20,20,26,.04), 0 2px 10px rgba(20,20,26,.05);
+  --shadow-2: 0 6px 20px rgba(20,20,26,.08), 0 18px 48px rgba(20,20,26,.08);
+}
+html { font-size: 16px; }
+
+/* ── Mise en page : une largeur de lecture, plus d'étirement bord à bord ── */
+.layout { max-width: 1640px; margin: 0 auto; padding: var(--s-6) var(--s-6) var(--s-8); gap: var(--s-6); }
+
+/* ── En-tête : la marque en encre et or ── */
+.brand-glyph {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--text); color: var(--gold);
+  font-size: 15px; box-shadow: none;
+}
+.topbar .brand-title { font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 800; letter-spacing: -.01em; }
+.topbar .brand-sub { font-size: var(--fs-xs); }
+.lang-toggle { font-size: 13px; }
+
+/* ── Titre d'accroche ── */
+.seo-intro h1 { font-size: clamp(32px, 3.4vw, 52px); letter-spacing: -.03em; line-height: 1.04; }
+.seo-intro p { font-size: var(--fs-md); line-height: 1.6; color: var(--text-soft); max-width: 78ch; }
+
+/* ── Panneaux : titres francs, filet holographique ── */
+.panel { border-radius: var(--r-5); padding: var(--s-6); }
+.panel-title { font-size: var(--fs-2xl); font-weight: 800; letter-spacing: -.02em; margin-bottom: var(--s-4); gap: var(--s-3); }
+.panel-title::before { width: 6px; height: 26px; border-radius: 3px; background: var(--holo-v); }
+.panel-hint { font-size: var(--fs-sm); }
+.panel-sub { font-size: var(--fs-md); }
+
+/* ── Tuiles de total : encre, chiffre en or, bande holo ── */
+.z-grand-total,
+.z-grand-total.is-global {
+  background: var(--text);
+  border-radius: var(--r-4);
+  padding: var(--s-6) var(--s-5) var(--s-5);
+  box-shadow: 0 16px 36px -20px rgba(20,20,26,.7);
+}
+.z-grand-total::after { inset: 0 0 auto 0; height: 5px; background: var(--holo-h); }
+.z-grand-total-label { font-family: var(--font-body); font-size: var(--fs-sm); letter-spacing: .1em; opacity: 1; color: #CFC9BC; }
+.z-grand-total-value { font-size: var(--fs-5xl); color: var(--gold); text-shadow: none; letter-spacing: -.03em; margin: var(--s-2) 0; }
+.z-grand-total.is-global .z-grand-total-value { color: #C4B8FF; }
+.z-grand-total-detail { font-size: var(--fs-sm); opacity: 1; color: #A9A396; }
+
+/* ── Résumé des effets cumulés : la Cap Z passe à l'or, comme ses barres ── */
+.stat-cell-z { border-color: rgba(201, 154, 29, .35); background: rgba(224, 184, 74, .12); }
+.stat-cell-z .stat-cell-mult { color: var(--gold-deep); }
+.stat-cell-label, .stat-cell-gain { font-size: 13px; }
+
+/* ── Tuiles de l'équipe : carte à collectionner ── */
+.builder-trio-label { font-size: var(--fs-sm); letter-spacing: .14em; color: var(--text); }
+/* Bande holographique en tête de carte, comme un liseré de rareté. Elle est
+   peinte en couche de fond : le ::before reste libre pour le reflet au survol. */
+.builder-row > .builder-char:not(.is-empty) {
+  background: var(--holo-h) center top / calc(100% - 28px) 5px no-repeat, var(--surface);
+}
+.builder-char-name { font-family: var(--font-display); }
+/* Le leader porte l'or : la valeur, pas l'interaction */
+.builder-row > .builder-char:has(.builder-leader.is-leader) {
+  background: var(--holo-h) center top / calc(100% - 28px) 5px no-repeat, rgba(224, 184, 74, .12);
+}
+.builder-leader.is-leader {
+  background: var(--gold); color: var(--gold-ink); border-color: var(--gold-deep);
+  box-shadow: 0 6px 16px -8px rgba(184, 144, 31, .7);
+}
+
+/* ── Cartes des sélections (persos, items) : noms en caractère d'affiche ── */
+#char-modal .char-modal-list .char-suggestion-name,
+#item-modal .item-name,
+.idet-name { font-family: var(--font-display); }
+
+/* ── Boutons de navigation entre sections : encre, pleine présence ── */
+.section-jump-btn {
+  padding: 14px 30px; font-size: var(--fs-md);
+  background: var(--text); color: #fff; border-color: var(--text);
+}
+.section-jump-btn:hover { background: #2A2A33; color: #fff; border-color: #2A2A33; }
+
+/* ── Matrice et bulles de l'arbre Cap Z : plus rien de minuscule ── */
+.ztm-corner { font-size: 13px; }
+.ztm-star { font-size: 13px; }
+.ztree-tip-grouphead, .ztree-tip-cond { font-size: 13px; }
+
+/* L'artwork pose sur un halo de sa couleur d'élément, comme dans la sélection
+   de persos — plus de carré beige hérité de l'ancien thème. */
+.builder-row > .builder-char .builder-char-img {
+  background:
+    radial-gradient(circle at 50% 58%,
+      color-mix(in srgb, var(--elem, var(--muted)) 28%, transparent) 0%,
+      transparent 70%),
+    var(--surface-2);
+  border: 0;
+}
+
+/* ── Reflet holographique au survol des cartes ─────────────────────────────
+   Une bande irisée (cyan, blanc, rose) traverse la carte en diagonale, une
+   seule fois par survol, comme la lumière qui accroche une carte holo.
+   Uniquement transform + opacity (composité par le GPU, aucun recalcul de
+   mise en page). « overflow: clip » découpe le reflet à la forme arrondie de
+   la carte SANS en faire un conteneur de défilement : « hidden » ramenait la
+   hauteur minimale des cartes à 0 et écrasait les rangées des sélections. */
+.builder-row > .builder-char:not(.is-empty),
+#char-modal .char-modal-list li { overflow: clip; }
+#item-modal .item-list > li { overflow: clip !important; position: relative; }
+
+.builder-row > .builder-char:not(.is-empty)::before,
+#char-modal .char-modal-list li::after,
+#item-modal .item-list > li[data-id]::after {
+  content: ""; position: absolute; z-index: 3;
+  top: -15%; bottom: -15%; left: 0; width: 42%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(61, 214, 245, .24) 28%,
+    rgba(255, 255, 255, .72) 50%,
+    rgba(255, 111, 181, .24) 72%,
+    transparent 100%);
+  transform: translateX(-140%) skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+}
+/* Sur écran tactile, pas de survol : pas de reflet déclenché au toucher. */
+@media (hover: hover) {
+  .builder-row > .builder-char:not(.is-empty):hover::before,
+  #char-modal .char-modal-list li:not(.is-taken):hover::after,
+  #item-modal .item-list > li[data-id]:hover::after {
+    animation: holoSweep 1000ms cubic-bezier(.22, 1, .36, 1) both;
+  }
+}
+/* La bande (42 % de la largeur) part de -140 % de sa largeur (hors carte, à
+   gauche) et finit à +340 % (hors carte, à droite) : elle traverse toute la
+   carte, apparaît vite, s'efface en sortant. */
+@keyframes holoSweep {
+  0%   { transform: translateX(-140%) skewX(-18deg); opacity: 0; }
+  15%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { transform: translateX(340%) skewX(-18deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-jump-btn { transition: none; }
+  .builder-row > .builder-char::before,
+  #char-modal .char-modal-list li::after,
+  #item-modal .item-list > li::after { animation: none !important; }
+}

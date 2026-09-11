@@ -2486,13 +2486,13 @@
   // allChar : [{ slot, label, color, items }].
   function renderGlobalChart(allChar) {
     if (!globalRadarEl) return;
-    if (!allChar.length) { renderBars(globalRadarEl, [], "#6366f1"); return; }
+    if (!allChar.length) { renderBars(globalRadarEl, [], "var(--items)"); return; }
     const occ = allChar.map((c) => ({ idx: c.slot, character: state.team[c.slot].character }));
     const src = resolveFocusSlot(occ);
     const sel = allChar.find((c) => c.slot === src) || allChar[0];
     // Barres en bleu/indigo : même famille que le « Résumé des effets cumulés »
-    // (items = bleu) et que la carte de total global, distinct de l'orange Cap Z.
-    renderBars(globalRadarEl, sel.items, "#6366f1");
+    // (items = indigo), distinct de l'or de la Cap Z (jetons --items / --capz).
+    renderBars(globalRadarEl, sel.items, "var(--items)");
   }
 
   // ===== BILAN CAP Z =====
@@ -2503,7 +2503,7 @@
       .filter((s) => s.character);
     if (occupied.length === 0) {
       zBilanEl.innerHTML = `<p class="placeholder">${T('team.noperso')}</p>`;
-      renderBars(zRadarEl, [], "#ff5722");
+      renderBars(zRadarEl, [], "var(--capz)");
       return;
     }
 
@@ -2551,7 +2551,7 @@
 
     // Barres : gain total d'équipe par stat (Cap Z) — toutes stats boostées, triées
     const teamItems = Object.values(statTotals).map((t) => ({ label: t.label, value: t.totalGain }));
-    renderBars(zRadarEl, teamItems, "#ff5722");
+    renderBars(zRadarEl, teamItems, "var(--capz)");
   }
 
   // ===== BILAN GLOBAL (Cap Z + items, tout compris) =====
@@ -2947,7 +2947,7 @@
       "background:" + (active_ ? "var(--accent-tint-2)" : "var(--surface-2)"),
       "color:"       + (active_ ? "var(--accent)"       : "var(--text-soft)"),
       "font-family:var(--font-body)",
-      "font-size:12px",
+      "font-size:14px",
       "font-weight:600",
       "letter-spacing:.02em",
       "cursor:pointer",
@@ -2977,10 +2977,10 @@
       badgeEl.textContent = active_ ? T('leader.on') : T('leader.off');
       badgeEl.classList.toggle("is-on", active_);
       badgeEl.style.cssText = [
-        "font-size:10px",
+        "font-size:13px",
         "font-weight:700",
         "letter-spacing:.08em",
-        "padding:2px 7px",
+        "padding:3px 9px",
         "border-radius:999px",
         "flex-shrink:0",
         "background:" + (active_ ? "var(--accent)" : "var(--line)"),
