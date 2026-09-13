@@ -115,6 +115,7 @@
     'item.details':         { fr: 'Voir les détails',       en: 'View details' },
     'passif.label':         { fr: 'Passif',                 en: 'Passive' },
     'item.equip':           { fr: 'Équiper cet item',       en: 'Equip this item' },
+    'item.reserved':        { fr: 'Réservé à',              en: 'Reserved for' },
     'item.drawer.kicker':   { fr: 'Détail de l’item',       en: 'Item details' },
     'item.drawer.close':    { fr: 'Fermer le détail',       en: 'Close details' },
     'item.or.passive':      { fr: 'Effet aléatoire — un seul parmi :', en: 'Random effect — only one of:' },

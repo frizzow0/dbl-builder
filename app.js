@@ -385,6 +385,12 @@
   // Un perso "possède" : ses traits + son cardCode + son élément.
   function isCompatible(item, character) {
     if (!character) return null; // pas de perso sélectionné = compat inconnue
+    // Réservé à quelques cartes précises : le site en donne la liste exacte
+    // (porteursExacts, au plus 5 cartes). Seules ces cartes passent — un Platinum
+    // ou un « SPARKING !! » ne va qu'à UNE carte, pas à toutes celles du perso.
+    if (item.porteursExacts && item.porteursExacts.length) {
+      return item.porteursExacts.some((p) => String(p.id) === String(character.sourceId));
+    }
     if (!item.tagsPorteur || !item.tagsPorteur.length) return true; // aucune restriction
     const owned = ownedTags(character);
     return item.tagsPorteur.some((group) => group.every((tag) => owned.has(tag)));
@@ -397,6 +403,26 @@
     const groups = tags.map((g) => g.join(" • "));
     if (groups.length === 1) return groups[0];
     return groups.map((g) => `(${g})`).join(` ${T('cond.or')} `);
+  }
+
+  // Phrase de porteur d'un item, en deux longueurs (court : ligne de la carte ;
+  // complet : infobulles et détails). Un item réservé à quelques cartes précises
+  // (porteursExacts, lu sur le site) les nomme ; sinon, restriction par traits.
+  function porteurInfo(item) {
+    if (item.porteursExacts && item.porteursExacts.length) {
+      const vus = new Set();
+      const cartes = item.porteursExacts
+        .filter((p) => (vus.has(p.code) ? false : vus.add(p.code)))
+        .map((p) => {
+          const perso = PERSONNAGES.find((c) => String(c.sourceId) === String(p.id));
+          return `${(perso ? perso.nom : p.nom).trim()} (${p.code})`;
+        })
+        .join(", ");
+      const phrase = `${T('item.reserved')} ${cartes}`;
+      return { court: phrase, complet: phrase };
+    }
+    const tags = formatTagsPorteur(item.tagsPorteur);
+    return tags ? { court: tags, complet: `${T('slot.compatible')} ${tags}` } : null;
   }
 
   // Labels d'affichage pour les raretés — dynamique selon la langue
@@ -1306,8 +1332,8 @@
       const label = sn === 4 ? `Slot ${sn} <span class="slot-7">★7</span>` : `Slot ${sn}`;
       return `<div class="item-slot-group"><div class="item-slot-label">${label}</div><div class="item-slot-lignes">${lignesParSlot[sn].map(({ l, lineIdx }) => renderItemLigne(l, lineIdx, item, itemSlotIdx, displayConds, slotChoices)).join("")}</div></div>`;
     }).join("");
-    const tagsLine = formatTagsPorteur(item.tagsPorteur);
-    const tagsHTML = tagsLine ? `<div class="slot-item-tags">${T('slot.compatible')} ${tagsLine}</div>` : "";
+    const porteur = porteurInfo(item);
+    const tagsHTML = porteur ? `<div class="slot-item-tags">${porteur.complet}</div>` : "";
     return `<div class="builder-item filled">
       <div class="slot-item-rarete">${rarityLabel(item.rarete)}</div>
       <div class="slot-item-name">${item.nom}</div>
@@ -1720,7 +1746,7 @@
     const img = it.image
       ? `<img src="${it.image}" alt="" onerror="this.style.display='none'" />`
       : `<span class="item-img-placeholder">?</span>`;
-    const tags = formatTagsPorteur(it.tagsPorteur);
+    const porteur = porteurInfo(it);
     const compat = isCompatible(it, active.character);
     const compatLine = compat === true
       ? `<p class="idet-compat is-yes">✓ ${T('item.compat.yes', { name: active.character.nom.trim() })}</p>`
@@ -1733,7 +1759,7 @@
         `<div class="idet-id">` +
           `<span class="idet-rarity">${rarityLabel(it.rarete)}</span>` +
           `<h3 class="idet-name" id="item-drawer-title">${escSvg(it.nom)}</h3>` +
-          (tags ? `<p class="idet-tags">${T('slot.compatible')} ${tags}</p>` : "") +
+          (porteur ? `<p class="idet-tags">${porteur.complet}</p>` : "") +
           compatLine +
         `</div>` +
       `</div>` + itemSlotsHTML(it);
@@ -1962,9 +1988,9 @@
         const img = `<div class="item-img is-framed rar-${rar}">${it.image
           ? `<img src="${it.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
           : `<span class="item-img-placeholder">?</span>`}</div>`;
-        const tagsLine = formatTagsPorteur(it.tagsPorteur);
-        const tagsHTML = tagsLine
-          ? `<div class="item-tags-porteur" title="${T('slot.compatible')} ${tagsLine}">${tagsLine}</div>`
+        const porteur = porteurInfo(it);
+        const tagsHTML = porteur
+          ? `<div class="item-tags-porteur" title="${porteur.complet}">${porteur.court}</div>`
           : "";
         const compat = isCompatible(it, active.character);
         let compatBadge = "";
@@ -2147,9 +2173,9 @@
         })
         .join("");
 
-      const slotTagsLine = formatTagsPorteur(item.tagsPorteur);
-      const slotTagsHTML = slotTagsLine
-        ? `<div class="slot-item-tags">${T('slot.compatible')} ${slotTagsLine}</div>`
+      const slotPorteur = porteurInfo(item);
+      const slotTagsHTML = slotPorteur
+        ? `<div class="slot-item-tags">${slotPorteur.complet}</div>`
         : "";
       el.innerHTML = `
         <div class="slot-item-rarete">${rarityLabel(item.rarete)}</div>

@@ -1,6 +1,6 @@
 // Auto-généré par scrape.js — ne pas éditer à la main.
 // Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, event)
-// 923 items, généré le 2026-09-13T18:11:12.790Z
+// 923 items, généré le 2026-09-13T18:31:36.217Z
 
 window.DBL_ITEMS_SCRAPED = [
   {
@@ -249,6 +249,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Li Shenron"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "443",
+        "code": "DBL-EVT-38U",
+        "nom": "Oméga Shenron"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -370,6 +377,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "468",
+        "code": "DBL45-01U",
+        "nom": "Super Saiyan divin SS Kaioken Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -495,6 +509,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Broly"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "495",
+        "code": "DBL51-03U",
+        "nom": "Super Saiyan légendaire Broly"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -616,6 +637,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Gogeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "454",
+        "code": "DBL42-01U",
+        "nom": "Super Gogeta"
+      }
     ],
     "lignes": [
       {
@@ -741,6 +769,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Goku Black"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "532",
+        "code": "DBL57-01U",
+        "nom": "Super Saiyan Rosé Goku Black"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -850,6 +885,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Hit"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "511",
+        "code": "DBL55-03U",
+        "nom": "Hit"
+      }
     ],
     "lignes": [
       {
@@ -969,6 +1011,18 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Shallot"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "19800",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      },
+      {
+        "id": "9000",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      }
     ],
     "lignes": [
       {
@@ -1094,6 +1148,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Vegetto"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "487",
+        "code": "DBL49-01U",
+        "nom": "Super Vegetto"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -1218,6 +1279,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "385",
+        "code": "DBL-EVT-17U",
+        "nom": "Super Saiyan Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -1336,6 +1404,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "586",
+        "code": "DBL66-04U",
+        "nom": "Signes de l'Ultra Instinct Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -1456,6 +1531,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Boo"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "538",
+        "code": "DBL58-03U",
+        "nom": "Boo : petit"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -1569,6 +1651,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegetto"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "554",
+        "code": "DBL61-01U",
+        "nom": "Super Saiyan divin SS Vegetto"
+      }
     ],
     "lignes": [
       {
@@ -1689,6 +1778,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Beerus"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "166",
+        "code": "DBL07-11S",
+        "nom": "Dieu de la destruction Beerus"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -1752,6 +1848,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Gohan"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "191",
+        "code": "DBL10-06S",
+        "nom": "Super Saiyan 2 Son Gohan enfant"
+      }
     ],
     "lignes": [
       {
@@ -1818,6 +1921,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goten"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "204",
+        "code": "DBL12-06S",
+        "nom": "Super Saiyan Son Goten petit"
+      }
     ],
     "lignes": [
       {
@@ -1887,6 +1997,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "220",
+        "code": "DBL15-05S",
+        "nom": "Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -2731,6 +2848,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Beerus"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "166",
+        "code": "DBL07-11S",
+        "nom": "Dieu de la destruction Beerus"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -3460,6 +3584,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Cell"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "432",
+        "code": "DBL40-02S",
+        "nom": "Cell Parfait"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -3579,6 +3710,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Gohan"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "191",
+        "code": "DBL10-06S",
+        "nom": "Super Saiyan 2 Son Gohan enfant"
+      }
+    ],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -3637,6 +3775,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Gohan"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "191",
+        "code": "DBL10-06S",
+        "nom": "Super Saiyan 2 Son Gohan enfant"
+      }
     ],
     "lignes": [
       {
@@ -3792,6 +3937,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Freezer"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "414",
+        "code": "DBL37-02S",
+        "nom": "Forme finale Freezer : pleine puissance"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -3846,6 +3998,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "220",
+        "code": "DBL15-05S",
+        "nom": "Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -3948,6 +4107,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goten"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "204",
+        "code": "DBL12-06S",
+        "nom": "Super Saiyan Son Goten petit"
+      }
+    ],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -4026,6 +4192,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegetto"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "224",
+        "code": "DBL13-03S",
+        "nom": "Super Vegetto"
+      }
     ],
     "lignes": [
       {
@@ -4349,6 +4522,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Vegeta"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "265",
+        "code": "DBL18-05S",
+        "nom": "Super Saiyan divin SS Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -4439,6 +4619,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "251",
+        "code": "DBL17-05S",
+        "nom": "Super Saiyan 3 Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -4598,6 +4785,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegetto"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "318",
+        "code": "DBL24-01S",
+        "nom": "Super Saiyan divin SS Vegetto"
+      }
     ],
     "lignes": [
       {
@@ -4914,6 +5108,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Zamasu"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "395",
+        "code": "DBL35-08S",
+        "nom": "Corrompu Zamasu : Fusion"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -5199,6 +5400,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Piccolo"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "253",
+        "code": "DBL22-03S",
+        "nom": "Piccolo"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -5239,6 +5447,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Freezer"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "304",
+        "code": "DBL22-05S",
+        "nom": "1re forme Freezer"
+      }
     ],
     "lignes": [
       {
@@ -5287,6 +5502,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "346",
+        "code": "DBL26-06S",
+        "nom": "Vegeta"
+      }
     ],
     "lignes": [
       {
@@ -5452,6 +5674,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "366",
+        "code": "DBL29-04S",
+        "nom": "Signes de l'Ultra Instinct Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -5513,6 +5742,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Boo"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "377",
+        "code": "DBL32-02S",
+        "nom": "Boo : petit"
+      }
     ],
     "lignes": [
       {
@@ -5678,6 +5914,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "388",
+        "code": "DBL34-01S",
+        "nom": "Super Saiyan 4 Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -5723,6 +5966,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Gogeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "392",
+        "code": "DBL35-01S",
+        "nom": "Super Saiyan 4 Gogeta"
+      }
     ],
     "lignes": [
       {
@@ -6041,6 +6291,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Vegeta"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "400",
+        "code": "DBL-EVT-24U",
+        "nom": "Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -6074,6 +6331,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "385",
+        "code": "DBL-EVT-17U",
+        "nom": "Super Saiyan Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -6162,6 +6426,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Trunks"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "451",
+        "code": "DBL41-02S",
+        "nom": "Super Saiyan Trunks adulte"
+      }
     ],
     "lignes": [
       {
@@ -6284,6 +6555,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Bardock"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "456",
+        "code": "DBL43-01S",
+        "nom": "Bardock"
+      }
     ],
     "lignes": [
       {
@@ -6425,6 +6703,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Jiren"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "462",
+        "code": "DBL44-01S",
+        "nom": "Jiren : pleine puissance"
+      }
     ],
     "lignes": [
       {
@@ -6589,6 +6874,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "576",
+        "code": "DBL65-01S",
+        "nom": "Super Saiyan divin SS évolué & Super Saiyan divin SS Kaioken Vegeta & Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -6882,6 +7174,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Broly"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "370",
+        "code": "DBL30-03S",
+        "nom": "Super Saiyan Broly : pleine puissance"
+      }
+    ],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -6991,6 +7290,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "482",
+        "code": "DBL48-01S",
+        "nom": "Super Saiyan 3 Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -7652,6 +7958,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "501",
+        "code": "DBL53-01S",
+        "nom": "Super Saiyan 4 Son Goku & Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -7792,6 +8105,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Trunks"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "514",
+        "code": "DBL54-03S",
+        "nom": "Super Saiyan 2 & Super Saiyan divin SS Trunks adulte & Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -7874,6 +8194,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "265",
+        "code": "DBL18-05S",
+        "nom": "Super Saiyan divin SS Vegeta"
+      }
     ],
     "lignes": [
       {
@@ -8035,6 +8362,13 @@ window.DBL_ITEMS_SCRAPED = [
         "C-17"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "510",
+        "code": "DBL55-01S",
+        "nom": "C-17"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -8157,6 +8491,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Gohan"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "375",
+        "code": "DBL31-01S",
+        "nom": "Super Saiyan Son Gohan"
+      }
     ],
     "lignes": [
       {
@@ -8366,6 +8707,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "536",
+        "code": "DBL58-01S",
+        "nom": "Super Saiyan 3 & Super Saiyan 2 Son Goku & Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -8521,6 +8869,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "539",
+        "code": "DBL59-01S",
+        "nom": "Son Goku & Freezer forme finale"
+      }
     ],
     "lignes": [
       {
@@ -8720,6 +9075,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Piccolo"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "551",
+        "code": "DBL60-02S",
+        "nom": "Potentiel libéré Piccolo"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -8772,6 +9134,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Piccolo"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "551",
+        "code": "DBL60-02S",
+        "nom": "Potentiel libéré Piccolo"
+      }
     ],
     "lignes": [
       {
@@ -8848,6 +9217,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Gamma 1"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "549",
+        "code": "DBL60-03S",
+        "nom": "Gamma 1 & Gamma 2"
+      }
     ],
     "lignes": [
       {
@@ -8960,6 +9336,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Gamma 1"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "549",
+        "code": "DBL60-03S",
+        "nom": "Gamma 1 & Gamma 2"
+      }
     ],
     "lignes": [
       {
@@ -9430,6 +9813,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "563",
+        "code": "DBL62-04S",
+        "nom": "Super Saiyan Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -9992,6 +10382,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Shallot"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "19800",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      },
+      {
+        "id": "9000",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -10370,6 +10772,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "448",
+        "code": "DBL41-01S",
+        "nom": "Super Saiyan divin SS Son Goku & Vegeta"
+      }
     ],
     "lignes": [
       {
@@ -10815,6 +11224,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "615",
+        "code": "DBL72-01S",
+        "nom": "Super Saiyan divin Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -11013,6 +11429,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Piccolo"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "253",
+        "code": "DBL22-03S",
+        "nom": "Piccolo"
+      }
     ],
     "lignes": [
       {
@@ -11621,6 +12044,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Goku Black"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "648",
+        "code": "DBL77-05S",
+        "nom": "Goku Black"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -11726,6 +12156,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Broly"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "624",
+        "code": "DBL74-03S",
+        "nom": "Super Saiyan Broly"
+      }
     ],
     "lignes": [
       {
@@ -12292,6 +12729,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "251",
+        "code": "DBL17-05S",
+        "nom": "Super Saiyan 3 Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -12378,6 +12822,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "583",
+        "code": "DBL66-01S",
+        "nom": "Son Goku & Bardock"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -12446,6 +12897,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "675",
+        "code": "DBL82-03S",
+        "nom": "Son Goku enfant"
+      }
     ],
     "lignes": [
       {
@@ -12731,6 +13189,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Zamasu"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "661",
+        "code": "DBL79-04S",
+        "nom": "Zamasu : Fusion"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -12952,6 +13417,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "690",
+        "code": "DBL83-02S",
+        "nom": "Super Saiyan divin SS Vegeta"
+      }
     ],
     "lignes": [
       {
@@ -13359,6 +13831,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Freezer"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "414",
+        "code": "DBL37-02S",
+        "nom": "Forme finale Freezer : pleine puissance"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -13445,6 +13924,23 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Reacum"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "562",
+        "code": "DBL62-02S",
+        "nom": "Reacum & Guldo"
+      },
+      {
+        "id": "561",
+        "code": "DBL62-03S",
+        "nom": "Jeese & Butta"
+      },
+      {
+        "id": "560",
+        "code": "DBL62-01S",
+        "nom": "Ginyu"
+      }
     ],
     "lignes": [
       {
@@ -14110,6 +14606,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Vegeta"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "670",
+        "code": "DBL81-04S",
+        "nom": "Super Saiyan 4 Son Goku"
+      },
+      {
+        "id": "668",
+        "code": "DBL81-02S",
+        "nom": "Super Saiyan 3 Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -14436,6 +14944,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "388",
+        "code": "DBL34-01S",
+        "nom": "Super Saiyan 4 Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -14539,6 +15054,23 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "DRAGON BALL XENOVERSE 2"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "726",
+        "code": "DBL94-04L",
+        "nom": "Super Saiyan Rosé - Ultra Super méchant Goku Black"
+      },
+      {
+        "id": "728",
+        "code": "DBL94-03S",
+        "nom": "Trunks : Xeno"
+      },
+      {
+        "id": "727",
+        "code": "DBL94-02S",
+        "nom": "Super Saiyan divin - Ultra Super méchant Vegeta"
+      }
     ],
     "lignes": [
       {
@@ -14669,6 +15201,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Nappa"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "607",
+        "code": "DBL70-03S",
+        "nom": "Nappa"
+      }
     ],
     "lignes": [
       {
@@ -14974,6 +15513,33 @@ window.DBL_ITEMS_SCRAPED = [
         "Escadron blindé de Cooler"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "744",
+        "code": "DBL99-03S",
+        "nom": "Dore & Neizu"
+      },
+      {
+        "id": "743",
+        "code": "DBL99-02S",
+        "nom": "Sauzer"
+      },
+      {
+        "id": "496",
+        "code": "DBL51-02E",
+        "nom": "Sauzer"
+      },
+      {
+        "id": "99",
+        "code": "DBL08-11E",
+        "nom": "Sauzer"
+      },
+      {
+        "id": "105",
+        "code": "DBL08-12H",
+        "nom": "Sauzer"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -15070,6 +15636,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Boo"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "113",
+        "code": "DBL06-06S",
+        "nom": "Boo"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -15154,6 +15727,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "112",
+        "code": "DBL06-11S",
+        "nom": "Super Saiyan 3 Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -15247,6 +15827,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Gohan"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "186",
+        "code": "DBL10-02S",
+        "nom": "Son Gohan ultime"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -15325,6 +15912,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "216",
+        "code": "DBL13-01S",
+        "nom": "Super Saiyan divin SS Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -15401,6 +15995,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Vegeta"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "185",
+        "code": "DBL09-09S",
+        "nom": "Super Saiyan divin Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -15469,6 +16070,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Goku Black"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "126",
+        "code": "DBL06-13S",
+        "nom": "Goku Black"
+      }
     ],
     "lignes": [
       {
@@ -15548,6 +16156,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "C-16"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "95",
+        "code": "DBL05-06S",
+        "nom": "C-16"
+      }
     ],
     "lignes": [
       {
@@ -15641,6 +16256,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Freezer"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "32",
+        "code": "DBL01-41S",
+        "nom": "Forme finale Freezer"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -15707,6 +16329,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "16",
+        "code": "DBL01-04S",
+        "nom": "Super Saiyan Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -15787,6 +16416,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "76",
+        "code": "DBL-EVT-01S",
+        "nom": "Son Goku enfant"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -15846,6 +16482,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "271",
+        "code": "DBL19-07S",
+        "nom": "Super Saiyan 4 Vegeta"
+      }
     ],
     "lignes": [
       {
@@ -15918,6 +16561,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "270",
+        "code": "DBL19-05S",
+        "nom": "Super Saiyan 4 Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -15992,6 +16642,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Vegeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "93",
+        "code": "DBL03-14S",
+        "nom": "Super Vegeta"
+      }
     ],
     "lignes": [
       {
@@ -16081,6 +16738,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Gohan"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "111",
+        "code": "DBL04-11S",
+        "nom": "Super Saiyan 2 Son Gohan enfant"
+      }
+    ],
     "lignes": [
       {
         "stat": "degats_infliges",
@@ -16169,6 +16833,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Broly"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "207",
+        "code": "DBL12-01S",
+        "nom": "Super Saiyan légendaire Broly"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -16251,6 +16922,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Cooler"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "168",
+        "code": "DBL08-10S",
+        "nom": "Forme finale Cooler"
+      }
     ],
     "lignes": [
       {
@@ -16337,6 +17015,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Thalès"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "50",
+        "code": "DBL02-13S",
+        "nom": "Thalès"
+      }
     ],
     "lignes": [
       {
@@ -16426,6 +17111,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Slug"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "189",
+        "code": "DBL10-10S",
+        "nom": "Super Namek Slug"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -16512,6 +17204,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Glorio"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "645",
+        "code": "DBL77-02S",
+        "nom": "Glorio"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -16573,6 +17272,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "568",
+        "code": "DBL63-04S",
+        "nom": "Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -16650,6 +17356,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Piccolo"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "569",
+        "code": "DBL63-05S",
+        "nom": "Piccolo Junior"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -16726,6 +17439,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Son Goku"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "252",
+        "code": "DBL22-01S",
+        "nom": "Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -16799,6 +17519,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Gogeta"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "148",
+        "code": "DBL05-10S",
+        "nom": "Super Gogeta"
+      }
     ],
     "lignes": [
       {
@@ -16886,6 +17613,13 @@ window.DBL_ITEMS_SCRAPED = [
         "C-21"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "300",
+        "code": "DBL31-02S",
+        "nom": "C-21 : gentille"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -16966,6 +17700,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Trunks"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "384",
+        "code": "DBL33-01S",
+        "nom": "Trunks : Mai (Soutien)"
+      }
     ],
     "lignes": [
       {
@@ -17050,6 +17791,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "459",
+        "code": "DBL43-04S",
+        "nom": "Kaioken Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -17158,6 +17906,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Zahha"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "524",
+        "code": "DBL00-02",
+        "nom": "Zahha"
+      }
     ],
     "lignes": [
       {
@@ -17268,6 +18023,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Shin"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "611",
+        "code": "DBL71-03S",
+        "nom": "Kaio Shin de l'Est Shin"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -17366,6 +18128,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Jiren"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "540",
+        "code": "DBL59-04S",
+        "nom": "Jiren"
+      }
     ],
     "lignes": [
       {
@@ -17481,6 +18250,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Caway"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "542",
+        "code": "DBL59-05S",
+        "nom": "Caway"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -17589,6 +18365,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Roi Cold"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "699",
+        "code": "DBL86-01S",
+        "nom": "Roi Cold"
+      }
     ],
     "lignes": [
       {
@@ -17857,6 +18640,18 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Shallot"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "19800",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      },
+      {
+        "id": "9000",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      }
     ],
     "lignes": [
       {
@@ -18159,6 +18954,23 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "251",
+        "code": "DBL17-05S",
+        "nom": "Super Saiyan 3 Son Goku"
+      },
+      {
+        "id": "243",
+        "code": "DBL16-01S",
+        "nom": "Son Goku"
+      },
+      {
+        "id": "15",
+        "code": "DBL-EVT-00S",
+        "nom": "Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -18654,6 +19466,23 @@ window.DBL_ITEMS_SCRAPED = [
         "Type physique"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "169",
+        "code": "DBL-EVT-03S",
+        "nom": "Trunks enfant"
+      },
+      {
+        "id": "157",
+        "code": "DBL-EVT-12S",
+        "nom": "Super Saiyan Son Gohan jeune"
+      },
+      {
+        "id": "76",
+        "code": "DBL-EVT-01S",
+        "nom": "Son Goku enfant"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique",
@@ -18735,6 +19564,13 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Chaozu"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "9",
+        "code": "DBL01-12E",
+        "nom": "Chaozu"
+      }
     ],
     "lignes": [
       {
@@ -20770,6 +21606,28 @@ window.DBL_ITEMS_SCRAPED = [
         "VER"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "668",
+        "code": "DBL81-02S",
+        "nom": "Super Saiyan 3 Vegeta"
+      },
+      {
+        "id": "482",
+        "code": "DBL48-01S",
+        "nom": "Super Saiyan 3 Son Goku"
+      },
+      {
+        "id": "251",
+        "code": "DBL17-05S",
+        "nom": "Super Saiyan 3 Son Goku"
+      },
+      {
+        "id": "398",
+        "code": "DBL35-05E",
+        "nom": "Super Saiyan 3 Gotenks"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21316,6 +22174,33 @@ window.DBL_ITEMS_SCRAPED = [
         "Super Saiyan 4",
         "Type physique"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "621",
+        "code": "DBL73-01U",
+        "nom": "Super Saiyan 4 Gogeta"
+      },
+      {
+        "id": "670",
+        "code": "DBL81-04S",
+        "nom": "Super Saiyan 4 Son Goku"
+      },
+      {
+        "id": "501",
+        "code": "DBL53-01S",
+        "nom": "Super Saiyan 4 Son Goku & Vegeta"
+      },
+      {
+        "id": "388",
+        "code": "DBL34-01S",
+        "nom": "Super Saiyan 4 Son Goku"
+      },
+      {
+        "id": "270",
+        "code": "DBL19-05S",
+        "nom": "Super Saiyan 4 Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -22439,6 +23324,33 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Janemba"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "572",
+        "code": "DBL64-01U",
+        "nom": "Super Janemba"
+      },
+      {
+        "id": "708",
+        "code": "DBL89-03S",
+        "nom": "Super Janemba"
+      },
+      {
+        "id": "289",
+        "code": "DBL20-02S",
+        "nom": "Super Janemba"
+      },
+      {
+        "id": "149",
+        "code": "DBL05-11S",
+        "nom": "Super Janemba"
+      },
+      {
+        "id": "221",
+        "code": "DBL13-08E",
+        "nom": "Super Janemba"
+      }
     ],
     "lignes": [
       {
@@ -23906,6 +24818,23 @@ window.DBL_ITEMS_SCRAPED = [
         "Goku Black",
         "Type défense"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "648",
+        "code": "DBL77-05S",
+        "nom": "Goku Black"
+      },
+      {
+        "id": "131",
+        "code": "DBL15-02S",
+        "nom": "Goku Black"
+      },
+      {
+        "id": "399",
+        "code": "DBL35-09E",
+        "nom": "Super Saiyan Rosé Goku Black"
+      }
     ],
     "lignes": [
       {
@@ -25553,6 +26482,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Vegeta"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "714",
+        "code": "DBL91-01S",
+        "nom": "Super Saiyan 3 Vegeta (Mini)"
+      },
+      {
+        "id": "668",
+        "code": "DBL81-02S",
+        "nom": "Super Saiyan 3 Vegeta"
+      }
+    ],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -25870,6 +26811,33 @@ window.DBL_ITEMS_SCRAPED = [
         "DAIMA",
         "Son Goku"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "722",
+        "code": "DBL93-02L",
+        "nom": "Super Saiyan 3 Son Goku (Mini)"
+      },
+      {
+        "id": "670",
+        "code": "DBL81-04S",
+        "nom": "Super Saiyan 4 Son Goku"
+      },
+      {
+        "id": "654",
+        "code": "DBL78-01S",
+        "nom": "Super Saiyan Son Goku (Mini)"
+      },
+      {
+        "id": "644",
+        "code": "DBL77-01S",
+        "nom": "Son Goku (Mini)"
+      },
+      {
+        "id": "642",
+        "code": "DBL76-01S",
+        "nom": "Son Goku (Mini)"
+      }
     ],
     "lignes": [
       {
@@ -27047,6 +28015,18 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Shallot"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "19800",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      },
+      {
+        "id": "9000",
+        "code": "DBL00-01",
+        "nom": "Shallot"
+      }
     ],
     "lignes": [
       {
@@ -29731,6 +30711,18 @@ window.DBL_ITEMS_SCRAPED = [
         "JAU"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "213",
+        "code": "DBL-EVT-09S",
+        "nom": "Union avec le Tout-Puissant Piccolo"
+      },
+      {
+        "id": "76",
+        "code": "DBL-EVT-01S",
+        "nom": "Son Goku enfant"
+      }
+    ],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -29763,6 +30755,28 @@ window.DBL_ITEMS_SCRAPED = [
         "Exclusif aux événements",
         "Saga Dragon Ball"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "672",
+        "code": "DBL-EVT-95S",
+        "nom": "Cyborg Tao Pai Pai"
+      },
+      {
+        "id": "614",
+        "code": "DBL-EVT-84S",
+        "nom": "Bulma enfant"
+      },
+      {
+        "id": "570",
+        "code": "DBL-EVT-73S",
+        "nom": "Piccolo Daimaô"
+      },
+      {
+        "id": "76",
+        "code": "DBL-EVT-01S",
+        "nom": "Son Goku enfant"
+      }
     ],
     "lignes": [
       {
@@ -32841,6 +33855,33 @@ window.DBL_ITEMS_SCRAPED = [
         "BLE"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "454",
+        "code": "DBL42-01U",
+        "nom": "Super Gogeta"
+      },
+      {
+        "id": "609",
+        "code": "DBL71-01S",
+        "nom": "Vegeta & Son Goku"
+      },
+      {
+        "id": "318",
+        "code": "DBL24-01S",
+        "nom": "Super Saiyan divin SS Vegetto"
+      },
+      {
+        "id": "192",
+        "code": "DBL10-11S",
+        "nom": "Gogeta"
+      },
+      {
+        "id": "520",
+        "code": "DBL53-04E",
+        "nom": "Oméga Shenron"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34957,6 +35998,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Saga Super - Beerus, dieu de la destruction"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "591",
+        "code": "DBL-EVT-82S",
+        "nom": "Whis"
+      },
+      {
+        "id": "405",
+        "code": "DBL-EVT-22S",
+        "nom": "Super Saiyan divin Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -36942,6 +37995,23 @@ window.DBL_ITEMS_SCRAPED = [
         "Vegeta"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "138",
+        "code": "DBL03-04E",
+        "nom": "Vegeta"
+      },
+      {
+        "id": "90",
+        "code": "DBL01-21E",
+        "nom": "Raditz"
+      },
+      {
+        "id": "12",
+        "code": "DBL01-19E",
+        "nom": "Nappa"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -38511,6 +39581,28 @@ window.DBL_ITEMS_SCRAPED = [
         "Saga Z - Les Saiyans"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "604",
+        "code": "DBL-EVT-81S",
+        "nom": "Raditz"
+      },
+      {
+        "id": "407",
+        "code": "DBL-EVT-98S",
+        "nom": "Son Gohan petit"
+      },
+      {
+        "id": "401",
+        "code": "DBL-EVT-18S",
+        "nom": "Son Goku"
+      },
+      {
+        "id": "435",
+        "code": "DBL-EVT-31E",
+        "nom": "Saibaiman"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -39268,6 +40360,28 @@ window.DBL_ITEMS_SCRAPED = [
         "Exclusif aux événements",
         "Saga Super - La résurrection de Freezer"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "732",
+        "code": "DBL-EVT-109S",
+        "nom": "Whis"
+      },
+      {
+        "id": "467",
+        "code": "DBL-EVT-45S",
+        "nom": "Super Saiyan divin SS Vegeta"
+      },
+      {
+        "id": "466",
+        "code": "DBL-EVT-44S",
+        "nom": "Super Saiyan divin SS Son Goku"
+      },
+      {
+        "id": "406",
+        "code": "DBL-EVT-23S",
+        "nom": "Super Saiyan divin SS Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -40063,6 +41177,23 @@ window.DBL_ITEMS_SCRAPED = [
         "Saga GT - À la recherche des Dragon Balls aux étoiles noires"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "713",
+        "code": "DBL-EVT-105S",
+        "nom": "Super Saiyan Son Goku"
+      },
+      {
+        "id": "643",
+        "code": "DBL-EVT-101S",
+        "nom": "Hyper Méga Rild"
+      },
+      {
+        "id": "522",
+        "code": "DBL-EVT-59S",
+        "nom": "Super Saiyan Son Goku"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40833,6 +41964,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Saga des films",
         "VER"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "578",
+        "code": "DBL-EVT-100S",
+        "nom": "Cooler"
+      },
+      {
+        "id": "547",
+        "code": "DBL-EVT-68S",
+        "nom": "Forme finale Cooler"
+      }
     ],
     "lignes": [
       {
@@ -41751,6 +42894,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Saga GT - Dragons maléfiques"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "443",
+        "code": "DBL-EVT-38U",
+        "nom": "Oméga Shenron"
+      },
+      {
+        "id": "620",
+        "code": "DBL-EVT-89S",
+        "nom": "Li Shenron"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -42182,6 +43337,13 @@ window.DBL_ITEMS_SCRAPED = [
         "Saga des films",
         "JAU"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "625",
+        "code": "DBL-EVT-86S",
+        "nom": "Super Saiyan Son Goku"
+      }
     ],
     "lignes": [
       {
@@ -44443,6 +45605,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Chaozu"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "9",
+        "code": "DBL01-12E",
+        "nom": "Chaozu"
+      },
+      {
+        "id": "43",
+        "code": "DBL01-14H",
+        "nom": "Chaozu"
+      }
+    ],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -44694,6 +45868,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Guldo"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "231",
+        "code": "DBL14-09E",
+        "nom": "Guldo"
+      },
+      {
+        "id": "22",
+        "code": "DBL01-30H",
+        "nom": "Guldo"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -44762,6 +45948,23 @@ window.DBL_ITEMS_SCRAPED = [
         "Reacum"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "562",
+        "code": "DBL62-02S",
+        "nom": "Reacum & Guldo"
+      },
+      {
+        "id": "233",
+        "code": "DBL14-06E",
+        "nom": "Reacum"
+      },
+      {
+        "id": "24",
+        "code": "DBL01-27H",
+        "nom": "Reacum"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -44797,6 +46000,23 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Jeese"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "561",
+        "code": "DBL62-03S",
+        "nom": "Jeese & Butta"
+      },
+      {
+        "id": "234",
+        "code": "DBL14-08E",
+        "nom": "Jeese"
+      },
+      {
+        "id": "25",
+        "code": "DBL01-28H",
+        "nom": "Jeese"
+      }
     ],
     "lignes": [
       {
@@ -44834,6 +46054,18 @@ window.DBL_ITEMS_SCRAPED = [
         "Butta"
       ]
     ],
+    "porteursExacts": [
+      {
+        "id": "232",
+        "code": "DBL14-07E",
+        "nom": "Butta"
+      },
+      {
+        "id": "23",
+        "code": "DBL01-29H",
+        "nom": "Butta"
+      }
+    ],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -44867,6 +46099,33 @@ window.DBL_ITEMS_SCRAPED = [
       [
         "Ginyu"
       ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "560",
+        "code": "DBL62-01S",
+        "nom": "Ginyu"
+      },
+      {
+        "id": "246",
+        "code": "DBL-EVT-10S",
+        "nom": "Son Goku Ginyu"
+      },
+      {
+        "id": "27",
+        "code": "DBL01-44S",
+        "nom": "Ginyu"
+      },
+      {
+        "id": "235",
+        "code": "DBL14-10E",
+        "nom": "Ginyu"
+      },
+      {
+        "id": "26",
+        "code": "DBL01-45H",
+        "nom": "Ginyu"
+      }
     ],
     "lignes": [
       {
