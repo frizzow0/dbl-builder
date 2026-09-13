@@ -1,8 +1,232 @@
 // Auto-généré par scrape_chars.js — ne pas éditer à la main.
 // Source : fr.dblegends.net/characters
-// 495 personnages, généré le 2026-08-12T21:53:14.226Z
+// 499 personnages, généré le 2026-09-13T18:11:20.952Z
 
 window.DBL_CHARACTERS_SCRAPED = [
+  {
+    "id": "char_742",
+    "sourceId": "742",
+    "nom": "Son Goku",
+    "element": "BLU",
+    "rarete": "LEGEND",
+    "cardCode": "DBL99-01L",
+    "image": "https://fr.dblegends.net/assets/card_icons/BChaIco_0742_Goku_742.webp",
+    "traits": [
+      "Saiyan",
+      "Famille Goku",
+      "Super Saiyan",
+      "M",
+      "LEGEND",
+      "Type physique",
+      "BLE",
+      "Saga des films",
+      "Son Goku"
+    ],
+    "tagsInternes": [],
+    "sourceUrl": "https://fr.dblegends.net/character/742",
+    "zAbilities": [
+      {
+        "tier": 1,
+        "paneId": "510742",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films"
+        ],
+        "texteBrut": "Saga des films :\n· Attaque physique de base +22%\n· Attaque d'énergie de base +22%"
+      },
+      {
+        "tier": 2,
+        "paneId": "520742",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga des films ou Famille Goku ou Saiyan",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Famille Goku",
+                "Saiyan"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga des films ou Famille Goku ou Saiyan",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Famille Goku",
+                "Saiyan"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Famille Goku",
+          "Saiyan"
+        ],
+        "texteBrut": "Saga des films, Famille Goku ou Saiyan :\n· Attaque physique de base +26%\n· Attaque d'énergie de base +26%"
+      },
+      {
+        "tier": 3,
+        "paneId": "530742",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga des films ou Famille Goku ou Saiyan",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Famille Goku",
+                "Saiyan"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga des films ou Famille Goku ou Saiyan",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Famille Goku",
+                "Saiyan"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 15,
+            "valeur_max": 15,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Famille Goku",
+          "Saiyan"
+        ],
+        "texteBrut": "Saga des films, Famille Goku ou Saiyan :\n· Attaque physique de base +30%\n· Attaque d'énergie de base +30%\nSaga des films :\n· Défense physique de base +15%"
+      },
+      {
+        "tier": 4,
+        "paneId": "540742",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 38,
+            "valeur_max": 38,
+            "condition": {
+              "description": "Saga des films ou Famille Goku ou Saiyan",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Famille Goku",
+                "Saiyan"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 38,
+            "valeur_max": 38,
+            "condition": {
+              "description": "Saga des films ou Famille Goku ou Saiyan",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Famille Goku",
+                "Saiyan"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 18,
+            "valeur_max": 18,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Famille Goku",
+          "Saiyan"
+        ],
+        "texteBrut": "Saga des films, Famille Goku ou Saiyan :\n· Attaque physique de base +38%\n· Attaque d'énergie de base +38%\nSaga des films :\n· Défense physique de base +18%"
+      }
+    ],
+    "zAbilitiesZenkai": null,
+    "isZenkai": false
+  },
   {
     "id": "char_738",
     "sourceId": "738",
@@ -2260,6 +2484,221 @@ window.DBL_CHARACTERS_SCRAPED = [
           "Ki divin"
         ],
         "texteBrut": "Exclusif au jeu, Guerrier fusionné ou Ki divin :\n· Attaque d'énergie de base +38%\n· Défense d'énergie de base +38%\nExclusif au jeu :\n· Défense physique de base +18%"
+      }
+    ],
+    "zAbilitiesZenkai": null,
+    "isZenkai": false
+  },
+  {
+    "id": "char_740",
+    "sourceId": "740",
+    "nom": "Forme finale Cooler",
+    "element": "YEL",
+    "rarete": "ULTRA",
+    "cardCode": "DBL98-03U",
+    "image": "https://fr.dblegends.net/assets/card_icons/BChaIco_0740_Cooler2nd_740.webp",
+    "traits": [
+      "Guerrier transformé",
+      "Généalogie maléfique",
+      "Ennemi puissant",
+      "M",
+      "ULTRA",
+      "Type physique",
+      "JAU",
+      "Saga des films",
+      "Cooler"
+    ],
+    "tagsInternes": [],
+    "sourceUrl": "https://fr.dblegends.net/character/740",
+    "zAbilities": [
+      {
+        "tier": 1,
+        "paneId": "510740",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 28,
+            "valeur_max": 28,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 28,
+            "valeur_max": 28,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique"
+        ],
+        "texteBrut": "Généalogie maléfique :\n· Attaque physique de base +28%\n· Défense physique de base +28%"
+      },
+      {
+        "tier": 2,
+        "paneId": "520740",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Généalogie maléfique ou Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Saga des films"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Généalogie maléfique ou Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Saga des films"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Saga des films"
+        ],
+        "texteBrut": "Généalogie maléfique ou Saga des films :\n· Attaque physique de base +30%\n· Défense physique de base +30%"
+      },
+      {
+        "tier": 3,
+        "paneId": "530740",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 38,
+            "valeur_max": 38,
+            "condition": {
+              "description": "Généalogie maléfique ou Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Saga des films"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 38,
+            "valeur_max": 38,
+            "condition": {
+              "description": "Généalogie maléfique ou Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Saga des films"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "degats_ultime",
+            "valeur_min": 3,
+            "valeur_max": 3,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Saga des films"
+        ],
+        "texteBrut": "Généalogie maléfique ou Saga des films :\n· Attaque physique de base +38%\n· Défense physique de base +38%\nGénéalogie maléfique :\n· Dégâts ultimes et d'éveil infligés +3%"
+      },
+      {
+        "tier": 4,
+        "paneId": "540740",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 42,
+            "valeur_max": 42,
+            "condition": {
+              "description": "Généalogie maléfique ou Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Saga des films"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 42,
+            "valeur_max": 42,
+            "condition": {
+              "description": "Généalogie maléfique ou Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Saga des films"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "degats_ultime",
+            "valeur_min": 5,
+            "valeur_max": 5,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Saga des films"
+        ],
+        "texteBrut": "Généalogie maléfique ou Saga des films :\n· Attaque physique de base +42%\n· Défense physique de base +42%\nGénéalogie maléfique :\n· Dégâts ultimes et d'éveil infligés +5%"
       }
     ],
     "zAbilitiesZenkai": null,
@@ -7181,6 +7620,434 @@ window.DBL_CHARACTERS_SCRAPED = [
           "Saiyan"
         ],
         "texteBrut": "Exclusif au jeu, Exclusif aux événements ou Saiyan :\n· Attaque physique de base +33%\n· Défense physique de base +33%"
+      }
+    ],
+    "zAbilitiesZenkai": null,
+    "isZenkai": false
+  },
+  {
+    "id": "char_744",
+    "sourceId": "744",
+    "nom": "Dore & Neizu",
+    "element": "GRN",
+    "rarete": "SPARKING",
+    "cardCode": "DBL99-03S",
+    "image": "https://fr.dblegends.net/assets/card_icons/BChaIco_0744_Doure_744.webp",
+    "traits": [
+      "Escadron blindé de Cooler",
+      "M",
+      "SPARKING",
+      "Type assistance",
+      "VER",
+      "ROU",
+      "Saga des films",
+      "Dore",
+      "Neizu"
+    ],
+    "tagsInternes": [],
+    "sourceUrl": "https://fr.dblegends.net/character/744",
+    "zAbilities": [
+      {
+        "tier": 1,
+        "paneId": "510744",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films"
+        ],
+        "texteBrut": "Saga des films :\n· Attaque physique de base +22%\n· Défense physique de base +22%"
+      },
+      {
+        "tier": 2,
+        "paneId": "520744",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Escadron blindé de Cooler"
+        ],
+        "texteBrut": "Saga des films ou Escadron blindé de Cooler :\n· Attaque physique de base +26%\n· Défense physique de base +26%"
+      },
+      {
+        "tier": 3,
+        "paneId": "530744",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 19,
+            "valeur_max": 19,
+            "condition": {
+              "description": "Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Escadron blindé de Cooler"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Escadron blindé de Cooler"
+        ],
+        "texteBrut": "Saga des films ou Escadron blindé de Cooler :\n· Attaque physique de base +30%\n· Défense physique de base +30%\nEscadron blindé de Cooler :\n· Défense d'énergie de base +19%"
+      },
+      {
+        "tier": 4,
+        "paneId": "540744",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Escadron blindé de Cooler"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Escadron blindé de Cooler"
+        ],
+        "texteBrut": "Saga des films ou Escadron blindé de Cooler :\n· Attaque physique de base +35%\n· Défense physique de base +35%\nEscadron blindé de Cooler :\n· Défense d'énergie de base +22%"
+      }
+    ],
+    "zAbilitiesZenkai": null,
+    "isZenkai": false
+  },
+  {
+    "id": "char_743",
+    "sourceId": "743",
+    "nom": "Sauzer",
+    "element": "PUR",
+    "rarete": "SPARKING",
+    "cardCode": "DBL99-02S",
+    "image": "https://fr.dblegends.net/assets/card_icons/BChaIco_0743_Thouser_743.webp",
+    "traits": [
+      "Escadron blindé de Cooler",
+      "M",
+      "SPARKING",
+      "Type physique",
+      "VIO",
+      "Saga des films",
+      "Sauzer"
+    ],
+    "tagsInternes": [],
+    "sourceUrl": "https://fr.dblegends.net/character/743",
+    "zAbilities": [
+      {
+        "tier": 1,
+        "paneId": "510743",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga des films",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films"
+        ],
+        "texteBrut": "Saga des films :\n· Attaque physique de base +22%\n· Défense d'énergie de base +22%"
+      },
+      {
+        "tier": 2,
+        "paneId": "520743",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Escadron blindé de Cooler"
+        ],
+        "texteBrut": "Saga des films ou Escadron blindé de Cooler :\n· Attaque physique de base +26%\n· Défense d'énergie de base +26%"
+      },
+      {
+        "tier": 3,
+        "paneId": "530743",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 19,
+            "valeur_max": 19,
+            "condition": {
+              "description": "Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Escadron blindé de Cooler"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Escadron blindé de Cooler"
+        ],
+        "texteBrut": "Saga des films ou Escadron blindé de Cooler :\n· Attaque physique de base +30%\n· Défense d'énergie de base +30%\nEscadron blindé de Cooler :\n· Défense physique de base +19%"
+      },
+      {
+        "tier": 4,
+        "paneId": "540743",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Saga des films ou Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga des films",
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Saga des films"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Escadron blindé de Cooler",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Escadron blindé de Cooler"
+              ],
+              "tag_requis": "Escadron blindé de Cooler"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga des films",
+          "Escadron blindé de Cooler"
+        ],
+        "texteBrut": "Saga des films ou Escadron blindé de Cooler :\n· Attaque physique de base +35%\n· Défense d'énergie de base +35%\nEscadron blindé de Cooler :\n· Défense physique de base +22%"
       }
     ],
     "zAbilitiesZenkai": null,
@@ -12344,6 +13211,7 @@ window.DBL_CHARACTERS_SCRAPED = [
     "traits": [
       "Généalogie maléfique",
       "Porteur d'arme",
+      "DBL86-01S",
       "M",
       "SPARKING",
       "Type physique",
@@ -38615,7 +39483,7 @@ window.DBL_CHARACTERS_SCRAPED = [
   {
     "id": "char_542",
     "sourceId": "542",
-    "nom": "Kyawei",
+    "nom": "Caway",
     "element": "GRN",
     "rarete": "SPARKING",
     "cardCode": "DBL59-05S",
@@ -38626,12 +39494,13 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Filles",
       "Représentant d'Univers",
       "Porteur d'arme",
+      "DBL59-05S",
       "F",
       "SPARKING",
       "Type assistance",
       "VER",
       "Saga Super - Survie de l'Univers",
-      "Kyawei"
+      "Caway"
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/542",
@@ -43491,7 +44360,7 @@ window.DBL_CHARACTERS_SCRAPED = [
             "valeur_min": 20,
             "valeur_max": 20,
             "condition": {
-              "description": "Classe : Généalogie maléfique",
+              "description": "Généalogie maléfique",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
@@ -43505,7 +44374,7 @@ window.DBL_CHARACTERS_SCRAPED = [
             "valeur_min": 20,
             "valeur_max": 20,
             "condition": {
-              "description": "Classe : Généalogie maléfique",
+              "description": "Généalogie maléfique",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
@@ -43515,8 +44384,10 @@ window.DBL_CHARACTERS_SCRAPED = [
             }
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 20% l'attaque physique et d'énergie de base des « Classe : Généalogie maléfique »."
+        "conditionTags": [
+          "Généalogie maléfique"
+        ],
+        "texteBrut": "Généalogie maléfique :\n· Attaque physique de base +20%\n· Attaque d'énergie de base +20%"
       },
       {
         "tier": 2,
@@ -43527,7 +44398,7 @@ window.DBL_CHARACTERS_SCRAPED = [
             "valeur_min": 26,
             "valeur_max": 26,
             "condition": {
-              "description": "Classe : Généalogie maléfique ou Classe : Armée de Freezer",
+              "description": "Généalogie maléfique ou Armée de Freezer",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
@@ -43542,7 +44413,7 @@ window.DBL_CHARACTERS_SCRAPED = [
             "valeur_min": 26,
             "valeur_max": 26,
             "condition": {
-              "description": "Classe : Généalogie maléfique ou Classe : Armée de Freezer",
+              "description": "Généalogie maléfique ou Armée de Freezer",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
@@ -43553,36 +44424,390 @@ window.DBL_CHARACTERS_SCRAPED = [
             }
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 26% l'attaque physique et d'énergie de base des « Classe : Généalogie maléfique » et des « Classe : Armée de Freezer »."
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Armée de Freezer"
+        ],
+        "texteBrut": "Généalogie maléfique ou Armée de Freezer :\n· Attaque physique de base +26%\n· Attaque d'énergie de base +26%"
       },
       {
         "tier": 3,
         "paneId": "530498",
         "lignes": [
           {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Généalogie maléfique ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Généalogie maléfique ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
             "est_passif": true,
-            "description_passif": "Lors d'un combat, augmente de 2% les dégâts infligés par les arts d'énergie des « Classe : Généalogie maléfique » et augmente de 30% l'attaque physique et d'énergie de base des « Classe : Généalogie maléfique » et des « Classe : Armée de Freezer »."
+            "description_passif": "Dégâts infligés par les arts d'énergie +2%"
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 2% les dégâts infligés par les arts d'énergie des « Classe : Généalogie maléfique » et augmente de 30% l'attaque physique et d'énergie de base des « Classe : Généalogie maléfique » et des « Classe : Armée de Freezer »."
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Armée de Freezer"
+        ],
+        "texteBrut": "Généalogie maléfique ou Armée de Freezer :\n· Attaque physique de base +30%\n· Attaque d'énergie de base +30%\nGénéalogie maléfique :\n· Dégâts infligés par les arts d'énergie +2%"
       },
       {
         "tier": 4,
         "paneId": "540498",
         "lignes": [
           {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Généalogie maléfique ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Généalogie maléfique ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
             "est_passif": true,
-            "description_passif": "Lors d'un combat, augmente de 3% les dégâts infligés par les arts d'énergie des « Classe : Généalogie maléfique » et augmente de 35% l'attaque physique et d'énergie de base des « Classe : Généalogie maléfique » et des « Classe : Armée de Freezer »."
+            "description_passif": "Dégâts infligés par les arts d'énergie +3%"
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 3% les dégâts infligés par les arts d'énergie des « Classe : Généalogie maléfique » et augmente de 35% l'attaque physique et d'énergie de base des « Classe : Généalogie maléfique » et des « Classe : Armée de Freezer »."
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Armée de Freezer"
+        ],
+        "texteBrut": "Généalogie maléfique ou Armée de Freezer :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +35%\nGénéalogie maléfique :\n· Dégâts infligés par les arts d'énergie +3%"
       }
     ],
-    "zAbilitiesZenkai": null,
-    "isZenkai": false
+    "zAbilitiesZenkai": [
+      {
+        "tier": 1,
+        "paneId": "200498610",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 15,
+            "valeur_max": 15,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 15,
+            "valeur_max": 15,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          }
+        ],
+        "conditionTags": [
+          "PUR",
+          "Généalogie maléfique"
+        ],
+        "texteBrut": "À la fois PUR et Généalogie maléfique :\n· Attaque physique de base +15%\n· Attaque d'énergie de base +20%\n· Défense physique de base +15%\n· Défense d'énergie de base +20%"
+      },
+      {
+        "tier": 2,
+        "paneId": "200498620",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 25,
+            "valeur_max": 25,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 25,
+            "valeur_max": 25,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          }
+        ],
+        "conditionTags": [
+          "PUR",
+          "Généalogie maléfique"
+        ],
+        "texteBrut": "À la fois PUR et Généalogie maléfique :\n· Attaque physique de base +20%\n· Attaque d'énergie de base +25%\n· Défense physique de base +20%\n· Défense d'énergie de base +25%"
+      },
+      {
+        "tier": 3,
+        "paneId": "200498630",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          }
+        ],
+        "conditionTags": [
+          "PUR",
+          "Généalogie maléfique"
+        ],
+        "texteBrut": "À la fois PUR et Généalogie maléfique :\n· Attaque physique de base +30%\n· Attaque d'énergie de base +35%\n· Défense physique de base +30%\n· Défense d'énergie de base +35%"
+      },
+      {
+        "tier": 4,
+        "paneId": "200498640",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 40,
+            "valeur_max": 40,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 40,
+            "valeur_max": 40,
+            "condition": {
+              "description": "À la fois PUR et Généalogie maléfique",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "PUR",
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "PUR"
+            }
+          }
+        ],
+        "conditionTags": [
+          "PUR",
+          "Généalogie maléfique"
+        ],
+        "texteBrut": "À la fois PUR et Généalogie maléfique :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
+      }
+    ],
+    "isZenkai": true
   },
   {
     "id": "char_497",
@@ -90691,18 +91916,20 @@ window.DBL_CHARACTERS_SCRAPED = [
             "valeur_min": 24,
             "valeur_max": 24,
             "condition": {
-              "description": "Attribut : Jaune",
+              "description": "YEL",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
-                "Attribut : Jaune"
+                "YEL"
               ],
-              "tag_requis": "Attribut : Jaune"
+              "tag_requis": "YEL"
             }
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 24% l'attaque physique de base des « Attribut : Jaune »."
+        "conditionTags": [
+          "YEL"
+        ],
+        "texteBrut": "YEL :\n· Attaque physique de base +24%"
       },
       {
         "tier": 2,
@@ -90713,99 +91940,427 @@ window.DBL_CHARACTERS_SCRAPED = [
             "valeur_min": 26,
             "valeur_max": 26,
             "condition": {
-              "description": "Attribut : Jaune ou Attribut : Bleu",
+              "description": "YEL ou BLU",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
-                "Attribut : Jaune",
-                "Attribut : Bleu"
+                "YEL",
+                "BLU"
               ],
-              "tag_requis": "Attribut : Jaune"
+              "tag_requis": "YEL"
             }
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 26% l'attaque physique de base des « Attribut : Jaune » et des « Attribut : Bleu »."
+        "conditionTags": [
+          "YEL",
+          "BLU"
+        ],
+        "texteBrut": "YEL ou BLU :\n· Attaque physique de base +26%"
       },
       {
         "tier": 3,
-        "paneId": "530237",
+        "paneId": "200237650",
         "lignes": [
-          {
-            "stat": "defense_physique_de_base",
-            "valeur_min": 33,
-            "valeur_max": 33,
-            "condition": {
-              "description": "Attribut : Jaune ou Attribut : Bleu",
-              "mode": "threshold",
-              "seuil": 1,
-              "tags_requis": [
-                "Attribut : Jaune",
-                "Attribut : Bleu"
-              ],
-              "tag_requis": "Attribut : Jaune"
-            }
-          },
           {
             "stat": "attaque_physique_de_base",
             "valeur_min": 33,
             "valeur_max": 33,
             "condition": {
-              "description": "Attribut : Jaune ou Attribut : Bleu",
+              "description": "YEL ou BLU ou Représentant d'Univers",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
-                "Attribut : Jaune",
-                "Attribut : Bleu"
+                "YEL",
+                "BLU",
+                "Représentant d'Univers"
               ],
-              "tag_requis": "Attribut : Jaune"
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 33,
+            "valeur_max": 33,
+            "condition": {
+              "description": "YEL ou BLU ou Représentant d'Univers",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "BLU",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 9,
+            "valeur_max": 9,
+            "condition": {
+              "description": "Représentant d'Univers",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "Représentant d'Univers"
             }
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 33% la défense et l'attaque physique de base des « Attribut : Jaune » et des « Attribut : Bleu »."
+        "conditionTags": [
+          "YEL",
+          "BLU",
+          "Représentant d'Univers"
+        ],
+        "texteBrut": "YEL, BLU ou Représentant d'Univers :\n· Attaque physique de base +33%\n· Défense physique de base +33%\nReprésentant d'Univers :\n· Défense d'énergie de base +9%"
       },
       {
         "tier": 4,
-        "paneId": "540237",
+        "paneId": "200237660",
         "lignes": [
-          {
-            "stat": "defense_physique_de_base",
-            "valeur_min": 35,
-            "valeur_max": 35,
-            "condition": {
-              "description": "Attribut : Jaune ou Attribut : Bleu",
-              "mode": "threshold",
-              "seuil": 1,
-              "tags_requis": [
-                "Attribut : Jaune",
-                "Attribut : Bleu"
-              ],
-              "tag_requis": "Attribut : Jaune"
-            }
-          },
           {
             "stat": "attaque_physique_de_base",
             "valeur_min": 35,
             "valeur_max": 35,
             "condition": {
-              "description": "Attribut : Jaune ou Attribut : Bleu",
+              "description": "YEL ou BLU ou Représentant d'Univers",
               "mode": "threshold",
               "seuil": 1,
               "tags_requis": [
-                "Attribut : Jaune",
-                "Attribut : Bleu"
+                "YEL",
+                "BLU",
+                "Représentant d'Univers"
               ],
-              "tag_requis": "Attribut : Jaune"
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "YEL ou BLU ou Représentant d'Univers",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "BLU",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 18,
+            "valeur_max": 18,
+            "condition": {
+              "description": "Représentant d'Univers",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "Représentant d'Univers"
             }
           }
         ],
-        "conditionTags": [],
-        "texteBrut": "Lors d'un combat, augmente de 35% la défense et l'attaque physique de base des « Attribut : Jaune » et des « Attribut : Bleu »."
+        "conditionTags": [
+          "YEL",
+          "BLU",
+          "Représentant d'Univers"
+        ],
+        "texteBrut": "YEL, BLU ou Représentant d'Univers :\n· Attaque physique de base +35%\n· Défense physique de base +35%\nReprésentant d'Univers :\n· Défense d'énergie de base +18%"
       }
     ],
-    "zAbilitiesZenkai": null,
-    "isZenkai": false
+    "zAbilitiesZenkai": [
+      {
+        "tier": 1,
+        "paneId": "200237610",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 15,
+            "valeur_max": 15,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 15,
+            "valeur_max": 15,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          }
+        ],
+        "conditionTags": [
+          "YEL",
+          "Représentant d'Univers"
+        ],
+        "texteBrut": "À la fois YEL et Représentant d'Univers :\n· Attaque physique de base +20%\n· Attaque d'énergie de base +15%\n· Défense physique de base +20%\n· Défense d'énergie de base +15%"
+      },
+      {
+        "tier": 2,
+        "paneId": "200237620",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 25,
+            "valeur_max": 25,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 25,
+            "valeur_max": 25,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 20,
+            "valeur_max": 20,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          }
+        ],
+        "conditionTags": [
+          "YEL",
+          "Représentant d'Univers"
+        ],
+        "texteBrut": "À la fois YEL et Représentant d'Univers :\n· Attaque physique de base +25%\n· Attaque d'énergie de base +20%\n· Défense physique de base +25%\n· Défense d'énergie de base +20%"
+      },
+      {
+        "tier": 3,
+        "paneId": "200237630",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          }
+        ],
+        "conditionTags": [
+          "YEL",
+          "Représentant d'Univers"
+        ],
+        "texteBrut": "À la fois YEL et Représentant d'Univers :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +30%\n· Défense physique de base +35%\n· Défense d'énergie de base +30%"
+      },
+      {
+        "tier": 4,
+        "paneId": "200237640",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 40,
+            "valeur_max": 40,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 40,
+            "valeur_max": 40,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "À la fois YEL et Représentant d'Univers",
+              "mode": "and",
+              "seuil": 1,
+              "tags_requis": [
+                "YEL",
+                "Représentant d'Univers"
+              ],
+              "tag_requis": "YEL"
+            }
+          }
+        ],
+        "conditionTags": [
+          "YEL",
+          "Représentant d'Univers"
+        ],
+        "texteBrut": "À la fois YEL et Représentant d'Univers :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
+      }
+    ],
+    "isZenkai": true
   },
   {
     "id": "char_236",

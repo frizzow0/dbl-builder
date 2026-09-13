@@ -1,6 +1,6 @@
 // Auto-généré par scrape.js — ne pas éditer à la main.
 // Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, event)
-// 914 items, généré le 2026-08-12T21:56:18.541Z
+// 923 items, généré le 2026-09-13T18:11:12.790Z
 
 window.DBL_ITEMS_SCRAPED = [
   {
@@ -246,7 +246,7 @@ window.DBL_ITEMS_SCRAPED = [
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32001.webp",
     "tagsPorteur": [
       [
-        "Oméga Shenron"
+        "Li Shenron"
       ]
     ],
     "lignes": [
@@ -2310,6 +2310,80 @@ window.DBL_ITEMS_SCRAPED = [
         "valeur_min": 3,
         "valeur_max": 5,
         "condition": null,
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_50211",
+    "sourceId": "50211",
+    "nom": "Tu vas payer pour tout le mal que tu as fait",
+    "rarete": "awakenedunique",
+    "sourceUrl": "https://fr.dblegends.net/equip/50211",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1574.webp",
+    "tagsPorteur": [
+      [
+        "Son Goku",
+        "Saga des films"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "par combattant de l'équipe de « Style de combat : Type énergie »",
+          "mode": "per_member",
+          "seuil": 1,
+          "tag_requis": "Style de combat : Type énergie",
+          "tags_requis": [
+            "Style de combat : Type énergie"
+          ]
+        },
+        "slot": 2
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "par combattant de l'équipe de « Style de combat : Type physique »",
+          "mode": "per_member",
+          "seuil": 1,
+          "tag_requis": "Style de combat : Type physique",
+          "tags_requis": [
+            "Style de combat : Type physique"
+          ]
+        },
         "slot": 3
       }
     ]
@@ -7220,6 +7294,91 @@ window.DBL_ITEMS_SCRAPED = [
         "valeur_min": 5,
         "valeur_max": 35,
         "condition": null,
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_1738",
+    "sourceId": "1738",
+    "nom": "Je vais détruire cette planète et toi avec !!",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/1738",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1738.webp",
+    "tagsPorteur": [
+      [
+        "Saga des films"
+      ],
+      [
+        "Généalogie maléfique"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 10,
+        "valeur_max": 25,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Épisode : Saga des films » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
+          ]
+        },
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Épisode : Saga des films » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
+          ]
+        },
+        "slot": 2
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Classe : Généalogie maléfique » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Généalogie maléfique",
+          "tags_requis": [
+            "Classe : Généalogie maléfique"
+          ]
+        },
+        "slot": 3
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Classe : Généalogie maléfique » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Généalogie maléfique",
+          "tags_requis": [
+            "Classe : Généalogie maléfique"
+          ]
+        },
         "slot": 3
       }
     ]
@@ -14769,6 +14928,137 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_2094",
+    "sourceId": "2094",
+    "nom": "Il n'y a personne dans tout l'univers qui ait le courage de me défier !",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2094",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2094.webp",
+    "tagsPorteur": [
+      [
+        "Généalogie maléfique",
+        "JAU"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 15,
+        "valeur_max": 38,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Bonus d'attaque contre les Saiyan 5.00% ~ 15.00%",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2097",
+    "sourceId": "2097",
+    "nom": "Les guerriers de Cooler !",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2097",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2097.webp",
+    "tagsPorteur": [
+      [
+        "Escadron blindé de Cooler"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 10,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 10,
+        "valeur_max": 25,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Classe : Escadron blindé de Cooler » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Escadron blindé de Cooler",
+          "tags_requis": [
+            "Classe : Escadron blindé de Cooler"
+          ]
+        },
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Classe : Escadron blindé de Cooler » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Escadron blindé de Cooler",
+          "tags_requis": [
+            "Classe : Escadron blindé de Cooler"
+          ]
+        },
+        "slot": 2
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 10,
+        "valeur_max": 25,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Classe : Escadron blindé de Cooler » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Escadron blindé de Cooler",
+          "tags_requis": [
+            "Classe : Escadron blindé de Cooler"
+          ]
+        },
+        "slot": 3
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un autre « Classe : Escadron blindé de Cooler » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Escadron blindé de Cooler",
+          "tags_requis": [
+            "Classe : Escadron blindé de Cooler"
+          ]
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_30001",
     "sourceId": "30001",
     "nom": "SPARKING !! - Boo",
@@ -16946,7 +17236,7 @@ window.DBL_ITEMS_SCRAPED = [
       },
       {
         "est_passif": true,
-        "description_passif": "Si vous avez 3 cartes ou moins, tire 1 carte au hasard",
+        "description_passif": "Si vous avez 3 cartes ou moins, tire 1 carte",
         "slot": 3
       },
       {
@@ -17175,6 +17465,214 @@ window.DBL_ITEMS_SCRAPED = [
       {
         "est_passif": true,
         "description_passif": "Réduit de 5 secondes la durée de mise en attente",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_30030",
+    "sourceId": "30030",
+    "nom": "SPARKING !! - Caway",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/30030",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_30030.webp",
+    "tagsPorteur": [
+      [
+        "Caway"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 30,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 30,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 30,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 30,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 90,
+        "valeur_max": 250,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 70,
+        "valeur_max": 210,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lorsque vous effectuez un saut téléporté, les effets suivants s'activent :",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Régénère la force des « Classe : Représentant d'Univers » alliés de 4.00% ~ 10.00%",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dégâts infligés par les « Classe : Représentant d'Univers » alliés 7.00% ~ 20.00% (20 secondes)",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Une fois entré en scène, les effets suivants s'activent :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Si vous avez 3 cartes ou moins, tire 1 carte",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Immunise contre les mises à couvert particulières (5 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Les effets suivants s'activent lors d'un art unique :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Réduit de 3 secondes la durée de mise en attente des alliés",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Prolonge de 2 secondes la durée de mise en attente de tous les ennemis",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_30031",
+    "sourceId": "30031",
+    "nom": "SPARKING !! - Roi Cold",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/30031",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_30031.webp",
+    "tagsPorteur": [
+      [
+        "Roi Cold"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 20,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 50,
+        "valeur_max": 130,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lorsque vous êtes sur le terrain et que vous subissez une attaque d'art, régénère la force de 1.00% ~ 3.00%.",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'une mise à couvert, garde contre les dégâts 20.00% ~ 50.00% (5 secondes)",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'une mise à couvert, les effets suivants s'activent :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Prolonge de 2 secondes la durée de mise en attente de tous les ennemis",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Scelle les capacités principales de tous les ennemis (5 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Annule le désavantage d'attribut des dégâts subis (5 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'un art unique, change vos cartes d'art d'énergie en cartes d'art spécial (2 fois)",
         "slot": 3
       }
     ]
@@ -26072,6 +26570,64 @@ window.DBL_ITEMS_SCRAPED = [
           "seuil": 1,
           "tag_requis": null,
           "tags_requis": []
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_50210",
+    "sourceId": "50210",
+    "nom": "Transformation menaçante",
+    "rarete": "awakenedgold",
+    "sourceUrl": "https://fr.dblegends.net/equip/50210",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1816.webp",
+    "tagsPorteur": [
+      [
+        "Cooler"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "degats_tech_spe",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 6,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "degats_ultime",
+        "valeur_min": 6,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 10,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si vous êtes un « Style de combat : Type physique »",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Style de combat : Type physique",
+          "tags_requis": [
+            "Style de combat : Type physique"
+          ]
         },
         "slot": 3
       }
@@ -42858,6 +43414,113 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
+          ]
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2093",
+    "sourceId": "2093",
+    "nom": "Tu es incapable de me battre, comme les autres !",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/2093",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2093.webp",
+    "tagsPorteur": [
+      [
+        "Saga des films"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Si vous êtes « Classe : Généalogie maléfique », bonus de défense contre les Saiyan 5.00% ~ 15.00%",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2096",
+    "sourceId": "2096",
+    "nom": "Ne fais pas un geste.",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/2096",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2096.webp",
+    "tagsPorteur": [
+      [
+        "Son Goku"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "si vous êtes un « Épisode : Saga des films »",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
+          ]
+        },
+        "slot": 3
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "si vous êtes un « Épisode : Saga des films »",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
           ]
         },
         "slot": 3
