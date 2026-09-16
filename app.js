@@ -1504,18 +1504,23 @@
   });
 
   // ===== TAGS DE L'ÉQUIPE =====
-  // Sous la composition : combien de persos de l'équipe partagent chaque tag
-  // (« Saiyan 3 », « Famille Goku 2 »…), rangés par catégorie comme sur le site
-  // source. La table libellé → catégorie vient du scraper (DBL_TAG_CATEGORIES) :
-  // genre, rareté, attribut et codes de carte n'y figurent pas, ils ne sont
-  // donc pas affichés.
+  // Sous la composition : QUI porte QUEL tag. Un tableau par catégorie (comme
+  // sur le site source) : une colonne par perso — portrait cerclé de sa couleur,
+  // les deux trios séparés —, une ligne par tag avec un point sous chaque
+  // porteur et le total. Les tags partagés passent en premier ; ceux d'un seul
+  // perso (souvent une dizaine avec 6 persos) sont repliés derrière un bouton.
+  // La table libellé → catégorie vient du scraper (DBL_TAG_CATEGORIES) : genre,
+  // rareté, attribut et codes de carte n'y figurent pas, ils ne sont donc pas affichés.
   const teamTagsEl = document.getElementById("team-tags");
+  const teamTagsToggleEl = document.getElementById("team-tags-uniques");
   const TAG_CATEGORIES = window.DBL_TAG_CATEGORIES || {};
   const TAG_CATEGORY_ORDER = ["Classe", "Épisode", "Personnage", "Style de combat"];
+  let afficherTagsUniques = false;
 
   function renderTeamTags() {
     if (!teamTagsEl) return;
     const occupes = [0, 1, 2, 3, 4, 5].filter((i) => state.team[i].character);
+    if (teamTagsToggleEl) teamTagsToggleEl.hidden = true;
     if (!occupes.length) {
       teamTagsEl.innerHTML = `<p class="tt-empty">${T('teamtags.empty')}</p>`;
       return;
@@ -1529,22 +1534,66 @@
         porteurs.get(t).push(i);
       }
     }
-    const groupes = TAG_CATEGORY_ORDER.map((cat, k) => {
+    // Avec un seul perso, tout est « unique » : on n'a rien à replier.
+    const uniques = occupes.length > 1 ? [...porteurs.values()].filter((s) => s.length === 1).length : 0;
+    const montrerUniques = afficherTagsUniques || !uniques;
+    if (teamTagsToggleEl && uniques) {
+      teamTagsToggleEl.hidden = false;
+      teamTagsToggleEl.setAttribute("aria-pressed", afficherTagsUniques ? "true" : "false");
+      teamTagsToggleEl.textContent = afficherTagsUniques ? T('teamtags.uniques.hide') : T('teamtags.uniques.show', { n: uniques });
+    }
+
+    const nomComplet = (i) => `${state.team[i].character.nom.trim()} (${state.team[i].character.cardCode})`;
+    const elem = (i) => `elem-${(state.team[i].character.element || "").toLowerCase()}`;
+    const debutTrio = (i) => (i === 3 ? " is-trio-start" : "");
+
+    // En-tête commun : libellés des trios, puis un portrait par colonne
+    const entete =
+      `<thead>` +
+        `<tr class="tt-trios"><td></td>` +
+          `<th scope="colgroup" colspan="3">${trioLabel(0)}</th>` +
+          `<th scope="colgroup" colspan="3" class="is-trio-start">${trioLabel(1)}</th><td></td></tr>` +
+        `<tr class="tt-avatars"><th scope="col" class="tt-h-name"><span class="tt-sr">${T('teamtags.col.tag')}</span></th>` +
+          [0, 1, 2, 3, 4, 5].map((i) => {
+            const c = state.team[i].character;
+            if (!c) return `<td class="tt-h-slot${debutTrio(i)}"><span class="tt-ava is-vacant" aria-hidden="true"></span></td>`;
+            const img = c.image ? `<img src="${escSvg(c.image)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'" />` : "";
+            return `<th scope="col" class="tt-h-slot${debutTrio(i)}" title="${escAttr(nomComplet(i))} · ${trioLabel(trioOf(i))}">` +
+              `<span class="tt-ava ${elem(i)}">${img}</span><span class="tt-sr">${escSvg(nomComplet(i))}</span></th>`;
+          }).join("") +
+          `<th scope="col" class="tt-h-total">${T('teamtags.col.total')}</th></tr>` +
+      `</thead>`;
+    const colonnes =
+      `<colgroup><col class="tt-c-name" /><col class="tt-c-slot" span="3" />` +
+      `<col class="tt-c-slot tt-c-gap" /><col class="tt-c-slot" span="2" /><col class="tt-c-total" /></colgroup>`;
+
+    const blocs = TAG_CATEGORY_ORDER.map((cat, k) => {
       // Tags partagés d'abord, puis ordre alphabétique
       const tags = [...porteurs.entries()]
-        .filter(([t]) => TAG_CATEGORIES[t] === cat)
+        .filter(([t, slots]) => TAG_CATEGORIES[t] === cat && (montrerUniques || slots.length > 1))
         .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], "fr"));
       if (!tags.length) return "";
-      const chips = tags.map(([t, slots]) => {
-        const noms = slots.map((i) => `${state.team[i].character.nom.trim()} (${state.team[i].character.cardCode})`).join(", ");
+      const lignes = tags.map(([t, slots]) => {
         const parTrio = [0, 1].map((tr) => `${trioLabel(tr)} : ${slots.filter((i) => trioOf(i) === tr).length}`).join(" · ");
-        return `<span class="tt-chip${slots.length > 1 ? " is-shared" : ""}" title="${escSvg(t)} — ${escSvg(noms)}&#10;${parTrio}">` +
-          `<span class="tt-name">${escSvg(t)}</span><span class="tt-count">${slots.length}</span></span>`;
+        const cellules = [0, 1, 2, 3, 4, 5].map((i) => `<td class="tt-cell${debutTrio(i)}">` +
+          (slots.includes(i) ? `<span class="tt-dot ${elem(i)}" role="img" aria-label="${escAttr(nomComplet(i))}" title="${escAttr(nomComplet(i))}"></span>` : "") +
+          `</td>`).join("");
+        return `<tr class="tt-row${slots.length > 1 ? " is-shared" : ""}">` +
+          `<th scope="row" class="tt-name">${escSvg(t)}</th>${cellules}` +
+          `<td class="tt-total" title="${escAttr(parTrio)}"><span class="tt-count">${slots.length}</span></td></tr>`;
       }).join("");
-      return `<div class="tt-group"><span class="tt-cat">${T('teamtags.cat.' + k)}</span><div class="tt-chips">${chips}</div></div>`;
+      return `<div class="tt-block"><table class="tt-table">` +
+        `<caption class="tt-cat">${T('teamtags.cat.' + k)}</caption>${colonnes}${entete}<tbody>${lignes}</tbody>` +
+        `</table></div>`;
     }).join("");
-    teamTagsEl.innerHTML = groupes || `<p class="tt-empty">${T('teamtags.none')}</p>`;
+    teamTagsEl.innerHTML = blocs ||
+      `<p class="tt-empty">${T(porteurs.size ? 'teamtags.noshared' : 'teamtags.none')}</p>`;
   }
+
+  teamTagsToggleEl?.addEventListener("click", () => {
+    afficherTagsUniques = !afficherTagsUniques;
+    renderTeamTags();
+  });
 
   // ===== BASCULE DE MODE =====
   const modeSwitchEl = document.querySelector(".mode-switch");
