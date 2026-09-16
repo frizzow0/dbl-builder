@@ -376,8 +376,17 @@ html { scroll-behavior: smooth; }
      .builder-char-* sont déclarées plus loin dans ce fichier. */
   /* L'artwork occupe toute la place libre et se centre dedans (source 256x256,
      donc net jusqu'à ~250px) ; le bloc texte se cale juste en dessous. */
+  /* Hauteur de l'artwork = sa taille quand AUCUN panneau n'est ouvert, déduite
+     de la largeur de la grille (constante) et non de celle de la tuile (qui
+     se resserre à l'ouverture d'un panneau). Ainsi l'ouverture ne change que
+     les largeurs : la hauteur des tuiles ne bouge pas.
+     Tuile fermée = ((grille − écart des trios) / 2 − 2 écarts de colonnes) / 3,
+     moins le bord du dépliant fermé (3px), les bords (2 × 3px) et le padding
+     horizontal (2 × --s-2) de la tuile. */
+  .builder-grid { container: grille / inline-size; }
   .builder-row > .builder-char .builder-char-art {
-    flex: 1 1 auto; width: 100%; min-height: 0;
+    flex: 0 0 auto; width: 100%; min-height: 0;
+    height: min(248px, calc((100cqw - var(--s-5)) / 6 - var(--s-2) * 2 / 3 - 9px - var(--s-2) * 2));
     display: grid; place-items: center;
   }
   .builder-row > .builder-char .builder-char-img {
@@ -404,8 +413,20 @@ html { scroll-behavior: smooth; }
     min-width: 40px; height: 30px; font-size: 15px;
   }
   .builder-row > .builder-char .builder-char-ztag { align-self: center; margin-top: var(--s-2); }
+  /* Actions sur UNE ligne, même quand la tuile se resserre (sinon le retour à
+     la ligne allongerait la tuile à l'ouverture d'un panneau voisin). */
   .builder-row > .builder-char .builder-char-tools {
     justify-content: center; padding-top: var(--s-2);
+    flex-wrap: nowrap;
+  }
+  /* Grille étroite : une fois un panneau ouvert, les tuiles resserrées n'ont
+     plus la place pour les 3 actions (~105px) → on les compacte (~79px, tient
+     encore à 1100px de large). Requête sur la GRILLE et non sur la tuile : une
+     tuile conteneur fausserait le calcul de hauteur de l'artwork (cqw). */
+  @container grille (max-width: 1140px) {
+    .builder-row > .builder-char .builder-char-tools { gap: 2px; }
+    .builder-row > .builder-char .builder-leader { min-width: 30px; padding: 0 6px; }
+    .builder-row > .builder-char .builder-char-act { padding: 3px 4px; }
   }
   /* Tuile vide : la zone cliquable occupe toute la hauteur */
   .builder-char.is-empty { justify-content: center; gap: var(--s-2); }
@@ -450,8 +471,19 @@ html { scroll-behavior: smooth; }
     width: 100%; align-items: center;
   }
   .builder-row-panel .builder-item-icon {
-    width: min(104px, 100%); height: auto; aspect-ratio: 1; min-height: 0;
+    height: auto; aspect-ratio: 1; min-height: 0;
+    /* 104px au plus, sans dépasser la largeur ni le tiers de la hauteur libre */
+    width: min(104px, 100cqw, calc((100cqh - 2 * var(--s-2)) / 3));
   }
+  /* Le dépliant ne s'ouvre QU'EN LARGEUR : sa hauteur est celle de la tuile.
+     `contain: size` empêche son contenu d'allonger la colonne ; les
+     emplacements prennent la hauteur restante sous la Cap Z (conteneur de
+     requête → unités cqw/cqh ci-dessus). */
+  .builder-row-panel { contain: size; }
+  .builder-row-panel .builder-items {
+    flex: 1 1 0; min-height: 0; container-type: size;
+  }
+  .builder-row-panel .builder-item-icons { height: 100%; justify-content: center; }
   /* Les 3 emplacements sont centrés sur le même axe que les paliers Cap Z ;
      le bouton « détails » est sorti du flux pour ne pas les décaler. */
   .builder-row-panel .builder-items {
