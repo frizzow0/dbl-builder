@@ -1423,6 +1423,7 @@
     builderGridEl.innerHTML = trio(trioLabel(0), [0, 1, 2]) + trio(trioLabel(1), [3, 4, 5]);
     renderNoLeaderBtn();
     renderTrioC();
+    renderTeamTags();
   }
 
   // ===== TRIO C (mode Proud) =====
@@ -1503,6 +1504,49 @@
     else if (!trioCLockReason(i)) state.trioC = state.trioC.concat(i);
     paintTrioC();
   });
+
+  // ===== TAGS DE L'ÉQUIPE =====
+  // Sous la composition : combien de persos de l'équipe partagent chaque tag
+  // (« Saiyan 3 », « Famille Goku 2 »…), rangés par catégorie comme sur le site
+  // source. La table libellé → catégorie vient du scraper (DBL_TAG_CATEGORIES) :
+  // genre, rareté, attribut et codes de carte n'y figurent pas, ils ne sont
+  // donc pas affichés.
+  const teamTagsEl = document.getElementById("team-tags");
+  const TAG_CATEGORIES = window.DBL_TAG_CATEGORIES || {};
+  const TAG_CATEGORY_ORDER = ["Classe", "Épisode", "Personnage", "Style de combat"];
+
+  function renderTeamTags() {
+    if (!teamTagsEl) return;
+    const occupes = [0, 1, 2, 3, 4, 5].filter((i) => state.team[i].character);
+    if (!occupes.length) {
+      teamTagsEl.innerHTML = `<p class="tt-empty">${T('teamtags.empty')}</p>`;
+      return;
+    }
+    // tag → slots des persos qui le portent (chaque perso compte une fois)
+    const porteurs = new Map();
+    for (const i of occupes) {
+      for (const t of new Set(state.team[i].character.traits || [])) {
+        if (!TAG_CATEGORIES[t]) continue;
+        if (!porteurs.has(t)) porteurs.set(t, []);
+        porteurs.get(t).push(i);
+      }
+    }
+    const groupes = TAG_CATEGORY_ORDER.map((cat, k) => {
+      // Tags partagés d'abord, puis ordre alphabétique
+      const tags = [...porteurs.entries()]
+        .filter(([t]) => TAG_CATEGORIES[t] === cat)
+        .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], "fr"));
+      if (!tags.length) return "";
+      const chips = tags.map(([t, slots]) => {
+        const noms = slots.map((i) => `${state.team[i].character.nom.trim()} (${state.team[i].character.cardCode})`).join(", ");
+        const parTrio = [0, 1].map((tr) => `${trioLabel(tr)} : ${slots.filter((i) => trioOf(i) === tr).length}`).join(" · ");
+        return `<span class="tt-chip${slots.length > 1 ? " is-shared" : ""}" title="${escSvg(t)} — ${escSvg(noms)}&#10;${parTrio}">` +
+          `<span class="tt-name">${escSvg(t)}</span><span class="tt-count">${slots.length}</span></span>`;
+      }).join("");
+      return `<div class="tt-group"><span class="tt-cat">${T('teamtags.cat.' + k)}</span><div class="tt-chips">${chips}</div></div>`;
+    }).join("");
+    teamTagsEl.innerHTML = groupes || `<p class="tt-empty">${T('teamtags.none')}</p>`;
+  }
 
   // ===== BASCULE DE MODE =====
   const modeSwitchEl = document.querySelector(".mode-switch");
