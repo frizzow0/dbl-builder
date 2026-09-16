@@ -1,0 +1,64 @@
+<!--
+{
+  "title": "Politique de confidentialité et cookies — DBL Optimizer",
+  "description": "Données traitées sur dbl-optimizer.com : stockage local, hébergement, polices, images, Google AdSense, cookies publicitaires, consentement et droits RGPD.",
+  "h1": "Politique de confidentialité",
+  "lead": "Ce que DBL Optimizer fait — et ne fait pas — de tes données, et comment gérer les cookies.",
+  "type": "page",
+  "published": "2026-05-25",
+  "updated": "2026-09-16"
+}
+-->
+<h2>En résumé</h2>
+<ul>
+  <li>Pas de compte, pas de formulaire, pas de base de données d’utilisateurs.</li>
+  <li>Ton équipe n’est ni enregistrée ni envoyée : elle reste dans la page ouverte.</li>
+  <li>Deux réglages sont mémorisés dans ton navigateur : ta langue et ton mode de jeu.</li>
+  <li>Des services tiers (hébergement, polices, images, publicité Google) reçoivent des données techniques comme ton adresse IP ; les cookies publicitaires dépendent de ton consentement.</li>
+</ul>
+
+<h2>Responsable du traitement</h2>
+<p>Le site est édité par un particulier à titre non professionnel (voir les <a href="/mentions-legales.html">mentions légales</a>). Contact : <a href="mailto:contact@dbl-optimizer.com">contact@dbl-optimizer.com</a>.</p>
+
+<h2>Données traitées par DBL Optimizer</h2>
+<h3>Composition d’équipe</h3>
+<p>Les personnages, items et réglages que tu choisis sont traités uniquement dans ton navigateur, le temps de ta visite. Ils ne sont pas enregistrés et ne sont transmis à aucun serveur.</p>
+<h3>Stockage local (localStorage)</h3>
+<p>Deux valeurs sont conservées dans le stockage local de ton navigateur pour retrouver tes réglages :</p>
+<ul>
+  <li><code>dbl-lang</code> — la langue choisie (français ou anglais) ;</li>
+  <li><code>dbl-mode</code> — le mode de jeu (Classique ou Proud).</li>
+</ul>
+<p>Elles ne contiennent aucune donnée personnelle, ne sont pas transmises et peuvent être supprimées à tout moment en effaçant les données du site dans ton navigateur.</p>
+<h3>Messages envoyés par e-mail</h3>
+<p>Si tu nous écris, ton adresse et ton message servent uniquement à te répondre. Ils ne sont ni partagés ni utilisés à d’autres fins, et ne sont conservés que le temps nécessaire à l’échange.</p>
+
+<h2>Services tiers</h2>
+<ul>
+  <li><strong>Hébergement — GitHub Pages</strong> (GitHub, Inc.) : enregistre des journaux techniques (adresse IP, navigateur, pages demandées) pour assurer le service et sa sécurité. <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">Déclaration de confidentialité de GitHub</a>.</li>
+  <li><strong>Polices — Google Fonts</strong> : les polices Bricolage Grotesque et Figtree sont chargées depuis les serveurs de Google, qui reçoivent ton adresse IP. <a href="https://policies.google.com/privacy" rel="noopener">Règles de confidentialité de Google</a>.</li>
+  <li><strong>Images des personnages — dblegends.net</strong> : les illustrations sont affichées depuis ce site communautaire, qui reçoit ton adresse IP lors de leur chargement.</li>
+  <li><strong>Publicité — Google AdSense</strong> : voir ci-dessous.</li>
+</ul>
+
+<h2 id="cookies">Publicité et cookies</h2>
+<p>Le site utilise <strong>Google AdSense</strong> pour afficher des annonces. Google et ses partenaires, en tant que fournisseurs tiers, utilisent des cookies et identifiants similaires pour diffuser des annonces, mesurer leur performance et, avec ton accord, les personnaliser en fonction de tes visites sur ce site et sur d’autres sites.</p>
+<ul>
+  <li><strong>Consentement.</strong> Dans l’Espace économique européen, au Royaume-Uni et en Suisse, un message de consentement (plateforme certifiée par Google, conforme au cadre IAB TCF) te permet d’accepter, de refuser ou de paramétrer les cookies publicitaires. Sans ton accord, seules des annonces non personnalisées peuvent être affichées.</li>
+  <li><strong>Modifier ton choix.</strong> Le lien « Gérer les cookies », en bas de chaque page, rouvre ce message à tout moment.</li>
+  <li><strong>Paramètres Google.</strong> Tu peux aussi désactiver la personnalisation des annonces dans <a href="https://myadcenter.google.com/" rel="noopener">Mon Centre publicitaire</a> et découvrir <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">comment Google utilise les données des sites partenaires</a>.</li>
+</ul>
+<p>DBL Optimizer ne dépose aucun cookie qui lui soit propre et ne transmet aucune donnée personnelle aux annonceurs.</p>
+
+<h2>Bases légales et durées</h2>
+<ul>
+  <li>Cookies publicitaires : ton <strong>consentement</strong>, retirable à tout moment.</li>
+  <li>Journaux d’hébergement et chargement des polices et images : l’<strong>intérêt légitime</strong> à faire fonctionner et sécuriser le site.</li>
+  <li>Échanges par e-mail : ton <strong>consentement</strong>, le temps de l’échange.</li>
+</ul>
+
+<h2>Tes droits</h2>
+<p>Conformément au RGPD, tu disposes d’un droit d’accès, de rectification, d’effacement, d’opposition, de limitation et de retrait du consentement. DBL Optimizer ne conservant pas de données te concernant (hors messages), écris-nous pour toute question ; pour les données traitées par Google, utilise les outils de Google cités plus haut. Tu peux aussi introduire une réclamation auprès de la <a href="https://www.cnil.fr" rel="noopener">CNIL</a>.</p>
+
+<h2>Modifications</h2>
+<p>Cette politique peut évoluer, par exemple si de nouveaux services sont utilisés. La date de dernière mise à jour figure en haut de la page.</p>

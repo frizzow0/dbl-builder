@@ -1,0 +1,16 @@
+<!--
+{
+  "title": "Dragon Ball Legends Guides: Z Abilities, Equipment, Proud Mode",
+  "description": "All DBL Optimizer guides for Dragon Ball Legends: getting started with the tool, Z Abilities, equipment, Proud mode and Trio C, stats glossary and FAQ.",
+  "h1": "Dragon Ball Legends guides",
+  "lead": "Understand the mechanics that make a team strong — and learn to check them, numbers included, in the optimizer.",
+  "type": "collection",
+  "published": "2026-09-16",
+  "updated": "2026-09-16"
+}
+-->
+<h2>Where to start?</h2>
+<p>New to DBL Optimizer? Start with <a href="/en/getting-started.html">Getting started</a>: it walks through every part of the tool. The <a href="/en/z-abilities-guide.html">Z Abilities</a> and <a href="/en/equipment-guide.html">equipment</a> guides then explain the two bonus sources the optimizer calculates, and why they multiply each other.</p>
+<p>Playing Proud mode? The <a href="/en/proud-mode-guide.html">Trio C guide</a> shows why two strong trios don’t always make a strong deciding match, and how to check it before you play.</p>
+<h2>How these guides are written</h2>
+<p>Each guide describes how DBL Optimizer actually calculates: the rules it applies, their limits and how to read the results. Character and equipment data is updated regularly; the latest update is from {{DATE_DONNEES}}. Spotted a mistake or a mechanic that is described wrongly? <a href="/en/contact.html">Let us know</a>.</p>

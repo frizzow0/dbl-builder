@@ -1,0 +1,44 @@
+<!--
+{
+  "title": "FAQ DBL Optimizer — questions fréquentes",
+  "description": "Questions fréquentes sur DBL Optimizer, l’optimiseur Dragon Ball Legends : gratuité, sauvegarde, données, conditions d’items, Trio C et précision des calculs.",
+  "h1": "Foire aux questions",
+  "lead": "Les réponses aux questions les plus courantes sur DBL Optimizer et sur les mécaniques d’optimisation de Dragon Ball Legends.",
+  "type": "faq",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "Lancer l’optimiseur →"
+}
+-->
+<h2>DBL Optimizer est-il gratuit&nbsp;?</h2>
+<p>Oui. L’outil est entièrement gratuit, sans compte ni inscription. Le site peut afficher de la publicité pour couvrir ses frais ; elle n’est jamais nécessaire pour utiliser l’outil.</p>
+
+<h2>Mon équipe est-elle sauvegardée&nbsp;?</h2>
+<p>Non. La composition n’est enregistrée nulle part : si tu recharges la page, elle repart de zéro. Seuls ta langue et ton mode de jeu (Classique ou Proud) sont mémorisés dans ton navigateur. Rien n’est envoyé sur un serveur.</p>
+
+<h2>Comment ajouter un personnage à mon équipe&nbsp;?</h2>
+<p>Clique sur une case « Cliquer pour ajouter ». Dans la fenêtre qui s’ouvre, cherche par nom, par code de carte ou par tag, et filtre par rareté ou par couleur. Survole ensuite la carte pour régler son palier de Cap Z et lui équiper jusqu’à 3 items. Le guide de <a href="/guide-prise-en-main.html">prise en main</a> détaille chaque étape.</p>
+
+<h2>D’où viennent les données des personnages et des items&nbsp;?</h2>
+<p>Elles proviennent des fiches publiques de la communauté Dragon Ball Legends (dblegends.net) et sont mises à jour régulièrement, en général après les nouvelles sorties. La base compte actuellement {{NB_PERSOS}} personnages et {{NB_ITEMS}} équipements (mise à jour du {{DATE_DONNEES}}). Si une carte récente manque, elle arrivera à la prochaine mise à jour.</p>
+
+<h2>Pourquoi un item ou une Cap Z ne s’applique-t-il pas&nbsp;?</h2>
+<p>La plupart des bonus sont conditionnels : ils exigent un tag, une couleur ou un nombre de coéquipiers partageant un tag. Pour les items, ouvre « Composition d’équipe » : chaque effet y est marqué Actif, Manque N ou × N, avec la règle à remplir. Pour les Cap Z, l’Arbre des Cap Z montre ce qui passe ou non vers chaque coéquipier. Les effets non remplis sont aussi listés dans « Effets non calculés ».</p>
+
+<h2>C’est quoi un trio&nbsp;?</h2>
+<p>Une équipe de 6 personnages est divisée en deux trios de 3. En mode Classique, ce sont la Principale et le Banc ; en mode Proud, le Trio A et le Trio B. Les conditions d’items se comptent dans le trio du porteur, tandis que les items « même équipement » se comptent sur toute l’équipe (voir le <a href="/guide-items.html">guide des items</a>).</p>
+
+<h2>Qu’est-ce que le Trio C&nbsp;?</h2>
+<p>En mode Proud, un troisième match départage une égalité. Il se joue avec un Trio C composé de 2 personnages d’un trio et 1 de l’autre. Comme les conditions d’items et le privilège du Leader dépendent des partenaires de combat, ce Trio C peut perdre des bonus : l’outil l’analyse et propose le meilleur Trio C possible. Tout est expliqué dans le <a href="/guide-mode-proud.html">guide du mode Proud</a>.</p>
+
+<h2>Quelle différence entre Cap Z et Cap Z Zenkai&nbsp;?</h2>
+<p>La Cap Z classique se débloque par paliers (I à IV). Un personnage passé en Zenkai obtient en plus une Cap Z Zenkai, qui s’ajoute à la première. L’optimiseur compte la Cap Z classique au palier que tu choisis et la Cap Z Zenkai à son maximum (voir le <a href="/guide-cap-z.html">guide des Cap Z</a>).</p>
+
+<h2>Les calculs sont-ils exacts&nbsp;?</h2>
+<p>L’outil applique les règles connues du jeu : couches de calcul base, pur et direct, conditions de tags, propagation des Cap Z et privilège du Leader. Certains effets ne sont pas chiffrables (capacités situationnelles, passifs conditionnés au combat) : ils sont listés à part dans « Effets non calculés » plutôt que comptés dans les totaux. De légers écarts avec le jeu restent possibles.</p>
+
+<h2>Le site existe-t-il en anglais&nbsp;?</h2>
+<p>Oui. Le bouton FR / EN en haut de chaque page bascule vers la version anglaise, qui a ses propres adresses (<a href="/en/" hreflang="en" lang="en">dbl-optimizer.com/en/</a>). Sur l’outil, la bascule se fait sans perdre l’équipe en cours.</p>
+
+<h2>J’ai trouvé une erreur, comment la signaler&nbsp;?</h2>
+<p>Écris-nous depuis la page <a href="/contact.html">Contact</a> en précisant le personnage ou l’item concerné et ce que tu observes en jeu. Les corrections sont intégrées à la mise à jour suivante.</p>

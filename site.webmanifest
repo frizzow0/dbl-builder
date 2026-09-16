@@ -1,34 +1,19 @@
 {
-  "name": "DBL Optimizer",
-  "short_name": "DBL",
-  "description": "Team Builder & Items Optimization pour Dragon Ball Legends",
+  "name": "DBL Optimizer — Dragon Ball Legends Team Builder",
+  "short_name": "DBL Optimizer",
+  "description": "Team builder, Z Ability and equipment optimizer for Dragon Ball Legends.",
+  "id": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "theme_color": "#ff5722",
-  "background_color": "#0c0d11",
+  "theme_color": "#F3F1EC",
+  "background_color": "#F3F1EC",
   "lang": "fr",
   "icons": [
-    {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/og-image.png",
-      "sizes": "1200x630",
-      "type": "image/png"
-    }
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
-  "categories": ["games", "utilities"],
-  "screenshots": [
-    {
-      "src": "/og-image.png",
-      "sizes": "1200x630",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "DBL Optimizer Team Builder"
-    }
-  ]
+  "categories": ["games", "utilities"]
 }

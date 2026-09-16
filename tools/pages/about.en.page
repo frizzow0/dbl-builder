@@ -1,0 +1,36 @@
+<!--
+{
+  "title": "About DBL Optimizer",
+  "description": "Who makes DBL Optimizer, where its data comes from, how it calculates Dragon Ball Legends Z Ability and equipment bonuses, and what its limits are.",
+  "h1": "About DBL Optimizer",
+  "lead": "A tool made by a player, for players: know what a Dragon Ball Legends team is really worth before spending your resources.",
+  "type": "about",
+  "published": "2026-09-16",
+  "updated": "2026-09-16"
+}
+-->
+<h2>Why this site exists</h2>
+<p>In Dragon Ball Legends, a team’s strength comes from stacked bonuses: each character’s Z Ability, tag conditions, levels, Zenkai, equipment and its calculation layers. Adding all of that up in your head is nearly impossible, and the game doesn’t show it in detail.</p>
+<p>DBL Optimizer does the math for you, in real time. It shows what each character receives, what is lost because a condition isn’t met, and how to improve the lineup — including Proud mode’s Trio C.</p>
+
+<h2>Who is behind DBL Optimizer</h2>
+<p>DBL Optimizer is an independent project, designed and maintained by a Dragon Ball Legends player as a non-commercial hobby. It isn’t an official product: the site has no link with BANDAI NAMCO Entertainment or the Dragon Ball rights holders.</p>
+
+<h2>Where the data comes from</h2>
+<p>Character sheets (tags, colors, Z Abilities and Zenkai Z Abilities) and equipment sheets (rarities, stat lines, conditions, possible wearers) are taken from the public pages of the <strong>dblegends.net</strong> community database, then normalized for the calculation. The database currently holds {{NB_PERSOS}} characters and {{NB_ITEMS}} pieces of equipment; latest update on {{DATE_DONNEES}}.</p>
+<p>Character artwork is displayed from that same site and remains the property of its rights holders.</p>
+
+<h2>How the calculation works</h2>
+<ul>
+  <li>Bonuses are sorted into three layers — <strong>base</strong>, <strong>pure</strong> and <strong>direct</strong> — added up within each layer, then multiplied across layers.</li>
+  <li>Every Z Ability line is checked against the tags of the character receiving it; the Leader receives everything unconditionally and gives their Z Ability unconditionally to their two trio teammates.</li>
+  <li>Equipment conditions are counted within the wearer’s trio; “same equipment” effects across the whole team.</li>
+  <li>Effects that can’t be quantified are listed separately rather than guessed.</li>
+</ul>
+<p>The guides detail every rule: <a href="/en/z-abilities-guide.html">Z Abilities</a>, <a href="/en/equipment-guide.html">equipment</a>, <a href="/en/proud-mode-guide.html">Proud mode</a>.</p>
+
+<h2>Limits</h2>
+<p>The tool calculates stat bonuses; it doesn’t simulate battles, cards or situational abilities. Data depends on its source and can lag a few days behind a new release. If you notice a difference with the game, <a href="/en/contact.html">report it</a>: it’s the best way to improve the tool.</p>
+
+<h2>Funding</h2>
+<p>DBL Optimizer is free. To cover its costs (domain name, update time), the site may show ads, placed so that they don’t get in the way of the tool. Cookies and consent are detailed in the <a href="/en/privacy.html">privacy policy</a>.</p>

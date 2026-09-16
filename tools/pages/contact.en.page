@@ -1,0 +1,33 @@
+<!--
+{
+  "title": "Contact — DBL Optimizer",
+  "description": "Contact DBL Optimizer: report a data or calculation mistake, suggest an improvement, ask a privacy question or send a copyright request.",
+  "h1": "Contact",
+  "lead": "A mistake in a character, a piece of equipment or a calculation? An idea for an improvement? Write to us.",
+  "type": "contact",
+  "published": "2026-09-16",
+  "updated": "2026-09-16"
+}
+-->
+<div class="contact-card">
+  <p class="contact-card-label">Email address</p>
+  <p class="contact-card-mail"><a href="mailto:contact@dbl-optimizer.com">contact@dbl-optimizer.com</a></p>
+  <p class="contact-card-note">Replies in English or French, usually within a few days.</p>
+</div>
+
+<h2>Reporting a mistake</h2>
+<p>To get a quick fix, please include:</p>
+<ul>
+  <li>the <strong>character</strong> (name and card code, for example DBL99-01L) or the <strong>equipment</strong> concerned;</li>
+  <li>what the tool shows and what you see <strong>in game</strong> (a screenshot helps a lot);</li>
+  <li>the <strong>team lineup</strong> you used, if the issue involves a condition or a total.</li>
+</ul>
+<p>Data fixes are included in the next update.</p>
+
+<h2>Other requests</h2>
+<ul>
+  <li><strong>Suggestions</strong> — a missing feature, a guide to write: every idea is read.</li>
+  <li><strong>Privacy</strong> — for questions about your data, please check the <a href="/en/privacy.html">privacy policy</a> first.</li>
+  <li><strong>Copyright</strong> — if you own the rights to content shown on the site and want it removed, write to us: the request will be handled promptly.</li>
+</ul>
+<p>Messages are only used to reply to you and are never shared.</p>

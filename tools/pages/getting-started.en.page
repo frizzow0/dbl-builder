@@ -1,0 +1,73 @@
+<!--
+{
+  "title": "Getting Started with DBL Optimizer — Dragon Ball Legends Team Builder",
+  "description": "Step-by-step DBL Optimizer guide: add characters, pick your Leader, set Z Abilities and equipment, then read tags, conditions and team summaries.",
+  "h1": "Getting started with DBL Optimizer",
+  "lead": "From an empty slot to a detailed breakdown: every part of the optimizer explained, in the order you use it.",
+  "type": "article",
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "cta": "Open the optimizer →"
+}
+-->
+<h2>Before you start</h2>
+<p>DBL Optimizer is free and needs no account. Everything is calculated in your browser, instantly. One thing to know: <strong>your team is not saved</strong>. If you reload the page, the lineup starts from scratch — only your language and game mode are remembered.</p>
+<p>The database currently holds {{NB_PERSOS}} characters and {{NB_ITEMS}} pieces of equipment, updated on {{DATE_DONNEES}}. Character, equipment and tag names are shown as they appear in the source database, which is in French.</p>
+
+<h2>1. Choose the game mode</h2>
+<p>The floating switch at the bottom of the screen toggles between two modes:</p>
+<ul>
+  <li><strong>Classic</strong> — a <strong>Main</strong> team of 3 characters and a <strong>Bench</strong> of 3.</li>
+  <li><strong>Proud</strong> — two equally important trios, <strong>Trio A</strong> and <strong>Trio B</strong>, plus a <strong>Trio C</strong> for the match that breaks a tie (see the <a href="/en/proud-mode-guide.html">Proud mode guide</a>).</li>
+</ul>
+<p>The mode doesn’t change Z Ability or equipment calculations: it renames the two trios and adds the Trio C analysis.</p>
+
+<h2>2. Add characters</h2>
+<p>Click a <strong>“Click to add”</strong> slot. The selection window shows every card with its artwork, name and color. You can:</p>
+<ul>
+  <li>search by <strong>name</strong>, <strong>card code</strong> (for example DBL99-01L) or <strong>tag</strong>;</li>
+  <li>filter by <strong>rarity</strong> and <strong>color</strong>.</li>
+</ul>
+<p>Characters already in your team are greyed out. On a placed card, <strong>✎</strong> swaps the character and <strong>✕</strong> removes it; either way, its equipment is removed too.</p>
+
+<h2>3. Pick your Leader</h2>
+<p>The <strong>★</strong> star under each card sets the Leader. It matters a lot in the calculation: the Leader receives every Z Ability in the team unconditionally, and their own Z Ability applies unconditionally to their two trio teammates. The <strong>“Disable leader”</strong> button at the bottom of the panel lets you compare with a team without this privilege. Details are in the <a href="/en/z-abilities-guide.html">Z Abilities guide</a>.</p>
+
+<h2>4. Set Z Abilities and equipment</h2>
+<p>On desktop, hover a card: a panel unfolds to its right. On phones and tablets, these settings sit under each card.</p>
+<ul>
+  <li><strong>Z Ability</strong> — pick the level you unlocked: <strong>I, II, III or IV</strong>. The Zenkai Z Ability, if the character has one, is counted at its maximum.</li>
+  <li><strong>Equipment</strong> — three slots. Each slot opens the equipment list with the <strong>“Compatible”</strong> filter on by default, so you only see equipment this character can wear. Equipment restricted to one specific card (many Platinum pieces) only shows up for that card.</li>
+  <li><strong>“View details”</strong> opens the full sheet of a piece of equipment: every line, its values and its conditions.</li>
+  <li><strong>“OR” lines</strong> — some equipment rolls one of two stats at random. Pick the one you got so the calculation matches your real equipment.</li>
+</ul>
+
+<h2>5. Read tags and conditions</h2>
+<p>Under the cards, the <strong>“Team tags”</strong> table shows who carries which tag: one column per character, a dot under each carrier and the total on the right. Shared tags come first; tags carried by a single character are folded behind a button.</p>
+<p>The <strong>“Team Composition”</strong> panel then lists every equipment effect that depends on a tag. For each one it shows the wearer, the bonus, the rule (“3 in their trio”, “per trio member”) and a status:</p>
+<ul>
+  <li><strong>Active</strong> — the condition is met;</li>
+  <li><strong>N missing</strong> — the trio lacks N characters with that tag;</li>
+  <li><strong>× N</strong> — the bonus is multiplied by the number of matching members.</li>
+</ul>
+<p>The <strong>“Simulate”</strong> field forces a number of carriers so you can test an effect without changing the team. That line is then marked “(simulated)”, and every summary takes it into account.</p>
+
+<h2>6. Analyze the results</h2>
+<ul>
+  <li><strong>Global summary (Z Abilities)</strong> — the total Z Ability bonuses received by the whole team, with a per-stat chart.</li>
+  <li><strong>Uncalculated Effects</strong> — passives that can’t be quantified and effects whose condition isn’t met, so nothing gets overlooked.</li>
+  <li><strong>Targeted character</strong> — choose the character to analyze in detail.</li>
+  <li><strong>Global summary (Z Abilities + items)</strong> — their all-in bonuses, with the <strong>Cumulated Effects Summary</strong> stat by stat (equipment share, Z Ability share and final multiplier).</li>
+  <li><strong>Z Ability Tree</strong> — how their Z Ability reaches each teammate: a <strong>green</strong> arrow if everything applies, <strong>yellow</strong> if only part of it does, <strong>red</strong> if nothing does.</li>
+</ul>
+
+<h2>7. In Proud mode: check your Trio C</h2>
+<p>In Proud mode, a <strong>“TRIO C”</strong> box appears under each character. Select 2 characters from one trio and 1 from the other: the Trio C analysis then compares their bonuses with their original trio, lists what is lost or gained and suggests the best possible Trio C. The <a href="/en/proud-mode-guide.html">Proud mode guide</a> explains how to read it.</p>
+
+<h2>Tips</h2>
+<ol>
+  <li><strong>Start with tags.</strong> A team whose characters share many tags triggers more conditional Z Abilities and equipment.</li>
+  <li><strong>Watch for “1 missing”.</strong> A single character swap often unlocks several effects at once.</li>
+  <li><strong>Try two Leaders.</strong> Totals can change a lot: compare the summaries before deciding.</li>
+  <li><strong>Read the Z Ability tree.</strong> A red arrow means a Z Ability is wasted on that teammate.</li>
+</ol>

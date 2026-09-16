@@ -1,39 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Généré par tools/build.js — ne pas éditer ce fichier. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dbl-optimizer.com/</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/guides.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/guides.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/guides.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/guides.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/guides.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/guides.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/guide-prise-en-main.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-prise-en-main.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/getting-started.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/getting-started.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/getting-started.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-prise-en-main.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/getting-started.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/getting-started.html" />
   </url>
   <url>
     <loc>https://dbl-optimizer.com/guide-cap-z.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-cap-z.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/z-abilities-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/z-abilities-guide.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/z-abilities-guide.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-cap-z.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/z-abilities-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/z-abilities-guide.html" />
   </url>
   <url>
     <loc>https://dbl-optimizer.com/guide-items.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-items.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/equipment-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/equipment-guide.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/equipment-guide.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-items.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/equipment-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/equipment-guide.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/guide-mode-proud.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-mode-proud.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/proud-mode-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/proud-mode-guide.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/proud-mode-guide.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/guide-mode-proud.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/proud-mode-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/proud-mode-guide.html" />
   </url>
   <url>
     <loc>https://dbl-optimizer.com/glossaire.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/glossaire.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/stats-glossary.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/stats-glossary.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/stats-glossary.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/glossaire.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/stats-glossary.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/stats-glossary.html" />
   </url>
   <url>
     <loc>https://dbl-optimizer.com/faq.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/faq.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/faq.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/faq.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/a-propos.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/a-propos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/about.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/about.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/a-propos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/about.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/contact.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/contact.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/contact.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/contact.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/mentions-legales.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/mentions-legales.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/legal-notice.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/legal-notice.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/mentions-legales.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/legal-notice.html" />
   </url>
   <url>
     <loc>https://dbl-optimizer.com/privacy.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/privacy.html" />
+  </url>
+  <url>
+    <loc>https://dbl-optimizer.com/en/privacy.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/privacy.html" />
   </url>
 </urlset>

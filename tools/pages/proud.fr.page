@@ -1,0 +1,49 @@
+<!--
+{
+  "title": "Mode Proud et Trio C — Dragon Ball Legends : bien choisir",
+  "description": "Mode Proud de Dragon Ball Legends : pourquoi le Trio C perd des bonus de Cap Z et d’items, et comment choisir le meilleur Trio C avec DBL Optimizer.",
+  "h1": "Mode Proud : bien choisir son Trio C",
+  "lead": "Deux trios qui fonctionnent très bien peuvent donner un troisième match mal optimisé. Ce guide explique pourquoi, et comment le vérifier avant de jouer.",
+  "type": "article",
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "cta": "Analyser mon Trio C →"
+}
+-->
+<h2>Le mode Proud en bref</h2>
+<p>En mode Proud, ton équipe de 6 personnages est jouée en <strong>deux trios</strong> : le <strong>Trio A</strong> et le <strong>Trio B</strong>. En cas d’égalité, un <strong>troisième match</strong> départage les joueurs. Il se joue avec un <strong>Trio C</strong> que tu composes à partir de tes deux trios : <strong>2 personnages de l’un et 1 de l’autre</strong>.</p>
+<p>C’est ce match décisif qui pose problème : tu l’as rarement préparé avec autant de soin que les deux premiers.</p>
+
+<h2>Pourquoi le Trio C perd des bonus</h2>
+<p>Deux mécaniques dépendent de <strong>qui combat avec qui</strong>. Quand tu mélanges tes trios, elles changent :</p>
+<h3>1. Les conditions d’items se comptent dans le trio</h3>
+<p>Un item « si au moins 3 Saga Z - Boo font partie des combattants » est actif dans un trio 100 % Boo. Dans un Trio C qui ne garde que 2 de ces personnages, le compte tombe à 2 : l’effet s’éteint. Les bonus « par membre » diminuent de la même façon quand le Trio C compte moins de porteurs du tag.</p>
+<p>L’inverse existe aussi : un personnage venu de l’autre trio peut apporter le tag qui manquait et <strong>activer</strong> un effet.</p>
+<h3>2. Le privilège du Leader suit son trio de combat</h3>
+<p>La Cap Z du Leader s’applique <strong>sans condition</strong> à ses deux coéquipiers de trio. Si le Leader ne joue pas le Trio C, ou s’il y joue avec d’autres partenaires, certains personnages perdent ces lignes de Cap Z — ou en gagnent. Les Cap Z des autres personnages, elles, continuent de s’appliquer à toute l’équipe selon leurs conditions habituelles.</p>
+
+<h2>Choisir son Trio C dans DBL Optimizer</h2>
+<ol>
+  <li>Passe en mode <strong>Proud</strong> avec le bouton flottant en bas de l’écran.</li>
+  <li>Sous chaque personnage, clique sur le rectangle <strong>« TRIO C »</strong>. L’outil applique la règle : impossible de prendre un 3<sup>e</sup> personnage dans un trio qui en a déjà 2.</li>
+  <li>Dès que 3 personnages sont désignés, l’<strong>analyse du Trio C</strong> s’affiche. « Réinitialiser » vide la sélection.</li>
+</ol>
+
+<h2>Lire l’analyse du Trio C</h2>
+<p><strong>Bonus total</strong> — la somme des gains de toutes les stats des 3 personnages dans le Trio C, avec l’écart par rapport à leurs trios d’origine (par exemple « +1 286 % · −36 % »).</p>
+<p><strong>Une carte par personnage</strong> — son total, sa part de Cap Z et sa part d’items dans le Trio C, chacun avec son écart. Les Cap Z et les items se multiplient : l’écart du total peut donc dépasser la somme des deux autres.</p>
+<p><strong>Ce qui change dans le Trio C</strong> — la liste précise des effets touchés, pertes en rouge d’abord, gains en vert ensuite :</p>
+<ul>
+  <li><strong>Item</strong> : le porteur, l’item, le compte du tag (« Saga Z - Boo : 3 → 2 ») et le statut avant/après (« Actif → Manque 1 ») ;</li>
+  <li><strong>Cap Z</strong> : les lignes de Cap Z du Leader perdues ou gagnées par un personnage ;</li>
+  <li>une <strong>alerte</strong> si ton Leader ne joue pas le Trio C.</li>
+</ul>
+<p><strong>Meilleur Trio C possible</strong> — l’outil teste toutes les combinaisons autorisées et indique celle qui obtient le meilleur bonus total, avec un bouton pour la choisir.</p>
+
+<h2>Conseils pour un Trio C solide</h2>
+<ol>
+  <li><strong>Garde ensemble les paires qui partagent des tags.</strong> Ce sont elles qui portent les conditions d’items.</li>
+  <li><strong>Préfère des items à seuil bas</strong> (« au moins 2 ») pour les personnages susceptibles de jouer le Trio C : ils restent actifs plus souvent.</li>
+  <li><strong>Pense au Leader.</strong> S’il joue le Trio C, vérifie que ses deux partenaires profitent de son privilège ; s’il n’y joue pas, regarde les lignes de Cap Z que l’analyse signale comme perdues.</li>
+  <li><strong>Utilise la suggestion comme point de départ.</strong> Le bonus total additionne toutes les stats ; il ne tient compte ni des kits, ni des cartes, ni de l’adversaire. À bonus proche, fie-toi à ton expérience de jeu.</li>
+</ol>

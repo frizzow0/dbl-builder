@@ -252,6 +252,98 @@
     'labels.quantite_regen_force':    { fr: 'Quantité de régénération',  en: 'HP Regen Amount' },
     'labels.garde_contre_degats':     { fr: 'Garde contre les dégâts',   en: 'Damage Guard' },
 
+    'noscript.text':       { fr: '⚠️ DBL Optimizer nécessite JavaScript pour fonctionner. Active JavaScript dans ton navigateur.', en: '⚠️ DBL Optimizer needs JavaScript to work. Please enable JavaScript in your browser.' },
+    'modal.close':         { fr: 'Fermer',               en: 'Close' },
+    'details.modal.title': { fr: 'Détails des items',    en: 'Item details' },
+    'nav.quick.aria':      { fr: 'Navigation rapide',    en: 'Quick navigation' },
+
+    // ── Site : métadonnées, navigation, pied de page (pages générées par tools/build.js) ──
+    'meta.tool.title':        { fr: 'Team Builder Dragon Ball Legends : Cap Z & items | DBL Optimizer',
+                                en: 'Dragon Ball Legends Team Builder & Equipment Optimizer | DBL Optimizer' },
+    'meta.tool.description':  { fr: 'Outil gratuit pour Dragon Ball Legends : compose ton équipe, équipe tes items et calcule en temps réel tes bonus de Cap Z, ton bilan global et ton Trio C.',
+                                en: 'Free Dragon Ball Legends tool: build your team, equip items and calculate Z Ability bonuses, your global stat summary and your Proud mode Trio C in real time.' },
+    'site.og.alt':            { fr: 'DBL Optimizer — optimiseur d’équipe et d’items pour Dragon Ball Legends',
+                                en: 'DBL Optimizer — team and equipment optimizer for Dragon Ball Legends' },
+    'site.skip':              { fr: 'Aller au contenu',       en: 'Skip to content' },
+    'site.brand.aria':        { fr: 'DBL Optimizer — accueil', en: 'DBL Optimizer — home' },
+    'site.nav.aria':          { fr: 'Navigation principale',  en: 'Main navigation' },
+    'site.nav.tool':          { fr: 'Optimiseur',             en: 'Optimizer' },
+    'site.nav.guides':        { fr: 'Guides',                 en: 'Guides' },
+    'site.nav.faq':           { fr: 'FAQ',                    en: 'FAQ' },
+    'site.crumb.home':        { fr: 'Accueil',                en: 'Home' },
+    'site.crumb.aria':        { fr: 'Fil d’Ariane',           en: 'Breadcrumb' },
+    'site.meta.updated':      { fr: 'Dernière mise à jour : {date}', en: 'Last updated: {date}' },
+    'site.meta.updatedRead':  { fr: 'Mis à jour le {date} · {n} min de lecture', en: 'Updated {date} · {n} min read' },
+    'site.related':           { fr: 'Autres guides',          en: 'More guides' },
+    'site.footer.pitch':      { fr: 'Optimiseur gratuit d’équipe, de Cap Z et d’items pour Dragon Ball Legends, en français et en anglais.',
+                                en: 'Free team, Z Ability and equipment optimizer for Dragon Ball Legends, in English and French.' },
+    'site.footer.guides':     { fr: 'Guides',                 en: 'Guides' },
+    'site.footer.site':       { fr: 'Le site',                en: 'The site' },
+    'site.footer.legal':      { fr: 'Informations légales',   en: 'Legal' },
+    'site.footer.cookies':    { fr: 'Gérer les cookies',      en: 'Manage cookies' },
+    'site.footer.disclaimer': { fr: 'DBL Optimizer est un site de fans non officiel, sans lien avec BANDAI NAMCO Entertainment. Dragon Ball Legends, ses personnages et ses visuels appartiennent à leurs ayants droit respectifs.',
+                                en: 'DBL Optimizer is an unofficial fan site, not affiliated with BANDAI NAMCO Entertainment. Dragon Ball Legends, its characters and artwork belong to their respective owners.' },
+    'page.tool.short':            { fr: 'Optimiseur',            en: 'Optimizer' },
+    'page.guides.short':          { fr: 'Tous les guides',       en: 'All guides' },
+    'page.getting-started.short': { fr: 'Prise en main',         en: 'Getting started' },
+    'page.capz.short':            { fr: 'Guide des Cap Z',       en: 'Z Abilities guide' },
+    'page.items.short':           { fr: 'Guide des items',       en: 'Equipment guide' },
+    'page.proud.short':           { fr: 'Mode Proud & Trio C',   en: 'Proud mode & Trio C' },
+    'page.glossary.short':        { fr: 'Glossaire des stats',   en: 'Stats glossary' },
+    'page.faq.short':             { fr: 'FAQ',                   en: 'FAQ' },
+    'page.about.short':           { fr: 'À propos',              en: 'About' },
+    'page.contact.short':         { fr: 'Contact',               en: 'Contact' },
+    'page.legal.short':           { fr: 'Mentions légales',      en: 'Legal notice' },
+    'page.privacy.short':         { fr: 'Confidentialité',       en: 'Privacy' },
+    'page.getting-started.kicker':{ fr: 'Débuter',               en: 'Start here' },
+    'page.capz.kicker':           { fr: 'Mécanique',             en: 'Mechanics' },
+    'page.items.kicker':          { fr: 'Mécanique',             en: 'Mechanics' },
+    'page.proud.kicker':          { fr: 'Mode de jeu',           en: 'Game mode' },
+    'page.glossary.kicker':       { fr: 'Référence',             en: 'Reference' },
+    'page.faq.kicker':            { fr: 'Questions',             en: 'Questions' },
+
+    // ── Accueil : texte éditorial sous l’outil ──
+    'home.how.title':   { fr: 'Comment utiliser DBL Optimizer', en: 'How to use DBL Optimizer' },
+    'home.how.lead':    { fr: 'Quatre étapes pour savoir, chiffres à l’appui, si ton équipe tient la route — et où elle perd de la puissance.',
+                          en: 'Four steps to find out, with numbers, whether your team holds up — and where it loses power.' },
+    'home.how.1.t':     { fr: 'Compose tes deux trios', en: 'Build your two trios' },
+    'home.how.1.d':     { fr: 'Clique sur une case vide pour choisir un personnage parmi plus de 500 cartes, filtrables par rareté, couleur, nom ou tag. Désigne ton Leader avec l’étoile ★.',
+                          en: 'Click an empty slot to pick a character from 500+ cards, filtered by rarity, color, name or tag. Pick your Leader with the ★ star.' },
+    'home.how.2.t':     { fr: 'Règle les Cap Z et les items', en: 'Set Z Abilities and equipment' },
+    'home.how.2.d':     { fr: 'Survole un personnage pour choisir son palier de Cap Z (I à IV) et ses 3 items. Les items compatibles sont proposés par défaut, avec leur détail complet.',
+                          en: 'Hover a character to pick their Z Ability level (I to IV) and 3 pieces of equipment. Compatible equipment is suggested by default, with full details.' },
+    'home.how.3.t':     { fr: 'Vérifie les synergies', en: 'Check synergies' },
+    'home.how.3.d':     { fr: 'Le tableau des tags montre qui porte quel tag, et « Composition d’équipe » indique quels effets d’items sont actifs dans chaque trio — ou ce qu’il manque pour les activer.',
+                          en: 'The tag table shows who carries which tag, and “Team composition” tells you which equipment effects are active in each trio — or what is missing to trigger them.' },
+    'home.how.4.t':     { fr: 'Lis les bilans', en: 'Read the summaries' },
+    'home.how.4.d':     { fr: 'Bilan des Cap Z, bilan global Cap Z + items par personnage, arbre de propagation des Cap Z et, en mode Proud, analyse du Trio C avec le meilleur trio possible.',
+                          en: 'Z Ability summary, global Z + equipment summary per character, Z Ability propagation tree and, in Proud mode, a Trio C analysis with the best possible trio.' },
+    'home.guides.title':{ fr: 'Guides pour aller plus loin', en: 'Guides to go further' },
+    'home.guides.getting-started': { fr: 'Toutes les fonctions de l’outil, pas à pas.', en: 'Every feature of the tool, step by step.' },
+    'home.guides.capz':     { fr: 'Paliers, Zenkai, conditions et privilège du Leader.', en: 'Levels, Zenkai, conditions and the Leader privilege.' },
+    'home.guides.items':    { fr: 'Raretés, couches base / pur / direct et conditions.', en: 'Rarities, base / pure / direct layers and conditions.' },
+    'home.guides.proud':    { fr: 'Choisir un Trio C qui ne perd pas ses bonus.', en: 'Pick a Trio C that keeps its bonuses.' },
+    'home.guides.glossary': { fr: 'Chaque statistique expliquée en une phrase.', en: 'Every stat explained in one sentence.' },
+    'home.guides.faq':      { fr: 'Les réponses aux questions fréquentes.', en: 'Answers to common questions.' },
+
+    // ── Routes (URL de chaque page dans chaque langue) ──
+    // BUILD:ROUTES:START
+    // (généré par tools/build.js — ne pas éditer)
+    'route.tool': { fr: '/', en: '/en/' },
+    'route.guides': { fr: '/guides.html', en: '/en/guides.html' },
+    'route.getting-started': { fr: '/guide-prise-en-main.html', en: '/en/getting-started.html' },
+    'route.capz': { fr: '/guide-cap-z.html', en: '/en/z-abilities-guide.html' },
+    'route.items': { fr: '/guide-items.html', en: '/en/equipment-guide.html' },
+    'route.proud': { fr: '/guide-mode-proud.html', en: '/en/proud-mode-guide.html' },
+    'route.glossary': { fr: '/glossaire.html', en: '/en/stats-glossary.html' },
+    'route.faq': { fr: '/faq.html', en: '/en/faq.html' },
+    'route.about': { fr: '/a-propos.html', en: '/en/about.html' },
+    'route.contact': { fr: '/contact.html', en: '/en/contact.html' },
+    'route.legal': { fr: '/mentions-legales.html', en: '/en/legal-notice.html' },
+    'route.privacy': { fr: '/privacy.html', en: '/en/privacy.html' },
+    'route.privacy.cookies': { fr: '/privacy.html#cookies', en: '/en/privacy.html#cookies' },
+    // BUILD:ROUTES:END
+
     // ── Raretés ──────────────────────────────────
     'rarity.platinum':       { fr: 'PLATINUM',        en: 'PLATINUM' },
     'rarity.awakenedunique': { fr: 'UNIQUE ÉVEILLÉ',  en: 'AWAKENED UNIQUE' },
@@ -269,7 +361,30 @@
   // ──────────────────────────────────────────────
   // ÉTAT
   // ──────────────────────────────────────────────
-  let _lang = localStorage.getItem('dbl-lang') || 'fr';
+  // La langue est celle de la PAGE : / en français, /en/ en anglais (chaque
+  // langue a ses URL, indexables séparément). Sur l’outil, un choix explicite
+  // mémorisé (bouton FR/EN) l’emporte : on bascule sur place et l’adresse suit.
+  const PAGE_LANG = document.documentElement.lang === 'en' ? 'en' : 'fr';
+  const lirePref = () => { try { return localStorage.getItem('dbl-lang'); } catch (e) { return null; } };
+  const ecrirePref = (l) => { try { localStorage.setItem('dbl-lang', l); } catch (e) { /* stockage indisponible */ } };
+  let _lang = PAGE_LANG;
+  if (document.body && document.body.dataset.page === 'tool') {
+    const pref = lirePref();
+    if (pref === 'fr' || pref === 'en') _lang = pref;
+  }
+
+  // Adresse de la même page dans l’autre langue (liens hreflang du <head>).
+  function urlPourLangue(lang) {
+    const alt = document.querySelector('link[rel="alternate"][hreflang="' + lang + '"]');
+    if (!alt) return null;
+    try { return new URL(alt.href).pathname; } catch (e) { return null; }
+  }
+  function synchroniserUrl() {
+    const chemin = urlPourLangue(_lang);
+    if (chemin && chemin !== location.pathname) {
+      try { history.replaceState(history.state, '', chemin + location.search + location.hash); } catch (e) { /* file:// */ }
+    }
+  }
 
   // ──────────────────────────────────────────────
   // FONCTIONS PUBLIQUES
@@ -295,8 +410,9 @@
 
   function setLang(lang) {
     _lang = (lang === 'en') ? 'en' : 'fr';
-    localStorage.setItem('dbl-lang', _lang);
+    ecrirePref(_lang);
     document.documentElement.lang = _lang === 'fr' ? 'fr' : 'en';
+    synchroniserUrl();
     applyStaticTranslations();
     _updateLangBtn();
     window.dispatchEvent(new CustomEvent('dbl-lang-changed', { detail: { lang: _lang } }));
@@ -327,6 +443,14 @@
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
       el.setAttribute('title', T(el.dataset.i18nTitle));
     });
+    // href (liens de navigation : chaque langue a ses URL)
+    document.querySelectorAll('[data-i18n-href]').forEach(el => {
+      el.setAttribute('href', T(el.dataset.i18nHref));
+    });
+    // Titre de l’onglet de l’outil
+    if (document.body && document.body.dataset.page === 'tool' && DICT['meta.tool.title']) {
+      document.title = T('meta.tool.title');
+    }
   }
 
   // ──────────────────────────────────────────────
@@ -335,17 +459,27 @@
   function _updateLangBtn() {
     const btn = document.getElementById('lang-toggle');
     if (!btn) return;
+    const autre = _lang === 'fr' ? 'en' : 'fr';
     const cur  = btn.querySelector('.lang-current');
     const next = btn.querySelector('.lang-next');
     if (cur)  cur.textContent  = _lang.toUpperCase();
-    if (next) next.textContent = _lang === 'fr' ? 'EN' : 'FR';
+    if (next) next.textContent = autre.toUpperCase();
     btn.setAttribute('aria-label', _lang === 'fr' ? 'Switch to English' : 'Passer en français');
+    // C’est un vrai lien (suivi par les moteurs) ; en JS, on bascule sur place
+    // pour ne pas perdre l’équipe en cours.
+    const cible = urlPourLangue(autre);
+    if (cible) btn.setAttribute('href', cible);
+    btn.setAttribute('hreflang', autre);
+    btn.dataset.langSwitch = autre;
   }
 
   // Initialisation du bouton (DOM déjà disponible car scripts en fin de body)
   const _btn = document.getElementById('lang-toggle');
   if (_btn) {
-    _btn.addEventListener('click', () => setLang(_lang === 'fr' ? 'en' : 'fr'));
+    _btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      setLang(_lang === 'fr' ? 'en' : 'fr');
+    });
   }
 
   // ──────────────────────────────────────────────
@@ -355,6 +489,7 @@
 
   // Application initiale (DOM déjà parsé)
   document.documentElement.lang = _lang === 'fr' ? 'fr' : 'en';
+  if (_lang !== PAGE_LANG) synchroniserUrl();
   applyStaticTranslations();
   _updateLangBtn();
 })();

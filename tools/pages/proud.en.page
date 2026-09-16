@@ -1,0 +1,49 @@
+<!--
+{
+  "title": "Proud Mode & Trio C — Dragon Ball Legends: Pick the Right Trio",
+  "description": "Dragon Ball Legends Proud mode: why the deciding match’s Trio C often loses Z Ability and equipment bonuses, and how to pick the best Trio C with DBL Optimizer.",
+  "h1": "Proud mode: picking the right Trio C",
+  "lead": "Two trios that work great can still produce a poorly optimized third match. This guide explains why, and how to check it before you play.",
+  "type": "article",
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "cta": "Analyze my Trio C →"
+}
+-->
+<h2>Proud mode in a nutshell</h2>
+<p>In Proud mode, your 6-character team is played as <strong>two trios</strong>: <strong>Trio A</strong> and <strong>Trio B</strong>. On a tie, a <strong>third match</strong> decides the winner. It is played with a <strong>Trio C</strong> built from your two trios: <strong>2 characters from one and 1 from the other</strong>.</p>
+<p>That deciding match is the tricky one: it rarely gets as much preparation as the first two.</p>
+
+<h2>Why Trio C loses bonuses</h2>
+<p>Two mechanics depend on <strong>who fights with whom</strong>. When you mix your trios, they change:</p>
+<h3>1. Equipment conditions are counted within the trio</h3>
+<p>A piece of equipment that says “if at least 3 fighters from the same saga are in the team” is active in a trio built entirely around that saga. In a Trio C that keeps only 2 of those characters, the count drops to 2 and the effect switches off. “Per member” bonuses shrink the same way when Trio C has fewer tag carriers.</p>
+<p>The opposite also happens: a character coming from the other trio can bring the missing tag and <strong>activate</strong> an effect.</p>
+<h3>2. The Leader privilege follows the Leader’s battle trio</h3>
+<p>The Leader’s Z Ability applies <strong>unconditionally</strong> to their two trio teammates. If the Leader doesn’t play Trio C, or plays it with different partners, some characters lose those Z Ability lines — or gain them. Other characters’ Z Abilities keep applying to the whole team under their usual conditions.</p>
+
+<h2>Picking your Trio C in DBL Optimizer</h2>
+<ol>
+  <li>Switch to <strong>Proud</strong> mode with the floating switch at the bottom of the screen.</li>
+  <li>Under each character, click the <strong>“TRIO C”</strong> box. The tool enforces the rule: you can’t pick a 3<sup>rd</sup> character from a trio that already has 2.</li>
+  <li>As soon as 3 characters are selected, the <strong>Trio C analysis</strong> appears. “Reset” clears the selection.</li>
+</ol>
+
+<h2>Reading the Trio C analysis</h2>
+<p><strong>Total bonus</strong> — the sum of every stat gain for the 3 characters in Trio C, with the difference from their original trios (for example “+1,286% · −36%”).</p>
+<p><strong>One card per character</strong> — their total, Z Ability share and equipment share in Trio C, each with its difference. Z Abilities and equipment multiply each other, so the total difference can exceed the sum of the other two.</p>
+<p><strong>What changes in Trio C</strong> — the exact list of affected effects, losses in red first, gains in green after:</p>
+<ul>
+  <li><strong>Item</strong>: the wearer, the equipment, the tag count (“3 → 2”) and the status before and after (“Active → 1 missing”);</li>
+  <li><strong>Z Ability</strong>: the Leader’s Z Ability lines a character loses or gains;</li>
+  <li>a <strong>warning</strong> if your Leader doesn’t play Trio C.</li>
+</ul>
+<p><strong>Best possible Trio C</strong> — the tool tests every allowed combination and shows the one with the highest total bonus, with a button to use it.</p>
+
+<h2>Tips for a strong Trio C</h2>
+<ol>
+  <li><strong>Keep tag-sharing pairs together.</strong> They are the ones carrying equipment conditions.</li>
+  <li><strong>Prefer low-threshold equipment</strong> (“at least 2”) on characters likely to play Trio C: it stays active more often.</li>
+  <li><strong>Think about the Leader.</strong> If they play Trio C, make sure both partners benefit from the privilege; if they don’t, look at the Z Ability lines the analysis reports as lost.</li>
+  <li><strong>Use the suggestion as a starting point.</strong> The total bonus adds up every stat; it ignores kits, cards and your opponent. When totals are close, trust your game experience.</li>
+</ol>

@@ -1,97 +1,277 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- Généré par tools/build.js depuis tools/pages/faq.fr.page — ne pas éditer ce fichier. -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#ff5722" />
-  <title>FAQ — Questions fréquentes | DBL Optimizer</title>
-  <meta name="description" content="Questions fréquentes sur DBL Optimizer : comment ajouter un personnage, pourquoi un item ne s'applique pas, c'est quoi un trio, les données sont-elles à jour, le site est-il gratuit." />
+  <title>FAQ DBL Optimizer — questions fréquentes</title>
+  <meta name="description" content="Questions fréquentes sur DBL Optimizer, l’optimiseur Dragon Ball Legends : gratuité, sauvegarde, données, conditions d’items, Trio C et précision des calculs." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="canonical" href="https://dbl-optimizer.com/faq.html" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="FAQ — DBL Optimizer" />
-  <meta property="og:description" content="Les réponses aux questions fréquentes sur l'optimiseur Dragon Ball Legends." />
-  <meta property="og:image" content="https://dbl-optimizer.com/og-image.png" />
+  <link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/faq.html" />
+  <link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/faq.html" />
+  <link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/faq.html" />
+  <meta name="theme-color" content="#F3F1EC" />
+  <meta name="color-scheme" content="light" />
+  <!-- Open Graph / Twitter : aperçus Discord, Reddit, X, WhatsApp… -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DBL Optimizer" />
+  <meta property="og:url" content="https://dbl-optimizer.com/faq.html" />
+  <meta property="og:title" content="FAQ DBL Optimizer — questions fréquentes" />
+  <meta property="og:description" content="Questions fréquentes sur DBL Optimizer, l’optimiseur Dragon Ball Legends : gratuité, sauvegarde, données, conditions d’items, Trio C et précision des calculs." />
+  <meta property="og:image" content="https://dbl-optimizer.com/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="DBL Optimizer — optimiseur d’équipe et d’items pour Dragon Ball Legends" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQ DBL Optimizer — questions fréquentes" />
+  <meta name="twitter:description" content="Questions fréquentes sur DBL Optimizer, l’optimiseur Dragon Ball Legends : gratuité, sauvegarde, données, conditions d’items, Trio C et précision des calculs." />
+  <meta name="twitter:image" content="https://dbl-optimizer.com/og-image.jpg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles.css?v=86" />
+  <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css?v=85" />
+  <script defer src="/site.js?v=86"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "DBL Optimizer est-il gratuit ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, DBL Optimizer est entièrement gratuit et ne nécessite aucun compte. Toute votre configuration reste dans votre navigateur." } },
-      { "@type": "Question", "name": "Comment ajouter un personnage à mon équipe ?", "acceptedAnswer": { "@type": "Answer", "text": "Cliquez sur une ligne de personnage vide dans le builder : une fenêtre de recherche s'ouvre, filtrable par rareté et par couleur. Sélectionnez un personnage pour l'ajouter à l'emplacement." } },
-      { "@type": "Question", "name": "Pourquoi un item ne s'applique-t-il pas à mon personnage ?", "acceptedAnswer": { "@type": "Answer", "text": "La plupart des items ont une condition (trait, classe, ou nombre de coéquipiers partageant un tag). Si la condition n'est pas remplie dans le trio ou l'équipe, le bonus reste inactif. Les effets non remplis sont listés dans la section « Effets non calculés »." } },
-      { "@type": "Question", "name": "C'est quoi un trio dans Dragon Ball Legends ?", "acceptedAnswer": { "@type": "Answer", "text": "Une équipe de 6 personnages est divisée en deux trios de 3. Certaines conditions d'items s'évaluent à l'échelle du trio, tandis que d'autres (« même équipement ») s'évaluent sur l'équipe entière." } },
-      { "@type": "Question", "name": "Les données des personnages et des items sont-elles à jour ?", "acceptedAnswer": { "@type": "Answer", "text": "Les données sont mises à jour régulièrement à partir des fiches publiques de la communauté. Si un personnage très récent manque, il sera ajouté lors d'une prochaine mise à jour." } },
-      { "@type": "Question", "name": "Les calculs sont-ils exacts à 100 % ?", "acceptedAnswer": { "@type": "Answer", "text": "DBL Optimizer reproduit fidèlement la logique du jeu (couches base/pur/direct, conditions de trait, propagation des Cap Z, privilège du Leader). De petits écarts peuvent exister selon l'arrondi ou des effets non chiffrables, signalés à part." } }
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://dbl-optimizer.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://dbl-optimizer.com/guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Foire aux questions"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "url": "https://dbl-optimizer.com/faq.html",
+        "name": "FAQ DBL Optimizer — questions fréquentes",
+        "description": "Questions fréquentes sur DBL Optimizer, l’optimiseur Dragon Ball Legends : gratuité, sauvegarde, données, conditions d’items, Trio C et précision des calculs.",
+        "inLanguage": "fr",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "DBL Optimizer est-il gratuit ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. L’outil est entièrement gratuit, sans compte ni inscription. Le site peut afficher de la publicité pour couvrir ses frais ; elle n’est jamais nécessaire pour utiliser l’outil."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mon équipe est-elle sauvegardée ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. La composition n’est enregistrée nulle part : si tu recharges la page, elle repart de zéro. Seuls ta langue et ton mode de jeu (Classique ou Proud) sont mémorisés dans ton navigateur. Rien n’est envoyé sur un serveur."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment ajouter un personnage à mon équipe ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clique sur une case « Cliquer pour ajouter ». Dans la fenêtre qui s’ouvre, cherche par nom, par code de carte ou par tag, et filtre par rareté ou par couleur. Survole ensuite la carte pour régler son palier de Cap Z et lui équiper jusqu’à 3 items. Le guide de prise en main détaille chaque étape."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "D’où viennent les données des personnages et des items ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Elles proviennent des fiches publiques de la communauté Dragon Ball Legends (dblegends.net) et sont mises à jour régulièrement, en général après les nouvelles sorties. La base compte actuellement 500 personnages et 923 équipements (mise à jour du 16 septembre 2026). Si une carte récente manque, elle arrivera à la prochaine mise à jour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pourquoi un item ou une Cap Z ne s’applique-t-il pas ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La plupart des bonus sont conditionnels : ils exigent un tag, une couleur ou un nombre de coéquipiers partageant un tag. Pour les items, ouvre « Composition d’équipe » : chaque effet y est marqué Actif, Manque N ou × N, avec la règle à remplir. Pour les Cap Z, l’Arbre des Cap Z montre ce qui passe ou non vers chaque coéquipier. Les effets non remplis sont aussi listés dans « Effets non calculés »."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "C’est quoi un trio ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Une équipe de 6 personnages est divisée en deux trios de 3. En mode Classique, ce sont la Principale et le Banc ; en mode Proud, le Trio A et le Trio B. Les conditions d’items se comptent dans le trio du porteur, tandis que les items « même équipement » se comptent sur toute l’équipe (voir le guide des items )."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qu’est-ce que le Trio C ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En mode Proud, un troisième match départage une égalité. Il se joue avec un Trio C composé de 2 personnages d’un trio et 1 de l’autre. Comme les conditions d’items et le privilège du Leader dépendent des partenaires de combat, ce Trio C peut perdre des bonus : l’outil l’analyse et propose le meilleur Trio C possible. Tout est expliqué dans le guide du mode Proud ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle différence entre Cap Z et Cap Z Zenkai ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La Cap Z classique se débloque par paliers (I à IV). Un personnage passé en Zenkai obtient en plus une Cap Z Zenkai, qui s’ajoute à la première. L’optimiseur compte la Cap Z classique au palier que tu choisis et la Cap Z Zenkai à son maximum (voir le guide des Cap Z )."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les calculs sont-ils exacts ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L’outil applique les règles connues du jeu : couches de calcul base, pur et direct, conditions de tags, propagation des Cap Z et privilège du Leader. Certains effets ne sont pas chiffrables (capacités situationnelles, passifs conditionnés au combat) : ils sont listés à part dans « Effets non calculés » plutôt que comptés dans les totaux. De légers écarts avec le jeu restent possibles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Le site existe-t-il en anglais ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Le bouton FR / EN en haut de chaque page bascule vers la version anglaise, qui a ses propres adresses ( dbl-optimizer.com/en/ ). Sur l’outil, la bascule se fait sans perdre l’équipe en cours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "J’ai trouvé une erreur, comment la signaler ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Écris-nous depuis la page Contact en précisant le personnage ou l’item concerné et ce que tu observes en jeu. Les corrections sont intégrées à la mise à jour suivante."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
 </head>
-<body>
+<body data-page="faq">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="topbar">
-    <div class="brand">
-      <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
-        <span class="brand-glyph">DBL</span>
-        <div class="brand-text">
-          <div class="brand-title">DBL Optimizer</div>
-          <p class="brand-sub">Team Builder &amp; Items Optimization</p>
-        </div>
-      </a>
-    </div>
+    <a class="brand" href="/" data-i18n-href="route.tool" aria-label="DBL Optimizer — accueil" data-i18n-aria-label="site.brand.aria">
+      <span class="brand-glyph" aria-hidden="true">DBL</span>
+      <span class="brand-text"><span class="brand-title">DBL Optimizer</span><span class="brand-sub">Team Builder &amp; Items Optimization</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale" data-i18n-aria-label="site.nav.aria">
+      <a href="/" data-i18n-href="route.tool" data-i18n="site.nav.tool">Optimiseur</a>
+      <a href="/guides.html" data-i18n-href="route.guides" data-i18n="site.nav.guides">Guides</a>
+      <a href="/faq.html" data-i18n-href="route.faq" data-i18n="site.nav.faq" aria-current="page">FAQ</a>
+    </nav>
+    <a id="lang-toggle" class="lang-toggle" href="/en/faq.html" hreflang="en" data-lang-switch="en" aria-label="Switch to English">
+      <span class="lang-icon" aria-hidden="true">🌐</span>
+      <span class="lang-current">FR</span>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <span class="lang-next">EN</span>
+    </a>
   </header>
 
-  <main class="doc">
-    <a href="/" class="doc-back">← Retour à l'outil</a>
+  <main class="doc" id="contenu">
+    <nav class="doc-crumbs" aria-label="Fil d’Ariane">
+      <a href="/">Accueil</a><span class="doc-crumbs-sep" aria-hidden="true">›</span><a href="/guides.html">Guides</a><span class="doc-crumbs-sep" aria-hidden="true">›</span><span aria-current="page">Foire aux questions</span>
+    </nav>
+    <article class="doc-article">
+      <header class="doc-hero">
+        <h1>Foire aux questions</h1>
+        <p class="doc-lead">Les réponses aux questions les plus courantes sur DBL Optimizer et sur les mécaniques d’optimisation de Dragon Ball Legends.</p>
+        <p class="doc-meta">Mis à jour le 16 septembre 2026 · 3 min de lecture</p>
+      </header>
+      <aside class="ad-slot" data-ad="doc-top" hidden></aside>
+      <h2>DBL Optimizer est-il gratuit&nbsp;?</h2>
+      <p>Oui. L’outil est entièrement gratuit, sans compte ni inscription. Le site peut afficher de la publicité pour couvrir ses frais ; elle n’est jamais nécessaire pour utiliser l’outil.</p>
 
-    <div class="doc-hero">
-      <h1>Foire aux questions</h1>
-      <p>Les réponses aux questions les plus courantes sur DBL Optimizer et sur les mécaniques d'optimisation de Dragon Ball Legends.</p>
-    </div>
+      <h2>Mon équipe est-elle sauvegardée&nbsp;?</h2>
+      <p>Non. La composition n’est enregistrée nulle part : si tu recharges la page, elle repart de zéro. Seuls ta langue et ton mode de jeu (Classique ou Proud) sont mémorisés dans ton navigateur. Rien n’est envoyé sur un serveur.</p>
 
-    <h2>DBL Optimizer est-il gratuit&nbsp;?</h2>
-    <p>Oui, l'outil est <strong>entièrement gratuit</strong> et ne demande aucun compte ni inscription. Votre composition d'équipe est enregistrée localement dans votre navigateur&nbsp;; elle ne quitte jamais votre appareil.</p>
+      <h2>Comment ajouter un personnage à mon équipe&nbsp;?</h2>
+      <p>Clique sur une case « Cliquer pour ajouter ». Dans la fenêtre qui s’ouvre, cherche par nom, par code de carte ou par tag, et filtre par rareté ou par couleur. Survole ensuite la carte pour régler son palier de Cap Z et lui équiper jusqu’à 3 items. Le guide de <a href="/guide-prise-en-main.html">prise en main</a> détaille chaque étape.</p>
 
-    <h2>Comment ajouter un personnage à mon équipe&nbsp;?</h2>
-    <p>Cliquez sur une <strong>ligne vide</strong> dans le builder. Une fenêtre de recherche s'ouvre, que vous pouvez filtrer par rareté et par couleur. Sélectionnez le personnage voulu pour le placer dans l'emplacement. Vous pouvez ensuite régler son palier de Cap Z et lui équiper jusqu'à 3 items.</p>
+      <h2>D’où viennent les données des personnages et des items&nbsp;?</h2>
+      <p>Elles proviennent des fiches publiques de la communauté Dragon Ball Legends (dblegends.net) et sont mises à jour régulièrement, en général après les nouvelles sorties. La base compte actuellement 500 personnages et 923 équipements (mise à jour du 16 septembre 2026). Si une carte récente manque, elle arrivera à la prochaine mise à jour.</p>
 
-    <h2>Pourquoi un item (ou une Cap Z) ne s'applique-t-il pas&nbsp;?</h2>
-    <p>La plupart des bonus sont <strong>conditionnels</strong> (trait, classe, ou nombre de coéquipiers partageant un tag). Si la condition n'est pas remplie, le bonus reste inactif. Tous les effets non remplis sont listés dans la section <strong>«&nbsp;Effets non calculés&nbsp;»</strong>, avec le détail du seuil manquant. Pour les Cap Z, l'<a href="/guide-cap-z.html">Arbre des Cap Z</a> montre visuellement ce qui passe ou non vers chaque coéquipier.</p>
+      <h2>Pourquoi un item ou une Cap Z ne s’applique-t-il pas&nbsp;?</h2>
+      <p>La plupart des bonus sont conditionnels : ils exigent un tag, une couleur ou un nombre de coéquipiers partageant un tag. Pour les items, ouvre « Composition d’équipe » : chaque effet y est marqué Actif, Manque N ou × N, avec la règle à remplir. Pour les Cap Z, l’Arbre des Cap Z montre ce qui passe ou non vers chaque coéquipier. Les effets non remplis sont aussi listés dans « Effets non calculés ».</p>
 
-    <h2>C'est quoi un «&nbsp;trio&nbsp;»&nbsp;?</h2>
-    <p>Une équipe de 6 personnages est divisée en <strong>deux trios de 3</strong> (Trio A et Trio B). Certaines conditions d'items s'évaluent à l'échelle du <strong>trio</strong>, d'autres («&nbsp;même équipement&nbsp;») à l'échelle de l'<strong>équipe entière</strong>. Comprendre cette portée évite bien des erreurs de composition&nbsp;: voir le <a href="/guide-items.html">guide des items</a>.</p>
+      <h2>C’est quoi un trio&nbsp;?</h2>
+      <p>Une équipe de 6 personnages est divisée en deux trios de 3. En mode Classique, ce sont la Principale et le Banc ; en mode Proud, le Trio A et le Trio B. Les conditions d’items se comptent dans le trio du porteur, tandis que les items « même équipement » se comptent sur toute l’équipe (voir le <a href="/guide-items.html">guide des items</a>).</p>
 
-    <h2>Les données des personnages et items sont-elles à jour&nbsp;?</h2>
-    <p>Les données sont <strong>mises à jour régulièrement</strong> à partir des fiches publiques de la communauté Dragon Ball Legends. Si un personnage très récent manque, il sera intégré lors d'une prochaine mise à jour.</p>
+      <h2>Qu’est-ce que le Trio C&nbsp;?</h2>
+      <p>En mode Proud, un troisième match départage une égalité. Il se joue avec un Trio C composé de 2 personnages d’un trio et 1 de l’autre. Comme les conditions d’items et le privilège du Leader dépendent des partenaires de combat, ce Trio C peut perdre des bonus : l’outil l’analyse et propose le meilleur Trio C possible. Tout est expliqué dans le <a href="/guide-mode-proud.html">guide du mode Proud</a>.</p>
 
-    <h2>Les calculs sont-ils exacts&nbsp;?</h2>
-    <p>L'outil reproduit fidèlement la logique du jeu&nbsp;: couches <em>base / pur / direct</em>, conditions de trait, propagation des Cap Z et privilège du Leader. De légers écarts peuvent subsister à cause des arrondis ou d'effets non chiffrables (capacités situationnelles), qui sont alors signalés séparément plutôt que comptés dans le total.</p>
+      <h2>Quelle différence entre Cap Z et Cap Z Zenkai&nbsp;?</h2>
+      <p>La Cap Z classique se débloque par paliers (I à IV). Un personnage passé en Zenkai obtient en plus une Cap Z Zenkai, qui s’ajoute à la première. L’optimiseur compte la Cap Z classique au palier que tu choisis et la Cap Z Zenkai à son maximum (voir le <a href="/guide-cap-z.html">guide des Cap Z</a>).</p>
 
-    <h2>Mes données sont-elles sauvegardées&nbsp;?</h2>
-    <p>Votre équipe est conservée dans le <strong>stockage local</strong> de votre navigateur. Elle reste disponible à votre prochaine visite sur le même appareil, mais n'est ni synchronisée ni envoyée sur un serveur. Voir la <a href="/privacy.html">politique de confidentialité</a>.</p>
+      <h2>Les calculs sont-ils exacts&nbsp;?</h2>
+      <p>L’outil applique les règles connues du jeu : couches de calcul base, pur et direct, conditions de tags, propagation des Cap Z et privilège du Leader. Certains effets ne sont pas chiffrables (capacités situationnelles, passifs conditionnés au combat) : ils sont listés à part dans « Effets non calculés » plutôt que comptés dans les totaux. De légers écarts avec le jeu restent possibles.</p>
 
-    <p><a class="doc-cta" href="/">Lancer l'optimiseur →</a></p>
+      <h2>Le site existe-t-il en anglais&nbsp;?</h2>
+      <p>Oui. Le bouton FR / EN en haut de chaque page bascule vers la version anglaise, qui a ses propres adresses (<a href="/en/" hreflang="en" lang="en">dbl-optimizer.com/en/</a>). Sur l’outil, la bascule se fait sans perdre l’équipe en cours.</p>
 
+      <h2>J’ai trouvé une erreur, comment la signaler&nbsp;?</h2>
+      <p>Écris-nous depuis la page <a href="/contact.html">Contact</a> en précisant le personnage ou l’item concerné et ce que tu observes en jeu. Les corrections sont intégrées à la mise à jour suivante.</p>
+      <p><a class="doc-cta" href="/">Lancer l’optimiseur →</a></p>
+      <aside class="ad-slot" data-ad="doc-bottom" hidden></aside>
+    </article>
     <nav class="doc-related" aria-label="Autres guides">
-      <strong>Autres guides&nbsp;:</strong>
+      <p class="doc-related-title">Autres guides</p>
+      <a href="/guide-prise-en-main.html">Prise en main</a>
       <a href="/guide-cap-z.html">Guide des Cap Z</a>
       <a href="/guide-items.html">Guide des items</a>
+      <a href="/guide-mode-proud.html">Mode Proud &amp; Trio C</a>
       <a href="/glossaire.html">Glossaire des stats</a>
     </nav>
   </main>
 
   <footer class="site-footer">
-    <p>DBL Optimizer est un outil communautaire non officiel, sans affiliation avec Bandai Namco ou Dragon Ball Legends.</p>
-    <nav aria-label="Liens du site">
-      <a href="/guide-cap-z.html">Guide Cap Z</a>
-      <a href="/guide-items.html">Guide items</a>
-      <a href="/glossaire.html">Glossaire des stats</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/privacy.html">Politique de confidentialité</a>
-    </nav>
+    <div class="sf-grid">
+      <div class="sf-about">
+        <a class="brand" href="/" data-i18n-href="route.tool"><span class="brand-glyph" aria-hidden="true">DBL</span><span class="brand-title">DBL Optimizer</span></a>
+        <p data-i18n="site.footer.pitch">Optimiseur gratuit d’équipe, de Cap Z et d’items pour Dragon Ball Legends, en français et en anglais.</p>
+      </div>
+      <nav class="sf-col" aria-label="Guides" data-i18n-aria-label="site.footer.guides">
+        <p class="sf-title" data-i18n="site.footer.guides">Guides</p>
+        <a href="/guide-prise-en-main.html" data-i18n-href="route.getting-started" data-i18n="page.getting-started.short">Prise en main</a>
+        <a href="/guide-cap-z.html" data-i18n-href="route.capz" data-i18n="page.capz.short">Guide des Cap Z</a>
+        <a href="/guide-items.html" data-i18n-href="route.items" data-i18n="page.items.short">Guide des items</a>
+        <a href="/guide-mode-proud.html" data-i18n-href="route.proud" data-i18n="page.proud.short">Mode Proud &amp; Trio C</a>
+        <a href="/glossaire.html" data-i18n-href="route.glossary" data-i18n="page.glossary.short">Glossaire des stats</a>
+      </nav>
+      <nav class="sf-col" aria-label="Le site" data-i18n-aria-label="site.footer.site">
+        <p class="sf-title" data-i18n="site.footer.site">Le site</p>
+        <a href="/a-propos.html" data-i18n-href="route.about" data-i18n="page.about.short">À propos</a>
+        <a href="/faq.html" data-i18n-href="route.faq" data-i18n="page.faq.short">FAQ</a>
+        <a href="/contact.html" data-i18n-href="route.contact" data-i18n="page.contact.short">Contact</a>
+      </nav>
+      <nav class="sf-col" aria-label="Informations légales" data-i18n-aria-label="site.footer.legal">
+        <p class="sf-title" data-i18n="site.footer.legal">Informations légales</p>
+        <a href="/mentions-legales.html" data-i18n-href="route.legal" data-i18n="page.legal.short">Mentions légales</a>
+        <a href="/privacy.html" data-i18n-href="route.privacy" data-i18n="page.privacy.short">Confidentialité</a>
+        <a href="/privacy.html#cookies" data-i18n-href="route.privacy.cookies" data-consent-link data-i18n="site.footer.cookies">Gérer les cookies</a>
+      </nav>
+    </div>
+    <p class="sf-disclaimer" data-i18n="site.footer.disclaimer">DBL Optimizer est un site de fans non officiel, sans lien avec BANDAI NAMCO Entertainment. Dragon Ball Legends, ses personnages et ses visuels appartiennent à leurs ayants droit respectifs.</p>
     <p class="site-footer__copy">© 2026 dbl-optimizer.com</p>
   </footer>
 </body>

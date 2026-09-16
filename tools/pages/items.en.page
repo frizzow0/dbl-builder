@@ -1,0 +1,51 @@
+<!--
+{
+  "title": "Equipment Guide — Dragon Ball Legends",
+  "description": "Dragon Ball Legends equipment explained: slots, rarities, card-exclusive pieces, base / pure / direct stat layers, trio conditions and optimization tips.",
+  "h1": "Equipment and stat optimization guide",
+  "lead": "Equipment multiplies a character’s power — as long as you understand how its bonuses stack. Slots, rarities, calculation layers and conditions: everything you need to know.",
+  "type": "article",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "Optimize my equipment now →"
+}
+-->
+<h2>Three slots per character</h2>
+<p>Each character can wear up to <strong>3 pieces of equipment</strong>. In DBL Optimizer, the three slots are in the panel that unfolds when you hover a card (under the card on mobile). Each slot opens the equipment list, which you can filter by rarity and name.</p>
+
+<h2>Compatibility: who can wear what</h2>
+<p>Not everyone can wear every piece of equipment: each one lists the tags of its possible wearers (a color, a class, an episode…). The <strong>“Compatible”</strong> filter, on by default, only shows equipment the character can actually wear.</p>
+<p>Some equipment goes further and is <strong>exclusive to a single card</strong>. That’s the case for many Platinum pieces, which can only be equipped by the exact character version they were made for. The tool enforces that restriction.</p>
+
+<h2>Rarities and frames</h2>
+<p>Equipment comes in several rarities: Iron, Bronze, Silver, Gold, their <strong>awakened</strong> versions, Unique, Awakened Unique, Platinum and Event. Rarity decides how strong the stat lines are and how many there are. Each rarity has its own <strong>frame</strong>; DBL Optimizer draws it around the icon so you can tell the quality at a glance.</p>
+
+<h2>The key point: stat layers (base, pure, direct)</h2>
+<p>This is the most important — and least intuitive — mechanic. Bonuses don’t all apply the same way: they are sorted into separate <strong>layers</strong> that <strong>multiply each other</strong>:</p>
+<ul>
+  <li><strong>“Base” layer</strong> — lines such as “Base Strike ATK” or “Base Health”. They raise the underlying stat.</li>
+  <li><strong>“Pure” layer</strong> — lines such as “Strike ATK” (without “base”) or “Critical Rate”.</li>
+  <li><strong>“Direct” layer</strong> — “Damage Inflicted”, applied at the very end.</li>
+</ul>
+<p>The calculation is: <strong>gain = (1 + base bonus) × (1 + pure bonus) × (1 + direct bonus) − 1</strong>. Within a layer, bonuses add up; across layers, they multiply. In practice, spreading your bonuses <em>across different layers</em> pays off far more than piling them into one.</p>
+<p>Example: two +30% lines in the same layer give +60%. One +30% “base” line and one +30% “pure” line give 1.3 × 1.3 = <strong>+69%</strong>. Z Abilities share these same layers: a big “base” Z Ability amplifies the “pure” lines of your equipment.</p>
+
+<h2>Equipment conditions</h2>
+<p>Many pieces of equipment only unlock part of their bonuses under a condition. There are three kinds:</p>
+<ul>
+  <li><strong>Threshold in the trio</strong> — “if at least 2 Saiyans are among the fighters”. The count is made in the <strong>wearer’s trio</strong> (the 3 characters fighting together), wearer included.</li>
+  <li><strong>Per member</strong> — “for each Son Family fighter”: the bonus is multiplied by the number of trio members carrying the tag.</li>
+  <li><strong>Same equipment</strong> — the bonus depends on how many characters in the <strong>whole team</strong> wear the same piece.</li>
+</ul>
+<p>The optimizer’s <strong>“Team Composition”</strong> panel shows the state of every conditional effect: <em>Active</em>, <em>N missing</em> or <em>× N</em>. It’s the fastest way to spot equipment whose condition isn’t met.</p>
+
+<h2>“OR” lines</h2>
+<p>Some equipment has a randomly rolled line, such as “Blast ATK <strong>OR</strong> Strike ATK”. In game you only get one option. DBL Optimizer lets you pick the one you actually have, for an accurate calculation.</p>
+
+<h2>Quick optimization method</h2>
+<ol>
+  <li><strong>Identify the character’s damage type</strong> (Strike or Blast) and favor matching lines.</li>
+  <li><strong>Spread across layers</strong>: combine “base”, “pure” and “Damage Inflicted” rather than three identical lines.</li>
+  <li><strong>Check conditions</strong> in “Team Composition”: great equipment whose condition is never met is worth nothing.</li>
+  <li><strong>Read the combined summary</strong> (Z Abilities + items) of the targeted character to see the real gain per stat, multiplications included.</li>
+</ol>

@@ -1,0 +1,36 @@
+<!--
+{
+  "title": "À propos de DBL Optimizer",
+  "description": "Qui fait DBL Optimizer, d’où viennent ses données, comment il calcule les bonus de Cap Z et d’items de Dragon Ball Legends, et quelles sont ses limites.",
+  "h1": "À propos de DBL Optimizer",
+  "lead": "Un outil de joueur, pour les joueurs : savoir ce que vaut vraiment une équipe de Dragon Ball Legends avant de dépenser ses ressources.",
+  "type": "about",
+  "published": "2026-09-16",
+  "updated": "2026-09-16"
+}
+-->
+<h2>Pourquoi ce site</h2>
+<p>Dans Dragon Ball Legends, la puissance d’une équipe dépend d’une accumulation de bonus : Cap Z de chaque personnage, conditions de tags, paliers, Zenkai, items et leurs couches de calcul. Faire ce total de tête est presque impossible, et le jeu ne l’affiche pas en détail.</p>
+<p>DBL Optimizer fait ce calcul à ta place, en temps réel. Il montre ce que chaque personnage reçoit, ce qui est perdu faute de condition remplie, et comment améliorer la composition — y compris pour le Trio C du mode Proud.</p>
+
+<h2>Qui est derrière DBL Optimizer</h2>
+<p>DBL Optimizer est un projet indépendant, conçu et maintenu par un joueur de Dragon Ball Legends, à titre non professionnel. Ce n’est pas un produit officiel : le site n’a aucun lien avec BANDAI NAMCO Entertainment ni avec les ayants droit de Dragon Ball.</p>
+
+<h2>D’où viennent les données</h2>
+<p>Les fiches des personnages (tags, couleurs, Cap Z et Cap Z Zenkai) et des équipements (raretés, lignes de stats, conditions, porteurs possibles) sont reprises des pages publiques de la communauté <strong>dblegends.net</strong>, puis normalisées pour le calcul. La base compte actuellement {{NB_PERSOS}} personnages et {{NB_ITEMS}} équipements ; dernière mise à jour le {{DATE_DONNEES}}.</p>
+<p>Les images des personnages sont affichées depuis ce même site et restent la propriété de leurs ayants droit.</p>
+
+<h2>Comment le calcul fonctionne</h2>
+<ul>
+  <li>Les bonus sont rangés en trois couches — <strong>base</strong>, <strong>pur</strong> et <strong>direct</strong> — additionnés dans chaque couche puis multipliés entre couches.</li>
+  <li>Chaque ligne de Cap Z est vérifiée contre les tags du personnage qui la reçoit ; le Leader reçoit tout sans condition et transmet sa Cap Z sans condition à ses deux coéquipiers de trio.</li>
+  <li>Les conditions d’items se comptent dans le trio du porteur ; les effets « même équipement » sur toute l’équipe.</li>
+  <li>Les effets impossibles à chiffrer sont listés séparément plutôt que devinés.</li>
+</ul>
+<p>Les guides détaillent chaque règle : <a href="/guide-cap-z.html">Cap Z</a>, <a href="/guide-items.html">items</a>, <a href="/guide-mode-proud.html">mode Proud</a>.</p>
+
+<h2>Limites</h2>
+<p>L’outil calcule des bonus de statistiques ; il ne simule pas les combats, les cartes ni les capacités situationnelles. Les données dépendent de leur source et peuvent avoir quelques jours de retard sur une nouvelle sortie. Si tu repères un écart avec le jeu, <a href="/contact.html">signale-le</a> : c’est la meilleure façon d’améliorer l’outil.</p>
+
+<h2>Financement</h2>
+<p>DBL Optimizer est gratuit. Pour couvrir ses frais (nom de domaine, temps de mise à jour), le site peut afficher de la publicité, placée de façon à ne pas gêner l’utilisation de l’outil. Le détail des cookies et de ton consentement est dans la <a href="/privacy.html">politique de confidentialité</a>.</p>

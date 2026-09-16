@@ -1,0 +1,56 @@
+<!--
+{
+  "title": "Z Abilities Guide — Dragon Ball Legends",
+  "description": "How Dragon Ball Legends Z Abilities work: levels I to IV, Zenkai Z Abilities, tag conditions, propagation to teammates and the Leader privilege.",
+  "h1": "Z Abilities guide for Dragon Ball Legends",
+  "lead": "Z Abilities are one of the biggest — and most misunderstood — power levers in Dragon Ball Legends. Here is how they work, how they spread across your team and how to get the most out of them.",
+  "type": "article",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "Test my team in the optimizer →"
+}
+-->
+<h2>What is a Z Ability?</h2>
+<p>A <strong>Z Ability</strong> is a passive bonus attached to every character. Unlike their battle cards, it works as soon as the character is part of your team: it raises one or more stats (Health, ATK, DEF, Damage Inflicted…) for the team members who meet its condition — usually a shared tag.</p>
+<p>That’s why a team is never just the sum of its characters’ kits: a mediocre fighter can be an excellent <em>Z Ability carrier</em> if it hands out big bonuses to a category you play.</p>
+
+<h2>Levels: I, II, III and IV</h2>
+<p>A Z Ability unlocks in levels from <strong>I</strong> to <strong>IV</strong>. Each level strengthens the previous one; level IV is the maximum. In DBL Optimizer, the level is set in the panel that unfolds when you hover a card (under the card on mobile), so you can simulate a team that isn’t fully unlocked yet.</p>
+<p>Key point: levels <strong>don’t stack</strong>. If level III gives “+30% Health” and level IV gives “+40% Health”, the level you reached (40%) counts — not the sum of both. For every stat, the tool keeps the highest unlocked value.</p>
+
+<h2>Zenkai Z Abilities</h2>
+<p>A character that has been <strong>Zenkai Awakened</strong> unlocks an <strong>extra Z Ability</strong>, separate from its regular one. Both add up: a Zenkai character brings its original Z Ability <strong>and</strong> its Zenkai Z Ability. The optimizer counts the Zenkai Z Ability at its maximum. That is what makes Zenkai units such sought-after team supports.</p>
+
+<h2>Conditions: tags, episodes, colors</h2>
+<p>Most Z Abilities only benefit characters that meet a condition, based on the game’s labels:</p>
+<ul>
+  <li><strong>Color</strong> — Red, Yellow, Purple, Green, Blue, Light;</li>
+  <li><strong>Class tags</strong> — Saiyan, Son Family, Fusion Warrior…;</li>
+  <li><strong>Episode tags</strong> — movies, sagas…;</li>
+  <li><strong>Character tags</strong> — Goku, Vegeta…;</li>
+  <li><strong>Battle style</strong> — Melee type, Defense type….</li>
+</ul>
+<p>In practice, a Z Ability giving “+40% Strike ATK to Saiyans” only boosts the Saiyans in your team. Building a team whose characters share the same tags lets every Z Ability benefit everyone: that is the heart of optimization. The optimizer’s “Team tags” table shows at a glance which tags are shared, and by whom.</p>
+
+<h2>Propagation to teammates</h2>
+<p>A Z Ability belongs to one character but <strong>reaches the whole team</strong>. For each teammate, the condition is checked line by line: part of a Z Ability can apply to one character and not to another.</p>
+<p>The <strong>Z Ability Tree</strong> in DBL Optimizer shows exactly that: an arrow goes from the targeted character to each teammate, <strong>green</strong> if 100% of the Z Ability is received, <strong>yellow</strong> if only part of it applies, <strong>red</strong> if nothing does. It’s the quickest way to spot a carrier whose bonuses are wasted.</p>
+
+<h2>The Leader privilege</h2>
+<p>The <strong>Leader</strong> (★) is treated differently in the calculation:</p>
+<ul>
+  <li>as a <strong>receiver</strong>, the Leader gets every Z Ability in the team <strong>unconditionally</strong>;</li>
+  <li>as a <strong>giver</strong>, the Leader’s Z Ability applies unconditionally to their <strong>two trio teammates</strong>; other characters still need to meet its usual conditions.</li>
+</ul>
+<p>Changing the Leader can therefore transform a team’s summary. In the tool, set the Leader with the star, or click “Disable leader” to compare with a team without this privilege. In Proud mode, the privilege follows the trio the Leader actually fights with — one of the things the <a href="/en/proud-mode-guide.html">Trio C analysis</a> checks.</p>
+
+<h2>How Z Abilities combine with equipment</h2>
+<p>Z Ability and equipment bonuses land in the same <strong>calculation layers</strong> (base, pure, direct), which multiply each other. A big “base” Z Ability therefore amplifies the “pure” lines of your equipment. Details are in the <a href="/en/equipment-guide.html">equipment guide</a>.</p>
+
+<h2>How to optimize your Z Abilities</h2>
+<ol>
+  <li><strong>Group tags.</strong> The more tags your characters share, the more widely conditional Z Abilities apply.</li>
+  <li><strong>Favor Zenkai carriers.</strong> Two Z Abilities beat one.</li>
+  <li><strong>Pick the right Leader</strong> — ideally the one whose Z Ability would be most blocked by its trio teammates’ conditions.</li>
+  <li><strong>Check coverage</strong> with the Z Ability Tree: a yellow or red arrow is lost potential.</li>
+</ol>

@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- BUILD:HEAD:START -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#ff5722" />
-  <title>DBL Optimizer — Team Builder &amp; Items Optimization</title>
-
-  <!-- ── SEO ─────────────────────────────────────────────── -->
-  <meta name="description" content="Construis ton équipe Dragon Ball Legends, optimise tes items et calcule tes bonus Cap Z en temps réel. Le meilleur outil de Team Builder &amp; Items Optimization pour DBL." />
-  <meta name="keywords" content="Dragon Ball Legends, DBL, team builder, items, Cap Z, optimizer, calcul stats, zenkai" />
-  <meta name="author" content="DBL Optimizer" />
+  <title>Team Builder Dragon Ball Legends : Cap Z &amp; items | DBL Optimizer</title>
+  <meta name="description" content="Outil gratuit pour Dragon Ball Legends : compose ton équipe, équipe tes items et calcule en temps réel tes bonus de Cap Z, ton bilan global et ton Trio C." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="canonical" href="https://dbl-optimizer.com/" />
-
-  <!-- ── Open Graph (Discord, Facebook, WhatsApp…) ────────── -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://dbl-optimizer.com/" />
-  <meta property="og:title"       content="DBL Optimizer — Team Builder &amp; Items Optimization" />
-  <meta property="og:description" content="Construis ton équipe DBL, optimise tes items et calcule tes Cap Z en temps réel." />
-  <meta property="og:image"       content="https://dbl-optimizer.com/og-image.png" />
-  <meta property="og:image:type"   content="image/png" />
-  <meta property="og:image:width"  content="1200" />
+  <link rel="alternate" hreflang="fr" href="https://dbl-optimizer.com/" />
+  <link rel="alternate" hreflang="en" href="https://dbl-optimizer.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://dbl-optimizer.com/en/" />
+  <meta name="theme-color" content="#F3F1EC" />
+  <meta name="color-scheme" content="light" />
+  <!-- Open Graph / Twitter : aperçus Discord, Reddit, X, WhatsApp… -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DBL Optimizer" />
+  <meta property="og:url" content="https://dbl-optimizer.com/" />
+  <meta property="og:title" content="Team Builder Dragon Ball Legends : Cap Z &amp; items | DBL Optimizer" />
+  <meta property="og:description" content="Outil gratuit pour Dragon Ball Legends : compose ton équipe, équipe tes items et calcule en temps réel tes bonus de Cap Z, ton bilan global et ton Trio C." />
+  <meta property="og:image" content="https://dbl-optimizer.com/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"    content="DBL Optimizer — Team Builder &amp; Items Optimization pour Dragon Ball Legends" />
-  <meta property="og:locale"      content="fr_FR" />
-  <meta property="og:site_name"   content="DBL Optimizer" />
-
-  <!-- ── Twitter / X Card ─────────────────────────────────── -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="DBL Optimizer — Team Builder &amp; Items Optimization" />
-  <meta name="twitter:description" content="Construis ton équipe DBL, optimise tes items et calcule tes Cap Z en temps réel." />
-  <meta name="twitter:image"       content="https://dbl-optimizer.com/og-image.png" />
-  <meta name="twitter:image:alt"   content="DBL Optimizer — Team Builder &amp; Items Optimization pour Dragon Ball Legends" />
-
-  <!-- ── Favicon & PWA ──────────────────────────────────── -->
+  <meta property="og:image:alt" content="DBL Optimizer — optimiseur d’équipe et d’items pour Dragon Ball Legends" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Team Builder Dragon Ball Legends : Cap Z &amp; items | DBL Optimizer" />
+  <meta name="twitter:description" content="Outil gratuit pour Dragon Ball Legends : compose ton équipe, équipe tes items et calcule en temps réel tes bonus de Cap Z, ton bilan global et ton Trio C." />
+  <meta name="twitter:image" content="https://dbl-optimizer.com/og-image.jpg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon.svg" sizes="any" />
-  <link rel="apple-touch-icon" href="/og-image.svg" />
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- ── Google AdSense : désactivé pour le moment ──────────
-       (script + emplacements retirés — réactivables via git) -->
-
-  <link rel="stylesheet" href="styles.css?v=85" />
-
-  <!-- ── Google Search Console : décommente et colle ton token (méthode « balise HTML »),
-       ou préfère la vérification par enregistrement DNS TXT au niveau du domaine.
-  <meta name="google-site-verification" content="TON_TOKEN_ICI" /> -->
-
-  <!-- ── Données structurées (Schema.org) ─────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fr.dblegends.net" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles.css?v=86" />
+  <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
+  <script defer src="/site.js?v=86"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://dbl-optimizer.com/#organization",
+        "name": "DBL Optimizer",
+        "url": "https://dbl-optimizer.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://dbl-optimizer.com/icon-512.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
         "@type": "WebSite",
         "@id": "https://dbl-optimizer.com/#website",
         "url": "https://dbl-optimizer.com/",
         "name": "DBL Optimizer",
-        "description": "Team Builder & Items Optimization pour Dragon Ball Legends",
-        "inLanguage": "fr"
+        "description": "Outil gratuit pour Dragon Ball Legends : compose ton équipe, équipe tes items et calcule en temps réel tes bonus de Cap Z, ton bilan global et ton Trio C.",
+        "inLanguage": "fr",
+        "publisher": {
+          "@id": "https://dbl-optimizer.com/#organization"
+        }
       },
       {
         "@type": "WebApplication",
@@ -66,19 +75,30 @@
         "url": "https://dbl-optimizer.com/",
         "name": "DBL Optimizer",
         "applicationCategory": "GameApplication",
+        "applicationSubCategory": "Team builder",
         "operatingSystem": "Web",
         "browserRequirements": "Requires JavaScript",
-        "description": "Optimiseur d'équipe et d'items pour Dragon Ball Legends : compose tes deux trios, équipe tes items et calcule en temps réel les bonus de Cap Z, le bilan global et la propagation des Cap Z entre coéquipiers.",
-        "inLanguage": ["fr", "en"],
+        "description": "Outil gratuit pour Dragon Ball Legends : compose ton équipe, équipe tes items et calcule en temps réel tes bonus de Cap Z, ton bilan global et ton Trio C.",
+        "inLanguage": "fr",
         "isAccessibleForFree": true,
-        "image": "https://dbl-optimizer.com/og-image.png",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+        "image": "https://dbl-optimizer.com/og-image.jpg",
+        "dateModified": "2026-09-16",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "publisher": {
+          "@id": "https://dbl-optimizer.com/#organization"
+        }
       }
     ]
   }
   </script>
+<!-- BUILD:HEAD:END -->
 </head>
-<body>
+<body data-page="tool">
+  <a class="skip-link" href="#section-build" data-i18n="site.skip">Aller au contenu</a>
 
   <!-- ============ NOSCRIPT FALLBACK ============ -->
   <noscript>
@@ -87,34 +107,35 @@
         background: #ff5722; color: #fff; text-align: center; padding: 12px 16px;
         font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; }
     </style>
-    <div class="noscript-banner">
-      ⚠️ DBL Optimizer nécessite JavaScript pour fonctionner.
-      Veuillez activer JavaScript dans votre navigateur.
-    </div>
+    <div class="noscript-banner" data-i18n="noscript.text">⚠️ DBL Optimizer nécessite JavaScript pour fonctionner. Active JavaScript dans ton navigateur.</div>
   </noscript>
 
+<!-- BUILD:HEADER:START -->
   <header class="topbar">
-    <div class="brand">
-      <span class="brand-glyph">DBL</span>
-      <div class="brand-text">
-        <div class="brand-title">DBL Optimizer</div>
-        <p class="brand-sub">Team Builder &amp; Items Optimization</p>
-      </div>
-    </div>
-    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">
-      <span class="lang-icon">🌐</span>
+    <a class="brand" href="/" data-i18n-href="route.tool" aria-label="DBL Optimizer — accueil" data-i18n-aria-label="site.brand.aria">
+      <span class="brand-glyph" aria-hidden="true">DBL</span>
+      <span class="brand-text"><span class="brand-title">DBL Optimizer</span><span class="brand-sub">Team Builder &amp; Items Optimization</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale" data-i18n-aria-label="site.nav.aria">
+      <a href="/" data-i18n-href="route.tool" data-i18n="site.nav.tool" aria-current="page">Optimiseur</a>
+      <a href="/guides.html" data-i18n-href="route.guides" data-i18n="site.nav.guides">Guides</a>
+      <a href="/faq.html" data-i18n-href="route.faq" data-i18n="site.nav.faq">FAQ</a>
+    </nav>
+    <a id="lang-toggle" class="lang-toggle" href="/en/" hreflang="en" data-lang-switch="en" aria-label="Switch to English">
+      <span class="lang-icon" aria-hidden="true">🌐</span>
       <span class="lang-current">FR</span>
-      <span class="lang-sep">/</span>
+      <span class="lang-sep" aria-hidden="true">/</span>
       <span class="lang-next">EN</span>
-    </button>
+    </a>
   </header>
+<!-- BUILD:HEADER:END -->
 
   <main class="layout">
 
     <!-- ── Intro (H1 + description : contenu statique indexable par les moteurs) ── -->
     <section class="seo-intro">
       <h1 data-i18n="seo.intro.title">Optimiseur d'équipe &amp; d'items Dragon Ball Legends</h1>
-      <p data-i18n-html="seo.intro.text">DBL Optimizer calcule en temps réel les bonus de <strong>Cap Z</strong> et d'<strong>items</strong> de ton équipe <strong>Dragon Ball Legends</strong> : compose tes deux trios, équipe tes items, et visualise les stats cumulées, le bilan global (Cap&nbsp;Z + items) et la propagation des Cap&nbsp;Z entre coéquipiers.</p>
+      <p data-i18n-html="seo.intro.text">DBL Optimizer calcule en temps réel les bonus de <strong>Cap Z</strong> et d'<strong>items</strong> de ton équipe <strong>Dragon Ball Legends</strong> : compose tes deux trios, équipe tes items, et visualise les stats cumulées, le bilan global (Cap Z + items) et la propagation des Cap Z entre coéquipiers.</p>
     </section>
 
     <!-- ============ ZONE DE SAISIE : persos (col 1) + items (col 2) ============ -->
@@ -134,7 +155,7 @@
         <div class="trioc-line">
           <h3 class="trioc-title" id="trioc-title" data-i18n="trioc.title">Trio C</h3>
           <span id="trioc-status" class="trioc-status" aria-live="polite"></span>
-          <p class="trioc-hint" data-i18n="trioc.hint">En cas d'égalité, un troisième match départage : choisis 2 personnages d'un trio et 1 de l'autre.</p>
+          <p class="trioc-hint" data-i18n="trioc.hint">En cas d’égalité, un troisième match départage : choisis 2 personnages d’un trio et 1 de l’autre.</p>
           <button id="trioc-clear" class="trioc-clear" type="button" data-trioc-clear data-i18n="trioc.clear" hidden>Réinitialiser</button>
         </div>
         <!-- Analyse du Trio C (rendue par app.js une fois les 3 persos choisis) -->
@@ -169,8 +190,8 @@
       <div class="no-leader-bar">
         <button id="no-leader-btn" class="no-leader-btn" type="button">
           <span class="no-leader-star">★</span>
-          <span class="no-leader-text">Désactiver le leader</span>
-          <span class="no-leader-badge">OFF</span>
+          <span class="no-leader-text" data-i18n="leader.deactivate">Désactiver le leader</span>
+          <span class="no-leader-badge" data-i18n="leader.off">OFF</span>
         </button>
       </div>
     </section>
@@ -188,9 +209,7 @@
 
       <div class="panel" id="section-z">
         <h2 class="panel-title" data-i18n="panel.z.title">Bilan global (Cap Z)</h2>
-        <p class="panel-sub" data-i18n="panel.z.sub">
-          Total des bonus de Cap Z reçus par l'équipe. Chaque perso reçoit la sienne + celles des coéquipiers selon les conditions ; le Leader (★) sans restriction.
-        </p>
+        <p class="panel-sub" data-i18n="panel.z.sub">Total des bonus de Cap Z reçus par l'équipe. Chaque perso reçoit la sienne + celles des coéquipiers selon les conditions ; le Leader (★) sans restriction.</p>
         <div id="z-bilan" class="z-bilan"></div>
         <h3 class="results-subhead results-subhead--cap" data-i18n="panel.zradar.title">Profil des stats (Cap Z)</h3>
         <p class="panel-sub" data-i18n="panel.zradar.sub">Gain total d'équipe par stat, en pourcentage.</p>
@@ -200,7 +219,7 @@
       <div class="panel" id="section-passifs">
         <h2 class="panel-title" data-i18n="panel.passifs.title">Effets non calculés</h2>
         <div id="passifs-zone" class="callout-zone">
-          <p class="placeholder">Aucun effet passif sur les items équipés.</p>
+          <p class="placeholder" data-i18n="passif.none">Aucun effet passif.</p>
         </div>
         <div id="inactive-zone" class="callout-zone"></div>
       </div>
@@ -225,9 +244,7 @@
 
         <div class="panel" id="section-global">
           <h2 class="panel-title" data-i18n="panel.global.title">Bilan global (Cap Z + items)</h2>
-          <p class="panel-sub" data-i18n="panel.global.sub">
-            Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).
-          </p>
+          <p class="panel-sub" data-i18n="panel.global.sub">Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).</p>
           <div id="global-bilan" class="z-bilan"></div>
           <h3 class="results-subhead" data-i18n="panel.globalradar.title">Profil par perso (Cap Z + items)</h3>
           <p class="panel-sub" data-i18n="panel.globalradar.sub">Gain par stat du personnage ciblé ci-dessus.</p>
@@ -240,9 +257,7 @@
               <span class="stats-summary-hint" data-i18n="stats.detail.hint">détail par stat (items vs Cap Z)</span>
             </summary>
             <div class="stats-body">
-              <p class="panel-sub" data-i18n-html="panel.stats.sub">
-                Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.
-              </p>
+              <p class="panel-sub" data-i18n-html="panel.stats.sub">Bleu = bonus d'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.</p>
               <div id="stats-grid" class="stats-grid"></div>
             </div>
           </details>
@@ -250,30 +265,83 @@
 
         <div class="panel" id="section-ztree">
           <h2 class="panel-title" data-i18n="panel.ztree.title">Arbre des Cap Z</h2>
-          <p class="panel-sub" data-i18n="panel.ztree.sub">
-            Du perso ciblé vers ses coéquipiers : vert = 100 % de sa Cap Z reçue, jaune = partiel, rouge = 0 %.
-          </p>
+          <p class="panel-sub" data-i18n="panel.ztree.sub">Du perso ciblé vers ses coéquipiers : vert = 100 % de sa Cap Z reçue, jaune = partiel, rouge = 0 %.</p>
           <div id="ztree" class="ztree"></div>
         </div>
 
       </div>
     </section>
+
+    <!-- Publicité (inactive tant que site.js ne l'active pas) -->
+    <aside class="ad-slot" data-ad="tool-bottom" hidden></aside>
+
+    <!-- ── Texte éditorial : mode d'emploi et guides (contenu indexable) ── -->
+    <section class="home-guide" aria-labelledby="home-how-title">
+      <h2 id="home-how-title" class="home-guide-title" data-i18n="home.how.title">Comment utiliser DBL Optimizer</h2>
+      <p class="home-guide-lead" data-i18n="home.how.lead">Quatre étapes pour savoir, chiffres à l’appui, si ton équipe tient la route — et où elle perd de la puissance.</p>
+      <ol class="home-steps">
+        <li class="home-step">
+          <h3 data-i18n="home.how.1.t">Compose tes deux trios</h3>
+          <p data-i18n="home.how.1.d">Clique sur une case vide pour choisir un personnage parmi plus de 500 cartes, filtrables par rareté, couleur, nom ou tag. Désigne ton Leader avec l’étoile ★.</p>
+        </li>
+        <li class="home-step">
+          <h3 data-i18n="home.how.2.t">Règle les Cap Z et les items</h3>
+          <p data-i18n="home.how.2.d">Survole un personnage pour choisir son palier de Cap Z (I à IV) et ses 3 items. Les items compatibles sont proposés par défaut, avec leur détail complet.</p>
+        </li>
+        <li class="home-step">
+          <h3 data-i18n="home.how.3.t">Vérifie les synergies</h3>
+          <p data-i18n="home.how.3.d">Le tableau des tags montre qui porte quel tag, et « Composition d’équipe » indique quels effets d’items sont actifs dans chaque trio — ou ce qu’il manque pour les activer.</p>
+        </li>
+        <li class="home-step">
+          <h3 data-i18n="home.how.4.t">Lis les bilans</h3>
+          <p data-i18n="home.how.4.d">Bilan des Cap Z, bilan global Cap Z + items par personnage, arbre de propagation des Cap Z et, en mode Proud, analyse du Trio C avec le meilleur trio possible.</p>
+        </li>
+      </ol>
+      <h2 class="home-guide-title" data-i18n="home.guides.title">Guides pour aller plus loin</h2>
+      <ul class="guide-cards">
+        <li class="guide-card"><a href="/guide-prise-en-main.html" data-i18n-href="route.getting-started"><span class="guide-card-title" data-i18n="page.getting-started.short">Prise en main</span><span class="guide-card-desc" data-i18n="home.guides.getting-started">Toutes les fonctions de l’outil, pas à pas.</span></a></li>
+        <li class="guide-card"><a href="/guide-cap-z.html" data-i18n-href="route.capz"><span class="guide-card-title" data-i18n="page.capz.short">Guide des Cap Z</span><span class="guide-card-desc" data-i18n="home.guides.capz">Paliers, Zenkai, conditions et privilège du Leader.</span></a></li>
+        <li class="guide-card"><a href="/guide-items.html" data-i18n-href="route.items"><span class="guide-card-title" data-i18n="page.items.short">Guide des items</span><span class="guide-card-desc" data-i18n="home.guides.items">Raretés, couches base / pur / direct et conditions.</span></a></li>
+        <li class="guide-card"><a href="/guide-mode-proud.html" data-i18n-href="route.proud"><span class="guide-card-title" data-i18n="page.proud.short">Mode Proud &amp; Trio C</span><span class="guide-card-desc" data-i18n="home.guides.proud">Choisir un Trio C qui ne perd pas ses bonus.</span></a></li>
+        <li class="guide-card"><a href="/glossaire.html" data-i18n-href="route.glossary"><span class="guide-card-title" data-i18n="page.glossary.short">Glossaire des stats</span><span class="guide-card-desc" data-i18n="home.guides.glossary">Chaque statistique expliquée en une phrase.</span></a></li>
+        <li class="guide-card"><a href="/faq.html" data-i18n-href="route.faq"><span class="guide-card-title" data-i18n="page.faq.short">FAQ</span><span class="guide-card-desc" data-i18n="home.guides.faq">Les réponses aux questions fréquentes.</span></a></li>
+      </ul>
+    </section>
   </main>
 
   <!-- ============ FOOTER ============ -->
+<!-- BUILD:FOOTER:START -->
   <footer class="site-footer">
-    <p>
-      DBL Optimizer est un outil communautaire non officiel, sans affiliation avec Bandai Namco ou Dragon Ball Legends.
-    </p>
-    <nav aria-label="Liens du site">
-      <a href="/guide-cap-z.html">Guide Cap Z</a>
-      <a href="/guide-items.html">Guide items</a>
-      <a href="/glossaire.html">Glossaire des stats</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/privacy.html">Politique de confidentialité</a>
-    </nav>
+    <div class="sf-grid">
+      <div class="sf-about">
+        <a class="brand" href="/" data-i18n-href="route.tool"><span class="brand-glyph" aria-hidden="true">DBL</span><span class="brand-title">DBL Optimizer</span></a>
+        <p data-i18n="site.footer.pitch">Optimiseur gratuit d’équipe, de Cap Z et d’items pour Dragon Ball Legends, en français et en anglais.</p>
+      </div>
+      <nav class="sf-col" aria-label="Guides" data-i18n-aria-label="site.footer.guides">
+        <p class="sf-title" data-i18n="site.footer.guides">Guides</p>
+        <a href="/guide-prise-en-main.html" data-i18n-href="route.getting-started" data-i18n="page.getting-started.short">Prise en main</a>
+        <a href="/guide-cap-z.html" data-i18n-href="route.capz" data-i18n="page.capz.short">Guide des Cap Z</a>
+        <a href="/guide-items.html" data-i18n-href="route.items" data-i18n="page.items.short">Guide des items</a>
+        <a href="/guide-mode-proud.html" data-i18n-href="route.proud" data-i18n="page.proud.short">Mode Proud &amp; Trio C</a>
+        <a href="/glossaire.html" data-i18n-href="route.glossary" data-i18n="page.glossary.short">Glossaire des stats</a>
+      </nav>
+      <nav class="sf-col" aria-label="Le site" data-i18n-aria-label="site.footer.site">
+        <p class="sf-title" data-i18n="site.footer.site">Le site</p>
+        <a href="/a-propos.html" data-i18n-href="route.about" data-i18n="page.about.short">À propos</a>
+        <a href="/faq.html" data-i18n-href="route.faq" data-i18n="page.faq.short">FAQ</a>
+        <a href="/contact.html" data-i18n-href="route.contact" data-i18n="page.contact.short">Contact</a>
+      </nav>
+      <nav class="sf-col" aria-label="Informations légales" data-i18n-aria-label="site.footer.legal">
+        <p class="sf-title" data-i18n="site.footer.legal">Informations légales</p>
+        <a href="/mentions-legales.html" data-i18n-href="route.legal" data-i18n="page.legal.short">Mentions légales</a>
+        <a href="/privacy.html" data-i18n-href="route.privacy" data-i18n="page.privacy.short">Confidentialité</a>
+        <a href="/privacy.html#cookies" data-i18n-href="route.privacy.cookies" data-consent-link data-i18n="site.footer.cookies">Gérer les cookies</a>
+      </nav>
+    </div>
+    <p class="sf-disclaimer" data-i18n="site.footer.disclaimer">DBL Optimizer est un site de fans non officiel, sans lien avec BANDAI NAMCO Entertainment. Dragon Ball Legends, ses personnages et ses visuels appartiennent à leurs ayants droit respectifs.</p>
     <p class="site-footer__copy">© 2026 dbl-optimizer.com</p>
   </footer>
+<!-- BUILD:FOOTER:END -->
 
   <!-- Bascule de mode de jeu : flottante, centrée en bas de la fenêtre. -->
   <div class="mode-switch" role="group" aria-label="Mode de jeu" data-i18n-aria-label="mode.label">
@@ -290,8 +358,8 @@
     <div class="modal-backdrop"></div>
     <div class="modal-panel">
       <div class="modal-header">
-        <h3 id="modal-title">Choisir un item</h3>
-        <button id="modal-close" class="btn-close" aria-label="Fermer">×</button>
+        <h3 id="modal-title" data-i18n="modal.item.title">Choisir un item</h3>
+        <button id="modal-close" class="btn-close" aria-label="Fermer" data-i18n-aria-label="modal.close">×</button>
       </div>
       <input
         type="text"
@@ -325,8 +393,8 @@
     <div class="modal-backdrop" data-details-close></div>
     <div class="modal-panel">
       <div class="modal-header">
-        <h3 id="details-modal-title">Détails des items</h3>
-        <button id="details-modal-close" class="btn-close" aria-label="Fermer">×</button>
+        <h3 id="details-modal-title" data-i18n="details.modal.title">Détails des items</h3>
+        <button id="details-modal-close" class="btn-close" aria-label="Fermer" data-i18n-aria-label="modal.close">×</button>
       </div>
       <div id="details-modal-body"></div>
     </div>
@@ -337,8 +405,8 @@
     <div class="modal-backdrop" data-char-modal-close></div>
     <div class="modal-panel">
       <div class="modal-header">
-        <h3 id="char-modal-title">Choisir un personnage</h3>
-        <button id="char-modal-close" class="btn-close" aria-label="Fermer">×</button>
+        <h3 id="char-modal-title" data-i18n="modal.char.title">Choisir un personnage</h3>
+        <button id="char-modal-close" class="btn-close" aria-label="Fermer" data-i18n-aria-label="modal.close">×</button>
       </div>
       <input
         type="text"
@@ -356,7 +424,7 @@
   </div>
 
   <!-- ============ MOBILE TABBAR ============ -->
-  <nav class="mobile-tabbar" aria-label="Navigation rapide">
+  <nav class="mobile-tabbar" aria-label="Navigation rapide" data-i18n-aria-label="nav.quick.aria">
     <a href="#section-build" data-target="section-build" class="active" data-i18n="nav.build">Équipe</a>
     <a href="#section-z" data-target="section-z" data-i18n="nav.capz">Cap Z</a>
     <a href="#section-global" data-target="section-global" data-i18n="nav.global">Global</a>
@@ -364,12 +432,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=85"></script>
-  <script src="items.js?v=85"></script>
-  <script src="characters.js?v=85"></script>
-  <script src="data.js?v=85"></script>
-  <script src="calc.js?v=85"></script>
-  <script src="app.js?v=85"></script>
+  <script src="/i18n.js?v=86"></script>
+  <script src="/items.js?v=86"></script>
+  <script src="/characters.js?v=86"></script>
+  <script src="/data.js?v=86"></script>
+  <script src="/calc.js?v=86"></script>
+  <script src="/app.js?v=86"></script>
 
   <script>
     (function () {

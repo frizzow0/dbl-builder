@@ -1,0 +1,16 @@
+<!--
+{
+  "title": "Guides Dragon Ball Legends : Cap Z, items, mode Proud",
+  "description": "Tous les guides DBL Optimizer pour Dragon Ball Legends : prise en main de l’outil, Cap Z, items, mode Proud et Trio C, glossaire des stats et FAQ.",
+  "h1": "Guides Dragon Ball Legends",
+  "lead": "Comprendre les mécaniques qui rendent une équipe forte — et apprendre à les vérifier, chiffres à l’appui, dans l’optimiseur.",
+  "type": "collection",
+  "published": "2026-09-16",
+  "updated": "2026-09-16"
+}
+-->
+<h2>Par où commencer&nbsp;?</h2>
+<p>Si tu découvres DBL Optimizer, commence par la <a href="/guide-prise-en-main.html">prise en main</a> : elle passe en revue chaque zone de l’outil. Les guides des <a href="/guide-cap-z.html">Cap Z</a> et des <a href="/guide-items.html">items</a> expliquent ensuite les deux sources de bonus que l’optimiseur calcule, et pourquoi elles se multiplient entre elles.</p>
+<p>Tu joues en mode Proud&nbsp;? Le <a href="/guide-mode-proud.html">guide du Trio C</a> montre pourquoi deux bons trios ne donnent pas toujours un bon troisième match, et comment le vérifier avant de lancer une partie.</p>
+<h2>Comment ces guides sont écrits</h2>
+<p>Chaque guide décrit le fonctionnement réel du calcul de DBL Optimizer : les règles appliquées, leurs limites et la façon de lire les résultats. Les données des personnages et des équipements sont mises à jour régulièrement ; la dernière mise à jour date du {{DATE_DONNEES}}. Une erreur ou une mécanique mal décrite&nbsp;? <a href="/contact.html">Écris-nous</a>.</p>

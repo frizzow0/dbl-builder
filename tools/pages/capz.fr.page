@@ -1,0 +1,56 @@
+<!--
+{
+  "title": "Guide des Cap Z (Z Abilities) — Dragon Ball Legends",
+  "description": "Cap Z de Dragon Ball Legends : paliers, Cap Z Zenkai, conditions de tags, propagation aux coéquipiers, privilège du Leader et méthode pour les optimiser.",
+  "h1": "Guide des Cap Z (Z Abilities) dans Dragon Ball Legends",
+  "lead": "Les Cap Z sont l’un des leviers de puissance les plus importants — et les plus mal compris — de Dragon Ball Legends. Voici comment elles fonctionnent, comment elles se propagent dans l’équipe et comment en tirer le maximum.",
+  "type": "article",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "Tester mon équipe dans l’optimiseur →"
+}
+-->
+<h2>Qu’est-ce qu’une Cap Z&nbsp;?</h2>
+<p>La <strong>Capacité Z</strong> (ou <em>Z Ability</em>) est un bonus passif rattaché à chaque personnage. Contrairement à ses cartes de combat, elle agit dès que le personnage fait partie de l’équipe : elle augmente une ou plusieurs statistiques (Force, Attaque, Défense, Dégâts infligés…) pour les membres de l’équipe qui remplissent sa condition — souvent un tag commun.</p>
+<p>C’est pour cette raison qu’une équipe ne se résume jamais au kit de combat de ses personnages : une unité moyenne en jeu peut être un excellent <em>porteur de Cap Z</em> si elle donne de gros bonus à une catégorie que tu joues.</p>
+
+<h2>Les paliers : I, II, III et IV</h2>
+<p>Une Cap Z se débloque par paliers, de <strong>I</strong> à <strong>IV</strong>. Chaque palier renforce le précédent ; le palier IV est la version maximale. Dans DBL Optimizer, le palier se règle dans le panneau qui se déplie au survol de la carte (sous la carte sur mobile), ce qui permet de simuler une équipe pas encore entièrement débloquée.</p>
+<p>Point important : les paliers <strong>ne s’additionnent pas</strong> entre eux. Si le palier III donne « +30 % de Force » et le palier IV « +40 % de Force », c’est la valeur du palier atteint (40 %) qui compte, pas la somme des deux. L’outil garde, pour chaque stat, la valeur la plus haute débloquée.</p>
+
+<h2>Les Cap Z Zenkai</h2>
+<p>Un personnage passé en <strong>Zenkai</strong> débloque une <strong>Cap Z supplémentaire</strong>, distincte de sa Cap Z classique. Les deux s’ajoutent : un personnage Zenkai apporte sa Cap Z d’origine <strong>et</strong> sa Cap Z Zenkai. L’optimiseur compte la Cap Z Zenkai à son maximum. C’est ce qui rend les unités Zenkai si recherchées comme soutien d’équipe.</p>
+
+<h2>Les conditions : tags, épisodes, couleurs</h2>
+<p>La plupart des Cap Z ne profitent qu’aux personnages qui remplissent une condition. Ces conditions s’appuient sur les étiquettes du jeu :</p>
+<ul>
+  <li><strong>Couleur</strong> — Rouge, Jaune, Violet, Vert, Bleu, Lumière ;</li>
+  <li><strong>Classe</strong> — « Saiyan », « Famille Goku », « Guerrier fusionné », « Lignée royale Vegeta »… ;</li>
+  <li><strong>Épisode</strong> — « Saga des films », « Saga Z - Boo »… ;</li>
+  <li><strong>Personnage</strong> — « Son Goku », « Vegeta »… ;</li>
+  <li><strong>Style de combat</strong> — « Type physique », « Type défense »….</li>
+</ul>
+<p>Concrètement, une Cap Z « +40 % d’Attaque physique pour les Saiyan » ne boostera <strong>que</strong> les Saiyan de ton équipe. Construire une équipe dont les personnages partagent les mêmes tags permet à chaque Cap Z de profiter à tout le monde : c’est le cœur de l’optimisation. Le tableau « Tags de l’équipe » de l’outil montre en un coup d’œil quels tags sont partagés, et par qui.</p>
+
+<h2>La propagation entre coéquipiers</h2>
+<p>Une Cap Z appartient à un personnage mais <strong>rayonne vers toute l’équipe</strong>. Pour chaque coéquipier, la condition est vérifiée ligne par ligne : une partie d’une Cap Z peut s’appliquer à un personnage et pas à un autre.</p>
+<p>L’<strong>Arbre des Cap Z</strong> de DBL Optimizer visualise exactement cette propagation : une flèche part du personnage ciblé vers chaque coéquipier, <strong>verte</strong> si 100 % de sa Cap Z est reçue, <strong>jaune</strong> si une partie seulement s’applique, <strong>rouge</strong> si rien ne passe. C’est l’outil idéal pour repérer un porteur dont les bonus sont gaspillés.</p>
+
+<h2>Le privilège du Leader</h2>
+<p>Le <strong>Leader</strong> (★) bénéficie d’un traitement à part dans le calcul :</p>
+<ul>
+  <li>comme <strong>receveur</strong>, il reçoit les Cap Z de toute l’équipe <strong>sans condition</strong> ;</li>
+  <li>comme <strong>émetteur</strong>, sa Cap Z s’applique sans condition à ses <strong>deux coéquipiers de trio</strong> ; pour les autres personnages, ses conditions habituelles s’appliquent.</li>
+</ul>
+<p>Changer de Leader peut donc transformer le bilan d’une équipe. Dans l’outil, désigne le Leader avec l’étoile, ou clique sur « Désactiver le leader » pour comparer avec une équipe sans ce privilège. En mode Proud, ce privilège suit le trio avec lequel le Leader combat : c’est l’un des points que vérifie l’<a href="/guide-mode-proud.html">analyse du Trio C</a>.</p>
+
+<h2>Comment les Cap Z se combinent aux items</h2>
+<p>Les bonus de Cap Z et d’items tombent dans les mêmes <strong>couches de calcul</strong> (base, pur, direct), qui se multiplient entre elles. Une grosse Cap Z « de base » amplifie donc l’effet des lignes « pures » de tes items. Le détail est dans le <a href="/guide-items.html">guide des items</a>.</p>
+
+<h2>Comment optimiser ses Cap Z</h2>
+<ol>
+  <li><strong>Regroupe les tags.</strong> Plus tes personnages en partagent, plus les Cap Z conditionnelles s’appliquent largement.</li>
+  <li><strong>Privilégie les porteurs Zenkai.</strong> Deux Cap Z valent mieux qu’une.</li>
+  <li><strong>Choisis le bon Leader</strong>, en priorité celui dont la Cap Z serait la plus bloquée par les conditions de ses coéquipiers de trio.</li>
+  <li><strong>Vérifie la couverture</strong> avec l’Arbre des Cap Z : une flèche jaune ou rouge, c’est du potentiel perdu.</li>
+</ol>

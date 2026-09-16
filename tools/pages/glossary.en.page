@@ -1,0 +1,48 @@
+<!--
+{
+  "title": "Dragon Ball Legends Stats Glossary",
+  "description": "Every Dragon Ball Legends stat explained: Health, Strike and Blast ATK, Critical Rate, Damage Inflicted, DEF, Ki Recovery, Vanish and calculation layers.",
+  "h1": "Dragon Ball Legends stats glossary",
+  "lead": "Every stat DBL Optimizer calculates, explained in one sentence. Handy for decoding a Z Ability or an equipment line without mistakes.",
+  "type": "article",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "See these stats on my team →"
+}
+-->
+<h2>Offensive stats</h2>
+<ul>
+  <li><strong>Strike ATK</strong> — increases damage from Strike (melee) cards.</li>
+  <li><strong>Blast ATK</strong> — increases damage from Blast (ki) cards.</li>
+  <li><strong>Critical Rate</strong> — chance to land a critical hit, which deals extra damage.</li>
+  <li><strong>Damage Inflicted</strong> — a “direct” bonus applied at the end of the chain to all damage. Very strong, because it multiplies an attack that is already boosted.</li>
+  <li><strong>Energy Damage Inflicted</strong> — a version of Damage Inflicted limited to Blast attacks.</li>
+  <li><strong>Special Move damage</strong> — a boost specific to Special Move cards.</li>
+  <li><strong>Ultimate Move damage</strong> — a boost specific to Ultimate Move cards, your most devastating attacks.</li>
+</ul>
+
+<h2>Survival stats</h2>
+<ul>
+  <li><strong>Health</strong> — the character’s hit points. The higher it is, the more they can take.</li>
+  <li><strong>Health Recovery amount</strong> — how much health is restored by healing and regeneration effects.</li>
+  <li><strong>Strike DEF</strong> — reduces damage taken from Strike attacks.</li>
+  <li><strong>Blast DEF</strong> — reduces damage taken from Blast attacks.</li>
+  <li><strong>Damage Guard</strong> — reduces damage taken while the character is guarding.</li>
+</ul>
+
+<h2>Utility stats</h2>
+<ul>
+  <li><strong>Ki Recovery</strong> — how fast the Ki gauge refills, and therefore how quickly you can play cards.</li>
+  <li><strong>Vanish Recover</strong> — how fast the Vanish gauge refills; Vanish is used to dodge.</li>
+</ul>
+
+<h2>Calculation terms</h2>
+<ul>
+  <li><strong>“Base”</strong> — a “Base Strike ATK” line raises the underlying stat: the first calculation layer.</li>
+  <li><strong>“Pure”</strong> — a line without “base” (“Strike ATK”): the second layer, multiplied by the first.</li>
+  <li><strong>“Direct”</strong> — Damage Inflicted: the third layer, applied last.</li>
+  <li><strong>Equivalent multiplier (×)</strong> — the product of the three layers, for example ×1.69 for two +30% bonuses placed in two different layers.</li>
+  <li><strong>Gain (%)</strong> — the matching final increase (+69% in that example).</li>
+  <li><strong>Total bonus</strong> — in the tool’s summaries, the sum of every stat gain for one or more characters. Useful to compare two lineups, but it doesn’t tell you which stat matters most for your character.</li>
+</ul>
+<p>To understand how these layers combine, read the <a href="/en/equipment-guide.html">equipment guide</a>.</p>

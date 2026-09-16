@@ -1,0 +1,48 @@
+<!--
+{
+  "title": "Glossaire des stats de Dragon Ball Legends",
+  "description": "Les stats de Dragon Ball Legends expliquées : Force, Attaque physique et d’énergie, Critique, Dégâts infligés, Défenses, Ki, Vanish et couches de calcul.",
+  "h1": "Glossaire des statistiques de Dragon Ball Legends",
+  "lead": "Chaque statistique que DBL Optimizer calcule, expliquée en une phrase. Pratique pour décrypter une Cap Z ou une ligne d’item sans se tromper.",
+  "type": "article",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "Voir ces stats sur mon équipe →"
+}
+-->
+<h2>Statistiques offensives</h2>
+<ul>
+  <li><strong>Attaque physique (Strike ATK)</strong> — augmente les dégâts des cartes physiques (corps à corps).</li>
+  <li><strong>Attaque d’énergie (Blast ATK)</strong> — augmente les dégâts des cartes d’énergie (tirs, vagues d’énergie).</li>
+  <li><strong>Critique (Critical Rate)</strong> — probabilité d’infliger un coup critique, dont les dégâts sont majorés.</li>
+  <li><strong>Dégâts infligés</strong> — bonus « direct » appliqué en bout de chaîne à tous les dégâts. Très puissant, car il multiplie une attaque déjà gonflée.</li>
+  <li><strong>Dégâts d’énergie infligés</strong> — variante des dégâts infligés, limitée aux attaques d’énergie.</li>
+  <li><strong>Dégâts tech. spéciale</strong> — majoration propre aux cartes Technique spéciale.</li>
+  <li><strong>Dégâts tech. ultime</strong> — majoration propre aux cartes Technique ultime, les coups les plus dévastateurs.</li>
+</ul>
+
+<h2>Statistiques de survie</h2>
+<ul>
+  <li><strong>Force (Health)</strong> — les points de vie du personnage. Plus elle est élevée, plus il encaisse.</li>
+  <li><strong>Quantité de régénération</strong> — la quantité de vie récupérée par les effets de soin et de régénération.</li>
+  <li><strong>Défense physique (Strike DEF)</strong> — réduit les dégâts subis des attaques physiques.</li>
+  <li><strong>Défense d’énergie (Blast DEF)</strong> — réduit les dégâts subis des attaques d’énergie.</li>
+  <li><strong>Garde contre les dégâts</strong> — réduit les dégâts encaissés lorsque le personnage est en garde.</li>
+</ul>
+
+<h2>Statistiques utilitaires</h2>
+<ul>
+  <li><strong>Vitesse de régénération du Ki (Ki Recover)</strong> — vitesse à laquelle la jauge de Ki se recharge, donc à laquelle tu peux jouer tes cartes.</li>
+  <li><strong>Vanish Recover</strong> — vitesse de recharge de la jauge de Vanish, utilisée pour esquiver.</li>
+</ul>
+
+<h2>Notions de calcul</h2>
+<ul>
+  <li><strong>« de base »</strong> — une ligne « Attaque physique de base » augmente la stat fondamentale : c’est la première couche du calcul.</li>
+  <li><strong>« pur »</strong> — une ligne sans « de base » (« Attaque physique ») : deuxième couche, multipliée par la première.</li>
+  <li><strong>« direct »</strong> — les Dégâts infligés : troisième couche, appliquée en dernier.</li>
+  <li><strong>Multiplicateur équivalent (×)</strong> — le produit des trois couches, par exemple ×1,69 pour deux bonus de +30 % placés dans deux couches différentes.</li>
+  <li><strong>Gain (%)</strong> — l’augmentation finale correspondante (+69 % dans l’exemple).</li>
+  <li><strong>Bonus total</strong> — dans les bilans de l’outil, la somme des gains de toutes les stats d’un ou plusieurs personnages. Pratique pour comparer deux compositions, mais il ne dit pas quelle stat compte le plus pour ton personnage.</li>
+</ul>
+<p>Pour comprendre comment ces couches se combinent, lis le <a href="/guide-items.html">guide des items</a>.</p>

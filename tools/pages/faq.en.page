@@ -1,0 +1,47 @@
+<!--
+{
+  "title": "DBL Optimizer FAQ — Frequently Asked Questions",
+  "description": "FAQ about DBL Optimizer, the Dragon Ball Legends team builder: pricing, saving, data sources, equipment conditions, Trio C and calculation accuracy.",
+  "h1": "Frequently asked questions",
+  "lead": "Answers to the most common questions about DBL Optimizer and Dragon Ball Legends optimization mechanics.",
+  "type": "faq",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "Launch the optimizer →"
+}
+-->
+<h2>Is DBL Optimizer free?</h2>
+<p>Yes. The tool is completely free, with no account or sign-up. The site may show ads to cover its costs; they are never required to use the tool.</p>
+
+<h2>Is my team saved?</h2>
+<p>No. Your lineup isn’t stored anywhere: if you reload the page, it starts from scratch. Only your language and game mode (Classic or Proud) are remembered in your browser. Nothing is sent to a server.</p>
+
+<h2>How do I add a character to my team?</h2>
+<p>Click a “Click to add” slot. In the window that opens, search by name, card code or tag, and filter by rarity or color. Then hover the card to set its Z Ability level and equip up to 3 pieces of equipment. The <a href="/en/getting-started.html">Getting started</a> guide covers every step.</p>
+
+<h2>Where does the character and equipment data come from?</h2>
+<p>It comes from the Dragon Ball Legends community’s public database (dblegends.net) and is updated regularly, usually after new releases. The database currently holds {{NB_PERSOS}} characters and {{NB_ITEMS}} pieces of equipment (updated on {{DATE_DONNEES}}). If a brand-new card is missing, it will arrive with the next update.</p>
+
+<h2>Why are character and tag names in French?</h2>
+<p>The optimizer uses the French edition of the community database. Menus, guides and results are in English, but character, equipment and tag names are displayed as in that source. Card codes (such as DBL99-01L) are the same in every language, so searching by code is the easiest way to find a character.</p>
+
+<h2>Why doesn’t a piece of equipment or a Z Ability apply?</h2>
+<p>Most bonuses are conditional: they require a tag, a color or a number of teammates sharing a tag. For equipment, open “Team Composition”: each effect is marked Active, N missing or × N, with the rule to meet. For Z Abilities, the Z Ability Tree shows what does or doesn’t reach each teammate. Unmet effects are also listed under “Uncalculated Effects”.</p>
+
+<h2>What is a trio?</h2>
+<p>A 6-character team is split into two trios of 3. In Classic mode they are the Main team and the Bench; in Proud mode, Trio A and Trio B. Equipment conditions are counted within the wearer’s trio, while “same equipment” effects count the whole team (see the <a href="/en/equipment-guide.html">equipment guide</a>).</p>
+
+<h2>What is Trio C?</h2>
+<p>In Proud mode, a third match breaks a tie. It is played with a Trio C made of 2 characters from one trio and 1 from the other. Because equipment conditions and the Leader privilege depend on who fights together, Trio C can lose bonuses: the tool analyzes it and suggests the best possible Trio C. Everything is explained in the <a href="/en/proud-mode-guide.html">Proud mode guide</a>.</p>
+
+<h2>What’s the difference between a Z Ability and a Zenkai Z Ability?</h2>
+<p>The regular Z Ability unlocks in levels (I to IV). A Zenkai Awakened character also gets a Zenkai Z Ability, which adds to the first one. The optimizer counts the regular Z Ability at the level you choose and the Zenkai Z Ability at its maximum (see the <a href="/en/z-abilities-guide.html">Z Abilities guide</a>).</p>
+
+<h2>Are the calculations accurate?</h2>
+<p>The tool applies the known game rules: base, pure and direct calculation layers, tag conditions, Z Ability propagation and the Leader privilege. Some effects can’t be quantified (situational abilities, battle-dependent passives): they are listed separately under “Uncalculated Effects” instead of being counted in totals. Small differences with the game are still possible.</p>
+
+<h2>Is the site available in French?</h2>
+<p>Yes. The FR / EN button at the top of every page switches to the French version, which has its own addresses (<a href="/" hreflang="fr" lang="fr">dbl-optimizer.com</a>). In the tool, switching keeps your current team.</p>
+
+<h2>I found a mistake. How do I report it?</h2>
+<p>Write to us from the <a href="/en/contact.html">Contact</a> page with the character or equipment concerned and what you see in game. Fixes are included in the next update.</p>

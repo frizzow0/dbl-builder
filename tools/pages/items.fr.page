@@ -1,0 +1,51 @@
+<!--
+{
+  "title": "Guide des items (équipements) — Dragon Ball Legends",
+  "description": "Items de Dragon Ball Legends : emplacements, raretés, équipements réservés, couches base / pur / direct, conditions de trio et méthode d’optimisation.",
+  "h1": "Guide des items et de l’optimisation des stats",
+  "lead": "Les items multiplient la puissance d’un personnage — à condition de comprendre comment leurs bonus se cumulent. Emplacements, raretés, couches de calcul et conditions : tout ce qu’il faut savoir.",
+  "type": "article",
+  "published": "2026-06-14",
+  "updated": "2026-09-16",
+  "cta": "Optimiser mes items maintenant →"
+}
+-->
+<h2>Trois emplacements par personnage</h2>
+<p>Chaque personnage peut porter jusqu’à <strong>3 items</strong>. Dans DBL Optimizer, les trois emplacements se trouvent dans le panneau qui se déplie au survol de la carte (sous la carte sur mobile). Chaque emplacement ouvre la liste des équipements, filtrable par rareté et par nom.</p>
+
+<h2>Compatibilité : qui peut porter quoi</h2>
+<p>Un item n’est pas équipable par tout le monde : il indique les tags de ses porteurs possibles (une couleur, une classe, un épisode…). Le filtre <strong>« Compatibles »</strong>, activé par défaut, ne propose que les items que le personnage peut réellement porter.</p>
+<p>Certains équipements vont plus loin et sont <strong>réservés à une seule carte</strong>. C’est le cas de nombreux items Platinum : « ULTRA !! - Son Goku Super Saiyan divin SS Kaioken », par exemple, n’est équipable que par la version ULTRA de ce personnage. L’outil respecte cette restriction.</p>
+
+<h2>Les raretés et leurs cadres</h2>
+<p>Les items existent en plusieurs raretés : Fer, Bronze, Argent, Or, leurs versions <strong>éveillées</strong>, Unique, Unique éveillé, Platinum et Événement. La rareté détermine la puissance des lignes de stats et leur nombre. Chaque rareté a son <strong>cadre</strong> ; DBL Optimizer l’affiche autour de l’icône pour reconnaître la qualité d’un coup d’œil.</p>
+
+<h2>Le point clé : les couches de stats (base, pur, direct)</h2>
+<p>C’est la mécanique la plus importante — et la plus contre-intuitive. Tous les bonus ne s’appliquent pas de la même manière : ils sont rangés dans des <strong>couches</strong> distinctes, qui se <strong>multiplient entre elles</strong> :</p>
+<ul>
+  <li><strong>Couche « de base »</strong> — les lignes « Attaque physique de base », « Force de base »… Elles gonflent la statistique fondamentale.</li>
+  <li><strong>Couche « pure »</strong> — les lignes « Attaque physique » (sans « de base »), « Critique »…</li>
+  <li><strong>Couche « directe »</strong> — les « Dégâts infligés », appliqués en bout de chaîne.</li>
+</ul>
+<p>Le calcul est : <strong>gain = (1 + bonus de base) × (1 + bonus pur) × (1 + bonus direct) − 1</strong>. À l’intérieur d’une couche, les bonus s’additionnent ; entre couches, ils se multiplient. Conséquence pratique : répartir ses bonus <em>dans des couches différentes</em> rapporte bien plus que tout empiler au même endroit.</p>
+<p>Exemple : deux lignes de +30 % dans la même couche donnent +60 %. Une ligne de +30 % « de base » et une de +30 % « pure » donnent 1,3 × 1,3 = <strong>+69 %</strong>. Les Cap Z partagent ces mêmes couches : une grosse Cap Z « de base » amplifie les lignes « pures » de tes items.</p>
+
+<h2>Les conditions d’items</h2>
+<p>Beaucoup d’items n’activent une partie de leurs bonus que sous condition. Il en existe trois formes :</p>
+<ul>
+  <li><strong>Seuil dans le trio</strong> — « si au moins 2 Saiyan font partie des combattants ». Le compte se fait dans le <strong>trio du porteur</strong> (les 3 personnages qui combattent ensemble), porteur compris.</li>
+  <li><strong>Par membre</strong> — « pour chaque combattant Famille Goku » : le bonus est multiplié par le nombre de membres du trio qui portent le tag.</li>
+  <li><strong>Même équipement</strong> — le bonus dépend du nombre de personnages de <strong>toute l’équipe</strong> qui portent le même item.</li>
+</ul>
+<p>Le panneau <strong>« Composition d’équipe »</strong> de l’outil affiche l’état de chaque effet conditionnel : <em>Actif</em>, <em>Manque N</em> ou <em>× N</em>. C’est le moyen le plus rapide de repérer un item dont la condition n’est pas remplie.</p>
+
+<h2>Les lignes « OU »</h2>
+<p>Certains items proposent une ligne à tirage aléatoire, du type « Attaque d’énergie <strong>OU</strong> Attaque physique ». En jeu, une seule option est obtenue. DBL Optimizer te laisse choisir celle que tu as réellement, pour un calcul fidèle.</p>
+
+<h2>Méthode d’optimisation rapide</h2>
+<ol>
+  <li><strong>Identifie le type de dégâts</strong> du personnage (physique ou énergie) et privilégie les lignes correspondantes.</li>
+  <li><strong>Diversifie les couches</strong> : combine « de base », « pur » et « Dégâts infligés » plutôt que trois lignes identiques.</li>
+  <li><strong>Vérifie les conditions</strong> dans « Composition d’équipe » : un superbe item dont la condition n’est jamais remplie ne vaut rien.</li>
+  <li><strong>Lis le bilan combiné</strong> (Cap Z + items) du personnage ciblé pour voir le gain réel par stat, multiplications comprises.</li>
+</ol>

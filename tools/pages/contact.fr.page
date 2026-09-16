@@ -1,0 +1,33 @@
+<!--
+{
+  "title": "Contact — DBL Optimizer",
+  "description": "Contacter DBL Optimizer : signaler une erreur de données ou de calcul, proposer une amélioration, question de confidentialité ou de droits d’auteur.",
+  "h1": "Contact",
+  "lead": "Une erreur dans un personnage, un item ou un calcul ? Une idée d’amélioration ? Écris-nous.",
+  "type": "contact",
+  "published": "2026-09-16",
+  "updated": "2026-09-16"
+}
+-->
+<div class="contact-card">
+  <p class="contact-card-label">Adresse e-mail</p>
+  <p class="contact-card-mail"><a href="mailto:contact@dbl-optimizer.com">contact@dbl-optimizer.com</a></p>
+  <p class="contact-card-note">Réponse en français ou en anglais, en général sous quelques jours.</p>
+</div>
+
+<h2>Signaler une erreur</h2>
+<p>Pour qu’une correction soit rapide, indique :</p>
+<ul>
+  <li>le <strong>personnage</strong> (nom et code de carte, par exemple DBL99-01L) ou l’<strong>item</strong> concerné ;</li>
+  <li>ce que l’outil affiche et ce que tu observes <strong>en jeu</strong> (une capture d’écran aide beaucoup) ;</li>
+  <li>la <strong>composition d’équipe</strong> utilisée, si le problème concerne une condition ou un total.</li>
+</ul>
+<p>Les corrections de données sont intégrées à la mise à jour suivante.</p>
+
+<h2>Autres demandes</h2>
+<ul>
+  <li><strong>Suggestions</strong> — une fonction qui te manque, un guide à écrire : toutes les idées sont lues.</li>
+  <li><strong>Confidentialité</strong> — pour toute question sur tes données, consulte d’abord la <a href="/privacy.html">politique de confidentialité</a>.</li>
+  <li><strong>Droits d’auteur</strong> — si tu es ayant droit d’un contenu affiché sur le site et souhaites son retrait, écris-nous : la demande sera traitée rapidement.</li>
+</ul>
+<p>Les messages reçus servent uniquement à te répondre et ne sont transmis à personne.</p>
