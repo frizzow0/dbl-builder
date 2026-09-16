@@ -1,6 +1,6 @@
 // Auto-généré par scrape_chars.js — ne pas éditer à la main.
 // Source : fr.dblegends.net/characters
-// 499 personnages, généré le 2026-09-13T18:11:20.952Z
+// 500 personnages, généré le 2026-09-16T12:26:24.128Z
 
 window.DBL_CHARACTERS_SCRAPED = [
   {
@@ -8048,6 +8048,169 @@ window.DBL_CHARACTERS_SCRAPED = [
           "Escadron blindé de Cooler"
         ],
         "texteBrut": "Saga des films ou Escadron blindé de Cooler :\n· Attaque physique de base +35%\n· Défense d'énergie de base +35%\nEscadron blindé de Cooler :\n· Défense physique de base +22%"
+      }
+    ],
+    "zAbilitiesZenkai": null,
+    "isZenkai": false
+  },
+  {
+    "id": "char_741",
+    "sourceId": "741",
+    "nom": "Dodoria",
+    "element": "BLU",
+    "rarete": "SPARKING",
+    "cardCode": "DBL-EVT-112S",
+    "image": "https://fr.dblegends.net/assets/card_icons/BChaIco_0741_Dodoria_741.webp",
+    "traits": [
+      "Armée de Freezer",
+      "Exclusif aux événements",
+      "M",
+      "SPARKING",
+      "Type physique",
+      "BLE",
+      "Saga Z - Freezer",
+      "Dodoria"
+    ],
+    "tagsInternes": [],
+    "sourceUrl": "https://fr.dblegends.net/character/741",
+    "zAbilities": [
+      {
+        "tier": 1,
+        "paneId": "510741",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 19,
+            "valeur_max": 19,
+            "condition": {
+              "description": "Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Armée de Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Armée de Freezer"
+        ],
+        "texteBrut": "Armée de Freezer :\n· Attaque physique de base +19%"
+      },
+      {
+        "tier": 2,
+        "paneId": "520741",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Armée de Freezer ou Exclusif aux événements",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Armée de Freezer",
+                "Exclusif aux événements"
+              ],
+              "tag_requis": "Armée de Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Armée de Freezer",
+          "Exclusif aux événements"
+        ],
+        "texteBrut": "Armée de Freezer ou Exclusif aux événements :\n· Attaque physique de base +22%"
+      },
+      {
+        "tier": 3,
+        "paneId": "530741",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 29,
+            "valeur_max": 29,
+            "condition": {
+              "description": "Armée de Freezer ou Exclusif aux événements ou Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Armée de Freezer",
+                "Exclusif aux événements",
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Armée de Freezer"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 29,
+            "valeur_max": 29,
+            "condition": {
+              "description": "Armée de Freezer ou Exclusif aux événements ou Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Armée de Freezer",
+                "Exclusif aux événements",
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Armée de Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Armée de Freezer",
+          "Exclusif aux événements",
+          "Saga Z - Freezer"
+        ],
+        "texteBrut": "Armée de Freezer, Exclusif aux événements ou Saga Z - Freezer :\n· Attaque physique de base +29%\n· Attaque d'énergie de base +29%"
+      },
+      {
+        "tier": 4,
+        "paneId": "540741",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 33,
+            "valeur_max": 33,
+            "condition": {
+              "description": "Armée de Freezer ou Exclusif aux événements ou Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Armée de Freezer",
+                "Exclusif aux événements",
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Armée de Freezer"
+            }
+          },
+          {
+            "stat": "attaque_energie_de_base",
+            "valeur_min": 33,
+            "valeur_max": 33,
+            "condition": {
+              "description": "Armée de Freezer ou Exclusif aux événements ou Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Armée de Freezer",
+                "Exclusif aux événements",
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Armée de Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Armée de Freezer",
+          "Exclusif aux événements",
+          "Saga Z - Freezer"
+        ],
+        "texteBrut": "Armée de Freezer, Exclusif aux événements ou Saga Z - Freezer :\n· Attaque physique de base +33%\n· Attaque d'énergie de base +33%"
       }
     ],
     "zAbilitiesZenkai": null,
