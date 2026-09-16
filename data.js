@@ -377,6 +377,16 @@
     ? window.DBL_ITEMS_SCRAPED
     : ITEMS;
 
+  // Les textes du site mélangent parfois espace insécable et espace normale
+  // (« Épisode : Saga Z - Boo ») : on normalise les tags de condition pour qu'ils
+  // correspondent aux traits des persos, sinon la condition n'est jamais remplie.
+  const normTag = (t) => (typeof t === "string" ? t.replace(/[\u00A0\u202F]/g, " ") : t);
+  ITEMS_FINAL.forEach((it) => (it.lignes || []).forEach((l) => {
+    if (!l.condition) return;
+    l.condition.tag_requis = normTag(l.condition.tag_requis);
+    if (Array.isArray(l.condition.tags_requis)) l.condition.tags_requis = l.condition.tags_requis.map(normTag);
+  }));
+
   // Personnages : on privilégie les vrais perso scrapés depuis le site.
   const PERSONNAGES_FINAL = (window.DBL_CHARACTERS_SCRAPED && window.DBL_CHARACTERS_SCRAPED.length)
     ? window.DBL_CHARACTERS_SCRAPED

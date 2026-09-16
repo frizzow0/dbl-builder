@@ -1901,36 +1901,76 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
 .btn.danger:hover { background: var(--danger-tint); border-color: var(--danger); }
 
 /* ===================== 11. CONDITIONS  ===================== */
-#conditions-inputs { display: flex; flex-direction: column; gap: var(--s-2); }
-.cond-row {
-  padding: var(--s-2) var(--s-3);
-  background: var(--surface-2);
-  border: 1px solid var(--line);
-  border-radius: var(--r-2);
-  display: flex; align-items: center; justify-content: space-between;
-  gap: var(--s-3);
+/* Panneau « Composition d'équipe » : un groupe par tag (catégorie, nom, compte
+   par trio, simulation), puis les effets d'items qui en dépendent, avec leur
+   statut réel dans le trio du porteur. */
+#conditions-inputs { display: flex; flex-direction: column; gap: var(--s-3); }
+.cg { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-3); overflow: clip; }
+.cg-head {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-4);
+  padding: 10px 14px; border-bottom: 1px solid var(--line); background: var(--surface-2);
 }
-.cond-info { flex: 1; min-width: 0; }
-.cond-label { font-size: var(--fs-sm); font-weight: 600; }
-.cond-hint  { font-size: var(--fs-xxs); color: var(--text-soft); margin-top: 2px; }
-.cond-ok { color: var(--good); margin-left: 4px; }
-.cond-ko { color: var(--danger); margin-left: 4px; }
-.cond-row input[type="number"] {
-  width: 64px;
-  padding: 6px 8px;
-  border-radius: var(--r-2);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  color: var(--text);
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  text-align: center;
+.cg-title { display: flex; align-items: baseline; gap: var(--s-2); flex: 1 1 220px; min-width: 0; }
+.cg-cat {
+  font-family: var(--font-display); font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+}
+.cg-name { font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 800; color: var(--text); }
+.cg-trios { display: flex; gap: 6px; }
+.cg-trio {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 4px 3px 10px; border-radius: var(--r-pill);
+  background: var(--surface); border: 1px solid var(--line);
+  font-size: var(--fs-sm); color: var(--text-soft); cursor: default;
+}
+.cg-trio b {
+  min-width: 22px; height: 22px; padding: 0 6px; border-radius: var(--r-pill);
+  display: inline-grid; place-items: center;
+  background: var(--text); color: var(--gold);
+  font-family: var(--font-display); font-weight: 800; font-variant-numeric: tabular-nums;
+}
+.cg-sim { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-sm); color: var(--text-soft); }
+.cg-sim input[type="number"] {
+  width: 58px; padding: 5px 6px;
+  border-radius: var(--r-2); background: var(--surface); border: 1px solid var(--line-strong);
+  color: var(--text); font-size: var(--fs-sm); font-weight: 700; text-align: center;
   transition: border-color var(--t-micro), box-shadow var(--t-micro);
 }
-.cond-row input[type="number"]:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-tint);
+.cg-sim input[type="number"]:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
+.ce-list { list-style: none; margin: 0; padding: 0; }
+.ce-row {
+  display: grid; align-items: center; gap: 4px var(--s-4);
+  grid-template-columns: minmax(150px, 1.1fr) minmax(160px, 1.3fr) minmax(150px, 1fr) minmax(120px, .9fr) auto;
+  padding: 10px 14px; font-size: var(--fs-sm);
+}
+.ce-row + .ce-row { border-top: 1px solid var(--line); }
+.ce-who { display: flex; flex-direction: column; min-width: 0; }
+.ce-who b { color: var(--text); font-weight: 700; }
+.ce-who small { font-size: var(--fs-xs); color: var(--muted); }
+.ce-item { font-family: var(--font-display); font-weight: 700; color: var(--text); min-width: 0; }
+.ce-effect { display: flex; flex-direction: column; gap: 2px; color: var(--text); font-variant-numeric: tabular-nums; }
+.ce-rule { color: var(--text-soft); }
+.ce-rule em { font-style: normal; color: var(--accent); }
+.ce-status {
+  justify-self: end; white-space: nowrap;
+  padding: 4px 10px; border-radius: var(--r-pill);
+  font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 800;
+}
+.ce-status.is-on   { background: var(--good-tint); color: var(--good); }
+.ce-status.is-off  { background: var(--danger-tint); color: var(--danger); }
+.ce-status.is-mult { background: var(--text); color: var(--gold); font-variant-numeric: tabular-nums; }
+/* Effet non appliqué : sa valeur est barrée, pour ne pas la lire comme acquise. */
+.ce-row.is-inactive .ce-effect span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--line-strong); }
+@media (max-width: 900px) {
+  .ce-row { grid-template-columns: minmax(0, 1fr) auto; }
+  .ce-who { grid-column: 1; grid-row: 1; }
+  .ce-status { grid-column: 2; grid-row: 1; }
+  .ce-item, .ce-effect, .ce-rule { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .conditions-summary { padding: 12px; }
+  .conditions-body { padding: 0 8px 8px; }
+  .cg-head, .ce-row { padding: 10px; }
 }
 
 /* ===================== 12. STATS GRID  ===================== */
@@ -3002,29 +3042,36 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 
 /* =====================  REFONTE : ACCORDÉON CONDITIONS  ===================== */
 .conditions-accordion {
-  margin-top: var(--s-3);
+  margin-top: var(--s-4);
   border: 1px solid var(--line);
   border-radius: var(--r-3);
   background: var(--surface-2);
 }
 .conditions-accordion[hidden], .conditions-accordion.hidden { display: none; }
+/* Barre : flèche, titre et explication à gauche, bilan des effets à droite —
+   lisible sans ouvrir le panneau. */
 .conditions-summary {
-  display: flex; flex-direction: column; gap: 2px;
-  padding: 10px 14px; cursor: pointer; list-style: none;
-  user-select: none;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+  padding: 12px 16px; cursor: pointer; list-style: none; user-select: none;
 }
 .conditions-summary::-webkit-details-marker { display: none; }
-.conditions-summary::before {
-  content: "▸"; position: absolute; margin-left: -2px; color: var(--accent);
-  transition: transform var(--t-micro);
+.conditions-summary-main { position: relative; display: flex; flex-direction: column; gap: 2px; padding-left: 22px; min-width: 0; }
+.conditions-summary-main::before {
+  content: "▸"; position: absolute; left: 0; top: 1px;
+  color: var(--accent); font-size: var(--fs-lg); line-height: 1;
 }
-.conditions-accordion[open] .conditions-summary::before { content: "▾"; }
-.conditions-summary-title {
-  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-sm);
-  padding-left: 18px;
+.conditions-accordion[open] .conditions-summary-main::before { content: "▾"; }
+.conditions-summary-title { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-lg); color: var(--text); }
+.conditions-summary-hint { font-size: var(--fs-sm); color: var(--text-soft); }
+.conditions-status { display: flex; gap: 6px; flex-wrap: wrap; }
+.cs-badge {
+  padding: 4px 12px; border-radius: var(--r-pill);
+  font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 800;
 }
-.conditions-summary-hint { font-size: var(--fs-xxs); color: var(--text-soft); padding-left: 18px; }
-.conditions-body { padding: 0 14px 14px; }
+.cs-badge.is-on  { background: var(--good-tint); color: var(--good); }
+.cs-badge.is-off { background: var(--danger-tint); color: var(--danger); }
+.conditions-body { padding: 0 16px 16px; }
 
 /* =====================  DIRECTION C · CARTE COLLECTOR  =====================
    Couche finale de la refonte visuelle : elle redéfinit les jetons (le reste

@@ -41,7 +41,7 @@
   <!-- ── Google AdSense : désactivé pour le moment ──────────
        (script + emplacements retirés — réactivables via git) -->
 
-  <link rel="stylesheet" href="styles.css?v=81" />
+  <link rel="stylesheet" href="styles.css?v=82" />
 
   <!-- ── Google Search Console : décommente et colle ton token (méthode « balise HTML »),
        ou préfère la vérification par enregistrement DNS TXT au niveau du domaine.
@@ -151,8 +151,11 @@
       <!-- Conditions d'équipe (repliable) -->
       <details id="conditions-panel" class="conditions-accordion">
         <summary class="conditions-summary">
-          <span class="conditions-summary-title" data-i18n="panel.conditions.title">Composition d'équipe</span>
-          <span class="conditions-summary-hint" data-i18n="panel.conditions.sub">Certains items ont des effets conditionnels. Les compositions sont détectées automatiquement à partir des traits.</span>
+          <span class="conditions-summary-main">
+            <span class="conditions-summary-title" data-i18n="panel.conditions.title">Composition d'équipe</span>
+            <span class="conditions-summary-hint" data-i18n="panel.conditions.sub">Effets d’items qui dépendent des tags présents dans le trio de leur porteur.</span>
+          </span>
+          <span id="conditions-status" class="conditions-status" aria-live="polite"></span>
         </summary>
         <div class="conditions-body">
           <div id="conditions-inputs"></div>
@@ -358,12 +361,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="i18n.js?v=81"></script>
-  <script src="items.js?v=81"></script>
-  <script src="characters.js?v=81"></script>
-  <script src="data.js?v=81"></script>
-  <script src="calc.js?v=81"></script>
-  <script src="app.js?v=81"></script>
+  <script src="i18n.js?v=82"></script>
+  <script src="items.js?v=82"></script>
+  <script src="characters.js?v=82"></script>
+  <script src="data.js?v=82"></script>
+  <script src="calc.js?v=82"></script>
+  <script src="app.js?v=82"></script>
 
   <script>
     (function () {

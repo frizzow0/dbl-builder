@@ -643,6 +643,33 @@
     return getEffectiveConditionsFor(active.character);
   }
 
+  // Clés de tags d'un perso, telles que les conditions d'items les écrivent : le
+  // trait nu (« Saiyan ») et ses formes préfixées (« Classe : Saiyan »,
+  // « Personnage : Son Goku », « Attribut : VIO »…), l'élément (code et nom
+  // complet : « Attribut : Violet »), le code de carte et « Personnage : Nom
+  // (code) ». Source UNIQUE pour le compte d'équipe, le compte par trio et le
+  // panneau « Composition d'équipe » : ce que le panneau affiche est exactement
+  // ce que le calcul utilise. Une forme préfixée sans objet (« Rareté : Saiyan »)
+  // n'est simplement jamais référencée par une condition.
+  const _ELEM_NOM_FR = { BLU: "Bleu", RED: "Rouge", GRN: "Vert", YEL: "Jaune", PUR: "Violet", LGT: "Lumière" };
+  const _PREFIXES_TAG = ["Classe : ", "Épisode : ", "Style de combat : ", "Personnage : ", "Attribut : ", "Rareté : "];
+  function clesDeTags(c) {
+    const cles = new Set();
+    for (const trait of c.traits || []) {
+      cles.add(trait);
+      for (const pre of _PREFIXES_TAG) cles.add(pre + trait);
+    }
+    if (c.element) {
+      cles.add(c.element);
+      if (_ELEM_NOM_FR[c.element]) cles.add("Attribut : " + _ELEM_NOM_FR[c.element]);
+    }
+    if (c.cardCode) {
+      cles.add(c.cardCode);
+      if (c.nom) cles.add(`Personnage : ${c.nom.trim()} (${c.cardCode})`);
+    }
+    return cles;
+  }
+
   // Comptage automatique des traits de toute l'équipe.
   // Utilisé pour les conditions d'items du type "si N « Saiyan » font
   // partie de l'équipe" ou "par combattant de l'équipe de « X »".
@@ -653,24 +680,7 @@
     for (const slot of state.team) {
       if (!slot.character) continue;
       const c = slot.character;
-      for (const trait of c.traits || []) {
-        counts[trait] = (counts[trait] || 0) + 1;
-        // Les conditions d'items gardent leur préfixe de catégorie
-        // ("Classe : X", "Épisode : X", "Style de combat : X"). La catégorie
-        // du trait étant inconnue ici, on ajoute toutes les variantes (les
-        // préfixes non pertinents ne sont jamais référencés par une condition).
-        for (const pre of ["Classe : ", "Épisode : ", "Style de combat : "]) {
-          counts[pre + trait] = (counts[pre + trait] || 0) + 1;
-        }
-      }
-      if (c.element) counts[c.element] = (counts[c.element] || 0) + 1;
-      if (c.cardCode) {
-        counts[c.cardCode] = (counts[c.cardCode] || 0) + 1;
-        if (c.nom) {
-          const key = `Personnage : ${c.nom.trim()} (${c.cardCode})`;
-          counts[key] = (counts[key] || 0) + 1;
-        }
-      }
+      for (const k of clesDeTags(c)) counts[k] = (counts[k] || 0) + 1;
     }
     // Override utilisateur (le user peut booster un compte au-delà de l'auto)
     for (const [k, v] of Object.entries(state.conditions)) {
@@ -701,24 +711,7 @@
       const slot = state.team[i];
       if (!slot.character) continue;
       const c = slot.character;
-      for (const trait of c.traits || []) {
-        counts[trait] = (counts[trait] || 0) + 1;
-        // Les conditions d'items gardent leur préfixe de catégorie
-        // ("Classe : X", "Épisode : X", "Style de combat : X"). La catégorie
-        // du trait étant inconnue ici, on ajoute toutes les variantes (les
-        // préfixes non pertinents ne sont jamais référencés par une condition).
-        for (const pre of ["Classe : ", "Épisode : ", "Style de combat : "]) {
-          counts[pre + trait] = (counts[pre + trait] || 0) + 1;
-        }
-      }
-      if (c.element) counts[c.element] = (counts[c.element] || 0) + 1;
-      if (c.cardCode) {
-        counts[c.cardCode] = (counts[c.cardCode] || 0) + 1;
-        if (c.nom) {
-          const key = `Personnage : ${c.nom.trim()} (${c.cardCode})`;
-          counts[key] = (counts[key] || 0) + 1;
-        }
-      }
+      for (const k of clesDeTags(c)) counts[k] = (counts[k] || 0) + 1;
     }
     if (applyOverrides) {
       for (const [k, v] of Object.entries(state.conditions)) {
@@ -1569,6 +1562,7 @@
       saveMode();
       renderModeSwitch();
       renderTeamGrid();   // les libellés des deux trios changent de sens
+      renderConditions(); // idem dans « Composition d'équipe »
     });
   }
 
@@ -2240,67 +2234,144 @@
   const conditionsPanel = document.getElementById("conditions-panel");
   const conditionsInputs = document.getElementById("conditions-inputs");
 
+  const conditionsStatus = document.getElementById("conditions-status");
+
+  // Texte injecté dans le HTML, y compris dans un attribut title="…" / data-tag="…".
+  const escAttr = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+  // « Classe : Famille Goku » → { cat: "Classe", nom: "Famille Goku" }. Les
+  // attributs écrits en code (« Attribut : VIO ») sont affichés en toutes
+  // lettres, ce qui permet aussi de fusionner « Violet » et « VIO ».
+  const _ATTR_NOM = { BLE: "Bleu", JAU: "Jaune", ROU: "Rouge", VER: "Vert", VIO: "Violet", LUM: "Lumière" };
+  function splitCondTag(tag) {
+    const i = tag.indexOf(" : ");
+    if (i < 0) return { cat: TAG_CATEGORIES[tag] || "", nom: tag };
+    const cat = tag.slice(0, i), nom = tag.slice(i + 3);
+    return { cat, nom: cat === "Attribut" ? (_ATTR_NOM[nom] || nom) : nom };
+  }
+
+  // Panneau « Composition d'équipe » : pour chaque effet d'item qui dépend d'un
+  // tag, l'état RÉEL tel que le calcule le moteur — dans le TRIO du porteur (cf.
+  // buildItemConditions), valeur simulée comprise. Deux natures de condition :
+  // « si N … » (seuil à atteindre) et « par combattant … » (multiplicateur).
+  // Regroupé par tag, avec sa catégorie et son compte par trio, comme le bloc
+  // « Tags de l'équipe ». Les lignes d'un même item soumises à la même
+  // condition (Attaque physique + Attaque d'énergie) forment un seul effet.
   function renderConditions() {
-    // Team-wide : on collecte les tags requis par les items de TOUTE l'équipe.
-    const tagSet = new Set();
-    state.team.forEach((slot) => {
-      if (!slot.character) return;   // slot vide : ses items ne comptent pas
-      slot.items.forEach((it) => {
+    const effets = new Map();
+    state.team.forEach((slot, i) => {
+      if (!slot.character) return;
+      const simule = getTrioTagCountsFor(i, true);
+      const reel = getTrioTagCountsFor(i, false);
+      slot.items.forEach((it, itemIdx) => {
         if (!it) return;
         it.lignes.forEach((l) => {
-          if (!l.condition) return;
-          const ts = l.condition.tags_requis && l.condition.tags_requis.length
-            ? l.condition.tags_requis : [l.condition.tag_requis];
-          ts.forEach((t) => t && tagSet.add(t));
+          const c = l.condition;
+          if (!c) return;
+          const tags = [...new Set((c.tags_requis && c.tags_requis.length ? c.tags_requis : [c.tag_requis]).filter(Boolean))];
+          if (!tags.length) return;   // « même équipement » : compté sur l'équipe entière, hors panneau
+          const parMembre = c.mode === "per_member";
+          const seuil = parMembre ? 1 : (c.seuil || 1);
+          const cle = tags.join(" / ");
+          const id = `${i}|${itemIdx}|${c.mode}|${seuil}|${cle}`;
+          if (!effets.has(id)) {
+            // Mêmes règles que calc.js : « and » exige chaque tag, sinon le meilleur compte.
+            const compte = (counts) => (c.mode === "and" ? Math.min : Math.max)(...tags.map((t) => counts[t] || 0));
+            const valeur = compte(simule);
+            effets.set(id, {
+              slot: i, item: it, lignes: [], tags, cle, parMembre, seuil, valeur,
+              simule: valeur > compte(reel), actif: valeur >= seuil,
+            });
+          }
+          effets.get(id).lignes.push(l);
         });
       });
     });
-    const tags = [...tagSet];
-    if (tags.length === 0) {
+
+    if (!effets.size) {
       conditionsPanel.classList.add("hidden");
       return;
     }
     conditionsPanel.classList.remove("hidden");
-    // Compte auto sur toute l'équipe (sans overrides) pour l'affichage "auto: N"
-    const autoCounts = getTeamTagCounts();
 
-    conditionsInputs.innerHTML = tags
-      .map((tag) => {
-        const userVal = state.conditions[tag] ?? 0;
-        const autoVal = autoCounts[tag] || 0;
-        const effective = Math.max(userVal, autoVal);
-        let seuils = [];
-        state.team.forEach((slot) => {
-          if (!slot.character) return;
-          slot.items.forEach((it) => {
-            if (!it) return;
-            it.lignes.forEach((l) => {
-              if (l.condition && l.condition.tag_requis === tag) seuils.push(l.condition.seuil);
-            });
-          });
+    // Bilan lisible sans ouvrir le panneau
+    const tous = [...effets.values()];
+    const nbActifs = tous.filter((e) => e.actif).length;
+    if (conditionsStatus) {
+      conditionsStatus.innerHTML =
+        `<span class="cs-badge is-on">${T('cond.badge.on', { n: nbActifs })}</span>` +
+        (tous.length > nbActifs ? `<span class="cs-badge is-off">${T('cond.badge.off', { n: tous.length - nbActifs })}</span>` : "");
+    }
+
+    const occupes = [0, 1, 2, 3, 4, 5].filter((i) => state.team[i].character);
+    const groupes = new Map();
+    tous.forEach((e) => { if (!groupes.has(e.cle)) groupes.set(e.cle, []); groupes.get(e.cle).push(e); });
+
+    conditionsInputs.innerHTML = [...groupes.values()]
+      // Ordre stable (catégorie puis nom) : un groupe ne bouge pas quand on simule.
+      .sort((a, b) => a[0].cle.localeCompare(b[0].cle, "fr"))
+      .map((liste) => {
+        const tags = liste[0].tags;
+        const { cat } = splitCondTag(tags[0]);
+        const nom = [...new Set(tags.map((t) => splitCondTag(t).nom))].join(" / ");
+        const porteurs = occupes.filter((i) => {
+          const cles = clesDeTags(state.team[i].character);
+          return tags.some((t) => cles.has(t));
         });
-        const maxSeuil = seuils.length ? Math.max(...seuils) : 0;
-        const ok = effective >= maxSeuil;
-        return `
-          <div class="cond-row">
-            <div class="cond-info">
-              <div class="cond-label">${T('cond.inteam', { tag })} ${ok ? "<span class='cond-ok'>✓</span>" : "<span class='cond-ko'>✗</span>"}</div>
-              <div class="cond-hint">${T('cond.auto')} <strong>${autoVal}</strong> · ${T('cond.threshold')} ${maxSeuil}</div>
-            </div>
-            <input type="number" min="0" max="6" value="${userVal}" data-tag="${tag}" title="Override manuel (compte effectif = max(auto, manuel))" />
-          </div>
-        `;
-      })
-      .join("");
+        const trios = [0, 1].map((tr) => {
+          const ici = porteurs.filter((i) => trioOf(i) === tr);
+          const noms = ici.map((i) => `${state.team[i].character.nom.trim()} (${state.team[i].character.cardCode})`).join(", ");
+          return `<span class="cg-trio"${noms ? ` title="${escAttr(noms)}"` : ""}>${trioLabel(tr)} <b>${ici.length}</b></span>`;
+        }).join("");
+        const simu = Math.max(...tags.map((t) => state.conditions[t] || 0));
+
+        const lignes = liste.map((e) => {
+          const p = state.team[e.slot].character;
+          const regle = e.parMembre ? T('cond.need.permember') : T('cond.need.threshold', { n: e.seuil });
+          const statut = !e.actif
+            ? `<span class="ce-status is-off">${T('cond.status.missing', { n: e.seuil - e.valeur })}</span>`
+            : e.parMembre
+              ? `<span class="ce-status is-mult">× ${Math.min(e.valeur, 6)}</span>`
+              : `<span class="ce-status is-on">${T('cond.status.on')}</span>`;
+          const bonus = e.lignes.map((l) => `<span>+${fmtDec(l.valeur_max.toFixed(2))}% ${statLabel(l.stat)}</span>`).join("");
+          return `<li class="ce-row${e.actif ? "" : " is-inactive"}">` +
+            `<span class="ce-who"><b>${escAttr(p.nom.trim())}</b><small>${escAttr(p.cardCode || "")} · ${trioLabel(trioOf(e.slot))}</small></span>` +
+            `<span class="ce-item">${escAttr(e.item.nom.trim())}</span>` +
+            `<span class="ce-effect">${bonus}</span>` +
+            `<span class="ce-rule">${regle}${e.simule ? ` <em>${T('cond.simulated')}</em>` : ""}</span>` +
+            statut +
+            `</li>`;
+        }).join("");
+
+        return `<section class="cg">` +
+          `<header class="cg-head">` +
+            `<span class="cg-title">${cat ? `<span class="cg-cat">${escAttr(cat)}</span>` : ""}<span class="cg-name">${escAttr(nom)}</span></span>` +
+            `<span class="cg-trios">${trios}</span>` +
+            `<label class="cg-sim" title="${T('cond.simulate.title')}">${T('cond.simulate')}` +
+              `<input type="number" min="0" max="6" placeholder="–" value="${simu || ""}" data-tags="${escAttr(tags.join("\n"))}" /></label>` +
+          `</header>` +
+          `<ul class="ce-list">${lignes}</ul>` +
+          `</section>`;
+      }).join("");
   }
 
+  // Simulation : la valeur s'applique à chaque tag du groupe (« Vert / Violet »),
+  // pour qu'une condition « à la fois » puisse aussi être simulée.
   conditionsInputs.addEventListener("input", (e) => {
-    const input = e.target.closest("input[data-tag]");
+    const input = e.target.closest("input[data-tags]");
     if (!input) return;
+    const cle = input.dataset.tags;
     const v = parseInt(input.value, 10);
-    state.conditions[input.dataset.tag] = isNaN(v) ? 0 : v;
+    cle.split("\n").forEach((t) => { state.conditions[t] = isNaN(v) ? 0 : Math.max(0, Math.min(6, v)); });
     renderTeamGrid();
     renderResults();
+    // Redessin pour mettre les statuts à jour, en rendant le focus au champ saisi.
+    renderConditions();
+    const champ = [...conditionsInputs.querySelectorAll("input[data-tags]")].find((x) => x.dataset.tags === cle);
+    if (champ) {
+      champ.focus();
+      if (champ.value !== input.value) champ.value = input.value;   // garde « 0 » ou « » tel que tapé
+    }
   });
 
   // ===== RENDU : RÉSULTATS =====
