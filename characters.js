@@ -1,6 +1,6 @@
 // Auto-généré par scrape_chars.js — ne pas éditer à la main.
 // Source : fr.dblegends.net/characters
-// 500 personnages, généré le 2026-09-16T19:28:47.649Z
+// 500 personnages, généré le 2026-09-20T11:20:45.644Z
 
 window.DBL_CHARACTERS_SCRAPED = [
   {
@@ -225,6 +225,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -452,6 +453,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -683,6 +685,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -912,6 +915,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -1151,6 +1155,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -1378,6 +1383,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -1585,6 +1591,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -1811,6 +1818,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -2036,6 +2044,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -2261,6 +2270,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -2487,6 +2497,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -2702,6 +2713,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50740000",
+      "nom": "Résonance de la puissance (Généalogie maléfique)",
+      "tag": "Généalogie maléfique",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Généalogie maléfique combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -2921,6 +2959,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50735000",
+      "nom": "Résonance de la puissance (Saiyan)",
+      "tag": "Saiyan",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Saiyan combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -3153,6 +3218,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50729000",
+      "nom": "Résonance de la puissance (Guerrier fusionné)",
+      "tag": "Guerrier fusionné",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Guerrier fusionné combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -3370,6 +3462,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50721000",
+      "nom": "Résonance de la puissance (Futur)",
+      "tag": "Futur",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Futur combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -3585,6 +3704,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50716000",
+      "nom": "Résonance de la puissance (Régénération)",
+      "tag": "Régénération",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Régénération combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -3801,6 +3947,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50712000",
+      "nom": "Résonance de la puissance (GT)",
+      "tag": "GT",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque GT combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -4019,6 +4192,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50704000",
+      "nom": "Résonance de la puissance (Futur)",
+      "tag": "Futur",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes placé en leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Futur combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -4235,6 +4435,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50700000",
+      "nom": "Résonance de la puissance (GT)",
+      "tag": "GT",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque GT combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -4451,6 +4678,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50694000",
+      "nom": "Résonance de la puissance (Généalogie maléfique)",
+      "tag": "Généalogie maléfique",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Généalogie maléfique combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -4666,6 +4920,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50680000",
+      "nom": "Résonance de la puissance (Saiyan)",
+      "tag": "Saiyan",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "▼Si vous êtes leader :\n· Dégâts infligés +30% (annulation impossible)\n· Vitesse de régénération du Ki +30% (annulation impossible)\n▼Si vous n'êtes pas leader, pour chaque Saiyan combattant de l'équipe ou unité de soutien :\n· Dégâts infligés +5% (annulation impossible)\n· Vitesse de régénération du Ki +5% (annulation impossible)\n*Jusqu'à 3 unités de soutien sont prises en compte"
+    },
     "isZenkai": false
   },
   {
@@ -4792,6 +5073,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50666000",
+      "nom": "Résonance de la puissance (Cyborg)",
+      "tag": "Cyborg",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Cyborg » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -4916,6 +5224,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50656000",
+      "nom": "Résonance de la puissance (Saiyan métis)",
+      "tag": "Saiyan métis",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Saiyan métis » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5040,6 +5375,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50641000",
+      "nom": "Résonance de la puissance (Saga Z - Boo)",
+      "tag": "Saga Z - Boo",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien d'« Épisode : Saga Z - Boo » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5164,6 +5526,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50636000",
+      "nom": "Résonance de la puissance (Saga des films)",
+      "tag": "Saga des films",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien d'« Épisode : Saga des films » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5290,6 +5679,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50621000",
+      "nom": "Résonance de la puissance (Guerrier fusionné)",
+      "tag": "Guerrier fusionné",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Guerrier fusionné » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5415,6 +5831,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50603000",
+      "nom": "Résonance de la puissance (Ennemi puissant)",
+      "tag": "Ennemi puissant",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Ennemi puissant » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5539,6 +5982,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50599000",
+      "nom": "Résonance de la puissance (Saiyan métis)",
+      "tag": "Saiyan métis",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Saiyan métis » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5666,6 +6136,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50586000",
+      "nom": "Résonance de la puissance (Représentant d'Univers)",
+      "tag": "Représentant d'Univers",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Représentant d'Univers » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5741,6 +6238,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50572000",
+      "nom": "Résonance de la puissance (Régénération)",
+      "tag": "Régénération",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Régénération » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5869,6 +6393,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50554000",
+      "nom": "Résonance de la puissance (Guerrier fusionné)",
+      "tag": "Guerrier fusionné",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Guerrier fusionné » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -5994,6 +6545,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50538000",
+      "nom": "Résonance de la puissance (Régénération)",
+      "tag": "Régénération",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Régénération » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -6122,6 +6700,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50532000",
+      "nom": "Résonance de la puissance (Futur)",
+      "tag": "Futur",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Futur » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -6248,6 +6853,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50511000",
+      "nom": "Résonance de la puissance (Représentant d'Univers)",
+      "tag": "Représentant d'Univers",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Représentant d'Univers » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -6374,6 +7006,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50508000",
+      "nom": "Résonance de la puissance (Guerrier fusionné)",
+      "tag": "Guerrier fusionné",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Guerrier fusionné » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -6499,6 +7158,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50495000",
+      "nom": "Résonance de la puissance (Saga des films)",
+      "tag": "Saga des films",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien d'« Épisode : Saga des films » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -6625,6 +7311,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50487000",
+      "nom": "Résonance de la puissance (Guerrier fusionné)",
+      "tag": "Guerrier fusionné",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Guerrier fusionné » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -6753,6 +7466,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50468000",
+      "nom": "Résonance de la puissance (Saga Super - Survie de l'Univers)",
+      "tag": "Saga Super - Survie de l'Univers",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien « Épisode : Saga Super - Survie de l'Univers » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -6880,6 +7620,33 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50454000",
+      "nom": "Résonance de la puissance (Guerrier fusionné)",
+      "tag": "Guerrier fusionné",
+      "cible": "soi",
+      "leader": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 30
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 30
+        }
+      ],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        },
+        {
+          "stat": "vitesse_regen_ki_de_base",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :\n- Augmente de 30% vos dégâts infligés (annulation impossible).\n- Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).\nAu début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Guerrier fusionné » :\n- Augmente de 5% vos dégâts infligés (annulation impossible).\n- Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).\n*Pour les unités de soutien, seul un maximum de 3 personnages est pris en compte."
+    },
     "isZenkai": false
   },
   {
@@ -7033,6 +7800,20 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50443000",
+      "nom": "Résonance de la puissance (GT)",
+      "tag": "GT",
+      "cible": "allies",
+      "leader": [],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 5
+        }
+      ],
+      "texteBrut": "Au début du combat, augmente les dégâts infligés par les alliés de 5% par combattant de l'équipe de « Classe : GT » (annulation impossible).\nDe plus, augmente de 10% vos dégâts infligés par unité de soutien de « Classe : GT » (30% max) (annulation impossible)."
+    },
     "isZenkai": false
   },
   {
@@ -7181,6 +7962,20 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50400000",
+      "nom": "Résonance de la puissance (Saga Z - Freezer)",
+      "tag": "Saga Z - Freezer",
+      "cible": "soi",
+      "leader": [],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 10
+        }
+      ],
+      "texteBrut": "Au début du combat, augmente de 10% vos dégâts infligés par combattant de l'équipe d'« Épisode : Saga Z - Freezer » (annulation impossible).\nDe plus, augmente de 10% vos dégâts infligés par unité de soutien d'« Épisode : Saga Z - Freezer » (30% max) (annulation impossible)."
+    },
     "isZenkai": false
   },
   {
@@ -7330,6 +8125,20 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": {
+      "paneId": "50385000",
+      "nom": "Résonance de la puissance (Saiyan)",
+      "tag": "Saiyan",
+      "cible": "soi",
+      "leader": [],
+      "parMembre": [
+        {
+          "stat": "degats_infliges",
+          "valeur": 15
+        }
+      ],
+      "texteBrut": "Au début du combat, augmente de 15% vos dégâts infligés par combattant de l'équipe de « Classe : Saiyan » (annulation impossible).\nDe plus, augmente de 15% vos dégâts infligés par unité de soutien de « Classe : Saiyan » (45% max) (annulation impossible)."
+    },
     "isZenkai": false
   },
   {
@@ -7458,6 +8267,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -7623,6 +8433,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -7838,6 +8649,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -8051,6 +8863,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -8214,6 +9027,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -8440,6 +9254,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -8610,6 +9425,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -8836,6 +9652,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -9001,6 +9818,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -9225,6 +10043,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -9450,6 +10269,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -9675,6 +10495,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -9839,6 +10660,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -10053,6 +10875,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -10218,6 +11041,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -10446,6 +11270,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -10660,6 +11485,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -10886,6 +11712,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -11053,6 +11880,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -11299,6 +12127,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -11537,6 +12366,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -11763,6 +12593,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -12002,6 +12833,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -12246,6 +13078,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -12471,6 +13304,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -12695,6 +13529,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -12910,6 +13745,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -13135,6 +13971,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -13361,6 +14198,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -13585,6 +14423,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -13810,6 +14649,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -14037,6 +14877,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -14267,6 +15108,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -14433,6 +15275,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -14659,6 +15502,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -14882,6 +15726,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -15110,6 +15955,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -15338,6 +16184,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -15568,6 +16415,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -15794,6 +16642,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -15960,6 +16809,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -16182,6 +17032,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -16407,6 +17258,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -16630,6 +17482,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -16852,6 +17705,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -17079,6 +17933,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -17300,6 +18155,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -17525,6 +18381,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -17689,6 +18546,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -17897,6 +18755,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -18109,6 +18968,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -18317,6 +19177,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -18413,6 +19274,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -18567,6 +19429,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -18778,6 +19641,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -18988,6 +19852,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -19142,6 +20007,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -19351,6 +20217,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -19565,6 +20432,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -19775,6 +20643,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -19989,6 +20858,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -20155,6 +21025,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -20253,6 +21124,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -20752,6 +21624,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois PUR et DAIMA :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -21264,6 +22137,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et DAIMA :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -21470,6 +22344,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -21566,6 +22441,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -21719,6 +22595,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -21886,6 +22763,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -22103,6 +22981,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -22316,6 +23195,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -22524,6 +23404,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -22737,6 +23618,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -22882,6 +23764,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -23094,6 +23977,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -23260,6 +24144,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -23755,6 +24640,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : DAIMA » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -24254,6 +25140,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois YEL et Saga Z - Boo :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -24466,6 +25353,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -24619,6 +25507,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -24822,6 +25711,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -25024,6 +25914,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -25226,6 +26117,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -25428,6 +26320,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -25609,6 +26502,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -25762,6 +26656,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -25970,6 +26865,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -26181,6 +27077,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -26347,6 +27244,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -26549,6 +27447,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -26703,6 +27602,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -26886,6 +27786,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -26984,6 +27885,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -27081,6 +27983,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -27234,6 +28137,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -27389,6 +28293,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -27597,6 +28502,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -27806,6 +28712,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -28015,6 +28922,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -28227,6 +29135,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -28380,6 +29289,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -28533,6 +29443,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -28736,6 +29647,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -28810,6 +29722,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -28910,6 +29823,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -29128,6 +30042,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -29339,6 +30254,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -29431,6 +30347,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -29638,6 +30555,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -29789,6 +30707,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -30000,6 +30919,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -30509,6 +31429,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois YEL et GT :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -30662,6 +31583,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -30864,6 +31786,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -31370,6 +32293,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et Lignée royale Vegeta :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -31525,6 +32449,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -31621,6 +32546,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -31777,6 +32703,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -31981,6 +32908,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -32191,6 +33119,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -32344,6 +33273,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -32554,6 +33484,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -33061,6 +33992,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois BLU et GT :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -33215,6 +34147,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -33726,6 +34659,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois BLU et Saiyan :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -33880,6 +34814,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -34048,6 +34983,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -34229,6 +35165,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -34409,6 +35346,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -34574,6 +35512,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -34785,6 +35724,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -34885,6 +35825,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -35037,6 +35978,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -35165,6 +36107,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -35315,6 +36258,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -35468,6 +36412,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -35564,6 +36509,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -35773,6 +36719,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -35889,6 +36836,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -36096,6 +37044,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -36306,6 +37255,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -36515,6 +37465,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -36729,6 +37680,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -36943,6 +37895,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -37156,6 +38109,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -37307,6 +38261,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -37403,6 +38358,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -37611,6 +38567,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -38124,6 +39081,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois PUR et Futur :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -38276,6 +39234,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -38400,6 +39359,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -38614,6 +39574,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -38824,6 +39785,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -39030,6 +39992,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -39181,6 +40144,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -39333,6 +40297,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -39488,6 +40453,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -39641,6 +40607,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -39854,6 +40821,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -39948,6 +40916,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -40044,6 +41013,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -40262,6 +41232,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -40678,6 +41649,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente les stats comme suit :\n- Augmente de 20% l'attaque physique de base.\n- Augmente de 20% l'attaque d'énergie de base.\n- Augmente de 20% la défense physique de base.\n- Augmente de 20% la défense d'énergie de base.\n[Personnages ciblés]\n- Personnages étant à la fois « Attribut : Bleu » et « Classe : Famille Goku »\nOu\n- Personnages étant à la fois « Attribut : Bleu » et « Classe : Lignée royale Vegeta »"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -40795,6 +41767,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -40891,6 +41864,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -41019,6 +41993,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -41173,6 +42148,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -41267,6 +42243,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -41779,6 +42756,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois GRN et Représentant d'Univers :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -41937,6 +42915,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -42169,6 +43148,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -42286,6 +43266,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -42463,6 +43444,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -42561,6 +43543,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -42713,6 +43696,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -42868,6 +43852,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -42964,6 +43949,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -43480,6 +44466,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois YEL et Saiyan métis :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -43576,6 +44563,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -43730,6 +44718,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -43882,6 +44871,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -44090,6 +45080,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -44298,6 +45289,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -44416,6 +45408,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -44491,6 +45484,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -44970,6 +45964,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois PUR et Généalogie maléfique :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -45382,6 +46377,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Saiyan métis » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -45888,6 +46884,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et Saga des films :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -46057,6 +47054,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -46188,6 +47186,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -46400,6 +47399,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -46488,6 +47488,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -46561,6 +47562,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -46686,6 +47688,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -46854,6 +47857,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -47030,6 +48034,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -47442,6 +48447,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -47619,6 +48625,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -47796,6 +48803,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -47974,6 +48982,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -48141,6 +49150,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -48298,6 +49308,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -48393,6 +49404,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -48488,6 +49500,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -48672,6 +49685,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -48885,6 +49899,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -49036,6 +50051,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -49159,6 +50175,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -49237,6 +50254,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -49387,6 +50405,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -49537,6 +50556,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -49663,6 +50683,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -50044,6 +51065,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Ennemi puissant » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -50193,6 +51215,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -50699,6 +51722,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois BLU et Généalogie maléfique :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -51108,6 +52132,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Épisode : Saga Z - Freezer » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -51605,6 +52630,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Saiyan » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -51755,6 +52781,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -52263,6 +53290,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois GRN et Futur :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -52625,6 +53653,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Lignée royale Vegeta » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -52802,6 +53831,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -53333,6 +54363,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente les stats comme suit :\n- Augmente de 20% l'attaque physique de base.\n- Augmente de 20% l'attaque d'énergie de base.\n- Augmente de 20% la défense physique de base.\n- Augmente de 20% la défense d'énergie de base.\n[Personnages ciblés]\n- Personnages étant à la fois « Attribut : Violet » et « Classe : Famille Goku »\nou\n- Personnages étant à la fois « Attribut : Violet » et « Classe : Lignée royale Vegeta »"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -53479,6 +54510,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -53643,6 +54675,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -53728,6 +54761,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -54195,6 +55229,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Famille Goku » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -54662,6 +55697,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Ennemi puissant » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -55130,6 +56166,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Ennemi puissant » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -55286,6 +56323,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -55725,6 +56763,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Représentant d'Univers » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -56088,6 +57127,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Lignée royale Vegeta » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -56231,6 +57271,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -56393,6 +57434,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -56842,6 +57884,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -57309,6 +58352,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Ennemi puissant » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -57487,6 +58531,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -57976,6 +59021,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et Saga des films :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -58484,6 +59530,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois PUR et Saiyan métis :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -58650,6 +59697,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -58816,6 +59864,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -58971,6 +60020,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -59126,6 +60176,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -59280,6 +60331,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -59435,6 +60487,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -59589,6 +60642,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -59743,6 +60797,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -59834,6 +60889,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -60302,6 +61358,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois PUR et Guerrier fusionné :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -60771,6 +61828,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Ki divin » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -61239,6 +62297,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Guerrier fusionné » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -61416,6 +62475,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -61890,6 +62950,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois BLU et Représentant d'Univers :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -62353,6 +63414,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Saiyan » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -62517,6 +63579,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -62952,6 +64015,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Futur » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -63416,6 +64480,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Futur » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -63597,6 +64662,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -63996,6 +65062,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Ennemi puissant » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -64175,6 +65242,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -64322,6 +65390,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -64812,6 +65881,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Ennemi puissant » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -65316,6 +66386,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois YEL et Futur :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -65464,6 +66535,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -65579,6 +66651,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -66031,6 +67104,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "RED et Généalogie maléfique :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -66493,6 +67567,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -66947,6 +68022,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Représentant d'Univers » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -67095,6 +68171,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -67242,6 +68319,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -67415,6 +68493,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -67849,6 +68928,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Épisode : Saga des films » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -68297,6 +69377,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Lignée royale Vegeta » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -68730,6 +69811,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Cyborg » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -68878,6 +69960,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -69026,6 +70109,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -69503,6 +70587,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et Représentant d'Univers :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -69598,6 +70683,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -70032,6 +71118,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Univers rival » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -70179,6 +71266,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -70664,6 +71752,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois YEL et Saga des films :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -70815,6 +71904,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -71254,6 +72344,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois GRN et DB :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -71695,6 +72786,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga Z - Boo » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -71791,6 +72883,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -72193,6 +73286,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -72628,6 +73722,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -73092,6 +74187,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Ki divin » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -73241,6 +74337,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -73710,6 +74807,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Ki divin » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -74144,6 +75242,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Futur » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -74293,6 +75392,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -74746,6 +75846,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et Saga Z - Boo :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -74892,6 +75993,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -75040,6 +76142,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -75183,6 +76286,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -75648,6 +76752,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et Saiyan :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -76045,6 +77150,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Armée de Freezer » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -76192,6 +77298,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -76594,6 +77701,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Univers rival » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -76741,6 +77849,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -77233,6 +78342,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Cyborg » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -77669,6 +78779,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Cyborg » :\n- Augmente de 20% l'attaque physique de base.\n- Augmente de 25% l'attaque d'énergie de base.\n- Augmente de 25% la défense physique de base.\n- Augmente de 20% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -78074,6 +79185,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Cyborg » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -78508,6 +79620,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Cyborg » :\n- Augmente de 20% l'attaque physique de base.\n- Augmente de 25% l'attaque d'énergie de base.\n- Augmente de 20% la défense physique de base.\n- Augmente de 25% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -78628,6 +79741,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -79072,6 +80186,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Futur » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -79505,6 +80620,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Saiyan métis » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -79913,6 +81029,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Représentant d'Univers » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -80318,6 +81435,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -80721,6 +81839,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -81124,6 +82243,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Épisode : Saga des films » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -81602,6 +82722,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois BLU et Lignée royale Vegeta :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -82079,6 +83200,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois PUR et Saga des films :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -82547,6 +83669,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -82947,6 +84070,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Saiyan » :\n- Augmente de 25% l'attaque physique de base.\n- Augmente de 25% l'attaque d'énergie de base.\n- Augmente de 20% la défense physique de base.\n- Augmente de 20% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -83349,6 +84473,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Armée de Freezer » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -83774,6 +84899,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -83973,6 +85099,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -84400,6 +85527,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -84895,6 +86023,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois YEL et GT :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -85299,6 +86428,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Lignée royale Vegeta » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -85703,6 +86833,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -85821,6 +86952,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -85937,6 +87069,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -86387,6 +87520,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Ki divin » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -86822,6 +87956,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Ennemi puissant » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -86965,6 +88100,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -87144,6 +88280,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -87291,6 +88428,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -87693,6 +88831,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Futur » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -87835,6 +88974,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -87977,6 +89117,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -88374,6 +89515,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Épisode : Saga des films » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -88474,6 +89616,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -88921,6 +90064,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Régénération » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -89353,6 +90497,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga Z - Les Saiyans » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -89795,6 +90940,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Saiyan » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -89914,6 +91060,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -90028,6 +91175,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -90172,6 +91320,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -90575,6 +91724,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Épisode : Saga des films » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -91032,6 +92182,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Cyborg » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -91493,6 +92644,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : GT » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -91927,6 +93079,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -92045,6 +93198,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -92523,6 +93677,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois YEL et Représentant d'Univers :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +35%\n· Défense physique de base +40%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -92926,6 +94081,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Ki divin » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -93078,6 +94234,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -93246,6 +94403,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -93414,6 +94572,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -93583,6 +94742,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -93701,6 +94861,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -93843,6 +95004,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -94262,6 +95424,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Saiyan » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -94710,6 +95873,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Saiyan » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -95091,6 +96255,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Généalogie maléfique » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -95472,6 +96637,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Généalogie maléfique » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -95900,6 +97066,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Ki divin » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -96329,6 +97496,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Ki divin » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -96471,6 +97639,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -96878,6 +98047,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Legends Road » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 30% la défense physique de base.\n- Augmente de 30% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -97280,6 +98450,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Généalogie maléfique » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -97708,6 +98879,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Épisode : Saga des films » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -98137,6 +99309,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Épisode : Saga des films » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -98539,6 +99712,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Super Saiyan » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -98943,6 +100117,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Famille Goku » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -99057,6 +100232,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -99504,6 +100680,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois PUR et Régénération :\n· Attaque physique de base +40%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +35%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -99907,6 +101084,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Guerrier fusionné » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -100079,6 +101257,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -100486,6 +101665,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des « Classe : Legends Road » :\n- Augmente de 20% l'attaque physique de base.\n- Augmente de 20% l'attaque d'énergie de base.\n- Augmente de 25% la défense physique de base.\n- Augmente de 25% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -100915,6 +102095,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -101318,6 +102499,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Famille Goku » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -101722,6 +102904,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Cyborg » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -102150,6 +103333,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Régénération » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -102266,6 +103450,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -102721,6 +103906,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Saiyan » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -103122,6 +104308,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Saiyan métis » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -103551,6 +104738,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Ki divin » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -103666,6 +104854,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -103786,6 +104975,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -103972,6 +105162,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -104158,6 +105349,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -104598,6 +105790,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "À la fois RED et DB :\n· Attaque physique de base +35%\n· Attaque d'énergie de base +40%\n· Défense physique de base +35%\n· Défense d'énergie de base +40%"
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -104739,6 +105932,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -105166,6 +106360,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : DB » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -105593,6 +106788,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : DB » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -105737,6 +106933,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -106143,6 +107340,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Univers rival » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -106550,6 +107748,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des « Classe : Legends Road » :\n- Augmente de 25% l'attaque physique de base.\n- Augmente de 25% l'attaque d'énergie de base.\n- Augmente de 20% la défense physique de base.\n- Augmente de 20% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -106978,6 +108177,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Généalogie maléfique » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -107121,6 +108321,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -107550,6 +108751,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Ki divin » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -107645,6 +108847,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -108073,6 +109276,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Épisode : Saga des films » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -108240,6 +109444,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -108382,6 +109587,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -108455,6 +109661,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -108575,6 +109782,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -108973,6 +110181,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Généalogie maléfique » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -109400,6 +110609,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Saiyan » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -109760,6 +110970,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Épisode : Saga Z - Boo » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -110188,6 +111399,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Ennemi puissant » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -110618,6 +111830,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Guerrier fusionné » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -111019,6 +112232,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Épisode : Saga des films » :\n- Augmente de 25% l'attaque physique de base.\n- Augmente de 20% l'attaque d'énergie de base.\n- Augmente de 25% la défense physique de base.\n- Augmente de 20% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -111473,6 +112687,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga Z - Boo » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -111617,6 +112832,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -112024,6 +113240,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Lignée royale Vegeta » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -112168,6 +113385,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -112312,6 +113530,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -112712,6 +113931,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Guerrier fusionné » :\n- Augmente de 20% l'attaque physique de base.\n- Augmente de 20% l'attaque d'énergie de base.\n- Augmente de 25% la défense physique de base.\n- Augmente de 25% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -112883,6 +114103,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -113026,6 +114247,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -113432,6 +114654,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Univers rival » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -113835,6 +115058,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Futur » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -114235,6 +115459,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Futur » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -114694,6 +115919,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga Z - Les Saiyans » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -115097,6 +116323,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Futur » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -115214,6 +116441,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -115265,6 +116493,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -115693,6 +116922,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Régénération » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -116074,6 +117304,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Saiyan » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -116474,6 +117705,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Saiyan métis » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -116835,6 +118067,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Saiyan métis » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -117237,6 +118470,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Régénération » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -117407,6 +118641,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -117578,6 +118813,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -118005,6 +119241,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Ennemi puissant » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -118403,6 +119640,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Cyborg » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -118804,6 +120042,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Régénération » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -119164,6 +120403,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Saiyan » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -119260,6 +120500,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -119435,6 +120676,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -119834,6 +121076,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -120234,6 +121477,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Régénération » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -120347,6 +121591,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -120776,6 +122021,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : GT » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -121244,6 +122490,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des « Classe : Legends Road » :\n- Augmente de 25% l'attaque physique de base.\n- Augmente de 20% l'attaque d'énergie de base.\n- Augmente de 25% la défense physique de base.\n- Augmente de 20% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -121643,6 +122890,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga des films » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -122046,6 +123294,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Univers rival » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -122501,6 +123750,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Cyborg » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -122959,6 +124209,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Cyborg » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -123031,6 +124282,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -123105,6 +124357,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -123221,6 +124474,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -123677,6 +124931,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Ennemi puissant » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -124078,6 +125333,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Saiyan métis » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -124252,6 +125508,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -124372,6 +125629,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -124774,6 +126032,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Classe : Famille Goku » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 40% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -124914,6 +126173,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -125323,6 +126583,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Jaune » et « Classe : Ennemi puissant » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -125464,6 +126725,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   },
   {
@@ -125864,6 +127126,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Rouge » et « Classe : Saiyan » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 35% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -126268,6 +127531,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Bleu » et « Épisode : Saga Z - Freezer » :\n- Augmente de 20% l'attaque physique de base.\n- Augmente de 20% l'attaque d'énergie de base.\n- Augmente de 25% la défense physique de base.\n- Augmente de 25% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -126671,6 +127935,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Violet » et « Classe : Saiyan » :\n- Augmente de 40% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 35% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -127071,6 +128336,7 @@ window.DBL_CHARACTERS_SCRAPED = [
         "texteBrut": "Lors d'un combat, augmente comme suit les stats des personnages étant à la fois « Attribut : Vert » et « Classe : Régénération » :\n- Augmente de 35% l'attaque physique de base.\n- Augmente de 40% l'attaque d'énergie de base.\n- Augmente de 35% la défense physique de base.\n- Augmente de 40% la défense d'énergie de base."
       }
     ],
+    "zAbilityUltra": null,
     "isZenkai": true
   },
   {
@@ -127185,6 +128451,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       }
     ],
     "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
     "isZenkai": false
   }
 ];

@@ -174,6 +174,13 @@
     'z.leadertitle':   { fr: 'Activé via le privilège Leader', en: 'Activated via Leader privilege' },
     'z.capz.label':    { fr: 'Cap. Z',               en: 'Z Abi.' },
     'z.zenkai.label':  { fr: 'Cap. Z Zenkai IV (max)', en: 'Zenkai Z Abi. IV (max)' },
+    // Résonance de la puissance : la Cap Z propre aux ULTRA
+    'z.ultra.label':       { fr: 'Résonance de la puissance', en: 'Power Resonance' },
+    'z.ultra.chip.leader': { fr: '⚡ Résonance · leader',     en: '⚡ Resonance · leader' },
+    'z.ultra.chip.count':  { fr: '⚡ Résonance × {n}',        en: '⚡ Resonance × {n}' },
+    'z.ultra.asleader':    { fr: 'en leader : valeurs pleines', en: 'as leader: full values' },
+    'z.ultra.permember':   { fr: '{n} « {tag} » dans l’équipe', en: '{n} “{tag}” in the team' },
+    'z.ultra.none':        { fr: 'aucun porteur du tag dans l’équipe', en: 'no character with the tag in the team' },
 
     // ── Dynamique : bilan Cap Z ──────────────────
     'z.total.label':   { fr: 'Total global équipe',    en: 'Team grand total' },

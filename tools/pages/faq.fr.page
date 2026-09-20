@@ -34,6 +34,9 @@
 <h2>Quelle différence entre Cap Z et Cap Z Zenkai&nbsp;?</h2>
 <p>La Cap Z classique se débloque par paliers (I à IV). Un personnage passé en Zenkai obtient en plus une Cap Z Zenkai, qui s’ajoute à la première. L’optimiseur compte la Cap Z classique au palier que tu choisis et la Cap Z Zenkai à son maximum (voir le <a href="/guide-cap-z.html">guide des Cap Z</a>).</p>
 
+<h2>Qu’est-ce que la Résonance de la puissance&nbsp;?</h2>
+<p>C’est la capacité propre aux personnages <strong>ULTRA</strong>, liée à un tag. Si l’ULTRA est Leader, il reçoit les valeurs pleines (souvent +30 % de Dégâts infligés et de Vitesse de régénération du Ki) ; sinon, le bonus est multiplié par le nombre de combattants de l’équipe portant ce tag. L’outil l’affiche sous le palier Cap Z (« ⚡ Résonance · leader » ou « ⚡ Résonance × N ») et l’inclut dans les bilans. Voir le <a href="/guide-cap-z.html">guide des Cap Z</a>.</p>
+
 <h2>Les calculs sont-ils exacts&nbsp;?</h2>
 <p>L’outil applique les règles connues du jeu : couches de calcul base, pur et direct, conditions de tags, propagation des Cap Z et privilège du Leader. Certains effets ne sont pas chiffrables (capacités situationnelles, passifs conditionnés au combat) : ils sont listés à part dans « Effets non calculés » plutôt que comptés dans les totaux. De légers écarts avec le jeu restent possibles.</p>
 

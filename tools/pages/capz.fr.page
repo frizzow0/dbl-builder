@@ -21,6 +21,16 @@
 <h2>Les Cap Z Zenkai</h2>
 <p>Un personnage passé en <strong>Zenkai</strong> débloque une <strong>Cap Z supplémentaire</strong>, distincte de sa Cap Z classique. Les deux s’ajoutent : un personnage Zenkai apporte sa Cap Z d’origine <strong>et</strong> sa Cap Z Zenkai. L’optimiseur compte la Cap Z Zenkai à son maximum. C’est ce qui rend les unités Zenkai si recherchées comme soutien d’équipe.</p>
 
+<h2>La Résonance de la puissance (ULTRA)</h2>
+<p>Les personnages <strong>ULTRA</strong> possèdent une capacité supplémentaire qui n’existe que pour eux : la <strong>Résonance de la puissance</strong>. Elle est liée à un tag précis (« Cyborg », « Saiyan », « Saga des films »…) et fonctionne en deux temps :</p>
+<ul>
+  <li><strong>Si l’ULTRA est Leader</strong> — il reçoit les valeurs pleines, le plus souvent +30 % de Dégâts infligés et +30 % de Vitesse de régénération du Ki.</li>
+  <li><strong>Sinon</strong> — le bonus est multiplié par le nombre de combattants de l’équipe portant le tag : en général +5 % par personnage, soit +15 % avec trois porteurs.</li>
+</ul>
+<p>Quelques cartes anciennes n’ont pas de branche Leader et n’ont que le bonus par personnage ; l’une d’elles, Oméga Shenron, le donne à ses alliés plutôt qu’à elle-même.</p>
+<p>Dans DBL Optimizer, une pastille <strong>⚡ Résonance</strong> apparaît sous le palier Cap Z de chaque ULTRA : elle indique « leader » quand les valeurs pleines s’appliquent, ou « × N » avec le nombre de porteurs du tag comptés. Survole-la pour voir les bonus exacts. Tous les bilans en tiennent compte.</p>
+<p>Deux limites à connaître : le décompte porte sur les <strong>six personnages de l’équipe</strong>, pas sur le trio, et les <strong>unités de soutien</strong>, qui comptent aussi en jeu, ne sont pas modélisées par l’outil.</p>
+
 <h2>Les conditions : tags, épisodes, couleurs</h2>
 <p>La plupart des Cap Z ne profitent qu’aux personnages qui remplissent une condition. Ces conditions s’appuient sur les étiquettes du jeu :</p>
 <ul>

@@ -21,6 +21,16 @@
 <h2>Zenkai Z Abilities</h2>
 <p>A character that has been <strong>Zenkai Awakened</strong> unlocks an <strong>extra Z Ability</strong>, separate from its regular one. Both add up: a Zenkai character brings its original Z Ability <strong>and</strong> its Zenkai Z Ability. The optimizer counts the Zenkai Z Ability at its maximum. That is what makes Zenkai units such sought-after team supports.</p>
 
+<h2>Power Resonance (ULTRA only)</h2>
+<p><strong>ULTRA</strong> characters get an extra ability that only they have: <strong>Power Resonance</strong>. It is tied to a specific tag (Cyborg, Saiyan, a movie saga…) and works in two ways:</p>
+<ul>
+  <li><strong>If the ULTRA is the Leader</strong> — it gets the full values, usually +30% Damage Inflicted and +30% Ki Recovery.</li>
+  <li><strong>Otherwise</strong> — the bonus is multiplied by the number of fighters in the team carrying that tag: typically +5% per character, so +15% with three carriers.</li>
+</ul>
+<p>A few older cards have no Leader branch and only keep the per-character bonus; one of them, Omega Shenron, gives it to its allies instead of itself.</p>
+<p>In DBL Optimizer, a <strong>⚡ Resonance</strong> badge appears under each ULTRA’s Z Ability level: it reads “leader” when the full values apply, or “× N” with the number of tag carriers counted. Hover it to see the exact bonuses. Every summary takes it into account.</p>
+<p>Two limits worth knowing: the count covers the <strong>six characters of your team</strong>, not the trio, and <strong>support units</strong>, which also count in game, are not modelled by the tool.</p>
+
 <h2>Conditions: tags, episodes, colors</h2>
 <p>Most Z Abilities only benefit characters that meet a condition, based on the game’s labels:</p>
 <ul>

@@ -869,8 +869,64 @@
         const lignes = mergeZLines(sender.character.zAbilitiesZenkai, 4);
         if (lignes.length) pushZItem(lignes, `${T('z.capz.label')} Zenkai`, "zenkai", 4);
       }
+      // 3) Résonance de la puissance (ULTRA) : ses propres règles, ni condition
+      //    de tags du receveur, ni privilège du leader — cf. resonanceDe().
+      const reso = resonanceDe(i);
+      if (reso && reso.lignes.length && (reso.cible === "allies" || i === targetSlotIdx)) {
+        items.push({
+          id: `_z_ultra_${i}`,
+          nom: i === targetSlotIdx
+            ? `${T('z.ultra.label')} (${T('item.self')})`
+            : `${T('z.ultra.label')} — ${sender.character.nom.trim()}`,
+          isVirtual: true,
+          isZBonus: true,
+          kind: "ultra",
+          sourceSlot: i,
+          tier: 4,
+          lignes: reso.lignes,
+          lignesAll: reso.lignes,
+          tagsPorteur: [],
+        });
+      }
     }
     return items;
+  }
+
+  // ── Résonance de la puissance (la « Cap Z ULTRA ») ────────────────────────
+  // Réservée aux ULTRA. En leader, le porteur reçoit les valeurs pleines ;
+  // sinon, le bonus est multiplié par le nombre de combattants de L'ÉQUIPE
+  // (les 6, pas seulement le trio) portant le tag de la résonance. Les unités
+  // de soutien du jeu, absentes de l'outil, ne sont pas comptées. Le bonus va
+  // au porteur, sauf pour les rares résonances « alliés » qui le donnent à
+  // toute l'équipe. Renvoie aussi de quoi l'expliquer dans l'interface.
+  function resonanceDe(slotIdx) {
+    const c = state.team[slotIdx] && state.team[slotIdx].character;
+    const r = c && c.zAbilityUltra;
+    if (!r) return null;
+    const estLeader = slotIdx === effectiveLeaderSlot();
+    const parLeader = estLeader && r.leader.length > 0;
+    const porteurs = state.team.filter((s) => s.character && clesDeTags(s.character).has(r.tag)).length;
+    const facteur = parLeader ? 1 : porteurs;
+    const lignes = (parLeader ? r.leader : r.parMembre)
+      .map((l) => ({ stat: l.stat, valeur_min: l.valeur * facteur, valeur_max: l.valeur * facteur, condition: null }))
+      .filter((l) => l.valeur_max > 0);
+    return { ...r, estLeader, parLeader, porteurs, facteur, lignes };
+  }
+
+  // Pastille « Résonance » sur la carte d'un ULTRA : état actuel (leader ou
+  // nombre de porteurs du tag) et détail des bonus en infobulle.
+  function resonanceTagHTML(slotIdx) {
+    const r = resonanceDe(slotIdx);
+    if (!r) return "";
+    const bonus = r.lignes.length
+      ? r.lignes.map((l) => `+${fmtDec(l.valeur_max.toFixed(2))}% ${statLabel(l.stat)}`).join(" · ")
+      : T('z.ultra.none');
+    const etat = r.parLeader
+      ? T('z.ultra.asleader')
+      : T('z.ultra.permember', { n: r.porteurs, tag: r.tag });
+    const libelle = r.parLeader ? T('z.ultra.chip.leader') : T('z.ultra.chip.count', { n: r.porteurs });
+    return `<div class="builder-char-reso${r.parLeader ? " is-leader" : ""}${r.lignes.length ? "" : " is-off"}"` +
+      ` title="${escAttr(`${T('z.ultra.label')} — ${etat}\n${bonus}`)}">${escAttr(libelle)}</div>`;
   }
 
   // ===== FORMATAGE =====
@@ -1364,6 +1420,7 @@
         <div class="builder-char-name" title="${c.nom.trim()}"><span>${c.nom.trim()}</span></div>
         <div class="builder-char-code">${c.cardCode || ""}</div>
         <div class="builder-char-ztag">${T('z.capz.label')} ${["I", "II", "III", "IV"][slot.zTier - 1] || "I"}</div>
+        ${resonanceTagHTML(charSlot)}
         <div class="builder-char-tools">
           <button class="builder-leader ${isLeader ? 'is-leader' : ''} ${state.noLeader ? 'is-leader-disabled' : ''}" data-leader="${charSlot}" title="${T('team.leader.title')}" type="button">★</button>
           <button class="builder-char-act" data-change-char="${charSlot}" title="${T('slot.change')}" type="button">✎</button>
@@ -1639,7 +1696,23 @@
       b.classList.toggle("is-leader", +b.dataset.leader === state.leaderSlot);
       b.classList.toggle("is-leader-disabled", state.noLeader);
     });
+    paintResonance();   // la Résonance des ULTRA dépend de qui est leader
     renderNoLeaderBtn();
+  }
+
+  // Met à jour les pastilles de Résonance sans reconstruire la grille (même
+  // raison que pour les paliers Cap Z : pas de clignotement sous le curseur).
+  function paintResonance() {
+    builderGridEl.querySelectorAll(".builder-row[data-row]").forEach((row) => {
+      const info = row.querySelector(".builder-char-info");
+      const ztag = row.querySelector(".builder-char-ztag");
+      if (!info || !ztag) return;
+      const actuelle = info.querySelector(".builder-char-reso");
+      const html = resonanceTagHTML(+row.dataset.row);
+      if (!html) { if (actuelle) actuelle.remove(); return; }
+      if (actuelle) actuelle.outerHTML = html;
+      else ztag.insertAdjacentHTML("afterend", html);
+    });
   }
 
   builderGridEl.addEventListener("click", (e) => {
@@ -2688,7 +2761,8 @@
     const splitItems = splitItemsByType(itemOnlyItems);
 
     // Split Z items par KIND (Cap Z classique vs Zenkai)
-    const zClassicItems = zItems.filter((it) => it.kind === "z");
+    // La Résonance (ULTRA) est comptée avec les Cap Z classiques dans le détail.
+    const zClassicItems = zItems.filter((it) => it.kind === "z" || it.kind === "ultra");
     const zZenkaiItems  = zItems.filter((it) => it.kind === "zenkai");
 
     const itemBaseResult = calculerStats({ items: splitItems.baseItems, conditions: effCond });
@@ -3012,6 +3086,7 @@
     let applied = 0, total = 0;
     for (const zi of buildTeamZItemsFor(targetSlot)) {
       if (zi.sourceSlot !== sourceSlot) continue;
+      if (zi.kind === "ultra") continue;   // la Résonance ne se propage pas comme une Cap Z
       total   += (zi.lignesAll || zi.lignes).filter((l) => !l.est_passif).length;
       applied += (zi.lignes || []).filter((l) => !l.est_passif).length;
     }
@@ -3241,7 +3316,7 @@
 
     let applied = 0, total = 0, groupsHTML = "";
     for (const zi of buildTeamZItemsFor(targetSlot)) {
-      if (zi.sourceSlot !== sourceSlot) continue;
+      if (zi.sourceSlot !== sourceSlot || zi.kind === "ultra") continue;
       const lines = (zi.lignesAll || zi.lignes).filter((l) => !l.est_passif);
       if (!lines.length) continue;
       const tierLab = ["I", "II", "III", "IV"][zi.tier - 1];

@@ -3611,3 +3611,18 @@ html { font-size: 16px; }
   .guide-card a, .site-nav a { transition: none; }
   .guide-card a:hover { transform: none; }
 }
+
+/* ── Résonance de la puissance (ULTRA) ─────────────────────────────────────
+   Pastille sous le palier Cap Z : état actuel de la résonance du personnage
+   (valeurs pleines en leader, sinon multipliée par les porteurs du tag). */
+.builder-char-reso {
+  align-self: center; margin-top: 4px; padding: 2px 9px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--gold) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+  color: var(--gold-deep);
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-xxs);
+  white-space: nowrap; cursor: help;
+}
+.builder-char-reso.is-leader { background: var(--text); border-color: var(--text); color: var(--gold); }
+.builder-char-reso.is-off { background: var(--surface-3); border-color: var(--line); color: var(--muted); }
