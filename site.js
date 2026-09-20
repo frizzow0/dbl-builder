@@ -48,19 +48,26 @@
     if (!lien) return;
     e.preventDefault();
     const repli = lien.getAttribute("href");
-    let ouvert = false;
     window.googlefc = window.googlefc || {};
     window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
     window.googlefc.callbackQueue.push({
       CONSENT_DATA_READY: () => {
-        if (typeof window.googlefc.showRevocationMessage === "function") {
-          ouvert = true;
-          window.googlefc.showRevocationMessage();
-        }
+        if (typeof window.googlefc.showRevocationMessage === "function") window.googlefc.showRevocationMessage();
       },
     });
-    // Message de consentement non configuré (ou bloqué) : on explique les cookies.
-    setTimeout(() => { if (!ouvert && repli) location.href = repli; }, 1200);
+    // La fenêtre de Google ne s'ouvre pas toujours : message pas encore publié,
+    // visiteur hors d'Europe, bloqueur de publicité… On vérifie qu'elle est bien
+    // apparue ; sinon on emmène vers la section « cookies » de la politique de
+    // confidentialité, pour que le lien fasse toujours quelque chose.
+    const affichee = () => !!document.querySelector(".fc-consent-root, .fc-dialog, .fc-dialog-overlay, [class*='fc-dialog']");
+    let essais = 0;
+    const verifier = setInterval(() => {
+      if (affichee()) { clearInterval(verifier); return; }
+      if (++essais >= 8) {   // ~2 s
+        clearInterval(verifier);
+        if (repli) location.href = repli;
+      }
+    }, 250);
   });
 
   // ── 3. Préférence de langue ────────────────────────────────────────────────
