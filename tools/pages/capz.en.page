@@ -28,8 +28,8 @@
   <li><strong>Otherwise</strong> — the bonus is multiplied by the number of fighters in the team carrying that tag: typically +5% per character, so +15% with three carriers.</li>
 </ul>
 <p>A few older cards have no Leader branch and only keep the per-character bonus; one of them, Omega Shenron, gives it to its allies instead of itself.</p>
-<p>In DBL Optimizer, a <strong>⚡ Resonance</strong> badge appears under each ULTRA’s Z Ability level: it reads “leader” when the full values apply, or “× N” with the number of tag carriers counted. Hover it to see the exact bonuses. Every summary takes it into account.</p>
-<p>Two limits worth knowing: the count covers the <strong>six characters of your team</strong>, not the trio, and <strong>support units</strong>, which also count in game, are not modelled by the tool.</p>
+<p>Careful: unlike Z Abilities, Power Resonance only triggers <strong>once the battle starts</strong>. It is therefore not part of DBL Optimizer’s summaries, which quantify your lineup. The tool does show its state, though: a <strong>⚡ Resonance</strong> badge under each ULTRA’s Z Ability level reads “leader” when the full values apply, or “× N” with the number of tag carriers in your team. The details sit under “Uncalculated Effects”, with a warning when your ULTRA is the only one carrying its tag: its bonuses will stay at the minimum, even if the rest of your Z Abilities line up perfectly.</p>
+<p>Two limits worth knowing: the count covers the <strong>six characters of your team</strong>, and <strong>support units</strong>, which also count in game, are not modelled by the tool.</p>
 
 <h2>Conditions: tags, episodes, colors</h2>
 <p>Most Z Abilities only benefit characters that meet a condition, based on the game’s labels:</p>

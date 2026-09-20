@@ -3626,3 +3626,14 @@ html { font-size: 16px; }
 }
 .builder-char-reso.is-leader { background: var(--text); border-color: var(--text); color: var(--gold); }
 .builder-char-reso.is-off { background: var(--surface-3); border-color: var(--line); color: var(--muted); }
+
+/* Encadré « Résonance de la puissance » dans les effets non calculés : même
+   forme que les passifs, teinte or pour rappeler qu'il s'agit d'un ULTRA. */
+.callout.passive.is-ultra {
+  border-color: color-mix(in srgb, var(--gold) 45%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--gold) 12%, transparent), transparent 80%), var(--surface-2);
+}
+.callout.passive.is-ultra .callout-tag { background: var(--text); color: var(--gold); }
+.passif-line.is-warn { color: var(--danger); font-weight: 600; }
+.passif-note { margin-top: 6px; font-size: var(--fs-xs); color: var(--muted); }
+.builder-char-reso.is-weak { background: var(--danger-tint); border-color: color-mix(in srgb, var(--danger) 40%, transparent); color: var(--danger); }

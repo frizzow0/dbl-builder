@@ -181,6 +181,15 @@
     'z.ultra.asleader':    { fr: 'en leader : valeurs pleines', en: 'as leader: full values' },
     'z.ultra.permember':   { fr: '{n} « {tag} » dans l’équipe', en: '{n} “{tag}” in the team' },
     'z.ultra.none':        { fr: 'aucun porteur du tag dans l’équipe', en: 'no character with the tag in the team' },
+    'z.ultra.note':        { fr: 'Effet de combat : il n’entre pas dans les bilans ci-dessus.',
+                             en: 'Battle effect: not included in the summaries above.' },
+    'z.ultra.line.leader': { fr: 'En leader : {bonus}', en: 'As leader: {bonus}' },
+    'z.ultra.line.permember': { fr: 'Sinon : {bonus} par combattant « {tag} » de l’équipe',
+                                en: 'Otherwise: {bonus} per “{tag}” fighter in the team' },
+    'z.ultra.line.allies': { fr: 'Pour les alliés : {bonus} par combattant « {tag} » de l’équipe',
+                             en: 'For allies: {bonus} per “{tag}” fighter in the team' },
+    'z.ultra.warn':        { fr: '⚠ Il est le seul « {tag} » de l’équipe : sa résonance restera au minimum. Ajoute des « {tag} », ou place-le en leader.',
+                             en: '⚠ It is the only “{tag}” in the team: its resonance stays at the minimum. Add more “{tag}” characters, or make it the Leader.' },
 
     // ── Dynamique : bilan Cap Z ──────────────────
     'z.total.label':   { fr: 'Total global équipe',    en: 'Team grand total' },

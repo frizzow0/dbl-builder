@@ -869,36 +869,17 @@
         const lignes = mergeZLines(sender.character.zAbilitiesZenkai, 4);
         if (lignes.length) pushZItem(lignes, `${T('z.capz.label')} Zenkai`, "zenkai", 4);
       }
-      // 3) Résonance de la puissance (ULTRA) : ses propres règles, ni condition
-      //    de tags du receveur, ni privilège du leader — cf. resonanceDe().
-      const reso = resonanceDe(i);
-      if (reso && reso.lignes.length && (reso.cible === "allies" || i === targetSlotIdx)) {
-        items.push({
-          id: `_z_ultra_${i}`,
-          nom: i === targetSlotIdx
-            ? `${T('z.ultra.label')} (${T('item.self')})`
-            : `${T('z.ultra.label')} — ${sender.character.nom.trim()}`,
-          isVirtual: true,
-          isZBonus: true,
-          kind: "ultra",
-          sourceSlot: i,
-          tier: 4,
-          lignes: reso.lignes,
-          lignesAll: reso.lignes,
-          tagsPorteur: [],
-        });
-      }
     }
     return items;
   }
 
   // ── Résonance de la puissance (la « Cap Z ULTRA ») ────────────────────────
-  // Réservée aux ULTRA. En leader, le porteur reçoit les valeurs pleines ;
-  // sinon, le bonus est multiplié par le nombre de combattants de L'ÉQUIPE
-  // (les 6, pas seulement le trio) portant le tag de la résonance. Les unités
-  // de soutien du jeu, absentes de l'outil, ne sont pas comptées. Le bonus va
-  // au porteur, sauf pour les rares résonances « alliés » qui le donnent à
-  // toute l'équipe. Renvoie aussi de quoi l'expliquer dans l'interface.
+  // Réservée aux ULTRA. Ce n'est PAS un bonus de composition comme les Cap Z :
+  // il se déclenche une fois le combat lancé. L'outil ne l'ajoute donc à aucun
+  // bilan — il se contente d'informer : valeurs pleines si le porteur est
+  // leader, sinon bonus multiplié par le nombre de combattants de L'ÉQUIPE
+  // (les 6) portant le tag. Les unités de soutien du jeu ne sont pas comptées,
+  // et les rares résonances « alliés » profitent à toute l'équipe.
   function resonanceDe(slotIdx) {
     const c = state.team[slotIdx] && state.team[slotIdx].character;
     const r = c && c.zAbilityUltra;
@@ -913,20 +894,65 @@
     return { ...r, estLeader, parLeader, porteurs, facteur, lignes };
   }
 
-  // Pastille « Résonance » sur la carte d'un ULTRA : état actuel (leader ou
-  // nombre de porteurs du tag) et détail des bonus en infobulle.
-  function resonanceTagHTML(slotIdx) {
+  // Textes prêts à afficher pour une résonance : état actuel, bonus qui en
+  // découle, et les deux branches de la capacité (leader / par combattant).
+  function resonanceInfos(slotIdx) {
     const r = resonanceDe(slotIdx);
+    if (!r) return null;
+    const bonus = (lignes, facteur) => lignes
+      .map((l) => `+${fmtDec((l.valeur * facteur).toFixed(2))}% ${statLabel(l.stat)}`)
+      .join(" · ");
+    return {
+      ...r,
+      // « Faible » = pas leader et personne d'autre que lui ne porte le tag :
+      // la résonance reste alors à son minimum.
+      faible: !r.parLeader && r.porteurs <= 1,
+      etat: r.parLeader ? T('z.ultra.asleader') : T('z.ultra.permember', { n: r.porteurs, tag: r.tag }),
+      actuel: r.lignes.length ? bonus(r.parLeader ? r.leader : r.parMembre, r.facteur) : T('z.ultra.none'),
+      enLeader: r.leader.length ? bonus(r.leader, 1) : null,
+      parUnite: r.parMembre.length ? bonus(r.parMembre, 1) : null,
+    };
+  }
+
+  // Pastille « Résonance » sur la carte d'un ULTRA : état actuel (leader ou
+  // nombre de porteurs du tag) et détail en infobulle.
+  function resonanceTagHTML(slotIdx) {
+    const r = resonanceInfos(slotIdx);
     if (!r) return "";
-    const bonus = r.lignes.length
-      ? r.lignes.map((l) => `+${fmtDec(l.valeur_max.toFixed(2))}% ${statLabel(l.stat)}`).join(" · ")
-      : T('z.ultra.none');
-    const etat = r.parLeader
-      ? T('z.ultra.asleader')
-      : T('z.ultra.permember', { n: r.porteurs, tag: r.tag });
     const libelle = r.parLeader ? T('z.ultra.chip.leader') : T('z.ultra.chip.count', { n: r.porteurs });
-    return `<div class="builder-char-reso${r.parLeader ? " is-leader" : ""}${r.lignes.length ? "" : " is-off"}"` +
-      ` title="${escAttr(`${T('z.ultra.label')} — ${etat}\n${bonus}`)}">${escAttr(libelle)}</div>`;
+    const infobulle = `${T('z.ultra.label')} — ${r.etat}\n${r.actuel}\n${T('z.ultra.note')}`;
+    const etat = r.parLeader ? " is-leader" : r.faible ? " is-weak" : "";
+    return `<div class="builder-char-reso${etat}"` +
+      ` title="${escAttr(infobulle + (r.faible ? "\n" + T('z.ultra.warn', { tag: r.tag }) : ""))}">${escAttr(libelle)}</div>`;
+  }
+
+  // Encadré dans « Effets non calculés » : rappelle que la résonance se
+  // déclenche en combat et montre ce qu'elle vaudra avec l'équipe actuelle.
+  function resonanceCalloutHTML(slotIdx) {
+    const r = resonanceInfos(slotIdx);
+    if (!r) return "";
+    const lignes = [];
+    if (r.enLeader) lignes.push(`<div class="passif-line">${escSvg(T('z.ultra.line.leader', { bonus: r.enLeader }))}</div>`);
+    if (r.parUnite) {
+      const cle = r.cible === "allies" ? 'z.ultra.line.allies' : 'z.ultra.line.permember';
+      lignes.push(`<div class="passif-line">${escSvg(T(cle, { bonus: r.parUnite, tag: r.tag }))}</div>`);
+    }
+    lignes.push(`<div class="passif-line is-sub"><strong>${escSvg(r.etat)}</strong> → ${escSvg(r.actuel)}</div>`);
+    // Le point qui échappe le plus souvent : une équipe aux Cap Z cohérentes
+    // peut quand même laisser la résonance de son ULTRA au strict minimum.
+    if (r.faible) {
+      lignes.push(`<div class="passif-line is-sub is-warn">${escSvg(T('z.ultra.warn', { tag: r.tag }))}</div>`);
+    }
+    return `
+      <div class="callout passive is-ultra">
+        <div class="callout-tag">⚡</div>
+        <div class="callout-content">
+          <div class="callout-source"><strong>${escSvg(T('z.ultra.label'))}</strong> · ${escSvg(state.team[slotIdx].character.nom.trim())}</div>
+          <div class="passif-list">${lignes.join("")}</div>
+          <div class="passif-note">${escSvg(T('z.ultra.note'))}</div>
+        </div>
+      </div>
+    `;
   }
 
   // ===== FORMATAGE =====
@@ -2761,8 +2787,7 @@
     const splitItems = splitItemsByType(itemOnlyItems);
 
     // Split Z items par KIND (Cap Z classique vs Zenkai)
-    // La Résonance (ULTRA) est comptée avec les Cap Z classiques dans le détail.
-    const zClassicItems = zItems.filter((it) => it.kind === "z" || it.kind === "ultra");
+    const zClassicItems = zItems.filter((it) => it.kind === "z");
     const zZenkaiItems  = zItems.filter((it) => it.kind === "zenkai");
 
     const itemBaseResult = calculerStats({ items: splitItems.baseItems, conditions: effCond });
@@ -2845,8 +2870,11 @@
     motionFlashStats();
 
     // --- Passifs ---
+    // La Résonance de la puissance d'un ULTRA s'y ajoute en tête : elle ne se
+    // calcule pas (effet de combat), mais l'utilisateur doit voir son état.
+    const resoHTML = resonanceCalloutHTML(state.activeSlot);
     if (result.passifs.length === 0) {
-      passifsZone.innerHTML = `<p class="placeholder">${T('passifs.equipped.none')}</p>`;
+      passifsZone.innerHTML = resoHTML || `<p class="placeholder">${T('passifs.equipped.none')}</p>`;
     } else {
       // Regroupement par item (clé = slot + nom) pour ne pas dupliquer
       // l'entête « source » à chaque ligne.
@@ -2862,7 +2890,7 @@
         groupsByKey[key].descriptions.push(p.description);
       }
 
-      passifsZone.innerHTML = groups
+      passifsZone.innerHTML = resoHTML + groups
         .map((g) => {
           const lignes = g.descriptions
             .map((d) => {
@@ -3086,7 +3114,6 @@
     let applied = 0, total = 0;
     for (const zi of buildTeamZItemsFor(targetSlot)) {
       if (zi.sourceSlot !== sourceSlot) continue;
-      if (zi.kind === "ultra") continue;   // la Résonance ne se propage pas comme une Cap Z
       total   += (zi.lignesAll || zi.lignes).filter((l) => !l.est_passif).length;
       applied += (zi.lignes || []).filter((l) => !l.est_passif).length;
     }
@@ -3316,7 +3343,7 @@
 
     let applied = 0, total = 0, groupsHTML = "";
     for (const zi of buildTeamZItemsFor(targetSlot)) {
-      if (zi.sourceSlot !== sourceSlot || zi.kind === "ultra") continue;
+      if (zi.sourceSlot !== sourceSlot) continue;
       const lines = (zi.lignesAll || zi.lignes).filter((l) => !l.est_passif);
       if (!lines.length) continue;
       const tierLab = ["I", "II", "III", "IV"][zi.tier - 1];
