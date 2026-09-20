@@ -93,7 +93,10 @@ function T(lang, key, params) {
 }
 
 // ── <head> commun ──────────────────────────────────────────────────────────
-function head({ lang, id, title, description, ogType = "website", jsonld, noindex = false, version, tool = false }) {
+// adsense : false pour la politique de confidentialité — Google demande que la
+// page citée dans le message de consentement ne porte ni balise publicitaire ni
+// tag de consentement (sinon le message se rouvre par-dessus).
+function head({ lang, id, title, description, ogType = "website", jsonld, noindex = false, version, tool = false, adsense = true }) {
   const p = PAGE[id];
   const canon = p ? url(p[lang]) : null;
   const og = url(lang === "fr" ? "/og-image.jpg" : "/og-image-en.jpg");
@@ -141,7 +144,7 @@ function head({ lang, id, title, description, ogType = "website", jsonld, noinde
   L.push(`  <link rel="stylesheet" href="${FONTS}" />`);
   L.push(`  <link rel="stylesheet" href="/styles.css?v=${version}" />`);
   L.push(`  <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->`);
-  L.push(`  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`);
+  if (adsense) L.push(`  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`);
   L.push(`  <script defer src="/site.js?v=${version}"></script>`);
   if (jsonld) {
     L.push(`  <script type="application/ld+json">`);
@@ -345,7 +348,7 @@ function pageContenu(id, lang, version, pagesLues) {
 <html lang="${lang}">
 <head>
 <!-- Généré par tools/build.js depuis tools/pages/${id}.${lang}.page — ne pas éditer ce fichier. -->
-${head({ lang, id, title: titreComplet, description: fm.description, ogType: fm.type === "article" ? "article" : "website", jsonld: { "@context": "https://schema.org", "@graph": graphe }, version })}
+${head({ lang, id, title: titreComplet, description: fm.description, ogType: fm.type === "article" ? "article" : "website", jsonld: { "@context": "https://schema.org", "@graph": graphe }, version, adsense: id !== "privacy" })}
 </head>
 <body data-page="${id}">
   <a class="skip-link" href="#contenu">${escHtml(T(lang, "site.skip"))}</a>
