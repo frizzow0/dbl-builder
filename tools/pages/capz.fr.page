@@ -25,11 +25,11 @@
 <p>Les personnages <strong>ULTRA</strong> possèdent une capacité supplémentaire qui n’existe que pour eux : la <strong>Résonance de la puissance</strong>. Elle est liée à un tag précis (« Cyborg », « Saiyan », « Saga des films »…) et fonctionne en deux temps :</p>
 <ul>
   <li><strong>Si l’ULTRA est Leader</strong> — il reçoit les valeurs pleines, le plus souvent +30 % de Dégâts infligés et +30 % de Vitesse de régénération du Ki.</li>
-  <li><strong>Sinon</strong> — le bonus est multiplié par le nombre de combattants de l’équipe portant le tag : en général +5 % par personnage, soit +15 % avec trois porteurs.</li>
+  <li><strong>Sinon</strong> — le bonus est multiplié par le nombre de combattants de l’équipe portant le tag : en général +5 % par personnage, soit +15 % avec trois porteurs. Le <strong>trio n’entre pas en jeu</strong> : les six personnages comptent, banc compris.</li>
 </ul>
 <p>Quelques cartes anciennes n’ont pas de branche Leader et n’ont que le bonus par personnage ; l’une d’elles, Oméga Shenron, le donne à ses alliés plutôt qu’à elle-même.</p>
 <p>Attention : contrairement aux Cap Z, la Résonance ne se déclenche <strong>qu’une fois le combat lancé</strong>. Elle n’entre donc pas dans les bilans de DBL Optimizer, qui chiffrent la composition. En revanche, l’outil t’en montre l’état : une pastille <strong>⚡ Résonance</strong> sous le palier Cap Z de chaque ULTRA indique « leader » quand les valeurs pleines s’appliquent, ou « × N » avec le nombre de porteurs du tag dans l’équipe. Le détail apparaît dans « Effets non calculés », avec une alerte si ton ULTRA est le seul à porter son tag : ses bonus resteront alors au minimum, même si le reste de tes Cap Z est parfaitement cohérent.</p>
-<p>Deux limites à connaître : le décompte porte sur les <strong>six personnages de l’équipe</strong>, et les <strong>unités de soutien</strong>, qui comptent aussi en jeu, ne sont pas modélisées par l’outil.</p>
+<p>Une limite à connaître : les <strong>unités de soutien</strong>, qui comptent aussi en jeu, ne sont pas modélisées par l’outil.</p>
 
 <h2>Les conditions : tags, épisodes, couleurs</h2>
 <p>La plupart des Cap Z ne profitent qu’aux personnages qui remplissent une condition. Ces conditions s’appuient sur les étiquettes du jeu :</p>
