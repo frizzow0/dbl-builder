@@ -68,6 +68,10 @@
     // en Proud les deux trios sont a egalite et un Trio C departage.
     'trio.main':            { fr: 'Principale',             en: 'Main' },
     'trio.bench':           { fr: 'Banc',                   en: 'Bench' },
+    // Outil de test (masqué aux visiteurs) : équipe aléatoire complète
+    'dev.auto':             { fr: 'Auto',                   en: 'Auto' },
+    'dev.auto.title':       { fr: 'Équipe aléatoire avec items (Alt+A) — outil de test',
+                              en: 'Random team with equipment (Alt+A) — test tool' },
     'mode.label':           { fr: 'Mode de jeu',            en: 'Game mode' },
     'mode.classic':         { fr: 'Classique',              en: 'Classic' },
     'mode.proud':           { fr: 'Proud',                  en: 'Proud' },

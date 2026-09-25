@@ -1751,6 +1751,116 @@
     renderTeamTags();
   });
 
+  // ===== ÉQUIPE ALÉATOIRE (outil de test, discret) =====
+  // Sert à éprouver le moteur : 6 personnages au hasard, paliers Cap Z variés,
+  // items compatibles tirés au sort en privilégiant ceux qui ont des conditions
+  // (c'est là que les erreurs se cachent), doublons volontaires entre persos
+  // pour déclencher les effets « même équipement », et choix « OU » aléatoires.
+  // Invisible pour les visiteurs : raccourci Alt+A, ou bouton affiché seulement
+  // après ?auto=1 (mémorisé ensuite ; ?auto=0 le retire).
+  const auHasard = (liste) => liste[Math.floor(Math.random() * liste.length)];
+
+  function equipeAleatoire() {
+    if (!PERSONNAGES.length) return;
+    // 6 personnages distincts
+    const pool = [...PERSONNAGES];
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    const tires = pool.slice(0, 6);
+    const dejaPoses = [];   // pour réutiliser un item d'un autre perso de temps en temps
+
+    state.team.forEach((slot, i) => {
+      const perso = tires[i];
+      Object.assign(slot, emptyTeamSlot(), { character: perso, zTier: 1 + Math.floor(Math.random() * 4) });
+
+      const compatibles = ITEMS.filter((it) => isCompatible(it, perso));
+      const conditionnels = compatibles.filter((it) => it.lignes.some((l) => l.condition));
+      const choisis = [];
+      for (let s = 0; s < 3; s++) {
+        // 1 chance sur 4 de reprendre un item déjà posé ailleurs (« même équipement »)
+        const recyclable = dejaPoses.filter((it) => isCompatible(it, perso) && !choisis.includes(it));
+        let source = recyclable.length && Math.random() < 0.25
+          ? recyclable
+          : (conditionnels.length && Math.random() < 0.7 ? conditionnels : compatibles);
+        source = source.filter((it) => !choisis.includes(it));
+        if (!source.length) source = compatibles.filter((it) => !choisis.includes(it));
+        if (!source.length) break;
+        const item = auHasard(source);
+        choisis.push(item);
+        slot.items[s] = item;
+        if (!dejaPoses.includes(item)) dejaPoses.push(item);
+
+        // Lignes « A - OR - B » : on tire l'option obtenue en jeu
+        item.lignes.forEach((l, lineIdx) => {
+          if (!l.est_passif) return;
+          const alts = parseOrPassif(l.description_passif);
+          if (alts && alts.length > 1) {
+            slot.itemChoices[s][lineIdx] = Math.floor(Math.random() * alts.length);
+          }
+        });
+      }
+    });
+
+    state.leaderSlot = Math.floor(Math.random() * 6);
+    state.noLeader = false;
+    state.conditions = {};   // on repart sans simulation manuelle
+    // Mode Proud : Trio C valide (2 d'un trio + 1 de l'autre)
+    if (state.mode === "proud") {
+      const trioDeux = Math.random() < 0.5 ? [0, 1, 2] : [3, 4, 5];
+      const trioUn = trioDeux[0] === 0 ? [3, 4, 5] : [0, 1, 2];
+      const deux = [...trioDeux].sort(() => Math.random() - 0.5).slice(0, 2);
+      state.trioC = [...deux, auHasard(trioUn)].sort((a, b) => a - b);
+    }
+    state.activeSlot = 0;
+    renderAll();
+    const noms = state.team.map((s) => s.character && s.character.nom.trim()).join(" · ");
+    console.info("[Auto] équipe tirée :", noms, "| leader :", state.leaderSlot + 1);
+  }
+
+  // Activation : ?auto=1 (mémorisé), ?auto=0 pour retirer le bouton.
+  (function _outilAuto() {
+    let actif = false;
+    try {
+      const p = new URLSearchParams(location.search).get("auto");
+      if (p === "1") localStorage.setItem("dbl-auto", "1");
+      if (p === "0") localStorage.removeItem("dbl-auto");
+      actif = localStorage.getItem("dbl-auto") === "1";
+    } catch (e) { /* stockage indisponible */ }
+
+    if (!actif) return;   // visiteur ordinaire : ni bouton, ni raccourci, ni API
+
+    document.addEventListener("keydown", (e) => {
+      if (!e.altKey || e.ctrlKey || e.metaKey) return;
+      if (e.key !== "a" && e.key !== "A") return;
+      const cible = e.target;
+      if (cible && /^(INPUT|TEXTAREA)$/.test(cible.tagName)) return;
+      e.preventDefault();
+      equipeAleatoire();
+    });
+
+    // Outil actif : on expose de quoi vérifier depuis la console
+    // (`DBL_AUTO.tirer()`, `DBL_AUTO.etat()`), jamais chez un visiteur.
+    window.DBL_AUTO = {
+      tirer: equipeAleatoire,
+      etat: () => state.team.map((s, i) => ({
+        slot: i,
+        perso: s.character,
+        zTier: s.zTier,
+        items: s.items.filter(Boolean),
+        leader: i === state.leaderSlot,
+      })),
+    };
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "auto-btn";
+    btn.textContent = T('dev.auto');
+    btn.title = T('dev.auto.title');
+    btn.addEventListener("click", equipeAleatoire);
+    document.body.appendChild(btn);
+  })();
+
   // ===== BASCULE DE MODE =====
   const modeSwitchEl = document.querySelector(".mode-switch");
 
