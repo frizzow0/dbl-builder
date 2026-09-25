@@ -37,10 +37,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=93" />
+  <link rel="stylesheet" href="/styles.css?v=95" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=93"></script>
+  <script defer src="/site.js?v=95"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -100,7 +100,7 @@
           }
         },
         "mainEntityOfPage": "https://dbl-optimizer.com/en/equipment-guide.html",
-        "wordCount": 579
+        "wordCount": 709
       }
     ]
   }
@@ -158,12 +158,17 @@
       <p>Example: two +30% lines in the same layer give +60%. One +30% “base” line and one +30% “pure” line give 1.3 × 1.3 = <strong>+69%</strong>. Z Abilities share these same layers: a big “base” Z Ability amplifies the “pure” lines of your equipment.</p>
 
       <h2>Equipment conditions</h2>
-      <p>Many pieces of equipment only unlock part of their bonuses under a condition. There are three kinds:</p>
+      <p>Many pieces of equipment only unlock part of their bonuses under a condition. The game uses wordings that look alike but behave very differently — and that is where most lineup mistakes happen:</p>
       <ul>
-        <li><strong>Threshold in the trio</strong> — “if at least 2 Saiyans are among the fighters”. The count is made in the <strong>wearer’s trio</strong> (the 3 characters fighting together), wearer included.</li>
+        <li><strong>Threshold in the trio</strong> — “if at least 2 Saiyans are among the fighters”. The count is made in the <strong>wearer’s trio</strong>, wearer included.</li>
+        <li><strong>“Another”</strong> — “if another Cyborg is among the fighters”: the wearer doesn’t count itself, so a teammate is required.</li>
+        <li><strong>“Both A and B”</strong> — “if a character that is both Frieza and Movie Saga…”: <strong>one single character</strong> must carry both tags. Two teammates carrying one each is not enough.</li>
+        <li><strong>“One A plus one B”</strong> — here, on the contrary, the two tags may come from <strong>two different characters</strong>.</li>
+        <li><strong>“If you are…”</strong> — the <strong>wearer</strong> must have the tag; a teammate triggers nothing.</li>
         <li><strong>Per member</strong> — “for each Son Family fighter”: the bonus is multiplied by the number of trio members carrying the tag.</li>
         <li><strong>Same equipment</strong> — the bonus depends on how many characters in the <strong>whole team</strong> wear the same piece.</li>
       </ul>
+      <p>DBL Optimizer applies each of these rules exactly, and the “Team Composition” panel states which one applies to every effect (“1 other in their trio”, “1 character with both tags”, “the wearer must have it”…).</p>
       <p>The optimizer’s <strong>“Team Composition”</strong> panel shows the state of every conditional effect: <em>Active</em>, <em>N missing</em> or <em>× N</em>. It’s the fastest way to spot equipment whose condition isn’t met.</p>
 
       <h2>“OR” lines</h2>

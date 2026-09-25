@@ -159,6 +159,12 @@
     'cond.badge.on':        { fr: 'Actifs : {n}',           en: 'Active: {n}' },
     'cond.badge.off':       { fr: 'Inactifs : {n}',         en: 'Inactive: {n}' },
     'cond.need.threshold':  { fr: '{n} dans son trio',      en: '{n} in their trio' },
+    // Le jeu distingue plusieurs portées : ces libellés disent laquelle s'applique.
+    'cond.need.porteur':    { fr: 'le porteur doit l’avoir', en: 'the wearer must have it' },
+    'cond.need.autre':      { fr: '{n} autre dans son trio', en: '{n} other in their trio' },
+    'cond.need.meme':       { fr: '{n} perso réunissant les 2 tags', en: '{n} character with both tags' },
+    'cond.need.meme.autre': { fr: '{n} autre perso réunissant les 2 tags', en: '{n} other character with both tags' },
+    'cond.need.et':         { fr: '{n} de chaque tag dans son trio', en: '{n} of each tag in their trio' },
     'cond.need.permember':  { fr: 'par membre du trio',     en: 'per trio member' },
     'cond.status.on':       { fr: 'Actif',                  en: 'Active' },
     'cond.status.missing':  { fr: 'Manque {n}',             en: '{n} missing' },

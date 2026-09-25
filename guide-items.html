@@ -37,10 +37,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=93" />
+  <link rel="stylesheet" href="/styles.css?v=95" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=93"></script>
+  <script defer src="/site.js?v=95"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -100,7 +100,7 @@
           }
         },
         "mainEntityOfPage": "https://dbl-optimizer.com/guide-items.html",
-        "wordCount": 689
+        "wordCount": 860
       }
     ]
   }
@@ -134,7 +134,7 @@
       <header class="doc-hero">
         <h1>Guide des items et de l’optimisation des stats</h1>
         <p class="doc-lead">Les items multiplient la puissance d’un personnage — à condition de comprendre comment leurs bonus se cumulent. Emplacements, raretés, couches de calcul et conditions : tout ce qu’il faut savoir.</p>
-        <p class="doc-meta">Mis à jour le 16 septembre 2026 · 3 min de lecture</p>
+        <p class="doc-meta">Mis à jour le 16 septembre 2026 · 4 min de lecture</p>
       </header>
       <aside class="ad-slot" data-ad="doc-top" hidden></aside>
       <h2>Trois emplacements par personnage</h2>
@@ -158,12 +158,17 @@
       <p>Exemple : deux lignes de +30 % dans la même couche donnent +60 %. Une ligne de +30 % « de base » et une de +30 % « pure » donnent 1,3 × 1,3 = <strong>+69 %</strong>. Les Cap Z partagent ces mêmes couches : une grosse Cap Z « de base » amplifie les lignes « pures » de tes items.</p>
 
       <h2>Les conditions d’items</h2>
-      <p>Beaucoup d’items n’activent une partie de leurs bonus que sous condition. Il en existe trois formes :</p>
+      <p>Beaucoup d’items n’activent une partie de leurs bonus que sous condition. Le jeu emploie des tournures proches, mais aux effets très différents — et c’est là que se jouent la plupart des erreurs de composition :</p>
       <ul>
-        <li><strong>Seuil dans le trio</strong> — « si au moins 2 Saiyan font partie des combattants ». Le compte se fait dans le <strong>trio du porteur</strong> (les 3 personnages qui combattent ensemble), porteur compris.</li>
+        <li><strong>Seuil dans le trio</strong> — « si au moins 2 Saiyan font partie des combattants ». Le compte se fait dans le <strong>trio du porteur</strong>, porteur compris.</li>
+        <li><strong>« Un autre »</strong> — « si un autre Cyborg fait partie des combattants » : le porteur ne se compte pas lui-même, il faut donc un coéquipier.</li>
+        <li><strong>« À la fois A et B »</strong> — « si un personnage étant à la fois Freezer et Saga des films… » : un <strong>même personnage</strong> doit réunir les deux tags. Deux coéquipiers qui en portent un chacun ne suffisent pas.</li>
+        <li><strong>« Un A plus un B »</strong> — là, en revanche, les deux tags peuvent venir de <strong>deux personnages différents</strong>.</li>
+        <li><strong>« Si vous êtes… »</strong> — c’est le <strong>porteur</strong> de l’item qui doit avoir le tag ; un coéquipier ne déclenche rien.</li>
         <li><strong>Par membre</strong> — « pour chaque combattant Famille Goku » : le bonus est multiplié par le nombre de membres du trio qui portent le tag.</li>
         <li><strong>Même équipement</strong> — le bonus dépend du nombre de personnages de <strong>toute l’équipe</strong> qui portent le même item.</li>
       </ul>
+      <p>DBL Optimizer applique chacune de ces règles à la lettre, et le panneau « Composition d’équipe » rappelle laquelle s’applique à chaque effet (« 1 autre dans son trio », « 1 perso réunissant les 2 tags », « le porteur doit l’avoir »…).</p>
       <p>Le panneau <strong>« Composition d’équipe »</strong> de l’outil affiche l’état de chaque effet conditionnel : <em>Actif</em>, <em>Manque N</em> ou <em>× N</em>. C’est le moyen le plus rapide de repérer un item dont la condition n’est pas remplie.</p>
 
       <h2>Les lignes « OU »</h2>

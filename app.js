@@ -139,22 +139,34 @@
     }
   })();
 
-  // ── PATCH RUNTIME : seuils des conditions "threshold" ─────────────────────
-  // (a) "si au moins N « X »" : le scraper ratait le "au moins" → seuil=1 ; on
-  //     relit la description pour fixer N.
-  // (b) "si un AUTRE « X »" / "autre que soi" : le porteur compte déjà, il faut
-  //     donc un membre DE PLUS dans le trio → seuil += 1.
-  (function _fixThresholdSeuils() {
+  // ── PATCH RUNTIME : seuil et portée des conditions d'items ────────────────
+  // (a) "si au moins N « X »" : filet de sécurité si le scraper a raté le N.
+  // (b) Portée exacte, déduite du texte quand la donnée est antérieure au
+  //     scraper qui l'enregistre (portee / combinaison / exclure_soi) :
+  //       « si vous êtes … »              → le PORTEUR doit l'avoir ;
+  //       « à la fois A et B »            → un MÊME personnage porte les deux ;
+  //       « un A plus un B »              → un A et un B, deux persos possibles ;
+  //       « un AUTRE A » / « autre que soi » → le porteur ne se compte pas.
+  //     Le décompte lui-même est fait par compteCondition() : surtout ne pas
+  //     gonfler le seuil ici, ce serait compter le porteur deux fois.
+  (function _normaliserConditions() {
     const reNum = /si\s+(?:au\s+moins\s+)?(\d+)\s*[«»]/i;
     for (const item of ITEMS) {
       for (const l of item.lignes || []) {
-        if (!l.condition || l.condition.mode !== 'threshold') continue;
-        const desc = l.condition.description || '';
-        let seuil = l.condition.seuil || 1;
-        const m = reNum.exec(desc);
-        if (m) seuil = Math.max(seuil, parseInt(m[1], 10));
-        if (/\bautres?\b/i.test(desc)) seuil += 1;
-        l.condition.seuil = seuil;
+        const c = l.condition;
+        if (!c) continue;
+        const desc = c.description || '';
+        if (c.mode === 'threshold') {
+          const m = reNum.exec(desc);
+          if (m) c.seuil = Math.max(c.seuil || 1, parseInt(m[1], 10));
+        }
+        if (!c.portee) c.portee = /\bsi vous êtes\b|\bsi vous faites partie\b/i.test(desc) ? 'porteur' : 'equipe';
+        if (!c.combinaison) {
+          c.combinaison = /à la fois/i.test(desc)
+            ? 'et_meme'
+            : ((/\bplus\s+«/i.test(desc) || /«[^»]*»\s+et\s+«/i.test(desc)) && !/\bou\b/i.test(desc) ? 'et' : 'ou');
+        }
+        if (c.exclure_soi === undefined) c.exclure_soi = /\bun autre\b|autre que soi/i.test(desc);
       }
     }
   })();
@@ -725,45 +737,109 @@
     return counts;
   }
 
-  // Construit le conditions object pour évaluer les items d'un slot :
-  // - Traits/classes  → trio-scoped (avec overrides manuels)
-  // - Même équipement → team-wide via tag synthétique "__same_item__:${id}"
-  function buildItemConditions(slotIdx, trio) {
-    const counts = getTrioTagCountsFor(slotIdx, true, trio);
-    for (const slot of state.team) {
-      if (!slot.character) continue;   // slot vide : ses items ne comptent pas
-      for (const item of slot.items) {
-        if (!item) continue;
-        const tag = '__same_item__:' + item.id;
-        counts[tag] = (counts[tag] || 0) + 1;
-      }
+  // ── Conditions d'items : un seul endroit qui décide « combien ça compte » ──
+  // Le jeu distingue des tournures très proches :
+  //   « à la fois A et B »   → un MÊME personnage porte les deux tags ;
+  //   « un A plus un B »     → un A et un B, éventuellement deux personnages ;
+  //   « un A ou un B »       → l'un ou l'autre ;
+  //   « un AUTRE A »         → le porteur ne se compte pas lui-même ;
+  //   « si vous êtes A »     → c'est le PORTEUR qui doit porter le tag ;
+  //   sans tag (per_member)  → les coéquipiers portant le MÊME équipement.
+  // Le décompte se fait dans le trio de combat du porteur, sauf « même
+  // équipement » qui regarde toute l'équipe. La valeur « Simuler » du panneau
+  // « Composition d'équipe » ne peut que relever le compte, jamais l'abaisser.
+  function compteCondition(cond, slotIdx, trio = trioDOrigine(slotIdx), item = null, avecSimulation = true) {
+    if (!cond) return 0;
+    const tags = (cond.tags_requis && cond.tags_requis.length ? cond.tags_requis : [cond.tag_requis]).filter(Boolean);
+
+    // « par combattant de l'équipe portant ce même équipement » : toute l'équipe.
+    if (!tags.length) {
+      if (!item) return 0;
+      return state.team.filter((s) => s.character && s.items.some((it) => it && it.id === item.id)).length;
     }
-    return counts;
+
+    const porteur = state.team[slotIdx] && state.team[slotIdx].character;
+    const simule = avecSimulation ? Math.max(0, ...tags.map((t) => state.conditions[t] || 0)) : 0;
+
+    // « si vous êtes … » : seul le porteur est regardé.
+    if (cond.portee === "porteur") {
+      if (!porteur) return simule;
+      const cles = clesDeTags(porteur);
+      const ok = cond.combinaison === "ou" ? tags.some((t) => cles.has(t)) : tags.every((t) => cles.has(t));
+      return Math.max(ok ? 1 : 0, simule);
+    }
+
+    const membres = trio.filter((i) =>
+      state.team[i] && state.team[i].character && !(cond.exclure_soi && i === slotIdx));
+    const porteursDe = (t) => membres.filter((i) => clesDeTags(state.team[i].character).has(t)).length;
+
+    let compte;
+    if (cond.combinaison === "et_meme") {
+      // Les tags doivent être réunis sur un même personnage.
+      compte = membres.filter((i) => {
+        const cles = clesDeTags(state.team[i].character);
+        return tags.every((t) => cles.has(t));
+      }).length;
+    } else if (cond.combinaison === "et") {
+      compte = Math.min(...tags.map(porteursDe));
+    } else {
+      compte = Math.max(...tags.map(porteursDe));
+    }
+    return Math.max(compte, simule);
   }
 
-  // Clone les items en injectant un tag synthétique sur les lignes
-  // "portant ce même équipement" (mode per_member + tags vides),
-  // afin que calc.js puisse les évaluer normalement.
-  function patchSameItemTags(items) {
-    return items.map(item => {
+  // Prépare les items d'un slot pour calc.js : chaque ligne conditionnelle est
+  // ramenée à un simple seuil sur une clé synthétique dont on fournit le compte
+  // exact (ci-dessus). Les tags d'origine sont conservés pour l'affichage.
+  function preparerItems(slotIdx, trio) {
+    const conditions = {};
+    const items = getItemsWithChoicesFor(slotIdx).map((item, itemIdx) => {
       if (!item) return null;
-      const hasSameItem = item.lignes.some(
-        l => l.condition && l.condition.mode === 'per_member' &&
-             !l.condition.tag_requis && (!l.condition.tags_requis || !l.condition.tags_requis.length)
-      );
-      if (!hasSameItem) return item;
-      const syntheticTag = '__same_item__:' + item.id;
+      if (!item.lignes.some((l) => l.condition)) return item;
       return {
         ...item,
-        lignes: item.lignes.map(l => {
-          if (!l.condition || l.condition.mode !== 'per_member' ||
-              l.condition.tag_requis || (l.condition.tags_requis && l.condition.tags_requis.length)) {
-            return l;
-          }
-          return { ...l, condition: { ...l.condition, tag_requis: syntheticTag, tags_requis: [syntheticTag] } };
-        })
+        lignes: item.lignes.map((l, ligneIdx) => {
+          if (!l.condition) return l;
+          const cle = `__cond__:${slotIdx}:${itemIdx}:${ligneIdx}`;
+          conditions[cle] = compteCondition(l.condition, slotIdx, trio, item);
+          return {
+            ...l,
+            condition: {
+              ...l.condition,
+              tag_requis: cle,
+              tags_requis: [cle],
+              // Ce que l'interface doit montrer, une fois le calcul fait.
+              tags_affichage: (l.condition.tags_requis && l.condition.tags_requis.length
+                ? l.condition.tags_requis
+                : [l.condition.tag_requis]).filter(Boolean),
+            },
+          };
+        }),
       };
     });
+    return { items, conditions };
+  }
+
+  // Conditions à afficher (lignes d'items dans la grille et la modale de
+  // détails) : mêmes règles que le calcul, exprimées sur les tags d'origine.
+  function conditionsAffichage(slotIdx, trio) {
+    const counts = getTrioTagCountsFor(slotIdx, true, trio);
+    const slot = state.team[slotIdx];
+    if (!slot) return counts;
+    slot.items.forEach((item) => {
+      if (!item) return;
+      item.lignes.forEach((l) => {
+        if (!l.condition) return;
+        const compte = compteCondition(l.condition, slotIdx, trio, item);
+        const tags = (l.condition.tags_requis && l.condition.tags_requis.length
+          ? l.condition.tags_requis : [l.condition.tag_requis]).filter(Boolean);
+        // On aligne le compte des tags de cette condition sur son vrai résultat,
+        // pour que l'affichage ligne à ligne dise la même chose que le calcul.
+        for (const t of tags) counts[t] = compte;
+        if (!tags.length) counts['__same_item__:' + item.id] = compte;
+      });
+    });
+    return counts;
   }
 
   // Construit la liste des bonus Z appliqués à un slot d'équipe.
@@ -1339,7 +1415,7 @@
   const builderGridEl = document.getElementById("builder-grid");
 
   // Rendu d'une ligne d'effet d'item (reprend la logique de l'ancien renderSlots)
-  function renderItemLigne(l, lineIdx, item, itemSlotIdx, displayConds, slotChoices) {
+  function renderItemLigne(l, lineIdx, item, itemSlotIdx, charSlot, slotChoices) {
     if (l.est_passif) {
       const alts = parseOrPassif(l.description_passif);
       if (alts) {
@@ -1362,16 +1438,14 @@
       }
       return `<div class="slot-ligne passive"><span class="bullet">⚡</span>${passifTxt.replace(/\r?\n/g, "<br>")}</div>`;
     }
-    let lineToEval = l;
-    if (l.condition?.mode === 'per_member' && !l.condition.tag_requis && !(l.condition.tags_requis?.length)) {
-      const syntheticTag = '__same_item__:' + item.id;
-      lineToEval = { ...l, condition: { ...l.condition, tag_requis: syntheticTag, tags_requis: [syntheticTag] } };
-    }
-    const conditionRemplie = condRemplieCalc(lineToEval, displayConds);
+    // Même décompte que le calcul (portée, « autre », « à la fois »…).
+    const compte = l.condition ? compteCondition(l.condition, charSlot, undefined, item) : 0;
+    const seuilLigne = l.condition ? (l.condition.mode === "per_member" ? 1 : (l.condition.seuil || 1)) : 0;
+    const conditionRemplie = !l.condition || compte >= seuilLigne;
     const cls = l.condition ? (conditionRemplie ? "active" : "inactive") : "";
     let valeur = interpolerValeur(l, 1);
-    if (conditionRemplie && lineToEval.condition?.mode === 'per_member') {
-      const mult = multCondCalc(lineToEval, displayConds);
+    if (conditionRemplie && l.condition?.mode === 'per_member') {
+      const mult = Math.min(compte, 6);
       if (mult > 1) valeur *= mult;
     }
     const condBadge = l.condition
@@ -1399,7 +1473,6 @@
     if (!item) {
       return `<div class="builder-item empty" data-open-item="${charSlot}:${itemSlotIdx}">${T('slot.choose')}</div>`;
     }
-    const displayConds = buildItemConditions(charSlot);
     if (!teamSlot.itemChoices) teamSlot.itemChoices = [{}, {}, {}];
     const slotChoices = teamSlot.itemChoices[itemSlotIdx] || {};
     const lignesParSlot = {};
@@ -1409,7 +1482,7 @@
     });
     const slotsHTML = Object.keys(lignesParSlot).map(Number).sort((a, b) => a - b).map((sn) => {
       const label = sn === 4 ? `Slot ${sn} <span class="slot-7">★7</span>` : `Slot ${sn}`;
-      return `<div class="item-slot-group"><div class="item-slot-label">${label}</div><div class="item-slot-lignes">${lignesParSlot[sn].map(({ l, lineIdx }) => renderItemLigne(l, lineIdx, item, itemSlotIdx, displayConds, slotChoices)).join("")}</div></div>`;
+      return `<div class="item-slot-group"><div class="item-slot-label">${label}</div><div class="item-slot-lignes">${lignesParSlot[sn].map(({ l, lineIdx }) => renderItemLigne(l, lineIdx, item, itemSlotIdx, charSlot, slotChoices)).join("")}</div></div>`;
     }).join("");
     const porteur = porteurInfo(item);
     const tagsHTML = porteur ? `<div class="slot-item-tags">${porteur.complet}</div>` : "";
@@ -2260,7 +2333,7 @@
   function renderSlots() {
     if (!document.querySelector('[data-slot-content="0"]')) return;
     // Conditions pour l'affichage des lignes : trio-scoped + même équipement team-wide
-    const slotDisplayConditions = buildItemConditions(state.activeSlot);
+    const slotDisplayConditions = conditionsAffichage(state.activeSlot);
     for (let i = 0; i < 3; i++) {
       const el = document.querySelector(`[data-slot-content="${i}"]`);
       const item = active.items[i];
@@ -2418,8 +2491,6 @@
     const effets = new Map();
     const slot = state.team[slotIdx];
     if (!slot || !slot.character) return effets;
-    const simule = getTrioTagCountsFor(slotIdx, true, trio);
-    const reel = getTrioTagCountsFor(slotIdx, false, trio);
     slot.items.forEach((it, itemIdx) => {
       if (!it) return;
       it.lignes.forEach((l) => {
@@ -2430,20 +2501,33 @@
         const parMembre = c.mode === "per_member";
         const seuil = parMembre ? 1 : (c.seuil || 1);
         const cle = tags.join(" / ");
-        const id = `${slotIdx}|${itemIdx}|${c.mode}|${seuil}|${cle}`;
+        const id = `${slotIdx}|${itemIdx}|${c.portee}|${c.combinaison}|${c.exclure_soi}|${c.mode}|${seuil}|${cle}`;
         if (!effets.has(id)) {
-          // Mêmes règles que calc.js : « and » exige chaque tag, sinon le meilleur compte.
-          const compte = (counts) => (c.mode === "and" ? Math.min : Math.max)(...tags.map((t) => counts[t] || 0));
-          const valeur = compte(simule);
+          // Même décompte que le calcul, valeur simulée comprise ; le « réel »
+          // sert seulement à signaler qu'une valeur vient d'une simulation.
+          const valeur = compteCondition(c, slotIdx, trio, it);
+          const reel = compteCondition(c, slotIdx, trio, it, false);
           effets.set(id, {
             slot: slotIdx, item: it, lignes: [], tags, cle, parMembre, seuil, valeur,
-            simule: valeur > compte(reel), actif: valeur >= seuil,
+            portee: c.portee, combinaison: c.combinaison, exclureSoi: !!c.exclure_soi,
+            simule: valeur > reel, actif: valeur >= seuil,
           });
         }
         effets.get(id).lignes.push(l);
       });
     });
     return effets;
+  }
+
+  // Formule la règle d'une condition telle que le jeu l'énonce : porteur,
+  // « autre », tags réunis sur un même personnage, ou simple seuil.
+  function regleCondition(e) {
+    if (e.parMembre) return T('cond.need.permember');
+    if (e.portee === "porteur") return T('cond.need.porteur');
+    if (e.combinaison === "et_meme") return T(e.exclureSoi ? 'cond.need.meme.autre' : 'cond.need.meme', { n: e.seuil });
+    if (e.combinaison === "et") return T('cond.need.et', { n: e.seuil });
+    if (e.exclureSoi) return T('cond.need.autre', { n: e.seuil });
+    return T('cond.need.threshold', { n: e.seuil });
   }
 
   function renderConditions() {
@@ -2491,7 +2575,7 @@
 
         const lignes = liste.map((e) => {
           const p = state.team[e.slot].character;
-          const regle = e.parMembre ? T('cond.need.permember') : T('cond.need.threshold', { n: e.seuil });
+          const regle = regleCondition(e);
           const statut = !e.actif
             ? `<span class="ce-status is-off">${T('cond.status.missing', { n: e.seuil - e.valeur })}</span>`
             : e.parMembre
@@ -2555,9 +2639,10 @@
   // total Cap Z + items, Cap Z seules, items seuls, et lignes chiffrées de Cap Z
   // reçues (clé source|type|stat, pour comparer deux trios).
   function bilanDansTrio(slotIdx, trio) {
-    const conds = buildItemConditions(slotIdx, trio);
+    const prepare = preparerItems(slotIdx, trio);
+    const conds = { ...getTrioTagCountsFor(slotIdx, true, trio), ...prepare.conditions };
     const zItems = buildTeamZItemsFor(slotIdx, trio);
-    const items = patchSameItemTags(getItemsWithChoicesFor(slotIdx)).filter(Boolean);
+    const items = prepare.items.filter(Boolean);
     const zLignes = new Map();
     for (const zi of zItems) {
       for (const l of zi.lignes) {
@@ -2641,7 +2726,7 @@
         const b = eC.get(id);
         if (!b || niveauEffet(a) === niveauEffet(b)) continue;
         const tag = [...new Set(a.tags.map((t) => splitCondTag(t).nom))].join(" / ");
-        const regle = a.parMembre ? T('cond.need.permember') : T('cond.need.threshold', { n: a.seuil });
+        const regle = regleCondition(a);
         (niveauEffet(b) > niveauEffet(a) ? gains : pertes).push(
           `<li class="tca-row ${niveauEffet(b) > niveauEffet(a) ? "is-up" : "is-down"}">` +
             `<span class="tca-kind is-item">${T('tca.kind.item')}</span>${qui}` +
@@ -2777,8 +2862,9 @@
     // Conditions items : trio-scoped pour les traits/classes + team-wide pour "même équipement".
     // Les items "OR" (ex : "ATK énergie OR ATK physique") sont résolus selon le choix utilisateur.
     const zItems = buildTeamZItemsFor(state.activeSlot);
-    const effCond = buildItemConditions(state.activeSlot);
-    const resolvedItems = patchSameItemTags(getActiveItemsWithChoices());
+    const prepare = preparerItems(state.activeSlot);
+    const effCond = { ...getTrioTagCountsFor(state.activeSlot), ...prepare.conditions };
+    const resolvedItems = prepare.items;
     const itemOnlyItems = resolvedItems.filter(Boolean);
 
     // Split item lines par TYPE (base / pur+direct) pour affichage séparé
@@ -3040,9 +3126,10 @@
   // évalués contre les conditions trio-scoped + team-wide du slot.
   function getCombinedStatsFor(slotIdx, trio) {
     const zItems = buildTeamZItemsFor(slotIdx, trio);
-    const resolvedItems = patchSameItemTags(getItemsWithChoicesFor(slotIdx)).filter(Boolean);
+    const prepare = preparerItems(slotIdx, trio);
+    const resolvedItems = prepare.items.filter(Boolean);
     if (zItems.length === 0 && resolvedItems.length === 0) return null;
-    const conds = buildItemConditions(slotIdx, trio);
+    const conds = { ...getTrioTagCountsFor(slotIdx, true, trio), ...prepare.conditions };
     return calculerStats({ items: [...resolvedItems, ...zItems], conditions: conds }).stats;
   }
 

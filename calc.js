@@ -147,7 +147,10 @@
 
         if (ligne.condition) {
           const c = ligne.condition;
-          const tagPrincipal = (c.tags_requis && c.tags_requis[0]) || c.tag_requis;
+          // tags_affichage : tags d'origine, quand app.js a remplacé la condition
+          // par une clé synthétique dont il maîtrise le décompte.
+          const tagsVisibles = (c.tags_affichage && c.tags_affichage.length ? c.tags_affichage : c.tags_requis) || [c.tag_requis];
+          const tagPrincipal = tagsVisibles[0] || c.tag_requis;
           const valeurActuelle = conditions[tagPrincipal] || 0;
           const infoCondition = {
             itemNom: item.nom,
@@ -155,7 +158,7 @@
             ligneIdx,
             description: c.description,
             tag: tagPrincipal,
-            tags: c.tags_requis || [c.tag_requis],
+            tags: tagsVisibles,
             mode: c.mode || "threshold",
             seuil: c.seuil || 1,
             multiplicateur: mult,

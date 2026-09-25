@@ -1,6 +1,6 @@
 // Auto-généré par scrape.js — ne pas éditer à la main.
 // Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, event)
-// 926 items, généré le 2026-09-25T16:34:16.135Z
+// 926 items, généré le 2026-09-25T16:46:25.141Z
 
 window.DBL_ITEMS_SCRAPED = [
   {
@@ -350,7 +350,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 4
       },
@@ -1875,7 +1878,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -1890,7 +1896,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -1955,7 +1964,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -1970,7 +1982,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -2129,7 +2144,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -2142,7 +2160,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -2196,7 +2217,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -2211,7 +2235,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -2477,7 +2504,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type énergie",
           "tags_requis": [
             "Style de combat : Type énergie"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -2499,7 +2529,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -2550,7 +2583,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -2646,7 +2682,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -2693,7 +2732,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -2706,7 +2748,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -2808,7 +2853,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -2830,7 +2878,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -3026,7 +3077,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -3041,7 +3095,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -3084,7 +3141,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Classe : Cyborg",
             "Classe : Lignée royale Vegeta",
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -3100,7 +3160,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Z - Les cyborgs",
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -3116,7 +3179,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Z - Les cyborgs",
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -3211,7 +3277,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Style de combat : Type énergie",
             "Personnage : Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -3227,7 +3296,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Style de combat : Type énergie",
             "Personnage : Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -3278,7 +3350,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -3300,7 +3375,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -3395,7 +3473,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -3417,7 +3498,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -3461,7 +3545,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -3483,7 +3570,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Cell",
           "tags_requis": [
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -3736,7 +3826,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -3751,7 +3844,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -3897,7 +3993,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Lignée royale Vegeta",
           "tags_requis": [
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -3919,7 +4018,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Lignée royale Vegeta",
           "tags_requis": [
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4067,7 +4169,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4089,7 +4194,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4140,7 +4248,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4155,7 +4266,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4175,7 +4289,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4212,7 +4329,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -4227,7 +4347,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4242,7 +4365,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4298,7 +4424,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4320,7 +4449,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4430,7 +4562,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan",
           "tags_requis": [
             "Classe : Super Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4452,7 +4587,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Potalas",
           "tags_requis": [
             "Classe : Potalas"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4504,7 +4642,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Saiyan",
             "Classe : Potalas"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4753,7 +4894,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Personnage : Shallot (DBL00-01)",
           "tags_requis": [
             "Personnage : Shallot (DBL00-01)"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -4768,7 +4912,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Personnage : Shallot (DBL00-01)",
           "tags_requis": [
             "Personnage : Shallot (DBL00-01)"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4892,7 +5039,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ki divin",
             "Classe : Potalas"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4908,7 +5058,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ki divin",
             "Classe : Fusion"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -4959,7 +5112,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Super - Trunks du futur",
           "tags_requis": [
             "Épisode : Saga Super - Trunks du futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -4981,7 +5137,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -5024,7 +5183,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Futur",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -5047,7 +5209,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Futur",
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -5286,7 +5451,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Saiyan",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -5309,7 +5477,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Saiyan",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -5360,7 +5531,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type énergie",
           "tags_requis": [
             "Style de combat : Type énergie"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -5382,7 +5556,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -5591,7 +5768,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -5613,7 +5793,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -5874,7 +6057,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -5896,7 +6082,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -6062,7 +6251,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -6084,7 +6276,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -6251,7 +6446,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -6273,7 +6471,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -6365,7 +6566,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -6814,7 +7018,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Attribut : Jaune",
           "tags_requis": [
             "Attribut : Jaune"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -6985,7 +7192,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Exclusif aux événements",
           "tags_requis": [
             "Classe : Exclusif aux événements"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -7000,7 +7210,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Exclusif aux événements",
           "tags_requis": [
             "Classe : Exclusif aux événements"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -7051,7 +7264,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -7251,7 +7467,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -7273,7 +7492,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -7353,7 +7575,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga des films",
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -7369,7 +7594,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga des films",
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -7433,7 +7661,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ennemi puissant",
           "tags_requis": [
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -7546,7 +7777,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -7561,7 +7795,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -7638,7 +7875,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -7653,7 +7893,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -7668,7 +7911,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Généalogie maléfique",
           "tags_requis": [
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       },
@@ -7683,7 +7929,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Généalogie maléfique",
           "tags_requis": [
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -7734,7 +7983,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : GT",
             "Personnage : C-17"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -7750,7 +8002,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : GT",
             "Personnage : C-17"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -7794,7 +8049,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -7816,7 +8074,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -7867,7 +8128,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ennemi puissant",
           "tags_requis": [
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -7889,7 +8153,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ennemi puissant",
           "tags_requis": [
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -8065,7 +8332,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -8087,7 +8357,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -8322,7 +8595,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -8344,7 +8620,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -8630,7 +8909,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -8652,7 +8934,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -8793,7 +9078,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -8808,7 +9096,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -8984,7 +9275,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Univers rival",
           "tags_requis": [
             "Classe : Univers rival"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9006,7 +9300,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -9490,7 +9787,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9512,7 +9812,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -9561,7 +9864,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9574,7 +9880,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9587,7 +9896,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -9600,7 +9912,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -9644,7 +9959,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Commando Ginyu",
           "tags_requis": [
             "Classe : Commando Ginyu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9666,7 +9984,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Commando Ginyu",
           "tags_requis": [
             "Classe : Commando Ginyu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -9710,7 +10031,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Freezer",
           "tags_requis": [
             "Épisode : Saga Z - Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9732,7 +10056,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Freezer",
           "tags_requis": [
             "Épisode : Saga Z - Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -9774,7 +10101,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Généalogie maléfique",
           "tags_requis": [
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9796,7 +10126,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Généalogie maléfique",
           "tags_requis": [
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -9956,7 +10289,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga des films",
             "Classe : Guerrier de l'au-delà"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -9979,7 +10315,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga des films",
             "Classe : Guerrier de l'au-delà"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10058,7 +10397,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10080,7 +10422,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10166,7 +10511,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10188,7 +10536,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10244,7 +10595,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Équipe Bardock",
           "tags_requis": [
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10284,7 +10638,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -10297,7 +10654,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10342,7 +10702,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : GT",
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10364,7 +10727,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -10420,7 +10786,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Exclusif au jeu",
           "tags_requis": [
             "Épisode : Exclusif au jeu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -10442,7 +10811,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Exclusif au jeu",
           "tags_requis": [
             "Épisode : Exclusif au jeu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -10534,7 +10906,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Freezer",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10557,7 +10932,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Freezer",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10594,7 +10972,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10609,7 +10990,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10624,7 +11008,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -10639,7 +11026,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10691,7 +11081,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans",
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10739,7 +11132,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Lignée royale Vegeta",
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -10755,7 +11151,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Lignée royale Vegeta",
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -10815,7 +11214,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Classe : Ki divin",
             "Classe : Famille Goku",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -10832,7 +11234,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Classe : Ki divin",
             "Classe : Famille Goku",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -10870,7 +11275,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Classe : Ki divin",
             "Classe : Famille Goku",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10887,7 +11295,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Classe : Ki divin",
             "Classe : Famille Goku",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -10939,7 +11350,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -10961,7 +11375,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -11106,7 +11523,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11121,7 +11541,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11137,7 +11560,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Super Saiyan divin",
             "Classe : Dieu de la destruction"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -11184,7 +11610,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan divin",
           "tags_requis": [
             "Classe : Super Saiyan divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11206,7 +11635,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan divin",
           "tags_requis": [
             "Classe : Super Saiyan divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -11389,7 +11821,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Gogeta",
             "Classe : Super Saiyan 4"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11412,7 +11847,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Gogeta",
             "Classe : Super Saiyan 4"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -11504,7 +11942,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Régénération",
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11520,7 +11961,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Régénération",
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11580,7 +12024,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga des films",
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11603,7 +12050,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga des films",
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -11647,7 +12097,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Troupe de Thalès",
           "tags_requis": [
             "Classe : Troupe de Thalès"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -11669,7 +12122,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Troupe de Thalès",
           "tags_requis": [
             "Classe : Troupe de Thalès"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -11716,7 +12172,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Enfant",
           "tags_requis": [
             "Classe : Enfant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11738,7 +12197,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Enfant",
           "tags_requis": [
             "Classe : Enfant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -11818,7 +12280,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11840,7 +12305,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -11927,7 +12395,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -11949,7 +12420,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -12003,7 +12477,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -12026,7 +12503,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ki divin",
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -12299,7 +12779,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -12321,7 +12804,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ennemi puissant",
           "tags_requis": [
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -12399,7 +12885,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -12414,7 +12903,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -12465,7 +12957,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Porteur d'arme",
           "tags_requis": [
             "Classe : Porteur d'arme"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -12487,7 +12982,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Porteur d'arme",
           "tags_requis": [
             "Classe : Porteur d'arme"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -12531,7 +13029,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -12553,7 +13054,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -12644,7 +13148,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : DAIMA",
             "Classe : Super Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -12667,7 +13174,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : DAIMA",
             "Classe : Super Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -13021,7 +13531,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Dragon Ball",
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -13058,7 +13571,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DB",
           "tags_requis": [
             "Classe : DB"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -13073,7 +13589,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DB",
           "tags_requis": [
             "Classe : DB"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -13088,7 +13607,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DB",
           "tags_requis": [
             "Classe : DB"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -13103,7 +13625,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DB",
           "tags_requis": [
             "Classe : DB"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -13148,7 +13673,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Z - Freezer",
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -13171,7 +13699,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Z - Freezer",
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -13341,7 +13872,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -13363,7 +13897,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ennemi puissant",
           "tags_requis": [
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -13525,7 +14062,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -13547,7 +14087,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -13591,7 +14134,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -13613,7 +14159,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -13675,7 +14224,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : GT",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -13764,7 +14316,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ennemi puissant",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -13780,7 +14335,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ennemi puissant",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14088,7 +14646,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14214,7 +14775,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ki divin",
             "Épisode : Saga Super - Survie de l'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14237,7 +14801,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Univers rival",
             "Épisode : Saga Super - Survie de l'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14274,7 +14841,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Équipe Bardock",
           "tags_requis": [
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14289,7 +14859,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Équipe Bardock",
           "tags_requis": [
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14304,7 +14877,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Équipe Bardock",
           "tags_requis": [
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -14319,7 +14895,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Équipe Bardock",
           "tags_requis": [
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14400,7 +14979,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14415,7 +14997,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14462,7 +15047,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 3",
           "tags_requis": [
             "Classe : Super Saiyan 3"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14477,7 +15065,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Enfant",
           "tags_requis": [
             "Classe : Enfant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14526,7 +15117,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Porteur d'arme",
           "tags_requis": [
             "Classe : Porteur d'arme"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14570,7 +15164,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14585,7 +15182,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -14720,7 +15320,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Personnage : Son Goku",
           "tags_requis": [
             "Personnage : Son Goku"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -14735,7 +15338,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Personnage : Son Goku",
           "tags_requis": [
             "Personnage : Son Goku"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14820,7 +15426,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Classe : Ki divin",
             "Classe : Saiyan",
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14835,7 +15444,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -14850,7 +15462,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -14904,7 +15519,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -14926,7 +15544,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Lignée royale Vegeta",
           "tags_requis": [
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -15370,7 +15991,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Exclusif au jeu",
           "tags_requis": [
             "Épisode : Exclusif au jeu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15385,7 +16009,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Exclusif au jeu",
           "tags_requis": [
             "Épisode : Exclusif au jeu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15438,7 +16065,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -15460,7 +16090,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Généalogie maléfique",
           "tags_requis": [
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -15566,7 +16199,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Escadron blindé de Cooler",
           "tags_requis": [
             "Classe : Escadron blindé de Cooler"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15581,7 +16217,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Escadron blindé de Cooler",
           "tags_requis": [
             "Classe : Escadron blindé de Cooler"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15603,7 +16242,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Escadron blindé de Cooler",
           "tags_requis": [
             "Classe : Escadron blindé de Cooler"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       },
@@ -15618,7 +16260,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Escadron blindé de Cooler",
           "tags_requis": [
             "Classe : Escadron blindé de Cooler"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -15669,7 +16314,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       },
@@ -15684,7 +16332,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -15756,7 +16407,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15771,7 +16425,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15855,7 +16512,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15870,7 +16530,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15940,7 +16603,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -15955,7 +16621,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -16284,7 +16953,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -16299,7 +16971,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -18557,7 +19232,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -18572,7 +19250,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -18675,7 +19356,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -18795,7 +19479,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -18850,7 +19537,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19065,7 +19755,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Son Goku (DBL-EVT-00S)",
             "Personnage : Son Goku (DBL16-01S)"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -19081,7 +19774,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Son Goku (DBL-EVT-00S)",
             "Personnage : Son Goku (DBL16-01S)"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19162,7 +19858,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19205,7 +19904,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19246,7 +19948,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19292,7 +19997,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Filles",
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19561,7 +20269,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Legends Road",
           "tags_requis": [
             "Classe : Legends Road"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -19613,7 +20324,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19650,7 +20364,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super guerrier",
           "tags_requis": [
             "Classe : Super guerrier"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -19665,7 +20382,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super guerrier",
           "tags_requis": [
             "Classe : Super guerrier"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -19694,7 +20414,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Personnage : Tenshinhan",
           "tags_requis": [
             "Personnage : Tenshinhan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19797,7 +20520,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -19991,7 +20717,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Style de combat : Type énergie",
             "Style de combat : Type défense"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -20257,7 +20986,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Attribut : Violet",
             "Attribut : Vert",
             "Attribut : VIO"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -22617,7 +23349,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Lignée royale Vegeta",
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -22948,7 +23683,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -23034,7 +23772,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -23126,7 +23867,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Régénération",
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -23322,7 +24066,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -23373,7 +24120,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -23650,7 +24400,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -23844,7 +24597,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Lignée royale Vegeta",
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -23980,7 +24736,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier transformé",
           "tags_requis": [
             "Classe : Guerrier transformé"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -24038,7 +24797,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -24096,7 +24858,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       },
@@ -24111,7 +24876,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -24161,7 +24929,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Nappa",
             "Personnage : Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -24177,7 +24948,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Nappa",
             "Personnage : Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -24238,7 +25012,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan",
           "tags_requis": [
             "Classe : Super Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -24253,7 +25030,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 2",
           "tags_requis": [
             "Classe : Super Saiyan 2"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -24268,7 +25048,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 3",
           "tags_requis": [
             "Classe : Super Saiyan 3"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -24283,7 +25066,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 3",
           "tags_requis": [
             "Classe : Super Saiyan 3"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -24369,7 +25155,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       },
@@ -24384,7 +25173,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -24444,7 +25236,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Saiyan",
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -24565,7 +25360,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -24758,7 +25556,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -24771,7 +25572,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -24822,7 +25626,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -24956,7 +25763,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -24971,7 +25781,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25029,7 +25842,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Filles",
           "tags_requis": [
             "Classe : Filles"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -25088,7 +25904,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Famille Goku",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25148,7 +25967,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Famille Goku",
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25193,7 +26015,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -25206,7 +26031,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25251,7 +26079,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Famille Goku",
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -25267,7 +26098,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Famille Goku",
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25412,7 +26246,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 4",
           "tags_requis": [
             "Classe : Super Saiyan 4"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -25427,7 +26264,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25478,7 +26318,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DB",
           "tags_requis": [
             "Classe : DB"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25524,7 +26367,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : DB",
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -25632,7 +26478,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -25669,7 +26518,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -25728,7 +26580,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -25787,7 +26642,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -25845,7 +26703,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Freezer",
           "tags_requis": [
             "Épisode : Saga Z - Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -25860,7 +26721,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Freezer",
           "tags_requis": [
             "Épisode : Saga Z - Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -25909,7 +26773,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Univers 6",
           "tags_requis": [
             "Classe : Univers 6"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -25931,7 +26798,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Univers rival",
           "tags_requis": [
             "Classe : Univers rival"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26018,7 +26888,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 4",
           "tags_requis": [
             "Classe : Super Saiyan 4"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -26033,7 +26906,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type énergie",
           "tags_requis": [
             "Style de combat : Type énergie"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26131,7 +27007,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       },
@@ -26146,7 +27025,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -26188,7 +27070,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26228,7 +27113,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Futur",
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -26288,7 +27176,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Famille Goku",
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26332,7 +27223,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -26347,7 +27241,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26405,7 +27302,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -26420,7 +27320,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier de l'au-delà",
           "tags_requis": [
             "Classe : Guerrier de l'au-delà"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26507,7 +27410,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -26529,7 +27435,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26593,7 +27502,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -26608,7 +27520,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26659,7 +27574,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26711,7 +27629,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -26733,7 +27654,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -26778,7 +27702,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -26793,7 +27720,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -26859,7 +27789,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Super - Trunks du futur",
           "tags_requis": [
             "Épisode : Saga Super - Trunks du futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -26938,7 +27871,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -26953,7 +27889,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27011,7 +27950,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Équipe Bardock",
           "tags_requis": [
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -27070,7 +28012,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ennemi puissant",
           "tags_requis": [
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -27127,7 +28072,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ki divin",
             "Épisode : DRAGON BALL XENOVERSE 2"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -27143,7 +28091,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Ki divin",
             "Épisode : DRAGON BALL XENOVERSE 2"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27194,7 +28145,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type énergie",
           "tags_requis": [
             "Style de combat : Type énergie"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27278,7 +28232,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 1
       },
@@ -27300,7 +28257,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -27358,7 +28318,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 2
       },
@@ -27380,7 +28343,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -27432,7 +28398,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -27447,7 +28416,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27484,7 +28456,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -27499,7 +28474,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -27514,7 +28492,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -27529,7 +28510,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27564,7 +28548,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -27577,7 +28564,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -27590,7 +28580,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -27603,7 +28596,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27661,7 +28657,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27716,7 +28715,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Généalogie maléfique",
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -27732,7 +28734,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Généalogie maléfique",
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -27785,7 +28790,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans",
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -28409,7 +29417,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -28557,7 +29568,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -28815,7 +29829,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Rouge",
             "Attribut : Bleu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -29264,7 +30281,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -29342,7 +30362,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -29533,7 +30556,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -29659,7 +30685,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -29806,7 +30835,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Vert",
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -29851,7 +30883,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Filles",
           "tags_requis": [
             "Classe : Filles"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -29894,7 +30929,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -29974,7 +31012,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Legends Road",
           "tags_requis": [
             "Classe : Legends Road"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -30165,7 +31206,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -30278,7 +31322,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -30366,7 +31413,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -30481,7 +31531,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Style de combat : Type physique",
             "Style de combat : Type défense"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -30638,7 +31691,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -30682,7 +31738,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Legends Road",
           "tags_requis": [
             "Classe : Legends Road"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -30829,7 +31888,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -31035,7 +32097,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Rouge",
             "Attribut : Bleu"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -31156,7 +32221,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Dragon Ball",
           "tags_requis": [
             "Épisode : Saga Dragon Ball"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -31204,7 +32272,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : VIO",
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -31283,7 +32354,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Attribut : Jaune",
           "tags_requis": [
             "Attribut : Jaune"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -31368,7 +32442,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Attribut : Jaune",
           "tags_requis": [
             "Attribut : Jaune"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -31438,7 +32515,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Style de combat : Type défense",
             "Style de combat : Type énergie",
             "Style de combat : Type assistance"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -31456,7 +32536,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Style de combat : Type défense",
             "Style de combat : Type énergie",
             "Style de combat : Type assistance"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -31536,7 +32619,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier transformé",
           "tags_requis": [
             "Classe : Guerrier transformé"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -32414,7 +33500,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : JAU",
             "Attribut : VIO"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -32502,7 +33591,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Cyborg",
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -32518,7 +33610,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Cyborg",
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -32650,7 +33745,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Namek",
           "tags_requis": [
             "Classe : Namek"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -32665,7 +33763,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Namek",
           "tags_requis": [
             "Classe : Namek"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -32709,7 +33810,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -33043,7 +34147,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -33086,7 +34193,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Rareté : EXTRÊME",
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -33137,7 +34247,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan",
           "tags_requis": [
             "Classe : Super Saiyan"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -33181,7 +34294,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Lignée royale Vegeta",
           "tags_requis": [
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -33485,7 +34601,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type défense",
           "tags_requis": [
             "Style de combat : Type défense"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -33500,7 +34619,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type défense",
           "tags_requis": [
             "Style de combat : Type défense"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -33546,7 +34668,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Vert",
             "Attribut : Violet"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -33939,7 +35064,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier transformé",
           "tags_requis": [
             "Classe : Guerrier transformé"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34130,7 +35258,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34213,7 +35344,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Cell",
           "tags_requis": [
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34258,7 +35392,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34302,7 +35439,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34346,7 +35486,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34426,7 +35569,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34619,7 +35765,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34747,7 +35896,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Cell",
           "tags_requis": [
             "Épisode : Saga Z - Cell"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34842,7 +35994,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -34963,7 +36118,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35116,7 +36274,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Jaune",
             "Attribut : Rouge"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35237,7 +36398,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35290,7 +36454,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Armée de Freezer",
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35334,7 +36501,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35484,7 +36654,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Univers rival",
           "tags_requis": [
             "Classe : Univers rival"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35530,7 +36703,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Bleu",
             "Attribut : Vert"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35715,7 +36891,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Guerrier fusionné",
           "tags_requis": [
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35838,7 +37017,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35889,7 +37071,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Boo",
           "tags_requis": [
             "Épisode : Saga Z - Boo"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -35993,7 +37178,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36362,7 +37550,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Lignée royale Vegeta",
           "tags_requis": [
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36406,7 +37597,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36448,7 +37642,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36612,7 +37809,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Super Saiyan 4",
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36657,7 +37857,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Super Saiyan 4",
             "Style de combat : Type énergie"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36744,7 +37947,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : GT",
           "tags_requis": [
             "Classe : GT"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36821,7 +38027,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36936,7 +38145,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Guerrier fusionné",
             "Classe : Guerrier fusionné"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -36970,7 +38182,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -36983,7 +38198,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37032,7 +38250,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ennemi puissant",
           "tags_requis": [
             "Classe : Ennemi puissant"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37075,7 +38296,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Lignée royale Vegeta",
           "tags_requis": [
             "Classe : Lignée royale Vegeta"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37118,7 +38342,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37201,7 +38428,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Futur",
           "tags_requis": [
             "Classe : Futur"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37246,7 +38476,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37324,7 +38557,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Vert",
             "Attribut : VIO"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37480,7 +38716,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Attribut : Jaune",
           "tags_requis": [
             "Attribut : Jaune"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37602,7 +38841,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type défense",
           "tags_requis": [
             "Style de combat : Type défense"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -37617,7 +38859,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type défense",
           "tags_requis": [
             "Style de combat : Type défense"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37705,7 +38950,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37750,7 +38998,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -37913,7 +39164,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Style de combat : Type énergie",
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -38005,7 +39259,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Dieu de la destruction",
             "Classe : Ange"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -38055,7 +39312,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Rareté : EXTRÊME",
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -38108,7 +39368,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans",
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -38741,7 +40004,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les cyborgs",
           "tags_requis": [
             "Épisode : Saga Z - Les cyborgs"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -38860,7 +40126,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -39405,7 +40674,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -39420,7 +40692,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -39699,7 +40974,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -39918,7 +41196,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Style de combat : Type défense",
             "Style de combat : Type énergie",
             "Style de combat : Type assistance"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -39936,7 +41217,10 @@ window.DBL_ITEMS_SCRAPED = [
             "Style de combat : Type défense",
             "Style de combat : Type énergie",
             "Style de combat : Type assistance"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -40059,7 +41343,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Équipe Bardock",
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -40120,7 +41407,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan",
           "tags_requis": [
             "Classe : Super Saiyan"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -40135,7 +41425,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 2",
           "tags_requis": [
             "Classe : Super Saiyan 2"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -40150,7 +41443,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 3",
           "tags_requis": [
             "Classe : Super Saiyan 3"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -40165,7 +41461,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -40288,7 +41587,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Exclusif aux événements",
           "tags_requis": [
             "Classe : Exclusif aux événements"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -40303,7 +41605,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Exclusif aux événements",
           "tags_requis": [
             "Classe : Exclusif aux événements"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -41706,7 +43011,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Super - Trunks du futur",
           "tags_requis": [
             "Épisode : Saga Super - Trunks du futur"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -41816,7 +43124,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -41829,7 +43140,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -41869,7 +43183,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -41884,7 +43201,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -41919,7 +43239,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -41932,7 +43255,10 @@ window.DBL_ITEMS_SCRAPED = [
           "mode": "per_member",
           "seuil": 1,
           "tag_requis": null,
-          "tags_requis": []
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -41972,7 +43298,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Famille Goku",
           "tags_requis": [
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -41988,7 +43317,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Lignée royale Vegeta",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42039,7 +43371,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42205,7 +43540,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Généalogie maléfique",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42290,7 +43628,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DB",
           "tags_requis": [
             "Classe : DB"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -42305,7 +43646,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DB",
           "tags_requis": [
             "Classe : DB"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42478,7 +43822,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Épisode : Saga des films",
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -42578,7 +43925,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Exclusif aux événements",
           "tags_requis": [
             "Classe : Exclusif aux événements"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -42593,7 +43943,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Exclusif aux événements",
           "tags_requis": [
             "Classe : Exclusif aux événements"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42644,7 +43997,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Équipe Bardock",
           "tags_requis": [
             "Classe : Équipe Bardock"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42701,7 +44057,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -42716,7 +44075,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Les Saiyans",
           "tags_requis": [
             "Épisode : Saga Z - Les Saiyans"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42768,7 +44130,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Personnage : Son Goku",
             "Personnage : Vegeta"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42819,7 +44184,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42880,7 +44248,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type assistance",
           "tags_requis": [
             "Style de combat : Type assistance"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -42895,7 +44266,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type assistance",
           "tags_requis": [
             "Style de combat : Type assistance"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42946,7 +44320,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 4",
           "tags_requis": [
             "Classe : Super Saiyan 4"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -42997,7 +44374,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Dragons maléfiques",
           "tags_requis": [
             "Classe : Dragons maléfiques"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43012,7 +44392,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Dragons maléfiques",
           "tags_requis": [
             "Classe : Dragons maléfiques"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43133,7 +44516,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43148,7 +44534,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Régénération",
           "tags_requis": [
             "Classe : Régénération"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43199,7 +44588,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Troupe de Thalès",
           "tags_requis": [
             "Classe : Troupe de Thalès"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43214,7 +44606,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Troupe de Thalès",
           "tags_requis": [
             "Classe : Troupe de Thalès"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43272,7 +44667,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Enfant",
           "tags_requis": [
             "Classe : Enfant"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43287,7 +44685,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Enfant",
           "tags_requis": [
             "Classe : Enfant"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43338,7 +44739,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 2",
           "tags_requis": [
             "Classe : Super Saiyan 2"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43353,7 +44757,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 2",
           "tags_requis": [
             "Classe : Super Saiyan 2"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43404,7 +44811,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43455,7 +44865,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan",
           "tags_requis": [
             "Classe : Super Saiyan"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43572,7 +44985,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43587,7 +45003,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43638,7 +45057,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : DAIMA",
           "tags_requis": [
             "Classe : DAIMA"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43693,7 +45115,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Porteur d'arme",
             "Classe : Super Saiyan 2"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43744,7 +45169,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Dragon Ball",
           "tags_requis": [
             "Épisode : Saga Dragon Ball"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43759,7 +45187,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Dragon Ball",
           "tags_requis": [
             "Épisode : Saga Dragon Ball"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43857,7 +45288,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Freezer",
           "tags_requis": [
             "Épisode : Saga Z - Freezer"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43872,7 +45306,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Freezer",
           "tags_requis": [
             "Épisode : Saga Z - Freezer"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43923,7 +45360,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -43974,7 +45414,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -43989,7 +45432,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Ki divin",
           "tags_requis": [
             "Classe : Ki divin"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44040,7 +45486,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
         },
         "slot": 3
       }
@@ -44136,7 +45585,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Vert",
             "Attribut : Jaune"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -44152,7 +45604,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Attribut : Vert",
             "Attribut : Jaune"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44203,7 +45658,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan",
           "tags_requis": [
             "Classe : Saiyan"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44254,7 +45712,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -44269,7 +45730,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Saiyan métis",
           "tags_requis": [
             "Classe : Saiyan métis"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44320,7 +45784,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga exclusive au dessin animé",
           "tags_requis": [
             "Épisode : Saga exclusive au dessin animé"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -44335,7 +45802,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga exclusive au dessin animé",
           "tags_requis": [
             "Épisode : Saga exclusive au dessin animé"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44389,7 +45859,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -44404,7 +45877,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44496,7 +45972,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Super Saiyan 3",
           "tags_requis": [
             "Classe : Super Saiyan 3"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44589,7 +46068,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Lignée royale Vegeta",
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -44605,7 +46087,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tags_requis": [
             "Classe : Lignée royale Vegeta",
             "Classe : Famille Goku"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "et_meme",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44647,7 +46132,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -44662,7 +46150,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type énergie",
           "tags_requis": [
             "Style de combat : Type énergie"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44713,7 +46204,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Représentant d'Univers",
           "tags_requis": [
             "Classe : Représentant d'Univers"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44805,7 +46299,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -44820,7 +46317,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -44871,7 +46371,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga Z - Freezer",
           "tags_requis": [
             "Épisode : Saga Z - Freezer"
-          ]
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -45069,7 +46572,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
@@ -45084,7 +46590,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Armée de Freezer",
           "tags_requis": [
             "Classe : Armée de Freezer"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       }
@@ -45114,7 +46623,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Généalogie maléfique",
           "tags_requis": [
             "Classe : Généalogie maléfique"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 1
       },
@@ -45166,7 +46678,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Classe : Cyborg",
           "tags_requis": [
             "Classe : Cyborg"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 2
       },
@@ -45387,7 +46902,10 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type énergie",
           "tags_requis": [
             "Style de combat : Type énergie"
-          ]
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
         },
         "slot": 3
       },
