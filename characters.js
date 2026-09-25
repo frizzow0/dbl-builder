@@ -1,8 +1,234 @@
 // Auto-généré par scrape_chars.js — ne pas éditer à la main.
 // Source : fr.dblegends.net/characters
-// 500 personnages, généré le 2026-09-20T11:20:45.644Z
+// 502 personnages, généré le 2026-09-25T16:33:44.933Z
 
 window.DBL_CHARACTERS_SCRAPED = [
+  {
+    "id": "char_745",
+    "sourceId": "745",
+    "nom": "1re forme Freezer : Dodoria & Zarbon (Soutien)",
+    "element": "RED",
+    "rarete": "LEGEND",
+    "cardCode": "DBL99-04L",
+    "image": "https://fr.dblegends.net/assets/card_icons/BChaIco_0745_Frieza1stPod_745.webp",
+    "traits": [
+      "Armée de Freezer",
+      "Guerrier transformé",
+      "Généalogie maléfique",
+      "Ennemi puissant",
+      "M",
+      "LEGEND",
+      "Type physique",
+      "ROU",
+      "Saga Z - Freezer",
+      "Freezer"
+    ],
+    "tagsInternes": [],
+    "sourceUrl": "https://fr.dblegends.net/character/745",
+    "zAbilities": [
+      {
+        "tier": 1,
+        "paneId": "510745",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique"
+        ],
+        "texteBrut": "Généalogie maléfique :\n· Attaque physique de base +22%\n· Défense d'énergie de base +22%"
+      },
+      {
+        "tier": 2,
+        "paneId": "520745",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Généalogie maléfique ou Ennemi puissant ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Ennemi puissant",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Généalogie maléfique ou Ennemi puissant ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Ennemi puissant",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Ennemi puissant",
+          "Armée de Freezer"
+        ],
+        "texteBrut": "Généalogie maléfique, Ennemi puissant ou Armée de Freezer :\n· Attaque physique de base +26%\n· Défense d'énergie de base +26%"
+      },
+      {
+        "tier": 3,
+        "paneId": "530745",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Généalogie maléfique ou Ennemi puissant ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Ennemi puissant",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Généalogie maléfique ou Ennemi puissant ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Ennemi puissant",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 15,
+            "valeur_max": 15,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Ennemi puissant",
+          "Armée de Freezer"
+        ],
+        "texteBrut": "Généalogie maléfique, Ennemi puissant ou Armée de Freezer :\n· Attaque physique de base +30%\n· Défense d'énergie de base +30%\nGénéalogie maléfique :\n· Défense physique de base +15%"
+      },
+      {
+        "tier": 4,
+        "paneId": "540745",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 38,
+            "valeur_max": 38,
+            "condition": {
+              "description": "Généalogie maléfique ou Ennemi puissant ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Ennemi puissant",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 38,
+            "valeur_max": 38,
+            "condition": {
+              "description": "Généalogie maléfique ou Ennemi puissant ou Armée de Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique",
+                "Ennemi puissant",
+                "Armée de Freezer"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 18,
+            "valeur_max": 18,
+            "condition": {
+              "description": "Généalogie maléfique",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Généalogie maléfique"
+              ],
+              "tag_requis": "Généalogie maléfique"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Généalogie maléfique",
+          "Ennemi puissant",
+          "Armée de Freezer"
+        ],
+        "texteBrut": "Généalogie maléfique, Ennemi puissant ou Armée de Freezer :\n· Attaque physique de base +38%\n· Défense d'énergie de base +38%\nGénéalogie maléfique :\n· Défense physique de base +18%"
+      }
+    ],
+    "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
+    "isZenkai": false
+  },
   {
     "id": "char_742",
     "sourceId": "742",
@@ -8430,6 +8656,230 @@ window.DBL_CHARACTERS_SCRAPED = [
           "Saiyan"
         ],
         "texteBrut": "Exclusif au jeu, Exclusif aux événements ou Saiyan :\n· Attaque physique de base +33%\n· Défense physique de base +33%"
+      }
+    ],
+    "zAbilitiesZenkai": null,
+    "zAbilityUltra": null,
+    "isZenkai": false
+  },
+  {
+    "id": "char_746",
+    "sourceId": "746",
+    "nom": "Zarbon",
+    "element": "GRN",
+    "rarete": "SPARKING",
+    "cardCode": "DBL99-05S",
+    "image": "https://fr.dblegends.net/assets/card_icons/BChaIco_0746_Zarbon_746.webp",
+    "traits": [
+      "Armée de Freezer",
+      "Guerrier transformé",
+      "M",
+      "SPARKING",
+      "Type physique",
+      "VER",
+      "Saga Z - Freezer",
+      "Zarbon"
+    ],
+    "tagsInternes": [],
+    "sourceUrl": "https://fr.dblegends.net/character/746",
+    "zAbilities": [
+      {
+        "tier": 1,
+        "paneId": "510746",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 22,
+            "valeur_max": 22,
+            "condition": {
+              "description": "Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga Z - Freezer"
+        ],
+        "texteBrut": "Saga Z - Freezer :\n· Attaque physique de base +22%\n· Défense physique de base +22%"
+      },
+      {
+        "tier": 2,
+        "paneId": "520746",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga Z - Freezer ou Armée de Freezer ou Guerrier transformé",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer",
+                "Armée de Freezer",
+                "Guerrier transformé"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 26,
+            "valeur_max": 26,
+            "condition": {
+              "description": "Saga Z - Freezer ou Armée de Freezer ou Guerrier transformé",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer",
+                "Armée de Freezer",
+                "Guerrier transformé"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga Z - Freezer",
+          "Armée de Freezer",
+          "Guerrier transformé"
+        ],
+        "texteBrut": "Saga Z - Freezer, Armée de Freezer ou Guerrier transformé :\n· Attaque physique de base +26%\n· Défense physique de base +26%"
+      },
+      {
+        "tier": 3,
+        "paneId": "530746",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga Z - Freezer ou Armée de Freezer ou Guerrier transformé",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer",
+                "Armée de Freezer",
+                "Guerrier transformé"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 30,
+            "valeur_max": 30,
+            "condition": {
+              "description": "Saga Z - Freezer ou Armée de Freezer ou Guerrier transformé",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer",
+                "Armée de Freezer",
+                "Guerrier transformé"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 15,
+            "valeur_max": 15,
+            "condition": {
+              "description": "Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga Z - Freezer",
+          "Armée de Freezer",
+          "Guerrier transformé"
+        ],
+        "texteBrut": "Saga Z - Freezer, Armée de Freezer ou Guerrier transformé :\n· Attaque physique de base +30%\n· Défense physique de base +30%\nSaga Z - Freezer :\n· Défense d'énergie de base +15%"
+      },
+      {
+        "tier": 4,
+        "paneId": "540746",
+        "lignes": [
+          {
+            "stat": "attaque_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Saga Z - Freezer ou Armée de Freezer ou Guerrier transformé",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer",
+                "Armée de Freezer",
+                "Guerrier transformé"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          },
+          {
+            "stat": "defense_physique_de_base",
+            "valeur_min": 35,
+            "valeur_max": 35,
+            "condition": {
+              "description": "Saga Z - Freezer ou Armée de Freezer ou Guerrier transformé",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer",
+                "Armée de Freezer",
+                "Guerrier transformé"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          },
+          {
+            "stat": "defense_energie_de_base",
+            "valeur_min": 18,
+            "valeur_max": 18,
+            "condition": {
+              "description": "Saga Z - Freezer",
+              "mode": "threshold",
+              "seuil": 1,
+              "tags_requis": [
+                "Saga Z - Freezer"
+              ],
+              "tag_requis": "Saga Z - Freezer"
+            }
+          }
+        ],
+        "conditionTags": [
+          "Saga Z - Freezer",
+          "Armée de Freezer",
+          "Guerrier transformé"
+        ],
+        "texteBrut": "Saga Z - Freezer, Armée de Freezer ou Guerrier transformé :\n· Attaque physique de base +35%\n· Défense physique de base +35%\nSaga Z - Freezer :\n· Défense d'énergie de base +18%"
       }
     ],
     "zAbilitiesZenkai": null,

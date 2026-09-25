@@ -1,6 +1,6 @@
 // Auto-généré par scrape.js — ne pas éditer à la main.
 // Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, event)
-// 923 items, généré le 2026-09-13T18:31:36.217Z
+// 926 items, généré le 2026-09-25T16:34:16.135Z
 
 window.DBL_ITEMS_SCRAPED = [
   {
@@ -15625,6 +15625,72 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_2099",
+    "sourceId": "2099",
+    "nom": "Zarbon, veuillez leur montrer.",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2099",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2099.webp",
+    "tagsPorteur": [
+      [
+        "Armée de Freezer"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 8,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un autre « Classe : Armée de Freezer » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Armée de Freezer",
+          "tags_requis": [
+            "Classe : Armée de Freezer"
+          ]
+        },
+        "slot": 3
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un autre « Classe : Armée de Freezer » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Armée de Freezer",
+          "tags_requis": [
+            "Classe : Armée de Freezer"
+          ]
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_30001",
     "sourceId": "30001",
     "nom": "SPARKING !! - Boo",
@@ -27595,6 +27661,77 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Style de combat : Type physique",
           "tags_requis": [
             "Style de combat : Type physique"
+          ]
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_50212",
+    "sourceId": "50212",
+    "nom": "Vous allez me le payer...",
+    "rarete": "awakenedgold",
+    "sourceUrl": "https://fr.dblegends.net/equip/50212",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1403.webp",
+    "tagsPorteur": [
+      [
+        "Généalogie maléfique"
+      ],
+      [
+        "Armée de Freezer"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "degats_tech_spe",
+        "valeur_min": 6,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 18,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 8,
+        "valeur_max": 18,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 3,
+        "valeur_max": 5,
+        "condition": {
+          "description": "par combattant de l'équipe d'« Classe : Généalogie maléfique »  ou « Classe : Armée de Freezer »",
+          "mode": "per_member",
+          "seuil": 1,
+          "tag_requis": "Classe : Généalogie maléfique",
+          "tags_requis": [
+            "Classe : Généalogie maléfique",
+            "Classe : Armée de Freezer"
+          ]
+        },
+        "slot": 3
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 3,
+        "valeur_max": 5,
+        "condition": {
+          "description": "par combattant de l'équipe d'« Classe : Généalogie maléfique »  ou « Classe : Armée de Freezer »",
+          "mode": "per_member",
+          "seuil": 1,
+          "tag_requis": "Classe : Généalogie maléfique",
+          "tags_requis": [
+            "Classe : Généalogie maléfique",
+            "Classe : Armée de Freezer"
           ]
         },
         "slot": 3
@@ -44683,6 +44820,57 @@ window.DBL_ITEMS_SCRAPED = [
           "tag_requis": "Épisode : Saga des films",
           "tags_requis": [
             "Épisode : Saga des films"
+          ]
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2100",
+    "sourceId": "2100",
+    "nom": "Dodoria.",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/2100",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2100.webp",
+    "tagsPorteur": [
+      [
+        "Armée de Freezer"
+      ]
+    ],
+    "lignes": [
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si vous êtes un « Épisode : Saga Z - Freezer »",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Épisode : Saga Z - Freezer",
+          "tags_requis": [
+            "Épisode : Saga Z - Freezer"
           ]
         },
         "slot": 3
