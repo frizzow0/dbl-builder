@@ -19,6 +19,7 @@
 
 <h2>Les raretés et leurs cadres</h2>
 <p>Les items existent en plusieurs raretés : Fer, Bronze, Argent, Or, leurs versions <strong>éveillées</strong>, Unique, Unique éveillé, Platinum et Événement. La rareté détermine la puissance des lignes de stats et leur nombre. Chaque rareté a son <strong>cadre</strong> ; DBL Optimizer l’affiche autour de l’icône pour reconnaître la qualité d’un coup d’œil.</p>
+<p>Une exception : les équipements de rareté <strong>Événement</strong> sont traités comme <strong>incompatibles avec tous les personnages</strong>. Ils n’apparaissent donc pas dans la liste filtrée « Compatibles », et ni l’optimiseur ni les suggestions ne les proposent. En décochant le filtre, ils restent visibles, marqués ✗ avec la raison.</p>
 
 <h2>Le point clé : les couches de stats (base, pur, direct)</h2>
 <p>C’est la mécanique la plus importante — et la plus contre-intuitive. Tous les bonus ne s’appliquent pas de la même manière : ils sont rangés dans des <strong>couches</strong> distinctes, qui se <strong>multiplient entre elles</strong> :</p>

@@ -392,11 +392,18 @@
     return new Set(tags.filter(Boolean));
   }
 
+  // Équipements « Événement » : exclus de l'outil, incompatibles avec TOUS les
+  // personnages. La règle porte sur la RARETÉ, pas sur une liste d'items : les
+  // événements à venir (futurs scrapes) sont donc couverts sans rien changer.
+  const RARETES_EVENEMENT = new Set(["event", "awakenedevent"]);
+  const estEvenement = (item) => RARETES_EVENEMENT.has(String((item && item.rarete) || "").toLowerCase());
+
   // Vrai si l'item est compatible avec le personnage.
   // tagsPorteur est en CNF : [["A","B"], ["C"]] = (A AND B) OR C
   // Un perso "possède" : ses traits + son cardCode + son élément.
   function isCompatible(item, character) {
     if (!character) return null; // pas de perso sélectionné = compat inconnue
+    if (estEvenement(item)) return false;   // événement : pour personne
     // Réservé à quelques cartes précises : le site en donne la liste exacte
     // (porteursExacts, au plus 5 cartes). Seules ces cartes passent — un Platinum
     // ou un « SPARKING !! » ne va qu'à UNE carte, pas à toutes celles du perso.
@@ -421,6 +428,10 @@
   // complet : infobulles et détails). Un item réservé à quelques cartes précises
   // (porteursExacts, lu sur le site) les nomme ; sinon, restriction par traits.
   function porteurInfo(item) {
+    if (estEvenement(item)) {
+      const phrase = T('item.event.no');
+      return { court: phrase, complet: phrase, evenement: true };
+    }
     if (item.porteursExacts && item.porteursExacts.length) {
       const vus = new Set();
       const cartes = item.porteursExacts
@@ -2641,7 +2652,7 @@
     const compatLine = compat === true
       ? `<p class="idet-compat is-yes">✓ ${T('item.compat.yes', { name: active.character.nom.trim() })}</p>`
       : compat === false
-        ? `<p class="idet-compat is-no">✗ ${T('item.compat.no', { name: active.character.nom.trim() })}</p>`
+        ? `<p class="idet-compat is-no">✗ ${estEvenement(it) ? T('item.event.no') : T('item.compat.no', { name: active.character.nom.trim() })}</p>`
         : "";
 
     return `<div class="idet-hero">` +
@@ -2649,7 +2660,7 @@
         `<div class="idet-id">` +
           `<span class="idet-rarity">${rarityLabel(it.rarete)}</span>` +
           `<h3 class="idet-name" id="item-drawer-title">${escSvg(it.nom)}</h3>` +
-          (porteur ? `<p class="idet-tags">${porteur.complet}</p>` : "") +
+          (porteur && !porteur.evenement ? `<p class="idet-tags">${porteur.complet}</p>` : "") +
           compatLine +
         `</div>` +
       `</div>` + itemSlotsHTML(it);
@@ -2889,7 +2900,8 @@
           compatBadge = `<span class="compat-badge compat-yes" title="${T('item.compat.yes', { name: active.character.nom.trim() })}">✓</span>`;
           compatClass = "is-compat";
         } else if (compat === false) {
-          compatBadge = `<span class="compat-badge compat-no" title="${T('item.compat.no', { name: active.character.nom.trim() })}">✗</span>`;
+          const raison = estEvenement(it) ? T('item.event.no') : T('item.compat.no', { name: active.character.nom.trim() });
+          compatBadge = `<span class="compat-badge compat-no" title="${escAttr(raison)}">✗</span>`;
           compatClass = "is-incompat";
         }
         return `

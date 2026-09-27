@@ -150,6 +150,9 @@
     'slot.remove':          { fr: 'Retirer',                en: 'Remove' },
     'item.compat.yes':      { fr: 'Compatible avec {name}', en: 'Compatible with {name}' },
     'item.compat.no':       { fr: 'Incompatible avec {name}', en: 'Incompatible with {name}' },
+    // Les équipements « Événement » sont exclus : incompatibles avec tout le monde.
+    'item.event.no':        { fr: 'Équipement d’événement : incompatible avec tous les personnages',
+                              en: 'Event equipment: incompatible with every character' },
     'item.details':         { fr: 'Voir les détails',       en: 'View details' },
     'passif.label':         { fr: 'Passif',                 en: 'Passive' },
     'item.equip':           { fr: 'Équiper cet item',       en: 'Equip this item' },
