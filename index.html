@@ -38,10 +38,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://fr.dblegends.net" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=100" />
+  <link rel="stylesheet" href="/styles.css?v=101" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=100"></script>
+  <script defer src="/site.js?v=101"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -218,10 +218,10 @@
 
       <div class="panel" id="section-passifs">
         <h2 class="panel-title" data-i18n="panel.passifs.title">Effets non calculés</h2>
+        <p class="panel-sub" data-i18n="panel.passifs.sub">Toute l’équipe, perso par perso : les effets que l’outil ne peut pas chiffrer (passifs, Résonance) et ceux dont la condition n’est pas remplie.</p>
         <div id="passifs-zone" class="callout-zone">
           <p class="placeholder" data-i18n="passif.none">Aucun effet passif.</p>
         </div>
-        <div id="inactive-zone" class="callout-zone"></div>
       </div>
 
     </section>
@@ -234,19 +234,27 @@
       </a>
     </div>
 
-    <!-- ====== SECTION 3 : Cap Z + items · Profil par perso · Arbre des Cap Z ====== -->
+    <!-- ====== SECTION 3 : Cap Z + items — équipe, puis personnage ciblé ====== -->
     <section class="combo-row" id="step-combo">
+
+      <!-- Toute l'équipe : ce panneau ne dépend d'aucun personnage ciblé. -->
+      <div class="panel" id="section-global">
+        <h2 class="panel-title" data-i18n="panel.global.title">Bilan global (Cap Z + items)</h2>
+        <p class="panel-sub" data-i18n="panel.global.sub">Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).</p>
+        <div id="global-bilan" class="z-bilan"></div>
+      </div>
+
+      <!-- Le ciblage ne pilote que les deux panneaux qui suivent. -->
       <div class="focus-bar">
         <span class="focus-bar-label" data-i18n="focus.label">Personnage ciblé</span>
         <div id="focus-picker" class="radar-picker"></div>
+        <span class="focus-bar-hint" data-i18n="focus.hint">pilote le bilan par personnage et la vue ciblée de l’arbre</span>
       </div>
+
       <div class="combo-panels">
 
-        <div class="panel" id="section-global">
-          <h2 class="panel-title" data-i18n="panel.global.title">Bilan global (Cap Z + items)</h2>
-          <p class="panel-sub" data-i18n="panel.global.sub">Tout compris : pour chaque perso, on combine ses Cap Z reçues ET ses items équipés (couches base/pur/direct multipliées).</p>
-          <div id="global-bilan" class="z-bilan"></div>
-          <h3 class="results-subhead" data-i18n="panel.globalradar.title">Profil par perso (Cap Z + items)</h3>
+        <div class="panel" id="section-perso">
+          <h2 class="panel-title" data-i18n="panel.perso.title">Bilan par personnage (Cap Z + items)</h2>
           <p class="panel-sub" data-i18n="panel.globalradar.sub">Gain par stat du personnage ciblé ci-dessus.</p>
           <div id="global-radar" class="radar"></div>
 
@@ -462,12 +470,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="/i18n.js?v=100"></script>
-  <script src="/items.js?v=100"></script>
-  <script src="/characters.js?v=100"></script>
-  <script src="/data.js?v=100"></script>
-  <script src="/calc.js?v=100"></script>
-  <script src="/app.js?v=100"></script>
+  <script src="/i18n.js?v=101"></script>
+  <script src="/items.js?v=101"></script>
+  <script src="/characters.js?v=101"></script>
+  <script src="/data.js?v=101"></script>
+  <script src="/calc.js?v=101"></script>
+  <script src="/app.js?v=101"></script>
 
   <script>
     (function () {

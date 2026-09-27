@@ -40,6 +40,8 @@
     'panel.stats.sub':         { fr: 'Bleu = bonus d\'<em>items</em>. Orange = bonus <em>Cap Z</em>. Le multiplicateur équivalent montre le gain final.',
                                   en: 'Blue = <em>items</em> bonus. Orange = <em>Z Ability</em> bonus. The equivalent multiplier shows the final gain.' },
     'panel.passifs.title':     { fr: 'Effets non calculés', en: 'Uncalculated Effects' },
+    'panel.passifs.sub':       { fr: 'Toute l’équipe, perso par perso : les effets que l’outil ne peut pas chiffrer (passifs, Résonance) et ceux dont la condition n’est pas remplie.',
+                                en: 'The whole team, character by character: effects the tool cannot quantify (passives, Resonance) and those whose condition is not met.' },
     'modal.item.title':        { fr: 'Choisir un item',     en: 'Choose an item' },
     'modal.item.search.ph':    { fr: 'Filtrer par nom...', en: 'Filter by name...' },
     'modal.item.search.aria':  { fr: 'Rechercher un item',  en: 'Search for an item' },
@@ -207,11 +209,12 @@
     'panel.global.title': { fr: 'Bilan global (Cap Z + items)', en: 'Global summary (Z Abilities + items)' },
     'panel.zradar.title':  { fr: 'Profil des stats (Cap Z)', en: 'Stat profile (Z Abilities)' },
     'panel.zradar.sub':    { fr: 'Gain total d\'équipe par stat, en pourcentage.', en: 'Team total gain per stat, in percent.' },
-    'panel.globalradar.title': { fr: 'Profil par perso (Cap Z + items)', en: 'Per-character profile (Z + items)' },
+    'panel.perso.title':   { fr: 'Bilan par personnage (Cap Z + items)', en: 'Per-character summary (Z Abilities + items)' },
     'panel.globalradar.sub':   { fr: 'Gain par stat du personnage ciblé ci-dessus.', en: 'Gain per stat for the targeted character above.' },
     'radar.nodata':        { fr: 'Aucune stat boostée pour le moment.', en: 'No boosted stat yet.' },
     'radar.max':           { fr: 'max', en: 'max' },
     'focus.label':         { fr: 'Personnage ciblé', en: 'Targeted character' },
+    'focus.hint':          { fr: 'pilote le bilan par personnage et la vue ciblée de l’arbre', en: 'drives the per-character summary and the tree’s focused view' },
 
     // ── Arbre des Cap Z ──────────────────────────
     'panel.ztree.title':   { fr: 'Arbre des Cap Z', en: 'Z Ability Tree' },
@@ -237,6 +240,8 @@
                               en: 'Equip at least one item (or select a character) to see the effects summary.' },
     'passif.none':         { fr: 'Aucun effet passif.',                    en: 'No passive effects.' },
     'passifs.equipped.none': { fr: 'Aucun effet passif sur les items équipés.', en: 'No passive effects on equipped items.' },
+    'passifs.team.none':   { fr: 'Rien à signaler : tous les effets de l’équipe sont chiffrés dans les bilans.',
+                             en: 'Nothing to report: every effect in the team is accounted for in the summaries.' },
     'team.noperso':        { fr: 'Aucun perso dans l\'équipe.',             en: 'No character in the team.' },
     'inactive.tag':        { fr: '❓ Inactif',                              en: '❓ Inactive' },
 

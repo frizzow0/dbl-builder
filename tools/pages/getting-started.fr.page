@@ -50,10 +50,11 @@
 <h2>6. Analyser les résultats</h2>
 <ul>
   <li><strong>Bilan global (Cap Z)</strong> — le total des bonus de Cap Z reçus par toute l’équipe, et un graphique par stat.</li>
-  <li><strong>Effets non calculés</strong> — les passifs impossibles à chiffrer et les effets dont la condition n’est pas remplie, pour ne rien oublier.</li>
-  <li><strong>Personnage ciblé</strong> — choisis le personnage à analyser en détail.</li>
-  <li><strong>Bilan global (Cap Z + items)</strong> — ses bonus tout compris, avec le <strong>résumé des effets cumulés</strong> stat par stat (part des items, part des Cap Z et multiplicateur final).</li>
-  <li><strong>Arbre des Cap Z</strong> — la propagation de sa Cap Z vers chaque coéquipier : flèche <strong>verte</strong> si tout passe, <strong>jaune</strong> si une partie seulement s’applique, <strong>rouge</strong> si rien ne passe.</li>
+  <li><strong>Effets non calculés</strong> — toute l’équipe, perso par perso : la Résonance des ULTRA, les passifs impossibles à chiffrer et les effets dont la condition n’est pas remplie.</li>
+  <li><strong>Bilan global (Cap Z + items)</strong> — le total de l’équipe, tout compris : Cap Z reçues et items équipés, couches multipliées.</li>
+  <li><strong>Personnage ciblé</strong> — choisis le personnage à analyser en détail ; il ne pilote que les deux panneaux qui suivent.</li>
+  <li><strong>Bilan par personnage (Cap Z + items)</strong> — ses bonus tout compris, avec le <strong>résumé des effets cumulés</strong> stat par stat (part des items, part des Cap Z et multiplicateur final).</li>
+  <li><strong>Arbre des Cap Z</strong> — en vue globale, la matrice des propagations de toute l’équipe ; en vue ciblée, la Cap Z du personnage choisi vers chaque coéquipier : flèche <strong>verte</strong> si tout passe, <strong>jaune</strong> si une partie seulement s’applique, <strong>rouge</strong> si rien ne passe.</li>
 </ul>
 
 <h2>7. En mode Proud : vérifier le Trio C</h2>

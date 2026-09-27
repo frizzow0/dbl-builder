@@ -50,10 +50,11 @@
 <h2>6. Analyze the results</h2>
 <ul>
   <li><strong>Global summary (Z Abilities)</strong> — the total Z Ability bonuses received by the whole team, with a per-stat chart.</li>
-  <li><strong>Uncalculated Effects</strong> — passives that can’t be quantified and effects whose condition isn’t met, so nothing gets overlooked.</li>
-  <li><strong>Targeted character</strong> — choose the character to analyze in detail.</li>
-  <li><strong>Global summary (Z Abilities + items)</strong> — their all-in bonuses, with the <strong>Cumulated Effects Summary</strong> stat by stat (equipment share, Z Ability share and final multiplier).</li>
-  <li><strong>Z Ability Tree</strong> — how their Z Ability reaches each teammate: a <strong>green</strong> arrow if everything applies, <strong>yellow</strong> if only part of it does, <strong>red</strong> if nothing does.</li>
+  <li><strong>Uncalculated Effects</strong> — the whole team, character by character: ULTRA Resonance, passives that can’t be quantified and effects whose condition isn’t met.</li>
+  <li><strong>Global summary (Z Abilities + items)</strong> — the team total, all in: received Z Abilities and equipped gear, layers multiplied.</li>
+  <li><strong>Targeted character</strong> — choose the character to analyze in detail; it only drives the two panels that follow.</li>
+  <li><strong>Per-character summary (Z Abilities + items)</strong> — their all-in bonuses, with the <strong>Cumulated Effects Summary</strong> stat by stat (equipment share, Z Ability share and final multiplier).</li>
+  <li><strong>Z Ability Tree</strong> — in overview mode, the propagation matrix for the whole team; in focused mode, the chosen character’s Z Ability towards each teammate: a <strong>green</strong> arrow if everything applies, <strong>yellow</strong> if only part of it does, <strong>red</strong> if nothing does.</li>
 </ul>
 
 <h2>7. In Proud mode: check your Trio C</h2>

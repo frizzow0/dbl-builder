@@ -151,7 +151,14 @@
           // par une clé synthétique dont il maîtrise le décompte.
           const tagsVisibles = (c.tags_affichage && c.tags_affichage.length ? c.tags_affichage : c.tags_requis) || [c.tag_requis];
           const tagPrincipal = tagsVisibles[0] || c.tag_requis;
-          const valeurActuelle = conditions[tagPrincipal] || 0;
+          // Le compte AFFICHÉ doit être celui qui a servi au calcul : quand
+          // app.js a remplacé la condition par une clé synthétique (« un autre »,
+          // « à la fois A et B »…), lire le tag d’origine donnerait un tout autre
+          // nombre — « 1/1 » sur une ligne pourtant inactive.
+          const clesReelles = ((c.tags_requis && c.tags_requis.length ? c.tags_requis : [c.tag_requis]) || []).filter(Boolean);
+          const valeurActuelle = clesReelles.length
+            ? Math.max(0, ...clesReelles.map((k) => conditions[k] || 0))
+            : 0;
           const infoCondition = {
             itemNom: item.nom,
             slot: slotIdx,

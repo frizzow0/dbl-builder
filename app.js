@@ -3420,7 +3420,6 @@
   // ===== RENDU : RÉSULTATS =====
   const statsGrid = document.getElementById("stats-grid");
   const passifsZone = document.getElementById("passifs-zone");
-  const inactiveZone = document.getElementById("inactive-zone");
 
     // Stats regroupées par catégorie thématique — labels recalculés selon la langue
     const DISPLAY_GROUPS = [
@@ -3475,12 +3474,11 @@
     renderFocusPicker();
     renderGlobalBilan();
     renderZTree();
+    renderEffetsNonCalcules();   // toute l'équipe : indépendant du perso ciblé
     const noItems = active.items.every((s) => !s);
     const noZ = buildTeamZItemsFor(state.activeSlot).length === 0;
     if (noItems && noZ) {
       statsGrid.innerHTML = `<p class="placeholder" style="color: var(--text-soft); font-size: 13px; margin: 0;">${T('stats.placeholder')}</p>`;
-      passifsZone.innerHTML = `<p class="placeholder">${T('passif.none')}</p>`;
-      inactiveZone.innerHTML = "";
       return;
     }
 
@@ -3581,72 +3579,85 @@
     motionStaggerStats();
     motionFlashStats();
 
-    // --- Passifs ---
-    // La Résonance de la puissance d'un ULTRA s'y ajoute en tête : elle ne se
-    // calcule pas (effet de combat), mais l'utilisateur doit voir son état.
-    const resoHTML = resonanceCalloutHTML(state.activeSlot);
-    if (result.passifs.length === 0) {
-      passifsZone.innerHTML = resoHTML || `<p class="placeholder">${T('passifs.equipped.none')}</p>`;
-    } else {
-      // Regroupement par item (clé = slot + nom) pour ne pas dupliquer
-      // l'entête « source » à chaque ligne.
-      const groups = [];
-      const groupsByKey = {};
-      for (const p of result.passifs) {
-        const key = `${p.slot}-${p.itemNom}`;
-        if (!groupsByKey[key]) {
-          const g = { slot: p.slot, itemNom: p.itemNom, descriptions: [] };
-          groupsByKey[key] = g;
-          groups.push(g);
-        }
-        groupsByKey[key].descriptions.push(p.description);
-      }
+  }
 
-      passifsZone.innerHTML = resoHTML + groups
-        .map((g) => {
-          const lignes = g.descriptions
-            .map((d) => {
-              // Sous-effets (commencent par "-" ou "·") sont indentés
-              const isSub = /^[-·•]\s*/.test(d);
-              const cleaned = d.replace(/^[-·•]\s*/, "");
-              return `<div class="passif-line ${isSub ? "is-sub" : ""}">${cleaned}</div>`;
-            })
-            .join("");
-          return `
-            <div class="callout passive">
-              <div class="callout-tag">⚡</div>
-              <div class="callout-content">
-                <div class="callout-source"><strong>${g.itemNom}</strong> · slot ${g.slot + 1}</div>
-                <div class="passif-list">${lignes}</div>
-              </div>
-            </div>
-          `;
-        })
-        .join("");
+  // ===== EFFETS NON CALCULÉS (vue d'ÉQUIPE) =====
+  // Ce panneau ne suit pas le personnage ciblé : il passe les 6 slots en revue.
+  // Trois natures d'effets y figurent, regroupées par personnage :
+  //  - la Résonance de la puissance d'un ULTRA (effet de combat, jamais chiffré) ;
+  //  - les passifs d'items et de Cap Z, que le jeu écrit en toutes lettres ;
+  //  - les lignes d'items dont la condition n'est pas remplie — ce qu'il manque
+  //    exactement est détaillé, lui, dans « Composition d'équipe ».
+  function passifsGroupesHTML(passifs) {
+    if (!passifs.length) return "";
+    // Regroupement par source (slot + nom) pour ne pas répéter l'entête.
+    const groupes = [];
+    const parCle = {};
+    for (const p of passifs) {
+      const cle = `${p.slot}-${p.itemNom}`;
+      if (!parCle[cle]) { parCle[cle] = { slot: p.slot, itemNom: p.itemNom, descriptions: [] }; groupes.push(parCle[cle]); }
+      parCle[cle].descriptions.push(p.description);
     }
+    return groupes.map((g) => {
+      const lignes = g.descriptions.map((d) => {
+        const estSous = /^[-·•]\s*/.test(d);   // sous-effet : indenté
+        return `<div class="passif-line ${estSous ? "is-sub" : ""}">${d.replace(/^[-·•]\s*/, "")}</div>`;
+      }).join("");
+      // Index 0..2 = les 3 emplacements d'items ; au-delà, une Cap Z, dont
+      // l'intitulé nomme déjà sa source.
+      const source = g.slot < 3
+        ? `<strong>${g.itemNom}</strong> · slot ${g.slot + 1}`
+        : `<strong>${g.itemNom}</strong>`;
+      return `<div class="callout passive"><div class="callout-tag">⚡</div><div class="callout-content">` +
+        `<div class="callout-source">${source}</div><div class="passif-list">${lignes}</div>` +
+        `</div></div>`;
+    }).join("");
+  }
 
-    // --- Conditions non remplies ---
-    if (result.conditionsInactives.length === 0) {
-      inactiveZone.innerHTML = "";
-    } else {
-      inactiveZone.innerHTML = result.conditionsInactives
-        .map(
-          (c) => `
-          <div class="callout inactive">
-            <div class="callout-tag">${T('inactive.tag')}</div>
-            <div>
-              <div class="callout-body">
-                <strong>+${fmtPct(c.valeur).replace("%","")}% ${c.statLabel}</strong> — ${c.description}
-              </div>
-              <div class="callout-source">
-                ${T('source.prefix')} ${c.itemNom} (slot ${c.slot + 1}) — ${c.valeurActuelle}/${c.seuil} « ${c.tag} »
-              </div>
-            </div>
+  function inactivesHTML(inactives) {
+    return inactives.map((c) => `
+      <div class="callout inactive">
+        <div class="callout-tag">${T('inactive.tag')}</div>
+        <div>
+          <div class="callout-body">
+            <strong>+${fmtPct(c.valeur).replace("%","")}% ${c.statLabel}</strong> — ${c.description}
           </div>
-        `
-        )
-        .join("");
-    }
+          <div class="callout-source">
+            ${T('source.prefix')} ${c.itemNom} (slot ${c.slot + 1}) — ${c.valeurActuelle}/${c.seuil} « ${c.tag} »
+          </div>
+        </div>
+      </div>`).join("");
+  }
+
+  function renderEffetsNonCalcules() {
+    if (!passifsZone) return;
+    const blocs = [];
+    state.team.forEach((slot, i) => {
+      if (!slot.character) return;
+      const prepare = preparerItems(i, trioDOrigine(i));
+      const conds = { ...getTrioTagCountsFor(i), ...prepare.conditions };
+      const res = calculerStats({ items: [...prepare.items, ...buildTeamZItemsFor(i)], conditions: conds });
+      const corps = (resonanceCalloutHTML(i) || "") +
+        passifsGroupesHTML(res.passifs) +
+        inactivesHTML(res.conditionsInactives);
+      if (!corps) return;   // ce perso n'a rien à signaler
+      const c = slot.character;
+      const leader = (i === effectiveLeaderSlot() && !state.noLeader)
+        ? `<span class="enc-leader" title="${T('build.leader')}">★</span>` : "";
+      blocs.push(
+        `<section class="enc-char elem-${(c.element || "").toLowerCase()}">` +
+          `<header class="enc-head">${ceAvatarHTML(c)}` +
+            `<span class="enc-id"><b>${escAttr(c.nom.trim())}</b>` +
+            `<small>${escAttr(c.cardCode || "")} · ${trioLabel(trioOf(i))}</small></span>` +
+            leader +
+          `</header>` +
+          `<div class="enc-body">${corps}</div>` +
+        `</section>`);
+    });
+    const equipeVide = state.team.every((s) => !s.character);
+    passifsZone.innerHTML = blocs.length
+      ? blocs.join("")
+      : `<p class="placeholder">${T(equipeVide ? 'team.noperso' : 'passifs.team.none')}</p>`;
   }
 
   // ===== GRAPHIQUE EN BARRES (profil de stats) =====
@@ -4030,7 +4041,7 @@
       if (!chip) return;
       state.activeSlot = +chip.dataset.focusChar;
       renderTeamGrid();   // met à jour la ligne active surlignée dans le builder
-      renderResults();    // recalcule global + arbre + résumé détaillé + effets non calculés
+      renderResults();    // le ciblage ne change que le bilan par perso et l arbre
     });
   }
 
