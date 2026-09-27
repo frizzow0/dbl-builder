@@ -1546,11 +1546,14 @@
     const items = slot.character
       ? `<div class="builder-items">
            <div class="builder-item-icons">${[0, 1, 2].map((j) => itemIconHTML(charSlot, j)).join("")}</div>
-           <button class="builder-items-details" data-open-details="${charSlot}" type="button" title="${T('items.details')}" aria-label="${T('items.details')}">▾</button>
+           <div class="builder-items-actions">
+             <button class="builder-items-opti" data-open-opti="${charSlot}" type="button" title="${T('opti.open.title')}" aria-label="${T('opti.open.title')}">⚡</button>
+             <button class="builder-items-details" data-open-details="${charSlot}" type="button" title="${T('items.details')}" aria-label="${T('items.details')}">▾</button>
+           </div>
          </div>`
       : `<div class="builder-items builder-items--locked" aria-hidden="true" title="${T('builder.items.empty')}">
            <div class="builder-item-icons">${[0, 1, 2].map(() => `<span class="builder-item-icon empty">＋</span>`).join("")}</div>
-           <span class="builder-items-details">▾</span>
+           <div class="builder-items-actions"><span class="builder-items-opti">⚡</span><span class="builder-items-details">▾</span></div>
          </div>`;
     // Cap Z + items vivent dans un panneau qui se déroule vers la droite au survol
     // de la ligne (ou quand elle est active). Cf. .builder-row-panel dans styles.css.
@@ -1851,6 +1854,57 @@
         items: s.items.filter(Boolean),
         leader: i === state.leaderSlot,
       })),
+      // Poser un perso précis dans un slot (audits ciblés).
+      poser: (slot, id) => {
+        const p = PERSONNAGES.find((x) => x.id === id || String(x.sourceId) === String(id));
+        if (!p) return null;
+        Object.assign(state.team[slot], emptyTeamSlot(), { character: p });
+        renderAll();
+        return p.nom.trim();
+      },
+      // Poser un item précis (audits « même équipement », conditions…).
+      poserItem: (slot, itemSlot, itemId) => {
+        const it = ITEMS.find((x) => x.id === itemId);
+        if (!it) return null;
+        state.team[slot].items[itemSlot] = it;
+        renderAll();
+        return it.nom.trim();
+      },
+      // Optimiseur : lancer une recherche hors interface et desserrer ses
+      // bornes, pour vérifier que la présélection ne rate pas le meilleur trio.
+      opti: {
+        get limites() { return OPTI_LIMITES; },
+        // Compte supposé pour chaque ligne conditionnelle d un item donné.
+        compte: (slot, itemId) => {
+          const it = ITEMS.find((x) => x.id === itemId);
+          if (!it) return null;
+          const memo = opti.slot;
+          opti.slot = slot;
+          const lignes = it.lignes.filter((l) => l.condition).map((l) => ({
+            stat: l.stat,
+            desc: l.condition.description,
+            compte: optiCompteCondition(l.condition, slot, trioDOrigine(slot), it),
+          }));
+          opti.slot = memo;
+          return lignes;
+        },
+        chercher: (slot, prios, mode) => {
+          opti.slot = slot;
+          if (prios) opti.prios = prios;
+          if (mode) opti.mode = mode;
+          optiChercher();
+          return {
+            candidats: opti.candidats,
+            duree: opti.duree,
+            builds: opti.builds.map((b) => ({
+              score: b.score,
+              ids: b.ids,
+              noms: b.entries.map((e) => e.item.nom.trim()),
+              gains: b.gains.map((g) => g.cible + " +" + g.gain.toFixed(2) + "%"),
+            })),
+          };
+        },
+      },
     };
     const btn = document.createElement("button");
     btn.type = "button";
@@ -1930,6 +1984,9 @@
     // (sinon le clic retomberait sur « sélectionner ce perso » et reconstruirait la grille).
     if (t.closest("[data-trioc]")) return;
     // Flèche → ouvre la modale de détails des items du perso
+    // ⚡ → optimiseur d items du perso
+    const opt = t.closest("[data-open-opti]");
+    if (opt) { openOpti(+opt.dataset.openOpti); return; }
     const det = t.closest("[data-open-details]");
     if (det) { openDetailsModal(+det.dataset.openDetails); return; }
     // Étoile leader
@@ -2057,6 +2114,479 @@
   });
 
   // (Ajout/suppression de perso désormais gérés via la grille builder.)
+
+  // ===== OPTIMISEUR D'ITEMS =====
+  // Pour un personnage donné, cherche le trio d'items qui maximise les stats que
+  // l'utilisateur classe par ordre d'importance (5 niveaux, poids 16/8/4/2/1).
+  // Trois garde-fous, sinon la proposition ne vaut rien :
+  //  - seuls les items COMPATIBLES sont testés (isCompatible, porteursExacts compris) ;
+  //  - les conditions sont évaluées dans le trio réel du personnage, avec les
+  //    règles exactes du moteur (compteCondition) : une ligne dont la condition
+  //    n'est pas remplie ne rapporte rien et ne pèse donc pas dans le classement ;
+  //  - les couches base/pur/direct se multiplient, donc une combinaison est notée
+  //    sur son gain final, pas sur la somme de ses lignes.
+  const OPTI_POIDS = [16, 8, 4, 2, 1];
+  const OPTI_COUCHES = ["base", "pur", "direct"];
+  const OPTI_NB_BUILDS = 6;
+  // Bornes de la présélection. Ajustables depuis l outil de test
+  // (DBL_AUTO.opti) pour comparer la recherche bridée à une recherche exhaustive.
+  const OPTI_LIMITES = {
+    solo: 80,     // meilleurs items « en solo » retenus
+    couche: 8,    // + les meilleurs de chaque stat × couche
+    pool: 160,    // plafond du nombre de candidats croisés
+  };
+
+  const OPTI_PRESETS = {
+    frappe:  ["attaque_physique", "degats_infliges", "critique", "force", "points_de_vie"],
+    energie: ["attaque_energie", "degats_energie_infliges", "degats_infliges", "critique", "force"],
+    defense: ["defense_physique", "defense_energie", "points_de_vie", "garde_contre_degats", "force"],
+    finish:  ["degats_ultime", "degats_tech_spe", "degats_infliges", "attaque_physique", "attaque_energie"],
+    utilite: ["vitesse_regen_ki", "quantite_regen_force", "vanish_recover", "critique", "force"],
+  };
+  const OPTI_PRESET_ORDRE = ["frappe", "energie", "defense", "finish", "utilite"];
+
+  const opti = {
+    slot: null,
+    prios: ["", "", "", "", ""],
+    mode: "equipe",          // "equipe" = conditions réelles · "max" = potentiel
+    eviterDoublons: false,
+    builds: [],
+    actuel: null,
+    candidats: 0,
+    duree: 0,
+  };
+
+  // Le « Style de combat » du perso donne un classement de départ pertinent.
+  function optiTypeDe(character) {
+    const traits = new Set(character ? character.traits || [] : []);
+    if (traits.has("Type énergie")) return "energie";
+    if (traits.has("Type défense")) return "defense";
+    if (traits.has("Type assistance")) return "utilite";
+    return "frappe";
+  }
+
+  // Classement mémorisé par type de combat : on ne ressort pas un classement
+  // « frappe » sur un perso de type énergie.
+  function optiPriosParDefaut(character) {
+    const type = optiTypeDe(character);
+    try {
+      const memo = JSON.parse(localStorage.getItem("dbl-opti-prios") || "{}");
+      const gardees = memo && memo[type];
+      if (Array.isArray(gardees) && gardees.length === 5) return gardees.slice();
+    } catch (e) { /* stockage indisponible */ }
+    return OPTI_PRESETS[type].slice();
+  }
+
+  function optiMemoriserPrios() {
+    const slot = state.team[opti.slot];
+    if (!slot || !slot.character) return;
+    try {
+      const memo = JSON.parse(localStorage.getItem("dbl-opti-prios") || "{}");
+      memo[optiTypeDe(slot.character)] = opti.prios.slice();
+      localStorage.setItem("dbl-opti-prios", JSON.stringify(memo));
+    } catch (e) { /* stockage indisponible */ }
+  }
+
+  // Stats notées, dans l'ordre choisi (doublons retirés) + leur poids.
+  function optiCibles() {
+    const cibles = [];
+    const poids = {};
+    opti.prios.forEach((cible, i) => {
+      if (!cible) return;
+      if (!cibles.includes(cible)) cibles.push(cible);
+      poids[cible] = Math.max(poids[cible] || 0, OPTI_POIDS[i]);
+    });
+    return { cibles, poids, poidsArr: cibles.map((c) => poids[c]) };
+  }
+
+  // Compte d'une condition en supposant l'item porté par ce personnage.
+  // Seul cas où l'item change le compte : « même équipement » (décompte équipe).
+  function optiCompteCondition(cond, slotIdx, trio, item) {
+    const tags = (cond.tags_requis && cond.tags_requis.length ? cond.tags_requis : [cond.tag_requis]).filter(Boolean);
+    let compte;
+    if (!tags.length) {
+      compte = 1 + state.team.filter((s, i) =>
+        i !== slotIdx && s.character && s.items.some((it) => it && it.id === item.id)).length;
+    } else {
+      compte = compteCondition(cond, slotIdx, trio, item);
+    }
+    if (opti.mode !== "max") return compte;
+    // Mode « potentiel » : on suppose la condition tout juste remplie.
+    return Math.max(compte, cond.mode === "per_member" ? 1 : (cond.seuil || 1));
+  }
+
+  // Gain d'un item, ventilé par stat notée × couche. Les lignes « OU » sont
+  // résolues sur l'option la plus utile au classement demandé (choix mémorisé
+  // pour être reporté sur le build si l'utilisateur l'équipe).
+  function optiVecteur(item, slotIdx, trio, cibles, poids) {
+    const vec = new Float64Array(cibles.length * 3);
+    const choix = {};
+    let nbCond = 0, nbOr = 0;
+    item.lignes.forEach((l, ligneIdx) => {
+      let ligne = l;
+      if (l.est_passif) {
+        const alts = parseOrPassif(l.description_passif);
+        if (!alts) return;                       // passif textuel : hors calcul
+        let best = 0, bestVal = -Infinity;
+        alts.forEach((a, i) => {
+          const meta = STATS[a.stat];
+          const v = (meta ? (poids[meta.cible] || 0) : 0) * a.valeur_max;
+          if (v > bestVal) { bestVal = v; best = i; }
+        });
+        choix[ligneIdx] = best;
+        nbOr++;
+        ligne = { stat: alts[best].stat, valeur_max: alts[best].valeur_max, condition: null };
+      }
+      const meta = STATS[ligne.stat];
+      if (!meta) return;
+      const iCible = cibles.indexOf(meta.cible);
+      if (iCible < 0) return;                    // stat non notée : sans effet ici
+      let valeur = ligne.valeur_max;
+      if (ligne.condition) {
+        const c = ligne.condition;
+        const compte = optiCompteCondition(c, slotIdx, trio, item);
+        if (compte < (c.mode === "per_member" ? 1 : (c.seuil || 1))) return;
+        if (c.mode === "per_member") valeur *= Math.min(compte, 6);
+        nbCond++;
+      }
+      vec[iCible * 3 + OPTI_COUCHES.indexOf(meta.type)] += valeur;
+    });
+    return { item, vec, choix, nbCond, nbOr, solo: 0 };
+  }
+
+  // Note d'une combinaison : somme pondérée des gains finaux par stat.
+  function optiScore(vec, nc, poidsArr) {
+    let total = 0;
+    for (let i = 0; i < nc; i++) {
+      const g = (1 + vec[i * 3] / 100) * (1 + vec[i * 3 + 1] / 100) * (1 + vec[i * 3 + 2] / 100) - 1;
+      total += poidsArr[i] * g * 100;
+    }
+    return total;
+  }
+
+  // Items d'un build mis en forme pour calc.js : chaque condition devient un
+  // seuil sur une clé dont on fournit le compte exact (comme preparerItems).
+  function optiPreparer(slotIdx, trio, entries) {
+    const conditions = {};
+    const items = [0, 1, 2].map((i) => {
+      const e = entries[i];
+      if (!e || !e.item) return null;
+      const sel = e.choix || {};
+      const lignes = e.item.lignes.map((l, ligneIdx) => {
+        if (l.est_passif) {
+          const alts = parseOrPassif(l.description_passif);
+          if (!alts) return l;
+          const a = alts[sel[ligneIdx] ?? 0] || alts[0];
+          return { stat: a.stat, valeur_min: a.valeur_min, valeur_max: a.valeur_max, condition: null, slot: l.slot };
+        }
+        if (!l.condition) return l;
+        const cle = `__opti__:${i}:${ligneIdx}`;
+        conditions[cle] = optiCompteCondition(l.condition, slotIdx, trio, e.item);
+        const tagsOrigine = (l.condition.tags_requis && l.condition.tags_requis.length
+          ? l.condition.tags_requis : [l.condition.tag_requis]).filter(Boolean);
+        return { ...l, condition: { ...l.condition, tag_requis: cle, tags_requis: [cle], tags_affichage: tagsOrigine } };
+      });
+      return { ...e.item, lignes };
+    });
+    return { items, conditions };
+  }
+
+  // Bilan d'un build : on repasse par le moteur pour que les chiffres affichés
+  // soient exactement ceux du reste de l'outil.
+  function optiBilan(slotIdx, trio, entries, cibles, poidsArr) {
+    const prep = optiPreparer(slotIdx, trio, entries);
+    const res = calculerStats({
+      items: prep.items,
+      conditions: prep.conditions,
+      personnage: state.team[slotIdx].character,
+    });
+    const gains = cibles.map((c) => ({ cible: c, label: LABELS_CIBLES[c], gain: res.stats[c].gainPct }));
+    const score = gains.reduce((t, g, i) => t + poidsArr[i] * g.gain, 0);
+    return {
+      entries,
+      gains,
+      score,
+      actives: res.conditionsActives.length,
+      inactives: res.conditionsInactives.length,
+      nbOr: entries.reduce((n, e) => n + (e && e.nbOr ? e.nbOr : 0), 0),
+      ids: entries.filter((e) => e && e.item).map((e) => e.item.id).sort().join("|"),
+    };
+  }
+
+  // Build actuellement équipé, évalué avec les mêmes règles → point de repère.
+  function optiBuildActuel(slotIdx, trio, cibles, poidsArr) {
+    const slot = state.team[slotIdx];
+    const choices = slot.itemChoices || [{}, {}, {}];
+    const entries = slot.items.map((item, i) => (item ? { item, choix: choices[i] || {}, nbOr: 0 } : null));
+    if (!entries.some((e) => e)) return null;
+    return optiBilan(slotIdx, trio, entries, cibles, poidsArr);
+  }
+
+  function optiChercher() {
+    const t0 = performance.now();
+    const slotIdx = opti.slot;
+    const slot = state.team[slotIdx];
+    const perso = slot && slot.character;
+    opti.builds = [];
+    opti.actuel = null;
+    opti.candidats = 0;
+    if (!perso) return;
+
+    const { cibles, poids, poidsArr } = optiCibles();
+    if (!cibles.length) return;
+    const trio = trioDOrigine(slotIdx);
+    const nc = cibles.length;
+
+    const ailleurs = new Set();
+    state.team.forEach((s, i) => {
+      if (i === slotIdx) return;
+      s.items.forEach((it) => { if (it) ailleurs.add(it.id); });
+    });
+
+    const vecteurs = ITEMS
+      .filter((it) => isCompatible(it, perso) === true)
+      .filter((it) => !(opti.eviterDoublons && ailleurs.has(it.id)))
+      .map((it) => optiVecteur(it, slotIdx, trio, cibles, poids))
+      .filter((v) => { v.solo = optiScore(v.vec, nc, poidsArr); return v.solo > 0; });
+    opti.candidats = vecteurs.length;
+
+    // Présélection. Le top « solo » suffit presque toujours, mais comme les
+    // couches se multiplient, on ajoute les meilleurs de CHAQUE stat × couche :
+    // un petit « direct » peut rapporter plus qu'un gros « base » de plus.
+    const retenus = new Map();
+    vecteurs.slice().sort((a, b) => b.solo - a.solo).slice(0, OPTI_LIMITES.solo)
+      .forEach((v) => retenus.set(v.item.id, v));
+    for (let k = 0; k < nc * 3; k++) {
+      vecteurs.filter((v) => v.vec[k] > 0).sort((a, b) => b.vec[k] - a.vec[k]).slice(0, OPTI_LIMITES.couche)
+        .forEach((v) => retenus.set(v.item.id, v));
+    }
+    let pool = [...retenus.values()].sort((a, b) => b.solo - a.solo);
+    if (pool.length > OPTI_LIMITES.pool) pool = pool.slice(0, OPTI_LIMITES.pool);
+
+    // Croisement exhaustif du pool (quelques centaines de milliers de trios :
+    // de l'arithmétique sur des tableaux typés, donc instantané).
+    const top = [];
+    const ajoute = (score, combo) => {
+      if (top.length >= OPTI_NB_BUILDS && score <= top[top.length - 1].score) return;
+      top.push({ score, combo });
+      top.sort((a, b) => b.score - a.score);
+      if (top.length > OPTI_NB_BUILDS) top.pop();
+    };
+    const n = pool.length;
+    if (n >= 3) {
+      const paire = new Float64Array(nc * 3);
+      const somme = new Float64Array(nc * 3);
+      for (let a = 0; a < n; a++) {
+        const va = pool[a].vec;
+        for (let b = a + 1; b < n; b++) {
+          const vb = pool[b].vec;
+          for (let k = 0; k < paire.length; k++) paire[k] = va[k] + vb[k];
+          for (let c = b + 1; c < n; c++) {
+            const vc = pool[c].vec;
+            for (let k = 0; k < somme.length; k++) somme[k] = paire[k] + vc[k];
+            ajoute(optiScore(somme, nc, poidsArr), [pool[a], pool[b], pool[c]]);
+          }
+        }
+      }
+    } else if (n === 2) {
+      const somme = new Float64Array(nc * 3);
+      for (let k = 0; k < somme.length; k++) somme[k] = pool[0].vec[k] + pool[1].vec[k];
+      ajoute(optiScore(somme, nc, poidsArr), [pool[0], pool[1]]);
+    } else if (n === 1) {
+      ajoute(pool[0].solo, [pool[0]]);
+    }
+
+    opti.actuel = optiBuildActuel(slotIdx, trio, cibles, poidsArr);
+    opti.builds = top.map((t) => optiBilan(slotIdx, trio, t.combo, cibles, poidsArr));
+    // Le moteur a le dernier mot : on reclasse sur le score exact.
+    opti.builds.sort((a, b) => b.score - a.score);
+    opti.duree = Math.round(performance.now() - t0);
+  }
+
+  // ── Interface ────────────────────────────────────────────────────────────
+  const optiModalEl = document.getElementById("opti-modal");
+  const optiTitleEl = document.getElementById("opti-title");
+  const optiSubEl = document.getElementById("opti-sub");
+  const optiPresetsEl = document.getElementById("opti-presets");
+  const optiPriosEl = document.getElementById("opti-prios");
+  const optiOptionsEl = document.getElementById("opti-options");
+  const optiResultsEl = document.getElementById("opti-results");
+
+  function renderOptiConfig() {
+    if (!optiPriosEl) return;
+    optiPresetsEl.innerHTML = OPTI_PRESET_ORDRE.map((k) =>
+      `<button class="opti-preset" type="button" data-opti-preset="${k}">${T('opti.preset.' + k)}</button>`).join("");
+
+    optiPriosEl.innerHTML = opti.prios.map((cible, i) => {
+      const options = [`<option value="">${T('opti.none')}</option>`].concat(
+        STATS_CIBLES.map((c) => `<option value="${c}"${c === cible ? " selected" : ""}>${escAttr(LABELS_CIBLES[c])}</option>`)
+      ).join("");
+      return `<label class="opti-prio">
+          <span class="opti-prio-rank">${i + 1}</span>
+          <select class="opti-prio-select" data-opti-prio="${i}" aria-label="${T('opti.prio.aria', { n: i + 1 })}">${options}</select>
+          <span class="opti-prio-poids" title="${T('opti.poids.title')}">×${OPTI_POIDS[i]}</span>
+        </label>`;
+    }).join("");
+
+    optiOptionsEl.innerHTML =
+      `<div class="opti-modes" role="group" aria-label="${T('opti.mode.aria')}">
+         <button class="opti-mode${opti.mode === "equipe" ? " is-on" : ""}" type="button" data-opti-mode="equipe" title="${T('opti.mode.equipe.title')}">${T('opti.mode.equipe')}</button>
+         <button class="opti-mode${opti.mode === "max" ? " is-on" : ""}" type="button" data-opti-mode="max" title="${T('opti.mode.max.title')}">${T('opti.mode.max')}</button>
+       </div>
+       <label class="opti-check"><input type="checkbox" data-opti-dup${opti.eviterDoublons ? " checked" : ""} /> <span>${T('opti.nodup')}</span></label>`;
+  }
+
+  function optiItemHTML(item) {
+    const rar = (item.rarete || "").toLowerCase();
+    const img = item.image
+      ? `<img src="${item.image}" alt="" loading="lazy" onerror="this.style.display='none'" />`
+      : `<span class="item-img-placeholder">?</span>`;
+    return `<div class="opti-item">
+        <span class="item-img is-framed rar-${rar}">${img}</span>
+        <span class="opti-item-txt">
+          <span class="opti-item-name">${escSvg(item.nom.trim())}</span>
+          <span class="opti-item-rar">${rarityLabel(item.rarete)}</span>
+        </span>
+      </div>`;
+  }
+
+  function optiGainsHTML(bilan) {
+    return `<ul class="opti-gains">${bilan.gains.map((g, i) => {
+      const ref = opti.actuel ? opti.actuel.gains[i] : null;
+      const d = ref ? g.gain - ref.gain : 0;
+      const delta = ref && Math.abs(d) >= 0.01
+        ? `<i class="opti-delta ${d > 0 ? "is-up" : "is-down"}">${d > 0 ? "+" : "-"}${fmtDec(Math.abs(d).toFixed(2))}</i>`
+        : "";
+      const classes = (i === 0 ? " is-first" : "") + (g.gain <= 0.001 ? " is-zero" : "");
+      return `<li${classes ? ` class="${classes.trim()}"` : ""}><span>${escSvg(g.label)}</span><b>+${fmtDec(g.gain.toFixed(2))}%</b>${delta}</li>`;
+    }).join("")}</ul>`;
+  }
+
+  function optiBuildHTML(bilan, rang) {
+    const estActuel = opti.actuel && opti.actuel.ids === bilan.ids;
+    const notes = [];
+    if (bilan.actives) notes.push(T('opti.note.cond', { n: bilan.actives }));
+    if (bilan.nbOr) notes.push(T('opti.note.or', { n: bilan.nbOr }));
+    const vides = 3 - bilan.entries.filter((e) => e && e.item).length;
+    if (vides) notes.push(T('opti.note.vides', { n: vides }));
+    return `<article class="opti-build${rang === 0 ? " is-best" : ""}${estActuel ? " is-current" : ""}">
+        <header class="opti-build-head">
+          <span class="opti-rank">${rang === null ? T('opti.current') : "#" + (rang + 1)}</span>
+          ${estActuel && rang !== null ? `<span class="opti-badge">${T('opti.current.badge')}</span>` : ""}
+          <span class="opti-score" title="${T('opti.score.title')}">${T('opti.score')} ${fmtInt(bilan.score)}</span>
+          ${rang === null || estActuel ? "" : `<button class="opti-equip" type="button" data-opti-equip="${rang}">${T('opti.equip')}</button>`}
+        </header>
+        <div class="opti-build-items">${bilan.entries.filter((e) => e && e.item).map((e) => optiItemHTML(e.item)).join("")}</div>
+        ${optiGainsHTML(bilan)}
+        ${notes.length ? `<p class="opti-build-note">${notes.join(" · ")}</p>` : ""}
+      </article>`;
+  }
+
+  function renderOptiResultats() {
+    if (!optiResultsEl) return;
+    const slot = state.team[opti.slot];
+    if (!slot || !slot.character) { optiResultsEl.innerHTML = ""; return; }
+    const { cibles } = optiCibles();
+    if (!cibles.length) {
+      optiResultsEl.innerHTML = `<p class="opti-empty">${T('opti.empty.stat')}</p>`;
+      return;
+    }
+    if (!opti.builds.length) {
+      optiResultsEl.innerHTML = `<p class="opti-empty">${T('opti.empty.items')}</p>`;
+      return;
+    }
+    optiResultsEl.innerHTML =
+      `<p class="opti-count">${T('opti.count', { n: opti.candidats, ms: opti.duree })}</p>` +
+      (opti.actuel ? `<div class="opti-current">${optiBuildHTML(opti.actuel, null)}</div>` : "") +
+      `<h4 class="opti-results-head">${T('opti.results')}</h4>` +
+      opti.builds.map((b, i) => optiBuildHTML(b, i)).join("") +
+      `<p class="opti-foot">${T('opti.foot')}</p>`;
+  }
+
+  function optiLancer() {
+    optiChercher();
+    renderOptiResultats();
+  }
+
+  function openOpti(slotIdx) {
+    const slot = state.team[slotIdx];
+    if (!slot || !slot.character || !optiModalEl) return;
+    opti.slot = slotIdx;
+    opti.prios = optiPriosParDefaut(slot.character);
+    if (optiTitleEl) optiTitleEl.textContent = T('opti.title', { name: slot.character.nom.trim() });
+    if (optiSubEl) optiSubEl.textContent = T('opti.sub');
+    renderOptiConfig();
+    optiLancer();
+    optiModalEl.classList.remove("hidden");
+    document.getElementById("opti-close")?.focus({ preventScroll: true });
+  }
+
+  function closeOpti() {
+    if (optiModalEl) optiModalEl.classList.add("hidden");
+    opti.slot = null;
+  }
+
+  function optiEquiper(rang) {
+    const bilan = opti.builds[rang];
+    if (!bilan || opti.slot == null) return;
+    const slot = state.team[opti.slot];
+    const entries = bilan.entries.filter((e) => e && e.item);
+    slot.items = [0, 1, 2].map((i) => (entries[i] ? entries[i].item : null));
+    slot.itemChoices = [0, 1, 2].map((i) => (entries[i] ? { ...(entries[i].choix || {}) } : {}));
+    renderAll();
+    // Les décomptes « même équipement » ont changé : on recalcule.
+    optiLancer();
+  }
+
+  if (optiModalEl) {
+    optiModalEl.querySelector("[data-opti-close]")?.addEventListener("click", closeOpti);
+    document.getElementById("opti-close")?.addEventListener("click", closeOpti);
+    optiModalEl.addEventListener("click", (e) => {
+      const equip = e.target.closest("[data-opti-equip]");
+      if (equip) { optiEquiper(+equip.dataset.optiEquip); return; }
+      const preset = e.target.closest("[data-opti-preset]");
+      if (preset) {
+        opti.prios = OPTI_PRESETS[preset.dataset.optiPreset].slice();
+        optiMemoriserPrios();
+        renderOptiConfig();
+        optiLancer();
+        return;
+      }
+      const mode = e.target.closest("[data-opti-mode]");
+      if (mode) {
+        opti.mode = mode.dataset.optiMode;
+        renderOptiConfig();
+        optiLancer();
+      }
+    });
+    optiModalEl.addEventListener("change", (e) => {
+      const sel = e.target.closest("[data-opti-prio]");
+      if (sel) {
+        opti.prios[+sel.dataset.optiPrio] = sel.value;
+        optiMemoriserPrios();
+        optiLancer();
+        return;
+      }
+      if (e.target.closest("[data-opti-dup]")) {
+        opti.eviterDoublons = e.target.checked;
+        optiLancer();
+      }
+    });
+    // Autres entrées : en-tête de la modale de détails et de celle de sélection.
+    document.getElementById("details-opti")?.addEventListener("click", () => {
+      const cs = state.detailsCharSlot;
+      closeDetailsModal();
+      openOpti(cs);
+    });
+    document.getElementById("item-opti")?.addEventListener("click", () => {
+      const cs = state.modalCharSlot ?? state.activeSlot;
+      closeItemModal();
+      openOpti(cs);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !optiModalEl.classList.contains("hidden")) closeOpti();
+    });
+  }
 
   // ===== MODALE D'ITEMS =====
   const modal = document.getElementById("item-modal");

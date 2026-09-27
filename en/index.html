@@ -39,10 +39,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://fr.dblegends.net" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=98" />
+  <link rel="stylesheet" href="/styles.css?v=99" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=98"></script>
+  <script defer src="/site.js?v=99"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -287,7 +287,7 @@
         </li>
         <li class="home-step">
           <h3 data-i18n="home.how.2.t">Set Z Abilities and equipment</h3>
-          <p data-i18n="home.how.2.d">Hover a character to pick their Z Ability level (I to IV) and 3 pieces of equipment. Compatible equipment is suggested by default, with full details.</p>
+          <p data-i18n="home.how.2.d">Hover a character to pick their Z Ability level (I to IV) and 3 pieces of equipment. The ⚡ button finds the best compatible combination for you, from the stats you rank by importance.</p>
         </li>
         <li class="home-step">
           <h3 data-i18n="home.how.3.t">Check synergies</h3>
@@ -360,7 +360,10 @@
     <div class="modal-panel">
       <div class="modal-header">
         <h3 id="modal-title" data-i18n="modal.item.title">Choose an item</h3>
-        <button id="modal-close" class="btn-close" aria-label="Close" data-i18n-aria-label="modal.close">×</button>
+        <div class="modal-head-actions">
+          <button id="item-opti" class="opti-open" type="button" data-i18n="opti.open" data-i18n-title="opti.open.title" title="Find the best equipment combination">⚡ Optimize</button>
+          <button id="modal-close" class="btn-close" aria-label="Close" data-i18n-aria-label="modal.close">×</button>
+        </div>
       </div>
       <input
         type="text"
@@ -395,12 +398,39 @@
     <div class="modal-panel">
       <div class="modal-header">
         <h3 id="details-modal-title" data-i18n="details.modal.title">Item details</h3>
-        <button id="details-modal-close" class="btn-close" aria-label="Close" data-i18n-aria-label="modal.close">×</button>
+        <div class="modal-head-actions">
+          <button id="details-opti" class="opti-open" type="button" data-i18n="opti.open" data-i18n-title="opti.open.title" title="Find the best equipment combination">⚡ Optimize</button>
+          <button id="details-modal-close" class="btn-close" aria-label="Close" data-i18n-aria-label="modal.close">×</button>
+        </div>
       </div>
       <div id="details-modal-body"></div>
     </div>
   </div>
 
+  <!-- ============ MODALE OPTIMISEUR D’ITEMS (par perso) ============ -->
+  <div id="opti-modal" class="modal hidden">
+    <div class="modal-backdrop" data-opti-close></div>
+    <div class="modal-panel opti-panel">
+      <div class="modal-header">
+        <div class="opti-head">
+          <h3 id="opti-title" data-i18n="opti.title.generic">Equipment optimizer</h3>
+          <p id="opti-sub" class="opti-sub" data-i18n="opti.sub">Rank the stats by importance: every compatible equipment combination is tested, team conditions included.</p>
+        </div>
+        <button id="opti-close" class="btn-close" type="button" aria-label="Close" data-i18n-aria-label="modal.close">×</button>
+      </div>
+      <div class="opti-body">
+        <aside class="opti-config">
+          <h4 class="opti-section" data-i18n="opti.presets.label">Quick profiles</h4>
+          <div id="opti-presets" class="opti-presets"></div>
+          <h4 class="opti-section" data-i18n="opti.prios.label">Priority order (5 levels)</h4>
+          <p class="opti-hint" data-i18n="opti.prios.hint">Stat #1 counts 16 times more than #5.</p>
+          <div id="opti-prios" class="opti-prios"></div>
+          <div id="opti-options" class="opti-options"></div>
+        </aside>
+        <div id="opti-results" class="opti-results"></div>
+      </div>
+    </div>
+  </div>
   <!-- ============ MODALE DE SÉLECTION DE PERSONNAGE ============ -->
   <div id="char-modal" class="modal hidden">
     <div class="modal-backdrop" data-char-modal-close></div>
@@ -433,12 +463,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="/i18n.js?v=98"></script>
-  <script src="/items.js?v=98"></script>
-  <script src="/characters.js?v=98"></script>
-  <script src="/data.js?v=98"></script>
-  <script src="/calc.js?v=98"></script>
-  <script src="/app.js?v=98"></script>
+  <script src="/i18n.js?v=99"></script>
+  <script src="/items.js?v=99"></script>
+  <script src="/characters.js?v=99"></script>
+  <script src="/data.js?v=99"></script>
+  <script src="/calc.js?v=99"></script>
+  <script src="/app.js?v=99"></script>
 
   <script>
     (function () {

@@ -6,7 +6,7 @@
   "lead": "Answers to the most common questions about DBL Optimizer and Dragon Ball Legends optimization mechanics.",
   "type": "faq",
   "published": "2026-06-14",
-  "updated": "2026-09-16",
+  "updated": "2026-09-27",
   "cta": "Launch the optimizer →"
 }
 -->
@@ -27,6 +27,9 @@
 
 <h2>Why doesn’t a piece of equipment or a Z Ability apply?</h2>
 <p>Most bonuses are conditional: they require a tag, a color or a number of teammates sharing a tag. For equipment, open “Team Composition”: each effect is marked Active, N missing or × N, with the rule to meet. For Z Abilities, the Z Ability Tree shows what does or doesn’t reach each teammate. Unmet effects are also listed under “Uncalculated Effects”.</p>
+
+<h2>How do I find the best equipment combination?</h2>
+<p>Open the <strong>equipment optimizer</strong> with the character’s ⚡ button, then rank up to 5 stats by importance. The tool crosses every compatible combination, taking your team’s conditions into account, and suggests the best trios with the gain per stat and the gap with your current build. The <a href="/en/equipment-guide.html">equipment guide</a> explains the method.</p>
 
 <h2>What is a trio?</h2>
 <p>A 6-character team is split into two trios of 3. In Classic mode they are the Main team and the Bench; in Proud mode, Trio A and Trio B. Equipment conditions are counted within the wearer’s trio, while “same equipment” effects count the whole team (see the <a href="/en/equipment-guide.html">equipment guide</a>).</p>

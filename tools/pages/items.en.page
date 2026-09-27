@@ -6,7 +6,7 @@
   "lead": "Equipment multiplies a character’s power — as long as you understand how its bonuses stack. Slots, rarities, calculation layers and conditions: everything you need to know.",
   "type": "article",
   "published": "2026-06-14",
-  "updated": "2026-09-16",
+  "updated": "2026-09-27",
   "cta": "Optimize my equipment now →"
 }
 -->
@@ -46,6 +46,16 @@
 
 <h2>“OR” lines</h2>
 <p>Some equipment has a randomly rolled line, such as “Blast ATK <strong>OR</strong> Strike ATK”. In game you only get one option. DBL Optimizer lets you pick the one you actually have, for an accurate calculation.</p>
+
+<h2>The equipment optimizer: finding the best combination</h2>
+<p>The <strong>⚡ Optimize</strong> button — in each character’s panel and at the top of the equipment windows — looks for the best trio of items for you. You rank up to <strong>5 stats by importance</strong> (#1 counts 16 times more than #5) and the tool crosses every possible combination.</p>
+<ul>
+  <li><strong>Compatible equipment only</strong>: wearer restrictions are respected, including pieces reserved for one specific card.</li>
+  <li><strong>With your actual team</strong>: every condition is evaluated in the character’s trio, exactly as everywhere else in the tool. Equipment whose condition is not met counts for nothing and therefore does not climb the ranking.</li>
+  <li><strong>Layers included</strong>: combinations are scored on their final gain (base × pure × direct), which naturally favors well-spread trios over three identical lines.</li>
+  <li><strong>Two readings</strong>: “Current team” judges equipment as it performs today; “Max potential” assumes conditions are just met, to see what a piece would be worth if you adjusted your team.</li>
+</ul>
+<p>Each suggestion shows its three pieces, the gain per stat and the gap with your current build; “Equip” applies it in one click, “OR” line choices included. The quick profiles (Strike, Blast, Defense, Ultimate / Special, Ki &amp; utility) give an instant starting ranking.</p>
 
 <h2>Quick optimization method</h2>
 <ol>

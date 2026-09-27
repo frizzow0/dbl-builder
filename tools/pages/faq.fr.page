@@ -6,7 +6,7 @@
   "lead": "Les réponses aux questions les plus courantes sur DBL Optimizer et sur les mécaniques d’optimisation de Dragon Ball Legends.",
   "type": "faq",
   "published": "2026-06-14",
-  "updated": "2026-09-16",
+  "updated": "2026-09-27",
   "cta": "Lancer l’optimiseur →"
 }
 -->
@@ -24,6 +24,9 @@
 
 <h2>Pourquoi un item ou une Cap Z ne s’applique-t-il pas&nbsp;?</h2>
 <p>La plupart des bonus sont conditionnels : ils exigent un tag, une couleur ou un nombre de coéquipiers partageant un tag. Pour les items, ouvre « Composition d’équipe » : chaque effet y est marqué Actif, Manque N ou × N, avec la règle à remplir. Pour les Cap Z, l’Arbre des Cap Z montre ce qui passe ou non vers chaque coéquipier. Les effets non remplis sont aussi listés dans « Effets non calculés ».</p>
+
+<h2>Comment trouver la meilleure combinaison d’items&nbsp;?</h2>
+<p>Ouvre l’<strong>optimiseur d’items</strong> avec le bouton ⚡ du personnage, puis classe jusqu’à 5 stats par ordre d’importance. L’outil croise toutes les combinaisons d’items compatibles, en tenant compte des conditions de ton équipe, et propose les meilleurs trios avec le gain par stat et l’écart avec ton build actuel. Le <a href="/guide-items.html">guide des items</a> détaille la méthode.</p>
 
 <h2>C’est quoi un trio&nbsp;?</h2>
 <p>Une équipe de 6 personnages est divisée en deux trios de 3. En mode Classique, ce sont la Principale et le Banc ; en mode Proud, le Trio A et le Trio B. Les conditions d’items se comptent dans le trio du porteur, tandis que les items « même équipement » se comptent sur toute l’équipe (voir le <a href="/guide-items.html">guide des items</a>).</p>
