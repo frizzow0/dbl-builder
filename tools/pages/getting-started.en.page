@@ -6,7 +6,7 @@
   "lead": "From an empty slot to a detailed breakdown: every part of the optimizer explained, in the order you use it.",
   "type": "article",
   "published": "2026-09-16",
-  "updated": "2026-09-16",
+  "updated": "2026-09-27",
   "cta": "Open the optimizer →"
 }
 -->
@@ -44,13 +44,8 @@
 
 <h2>5. Read tags and conditions</h2>
 <p>Under the cards, the <strong>“Team tags”</strong> table shows who carries which tag: one column per character, a dot under each carrier and the total on the right. Shared tags come first; tags carried by a single character are folded behind a button.</p>
-<p>The <strong>“Team Composition”</strong> panel then lists every equipment effect that depends on a tag. For each one it shows the wearer, the bonus, the rule (“3 in their trio”, “per trio member”) and a status:</p>
-<ul>
-  <li><strong>Active</strong> — the condition is met;</li>
-  <li><strong>N missing</strong> — the trio lacks N characters with that tag;</li>
-  <li><strong>× N</strong> — the bonus is multiplied by the number of matching members.</li>
-</ul>
-<p>The <strong>“Simulate”</strong> field forces a number of carriers so you can test an effect without changing the team. That line is then marked “(simulated)”, and every summary takes it into account.</p>
+<p>The <strong>“Team Composition”</strong> panel then lists the equipment effects <strong>that do not trigger</strong>: those whose condition isn’t met in their wearer’s trio. Active effects are simply counted in the header (“Active: 6 · Inactive: 3”) — there is nothing to fix there.</p>
+<p>Blocked effects are grouped by missing tag. The group header recalls who already carries that tag in each trio, and every row shows the character, the equipment, the bonus lost (struck through) and what is missing (“1 missing”).</p>
 
 <h2>6. Analyze the results</h2>
 <ul>

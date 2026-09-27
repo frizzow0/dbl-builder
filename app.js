@@ -554,7 +554,6 @@
     charTargetSlot: null,    // slot CIBLE d'un ajout/changement de perso (≠ analyse)
     leaderSlot: 0,           // perso désigné comme leader
     noLeader: false,         // true = simule une équipe sans leader (bypass désactivé)
-    conditions: {},          // tag => nombre de membres (saisie utilisateur, reste global)
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
@@ -641,7 +640,7 @@
   // L'élément (YEL/BLU/RED/GRN/PUR/LGT) compte comme un tag car certaines
   // Z Zenkai conditionnent sur l'élément du combattant.
   function getEffectiveConditionsFor(character) {
-    const conds = { ...state.conditions };
+    const conds = {};
     if (character) {
       for (const trait of character.traits || []) {
         if ((conds[trait] || 0) < 1) conds[trait] = 1;
@@ -698,10 +697,6 @@
       const c = slot.character;
       for (const k of clesDeTags(c)) counts[k] = (counts[k] || 0) + 1;
     }
-    // Override utilisateur (le user peut booster un compte au-delà de l'auto)
-    for (const [k, v] of Object.entries(state.conditions)) {
-      counts[k] = Math.max(counts[k] || 0, v);
-    }
     return counts;
   }
 
@@ -719,20 +714,14 @@
   // ─────────────────────────────────────────────────────────────
 
   // Compte les traits uniquement pour les 3 membres du trio du slot donné.
-  // applyOverrides : inclure les overrides manuels (true par défaut).
   // trio : slots du trio de combat (défaut : trio d'origine du slot).
-  function getTrioTagCountsFor(slotIdx, applyOverrides = true, trio = trioDOrigine(slotIdx)) {
+  function getTrioTagCountsFor(slotIdx, trio = trioDOrigine(slotIdx)) {
     const counts = {};
     for (const i of trio) {
       const slot = state.team[i];
       if (!slot.character) continue;
       const c = slot.character;
       for (const k of clesDeTags(c)) counts[k] = (counts[k] || 0) + 1;
-    }
-    if (applyOverrides) {
-      for (const [k, v] of Object.entries(state.conditions)) {
-        counts[k] = Math.max(counts[k] || 0, v);
-      }
     }
     return counts;
   }
@@ -746,9 +735,8 @@
   //   « si vous êtes A »     → c'est le PORTEUR qui doit porter le tag ;
   //   sans tag (per_member)  → les coéquipiers portant le MÊME équipement.
   // Le décompte se fait dans le trio de combat du porteur, sauf « même
-  // équipement » qui regarde toute l'équipe. La valeur « Simuler » du panneau
-  // « Composition d'équipe » ne peut que relever le compte, jamais l'abaisser.
-  function compteCondition(cond, slotIdx, trio = trioDOrigine(slotIdx), item = null, avecSimulation = true) {
+  // équipement » qui regarde toute l'équipe.
+  function compteCondition(cond, slotIdx, trio = trioDOrigine(slotIdx), item = null) {
     if (!cond) return 0;
     const tags = (cond.tags_requis && cond.tags_requis.length ? cond.tags_requis : [cond.tag_requis]).filter(Boolean);
 
@@ -759,14 +747,13 @@
     }
 
     const porteur = state.team[slotIdx] && state.team[slotIdx].character;
-    const simule = avecSimulation ? Math.max(0, ...tags.map((t) => state.conditions[t] || 0)) : 0;
 
     // « si vous êtes … » : seul le porteur est regardé.
     if (cond.portee === "porteur") {
-      if (!porteur) return simule;
+      if (!porteur) return 0;
       const cles = clesDeTags(porteur);
       const ok = cond.combinaison === "ou" ? tags.some((t) => cles.has(t)) : tags.every((t) => cles.has(t));
-      return Math.max(ok ? 1 : 0, simule);
+      return ok ? 1 : 0;
     }
 
     const membres = trio.filter((i) =>
@@ -785,7 +772,7 @@
     } else {
       compte = Math.max(...tags.map(porteursDe));
     }
-    return Math.max(compte, simule);
+    return compte;
   }
 
   // Prépare les items d'un slot pour calc.js : chaque ligne conditionnelle est
@@ -823,7 +810,7 @@
   // Conditions à afficher (lignes d'items dans la grille et la modale de
   // détails) : mêmes règles que le calcul, exprimées sur les tags d'origine.
   function conditionsAffichage(slotIdx, trio) {
-    const counts = getTrioTagCountsFor(slotIdx, true, trio);
+    const counts = getTrioTagCountsFor(slotIdx, trio);
     const slot = state.team[slotIdx];
     if (!slot) return counts;
     slot.items.forEach((item) => {
@@ -1808,7 +1795,6 @@
 
     state.leaderSlot = Math.floor(Math.random() * 6);
     state.noLeader = false;
-    state.conditions = {};   // on repart sans simulation manuelle
     // Mode Proud : Trio C valide (2 d'un trio + 1 de l'autre)
     if (state.mode === "proud") {
       const trioDeux = Math.random() < 0.5 ? [0, 1, 2] : [3, 4, 5];
@@ -3116,13 +3102,11 @@
     return { cat, nom: cat === "Attribut" ? (_ATTR_NOM[nom] || nom) : nom };
   }
 
-  // Panneau « Composition d'équipe » : pour chaque effet d'item qui dépend d'un
-  // tag, l'état RÉEL tel que le calcule le moteur — dans le TRIO du porteur (cf.
-  // buildItemConditions), valeur simulée comprise. Deux natures de condition :
-  // « si N … » (seuil à atteindre) et « par combattant … » (multiplicateur).
-  // Regroupé par tag, avec sa catégorie et son compte par trio, comme le bloc
-  // « Tags de l'équipe ». Les lignes d'un même item soumises à la même
-  // condition (Attaque physique + Attaque d'énergie) forment un seul effet.
+  // Panneau « Composition d'équipe » : la liste de ce qui NE PASSE PAS, c'est-
+  // à-dire les effets d'items dont la condition n'est pas remplie dans le TRIO
+  // du porteur. Regroupé par tag manquant, avec les porteurs déjà présents dans
+  // chaque trio. Les lignes d'un même item soumises à la même condition
+  // (Attaque physique + Attaque d'énergie) forment un seul effet.
   // Effets conditionnels des items d'UN slot, évalués dans un trio de combat
   // (défaut : son trio d'origine). Clé = slot|item|mode|seuil|tags : la même
   // clé désigne le même effet quel que soit le trio, ce qui permet de comparer
@@ -3143,14 +3127,11 @@
         const cle = tags.join(" / ");
         const id = `${slotIdx}|${itemIdx}|${c.portee}|${c.combinaison}|${c.exclure_soi}|${c.mode}|${seuil}|${cle}`;
         if (!effets.has(id)) {
-          // Même décompte que le calcul, valeur simulée comprise ; le « réel »
-          // sert seulement à signaler qu'une valeur vient d'une simulation.
           const valeur = compteCondition(c, slotIdx, trio, it);
-          const reel = compteCondition(c, slotIdx, trio, it, false);
           effets.set(id, {
             slot: slotIdx, item: it, lignes: [], tags, cle, parMembre, seuil, valeur,
             portee: c.portee, combinaison: c.combinaison, exclureSoi: !!c.exclure_soi,
-            simule: valeur > reel, actif: valeur >= seuil,
+            actif: valeur >= seuil,
           });
         }
         effets.get(id).lignes.push(l);
@@ -3170,6 +3151,22 @@
     return T('cond.need.threshold', { n: e.seuil });
   }
 
+  // Vignette d'un personnage (liseré de sa couleur d'élément) et vignette d'un
+  // item (cadre de sa rareté) : le panneau doit se lire d'un coup d'oeil, sans
+  // avoir à relire des noms de cartes.
+  function ceAvatarHTML(c) {
+    const img = c.image
+      ? `<img src="${escAttr(c.image)}" alt="" loading="lazy" onerror="this.style.display='none'" />`
+      : "";
+    return `<span class="ce-avatar elem-${(c.element || "").toLowerCase()}">${img}</span>`;
+  }
+  function ceItemIconHTML(it) {
+    const img = it.image
+      ? `<img src="${escAttr(it.image)}" alt="" loading="lazy" onerror="this.style.display='none'" />`
+      : `<span class="item-img-placeholder">?</span>`;
+    return `<span class="item-img is-framed rar-${(it.rarete || "").toLowerCase()}">${img}</span>`;
+  }
+
   function renderConditions() {
     const effets = new Map();
     state.team.forEach((_, i) => {
@@ -3184,19 +3181,28 @@
 
     // Bilan lisible sans ouvrir le panneau
     const tous = [...effets.values()];
-    const nbActifs = tous.filter((e) => e.actif).length;
+    const inactifs = tous.filter((e) => !e.actif);
+    const nbActifs = tous.length - inactifs.length;
     if (conditionsStatus) {
       conditionsStatus.innerHTML =
         `<span class="cs-badge is-on">${T('cond.badge.on', { n: nbActifs })}</span>` +
-        (tous.length > nbActifs ? `<span class="cs-badge is-off">${T('cond.badge.off', { n: tous.length - nbActifs })}</span>` : "");
+        (inactifs.length ? `<span class="cs-badge is-off">${T('cond.badge.off', { n: inactifs.length })}</span>` : "");
+    }
+
+    // Le panneau ne liste QUE ce qui ne passe pas : c'est la seule chose sur
+    // laquelle agir. Le nombre d'effets actifs reste dans le bandeau ci-dessus.
+    if (!inactifs.length) {
+      conditionsInputs.innerHTML = `<p class="cg-empty">${T('cond.empty')}</p>`;
+      return;
     }
 
     const occupes = [0, 1, 2, 3, 4, 5].filter((i) => state.team[i].character);
     const groupes = new Map();
-    tous.forEach((e) => { if (!groupes.has(e.cle)) groupes.set(e.cle, []); groupes.get(e.cle).push(e); });
+    inactifs.forEach((e) => { if (!groupes.has(e.cle)) groupes.set(e.cle, []); groupes.get(e.cle).push(e); });
 
     conditionsInputs.innerHTML = [...groupes.values()]
-      // Ordre stable (catégorie puis nom) : un groupe ne bouge pas quand on simule.
+      // Ordre stable (catégorie puis nom) : un groupe ne saute pas d'une place
+      // à l'autre quand l'équipe change.
       .sort((a, b) => a[0].cle.localeCompare(b[0].cle, "fr"))
       .map((liste) => {
         const tags = liste[0].tags;
@@ -3206,28 +3212,29 @@
           const cles = clesDeTags(state.team[i].character);
           return tags.some((t) => cles.has(t));
         });
+        // Qui porte déjà ce tag, trio par trio : le chiffre qui manque se lit ici.
         const trios = [0, 1].map((tr) => {
           const ici = porteurs.filter((i) => trioOf(i) === tr);
+          const vignettes = ici.map((i) => ceAvatarHTML(state.team[i].character)).join("");
           const noms = ici.map((i) => `${state.team[i].character.nom.trim()} (${state.team[i].character.cardCode})`).join(", ");
-          return `<span class="cg-trio"${noms ? ` title="${escAttr(noms)}"` : ""}>${trioLabel(tr)} <b>${ici.length}</b></span>`;
+          return `<span class="cg-trio${ici.length ? "" : " is-zero"}"${noms ? ` title="${escAttr(noms)}"` : ""}>` +
+            `<span class="cg-trio-label">${trioLabel(tr)}</span>` +
+            (vignettes ? `<span class="cg-trio-persos">${vignettes}</span>` : "") +
+            `<b>${ici.length}</b></span>`;
         }).join("");
-        const simu = Math.max(...tags.map((t) => state.conditions[t] || 0));
 
         const lignes = liste.map((e) => {
           const p = state.team[e.slot].character;
-          const regle = regleCondition(e);
-          const statut = !e.actif
-            ? `<span class="ce-status is-off">${T('cond.status.missing', { n: e.seuil - e.valeur })}</span>`
-            : e.parMembre
-              ? `<span class="ce-status is-mult">× ${Math.min(e.valeur, 6)}</span>`
-              : `<span class="ce-status is-on">${T('cond.status.on')}</span>`;
           const bonus = e.lignes.map((l) => `<span>+${fmtDec(l.valeur_max.toFixed(2))}% ${statLabel(l.stat)}</span>`).join("");
-          return `<li class="ce-row${e.actif ? "" : " is-inactive"}">` +
-            `<span class="ce-who"><b>${escAttr(p.nom.trim())}</b><small>${escAttr(p.cardCode || "")} · ${trioLabel(trioOf(e.slot))}</small></span>` +
-            `<span class="ce-item">${escAttr(e.item.nom.trim())}</span>` +
+          return `<li class="ce-row">` +
+            `<span class="ce-who">${ceAvatarHTML(p)}<span class="ce-who-txt">` +
+              `<b>${escAttr(p.nom.trim())}</b>` +
+              `<small>${escAttr(p.cardCode || "")} · ${trioLabel(trioOf(e.slot))}</small>` +
+            `</span></span>` +
+            `<span class="ce-item">${ceItemIconHTML(e.item)}<span class="ce-item-name">${escAttr(e.item.nom.trim())}</span></span>` +
             `<span class="ce-effect">${bonus}</span>` +
-            `<span class="ce-rule">${regle}${e.simule ? ` <em>${T('cond.simulated')}</em>` : ""}</span>` +
-            statut +
+            `<span class="ce-rule">${regleCondition(e)}</span>` +
+            `<span class="ce-status is-off">${T('cond.status.missing', { n: Math.max(1, e.seuil - e.valeur) })}</span>` +
             `</li>`;
         }).join("");
 
@@ -3235,32 +3242,11 @@
           `<header class="cg-head">` +
             `<span class="cg-title">${cat ? `<span class="cg-cat">${escAttr(cat)}</span>` : ""}<span class="cg-name">${escAttr(nom)}</span></span>` +
             `<span class="cg-trios">${trios}</span>` +
-            `<label class="cg-sim" title="${T('cond.simulate.title')}">${T('cond.simulate')}` +
-              `<input type="number" min="0" max="6" placeholder="–" value="${simu || ""}" data-tags="${escAttr(tags.join("\n"))}" /></label>` +
           `</header>` +
           `<ul class="ce-list">${lignes}</ul>` +
           `</section>`;
       }).join("");
   }
-
-  // Simulation : la valeur s'applique à chaque tag du groupe (« Vert / Violet »),
-  // pour qu'une condition « à la fois » puisse aussi être simulée.
-  conditionsInputs.addEventListener("input", (e) => {
-    const input = e.target.closest("input[data-tags]");
-    if (!input) return;
-    const cle = input.dataset.tags;
-    const v = parseInt(input.value, 10);
-    cle.split("\n").forEach((t) => { state.conditions[t] = isNaN(v) ? 0 : Math.max(0, Math.min(6, v)); });
-    renderTeamGrid();
-    renderResults();
-    // Redessin pour mettre les statuts à jour, en rendant le focus au champ saisi.
-    renderConditions();
-    const champ = [...conditionsInputs.querySelectorAll("input[data-tags]")].find((x) => x.dataset.tags === cle);
-    if (champ) {
-      champ.focus();
-      if (champ.value !== input.value) champ.value = input.value;   // garde « 0 » ou « » tel que tapé
-    }
-  });
 
   // ===== ANALYSE DU TRIO C (mode Proud) =====
   // Deux bons trios ne font pas forcément un bon Trio C : les conditions
@@ -3280,7 +3266,7 @@
   // reçues (clé source|type|stat, pour comparer deux trios).
   function bilanDansTrio(slotIdx, trio) {
     const prepare = preparerItems(slotIdx, trio);
-    const conds = { ...getTrioTagCountsFor(slotIdx, true, trio), ...prepare.conditions };
+    const conds = { ...getTrioTagCountsFor(slotIdx, trio), ...prepare.conditions };
     const zItems = buildTeamZItemsFor(slotIdx, trio);
     const items = prepare.items.filter(Boolean);
     const zLignes = new Map();
@@ -3769,7 +3755,7 @@
     const prepare = preparerItems(slotIdx, trio);
     const resolvedItems = prepare.items.filter(Boolean);
     if (zItems.length === 0 && resolvedItems.length === 0) return null;
-    const conds = { ...getTrioTagCountsFor(slotIdx, true, trio), ...prepare.conditions };
+    const conds = { ...getTrioTagCountsFor(slotIdx, trio), ...prepare.conditions };
     return calculerStats({ items: [...resolvedItems, ...zItems], conditions: conds }).stats;
   }
 

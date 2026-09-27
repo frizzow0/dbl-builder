@@ -37,10 +37,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=99" />
+  <link rel="stylesheet" href="/styles.css?v=100" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=99"></script>
+  <script defer src="/site.js?v=100"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,7 +73,7 @@
         "description": "Guide pas à pas de DBL Optimizer : ajouter des personnages, choisir le Leader, régler Cap Z et items, lire les tags, les conditions et les bilans.",
         "inLanguage": "fr",
         "datePublished": "2026-09-16",
-        "dateModified": "2026-09-16",
+        "dateModified": "2026-09-27",
         "image": "https://dbl-optimizer.com/og-image.jpg",
         "author": {
           "@type": "Organization",
@@ -100,7 +100,7 @@
           }
         },
         "mainEntityOfPage": "https://dbl-optimizer.com/guide-prise-en-main.html",
-        "wordCount": 912
+        "wordCount": 898
       }
     ]
   }
@@ -134,7 +134,7 @@
       <header class="doc-hero">
         <h1>Prise en main de DBL Optimizer</h1>
         <p class="doc-lead">De la case vide au bilan chiffré : chaque zone de l’optimiseur expliquée, dans l’ordre où tu t’en sers.</p>
-        <p class="doc-meta">Mis à jour le 16 septembre 2026 · 4 min de lecture</p>
+        <p class="doc-meta">Mis à jour le 27 septembre 2026 · 4 min de lecture</p>
       </header>
       <aside class="ad-slot" data-ad="doc-top" hidden></aside>
       <h2>Avant de commencer</h2>
@@ -171,13 +171,8 @@
 
       <h2>5. Lire les tags et les conditions</h2>
       <p>Sous les cartes, le tableau <strong>« Tags de l’équipe »</strong> montre qui porte quel tag : une colonne par personnage, un point sous chaque porteur, le total à droite. Les tags partagés passent en premier ; ceux d’un seul personnage sont repliés derrière un bouton.</p>
-      <p>Le panneau <strong>« Composition d’équipe »</strong> liste ensuite chaque effet d’item qui dépend d’un tag. Pour chacun, il indique le porteur, le bonus, la règle (« 3 dans son trio », « par membre du trio ») et un statut :</p>
-      <ul>
-        <li><strong>Actif</strong> — la condition est remplie ;</li>
-        <li><strong>Manque N</strong> — il manque N personnages portant le tag dans le trio ;</li>
-        <li><strong>× N</strong> — le bonus est multiplié par le nombre de membres concernés.</li>
-      </ul>
-      <p>Le champ <strong>« Simuler »</strong> force un nombre de porteurs pour tester un effet sans changer l’équipe. La ligne concernée porte alors la mention « (simulé) », et tous les bilans en tiennent compte.</p>
+      <p>Le panneau <strong>« Composition d’équipe »</strong> liste ensuite les effets d’items <strong>qui ne passent pas</strong> : ceux dont la condition n’est pas remplie dans le trio de leur porteur. Les effets actifs, eux, sont simplement comptés dans le bandeau (« Actifs : 6 · Inactifs : 3 ») — il n’y a rien à y corriger.</p>
+      <p>Les effets bloqués sont regroupés par tag manquant. L’en-tête du groupe rappelle qui porte déjà ce tag dans chaque trio, et chaque ligne montre le personnage, l’item, le bonus perdu (barré) et ce qu’il manque (« Manque 1 »).</p>
 
       <h2>6. Analyser les résultats</h2>
       <ul>

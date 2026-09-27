@@ -37,10 +37,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=99" />
+  <link rel="stylesheet" href="/styles.css?v=100" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=99"></script>
+  <script defer src="/site.js?v=100"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,7 +73,7 @@
         "description": "Step-by-step DBL Optimizer guide: add characters, pick your Leader, set Z Abilities and equipment, then read tags, conditions and team summaries.",
         "inLanguage": "en",
         "datePublished": "2026-09-16",
-        "dateModified": "2026-09-16",
+        "dateModified": "2026-09-27",
         "image": "https://dbl-optimizer.com/og-image-en.jpg",
         "author": {
           "@type": "Organization",
@@ -100,7 +100,7 @@
           }
         },
         "mainEntityOfPage": "https://dbl-optimizer.com/en/getting-started.html",
-        "wordCount": 810
+        "wordCount": 795
       }
     ]
   }
@@ -134,7 +134,7 @@
       <header class="doc-hero">
         <h1>Getting started with DBL Optimizer</h1>
         <p class="doc-lead">From an empty slot to a detailed breakdown: every part of the optimizer explained, in the order you use it.</p>
-        <p class="doc-meta">Updated September 16, 2026 · 4 min read</p>
+        <p class="doc-meta">Updated September 27, 2026 · 4 min read</p>
       </header>
       <aside class="ad-slot" data-ad="doc-top" hidden></aside>
       <h2>Before you start</h2>
@@ -171,13 +171,8 @@
 
       <h2>5. Read tags and conditions</h2>
       <p>Under the cards, the <strong>“Team tags”</strong> table shows who carries which tag: one column per character, a dot under each carrier and the total on the right. Shared tags come first; tags carried by a single character are folded behind a button.</p>
-      <p>The <strong>“Team Composition”</strong> panel then lists every equipment effect that depends on a tag. For each one it shows the wearer, the bonus, the rule (“3 in their trio”, “per trio member”) and a status:</p>
-      <ul>
-        <li><strong>Active</strong> — the condition is met;</li>
-        <li><strong>N missing</strong> — the trio lacks N characters with that tag;</li>
-        <li><strong>× N</strong> — the bonus is multiplied by the number of matching members.</li>
-      </ul>
-      <p>The <strong>“Simulate”</strong> field forces a number of carriers so you can test an effect without changing the team. That line is then marked “(simulated)”, and every summary takes it into account.</p>
+      <p>The <strong>“Team Composition”</strong> panel then lists the equipment effects <strong>that do not trigger</strong>: those whose condition isn’t met in their wearer’s trio. Active effects are simply counted in the header (“Active: 6 · Inactive: 3”) — there is nothing to fix there.</p>
+      <p>Blocked effects are grouped by missing tag. The group header recalls who already carries that tag in each trio, and every row shows the character, the equipment, the bonus lost (struck through) and what is missing (“1 missing”).</p>
 
       <h2>6. Analyze the results</h2>
       <ul>

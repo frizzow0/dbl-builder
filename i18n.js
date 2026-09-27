@@ -31,7 +31,7 @@
     'items.details.title':     { fr: 'Items — {name}', en: 'Items — {name}' },
     'results.detail.label':    { fr: 'Détail par perso :',   en: 'Per-character detail:' },
     'panel.conditions.title':  { fr: 'Composition d\'équipe', en: 'Team Composition' },
-    'panel.conditions.sub':    { fr: 'Effets d’items qui dépendent des tags présents dans le trio de leur porteur.', en: 'Item effects that depend on tags in their wearer’s trio.' },
+    'panel.conditions.sub':    { fr: 'Les effets d’items qui ne passent pas : ce qu’il manque dans le trio de leur porteur.', en: 'The item effects that do not trigger: what is missing in their wearer’s trio.' },
     'panel.z.title':           { fr: 'Bilan global (Cap Z)', en: 'Global summary (Z Abilities)' },
     'panel.z.sub':             { fr: 'Total des bonus de Cap Z reçus par l\'équipe. Chaque perso reçoit la sienne + celles des coéquipiers selon les conditions ; le Leader (★) sans restriction.',
                                   en: 'Total Z Ability bonuses received by the team. Each character gets their own + teammates\' based on conditions; the Leader (★) without restriction.' },
@@ -172,10 +172,8 @@
     'cond.need.permember':  { fr: 'par membre du trio',     en: 'per trio member' },
     'cond.status.on':       { fr: 'Actif',                  en: 'Active' },
     'cond.status.missing':  { fr: 'Manque {n}',             en: '{n} missing' },
-    'cond.simulated':       { fr: '(simulé)',               en: '(simulated)' },
-    'cond.simulate':        { fr: 'Simuler',                en: 'Simulate' },
-    'cond.simulate.title':  { fr: 'Compte simulé pour ce tag dans chaque trio : le calcul retient le plus grand entre le réel et le simulé.',
-                              en: 'Simulated count for this tag in each trio: the calculation keeps the higher of real and simulated.' },
+    'cond.empty':           { fr: 'Tout passe : aucun effet d’item ne reste bloqué.',
+                              en: 'All clear: no item effect is left blocked.' },
     'source.prefix':  { fr: 'Source :',       en: 'Source:' },
 
     // ── Dynamique : Z Abilities ──────────────────
