@@ -1040,6 +1040,15 @@
       : `${fmtDec(l.valeur_min.toFixed(2))} ~ ${fmtDec(l.valeur_max.toFixed(2))}%`;
 
   // ===== HELPERS =====
+  // 2 646 345 → « 2,6 M » · 278 542 → « 279 K ». Les cartes de la liste de
+  // personnages sont étroites : les stats y passent en abrégé.
+  function fmtCourt(n) {
+    if (n == null) return "";
+    if (n >= 1e6) return fmtDec((n / 1e6).toFixed(1)) + "M";
+    if (n >= 1e4) return fmtInt(Math.round(n / 1e3)) + "K";
+    return fmtInt(n);
+  }
+
   function statLabel(statKey) {
     return STATS[statKey] ? STATS[statKey].label : statKey;
   }
@@ -1162,6 +1171,25 @@
     });
   }
 
+
+  // Stats résumées sur une carte de la liste : le niveau de puissance, puis le
+  // profil en trois chiffres (PV, frappe, énergie) pour comparer d'un coup
+  // d'œil deux cartes d'un même personnage.
+  function statsCarteHTML(p) {
+    if (!p.stats_base) return "";
+    const b = p.stats_base;
+    const mini = [
+      ["hp", b.force, 'labels.force'],
+      ["str", b.attaque_physique, 'labels.attaque_physique'],
+      ["bla", b.attaque_energie, 'labels.attaque_energie'],
+    ].map(([cle, valeur, cleLabel]) =>
+      `<span class="cs-stat" title="${escAttr(T(cleLabel))}"><i>${T('stats.short.' + cle)}</i>${fmtCourt(valeur)}</span>`).join("");
+    return (p.powerLevel
+        ? `<span class="cs-power" title="${escAttr(T('stats.power'))}">${fmtInt(p.powerLevel)}</span>`
+        : "") +
+      `<span class="cs-stats">${mini}</span>`;
+  }
+
   function renderCharSuggestions(filter) {
     const q = (filter || "").toLowerCase().trim();
     const pool = getFilteredChars();
@@ -1201,6 +1229,7 @@
             <div class="char-card-body">
               <span class="char-suggestion-name"><span>${p.nom.trim()}</span></span>
               <small class="char-suggestion-code">${p.cardCode || ""} · ${p.rarete}</small>
+              ${statsCarteHTML(p)}
             </div>
           </li>
         `;
@@ -1357,6 +1386,7 @@
     renderCharFilters();
     renderCharTraits();
     renderCharZAbility();
+    if (charModalEl && !charModalEl.classList.contains("hidden")) renderCharSuggestions(charSearchEl.value);
   }
 
   function selectCharacter(p) {
