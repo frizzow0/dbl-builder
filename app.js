@@ -2144,15 +2144,6 @@
     pool: 160,    // plafond du nombre de candidats croisés
   };
 
-  const OPTI_PRESETS = {
-    frappe:  ["attaque_physique", "degats_infliges", "critique", "force", "points_de_vie"],
-    energie: ["attaque_energie", "degats_energie_infliges", "degats_infliges", "critique", "force"],
-    defense: ["defense_physique", "defense_energie", "points_de_vie", "garde_contre_degats", "force"],
-    finish:  ["degats_ultime", "degats_tech_spe", "degats_infliges", "attaque_physique", "attaque_energie"],
-    utilite: ["vitesse_regen_ki", "quantite_regen_force", "vanish_recover", "critique", "force"],
-  };
-  const OPTI_PRESET_ORDRE = ["frappe", "energie", "defense", "finish", "utilite"];
-
   const opti = {
     slot: null,
     prios: ["", "", "", "", ""],
@@ -2163,37 +2154,6 @@
     candidats: 0,
     duree: 0,
   };
-
-  // Le « Style de combat » du perso donne un classement de départ pertinent.
-  function optiTypeDe(character) {
-    const traits = new Set(character ? character.traits || [] : []);
-    if (traits.has("Type énergie")) return "energie";
-    if (traits.has("Type défense")) return "defense";
-    if (traits.has("Type assistance")) return "utilite";
-    return "frappe";
-  }
-
-  // Classement mémorisé par type de combat : on ne ressort pas un classement
-  // « frappe » sur un perso de type énergie.
-  function optiPriosParDefaut(character) {
-    const type = optiTypeDe(character);
-    try {
-      const memo = JSON.parse(localStorage.getItem("dbl-opti-prios") || "{}");
-      const gardees = memo && memo[type];
-      if (Array.isArray(gardees) && gardees.length === 5) return gardees.slice();
-    } catch (e) { /* stockage indisponible */ }
-    return OPTI_PRESETS[type].slice();
-  }
-
-  function optiMemoriserPrios() {
-    const slot = state.team[opti.slot];
-    if (!slot || !slot.character) return;
-    try {
-      const memo = JSON.parse(localStorage.getItem("dbl-opti-prios") || "{}");
-      memo[optiTypeDe(slot.character)] = opti.prios.slice();
-      localStorage.setItem("dbl-opti-prios", JSON.stringify(memo));
-    } catch (e) { /* stockage indisponible */ }
-  }
 
   // Stats notées, dans l'ordre choisi (doublons retirés) + leur poids.
   function optiCibles() {
@@ -2416,16 +2376,12 @@
   const optiTitleEl = document.getElementById("opti-title");
   const optiAvatarEl = document.getElementById("opti-avatar");
   const optiSubEl = document.getElementById("opti-sub");
-  const optiPresetsEl = document.getElementById("opti-presets");
   const optiPriosEl = document.getElementById("opti-prios");
   const optiOptionsEl = document.getElementById("opti-options");
   const optiResultsEl = document.getElementById("opti-results");
 
   function renderOptiConfig() {
     if (!optiPriosEl) return;
-    optiPresetsEl.innerHTML = OPTI_PRESET_ORDRE.map((k) =>
-      `<button class="opti-preset" type="button" data-opti-preset="${k}">${T('opti.preset.' + k)}</button>`).join("");
-
     optiPriosEl.innerHTML = opti.prios.map((cible, i) => {
       const options = [`<option value="">${T('opti.none')}</option>`].concat(
         STATS_CIBLES.map((c) => `<option value="${c}"${c === cible ? " selected" : ""}>${escAttr(LABELS_CIBLES[c])}</option>`)
@@ -2505,7 +2461,6 @@
       return;
     }
     optiResultsEl.innerHTML =
-      `<p class="opti-count">${T('opti.count', { n: opti.candidats, ms: opti.duree })}</p>` +
       (opti.actuel ? `<div class="opti-current">${optiBuildHTML(opti.actuel, null)}</div>` : "") +
       `<h4 class="opti-results-head">${T('opti.results')}</h4>` +
       opti.builds.map((b, i) => optiBuildHTML(b, i)).join("") +
@@ -2521,7 +2476,7 @@
     const slot = state.team[slotIdx];
     if (!slot || !slot.character || !optiModalEl) return;
     opti.slot = slotIdx;
-    opti.prios = optiPriosParDefaut(slot.character);
+    opti.prios = ["", "", "", "", ""];   // à l'utilisateur de choisir ses stats
     if (optiTitleEl) optiTitleEl.textContent = slot.character.nom.trim();
     if (optiAvatarEl) optiAvatarEl.innerHTML = ceAvatarHTML(slot.character);
     if (optiSubEl) optiSubEl.textContent = T('opti.sub');
@@ -2554,14 +2509,6 @@
     optiModalEl.addEventListener("click", (e) => {
       const equip = e.target.closest("[data-opti-equip]");
       if (equip) { optiEquiper(+equip.dataset.optiEquip); return; }
-      const preset = e.target.closest("[data-opti-preset]");
-      if (preset) {
-        opti.prios = OPTI_PRESETS[preset.dataset.optiPreset].slice();
-        optiMemoriserPrios();
-        renderOptiConfig();
-        optiLancer();
-        return;
-      }
       const mode = e.target.closest("[data-opti-mode]");
       if (mode) {
         opti.mode = mode.dataset.optiMode;
@@ -2573,7 +2520,6 @@
       const sel = e.target.closest("[data-opti-prio]");
       if (sel) {
         opti.prios[+sel.dataset.optiPrio] = sel.value;
-        optiMemoriserPrios();
         optiLancer();
         return;
       }
