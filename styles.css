@@ -327,7 +327,7 @@ html { scroll-behavior: smooth; }
   display: flex; align-items: center; gap: var(--s-3);
   width: 100%; padding-top: var(--s-2); flex-wrap: wrap;
 }
-.builder-row-panel .builder-item-slot { width: 50px; height: 50px; min-height: 0; }
+.builder-row-panel .builder-item-icon { width: 48px; height: 48px; min-height: 0; }
 .builder-row-panel .builder-z-pill { min-width: 34px; padding: 8px 0; }
 
 /* ── Accordéon horizontal : uniquement si l'appareil sait survoler ──────────
@@ -470,11 +470,11 @@ html { scroll-behavior: smooth; }
     flex-direction: column; gap: var(--s-2);
     width: 100%; align-items: center;
   }
-  .builder-row-panel .builder-item-act { width: 22px; height: 22px; border-radius: 6px; font-size: 12px; }
-  .builder-row-panel .builder-item-slot {
+  .builder-row-panel .builder-item-icon {
     height: auto; aspect-ratio: 1; min-height: 0;
-    /* 104px au plus, sans dépasser la largeur ni le tiers de la hauteur libre */
-    width: min(104px, 100cqw, calc((100cqh - 2 * var(--s-2)) / 3));
+    /* 104px au plus, sans dépasser la largeur disponible (colonne d'actions
+       déduite) ni le tiers de la hauteur libre */
+    width: min(104px, calc(100cqw - 34px), calc((100cqh - 2 * var(--s-2)) / 3));
   }
   /* Le dépliant ne s'ouvre QU'EN LARGEUR : sa hauteur est celle de la tuile.
      `contain: size` empêche son contenu d'allonger la colonne ; les
@@ -3096,16 +3096,15 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 }
 /* Ligne sans perso : mêmes emplacements que les lignes pleines, mais grisés/inertes */
 .builder-items--locked { opacity: .4; pointer-events: none; }
-.builder-item-icons { display: flex; align-items: stretch; gap: var(--s-2); }
-/* L'emplacement porte la taille ; la vignette le remplit et les deux actions
-   (crayon, flèche) se posent par-dessus, donc sans rien décaler. */
+.builder-item-icons { display: flex; align-items: stretch; gap: var(--s-2); flex-wrap: wrap; }
+/* Un emplacement = la vignette, puis ses trois actions juste à sa droite. */
 .builder-item-slot {
-  position: relative;
-  height: auto; width: auto; aspect-ratio: 1; flex: 0 0 auto;
-  min-height: 56px;
+  display: flex; align-items: center; gap: 4px; flex: 0 0 auto;
 }
 .builder-item-icon {
-  width: 100%; height: 100%; aspect-ratio: auto; min-height: 0;
+  /* Carré dont la hauteur = hauteur de la ligne (stretch) ; largeur = hauteur */
+  height: auto; width: auto; aspect-ratio: 1; flex: 0 0 auto;
+  min-height: 56px;
   border-radius: var(--r-2);
   border: 1px solid var(--line);
   background: var(--surface-3);
@@ -3972,24 +3971,19 @@ html { font-size: 16px; }
    Posées sur la vignette, elles ne prennent aucune place dans la mise en page —
    le dépliant garde exactement la hauteur de la tuile. */
 .builder-item-acts {
-  position: absolute; top: 3px; right: 3px; bottom: 3px; z-index: 2;
-  display: flex; flex-direction: column; justify-content: space-between;
-  pointer-events: none;
+  display: flex; flex-direction: column; gap: 3px; flex: 0 0 auto;
 }
 .builder-item-act {
-  pointer-events: auto;
-  width: 20px; height: 20px; padding: 0;
+  width: 22px; height: 22px; padding: 0;
   display: grid; place-items: center;
   border-radius: 6px; border: 1px solid var(--line);
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  background: var(--surface);
   color: var(--text-soft); font-size: 11px; line-height: 1;
-  cursor: pointer; opacity: .85;
+  cursor: pointer;
   transition: background var(--t-micro), color var(--t-micro), border-color var(--t-micro), opacity var(--t-micro);
 }
 .builder-item-act:hover { opacity: 1; background: var(--accent); border-color: var(--accent); color: #fff; }
-/* Dépliant empilé (vignettes de 50px) : actions plus menues pour ne pas
-   recouvrir l artwork ; elles reprennent leur taille dans le dépliant large. */
-.builder-row-panel .builder-item-act { width: 17px; height: 17px; border-radius: 5px; font-size: 10px; }
+.builder-item-act.is-danger:hover { background: var(--danger); border-color: var(--danger); color: #fff; }
 .builder-item-act:focus-visible { opacity: 1; outline: 2px solid var(--accent); outline-offset: 1px; }
 
 /* Item mis en avant dans la modale de détails (ouverte par la flèche). */

@@ -26,6 +26,7 @@
     'panel.builder.title':     { fr: 'Équipe & Items',       en: 'Team & Items' },
     'panel.builder.hint':      { fr: 'clique sur un perso vide pour l\'ajouter · choisis ses items en face', en: 'click an empty slot to add a character · pick their items on the right' },
     'builder.items.empty':     { fr: 'Ajoute un perso pour équiper des items', en: 'Add a character to equip items' },
+    'item.remove.one':      { fr: 'Retirer cet item',        en: 'Remove this equipment' },
     'item.change.one':      { fr: 'Changer cet item',        en: 'Change this equipment' },
     'item.detail.one':      { fr: 'Voir le détail de cet item', en: 'See this equipment’s details' },
     'items.details':           { fr: 'Voir les détails des items', en: 'View item details' },

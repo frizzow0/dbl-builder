@@ -1452,8 +1452,8 @@
   }
 
   // Icône compacte d'un item dans la ligne builder (vide ou rempli).
-  // Un emplacement = la vignette (clic : choisir / changer) plus deux actions
-  // posées dessus : le crayon change l'item, la flèche ouvre son détail.
+  // Un emplacement = la vignette (clic : choisir / changer) et, à sa droite,
+  // trois actions : crayon (changer), flèche (détail), croix (retirer).
   function itemIconHTML(charSlot, itemSlotIdx) {
     const item = state.team[charSlot].items[itemSlotIdx];
     if (!item) {
@@ -1468,6 +1468,7 @@
       `<span class="builder-item-acts">` +
         `<button class="builder-item-act" data-item-change="${charSlot}:${itemSlotIdx}" type="button" title="${T('item.change.one')}" aria-label="${T('item.change.one')}">✎</button>` +
         `<button class="builder-item-act" data-item-detail="${charSlot}:${itemSlotIdx}" type="button" title="${T('item.detail.one')}" aria-label="${T('item.detail.one')}">▸</button>` +
+        `<button class="builder-item-act is-danger" data-item-clear="${charSlot}:${itemSlotIdx}" type="button" title="${T('item.remove.one')}" aria-label="${T('item.remove.one')}">✕</button>` +
       `</span></div>`;
   }
 
