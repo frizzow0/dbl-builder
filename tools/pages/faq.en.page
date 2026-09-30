@@ -6,7 +6,7 @@
   "lead": "Answers to the most common questions about DBL Optimizer and Dragon Ball Legends optimization mechanics.",
   "type": "faq",
   "published": "2026-06-14",
-  "updated": "2026-09-30",
+  "updated": "2026-09-27",
   "cta": "Launch the optimizer →"
 }
 -->
@@ -15,9 +15,6 @@
 
 <h2>Is my team saved?</h2>
 <p>No. Your lineup isn’t stored anywhere: if you reload the page, it starts from scratch. Only your language and game mode (Classic or Proud) are remembered in your browser. Nothing is sent to a server.</p>
-
-<h2>How do I generate a team automatically?</h2>
-<p>Above the grid, the <strong>“Generate a team”</strong> bar builds the best team around a <strong>Class</strong> or an <strong>Episode</strong>. First lock (🔒 padlock) the characters you want to keep: they stay in the team, with their equipment, but the generator may move them — the trio and the Leader decide how Z Abilities propagate. The team kept is the one that maximizes the Global summary; “Undo” restores the previous team. The <a href="/en/getting-started.html">getting started guide</a> explains the method.</p>
 
 <h2>How do I add a character to my team?</h2>
 <p>Click a “Click to add” slot. In the window that opens, search by name, card code or tag, and filter by rarity or color. Then hover the card to set its Z Ability level and equip up to 3 pieces of equipment. The <a href="/en/getting-started.html">Getting started</a> guide covers every step.</p>
