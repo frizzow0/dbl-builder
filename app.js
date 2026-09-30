@@ -3397,6 +3397,55 @@
     trioCAnalyseEl.scrollIntoView({ block: "nearest", behavior: "smooth" });
   });
 
+
+  // ===== STATS DU PERSONNAGE CIBLÉ =====
+  // Les pourcentages ne disent pas tout : +50 % sur une petite base vaut moins
+  // qu'un +30 % sur une grosse. On affiche donc la stat de base scrapée, sa
+  // valeur une fois les Cap Z et les items appliqués, et le multiplicateur.
+  const persoStatsEl = document.getElementById("perso-stats");
+  const PS_STATS = ["force", "attaque_physique", "attaque_energie", "defense_physique",
+    "defense_energie", "critique", "vitesse_regen_ki", "vanish_recover"];
+
+  function renderStatsPerso() {
+    if (!persoStatsEl) return;
+    const c = active.character;
+    if (!c || !c.stats_base) { persoStatsEl.innerHTML = ""; return; }
+
+    // Mêmes bonus que le reste du panneau : Cap Z reçues + items équipés.
+    const zItems = buildTeamZItemsFor(state.activeSlot);
+    const prepare = preparerItems(state.activeSlot);
+    const conds = { ...getTrioTagCountsFor(state.activeSlot), ...prepare.conditions };
+    const stats = calculerStats({
+      items: [...prepare.items.filter(Boolean), ...zItems],
+      conditions: conds,
+      personnage: c,
+    }).stats;
+
+    const lignes = PS_STATS.map((cible) => {
+      const base = c.stats_base[cible];
+      if (base == null) return "";
+      const s = stats[cible];
+      const mult = s ? s.multTotal : 1;
+      const finale = Math.round(base * mult);
+      const boost = mult > 1.0005;
+      return `<li class="ps-row${boost ? " is-boosted" : ""}">` +
+        `<span class="ps-name">${escSvg(LABELS_CIBLES[cible])}</span>` +
+        `<span class="ps-base">${fmtInt(base)}</span>` +
+        (boost
+          ? `<span class="ps-arrow" aria-hidden="true">→</span><span class="ps-final">${fmtInt(finale)}</span><span class="ps-mult">× ${fmtDec(mult.toFixed(2))}</span>`
+          : `<span class="ps-arrow" aria-hidden="true"></span><span class="ps-final ps-none">—</span><span class="ps-mult"></span>`) +
+        `</li>`;
+    }).join("");
+
+    const ctx = window.DBL_STATS_CONTEXTE;
+    persoStatsEl.innerHTML =
+      (c.powerLevel
+        ? `<div class="ps-power"><span class="ps-power-label">${T('stats.power')}</span><span class="ps-power-value">${fmtInt(c.powerLevel)}</span></div>`
+        : "") +
+      `<ul class="ps-list"><li class="ps-head"><span>${T('stats.stat')}</span><span>${T('stats.base')}</span><span></span><span>${T('stats.final')}</span><span></span></li>${lignes}</ul>` +
+      `<p class="ps-note">${T('stats.note', { niveau: ctx ? ctx.niveau : 5000, etoiles: ctx ? ctx.etoiles : 14 })}</p>`;
+  }
+
   // ===== RENDU : RÉSULTATS =====
   const statsGrid = document.getElementById("stats-grid");
   const passifsZone = document.getElementById("passifs-zone");
@@ -3428,6 +3477,7 @@
     renderGlobalBilan();
     renderZTree();
     renderEffetsNonCalcules();   // toute l'équipe : indépendant du perso ciblé
+    renderStatsPerso();
     const noItems = active.items.every((s) => !s);
     const noZ = buildTeamZItemsFor(state.activeSlot).length === 0;
     if (noItems && noZ) {
@@ -3460,7 +3510,7 @@
     const itemResult     = calculerStats({ items: itemOnlyItems, conditions: effCond }); // pour stats-cell items unifié si besoin
     const zResult        = calculerStats({ items: zItems,        conditions: effCond });
     // `result` = calcul combiné (additif par type, multiplicatif entre types) → utilisé comme Total.
-    const result         = calculerStats({ items: [...resolvedItems, ...zItems], conditions: effCond });
+    const result         = calculerStats({ items: [...resolvedItems, ...zItems], conditions: effCond, personnage: active.character });
 
     // ===== ORDRE DE CALCUL DBL =====
     // Cap Z et items partagent les MÊMES buckets base/pur/direct par stat.

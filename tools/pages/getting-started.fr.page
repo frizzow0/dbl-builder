@@ -6,7 +6,7 @@
   "lead": "De la case vide au bilan chiffré : chaque zone de l’optimiseur expliquée, dans l’ordre où tu t’en sers.",
   "type": "article",
   "published": "2026-09-16",
-  "updated": "2026-09-27",
+  "updated": "2026-09-30",
   "cta": "Ouvrir l’optimiseur →"
 }
 -->
@@ -53,7 +53,7 @@
   <li><strong>Effets non calculés</strong> — toute l’équipe, perso par perso : la Résonance des ULTRA, les passifs impossibles à chiffrer et les effets dont la condition n’est pas remplie.</li>
   <li><strong>Bilan global (Cap Z + items)</strong> — le total de l’équipe, tout compris : Cap Z reçues et items équipés, couches multipliées.</li>
   <li><strong>Personnage ciblé</strong> — choisis le personnage à analyser en détail ; il ne pilote que les deux panneaux qui suivent.</li>
-  <li><strong>Bilan par personnage (Cap Z + items)</strong> — ses bonus tout compris, avec le <strong>résumé des effets cumulés</strong> stat par stat (part des items, part des Cap Z et multiplicateur final).</li>
+  <li><strong>Bilan par personnage (Cap Z + items)</strong> — son <strong>niveau de puissance</strong> et ses stats chiffrées : la base de la carte (niveau 5000, 14★, Soul et Arts Boost) et ce qu’elle devient une fois les Cap Z et les items appliqués. Puis ses bonus en pourcentage, avec le <strong>résumé des effets cumulés</strong> stat par stat (part des items, part des Cap Z et multiplicateur final).</li>
   <li><strong>Arbre des Cap Z</strong> — en vue globale, la matrice des propagations de toute l’équipe ; en vue ciblée, la Cap Z du personnage choisi vers chaque coéquipier : flèche <strong>verte</strong> si tout passe, <strong>jaune</strong> si une partie seulement s’applique, <strong>rouge</strong> si rien ne passe.</li>
 </ul>
 
