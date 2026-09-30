@@ -2181,6 +2181,7 @@
     solo: 80,     // meilleurs items « en solo » retenus
     couche: 8,    // + les meilleurs de chaque stat × couche
     pool: 160,    // plafond du nombre de candidats croisés
+    ponderer: true, // pondérer par les stats de base (débrayable pour comparer)
   };
 
   const opti = {
@@ -2194,7 +2195,45 @@
     duree: 0,
   };
 
-  // Stats notées, dans l'ordre choisi (doublons retirés) + leur poids.
+  // Valeur typique de chaque stat dans le jeu (médiane des 502 cartes). Sert à
+  // ramener des stats d'échelles très différentes (2,4 M de PV contre 4 900 de
+  // critique) à une unité commune.
+  let _echelleStats = null;
+  function echelleStats() {
+    if (_echelleStats) return _echelleStats;
+    const valeurs = {};
+    for (const c of PERSONNAGES) {
+      if (!c.stats_base) continue;
+      for (const [cible, v] of Object.entries(c.stats_base)) {
+        if (v > 0) (valeurs[cible] = valeurs[cible] || []).push(v);
+      }
+    }
+    _echelleStats = {};
+    for (const [cible, liste] of Object.entries(valeurs)) {
+      liste.sort((a, b) => a - b);
+      _echelleStats[cible] = liste[Math.floor(liste.length / 2)];
+    }
+    return _echelleStats;
+  }
+
+  // Ce que « vaut » un pourcentage sur cette stat POUR CE PERSONNAGE : sa base
+  // rapportée à la médiane du jeu. +10 % d'attaque physique rapportent plus à
+  // un perso qui frappe fort qu'à un perso qui frappe mal ; à l'inverse, un
+  // pourcentage sur une stat où il est faible pèse moins dans le classement.
+  // Les stats sans base connue (Dégâts infligés, etc.) gardent un facteur de 1.
+  function facteursBase(perso, cibles) {
+    if (!OPTI_LIMITES.ponderer) return cibles.map(() => 1);
+    const echelle = echelleStats();
+    return cibles.map((cible) => {
+      const base = perso && perso.stats_base && perso.stats_base[cible];
+      const ech = echelle[cible];
+      if (!base || !ech) return 1;
+      return Math.min(2, Math.max(0.4, base / ech));
+    });
+  }
+
+  // Stats notées, dans l'ordre choisi (doublons retirés) + leur poids, corrigé
+  // par la force réelle de la stat chez ce personnage.
   function optiCibles() {
     const cibles = [];
     const poids = {};
@@ -2203,7 +2242,9 @@
       if (!cibles.includes(cible)) cibles.push(cible);
       poids[cible] = Math.max(poids[cible] || 0, OPTI_POIDS[i]);
     });
-    return { cibles, poids, poidsArr: cibles.map((c) => poids[c]) };
+    const perso = state.team[opti.slot] && state.team[opti.slot].character;
+    const facteurs = facteursBase(perso, cibles);
+    return { cibles, poids, facteurs, poidsArr: cibles.map((c, i) => poids[c] * facteurs[i]) };
   }
 
   // Compte d'une condition en supposant l'item porté par ce personnage.

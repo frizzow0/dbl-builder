@@ -6,7 +6,7 @@
   "lead": "Equipment multiplies a character’s power — as long as you understand how its bonuses stack. Slots, rarities, calculation layers and conditions: everything you need to know.",
   "type": "article",
   "published": "2026-06-14",
-  "updated": "2026-09-27",
+  "updated": "2026-09-30",
   "cta": "Optimize my equipment now →"
 }
 -->
@@ -54,6 +54,7 @@
   <li><strong>Compatible equipment only</strong>: wearer restrictions are respected, including pieces reserved for one specific card.</li>
   <li><strong>With your actual team</strong>: every condition is evaluated in the character’s trio, exactly as everywhere else in the tool. Equipment whose condition is not met counts for nothing and therefore does not climb the ranking.</li>
   <li><strong>Layers included</strong>: combinations are scored on their final gain (base × pure × direct), which naturally favors well-spread trios over three identical lines.</li>
+  <li><strong>Base stats taken into account</strong>: every gain is weighted by the character’s base stat relative to the game’s median. A percentage on a stat they are strong in counts for more than the same percentage on a weak one — so two cards of the same character won’t necessarily end up with the same build.</li>
   <li><strong>Two readings</strong>: “Current team” judges equipment as it performs today; “Max potential” assumes conditions are just met, to see what a piece would be worth if you adjusted your team.</li>
 </ul>
 <p>Each suggestion shows its three pieces, the gain per stat and the gap with your current build; “Equip” applies it in one click, “OR” line choices included. The quick profiles (Strike, Blast, Defense, Ultimate / Special, Ki &amp; utility) give an instant starting ranking.</p>

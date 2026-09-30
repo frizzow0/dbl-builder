@@ -410,8 +410,8 @@
     'opti.current':          { fr: 'Build actuel',            en: 'Current build' },
     'opti.current.badge':    { fr: 'déjà équipé',             en: 'already equipped' },
     'opti.score':            { fr: 'note',                    en: 'score' },
-    'opti.score.title':      { fr: 'Somme des gains, pondérée par l’ordre de priorité',
-                               en: 'Sum of the gains, weighted by the priority order' },
+    'opti.score.title':      { fr: 'Somme des gains, pondérée par l’ordre de priorité et par la force de chaque stat chez ce personnage',
+                               en: 'Sum of the gains, weighted by the priority order and by how strong each stat is on this character' },
     'opti.equip':            { fr: 'Équiper',                 en: 'Equip' },
     'opti.note.cond':        { fr: '{n} effet(s) conditionnel(s) actif(s)',
                                en: '{n} conditional effect(s) active' },
@@ -423,8 +423,8 @@
                                en: 'Pick at least one stat to maximize.' },
     'opti.empty.items':      { fr: 'Aucun item compatible n’améliore ces stats pour ce personnage.',
                                en: 'No compatible equipment improves these stats for this character.' },
-    'opti.foot':             { fr: 'Valeurs au maximum (item au niveau max, slot 4 ★7 compris). Les lignes « OU » sont supposées tirées sur l’option la plus utile : vérifie ce que tu as en jeu.',
-                               en: 'Values at maximum (max-level equipment, slot 4 ★7 included). “OR” lines are assumed rolled on the most useful option — check what you actually have in game.' },
+    'opti.foot':             { fr: 'Le classement pèse chaque gain par la stat de base du personnage, rapportée à la médiane du jeu : un pourcentage sur une stat où il est fort compte davantage. Valeurs au maximum (item au niveau max, slot 4 ★7 compris) ; les lignes « OU » sont supposées tirées sur l’option la plus utile.',
+                               en: 'The ranking weighs each gain by the character’s base stat relative to the game’s median: a percentage on a stat they are strong in counts for more. Values at maximum (max-level equipment, slot 4 ★7 included); “OR” lines are assumed rolled on the most useful option.' },
 
     // ── Raretés ──────────────────────────────────
     'rarity.platinum':       { fr: 'PLATINUM',        en: 'PLATINUM' },

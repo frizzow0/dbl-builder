@@ -6,7 +6,7 @@
   "lead": "Les items multiplient la puissance d’un personnage — à condition de comprendre comment leurs bonus se cumulent. Emplacements, raretés, couches de calcul et conditions : tout ce qu’il faut savoir.",
   "type": "article",
   "published": "2026-06-14",
-  "updated": "2026-09-27",
+  "updated": "2026-09-30",
   "cta": "Optimiser mes items maintenant →"
 }
 -->
@@ -54,6 +54,7 @@
   <li><strong>Uniquement des items compatibles</strong> : les restrictions de porteur sont respectées, y compris les équipements réservés à une carte précise.</li>
   <li><strong>Avec ton équipe réelle</strong> : chaque condition est évaluée dans le trio du personnage, exactement comme dans le reste de l’outil. Un item dont la condition n’est pas remplie ne rapporte rien et ne remonte donc pas dans le classement.</li>
   <li><strong>Couches comprises</strong> : les combinaisons sont notées sur leur gain final (base × pur × direct), ce qui favorise naturellement les trios bien répartis plutôt que trois lignes identiques.</li>
+  <li><strong>Stats de base prises en compte</strong> : chaque gain est pesé par la stat de base du personnage, rapportée à la médiane du jeu. Un pourcentage sur une stat où il est fort compte davantage que le même pourcentage sur une stat où il est faible — deux cartes du même personnage n’aboutissent donc pas forcément au même build.</li>
   <li><strong>Deux lectures</strong> : « Équipe actuelle » juge les items tels qu’ils rendent aujourd’hui ; « Potentiel max » suppose les conditions tout juste remplies, pour voir ce que vaudrait l’item si tu ajustais ton équipe.</li>
 </ul>
 <p>Chaque proposition affiche ses trois items, le gain par stat et l’écart avec ton build actuel ; « Équiper » l’applique au personnage en un clic, choix des lignes « OU » compris. Les profils rapides (Frappe, Énergie, Défense, Ultime / Spéciale, Ki &amp; utilité) donnent un classement de départ instantané.</p>
