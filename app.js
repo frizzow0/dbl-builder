@@ -1011,30 +1011,18 @@
       ` title="${escAttr(infobulle + (r.faible ? "\n" + T('z.ultra.warn', { tag: r.tag }) : ""))}">${escAttr(libelle)}</div>`;
   }
 
-  // Encadré dans « Effets non calculés » : rappelle que la résonance se
-  // déclenche en combat et montre ce qu'elle vaudra avec l'équipe actuelle.
+  // Ligne dans « Effets non calculés » : un ULTRA qui n'est PAS leader ne tient
+  // sa résonance à fond que si l'équipe remplit sa condition de tag. En leader
+  // il a déjà les valeurs pleines : rien à signaler, on n'affiche rien.
   function resonanceCalloutHTML(slotIdx) {
     const r = resonanceInfos(slotIdx);
-    if (!r) return "";
-    const lignes = [];
-    if (r.enLeader) lignes.push(`<div class="passif-line">${escSvg(T('z.ultra.line.leader', { bonus: r.enLeader }))}</div>`);
-    if (r.parUnite) {
-      const cle = r.cible === "allies" ? 'z.ultra.line.allies' : 'z.ultra.line.permember';
-      lignes.push(`<div class="passif-line">${escSvg(T(cle, { bonus: r.parUnite, tag: r.tag }))}</div>`);
-    }
-    lignes.push(`<div class="passif-line is-sub"><strong>${escSvg(r.etat)}</strong> → ${escSvg(r.actuel)}</div>`);
-    // Le point qui échappe le plus souvent : une équipe aux Cap Z cohérentes
-    // peut quand même laisser la résonance de son ULTRA au strict minimum.
-    if (r.faible) {
-      lignes.push(`<div class="passif-line is-sub is-warn">${escSvg(T('z.ultra.warn', { tag: r.tag }))}</div>`);
-    }
+    if (!r || r.parLeader) return "";
     return `
       <div class="callout passive is-ultra">
         <div class="callout-tag">⚡</div>
         <div class="callout-content">
           <div class="callout-source"><strong>${escSvg(T('z.ultra.label'))}</strong> · ${escSvg(state.team[slotIdx].character.nom.trim())}</div>
-          <div class="passif-list">${lignes.join("")}</div>
-          <div class="passif-note">${escSvg(T('z.ultra.note'))}</div>
+          <div class="passif-line${r.faible ? " is-warn" : ""}">${escSvg(T('z.ultra.line.nonleader', { tag: r.tag, n: r.porteurs }))}</div>
         </div>
       </div>
     `;

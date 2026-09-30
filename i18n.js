@@ -196,11 +196,8 @@
     'z.ultra.none':        { fr: 'aucun porteur du tag dans l’équipe', en: 'no character with the tag in the team' },
     'z.ultra.note':        { fr: 'Effet de combat : il n’entre pas dans les bilans ci-dessus.',
                              en: 'Battle effect: not included in the summaries above.' },
-    'z.ultra.line.leader': { fr: 'En leader : {bonus}', en: 'As leader: {bonus}' },
-    'z.ultra.line.permember': { fr: 'Sinon : {bonus} par combattant « {tag} » de l’équipe — les 6, quel que soit le trio',
-                                en: 'Otherwise: {bonus} per “{tag}” fighter in the team — all 6, whichever trio' },
-    'z.ultra.line.allies': { fr: 'Pour les alliés : {bonus} par combattant « {tag} » de l’équipe — les 6, quel que soit le trio',
-                             en: 'For allies: {bonus} per “{tag}” fighter in the team — all 6, whichever trio' },
+    'z.ultra.line.nonleader': { fr: 'Il n’est pas leader : sa Résonance ne monte à fond que si l’équipe remplit sa condition de tag « {tag} » — {n} porteur(s) sur les 6 aujourd’hui.',
+                               en: 'They are not the leader: their Resonance only reaches full value if the team meets its “{tag}” tag condition — {n} carrier(s) out of 6 right now.' },
     'z.ultra.warn':        { fr: '⚠ Il est le seul « {tag} » de l’équipe : sa résonance restera au minimum. Ajoute des « {tag} », ou place-le en leader.',
                              en: '⚠ It is the only “{tag}” in the team: its resonance stays at the minimum. Add more “{tag}” characters, or make it the Leader.' },
 
