@@ -1,6 +1,6 @@
 // Auto-généré par scrape_chars.js — ne pas éditer à la main.
 // Source : fr.dblegends.net/characters
-// 502 personnages, généré le 2026-09-25T16:33:44.933Z
+// 502 personnages, généré le 2026-09-30T16:05:10.978Z
 
 window.DBL_CHARACTERS_SCRAPED = [
   {
@@ -25,6 +25,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/745",
+    "stats_base": {
+      "force": 2565527,
+      "attaque_physique": 273256,
+      "attaque_energie": 255381,
+      "defense_physique": 193378,
+      "defense_energie": 190576,
+      "critique": 5000,
+      "vitesse_regen_ki": 2550,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1590526,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -250,6 +268,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/742",
+    "stats_base": {
+      "force": 2571858,
+      "attaque_physique": 273036,
+      "attaque_energie": 262485,
+      "defense_physique": 191937,
+      "defense_energie": 189839,
+      "critique": 5018,
+      "vitesse_regen_ki": 2424,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1590254,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -468,7 +504,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Ki divin",
       "Super Saiyan divin SS",
       "Représentant d'Univers",
-      "Représentant de l'Univers 7",
       "M",
       "LEGEND",
       "Type physique",
@@ -478,6 +513,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/738",
+    "stats_base": {
+      "force": 2502974,
+      "attaque_physique": 275172,
+      "attaque_energie": 258418,
+      "defense_physique": 195112,
+      "defense_energie": 191177,
+      "critique": 5040,
+      "vitesse_regen_ki": 2466,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1591443,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -698,7 +751,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Guerrier transformé",
       "Généalogie maléfique",
       "Guerrier de l'au-delà",
-      "Représentant de l'Univers 7",
       "M",
       "LEGEND",
       "Type assistance",
@@ -710,6 +762,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/737",
+    "stats_base": {
+      "force": 2515536,
+      "attaque_physique": 269481,
+      "attaque_energie": 267328,
+      "defense_physique": 188809,
+      "defense_energie": 188809,
+      "critique": 5045,
+      "vitesse_regen_ki": 2442,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1585879,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -940,6 +1010,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/733",
+    "stats_base": {
+      "force": 2528244,
+      "attaque_physique": 260907,
+      "attaque_energie": 279493,
+      "defense_physique": 194111,
+      "defense_energie": 196246,
+      "critique": 4909,
+      "vitesse_regen_ki": 2305,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1589406,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -1166,6 +1254,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/730",
+    "stats_base": {
+      "force": 2661940,
+      "attaque_physique": 263842,
+      "attaque_energie": 251395,
+      "defense_physique": 192194,
+      "defense_energie": 190395,
+      "critique": 5087,
+      "vitesse_regen_ki": 2430,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1580538,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -1408,6 +1514,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/726",
+    "stats_base": {
+      "force": 2544590,
+      "attaque_physique": 280996,
+      "attaque_energie": 262996,
+      "defense_physique": 188981,
+      "defense_energie": 188981,
+      "critique": 5004,
+      "vitesse_regen_ki": 2382,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1590293,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -1632,6 +1756,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/725",
+    "stats_base": {
+      "force": 2668276,
+      "attaque_physique": 281556,
+      "attaque_energie": 249402,
+      "defense_physique": 195112,
+      "defense_energie": 191521,
+      "critique": 4978,
+      "vitesse_regen_ki": 2329,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1590226,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -1843,6 +1985,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/722",
+    "stats_base": {
+      "force": 2449490,
+      "attaque_physique": 280714,
+      "attaque_energie": 259177,
+      "defense_physique": 191697,
+      "defense_energie": 188720,
+      "critique": 4985,
+      "vitesse_regen_ki": 2419,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1583207,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -2069,6 +2229,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/719",
+    "stats_base": {
+      "force": 2659522,
+      "attaque_physique": 268999,
+      "attaque_energie": 281109,
+      "defense_physique": 189794,
+      "defense_energie": 190489,
+      "critique": 4819,
+      "vitesse_regen_ki": 2272,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1591642,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -2295,6 +2473,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/717",
+    "stats_base": {
+      "force": 2528329,
+      "attaque_physique": 280913,
+      "attaque_energie": 260566,
+      "defense_physique": 198172,
+      "defense_energie": 189470,
+      "critique": 4928,
+      "vitesse_regen_ki": 2309,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1588926,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -2522,6 +2718,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/684",
+    "stats_base": {
+      "force": 2587945,
+      "attaque_physique": 257453,
+      "attaque_energie": 271927,
+      "defense_physique": 191992,
+      "defense_energie": 195930,
+      "critique": 5007,
+      "vitesse_regen_ki": 2397,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1589431,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -2747,6 +2961,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/740",
+    "stats_base": {
+      "force": 2646345,
+      "attaque_physique": 278542,
+      "attaque_energie": 259676,
+      "defense_physique": 187391,
+      "defense_energie": 187062,
+      "critique": 5095,
+      "vitesse_regen_ki": 2442,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1595344,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -2993,6 +3225,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/735",
+    "stats_base": {
+      "force": 2677332,
+      "attaque_physique": 282164,
+      "attaque_energie": 262985,
+      "defense_physique": 189678,
+      "defense_energie": 184776,
+      "critique": 4996,
+      "vitesse_regen_ki": 2384,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1596491,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -3237,6 +3487,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/729",
+    "stats_base": {
+      "force": 2610695,
+      "attaque_physique": 261927,
+      "attaque_energie": 282164,
+      "defense_physique": 186512,
+      "defense_energie": 186863,
+      "critique": 4995,
+      "vitesse_regen_ki": 2454,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1593362,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -3496,6 +3764,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/721",
+    "stats_base": {
+      "force": 2528120,
+      "attaque_physique": 280703,
+      "attaque_energie": 260985,
+      "defense_physique": 191931,
+      "defense_energie": 190497,
+      "critique": 5029,
+      "vitesse_regen_ki": 2407,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1593857,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -3738,6 +4024,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/716",
+    "stats_base": {
+      "force": 2528329,
+      "attaque_physique": 278820,
+      "attaque_energie": 257094,
+      "defense_physique": 189386,
+      "defense_energie": 186963,
+      "critique": 5049,
+      "vitesse_regen_ki": 2455,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1585418,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -3981,6 +4285,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/712",
+    "stats_base": {
+      "force": 2531233,
+      "attaque_physique": 251867,
+      "attaque_energie": 265753,
+      "defense_physique": 197246,
+      "defense_energie": 196326,
+      "critique": 5052,
+      "vitesse_regen_ki": 2610,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592440,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -4226,6 +4548,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/704",
+    "stats_base": {
+      "force": 2635266,
+      "attaque_physique": 266240,
+      "attaque_energie": 258983,
+      "defense_physique": 187728,
+      "defense_energie": 190567,
+      "critique": 5070,
+      "vitesse_regen_ki": 2321,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1578152,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -4469,6 +4809,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/700",
+    "stats_base": {
+      "force": 2575043,
+      "attaque_physique": 267602,
+      "attaque_energie": 272210,
+      "defense_physique": 192802,
+      "defense_energie": 198255,
+      "critique": 4912,
+      "vitesse_regen_ki": 2287,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1591888,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -4712,6 +5070,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/694",
+    "stats_base": {
+      "force": 2642183,
+      "attaque_physique": 256148,
+      "attaque_energie": 276648,
+      "defense_physique": 186340,
+      "defense_energie": 193064,
+      "critique": 4985,
+      "vitesse_regen_ki": 2510,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592495,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -4954,6 +5330,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/680",
+    "stats_base": {
+      "force": 2540957,
+      "attaque_physique": 273214,
+      "attaque_energie": 260743,
+      "defense_physique": 195361,
+      "defense_energie": 194345,
+      "critique": 4987,
+      "vitesse_regen_ki": 2411,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592360,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -5198,6 +5592,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/666",
+    "stats_base": {
+      "force": 2445349,
+      "attaque_physique": 264544,
+      "attaque_energie": 267461,
+      "defense_physique": 185626,
+      "defense_energie": 190307,
+      "critique": 5151,
+      "vitesse_regen_ki": 2610,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1588411,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -5349,6 +5761,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/656",
+    "stats_base": {
+      "force": 2489967,
+      "attaque_physique": 274374,
+      "attaque_energie": 272920,
+      "defense_physique": 188600,
+      "defense_energie": 186506,
+      "critique": 4992,
+      "vitesse_regen_ki": 2409,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1587847,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -5500,6 +5930,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/641",
+    "stats_base": {
+      "force": 2528660,
+      "attaque_physique": 270817,
+      "attaque_energie": 267468,
+      "defense_physique": 191846,
+      "defense_energie": 185192,
+      "critique": 4970,
+      "vitesse_regen_ki": 2413,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1582450,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -5651,6 +6099,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/636",
+    "stats_base": {
+      "force": 2549634,
+      "attaque_physique": 258917,
+      "attaque_energie": 261390,
+      "defense_physique": 194368,
+      "defense_energie": 195268,
+      "critique": 5117,
+      "vitesse_regen_ki": 2537,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592018,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -5804,6 +6270,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/621",
+    "stats_base": {
+      "force": 2588278,
+      "attaque_physique": 270983,
+      "attaque_energie": 250363,
+      "defense_physique": 195351,
+      "defense_energie": 196495,
+      "critique": 5060,
+      "vitesse_regen_ki": 2490,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592643,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -5947,6 +6431,7 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Guerrier transformé",
       "Généalogie maléfique",
       "Ennemi puissant",
+      "DBL69-03U",
       "M",
       "ULTRA",
       "Type physique",
@@ -5956,6 +6441,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/603",
+    "stats_base": {
+      "force": 2431181,
+      "attaque_physique": 281684,
+      "attaque_energie": 262608,
+      "defense_physique": 196182,
+      "defense_energie": 195516,
+      "critique": 5000,
+      "vitesse_regen_ki": 2302,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592568,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -6107,6 +6610,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/599",
+    "stats_base": {
+      "force": 2425707,
+      "attaque_physique": 266646,
+      "attaque_energie": 267003,
+      "defense_physique": 187687,
+      "defense_energie": 190640,
+      "critique": 5162,
+      "vitesse_regen_ki": 2588,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1590589,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -6251,7 +6772,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Ki divin",
       "Représentant d'Univers",
       "DBL66-04U",
-      "Représentant de l'Univers 7",
       "M",
       "ULTRA",
       "Type énergie",
@@ -6261,6 +6781,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/586",
+    "stats_base": {
+      "force": 2524530,
+      "attaque_physique": 260879,
+      "attaque_energie": 281772,
+      "defense_physique": 187267,
+      "defense_energie": 190266,
+      "critique": 5098,
+      "vitesse_regen_ki": 2373,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1591436,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -6413,6 +6951,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/572",
+    "stats_base": {
+      "force": 2609778,
+      "attaque_physique": 278357,
+      "attaque_energie": 266041,
+      "defense_physique": 190441,
+      "defense_energie": 189745,
+      "critique": 5002,
+      "vitesse_regen_ki": 2291,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592619,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -6518,6 +7074,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/554",
+    "stats_base": {
+      "force": 2622900,
+      "attaque_physique": 278047,
+      "attaque_energie": 265460,
+      "defense_physique": 186651,
+      "defense_energie": 189461,
+      "critique": 4885,
+      "vitesse_regen_ki": 2491,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592679,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -6670,6 +7244,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/538",
+    "stats_base": {
+      "force": 2581193,
+      "attaque_physique": 268013,
+      "attaque_energie": 270718,
+      "defense_physique": 186133,
+      "defense_energie": 185739,
+      "critique": 4968,
+      "vitesse_regen_ki": 2542,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1587582,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 99,
+      "choc": 100,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -6825,6 +7417,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/532",
+    "stats_base": {
+      "force": 2650961,
+      "attaque_physique": 275768,
+      "attaque_energie": 259612,
+      "defense_physique": 179107,
+      "defense_energie": 181810,
+      "critique": 5090,
+      "vitesse_regen_ki": 2657,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1589777,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -6978,6 +7588,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/511",
+    "stats_base": {
+      "force": 2655507,
+      "attaque_physique": 277715,
+      "attaque_energie": 253537,
+      "defense_physique": 182877,
+      "defense_energie": 185658,
+      "critique": 5089,
+      "vitesse_regen_ki": 2608,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1591070,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -7131,6 +7759,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/508",
+    "stats_base": {
+      "force": 2629312,
+      "attaque_physique": 278202,
+      "attaque_energie": 254896,
+      "defense_physique": 184997,
+      "defense_energie": 179631,
+      "critique": 5090,
+      "vitesse_regen_ki": 2558,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1584813,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 97,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -7283,6 +7929,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/495",
+    "stats_base": {
+      "force": 2629395,
+      "attaque_physique": 282244,
+      "attaque_energie": 268885,
+      "defense_physique": 181686,
+      "defense_energie": 179714,
+      "critique": 4950,
+      "vitesse_regen_ki": 2521,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1590772,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -7436,6 +8100,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/487",
+    "stats_base": {
+      "force": 2607662,
+      "attaque_physique": 266410,
+      "attaque_energie": 268542,
+      "defense_physique": 185834,
+      "defense_energie": 188200,
+      "critique": 5117,
+      "vitesse_regen_ki": 2485,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1592330,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 103,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -7581,7 +8263,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Super Saiyan divin SS",
       "Représentant d'Univers",
       "DBL45-01U",
-      "Représentant de l'Univers 7",
       "M",
       "ULTRA",
       "Type énergie",
@@ -7591,6 +8272,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/468",
+    "stats_base": {
+      "force": 2512330,
+      "attaque_physique": 270093,
+      "attaque_energie": 273178,
+      "defense_physique": 182830,
+      "defense_energie": 178695,
+      "critique": 5184,
+      "vitesse_regen_ki": 2582,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1589984,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 102,
+      "choc": 97,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -7745,6 +8444,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/454",
+    "stats_base": {
+      "force": 2506397,
+      "attaque_physique": 277116,
+      "attaque_energie": 268964,
+      "defense_physique": 179662,
+      "defense_energie": 179363,
+      "critique": 5166,
+      "vitesse_regen_ki": 2627,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1591248,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -7902,6 +8619,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/443",
+    "stats_base": {
+      "force": 2433793,
+      "attaque_physique": 254099,
+      "attaque_energie": 252440,
+      "defense_physique": 183495,
+      "defense_energie": 184875,
+      "critique": 5030,
+      "vitesse_regen_ki": 2517,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1543911,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -8064,6 +8799,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/400",
+    "stats_base": {
+      "force": 2442092,
+      "attaque_physique": 263736,
+      "attaque_energie": 265152,
+      "defense_physique": 180099,
+      "defense_energie": 174502,
+      "critique": 4987,
+      "vitesse_regen_ki": 2383,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1544195,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 98,
+      "choc": 102,
+      "explosion": 102
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -8227,6 +8980,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/385",
+    "stats_base": {
+      "force": 2404567,
+      "attaque_physique": 270007,
+      "attaque_energie": 257732,
+      "defense_physique": 177916,
+      "defense_energie": 176977,
+      "critique": 4985,
+      "vitesse_regen_ki": 2448,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1543986,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -8386,6 +9157,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/19800",
+    "stats_base": {
+      "force": 2382535,
+      "attaque_physique": 266430,
+      "attaque_energie": 259820,
+      "defense_physique": 186676,
+      "defense_energie": 182927,
+      "critique": 4815,
+      "vitesse_regen_ki": 2122,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530938,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 98,
+      "choc": 102,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -8518,6 +9307,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/747",
+    "stats_base": {
+      "force": 2466648,
+      "attaque_physique": 262857,
+      "attaque_energie": 254564,
+      "defense_physique": 186831,
+      "defense_energie": 184796,
+      "critique": 4958,
+      "vitesse_regen_ki": 2202,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540891,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -8682,6 +9489,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/746",
+    "stats_base": {
+      "force": 2375006,
+      "attaque_physique": 262872,
+      "attaque_energie": 248998,
+      "defense_physique": 185121,
+      "defense_energie": 181070,
+      "critique": 5019,
+      "vitesse_regen_ki": 2324,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1532944,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -8907,6 +9732,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/744",
+    "stats_base": {
+      "force": 2402037,
+      "attaque_physique": 266385,
+      "attaque_energie": 247440,
+      "defense_physique": 183097,
+      "defense_energie": 178435,
+      "critique": 4970,
+      "vitesse_regen_ki": 2424,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534592,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -9121,6 +9964,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/743",
+    "stats_base": {
+      "force": 2462108,
+      "attaque_physique": 265133,
+      "attaque_energie": 238213,
+      "defense_physique": 183409,
+      "defense_energie": 181766,
+      "critique": 5036,
+      "vitesse_regen_ki": 2424,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1535061,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -9336,6 +10197,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/741",
+    "stats_base": {
+      "force": 2339761,
+      "attaque_physique": 266596,
+      "attaque_energie": 242357,
+      "defense_physique": 185121,
+      "defense_energie": 182760,
+      "critique": 5008,
+      "vitesse_regen_ki": 2304,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1527818,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -9503,6 +10382,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/739",
+    "stats_base": {
+      "force": 2445016,
+      "attaque_physique": 250972,
+      "attaque_energie": 249392,
+      "defense_physique": 191800,
+      "defense_energie": 187917,
+      "critique": 4932,
+      "vitesse_regen_ki": 2329,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1535532,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -9724,7 +10621,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Représentant d'Univers",
       "Porteur d'arme",
       "Exclusif aux événements",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type assistance",
@@ -9734,6 +10630,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/736",
+    "stats_base": {
+      "force": 2452800,
+      "attaque_physique": 249384,
+      "attaque_energie": 253371,
+      "defense_physique": 185450,
+      "defense_energie": 182707,
+      "critique": 4972,
+      "vitesse_regen_ki": 2294,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1527132,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -9901,6 +10815,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/734",
+    "stats_base": {
+      "force": 2380930,
+      "attaque_physique": 261085,
+      "attaque_energie": 247413,
+      "defense_physique": 183217,
+      "defense_energie": 184933,
+      "critique": 4987,
+      "vitesse_regen_ki": 2387,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533476,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -10127,6 +11059,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/732",
+    "stats_base": {
+      "force": 2465191,
+      "attaque_physique": 248220,
+      "attaque_energie": 259638,
+      "defense_physique": 183863,
+      "defense_energie": 178850,
+      "critique": 4989,
+      "vitesse_regen_ki": 2417,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534617,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -10292,6 +11242,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/731",
+    "stats_base": {
+      "force": 2405864,
+      "attaque_physique": 263172,
+      "attaque_energie": 252177,
+      "defense_physique": 181854,
+      "defense_energie": 180509,
+      "critique": 4928,
+      "vitesse_regen_ki": 2340,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530902,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -10518,6 +11486,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/728",
+    "stats_base": {
+      "force": 2464991,
+      "attaque_physique": 256743,
+      "attaque_energie": 252187,
+      "defense_physique": 190406,
+      "defense_energie": 193629,
+      "critique": 4825,
+      "vitesse_regen_ki": 2216,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1538747,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -10744,6 +11730,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/727",
+    "stats_base": {
+      "force": 2412521,
+      "attaque_physique": 250413,
+      "attaque_energie": 262524,
+      "defense_physique": 187391,
+      "defense_energie": 189472,
+      "critique": 4934,
+      "vitesse_regen_ki": 2317,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1542584,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -10969,6 +11973,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/724",
+    "stats_base": {
+      "force": 2495590,
+      "attaque_physique": 261651,
+      "attaque_energie": 253788,
+      "defense_physique": 183884,
+      "defense_energie": 181860,
+      "critique": 4844,
+      "vitesse_regen_ki": 2227,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530505,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -11133,6 +12155,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/723",
+    "stats_base": {
+      "force": 2395981,
+      "attaque_physique": 267218,
+      "attaque_energie": 255810,
+      "defense_physique": 181266,
+      "defense_energie": 180930,
+      "critique": 4959,
+      "vitesse_regen_ki": 2295,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537056,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -11350,6 +12390,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/720",
+    "stats_base": {
+      "force": 2502239,
+      "attaque_physique": 256842,
+      "attaque_energie": 256449,
+      "defense_physique": 186386,
+      "defense_energie": 188823,
+      "critique": 4833,
+      "vitesse_regen_ki": 2206,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536665,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -11519,6 +12577,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/718",
+    "stats_base": {
+      "force": 2490047,
+      "attaque_physique": 238575,
+      "attaque_energie": 273529,
+      "defense_physique": 192812,
+      "defense_energie": 190443,
+      "critique": 4774,
+      "vitesse_regen_ki": 2162,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537562,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -11743,6 +12819,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/715",
+    "stats_base": {
+      "force": 2357216,
+      "attaque_physique": 269759,
+      "attaque_energie": 257476,
+      "defense_physique": 181255,
+      "defense_energie": 178910,
+      "critique": 4953,
+      "vitesse_regen_ki": 2295,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536347,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -11961,6 +13055,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/714",
+    "stats_base": {
+      "force": 2445099,
+      "attaque_physique": 262037,
+      "attaque_energie": 271561,
+      "defense_physique": 189064,
+      "defense_energie": 189375,
+      "critique": 4916,
+      "vitesse_regen_ki": 2329,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1566693,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -12189,6 +13301,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/713",
+    "stats_base": {
+      "force": 2471404,
+      "attaque_physique": 243148,
+      "attaque_energie": 258027,
+      "defense_physique": 188014,
+      "defense_energie": 189419,
+      "critique": 4936,
+      "vitesse_regen_ki": 2209,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530018,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -12349,8 +13479,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Représentant d'Univers",
       "Univers 6",
       "Univers rival",
-      "Représentant de l'Univers 7",
-      "Représentant de l'Univers 6",
       "M",
       "SPARKING",
       "Type physique",
@@ -12362,6 +13490,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/711",
+    "stats_base": {
+      "force": 2556386,
+      "attaque_physique": 265742,
+      "attaque_energie": 263907,
+      "defense_physique": 185692,
+      "defense_energie": 183639,
+      "critique": 4985,
+      "vitesse_regen_ki": 2394,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1567755,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -12601,6 +13747,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/710",
+    "stats_base": {
+      "force": 2507520,
+      "attaque_physique": 271579,
+      "attaque_energie": 257094,
+      "defense_physique": 189192,
+      "defense_energie": 183646,
+      "critique": 5057,
+      "vitesse_regen_ki": 2318,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1566829,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -12842,6 +14006,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/709",
+    "stats_base": {
+      "force": 2465074,
+      "attaque_physique": 242584,
+      "attaque_energie": 240468,
+      "defense_physique": 191883,
+      "defense_energie": 190088,
+      "critique": 5037,
+      "vitesse_regen_ki": 2544,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537811,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -13068,6 +14250,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/708",
+    "stats_base": {
+      "force": 2480785,
+      "attaque_physique": 268461,
+      "attaque_energie": 258900,
+      "defense_physique": 185347,
+      "defense_energie": 184672,
+      "critique": 4999,
+      "vitesse_regen_ki": 2519,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1568065,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -13313,6 +14513,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/707",
+    "stats_base": {
+      "force": 2460612,
+      "attaque_physique": 263261,
+      "attaque_energie": 270469,
+      "defense_physique": 188351,
+      "defense_energie": 186946,
+      "critique": 4896,
+      "vitesse_regen_ki": 2365,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1565517,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -13553,6 +14771,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/706",
+    "stats_base": {
+      "force": 2486365,
+      "attaque_physique": 250948,
+      "attaque_energie": 266504,
+      "defense_physique": 184049,
+      "defense_energie": 182363,
+      "critique": 4896,
+      "vitesse_regen_ki": 2284,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1538021,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -13778,6 +15014,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/705",
+    "stats_base": {
+      "force": 2361954,
+      "attaque_physique": 274430,
+      "attaque_energie": 251542,
+      "defense_physique": 179345,
+      "defense_energie": 178327,
+      "critique": 4954,
+      "vitesse_regen_ki": 2410,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1538707,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -14003,6 +15257,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/703",
+    "stats_base": {
+      "force": 2510384,
+      "attaque_physique": 259535,
+      "attaque_energie": 256909,
+      "defense_physique": 183728,
+      "defense_energie": 181682,
+      "critique": 4864,
+      "vitesse_regen_ki": 2263,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534962,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -14220,6 +15492,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/702",
+    "stats_base": {
+      "force": 2548214,
+      "attaque_physique": 254663,
+      "attaque_energie": 252440,
+      "defense_physique": 191614,
+      "defense_energie": 189853,
+      "critique": 4931,
+      "vitesse_regen_ki": 2558,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1562300,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -14447,6 +15737,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/701",
+    "stats_base": {
+      "force": 2549301,
+      "attaque_physique": 256148,
+      "attaque_energie": 268367,
+      "defense_physique": 195521,
+      "defense_energie": 198255,
+      "critique": 4799,
+      "vitesse_regen_ki": 2187,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1566944,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -14672,6 +15980,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/699",
+    "stats_base": {
+      "force": 2425207,
+      "attaque_physique": 266248,
+      "attaque_energie": 252967,
+      "defense_physique": 181019,
+      "defense_energie": 179000,
+      "critique": 4996,
+      "vitesse_regen_ki": 2384,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1539314,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -14898,6 +16224,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/698",
+    "stats_base": {
+      "force": 2514825,
+      "attaque_physique": 255944,
+      "attaque_energie": 247223,
+      "defense_physique": 197670,
+      "defense_energie": 196767,
+      "critique": 4962,
+      "vitesse_regen_ki": 2432,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1564359,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -15116,7 +16460,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Généalogie maléfique",
       "Univers rival",
       "Représentant d'Univers",
-      "Représentant de l'Univers 6",
       "M",
       "SPARKING",
       "Type physique",
@@ -15126,6 +16469,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/697",
+    "stats_base": {
+      "force": 2425207,
+      "attaque_physique": 266048,
+      "attaque_energie": 248205,
+      "defense_physique": 179030,
+      "defense_energie": 177549,
+      "critique": 5030,
+      "vitesse_regen_ki": 2456,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536212,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -15347,7 +16708,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers 6",
       "Univers rival",
       "Représentant d'Univers",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type physique",
@@ -15357,6 +16717,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/696",
+    "stats_base": {
+      "force": 2420744,
+      "attaque_physique": 285984,
+      "attaque_energie": 271274,
+      "defense_physique": 190526,
+      "defense_energie": 187251,
+      "critique": 4844,
+      "vitesse_regen_ki": 2229,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1579467,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -15584,6 +16962,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/695",
+    "stats_base": {
+      "force": 2366481,
+      "attaque_physique": 247472,
+      "attaque_energie": 272987,
+      "defense_physique": 181931,
+      "defense_energie": 191097,
+      "critique": 4785,
+      "vitesse_regen_ki": 2212,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530502,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -15751,6 +17147,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/693",
+    "stats_base": {
+      "force": 2374720,
+      "attaque_physique": 244756,
+      "attaque_energie": 268367,
+      "defense_physique": 184755,
+      "defense_energie": 184910,
+      "critique": 4999,
+      "vitesse_regen_ki": 2483,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1544602,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -15975,6 +17389,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/692",
+    "stats_base": {
+      "force": 2438542,
+      "attaque_physique": 263932,
+      "attaque_energie": 254478,
+      "defense_physique": 186797,
+      "defense_energie": 184755,
+      "critique": 4863,
+      "vitesse_regen_ki": 2229,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536531,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -16194,7 +17626,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers rival",
       "Représentant d'Univers",
       "Super Saiyan 2",
-      "Représentant de l'Univers 6",
       "M",
       "SPARKING",
       "Type énergie",
@@ -16204,6 +17635,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/691",
+    "stats_base": {
+      "force": 2361952,
+      "attaque_physique": 265671,
+      "attaque_energie": 266504,
+      "defense_physique": 177368,
+      "defense_energie": 178233,
+      "critique": 4978,
+      "vitesse_regen_ki": 2331,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540089,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -16423,7 +17872,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Super Saiyan divin SS",
       "Représentant d'Univers",
       "DBL83-02S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -16433,6 +17881,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/690",
+    "stats_base": {
+      "force": 2445182,
+      "attaque_physique": 263167,
+      "attaque_energie": 271644,
+      "defense_physique": 188434,
+      "defense_energie": 189315,
+      "critique": 4968,
+      "vitesse_regen_ki": 2444,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1575572,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -16652,7 +18118,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers rival",
       "Filles",
       "Représentant d'Univers",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type physique",
@@ -16664,6 +18129,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/689",
+    "stats_base": {
+      "force": 2457316,
+      "attaque_physique": 266131,
+      "attaque_energie": 250643,
+      "defense_physique": 190609,
+      "defense_energie": 187334,
+      "critique": 4890,
+      "vitesse_regen_ki": 2332,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1549038,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -16881,7 +18364,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Famille Goku",
       "Ki divin",
       "Représentant d'Univers",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type physique",
@@ -16891,6 +18373,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/688",
+    "stats_base": {
+      "force": 2420828,
+      "attaque_physique": 283368,
+      "attaque_energie": 253050,
+      "defense_physique": 190609,
+      "defense_energie": 185585,
+      "critique": 5014,
+      "vitesse_regen_ki": 2433,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1575750,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -17118,6 +18618,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/683",
+    "stats_base": {
+      "force": 2465240,
+      "attaque_physique": 251221,
+      "attaque_energie": 253438,
+      "defense_physique": 190266,
+      "defense_energie": 189398,
+      "critique": 4932,
+      "vitesse_regen_ki": 2308,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540072,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -17281,6 +18799,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/681",
+    "stats_base": {
+      "force": 2474152,
+      "attaque_physique": 250438,
+      "attaque_energie": 237534,
+      "defense_physique": 180414,
+      "defense_energie": 187617,
+      "critique": 5128,
+      "vitesse_regen_ki": 2611,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537296,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -17507,6 +19043,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/678",
+    "stats_base": {
+      "force": 2533637,
+      "attaque_physique": 258286,
+      "attaque_energie": 263142,
+      "defense_physique": 187821,
+      "defense_energie": 188839,
+      "critique": 4977,
+      "vitesse_regen_ki": 2385,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1564497,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -17731,6 +19285,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/677",
+    "stats_base": {
+      "force": 2594234,
+      "attaque_physique": 270248,
+      "attaque_energie": 250030,
+      "defense_physique": 192588,
+      "defense_energie": 190256,
+      "critique": 4915,
+      "vitesse_regen_ki": 2263,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1564370,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -17954,6 +19526,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/676",
+    "stats_base": {
+      "force": 2553897,
+      "attaque_physique": 258669,
+      "attaque_energie": 250843,
+      "defense_physique": 180760,
+      "defense_energie": 188641,
+      "critique": 4847,
+      "vitesse_regen_ki": 2357,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1538772,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -18182,6 +19772,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/675",
+    "stats_base": {
+      "force": 2583199,
+      "attaque_physique": 271006,
+      "attaque_energie": 251635,
+      "defense_physique": 190609,
+      "defense_energie": 186768,
+      "critique": 4923,
+      "vitesse_regen_ki": 2329,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1564231,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -18404,6 +20012,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/674",
+    "stats_base": {
+      "force": 2485619,
+      "attaque_physique": 257752,
+      "attaque_energie": 242927,
+      "defense_physique": 180414,
+      "defense_energie": 183467,
+      "critique": 5068,
+      "vitesse_regen_ki": 2430,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534567,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -18630,6 +20256,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/673",
+    "stats_base": {
+      "force": 2570402,
+      "attaque_physique": 273002,
+      "attaque_energie": 263235,
+      "defense_physique": 180265,
+      "defense_energie": 180437,
+      "critique": 5014,
+      "vitesse_regen_ki": 2306,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1563699,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -18855,6 +20499,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/672",
+    "stats_base": {
+      "force": 2397729,
+      "attaque_physique": 273297,
+      "attaque_energie": 247389,
+      "defense_physique": 174807,
+      "defense_energie": 173788,
+      "critique": 5027,
+      "vitesse_regen_ki": 2436,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531679,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -19018,6 +20680,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/671",
+    "stats_base": {
+      "force": 2549594,
+      "attaque_physique": 239237,
+      "attaque_energie": 256672,
+      "defense_physique": 188256,
+      "defense_energie": 191778,
+      "critique": 4943,
+      "vitesse_regen_ki": 2368,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540865,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -19231,6 +20911,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/670",
+    "stats_base": {
+      "force": 2477678,
+      "attaque_physique": 273297,
+      "attaque_energie": 249735,
+      "defense_physique": 187331,
+      "defense_energie": 183558,
+      "critique": 5105,
+      "vitesse_regen_ki": 2510,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1569249,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -19440,6 +21138,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/669",
+    "stats_base": {
+      "force": 2461062,
+      "attaque_physique": 248158,
+      "attaque_energie": 250521,
+      "defense_physique": 192970,
+      "defense_energie": 194787,
+      "critique": 4966,
+      "vitesse_regen_ki": 2333,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1544856,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -19653,6 +21369,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/668",
+    "stats_base": {
+      "force": 2465402,
+      "attaque_physique": 261612,
+      "attaque_energie": 258752,
+      "defense_physique": 188188,
+      "defense_energie": 185273,
+      "critique": 5064,
+      "vitesse_regen_ki": 2510,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1566285,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -19751,6 +21485,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/667",
+    "stats_base": {
+      "force": 2385733,
+      "attaque_physique": 253256,
+      "attaque_energie": 260945,
+      "defense_physique": 179166,
+      "defense_energie": 184568,
+      "critique": 4874,
+      "vitesse_regen_ki": 2321,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1526133,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -19904,6 +21656,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/665",
+    "stats_base": {
+      "force": 2558292,
+      "attaque_physique": 257343,
+      "attaque_energie": 248371,
+      "defense_physique": 190307,
+      "defense_energie": 189440,
+      "critique": 4819,
+      "vitesse_regen_ki": 2286,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540663,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -20115,6 +21885,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/664",
+    "stats_base": {
+      "force": 2445228,
+      "attaque_physique": 262271,
+      "attaque_energie": 275704,
+      "defense_physique": 179511,
+      "defense_energie": 181508,
+      "critique": 5143,
+      "vitesse_regen_ki": 2584,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1577759,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -20329,6 +22117,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/663",
+    "stats_base": {
+      "force": 2381262,
+      "attaque_physique": 260203,
+      "attaque_energie": 228651,
+      "defense_physique": 198818,
+      "defense_energie": 195516,
+      "critique": 4893,
+      "vitesse_regen_ki": 2264,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529188,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -20482,6 +22288,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/662",
+    "stats_base": {
+      "force": 2338514,
+      "attaque_physique": 260568,
+      "attaque_energie": 267461,
+      "defense_physique": 185626,
+      "defense_energie": 187683,
+      "critique": 4813,
+      "vitesse_regen_ki": 2209,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537738,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -20695,6 +22519,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/661",
+    "stats_base": {
+      "force": 2485703,
+      "attaque_physique": 267660,
+      "attaque_energie": 256687,
+      "defense_physique": 191412,
+      "defense_energie": 187206,
+      "critique": 4978,
+      "vitesse_regen_ki": 2434,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1568678,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -20908,6 +22750,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/660",
+    "stats_base": {
+      "force": 2528577,
+      "attaque_physique": 238294,
+      "attaque_energie": 238285,
+      "defense_physique": 188623,
+      "defense_energie": 193962,
+      "critique": 5087,
+      "vitesse_regen_ki": 2470,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534985,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -21121,6 +22981,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/659",
+    "stats_base": {
+      "force": 2425372,
+      "attaque_physique": 259788,
+      "attaque_energie": 260186,
+      "defense_physique": 197003,
+      "defense_energie": 200102,
+      "critique": 4910,
+      "vitesse_regen_ki": 2286,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1567970,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -21334,6 +23212,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/658",
+    "stats_base": {
+      "force": 2319564,
+      "attaque_physique": 264099,
+      "attaque_energie": 254119,
+      "defense_physique": 188380,
+      "defense_energie": 183558,
+      "critique": 4902,
+      "vitesse_regen_ki": 2347,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536643,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -21502,6 +23398,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/657",
+    "stats_base": {
+      "force": 2410604,
+      "attaque_physique": 258112,
+      "attaque_energie": 260192,
+      "defense_physique": 190346,
+      "defense_energie": 191770,
+      "critique": 4777,
+      "vitesse_regen_ki": 2099,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534326,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -21597,6 +23511,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/655",
+    "stats_base": {
+      "force": 2570696,
+      "attaque_physique": 258386,
+      "attaque_energie": 243495,
+      "defense_physique": 191872,
+      "defense_energie": 193300,
+      "critique": 4830,
+      "vitesse_regen_ki": 2166,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537632,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -22101,6 +24033,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/654",
+    "stats_base": {
+      "force": 2490377,
+      "attaque_physique": 270801,
+      "attaque_energie": 247472,
+      "defense_physique": 191320,
+      "defense_energie": 188339,
+      "critique": 5019,
+      "vitesse_regen_ki": 2511,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1569857,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -22609,6 +24559,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/653",
+    "stats_base": {
+      "force": 2425456,
+      "attaque_physique": 257179,
+      "attaque_energie": 238545,
+      "defense_physique": 182246,
+      "defense_energie": 181076,
+      "critique": 5172,
+      "vitesse_regen_ki": 2564,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536943,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -22820,6 +24788,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/652",
+    "stats_base": {
+      "force": 2503391,
+      "attaque_physique": 273380,
+      "attaque_energie": 260908,
+      "defense_physique": 191846,
+      "defense_energie": 188683,
+      "critique": 4872,
+      "vitesse_regen_ki": 2213,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1565359,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -22917,6 +24903,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/651",
+    "stats_base": {
+      "force": 2445431,
+      "attaque_physique": 252603,
+      "attaque_energie": 240775,
+      "defense_physique": 194504,
+      "defense_energie": 193382,
+      "critique": 4898,
+      "vitesse_regen_ki": 2268,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531992,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -23072,6 +25076,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/650",
+    "stats_base": {
+      "force": 2510634,
+      "attaque_physique": 263970,
+      "attaque_energie": 252587,
+      "defense_physique": 175967,
+      "defense_energie": 175967,
+      "critique": 4955,
+      "vitesse_regen_ki": 2333,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529666,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -23246,6 +25268,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/649",
+    "stats_base": {
+      "force": 2400876,
+      "attaque_physique": 267528,
+      "attaque_energie": 248247,
+      "defense_physique": 182615,
+      "defense_energie": 180598,
+      "critique": 4943,
+      "vitesse_regen_ki": 2435,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537346,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -23458,6 +25498,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/648",
+    "stats_base": {
+      "force": 2535862,
+      "attaque_physique": 259213,
+      "attaque_energie": 252199,
+      "defense_physique": 193552,
+      "defense_energie": 194118,
+      "critique": 5000,
+      "vitesse_regen_ki": 2387,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1566889,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -23669,6 +25727,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/647",
+    "stats_base": {
+      "force": 2465408,
+      "attaque_physique": 238738,
+      "attaque_energie": 257168,
+      "defense_physique": 188676,
+      "defense_energie": 190095,
+      "critique": 5027,
+      "vitesse_regen_ki": 2392,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1539387,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -23881,6 +25957,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/646",
+    "stats_base": {
+      "force": 2596523,
+      "attaque_physique": 254346,
+      "attaque_energie": 269505,
+      "defense_physique": 189390,
+      "defense_energie": 192936,
+      "critique": 4804,
+      "vitesse_regen_ki": 2387,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1568228,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -24092,6 +26186,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/645",
+    "stats_base": {
+      "force": 2485786,
+      "attaque_physique": 254727,
+      "attaque_energie": 271194,
+      "defense_physique": 185019,
+      "defense_energie": 190227,
+      "critique": 4838,
+      "vitesse_regen_ki": 2199,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1548136,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -24240,6 +26352,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/644",
+    "stats_base": {
+      "force": 2575292,
+      "attaque_physique": 256755,
+      "attaque_energie": 256399,
+      "defense_physique": 193095,
+      "defense_energie": 191863,
+      "critique": 4799,
+      "vitesse_regen_ki": 2188,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1548548,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -24453,6 +26583,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/643",
+    "stats_base": {
+      "force": 2465608,
+      "attaque_physique": 268654,
+      "attaque_energie": 234833,
+      "defense_physique": 188453,
+      "defense_energie": 186039,
+      "critique": 4938,
+      "vitesse_regen_ki": 2313,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534302,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -24620,6 +26768,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/642",
+    "stats_base": {
+      "force": 2465608,
+      "attaque_physique": 265435,
+      "attaque_energie": 249808,
+      "defense_physique": 185679,
+      "defense_energie": 181931,
+      "critique": 5100,
+      "vitesse_regen_ki": 2311,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1547176,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -25113,6 +27279,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/640",
+    "stats_base": {
+      "force": 2528660,
+      "attaque_physique": 248634,
+      "attaque_energie": 233985,
+      "defense_physique": 191528,
+      "defense_energie": 190101,
+      "critique": 5108,
+      "vitesse_regen_ki": 2413,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1538275,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -25616,6 +27800,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/639",
+    "stats_base": {
+      "force": 2503390,
+      "attaque_physique": 270026,
+      "attaque_energie": 270801,
+      "defense_physique": 191199,
+      "defense_energie": 190790,
+      "critique": 4859,
+      "vitesse_regen_ki": 2213,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1572708,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -25829,6 +28031,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/638",
+    "stats_base": {
+      "force": 2566861,
+      "attaque_physique": 243578,
+      "attaque_energie": 245475,
+      "defense_physique": 191618,
+      "defense_energie": 188759,
+      "critique": 5026,
+      "vitesse_regen_ki": 2291,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1535804,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -25980,6 +28200,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/637",
+    "stats_base": {
+      "force": 2441051,
+      "attaque_physique": 243578,
+      "attaque_energie": 230848,
+      "defense_physique": 191274,
+      "defense_energie": 191626,
+      "critique": 5029,
+      "vitesse_regen_ki": 2651,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533462,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 9,
     "zAbilities": [
       {
         "tier": 1,
@@ -26183,6 +28421,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/635",
+    "stats_base": {
+      "force": 2465692,
+      "attaque_physique": 259331,
+      "attaque_energie": 247937,
+      "defense_physique": 193384,
+      "defense_energie": 193384,
+      "critique": 4811,
+      "vitesse_regen_ki": 2288,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1542765,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -26386,6 +28642,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/634",
+    "stats_base": {
+      "force": 2523340,
+      "attaque_physique": 252298,
+      "attaque_energie": 254805,
+      "defense_physique": 179012,
+      "defense_energie": 182341,
+      "critique": 4938,
+      "vitesse_regen_ki": 2411,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533528,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -26589,6 +28863,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/633",
+    "stats_base": {
+      "force": 2515362,
+      "attaque_physique": 261778,
+      "attaque_energie": 260918,
+      "defense_physique": 180337,
+      "defense_energie": 180342,
+      "critique": 4862,
+      "vitesse_regen_ki": 2266,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536865,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -26793,6 +29085,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/632",
+    "stats_base": {
+      "force": 2524281,
+      "attaque_physique": 261390,
+      "attaque_energie": 270884,
+      "defense_physique": 188429,
+      "defense_energie": 191404,
+      "critique": 4885,
+      "vitesse_regen_ki": 2311,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1569592,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -26978,6 +29288,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/631",
+    "stats_base": {
+      "force": 2292905,
+      "attaque_physique": 268720,
+      "attaque_energie": 257257,
+      "defense_physique": 180999,
+      "defense_energie": 180342,
+      "critique": 4885,
+      "vitesse_regen_ki": 2346,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531128,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -27130,6 +29458,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/630",
+    "stats_base": {
+      "force": 2575376,
+      "attaque_physique": 243666,
+      "attaque_energie": 238628,
+      "defense_physique": 193178,
+      "defense_energie": 193753,
+      "critique": 5146,
+      "vitesse_regen_ki": 2487,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1551966,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -27342,6 +29688,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/629",
+    "stats_base": {
+      "force": 2502858,
+      "attaque_physique": 252298,
+      "attaque_energie": 261778,
+      "defense_physique": 190193,
+      "defense_energie": 190503,
+      "critique": 4972,
+      "vitesse_regen_ki": 2388,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1559029,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -27553,6 +29917,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/627",
+    "stats_base": {
+      "force": 2441053,
+      "attaque_physique": 270507,
+      "attaque_energie": 240732,
+      "defense_physique": 180686,
+      "defense_energie": 179895,
+      "critique": 4936,
+      "vitesse_regen_ki": 2370,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529256,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -27716,6 +30098,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/626",
+    "stats_base": {
+      "force": 2566861,
+      "attaque_physique": 262169,
+      "attaque_energie": 228290,
+      "defense_physique": 185439,
+      "defense_energie": 184743,
+      "critique": 5021,
+      "vitesse_regen_ki": 2436,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534015,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -27924,6 +30324,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/625",
+    "stats_base": {
+      "force": 2429597,
+      "attaque_physique": 238628,
+      "attaque_energie": 265518,
+      "defense_physique": 182014,
+      "defense_energie": 187498,
+      "critique": 4943,
+      "vitesse_regen_ki": 2288,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1526581,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -28077,6 +30495,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/624",
+    "stats_base": {
+      "force": 2441053,
+      "attaque_physique": 270884,
+      "attaque_energie": 258917,
+      "defense_physique": 190503,
+      "defense_energie": 189294,
+      "critique": 4894,
+      "vitesse_regen_ki": 2311,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1561984,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -28263,6 +30699,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/623",
+    "stats_base": {
+      "force": 2579684,
+      "attaque_physique": 229701,
+      "attaque_energie": 247555,
+      "defense_physique": 199513,
+      "defense_energie": 198601,
+      "critique": 4885,
+      "vitesse_regen_ki": 2312,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536598,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -28362,6 +30816,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/622",
+    "stats_base": {
+      "force": 2441051,
+      "attaque_physique": 256502,
+      "attaque_energie": 266950,
+      "defense_physique": 191282,
+      "defense_energie": 195207,
+      "critique": 4901,
+      "vitesse_regen_ki": 2450,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1569627,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -28459,6 +30931,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/620",
+    "stats_base": {
+      "force": 2570861,
+      "attaque_physique": 250766,
+      "attaque_energie": 255292,
+      "defense_physique": 188166,
+      "defense_energie": 191350,
+      "critique": 4842,
+      "vitesse_regen_ki": 2114,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534164,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -28615,6 +31105,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/619",
+    "stats_base": {
+      "force": 2490240,
+      "attaque_physique": 261064,
+      "attaque_energie": 271160,
+      "defense_physique": 174104,
+      "defense_energie": 176055,
+      "critique": 4803,
+      "vitesse_regen_ki": 2212,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1528549,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -28767,6 +31275,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/618",
+    "stats_base": {
+      "force": 2455636,
+      "attaque_physique": 240806,
+      "attaque_energie": 252974,
+      "defense_physique": 194281,
+      "defense_energie": 192486,
+      "critique": 4973,
+      "vitesse_regen_ki": 2326,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1538606,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -28975,6 +31501,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/617",
+    "stats_base": {
+      "force": 2533087,
+      "attaque_physique": 262720,
+      "attaque_energie": 275754,
+      "defense_physique": 191357,
+      "defense_energie": 190587,
+      "critique": 4863,
+      "vitesse_regen_ki": 2192,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1571440,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -29187,6 +31731,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/616",
+    "stats_base": {
+      "force": 2490543,
+      "attaque_physique": 248020,
+      "attaque_energie": 272648,
+      "defense_physique": 179102,
+      "defense_energie": 182781,
+      "critique": 4936,
+      "vitesse_regen_ki": 2312,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540387,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -29398,6 +31960,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/615",
+    "stats_base": {
+      "force": 2465652,
+      "attaque_physique": 270967,
+      "attaque_energie": 268017,
+      "defense_physique": 188437,
+      "defense_energie": 183799,
+      "critique": 4981,
+      "vitesse_regen_ki": 2389,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1573496,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -29611,6 +32191,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/614",
+    "stats_base": {
+      "force": 2421161,
+      "attaque_physique": 261488,
+      "attaque_energie": 280074,
+      "defense_physique": 173119,
+      "defense_energie": 177613,
+      "critique": 4783,
+      "vitesse_regen_ki": 2189,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531704,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -29765,6 +32363,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/612",
+    "stats_base": {
+      "force": 2513908,
+      "attaque_physique": 238940,
+      "attaque_energie": 242684,
+      "defense_physique": 190641,
+      "defense_energie": 189222,
+      "critique": 4987,
+      "vitesse_regen_ki": 2476,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531630,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -29916,6 +32532,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/611",
+    "stats_base": {
+      "force": 2470043,
+      "attaque_physique": 239480,
+      "attaque_energie": 252754,
+      "defense_physique": 188153,
+      "defense_energie": 190588,
+      "critique": 5044,
+      "vitesse_regen_ki": 2415,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537994,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -30121,6 +32755,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/610",
+    "stats_base": {
+      "force": 2441134,
+      "attaque_physique": 273546,
+      "attaque_energie": 249984,
+      "defense_physique": 192381,
+      "defense_energie": 188512,
+      "critique": 4615,
+      "vitesse_regen_ki": 2246,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1539615,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -30202,6 +32854,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/609",
+    "stats_base": {
+      "force": 2445597,
+      "attaque_physique": 263106,
+      "attaque_energie": 261064,
+      "defense_physique": 190261,
+      "defense_energie": 188842,
+      "critique": 4919,
+      "vitesse_regen_ki": 2439,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1563612,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -30303,6 +32973,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/608",
+    "stats_base": {
+      "force": 2515445,
+      "attaque_physique": 274775,
+      "attaque_energie": 265212,
+      "defense_physique": 187100,
+      "defense_energie": 190276,
+      "critique": 4806,
+      "vitesse_regen_ki": 2212,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1565359,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -30519,6 +33207,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/607",
+    "stats_base": {
+      "force": 2423087,
+      "attaque_physique": 251957,
+      "attaque_energie": 259766,
+      "defense_physique": 188153,
+      "defense_energie": 189173,
+      "critique": 4966,
+      "vitesse_regen_ki": 2289,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1542738,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -30726,6 +33432,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/606",
+    "stats_base": {
+      "force": 2573144,
+      "attaque_physique": 270967,
+      "attaque_energie": 229464,
+      "defense_physique": 185516,
+      "defense_energie": 185165,
+      "critique": 4954,
+      "vitesse_regen_ki": 2412,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540354,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -30820,6 +33544,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/605",
+    "stats_base": {
+      "force": 2459112,
+      "attaque_physique": 274455,
+      "attaque_energie": 243642,
+      "defense_physique": 185509,
+      "defense_energie": 184136,
+      "critique": 4842,
+      "vitesse_regen_ki": 2312,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1538782,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -31029,6 +33771,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/604",
+    "stats_base": {
+      "force": 2435353,
+      "attaque_physique": 254468,
+      "attaque_energie": 254950,
+      "defense_physique": 185248,
+      "defense_energie": 184538,
+      "critique": 4874,
+      "vitesse_regen_ki": 2213,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1525310,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -31184,6 +33944,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/602",
+    "stats_base": {
+      "force": 2372072,
+      "attaque_physique": 235543,
+      "attaque_energie": 267412,
+      "defense_physique": 184576,
+      "defense_energie": 185947,
+      "critique": 5022,
+      "vitesse_regen_ki": 2428,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533516,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -31396,6 +34174,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/601",
+    "stats_base": {
+      "force": 2524447,
+      "attaque_physique": 265683,
+      "attaque_energie": 246532,
+      "defense_physique": 195373,
+      "defense_energie": 189662,
+      "critique": 5002,
+      "vitesse_regen_ki": 2467,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1568396,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -31905,6 +34701,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/600",
+    "stats_base": {
+      "force": 2381787,
+      "attaque_physique": 250057,
+      "attaque_energie": 257004,
+      "defense_physique": 185598,
+      "defense_energie": 187664,
+      "critique": 4912,
+      "vitesse_regen_ki": 2191,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523658,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -32055,6 +34869,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/598",
+    "stats_base": {
+      "force": 2445681,
+      "attaque_physique": 256392,
+      "attaque_energie": 253589,
+      "defense_physique": 192830,
+      "defense_energie": 191608,
+      "critique": 4779,
+      "vitesse_regen_ki": 2235,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1537564,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -32260,6 +35092,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/597",
+    "stats_base": {
+      "force": 2445558,
+      "attaque_physique": 269581,
+      "attaque_energie": 263856,
+      "defense_physique": 191383,
+      "defense_energie": 189294,
+      "critique": 5078,
+      "vitesse_regen_ki": 2390,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1579951,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -32771,6 +35621,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/596",
+    "stats_base": {
+      "force": 2503640,
+      "attaque_physique": 249478,
+      "attaque_energie": 229344,
+      "defense_physique": 192830,
+      "defense_energie": 191071,
+      "critique": 5012,
+      "vitesse_regen_ki": 2313,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1525282,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -32925,6 +35793,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/595",
+    "stats_base": {
+      "force": 2575540,
+      "attaque_physique": 257408,
+      "attaque_energie": 265840,
+      "defense_physique": 188250,
+      "defense_energie": 191784,
+      "critique": 4957,
+      "vitesse_regen_ki": 2339,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1569184,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -33025,6 +35911,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/594",
+    "stats_base": {
+      "force": 2401123,
+      "attaque_physique": 254425,
+      "attaque_energie": 250868,
+      "defense_physique": 181839,
+      "defense_energie": 178839,
+      "critique": 5023,
+      "vitesse_regen_ki": 2390,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1526095,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -33177,6 +36081,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/593",
+    "stats_base": {
+      "force": 2521227,
+      "attaque_physique": 241266,
+      "attaque_energie": 258828,
+      "defense_physique": 189304,
+      "defense_energie": 191811,
+      "critique": 4949,
+      "vitesse_regen_ki": 2281,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540190,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -33384,6 +36306,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/592",
+    "stats_base": {
+      "force": 2445681,
+      "attaque_physique": 259482,
+      "attaque_energie": 248471,
+      "defense_physique": 183545,
+      "defense_energie": 190125,
+      "critique": 4789,
+      "vitesse_regen_ki": 2374,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1532218,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 9,
     "zAbilities": [
       {
         "tier": 1,
@@ -33595,6 +36535,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/591",
+    "stats_base": {
+      "force": 2399189,
+      "attaque_physique": 261473,
+      "attaque_energie": 250057,
+      "defense_physique": 184549,
+      "defense_energie": 180829,
+      "critique": 4906,
+      "vitesse_regen_ki": 2258,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524453,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -33749,6 +36707,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/589",
+    "stats_base": {
+      "force": 2445681,
+      "attaque_physique": 268500,
+      "attaque_energie": 239146,
+      "defense_physique": 187309,
+      "defense_energie": 186640,
+      "critique": 4796,
+      "vitesse_regen_ki": 2249,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1526290,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -33959,6 +36935,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/588",
+    "stats_base": {
+      "force": 2524447,
+      "attaque_physique": 264054,
+      "attaque_energie": 265936,
+      "defense_physique": 192464,
+      "defense_energie": 190352,
+      "critique": 4836,
+      "vitesse_regen_ki": 2351,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1569852,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -34459,7 +37453,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Jumeaux",
       "Représentant d'Univers",
       "Exclusif aux événements",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type assistance",
@@ -34469,6 +37462,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/587",
+    "stats_base": {
+      "force": 2302088,
+      "attaque_physique": 230306,
+      "attaque_energie": 242865,
+      "defense_physique": 180912,
+      "defense_energie": 185718,
+      "critique": 5182,
+      "vitesse_regen_ki": 2797,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1521623,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -34624,6 +37635,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/583",
+    "stats_base": {
+      "force": 2575625,
+      "attaque_physique": 266014,
+      "attaque_energie": 256731,
+      "defense_physique": 188603,
+      "defense_energie": 187395,
+      "critique": 5074,
+      "vitesse_regen_ki": 2391,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1573101,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -35136,6 +38165,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/582",
+    "stats_base": {
+      "force": 2343391,
+      "attaque_physique": 265766,
+      "attaque_energie": 243016,
+      "defense_physique": 186011,
+      "defense_energie": 184992,
+      "critique": 4855,
+      "vitesse_regen_ki": 2317,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524011,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -35282,7 +38329,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Guerrier de l'au-delà",
       "Représentant d'Univers",
       "Exclusif aux événements",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type assistance",
@@ -35292,6 +38338,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/581",
+    "stats_base": {
+      "force": 2450034,
+      "attaque_physique": 254923,
+      "attaque_energie": 265572,
+      "defense_physique": 172945,
+      "defense_energie": 175068,
+      "critique": 4906,
+      "vitesse_regen_ki": 2451,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529093,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -35458,6 +38522,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/580",
+    "stats_base": {
+      "force": 2638461,
+      "attaque_physique": 238878,
+      "attaque_energie": 238878,
+      "defense_physique": 190016,
+      "defense_energie": 189154,
+      "critique": 4954,
+      "vitesse_regen_ki": 2391,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529473,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 9,
     "zAbilities": [
       {
         "tier": 1,
@@ -35639,6 +38721,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/579",
+    "stats_base": {
+      "force": 2567111,
+      "attaque_physique": 262041,
+      "attaque_energie": 259166,
+      "defense_physique": 189154,
+      "defense_energie": 187074,
+      "critique": 4821,
+      "vitesse_regen_ki": 2192,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1548625,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -35821,6 +38921,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/578",
+    "stats_base": {
+      "force": 2381677,
+      "attaque_physique": 264302,
+      "attaque_energie": 238878,
+      "defense_physique": 179612,
+      "defense_energie": 177604,
+      "critique": 5109,
+      "vitesse_regen_ki": 2565,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1532274,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -35979,7 +39097,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Généalogie maléfique",
       "Guerrier de l'au-delà",
       "Représentant d'Univers",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -35989,6 +39106,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/577",
+    "stats_base": {
+      "force": 2437744,
+      "attaque_physique": 245351,
+      "attaque_energie": 272226,
+      "defense_physique": 183965,
+      "defense_energie": 186557,
+      "critique": 4743,
+      "vitesse_regen_ki": 2259,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530115,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -36193,7 +39328,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Représentant d'Univers",
       "Famille Goku",
       "DBL65-01S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -36204,6 +39338,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/576",
+    "stats_base": {
+      "force": 2579935,
+      "attaque_physique": 258784,
+      "attaque_energie": 276120,
+      "defense_physique": 180912,
+      "defense_energie": 185184,
+      "critique": 4954,
+      "vitesse_regen_ki": 2439,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1572045,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -36300,6 +39452,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/575",
+    "stats_base": {
+      "force": 2386265,
+      "attaque_physique": 214082,
+      "attaque_energie": 263272,
+      "defense_physique": 191875,
+      "defense_energie": 194002,
+      "critique": 4962,
+      "vitesse_regen_ki": 2490,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524315,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -36456,6 +39626,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/573",
+    "stats_base": {
+      "force": 2381751,
+      "attaque_physique": 255059,
+      "attaque_energie": 262886,
+      "defense_physique": 187392,
+      "defense_energie": 187067,
+      "critique": 4837,
+      "vitesse_regen_ki": 2214,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533137,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -36580,6 +39768,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/571",
+    "stats_base": {
+      "force": 2490710,
+      "attaque_physique": 259166,
+      "attaque_energie": 248565,
+      "defense_physique": 189674,
+      "defense_energie": 189154,
+      "critique": 4776,
+      "vitesse_regen_ki": 2072,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524406,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -36734,6 +39940,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/570",
+    "stats_base": {
+      "force": 2455027,
+      "attaque_physique": 254122,
+      "attaque_energie": 263162,
+      "defense_physique": 184728,
+      "defense_energie": 186457,
+      "critique": 4758,
+      "vitesse_regen_ki": 2102,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524537,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -36888,6 +40112,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/569",
+    "stats_base": {
+      "force": 2506579,
+      "attaque_physique": 256359,
+      "attaque_energie": 259637,
+      "defense_physique": 188869,
+      "defense_energie": 186083,
+      "critique": 4730,
+      "vitesse_regen_ki": 2191,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533503,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -36984,6 +40226,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/568",
+    "stats_base": {
+      "force": 2545419,
+      "attaque_physique": 243128,
+      "attaque_energie": 257421,
+      "defense_physique": 187343,
+      "defense_energie": 189092,
+      "critique": 4852,
+      "vitesse_regen_ki": 2257,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531528,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -37191,6 +40451,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/567",
+    "stats_base": {
+      "force": 2482710,
+      "attaque_physique": 250646,
+      "attaque_energie": 260035,
+      "defense_physique": 185773,
+      "defense_energie": 188868,
+      "critique": 4837,
+      "vitesse_regen_ki": 2215,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1532836,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -37309,6 +40587,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/566",
+    "stats_base": {
+      "force": 2442003,
+      "attaque_physique": 264370,
+      "attaque_energie": 239721,
+      "defense_physique": 190524,
+      "defense_energie": 191958,
+      "critique": 4817,
+      "vitesse_regen_ki": 2215,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530373,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -37520,6 +40816,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/565",
+    "stats_base": {
+      "force": 2588527,
+      "attaque_physique": 261738,
+      "attaque_energie": 266097,
+      "defense_physique": 188754,
+      "defense_energie": 190836,
+      "critique": 4943,
+      "vitesse_regen_ki": 2339,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1573493,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -37730,6 +41044,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/563",
+    "stats_base": {
+      "force": 2374262,
+      "attaque_physique": 273796,
+      "attaque_energie": 270431,
+      "defense_physique": 191189,
+      "defense_energie": 190174,
+      "critique": 4641,
+      "vitesse_regen_ki": 2339,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1562274,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -37941,6 +41273,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/562",
+    "stats_base": {
+      "force": 2549883,
+      "attaque_physique": 241216,
+      "attaque_energie": 238961,
+      "defense_physique": 185952,
+      "defense_energie": 196434,
+      "critique": 4923,
+      "vitesse_regen_ki": 2464,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531305,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -38156,6 +41506,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/561",
+    "stats_base": {
+      "force": 2483207,
+      "attaque_physique": 254202,
+      "attaque_energie": 271234,
+      "defense_physique": 188869,
+      "defense_energie": 186799,
+      "critique": 4497,
+      "vitesse_regen_ki": 2215,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531651,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -38370,6 +41738,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/560",
+    "stats_base": {
+      "force": 2431348,
+      "attaque_physique": 259019,
+      "attaque_energie": 251229,
+      "defense_physique": 187137,
+      "defense_energie": 185767,
+      "critique": 4787,
+      "vitesse_regen_ki": 2350,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531491,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -38583,6 +41969,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/559",
+    "stats_base": {
+      "force": 2445845,
+      "attaque_physique": 268654,
+      "attaque_energie": 240835,
+      "defense_physique": 184705,
+      "defense_energie": 188869,
+      "critique": 4651,
+      "vitesse_regen_ki": 2315,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523819,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -38736,6 +42140,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/558",
+    "stats_base": {
+      "force": 2470415,
+      "attaque_physique": 239721,
+      "attaque_energie": 246279,
+      "defense_physique": 194630,
+      "defense_energie": 191607,
+      "critique": 4817,
+      "vitesse_regen_ki": 2315,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522931,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -38832,6 +42254,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/556",
+    "stats_base": {
+      "force": 2629711,
+      "attaque_physique": 253632,
+      "attaque_energie": 244465,
+      "defense_physique": 188182,
+      "defense_energie": 188172,
+      "critique": 4770,
+      "vitesse_regen_ki": 2171,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1526215,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -39043,6 +42483,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/555",
+    "stats_base": {
+      "force": 2431348,
+      "attaque_physique": 269047,
+      "attaque_energie": 266512,
+      "defense_physique": 193733,
+      "defense_energie": 191965,
+      "critique": 4898,
+      "vitesse_regen_ki": 2327,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1573996,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -39556,6 +43014,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/553",
+    "stats_base": {
+      "force": 2316462,
+      "attaque_physique": 254265,
+      "attaque_energie": 268737,
+      "defense_physique": 175707,
+      "defense_energie": 174087,
+      "critique": 4889,
+      "vitesse_regen_ki": 2417,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1521926,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -39708,6 +43184,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/552",
+    "stats_base": {
+      "force": 2554562,
+      "attaque_physique": 250714,
+      "attaque_energie": 248327,
+      "defense_physique": 184967,
+      "defense_energie": 180758,
+      "critique": 5007,
+      "vitesse_regen_ki": 2317,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530670,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 103,
+      "choc": 101,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -39837,6 +43331,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/551",
+    "stats_base": {
+      "force": 2377383,
+      "attaque_physique": 266606,
+      "attaque_energie": 259731,
+      "defense_physique": 175998,
+      "defense_energie": 178465,
+      "critique": 5089,
+      "vitesse_regen_ki": 2542,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1550242,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 97,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -40048,6 +43560,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/550",
+    "stats_base": {
+      "force": 2421493,
+      "attaque_physique": 260118,
+      "attaque_energie": 244370,
+      "defense_physique": 188845,
+      "defense_energie": 188639,
+      "critique": 4672,
+      "vitesse_regen_ki": 2477,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1530254,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 96,
+      "choc": 99,
+      "explosion": 105
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -40261,6 +43791,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/549",
+    "stats_base": {
+      "force": 2478257,
+      "attaque_physique": 269130,
+      "attaque_energie": 273302,
+      "defense_physique": 188967,
+      "defense_energie": 185861,
+      "critique": 4889,
+      "vitesse_regen_ki": 2340,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1573327,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -40466,6 +44014,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/548",
+    "stats_base": {
+      "force": 2476245,
+      "attaque_physique": 259459,
+      "attaque_energie": 247364,
+      "defense_physique": 185169,
+      "defense_energie": 184479,
+      "critique": 4919,
+      "vitesse_regen_ki": 2250,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529404,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -40619,6 +44185,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/547",
+    "stats_base": {
+      "force": 2302367,
+      "attaque_physique": 241299,
+      "attaque_energie": 270003,
+      "defense_physique": 179088,
+      "defense_energie": 184470,
+      "critique": 4923,
+      "vitesse_regen_ki": 2441,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1525951,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 99,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -40765,7 +44349,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Super Saiyan divin SS",
       "Représentant d'Univers",
       "Exclusif aux événements",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -40775,6 +44358,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/546",
+    "stats_base": {
+      "force": 2495194,
+      "attaque_physique": 254701,
+      "attaque_energie": 254088,
+      "defense_physique": 178926,
+      "defense_energie": 178981,
+      "critique": 4951,
+      "vitesse_regen_ki": 2316,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1525792,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 97,
+      "explosion": 105
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -40919,7 +44520,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Famille Goku",
       "Représentant d'Univers",
       "Exclusif aux événements",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type physique",
@@ -40929,6 +44529,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/545",
+    "stats_base": {
+      "force": 2343558,
+      "attaque_physique": 268059,
+      "attaque_energie": 253715,
+      "defense_physique": 179771,
+      "defense_energie": 178297,
+      "critique": 4940,
+      "vitesse_regen_ki": 2340,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529479,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 100,
+      "choc": 105,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -41084,6 +44702,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/542",
+    "stats_base": {
+      "force": 2480513,
+      "attaque_physique": 256488,
+      "attaque_energie": 251092,
+      "defense_physique": 180082,
+      "defense_energie": 178955,
+      "critique": 4916,
+      "vitesse_regen_ki": 2404,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1527384,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -41295,6 +44931,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/541",
+    "stats_base": {
+      "force": 2445930,
+      "attaque_physique": 265543,
+      "attaque_energie": 240756,
+      "defense_physique": 187556,
+      "defense_energie": 184690,
+      "critique": 4856,
+      "vitesse_regen_ki": 2316,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529607,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -41392,6 +45046,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/540",
+    "stats_base": {
+      "force": 2470498,
+      "attaque_physique": 259332,
+      "attaque_energie": 255293,
+      "defense_physique": 189189,
+      "defense_energie": 193295,
+      "critique": 4796,
+      "vitesse_regen_ki": 2116,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536808,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 99,
+      "choc": 98,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -41483,7 +45155,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Généalogie maléfique",
       "DBL59-01S",
       "Guerrier de l'au-delà",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type physique",
@@ -41495,6 +45166,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/539",
+    "stats_base": {
+      "force": 2541619,
+      "attaque_physique": 276086,
+      "attaque_energie": 269432,
+      "defense_physique": 186521,
+      "defense_energie": 183320,
+      "critique": 4762,
+      "vitesse_regen_ki": 2441,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1574350,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -41711,6 +45400,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/536",
+    "stats_base": {
+      "force": 2524263,
+      "attaque_physique": 259612,
+      "attaque_energie": 268621,
+      "defense_physique": 188642,
+      "defense_energie": 187868,
+      "critique": 4931,
+      "vitesse_regen_ki": 2317,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1564827,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 103,
+      "choc": 100,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -42122,6 +45829,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/535",
+    "stats_base": {
+      "force": 2416807,
+      "attaque_physique": 254132,
+      "attaque_energie": 260355,
+      "defense_physique": 182428,
+      "defense_energie": 177064,
+      "critique": 4711,
+      "vitesse_regen_ki": 2417,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1520899,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -42243,6 +45968,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/534",
+    "stats_base": {
+      "force": 2465731,
+      "attaque_physique": 263282,
+      "attaque_energie": 256505,
+      "defense_physique": 181540,
+      "defense_energie": 182072,
+      "critique": 4731,
+      "vitesse_regen_ki": 2294,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1528431,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -42340,6 +46083,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/533",
+    "stats_base": {
+      "force": 2461136,
+      "attaque_physique": 268096,
+      "attaque_energie": 259612,
+      "defense_physique": 181041,
+      "defense_energie": 180394,
+      "critique": 4653,
+      "vitesse_regen_ki": 2294,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1529968,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 98,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -42470,6 +46231,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/531",
+    "stats_base": {
+      "force": 2372782,
+      "attaque_physique": 251333,
+      "attaque_energie": 248610,
+      "defense_physique": 177720,
+      "defense_energie": 177415,
+      "critique": 5019,
+      "vitesse_regen_ki": 2442,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1515713,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 104,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -42612,7 +46391,6 @@ window.DBL_CHARACTERS_SCRAPED = [
     "traits": [
       "Super guerrier",
       "Représentant d'Univers",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -42622,6 +46400,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/528",
+    "stats_base": {
+      "force": 2488710,
+      "attaque_physique": 261021,
+      "attaque_energie": 275421,
+      "defense_physique": 178042,
+      "defense_energie": 177939,
+      "critique": 4610,
+      "vitesse_regen_ki": 2149,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1525687,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -42710,7 +46506,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Ki divin",
       "Super Saiyan divin SS",
       "Représentant d'Univers",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -42720,6 +46515,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/527",
+    "stats_base": {
+      "force": 2346289,
+      "attaque_physique": 269512,
+      "attaque_energie": 271361,
+      "defense_physique": 170327,
+      "defense_energie": 172722,
+      "critique": 5068,
+      "vitesse_regen_ki": 2376,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1541941,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 104,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -43227,7 +47040,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers rival",
       "Représentant d'Univers",
       "Exclusif aux événements",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type énergie",
@@ -43237,6 +47049,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/526",
+    "stats_base": {
+      "force": 2441075,
+      "attaque_physique": 250175,
+      "attaque_energie": 271361,
+      "defense_physique": 172680,
+      "defense_energie": 171918,
+      "critique": 4908,
+      "vitesse_regen_ki": 2341,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1520722,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 103,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -43387,6 +47217,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/525",
+    "stats_base": {
+      "force": 2485938,
+      "attaque_physique": 250164,
+      "attaque_energie": 271167,
+      "defense_physique": 169538,
+      "defense_energie": 173010,
+      "critique": 4891,
+      "vitesse_regen_ki": 2320,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1519558,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 104,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -43621,6 +47469,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/524",
+    "stats_base": {
+      "force": 2401195,
+      "attaque_physique": 257904,
+      "attaque_energie": 243828,
+      "defense_physique": 169538,
+      "defense_energie": 173160,
+      "critique": 5177,
+      "vitesse_regen_ki": 2520,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1518759,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 104,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -43738,6 +47604,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/523",
+    "stats_base": {
+      "force": 2574994,
+      "attaque_physique": 252030,
+      "attaque_energie": 253211,
+      "defense_physique": 179158,
+      "defense_energie": 184191,
+      "critique": 4864,
+      "vitesse_regen_ki": 2242,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524956,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -43921,6 +47805,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/522",
+    "stats_base": {
+      "force": 2498426,
+      "attaque_physique": 252951,
+      "attaque_energie": 261810,
+      "defense_physique": 178395,
+      "defense_energie": 176746,
+      "critique": 4829,
+      "vitesse_regen_ki": 2320,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523313,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -44018,6 +47920,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/519",
+    "stats_base": {
+      "force": 2609491,
+      "attaque_physique": 257216,
+      "attaque_energie": 250658,
+      "defense_physique": 181520,
+      "defense_energie": 181527,
+      "critique": 4794,
+      "vitesse_regen_ki": 2118,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1519887,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 97,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -44174,6 +48094,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/516",
+    "stats_base": {
+      "force": 2456761,
+      "attaque_physique": 268565,
+      "attaque_energie": 248707,
+      "defense_physique": 179778,
+      "defense_energie": 177498,
+      "critique": 4872,
+      "vitesse_regen_ki": 2240,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523332,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -44328,6 +48266,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/515",
+    "stats_base": {
+      "force": 2578950,
+      "attaque_physique": 255587,
+      "attaque_energie": 255192,
+      "defense_physique": 184221,
+      "defense_energie": 180534,
+      "critique": 4670,
+      "vitesse_regen_ki": 2240,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522364,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 104,
+      "choc": 104,
+      "explosion": 95
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -44430,6 +48386,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/514",
+    "stats_base": {
+      "force": 2592089,
+      "attaque_physique": 255171,
+      "attaque_energie": 270356,
+      "defense_physique": 182204,
+      "defense_energie": 185607,
+      "critique": 4917,
+      "vitesse_regen_ki": 2295,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1556143,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -44932,7 +48906,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Jumeaux",
       "Représentant d'Univers",
       "DBL55-01S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -44942,6 +48915,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/510",
+    "stats_base": {
+      "force": 2581359,
+      "attaque_physique": 269074,
+      "attaque_energie": 272165,
+      "defense_physique": 182889,
+      "defense_energie": 183775,
+      "critique": 4721,
+      "vitesse_regen_ki": 2365,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1563693,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 106,
+      "choc": 101,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -45040,6 +49031,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/507",
+    "stats_base": {
+      "force": 2436907,
+      "attaque_physique": 264880,
+      "attaque_energie": 253620,
+      "defense_physique": 174135,
+      "defense_energie": 177538,
+      "critique": 4904,
+      "vitesse_regen_ki": 2243,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1519383,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 100,
+      "choc": 97,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -45193,6 +49202,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/503",
+    "stats_base": {
+      "force": 2334737,
+      "attaque_physique": 247190,
+      "attaque_energie": 253117,
+      "defense_physique": 175411,
+      "defense_energie": 174138,
+      "critique": 5074,
+      "vitesse_regen_ki": 2662,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1521705,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 104,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -45347,6 +49374,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/502",
+    "stats_base": {
+      "force": 2545278,
+      "attaque_physique": 247190,
+      "attaque_energie": 248719,
+      "defense_physique": 182674,
+      "defense_energie": 185752,
+      "critique": 4870,
+      "vitesse_regen_ki": 2322,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523020,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 103,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -45558,6 +49603,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/501",
+    "stats_base": {
+      "force": 2545404,
+      "attaque_physique": 270439,
+      "attaque_energie": 266637,
+      "defense_physique": 180531,
+      "defense_energie": 179877,
+      "critique": 4985,
+      "vitesse_regen_ki": 2299,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1560777,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -45765,6 +49828,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/500",
+    "stats_base": {
+      "force": 2393918,
+      "attaque_physique": 251214,
+      "attaque_energie": 246494,
+      "defense_physique": 182751,
+      "defense_energie": 184440,
+      "critique": 4921,
+      "vitesse_regen_ki": 2445,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522193,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -45883,6 +49964,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/499",
+    "stats_base": {
+      "force": 2420934,
+      "attaque_physique": 244549,
+      "attaque_energie": 253588,
+      "defense_physique": 170415,
+      "defense_energie": 174861,
+      "critique": 5089,
+      "vitesse_regen_ki": 2660,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1521658,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -45957,6 +50056,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/498",
+    "stats_base": {
+      "force": 2339277,
+      "attaque_physique": 255998,
+      "attaque_energie": 265244,
+      "defense_physique": 180643,
+      "defense_energie": 183477,
+      "critique": 4751,
+      "vitesse_regen_ki": 2297,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523113,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 98,
+      "choc": 100,
+      "explosion": 104
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -46441,6 +50558,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/497",
+    "stats_base": {
+      "force": 2503624,
+      "attaque_physique": 267798,
+      "attaque_energie": 262119,
+      "defense_physique": 180968,
+      "defense_energie": 178992,
+      "critique": 4939,
+      "vitesse_regen_ki": 2496,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1557935,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 105,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -46851,6 +50986,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/494",
+    "stats_base": {
+      "force": 2478237,
+      "attaque_physique": 278284,
+      "attaque_energie": 254980,
+      "defense_physique": 181967,
+      "defense_energie": 176693,
+      "critique": 4908,
+      "vitesse_regen_ki": 2521,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1557989,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -47361,6 +51514,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/493",
+    "stats_base": {
+      "force": 2417056,
+      "attaque_physique": 244087,
+      "attaque_energie": 260228,
+      "defense_physique": 178335,
+      "defense_energie": 178641,
+      "critique": 4957,
+      "vitesse_regen_ki": 2320,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1515678,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -47531,6 +51702,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/492",
+    "stats_base": {
+      "force": 2456927,
+      "attaque_physique": 257793,
+      "attaque_energie": 267117,
+      "defense_physique": 181313,
+      "defense_energie": 180304,
+      "critique": 4668,
+      "vitesse_regen_ki": 2231,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524672,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -47660,6 +51849,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/491",
+    "stats_base": {
+      "force": 2562637,
+      "attaque_physique": 269345,
+      "attaque_energie": 268953,
+      "defense_physique": 184855,
+      "defense_energie": 184523,
+      "critique": 4792,
+      "vitesse_regen_ki": 2497,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1572368,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 99,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -47877,6 +52084,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/490",
+    "stats_base": {
+      "force": 2417139,
+      "attaque_physique": 250683,
+      "attaque_energie": 246014,
+      "defense_physique": 180726,
+      "defense_energie": 179081,
+      "critique": 5044,
+      "vitesse_regen_ki": 2344,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1516446,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -47961,6 +52186,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/489",
+    "stats_base": {
+      "force": 2433533,
+      "attaque_physique": 240022,
+      "attaque_energie": 269334,
+      "defense_physique": 178399,
+      "defense_energie": 180368,
+      "critique": 4915,
+      "vitesse_regen_ki": 2370,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524008,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -48037,6 +52280,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/488",
+    "stats_base": {
+      "force": 2451548,
+      "attaque_physique": 254822,
+      "attaque_energie": 251905,
+      "defense_physique": 176552,
+      "defense_energie": 175262,
+      "critique": 4947,
+      "vitesse_regen_ki": 2512,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524327,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -48164,6 +52425,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/486",
+    "stats_base": {
+      "force": 2549964,
+      "attaque_physique": 248542,
+      "attaque_energie": 256479,
+      "defense_physique": 178710,
+      "defense_energie": 179357,
+      "critique": 4754,
+      "vitesse_regen_ki": 2400,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1520185,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 98,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -48331,6 +52610,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/483",
+    "stats_base": {
+      "force": 2389569,
+      "attaque_physique": 260405,
+      "attaque_energie": 247440,
+      "defense_physique": 179821,
+      "defense_energie": 180139,
+      "critique": 4917,
+      "vitesse_regen_ki": 2422,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523459,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -48509,6 +52806,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/482",
+    "stats_base": {
+      "force": 2461752,
+      "attaque_physique": 273252,
+      "attaque_energie": 257548,
+      "defense_physique": 179130,
+      "defense_energie": 175545,
+      "critique": 5052,
+      "vitesse_regen_ki": 2423,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1552741,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 103,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -48913,7 +53228,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Exclusif aux événements",
       "Représentant d'Univers",
       "DBL-EVT-49S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -48923,6 +53237,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/481",
+    "stats_base": {
+      "force": 2358430,
+      "attaque_physique": 248267,
+      "attaque_energie": 269997,
+      "defense_physique": 171527,
+      "defense_energie": 176836,
+      "critique": 4883,
+      "vitesse_regen_ki": 2369,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1515855,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 97,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -49091,7 +53423,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Exclusif aux événements",
       "Représentant d'Univers",
       "DBL-EVT-48S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type défense",
@@ -49101,6 +53432,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/480",
+    "stats_base": {
+      "force": 2421677,
+      "attaque_physique": 248625,
+      "attaque_energie": 245339,
+      "defense_physique": 182175,
+      "defense_energie": 184600,
+      "critique": 4902,
+      "vitesse_regen_ki": 2392,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1516284,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 102,
+      "choc": 96,
+      "explosion": 102
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -49270,7 +53619,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Exclusif aux événements",
       "Représentant d'Univers",
       "DBL-EVT-47S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type physique",
@@ -49280,6 +53628,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/479",
+    "stats_base": {
+      "force": 2358547,
+      "attaque_physique": 263707,
+      "attaque_energie": 251996,
+      "defense_physique": 179440,
+      "defense_energie": 178003,
+      "critique": 4936,
+      "vitesse_regen_ki": 2222,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1517682,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -49451,7 +53817,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "DBL47-02S",
       "Ki divin",
       "Super Saiyan divin SS",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type défense",
@@ -49461,6 +53826,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/478",
+    "stats_base": {
+      "force": 2358430,
+      "attaque_physique": 262088,
+      "attaque_energie": 253171,
+      "defense_physique": 177798,
+      "defense_energie": 178335,
+      "critique": 4925,
+      "vitesse_regen_ki": 2346,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1521570,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 99,
+      "choc": 98,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -49617,7 +54000,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Ki divin",
       "Représentant d'Univers",
       "DBL47-01S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type physique",
@@ -49627,6 +54009,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/477",
+    "stats_base": {
+      "force": 2508378,
+      "attaque_physique": 274499,
+      "attaque_energie": 270129,
+      "defense_physique": 178482,
+      "defense_energie": 176699,
+      "critique": 5002,
+      "vitesse_regen_ki": 2447,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1568884,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -49783,6 +54183,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/476",
+    "stats_base": {
+      "force": 2449626,
+      "attaque_physique": 274061,
+      "attaque_energie": 248282,
+      "defense_physique": 179692,
+      "defense_energie": 179364,
+      "critique": 4774,
+      "vitesse_regen_ki": 2218,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523707,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -49879,6 +54297,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/475",
+    "stats_base": {
+      "force": 2474237,
+      "attaque_physique": 252385,
+      "attaque_energie": 265214,
+      "defense_physique": 179364,
+      "defense_energie": 181344,
+      "critique": 4810,
+      "vitesse_regen_ki": 2218,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524056,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 103,
+      "choc": 100,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -49977,6 +54413,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/474",
+    "stats_base": {
+      "force": 2511414,
+      "attaque_physique": 260477,
+      "attaque_energie": 260097,
+      "defense_physique": 173962,
+      "defense_energie": 172872,
+      "critique": 4773,
+      "vitesse_regen_ki": 2300,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1517885,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -50164,6 +54618,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/472",
+    "stats_base": {
+      "force": 2512208,
+      "attaque_physique": 256875,
+      "attaque_energie": 266138,
+      "defense_physique": 184747,
+      "defense_energie": 185600,
+      "critique": 4618,
+      "vitesse_regen_ki": 2296,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1535940,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 105,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -50377,6 +54849,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/471",
+    "stats_base": {
+      "force": 2351392,
+      "attaque_physique": 261379,
+      "attaque_energie": 258562,
+      "defense_physique": 178933,
+      "defense_energie": 179126,
+      "critique": 4734,
+      "vitesse_regen_ki": 2296,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1515659,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 97,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -50526,6 +55016,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/470",
+    "stats_base": {
+      "force": 2449594,
+      "attaque_physique": 244130,
+      "attaque_energie": 254686,
+      "defense_physique": 176821,
+      "defense_energie": 176801,
+      "critique": 5018,
+      "vitesse_regen_ki": 2544,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523244,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -50643,7 +55151,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Guerrier de l'au-delà",
       "Représentant d'Univers",
       "DBL45-02S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -50653,6 +55160,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/469",
+    "stats_base": {
+      "force": 2363080,
+      "attaque_physique": 263475,
+      "attaque_energie": 264333,
+      "defense_physique": 178121,
+      "defense_energie": 175706,
+      "critique": 4830,
+      "vitesse_regen_ki": 2241,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522123,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 98,
+      "choc": 99,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -50731,6 +55256,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/467",
+    "stats_base": {
+      "force": 2342578,
+      "attaque_physique": 251515,
+      "attaque_energie": 264688,
+      "defense_physique": 175634,
+      "defense_energie": 171185,
+      "critique": 5022,
+      "vitesse_regen_ki": 2371,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1518243,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 98,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -50882,6 +55425,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/466",
+    "stats_base": {
+      "force": 2449677,
+      "attaque_physique": 245753,
+      "attaque_energie": 247167,
+      "defense_physique": 177207,
+      "defense_energie": 178828,
+      "critique": 5072,
+      "vitesse_regen_ki": 2420,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1516266,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -51032,6 +55593,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/463",
+    "stats_base": {
+      "force": 2429755,
+      "attaque_physique": 263359,
+      "attaque_energie": 244427,
+      "defense_physique": 172835,
+      "defense_energie": 175430,
+      "critique": 5068,
+      "vitesse_regen_ki": 2468,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524234,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 96,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -51159,6 +55738,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/462",
+    "stats_base": {
+      "force": 2385842,
+      "attaque_physique": 271835,
+      "attaque_energie": 267321,
+      "defense_physique": 181178,
+      "defense_energie": 177090,
+      "critique": 4810,
+      "vitesse_regen_ki": 2198,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536280,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 98,
+      "choc": 97,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -51541,6 +56138,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/461",
+    "stats_base": {
+      "force": 2405478,
+      "attaque_physique": 256328,
+      "attaque_energie": 247099,
+      "defense_physique": 177228,
+      "defense_energie": 180205,
+      "critique": 4992,
+      "vitesse_regen_ki": 2343,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1517375,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 104,
+      "choc": 102,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -51691,6 +56306,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/460",
+    "stats_base": {
+      "force": 2328088,
+      "attaque_physique": 256592,
+      "attaque_energie": 265471,
+      "defense_physique": 175400,
+      "defense_energie": 176689,
+      "critique": 4943,
+      "vitesse_regen_ki": 2334,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522607,
+    "resistances": {
+      "tranchant": 104,
+      "perforant": 97,
+      "choc": 97,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -52196,6 +56829,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/459",
+    "stats_base": {
+      "force": 2347101,
+      "attaque_physique": 269668,
+      "attaque_energie": 252033,
+      "defense_physique": 178828,
+      "defense_energie": 179517,
+      "critique": 4878,
+      "vitesse_regen_ki": 2299,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1524769,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -52606,6 +57257,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/456",
+    "stats_base": {
+      "force": 2472824,
+      "attaque_physique": 261413,
+      "attaque_energie": 261782,
+      "defense_physique": 179095,
+      "defense_energie": 178585,
+      "critique": 4930,
+      "vitesse_regen_ki": 2301,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536679,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -53107,6 +57776,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/455",
+    "stats_base": {
+      "force": 2428176,
+      "attaque_physique": 261514,
+      "attaque_energie": 248479,
+      "defense_physique": 176625,
+      "defense_energie": 174693,
+      "critique": 4988,
+      "vitesse_regen_ki": 2401,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522039,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 95,
+      "choc": 101,
+      "explosion": 104
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -53259,6 +57946,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/452",
+    "stats_base": {
+      "force": 2636904,
+      "attaque_physique": 244552,
+      "attaque_energie": 246524,
+      "defense_physique": 174982,
+      "defense_energie": 176612,
+      "critique": 5018,
+      "vitesse_regen_ki": 2437,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1520613,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -53767,6 +58472,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/451",
+    "stats_base": {
+      "force": 2448015,
+      "attaque_physique": 274861,
+      "attaque_energie": 257460,
+      "defense_physique": 181279,
+      "defense_energie": 179285,
+      "critique": 4765,
+      "vitesse_regen_ki": 2255,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536486,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 98,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -54128,6 +58851,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/449",
+    "stats_base": {
+      "force": 2472908,
+      "attaque_physique": 273267,
+      "attaque_energie": 239566,
+      "defense_physique": 177848,
+      "defense_energie": 178350,
+      "critique": 4876,
+      "vitesse_regen_ki": 2279,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1521041,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 99,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -54309,6 +59050,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/448",
+    "stats_base": {
+      "force": 2497646,
+      "attaque_physique": 261865,
+      "attaque_energie": 261496,
+      "defense_physique": 179487,
+      "defense_energie": 178350,
+      "critique": 4852,
+      "vitesse_regen_ki": 2302,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534807,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -54841,6 +59600,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/447",
+    "stats_base": {
+      "force": 2468336,
+      "attaque_physique": 258269,
+      "attaque_energie": 246214,
+      "defense_physique": 170708,
+      "defense_energie": 171978,
+      "critique": 5089,
+      "vitesse_regen_ki": 2378,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1514474,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -54986,6 +59763,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/445",
+    "stats_base": {
+      "force": 2493022,
+      "attaque_physique": 268546,
+      "attaque_energie": 248930,
+      "defense_physique": 178029,
+      "defense_energie": 174776,
+      "critique": 4871,
+      "vitesse_regen_ki": 2256,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522232,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 96,
+      "choc": 100,
+      "explosion": 107
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -55150,6 +59945,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/444",
+    "stats_base": {
+      "force": 2485208,
+      "attaque_physique": 257544,
+      "attaque_energie": 248547,
+      "defense_physique": 181430,
+      "defense_energie": 181419,
+      "critique": 4887,
+      "vitesse_regen_ki": 2279,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522320,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 104,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -55239,6 +60052,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/441",
+    "stats_base": {
+      "force": 2398332,
+      "attaque_physique": 255932,
+      "attaque_energie": 260970,
+      "defense_physique": 175695,
+      "defense_energie": 173425,
+      "critique": 4954,
+      "vitesse_regen_ki": 2390,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1522510,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 97,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -55705,6 +60536,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/433",
+    "stats_base": {
+      "force": 2491082,
+      "attaque_physique": 266581,
+      "attaque_energie": 246654,
+      "defense_physique": 176778,
+      "defense_energie": 175464,
+      "critique": 5061,
+      "vitesse_regen_ki": 2391,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533549,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -56174,6 +61023,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/432",
+    "stats_base": {
+      "force": 2485982,
+      "attaque_physique": 268690,
+      "attaque_energie": 258057,
+      "defense_physique": 178529,
+      "defense_energie": 177895,
+      "critique": 4798,
+      "vitesse_regen_ki": 2304,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533403,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 96,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -56635,7 +61502,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Filles",
       "Représentant d'Univers",
       "DBL38-04S",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type énergie",
@@ -56645,6 +61511,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/431",
+    "stats_base": {
+      "force": 2448348,
+      "attaque_physique": 256950,
+      "attaque_energie": 257045,
+      "defense_physique": 167608,
+      "defense_energie": 167972,
+      "critique": 5053,
+      "vitesse_regen_ki": 2428,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1516248,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -56800,6 +61684,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/430",
+    "stats_base": {
+      "force": 2521468,
+      "attaque_physique": 245780,
+      "attaque_energie": 269213,
+      "defense_physique": 176217,
+      "defense_energie": 179716,
+      "critique": 4813,
+      "vitesse_regen_ki": 2215,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1519823,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 96,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -57231,7 +62133,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Super Saiyan divin SS",
       "Représentant d'Univers",
       "DBL38-01S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -57241,6 +62142,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/428",
+    "stats_base": {
+      "force": 2511083,
+      "attaque_physique": 260998,
+      "attaque_energie": 265596,
+      "defense_physique": 173931,
+      "defense_energie": 176391,
+      "critique": 4856,
+      "vitesse_regen_ki": 2350,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534021,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 99,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -57602,6 +62521,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/427",
+    "stats_base": {
+      "force": 2423987,
+      "attaque_physique": 261763,
+      "attaque_energie": 248728,
+      "defense_physique": 169942,
+      "defense_energie": 166538,
+      "critique": 5063,
+      "vitesse_regen_ki": 2504,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1516320,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 98,
+      "choc": 104,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -57745,6 +62682,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/425",
+    "stats_base": {
+      "force": 2452712,
+      "attaque_physique": 253237,
+      "attaque_energie": 253977,
+      "defense_physique": 175239,
+      "defense_energie": 181198,
+      "critique": 4913,
+      "vitesse_regen_ki": 2341,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1519265,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -57910,6 +62865,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/424",
+    "stats_base": {
+      "force": 2364974,
+      "attaque_physique": 255649,
+      "attaque_energie": 242120,
+      "defense_physique": 173938,
+      "defense_energie": 180685,
+      "critique": 5010,
+      "vitesse_regen_ki": 2455,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1512706,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 99,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -58360,6 +63333,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/414",
+    "stats_base": {
+      "force": 2432842,
+      "attaque_physique": 256618,
+      "attaque_energie": 266830,
+      "defense_physique": 174236,
+      "defense_energie": 175526,
+      "critique": 4989,
+      "vitesse_regen_ki": 2384,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533449,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 98,
+      "choc": 101,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -58828,6 +63819,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/412",
+    "stats_base": {
+      "force": 2404315,
+      "attaque_physique": 259480,
+      "attaque_energie": 251238,
+      "defense_physique": 177040,
+      "defense_energie": 178367,
+      "critique": 4881,
+      "vitesse_regen_ki": 2329,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1516312,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -59006,6 +64015,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/411",
+    "stats_base": {
+      "force": 2537964,
+      "attaque_physique": 245965,
+      "attaque_energie": 245940,
+      "defense_physique": 175069,
+      "defense_energie": 179353,
+      "critique": 4900,
+      "vitesse_regen_ki": 2364,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1508124,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -59497,6 +64524,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/409",
+    "stats_base": {
+      "force": 2428592,
+      "attaque_physique": 268505,
+      "attaque_energie": 251238,
+      "defense_physique": 174249,
+      "defense_energie": 173922,
+      "critique": 4769,
+      "vitesse_regen_ki": 2283,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1511820,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 95,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -60006,6 +65051,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/408",
+    "stats_base": {
+      "force": 2366481,
+      "attaque_physique": 247472,
+      "attaque_energie": 266297,
+      "defense_physique": 184660,
+      "defense_energie": 185679,
+      "critique": 4913,
+      "vitesse_regen_ki": 2348,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534323,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -60173,6 +65236,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/407",
+    "stats_base": {
+      "force": 2403216,
+      "attaque_physique": 251801,
+      "attaque_energie": 271172,
+      "defense_physique": 179908,
+      "defense_energie": 182615,
+      "critique": 4898,
+      "vitesse_regen_ki": 2299,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534960,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -60340,6 +65421,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/406",
+    "stats_base": {
+      "force": 2468751,
+      "attaque_physique": 255893,
+      "attaque_energie": 253476,
+      "defense_physique": 167698,
+      "defense_energie": 167698,
+      "critique": 4991,
+      "vitesse_regen_ki": 2307,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1503648,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -60496,6 +65595,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/405",
+    "stats_base": {
+      "force": 2466747,
+      "attaque_physique": 253853,
+      "attaque_energie": 237351,
+      "defense_physique": 168622,
+      "defense_energie": 173830,
+      "critique": 5012,
+      "vitesse_regen_ki": 2480,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1502105,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 103,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -60651,6 +65768,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/404",
+    "stats_base": {
+      "force": 2465283,
+      "attaque_physique": 258326,
+      "attaque_energie": 241867,
+      "defense_physique": 176125,
+      "defense_energie": 178438,
+      "critique": 4901,
+      "vitesse_regen_ki": 2286,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1507858,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 104,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -60807,6 +65942,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/403",
+    "stats_base": {
+      "force": 2428558,
+      "attaque_physique": 237738,
+      "attaque_energie": 241867,
+      "defense_physique": 177924,
+      "defense_energie": 176125,
+      "critique": 5049,
+      "vitesse_regen_ki": 2534,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1504107,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -60962,6 +66115,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/402",
+    "stats_base": {
+      "force": 2428675,
+      "attaque_physique": 248977,
+      "attaque_energie": 255501,
+      "defense_physique": 159775,
+      "defense_energie": 165417,
+      "critique": 5109,
+      "vitesse_regen_ki": 2560,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1504431,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 105,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -61117,6 +66288,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/401",
+    "stats_base": {
+      "force": 2321361,
+      "attaque_physique": 260381,
+      "attaque_energie": 245799,
+      "defense_physique": 172715,
+      "defense_energie": 169866,
+      "critique": 5018,
+      "vitesse_regen_ki": 2383,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1502968,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -61268,7 +66457,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers rival",
       "DBL35-10S",
       "Représentant d'Univers",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type physique",
@@ -61278,6 +66466,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/397",
+    "stats_base": {
+      "force": 2486314,
+      "attaque_physique": 264192,
+      "attaque_energie": 259075,
+      "defense_physique": 173431,
+      "defense_energie": 170470,
+      "critique": 4834,
+      "vitesse_regen_ki": 2331,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1520572,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -61367,6 +66573,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/396",
+    "stats_base": {
+      "force": 2468836,
+      "attaque_physique": 253559,
+      "attaque_energie": 255972,
+      "defense_physique": 173319,
+      "defense_energie": 179832,
+      "critique": 4934,
+      "vitesse_regen_ki": 2366,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1521671,
+    "resistances": {
+      "tranchant": 94,
+      "perforant": 104,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -61836,6 +67060,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/395",
+    "stats_base": {
+      "force": 2444159,
+      "attaque_physique": 275814,
+      "attaque_energie": 255998,
+      "defense_physique": 169652,
+      "defense_energie": 167482,
+      "critique": 5008,
+      "vitesse_regen_ki": 2432,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533289,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 98,
+      "choc": 104,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -62305,6 +67547,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/392",
+    "stats_base": {
+      "force": 2473283,
+      "attaque_physique": 264485,
+      "attaque_energie": 255961,
+      "defense_physique": 180244,
+      "defense_energie": 181601,
+      "critique": 4927,
+      "vitesse_regen_ki": 2345,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1540176,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 104,
+      "choc": 98,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -62763,7 +68023,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Jumeaux",
       "Représentant d'Univers",
       "DBL34-03S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type physique",
@@ -62773,6 +68032,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/390",
+    "stats_base": {
+      "force": 2453045,
+      "attaque_physique": 266506,
+      "attaque_energie": 248430,
+      "defense_physique": 175887,
+      "defense_energie": 177734,
+      "critique": 4794,
+      "vitesse_regen_ki": 2331,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1517743,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -62942,7 +68219,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Jumeaux",
       "Représentant d'Univers",
       "DBL34-04S",
-      "Représentant de l'Univers 7",
       "F",
       "SPARKING",
       "Type physique",
@@ -62952,6 +68228,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/389",
+    "stats_base": {
+      "force": 2465448,
+      "attaque_physique": 256427,
+      "attaque_energie": 255031,
+      "defense_physique": 177611,
+      "defense_energie": 177817,
+      "critique": 4795,
+      "vitesse_regen_ki": 2332,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1516999,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -63426,6 +68720,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/388",
+    "stats_base": {
+      "force": 2473365,
+      "attaque_physique": 266198,
+      "attaque_energie": 258471,
+      "defense_physique": 171611,
+      "defense_energie": 172575,
+      "critique": 4991,
+      "vitesse_regen_ki": 2311,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1528246,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -63890,6 +69202,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/386",
+    "stats_base": {
+      "force": 2398787,
+      "attaque_physique": 252479,
+      "attaque_energie": 239200,
+      "defense_physique": 174018,
+      "defense_energie": 176304,
+      "critique": 5085,
+      "vitesse_regen_ki": 2499,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1510520,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -64056,6 +69386,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/384",
+    "stats_base": {
+      "force": 2388963,
+      "attaque_physique": 254019,
+      "attaque_energie": 253273,
+      "defense_physique": 176255,
+      "defense_energie": 173210,
+      "critique": 4953,
+      "vitesse_regen_ki": 2409,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1513521,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 102,
+      "choc": 103,
+      "explosion": 95
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -64492,6 +69840,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/383",
+    "stats_base": {
+      "force": 2518668,
+      "attaque_physique": 265307,
+      "attaque_energie": 258108,
+      "defense_physique": 171762,
+      "defense_energie": 171928,
+      "critique": 4972,
+      "vitesse_regen_ki": 2385,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1532266,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -64955,6 +70321,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/381",
+    "stats_base": {
+      "force": 2428144,
+      "attaque_physique": 242922,
+      "attaque_energie": 258481,
+      "defense_physique": 174969,
+      "defense_energie": 174804,
+      "critique": 4886,
+      "vitesse_regen_ki": 2283,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1500902,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 97,
+      "choc": 100,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -65136,6 +70520,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/380",
+    "stats_base": {
+      "force": 2448964,
+      "attaque_physique": 267545,
+      "attaque_energie": 255772,
+      "defense_physique": 170122,
+      "defense_energie": 172166,
+      "critique": 4977,
+      "vitesse_regen_ki": 2333,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1523769,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 98,
+      "choc": 100,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -65537,6 +70939,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/379",
+    "stats_base": {
+      "force": 2235972,
+      "attaque_physique": 233428,
+      "attaque_energie": 249212,
+      "defense_physique": 174746,
+      "defense_energie": 175730,
+      "critique": 5123,
+      "vitesse_regen_ki": 2612,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1498330,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -65716,6 +71136,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/378",
+    "stats_base": {
+      "force": 2453334,
+      "attaque_physique": 238365,
+      "attaque_energie": 241350,
+      "defense_physique": 171070,
+      "defense_energie": 173280,
+      "critique": 5123,
+      "vitesse_regen_ki": 2639,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1505120,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -65865,6 +71303,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/377",
+    "stats_base": {
+      "force": 2453210,
+      "attaque_physique": 255311,
+      "attaque_energie": 272267,
+      "defense_physique": 177044,
+      "defense_energie": 177682,
+      "critique": 4868,
+      "vitesse_regen_ki": 2289,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1533101,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 97,
+      "choc": 104,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -66357,6 +71813,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/375",
+    "stats_base": {
+      "force": 2506938,
+      "attaque_physique": 258932,
+      "attaque_energie": 246879,
+      "defense_physique": 186561,
+      "defense_energie": 182840,
+      "critique": 4875,
+      "vitesse_regen_ki": 2321,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531541,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -66861,6 +72335,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/374",
+    "stats_base": {
+      "force": 2629088,
+      "attaque_physique": 239097,
+      "attaque_energie": 239097,
+      "defense_physique": 178512,
+      "defense_energie": 178512,
+      "critique": 4999,
+      "vitesse_regen_ki": 2497,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1514690,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -67010,6 +72502,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/373",
+    "stats_base": {
+      "force": 2384560,
+      "attaque_physique": 244922,
+      "attaque_energie": 262262,
+      "defense_physique": 160025,
+      "defense_energie": 164795,
+      "critique": 4860,
+      "vitesse_regen_ki": 2356,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1481174,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 99,
+      "choc": 98,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -67126,6 +72636,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/371",
+    "stats_base": {
+      "force": 2424372,
+      "attaque_physique": 250850,
+      "attaque_energie": 261103,
+      "defense_physique": 177456,
+      "defense_energie": 176142,
+      "critique": 4796,
+      "vitesse_regen_ki": 2311,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1511925,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 95,
+      "choc": 104,
+      "explosion": 106
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -67579,6 +73107,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/370",
+    "stats_base": {
+      "force": 2527890,
+      "attaque_physique": 269272,
+      "attaque_energie": 258290,
+      "defense_physique": 178082,
+      "defense_energie": 174529,
+      "critique": 4727,
+      "vitesse_regen_ki": 2334,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1531149,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 95,
+      "choc": 104,
+      "explosion": 105
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -68034,7 +73580,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Ki divin",
       "Représentant d'Univers",
       "DBL29-04S",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -68044,6 +73589,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/366",
+    "stats_base": {
+      "force": 2322904,
+      "attaque_physique": 281134,
+      "attaque_energie": 274015,
+      "defense_physique": 164559,
+      "defense_energie": 161891,
+      "critique": 4795,
+      "vitesse_regen_ki": 2574,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1534309,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -68497,6 +74060,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/364",
+    "stats_base": {
+      "force": 2375013,
+      "attaque_physique": 253167,
+      "attaque_energie": 254458,
+      "defense_physique": 174328,
+      "defense_energie": 173689,
+      "critique": 4995,
+      "vitesse_regen_ki": 2322,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1509226,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -68645,6 +74226,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/363",
+    "stats_base": {
+      "force": 2531448,
+      "attaque_physique": 245079,
+      "attaque_energie": 240397,
+      "defense_physique": 179226,
+      "defense_energie": 179232,
+      "critique": 4912,
+      "vitesse_regen_ki": 2335,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1504447,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 98,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -68796,6 +74395,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/350",
+    "stats_base": {
+      "force": 2504208,
+      "attaque_physique": 252958,
+      "attaque_energie": 259853,
+      "defense_physique": 172257,
+      "defense_energie": 173856,
+      "critique": 4252,
+      "vitesse_regen_ki": 2301,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1482921,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -68969,6 +74586,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/349",
+    "stats_base": {
+      "force": 2365531,
+      "attaque_physique": 256759,
+      "attaque_energie": 236369,
+      "defense_physique": 173214,
+      "defense_energie": 170067,
+      "critique": 4920,
+      "vitesse_regen_ki": 2665,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1502761,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 103,
+      "choc": 100,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -69403,6 +75038,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/346",
+    "stats_base": {
+      "force": 2404980,
+      "attaque_physique": 249917,
+      "attaque_energie": 240186,
+      "defense_physique": 179334,
+      "defense_energie": 177196,
+      "critique": 4817,
+      "vitesse_regen_ki": 2360,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1495215,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 102,
+      "choc": 97,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -69854,6 +75507,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/345",
+    "stats_base": {
+      "force": 2159492,
+      "attaque_physique": 249907,
+      "attaque_energie": 247941,
+      "defense_physique": 120181,
+      "defense_energie": 121235,
+      "critique": 5021,
+      "vitesse_regen_ki": 2514,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1389380,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 99,
+      "choc": 105,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -70286,6 +75957,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/344",
+    "stats_base": {
+      "force": 2245653,
+      "attaque_physique": 249917,
+      "attaque_energie": 245904,
+      "defense_physique": 170141,
+      "defense_energie": 168902,
+      "critique": 4802,
+      "vitesse_regen_ki": 2337,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1470924,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 98,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -70435,6 +76124,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/343",
+    "stats_base": {
+      "force": 2304329,
+      "attaque_physique": 253477,
+      "attaque_energie": 233760,
+      "defense_physique": 177505,
+      "defense_energie": 171728,
+      "critique": 4720,
+      "vitesse_regen_ki": 2337,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1472341,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 97,
+      "choc": 103,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -70583,6 +76290,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/342",
+    "stats_base": {
+      "force": 2263947,
+      "attaque_physique": 251903,
+      "attaque_energie": 252054,
+      "defense_physique": 163012,
+      "defense_energie": 163312,
+      "critique": 5222,
+      "vitesse_regen_ki": 2640,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1503710,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -71061,6 +76786,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/341",
+    "stats_base": {
+      "force": 2448977,
+      "attaque_physique": 249168,
+      "attaque_energie": 242093,
+      "defense_physique": 173474,
+      "defense_energie": 179665,
+      "critique": 5032,
+      "vitesse_regen_ki": 2337,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1505515,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -71159,6 +76902,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/340",
+    "stats_base": {
+      "force": 2409421,
+      "attaque_physique": 278197,
+      "attaque_energie": 236461,
+      "defense_physique": 176508,
+      "defense_energie": 171401,
+      "critique": 4977,
+      "vitesse_regen_ki": 2214,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1512145,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -71593,6 +77354,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/339",
+    "stats_base": {
+      "force": 2238513,
+      "attaque_physique": 252033,
+      "attaque_energie": 240563,
+      "defense_physique": 176062,
+      "defense_energie": 181516,
+      "critique": 4939,
+      "vitesse_regen_ki": 2489,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1500208,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -71741,6 +77520,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/338",
+    "stats_base": {
+      "force": 2370908,
+      "attaque_physique": 237846,
+      "attaque_energie": 260019,
+      "defense_physique": 174200,
+      "defense_energie": 175817,
+      "critique": 4866,
+      "vitesse_regen_ki": 2373,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1497292,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -72226,6 +78023,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/337",
+    "stats_base": {
+      "force": 2384977,
+      "attaque_physique": 272123,
+      "attaque_energie": 249217,
+      "defense_physique": 163667,
+      "defense_energie": 167912,
+      "critique": 5032,
+      "vitesse_regen_ki": 2515,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1518667,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 101,
+      "choc": 98,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -72378,6 +78193,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/328",
+    "stats_base": {
+      "force": 2323320,
+      "attaque_physique": 269336,
+      "attaque_energie": 231764,
+      "defense_physique": 178498,
+      "defense_energie": 175925,
+      "critique": 4802,
+      "vitesse_regen_ki": 2566,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1508211,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 104,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -72818,6 +78651,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/327",
+    "stats_base": {
+      "force": 2300922,
+      "attaque_physique": 234420,
+      "attaque_energie": 260684,
+      "defense_physique": 171894,
+      "defense_energie": 175398,
+      "critique": 5018,
+      "vitesse_regen_ki": 2416,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1496890,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -73251,7 +79102,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Saiyan métis",
       "Famille Goku",
       "Représentant d'Univers",
-      "Représentant de l'Univers 7",
       "M",
       "SPARKING",
       "Type énergie",
@@ -73261,6 +79111,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/326",
+    "stats_base": {
+      "force": 2346767,
+      "attaque_physique": 244155,
+      "attaque_energie": 247744,
+      "defense_physique": 170313,
+      "defense_energie": 167527,
+      "critique": 4803,
+      "vitesse_regen_ki": 2316,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1471540,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 97,
+      "choc": 104,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -73358,6 +79226,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/322",
+    "stats_base": {
+      "force": 2377852,
+      "attaque_physique": 250893,
+      "attaque_energie": 262132,
+      "defense_physique": 177060,
+      "defense_energie": 177037,
+      "critique": 4762,
+      "vitesse_regen_ki": 2351,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1510695,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -73763,6 +79649,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/321",
+    "stats_base": {
+      "force": 2479753,
+      "attaque_physique": 256452,
+      "attaque_energie": 253310,
+      "defense_physique": 172918,
+      "defense_energie": 174852,
+      "critique": 4814,
+      "vitesse_regen_ki": 2328,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1509348,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -74200,6 +80104,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/320",
+    "stats_base": {
+      "force": 2519333,
+      "attaque_physique": 245880,
+      "attaque_energie": 265994,
+      "defense_physique": 174017,
+      "defense_energie": 173539,
+      "critique": 4804,
+      "vitesse_regen_ki": 2294,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1511685,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -74663,6 +80585,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/319",
+    "stats_base": {
+      "force": 2545299,
+      "attaque_physique": 232195,
+      "attaque_energie": 256352,
+      "defense_physique": 182608,
+      "defense_energie": 179281,
+      "critique": 4920,
+      "vitesse_regen_ki": 2294,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1510222,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 98,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -74815,6 +80755,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/318",
+    "stats_base": {
+      "force": 2494268,
+      "attaque_physique": 272278,
+      "attaque_energie": 258773,
+      "defense_physique": 173539,
+      "defense_energie": 173240,
+      "critique": 4830,
+      "vitesse_regen_ki": 2429,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536464,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -75283,6 +81241,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/315",
+    "stats_base": {
+      "force": 2519333,
+      "attaque_physique": 234485,
+      "attaque_energie": 262842,
+      "defense_physique": 171650,
+      "defense_energie": 175150,
+      "critique": 4761,
+      "vitesse_regen_ki": 2294,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1494232,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 99,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -75718,6 +81694,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/314",
+    "stats_base": {
+      "force": 2494393,
+      "attaque_physique": 254684,
+      "attaque_energie": 230723,
+      "defense_physique": 176312,
+      "defense_energie": 180930,
+      "critique": 4761,
+      "vitesse_regen_ki": 2317,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1492241,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -75870,6 +81864,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/313",
+    "stats_base": {
+      "force": 2304579,
+      "attaque_physique": 249079,
+      "attaque_energie": 239380,
+      "defense_physique": 177313,
+      "defense_energie": 169672,
+      "critique": 4380,
+      "vitesse_regen_ki": 2375,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1456232,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 104,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -76319,6 +82331,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/311",
+    "stats_base": {
+      "force": 2385225,
+      "attaque_physique": 224496,
+      "attaque_energie": 253809,
+      "defense_physique": 161854,
+      "defense_energie": 167860,
+      "critique": 4900,
+      "vitesse_regen_ki": 2568,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1469834,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 99,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -76468,6 +82498,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/310",
+    "stats_base": {
+      "force": 2469666,
+      "attaque_physique": 249074,
+      "attaque_energie": 259240,
+      "defense_physique": 165141,
+      "defense_energie": 163954,
+      "critique": 4943,
+      "vitesse_regen_ki": 2518,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1504503,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -76617,6 +82665,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/306",
+    "stats_base": {
+      "force": 2370394,
+      "attaque_physique": 246439,
+      "attaque_energie": 260147,
+      "defense_physique": 168199,
+      "defense_energie": 166069,
+      "critique": 4604,
+      "vitesse_regen_ki": 2376,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1477280,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 99,
+      "choc": 105,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -76760,6 +82826,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/305",
+    "stats_base": {
+      "force": 2469664,
+      "attaque_physique": 248342,
+      "attaque_energie": 242101,
+      "defense_physique": 167604,
+      "defense_energie": 167272,
+      "critique": 4579,
+      "vitesse_regen_ki": 2318,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1464213,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 99,
+      "choc": 105,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -77228,6 +83312,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/304",
+    "stats_base": {
+      "force": 2354147,
+      "attaque_physique": 230639,
+      "attaque_energie": 250402,
+      "defense_physique": 172188,
+      "defense_energie": 172188,
+      "critique": 4807,
+      "vitesse_regen_ki": 2632,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1483710,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 97,
+      "choc": 103,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -77624,6 +83726,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/303",
+    "stats_base": {
+      "force": 2356570,
+      "attaque_physique": 248590,
+      "attaque_energie": 251462,
+      "defense_physique": 167022,
+      "defense_energie": 165823,
+      "critique": 5061,
+      "vitesse_regen_ki": 2506,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1497751,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 99,
+      "choc": 101,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -77772,6 +83892,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/302",
+    "stats_base": {
+      "force": 2429674,
+      "attaque_physique": 249157,
+      "attaque_energie": 252317,
+      "defense_physique": 178442,
+      "defense_energie": 179749,
+      "critique": 4788,
+      "vitesse_regen_ki": 2319,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1506393,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 97,
+      "choc": 101,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -78175,6 +84313,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/301",
+    "stats_base": {
+      "force": 2370594,
+      "attaque_physique": 261379,
+      "attaque_energie": 247211,
+      "defense_physique": 163406,
+      "defense_energie": 163411,
+      "critique": 5051,
+      "vitesse_regen_ki": 2519,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1501346,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -78326,6 +84482,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/300",
+    "stats_base": {
+      "force": 2449712,
+      "attaque_physique": 246063,
+      "attaque_energie": 259093,
+      "defense_physique": 171830,
+      "defense_energie": 175317,
+      "critique": 4939,
+      "vitesse_regen_ki": 2389,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1511417,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 103,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -78820,6 +84994,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/299",
+    "stats_base": {
+      "force": 2474197,
+      "attaque_physique": 236110,
+      "attaque_energie": 257636,
+      "defense_physique": 173403,
+      "defense_energie": 175317,
+      "critique": 5117,
+      "vitesse_regen_ki": 2519,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1518612,
+    "resistances": {
+      "tranchant": 94,
+      "perforant": 101,
+      "choc": 104,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -79257,6 +85449,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/298",
+    "stats_base": {
+      "force": 2449594,
+      "attaque_physique": 254103,
+      "attaque_energie": 230639,
+      "defense_physique": 168594,
+      "defense_energie": 169827,
+      "critique": 4560,
+      "vitesse_regen_ki": 2219,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1454819,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -79664,6 +85874,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/297",
+    "stats_base": {
+      "force": 2259921,
+      "attaque_physique": 236590,
+      "attaque_energie": 227820,
+      "defense_physique": 172674,
+      "defense_energie": 172681,
+      "critique": 4561,
+      "vitesse_regen_ki": 2504,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1443076,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 104,
+      "choc": 101,
+      "explosion": 95
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -80098,6 +86326,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/296",
+    "stats_base": {
+      "force": 2449711,
+      "attaque_physique": 233537,
+      "attaque_energie": 242659,
+      "defense_physique": 171411,
+      "defense_energie": 171082,
+      "critique": 4441,
+      "vitesse_regen_ki": 2671,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1467003,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 97,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -80218,6 +86464,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/295",
+    "stats_base": {
+      "force": 2417556,
+      "attaque_physique": 237023,
+      "attaque_energie": 248509,
+      "defense_physique": 163237,
+      "defense_energie": 167751,
+      "critique": 4668,
+      "vitesse_regen_ki": 2557,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1468340,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -80661,6 +86925,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/294",
+    "stats_base": {
+      "force": 2327978,
+      "attaque_physique": 260313,
+      "attaque_energie": 233938,
+      "defense_physique": 174655,
+      "defense_energie": 175619,
+      "critique": 4645,
+      "vitesse_regen_ki": 2396,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1481173,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 96,
+      "choc": 104,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -81090,7 +87372,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers 6",
       "Univers rival",
       "Représentant d'Univers",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type physique",
@@ -81100,6 +87381,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/293",
+    "stats_base": {
+      "force": 2347101,
+      "attaque_physique": 273173,
+      "attaque_energie": 246605,
+      "defense_physique": 167770,
+      "defense_energie": 164425,
+      "critique": 4817,
+      "vitesse_regen_ki": 2343,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1495846,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -81506,6 +87805,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/290",
+    "stats_base": {
+      "force": 2454042,
+      "attaque_physique": 229672,
+      "attaque_energie": 238894,
+      "defense_physique": 176817,
+      "defense_energie": 179780,
+      "critique": 4560,
+      "vitesse_regen_ki": 2456,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1468965,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -81911,6 +88228,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/289",
+    "stats_base": {
+      "force": 2389204,
+      "attaque_physique": 252143,
+      "attaque_energie": 228754,
+      "defense_physique": 175694,
+      "defense_energie": 176380,
+      "critique": 5146,
+      "vitesse_regen_ki": 2490,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1503451,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 98,
+      "choc": 103,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -82315,6 +88650,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/288",
+    "stats_base": {
+      "force": 2360259,
+      "attaque_physique": 245572,
+      "attaque_energie": 254416,
+      "defense_physique": 171954,
+      "defense_energie": 167578,
+      "critique": 4785,
+      "vitesse_regen_ki": 2463,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1488670,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 103,
+      "choc": 100,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -82720,6 +89073,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/287",
+    "stats_base": {
+      "force": 2342661,
+      "attaque_physique": 227151,
+      "attaque_energie": 260313,
+      "defense_physique": 168675,
+      "defense_energie": 172878,
+      "critique": 4466,
+      "vitesse_regen_ki": 2287,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1452244,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 102,
+      "choc": 97,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -83198,6 +89569,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/286",
+    "stats_base": {
+      "force": 2472701,
+      "attaque_physique": 234320,
+      "attaque_energie": 240285,
+      "defense_physique": 171664,
+      "defense_energie": 174860,
+      "critique": 4751,
+      "vitesse_regen_ki": 2324,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1469125,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -83677,6 +90066,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/285",
+    "stats_base": {
+      "force": 2468253,
+      "attaque_physique": 276145,
+      "attaque_energie": 270215,
+      "defense_physique": 174004,
+      "defense_energie": 173682,
+      "critique": 4653,
+      "vitesse_regen_ki": 2324,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1536846,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -84144,6 +90551,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/278",
+    "stats_base": {
+      "force": 2472786,
+      "attaque_physique": 246637,
+      "attaque_energie": 231742,
+      "defense_physique": 170286,
+      "defense_energie": 171550,
+      "critique": 4560,
+      "vitesse_regen_ki": 2378,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1461367,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -84545,6 +90970,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/277",
+    "stats_base": {
+      "force": 2493024,
+      "attaque_physique": 253486,
+      "attaque_energie": 249800,
+      "defense_physique": 169028,
+      "defense_energie": 170279,
+      "critique": 4541,
+      "vitesse_regen_ki": 2402,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1485344,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -84945,6 +91388,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/276",
+    "stats_base": {
+      "force": 2360406,
+      "attaque_physique": 253571,
+      "attaque_energie": 220820,
+      "defense_physique": 172381,
+      "defense_energie": 167686,
+      "critique": 4867,
+      "vitesse_regen_ki": 2514,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1470268,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 104,
+      "choc": 99,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -85374,6 +91835,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/275",
+    "stats_base": {
+      "force": 2369824,
+      "attaque_physique": 252445,
+      "attaque_energie": 263675,
+      "defense_physique": 171357,
+      "defense_energie": 177157,
+      "critique": 4896,
+      "vitesse_regen_ki": 2416,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1517622,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 103,
+      "choc": 100,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -85573,6 +92052,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/273",
+    "stats_base": {
+      "force": 2443659,
+      "attaque_physique": 247013,
+      "attaque_energie": 245867,
+      "defense_physique": 177591,
+      "defense_energie": 178585,
+      "critique": 4379,
+      "vitesse_regen_ki": 2279,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1474266,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 98,
+      "choc": 100,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -86002,6 +92499,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/272",
+    "stats_base": {
+      "force": 2384009,
+      "attaque_physique": 262614,
+      "attaque_energie": 240054,
+      "defense_physique": 176715,
+      "defense_energie": 179874,
+      "critique": 5018,
+      "vitesse_regen_ki": 2404,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1518690,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -86499,6 +93014,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/271",
+    "stats_base": {
+      "force": 2258511,
+      "attaque_physique": 239630,
+      "attaque_energie": 263566,
+      "defense_physique": 173153,
+      "defense_energie": 169986,
+      "critique": 4837,
+      "vitesse_regen_ki": 2325,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1484402,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -86904,6 +93437,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/270",
+    "stats_base": {
+      "force": 2364696,
+      "attaque_physique": 256762,
+      "attaque_energie": 228849,
+      "defense_physique": 171876,
+      "defense_energie": 172827,
+      "critique": 4738,
+      "vitesse_regen_ki": 2527,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1480610,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 99,
+      "explosion": 104
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -87309,6 +93860,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/268",
+    "stats_base": {
+      "force": 2345813,
+      "attaque_physique": 242554,
+      "attaque_energie": 230416,
+      "defense_physique": 170100,
+      "defense_energie": 168067,
+      "critique": 4788,
+      "vitesse_regen_ki": 2246,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1448624,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 97,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -87426,6 +93995,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/266",
+    "stats_base": {
+      "force": 2423941,
+      "attaque_physique": 224749,
+      "attaque_energie": 215635,
+      "defense_physique": 172355,
+      "defense_energie": 178019,
+      "critique": 4969,
+      "vitesse_regen_ki": 2361,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1448254,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -87546,6 +94133,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/265",
+    "stats_base": {
+      "force": 2423944,
+      "attaque_physique": 253279,
+      "attaque_energie": 244492,
+      "defense_physique": 172148,
+      "defense_energie": 173280,
+      "critique": 4258,
+      "vitesse_regen_ki": 2490,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1471595,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 98,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -87997,6 +94602,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/264",
+    "stats_base": {
+      "force": 2478590,
+      "attaque_physique": 250266,
+      "attaque_energie": 247413,
+      "defense_physique": 165910,
+      "defense_energie": 166839,
+      "critique": 4504,
+      "vitesse_regen_ki": 2478,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1474167,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -88431,6 +95054,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/261",
+    "stats_base": {
+      "force": 2428427,
+      "attaque_physique": 255203,
+      "attaque_energie": 251072,
+      "defense_physique": 175359,
+      "defense_energie": 172466,
+      "critique": 4989,
+      "vitesse_regen_ki": 2382,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1513945,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -88575,6 +95216,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/260",
+    "stats_base": {
+      "force": 2380353,
+      "attaque_physique": 228691,
+      "attaque_energie": 252033,
+      "defense_physique": 169618,
+      "defense_energie": 171805,
+      "critique": 4939,
+      "vitesse_regen_ki": 2318,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1473087,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 104,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -88754,6 +95413,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/259",
+    "stats_base": {
+      "force": 2364973,
+      "attaque_physique": 233715,
+      "attaque_energie": 250086,
+      "defense_physique": 171422,
+      "defense_energie": 169194,
+      "critique": 4700,
+      "vitesse_regen_ki": 2479,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1470431,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -88903,6 +95580,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/258",
+    "stats_base": {
+      "force": 2341369,
+      "attaque_physique": 226949,
+      "attaque_energie": 250993,
+      "defense_physique": 161635,
+      "defense_energie": 164941,
+      "critique": 4604,
+      "vitesse_regen_ki": 2416,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1441009,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 104,
+      "explosion": 95
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -89305,6 +96000,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/257",
+    "stats_base": {
+      "force": 2322965,
+      "attaque_physique": 240355,
+      "attaque_energie": 231965,
+      "defense_physique": 158462,
+      "defense_energie": 161075,
+      "critique": 5279,
+      "vitesse_regen_ki": 2215,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1450821,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 101,
+      "choc": 95,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -89448,6 +96161,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/256",
+    "stats_base": {
+      "force": 2439472,
+      "attaque_physique": 264175,
+      "attaque_energie": 244930,
+      "defense_physique": 170025,
+      "defense_energie": 169416,
+      "critique": 4232,
+      "vitesse_regen_ki": 2215,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1462927,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 98,
+      "choc": 101,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -89589,6 +96320,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/255",
+    "stats_base": {
+      "force": 2505713,
+      "attaque_physique": 246868,
+      "attaque_energie": 246513,
+      "defense_physique": 168457,
+      "defense_energie": 166926,
+      "critique": 4543,
+      "vitesse_regen_ki": 2292,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1466961,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -89984,7 +96733,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers rival",
       "Représentant d'Univers",
       "DBL28-05S",
-      "Représentant de l'Univers 6",
       "M",
       "SPARKING",
       "Type énergie",
@@ -89994,6 +96742,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/254",
+    "stats_base": {
+      "force": 2404232,
+      "attaque_physique": 243241,
+      "attaque_energie": 265008,
+      "defense_physique": 172863,
+      "defense_energie": 170022,
+      "critique": 5021,
+      "vitesse_regen_ki": 2351,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1509416,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 99,
+      "explosion": 104
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -90090,6 +96856,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/253",
+    "stats_base": {
+      "force": 2384145,
+      "attaque_physique": 227673,
+      "attaque_energie": 238369,
+      "defense_physique": 177200,
+      "defense_energie": 176512,
+      "critique": 4468,
+      "vitesse_regen_ki": 2381,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1450547,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 100,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -90538,6 +97322,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/252",
+    "stats_base": {
+      "force": 2341416,
+      "attaque_physique": 241012,
+      "attaque_energie": 235024,
+      "defense_physique": 177494,
+      "defense_energie": 175680,
+      "critique": 4740,
+      "vitesse_regen_ki": 2305,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1466954,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -90972,6 +97774,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/251",
+    "stats_base": {
+      "force": 2299421,
+      "attaque_physique": 244293,
+      "attaque_energie": 269425,
+      "defense_physique": 173490,
+      "defense_energie": 174425,
+      "critique": 4111,
+      "vitesse_regen_ki": 2375,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1468627,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 105,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -91415,6 +98235,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/246",
+    "stats_base": {
+      "force": 2345936,
+      "attaque_physique": 247043,
+      "attaque_energie": 223760,
+      "defense_physique": 158628,
+      "defense_energie": 162109,
+      "critique": 4581,
+      "vitesse_regen_ki": 2228,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1417785,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -91534,6 +98372,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/245",
+    "stats_base": {
+      "force": 2252234,
+      "attaque_physique": 228279,
+      "attaque_energie": 226125,
+      "defense_physique": 159126,
+      "defense_energie": 164429,
+      "critique": 4993,
+      "vitesse_regen_ki": 2480,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1431157,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 104,
+      "choc": 98,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -91649,6 +98505,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/244",
+    "stats_base": {
+      "force": 2322691,
+      "attaque_physique": 223353,
+      "attaque_energie": 244805,
+      "defense_physique": 177702,
+      "defense_energie": 177528,
+      "critique": 4399,
+      "vitesse_regen_ki": 2570,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1456084,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 105,
+      "choc": 101,
+      "explosion": 94
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -91794,6 +98668,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/243",
+    "stats_base": {
+      "force": 2468884,
+      "attaque_physique": 242521,
+      "attaque_energie": 246762,
+      "defense_physique": 175404,
+      "defense_energie": 176206,
+      "critique": 4406,
+      "vitesse_regen_ki": 2295,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1469935,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -92200,6 +99092,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/242",
+    "stats_base": {
+      "force": 2360824,
+      "attaque_physique": 253537,
+      "attaque_energie": 240613,
+      "defense_physique": 175899,
+      "defense_energie": 172375,
+      "critique": 4316,
+      "vitesse_regen_ki": 2443,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1467162,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 103,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -92658,6 +99568,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/241",
+    "stats_base": {
+      "force": 2341894,
+      "attaque_physique": 228721,
+      "attaque_energie": 249694,
+      "defense_physique": 175666,
+      "defense_energie": 175360,
+      "critique": 4592,
+      "vitesse_regen_ki": 2545,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1471817,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -93120,6 +100048,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/240",
+    "stats_base": {
+      "force": 2461098,
+      "attaque_physique": 247220,
+      "attaque_energie": 231660,
+      "defense_physique": 174358,
+      "defense_energie": 176968,
+      "critique": 4077,
+      "vitesse_regen_ki": 2342,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1444629,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -93555,6 +100501,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/238",
+    "stats_base": {
+      "force": 2318301,
+      "attaque_physique": 245252,
+      "attaque_energie": 229061,
+      "defense_physique": 175975,
+      "defense_energie": 175666,
+      "critique": 4659,
+      "vitesse_regen_ki": 2354,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1460557,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 98,
+      "choc": 102,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -93673,6 +100637,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/237",
+    "stats_base": {
+      "force": 2346952,
+      "attaque_physique": 266158,
+      "attaque_energie": 224737,
+      "defense_physique": 157732,
+      "defense_energie": 161174,
+      "critique": 5415,
+      "vitesse_regen_ki": 2509,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1491864,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -94153,6 +101135,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/236",
+    "stats_base": {
+      "force": 2396573,
+      "attaque_physique": 249260,
+      "attaque_energie": 225248,
+      "defense_physique": 158933,
+      "defense_energie": 159436,
+      "critique": 4807,
+      "vitesse_regen_ki": 2472,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1445998,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -94550,7 +101550,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Filles",
       "Représentant d'Univers",
       "Porteur d'arme",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type assistance",
@@ -94560,6 +101559,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/230",
+    "stats_base": {
+      "force": 2404647,
+      "attaque_physique": 247255,
+      "attaque_energie": 238738,
+      "defense_physique": 160025,
+      "defense_energie": 165234,
+      "critique": 5109,
+      "vitesse_regen_ki": 2716,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1492211,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 105,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -94706,6 +101723,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/229",
+    "stats_base": {
+      "force": 2337478,
+      "attaque_physique": 226419,
+      "attaque_energie": 226060,
+      "defense_physique": 169915,
+      "defense_energie": 169915,
+      "critique": 4266,
+      "vitesse_regen_ki": 2649,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1423290,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -94875,6 +101910,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/228",
+    "stats_base": {
+      "force": 2444645,
+      "attaque_physique": 253869,
+      "attaque_energie": 199624,
+      "defense_physique": 170290,
+      "defense_energie": 168433,
+      "critique": 4776,
+      "vitesse_regen_ki": 2244,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1435592,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 99,
+      "choc": 105,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -95045,6 +102098,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/227",
+    "stats_base": {
+      "force": 2361047,
+      "attaque_physique": 230508,
+      "attaque_energie": 255905,
+      "defense_physique": 164158,
+      "defense_energie": 169051,
+      "critique": 4430,
+      "vitesse_regen_ki": 2369,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1446375,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -95218,6 +102289,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/226",
+    "stats_base": {
+      "force": 2318549,
+      "attaque_physique": 257941,
+      "attaque_energie": 220414,
+      "defense_physique": 160244,
+      "defense_energie": 157047,
+      "critique": 4730,
+      "vitesse_regen_ki": 2423,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1437265,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 98,
+      "choc": 105,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -95335,6 +102424,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/225",
+    "stats_base": {
+      "force": 2404968,
+      "attaque_physique": 251116,
+      "attaque_energie": 228928,
+      "defense_physique": 174733,
+      "defense_energie": 171548,
+      "critique": 4980,
+      "vitesse_regen_ki": 2299,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1480006,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -95480,6 +102587,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/224",
+    "stats_base": {
+      "force": 2429092,
+      "attaque_physique": 254038,
+      "attaque_energie": 231164,
+      "defense_physique": 167266,
+      "defense_energie": 164555,
+      "critique": 5431,
+      "vitesse_regen_ki": 2562,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1508012,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -95899,6 +103024,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/220",
+    "stats_base": {
+      "force": 2311637,
+      "attaque_physique": 230548,
+      "attaque_energie": 257371,
+      "defense_physique": 162561,
+      "defense_energie": 163743,
+      "critique": 4507,
+      "vitesse_regen_ki": 2336,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1439882,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 100,
+      "choc": 102,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -96349,6 +103492,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/219",
+    "stats_base": {
+      "force": 2445644,
+      "attaque_physique": 238373,
+      "attaque_energie": 240232,
+      "defense_physique": 174774,
+      "defense_energie": 179034,
+      "critique": 4425,
+      "vitesse_regen_ki": 2301,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1461155,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 102,
+      "choc": 98,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -96731,6 +103892,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/218",
+    "stats_base": {
+      "force": 2300086,
+      "attaque_physique": 247616,
+      "attaque_energie": 258568,
+      "defense_physique": 165379,
+      "defense_energie": 161828,
+      "critique": 4852,
+      "vitesse_regen_ki": 2290,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1473230,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -97112,6 +104291,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/217",
+    "stats_base": {
+      "force": 2342310,
+      "attaque_physique": 254485,
+      "attaque_energie": 235738,
+      "defense_physique": 161518,
+      "defense_energie": 161818,
+      "critique": 5388,
+      "vitesse_regen_ki": 2324,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1484713,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -97542,6 +104739,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/216",
+    "stats_base": {
+      "force": 2342287,
+      "attaque_physique": 243103,
+      "attaque_energie": 247344,
+      "defense_physique": 171007,
+      "defense_energie": 165015,
+      "critique": 4808,
+      "vitesse_regen_ki": 2280,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1466421,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 101,
+      "choc": 103,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -97970,6 +105185,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/215",
+    "stats_base": {
+      "force": 2400824,
+      "attaque_physique": 249838,
+      "attaque_energie": 231704,
+      "defense_physique": 167438,
+      "defense_energie": 167759,
+      "critique": 4320,
+      "vitesse_regen_ki": 2462,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1445293,
+    "resistances": {
+      "tranchant": 93,
+      "perforant": 102,
+      "choc": 105,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -98117,6 +105350,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/213",
+    "stats_base": {
+      "force": 2176888,
+      "attaque_physique": 221026,
+      "attaque_energie": 247708,
+      "defense_physique": 163968,
+      "defense_energie": 166979,
+      "critique": 4230,
+      "vitesse_regen_ki": 2428,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1407106,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 98,
+      "choc": 101,
+      "explosion": 102
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -98522,6 +105773,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/208",
+    "stats_base": {
+      "force": 2449177,
+      "attaque_physique": 227855,
+      "attaque_energie": 231787,
+      "defense_physique": 164804,
+      "defense_energie": 166307,
+      "critique": 5072,
+      "vitesse_regen_ki": 2540,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1464031,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -98925,6 +106194,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/207",
+    "stats_base": {
+      "force": 2445059,
+      "attaque_physique": 240096,
+      "attaque_energie": 227582,
+      "defense_physique": 175339,
+      "defense_energie": 172154,
+      "critique": 4459,
+      "vitesse_regen_ki": 2428,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1451924,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 96,
+      "choc": 100,
+      "explosion": 104
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -99355,6 +106642,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/206",
+    "stats_base": {
+      "force": 2361461,
+      "attaque_physique": 228302,
+      "attaque_energie": 227954,
+      "defense_physique": 173076,
+      "defense_energie": 170706,
+      "critique": 4651,
+      "vitesse_regen_ki": 2629,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1450868,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 100,
+      "choc": 102,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -99784,6 +107089,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/205",
+    "stats_base": {
+      "force": 2424914,
+      "attaque_physique": 243269,
+      "attaque_energie": 232963,
+      "defense_physique": 173435,
+      "defense_energie": 178275,
+      "critique": 3975,
+      "vitesse_regen_ki": 2452,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1440352,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 97
+    },
+    "delaiRemplacement": 12,
     "zAbilities": [
       {
         "tier": 1,
@@ -100188,6 +107511,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/204",
+    "stats_base": {
+      "force": 2365779,
+      "attaque_physique": 243260,
+      "attaque_energie": 256770,
+      "defense_physique": 164574,
+      "defense_energie": 169468,
+      "critique": 4785,
+      "vitesse_regen_ki": 2304,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1475640,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 97,
+      "choc": 105,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -100591,6 +107932,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/201",
+    "stats_base": {
+      "force": 2405464,
+      "attaque_physique": 210794,
+      "attaque_energie": 206525,
+      "defense_physique": 140572,
+      "defense_energie": 143464,
+      "critique": 4373,
+      "vitesse_regen_ki": 2696,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1344569,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -100706,6 +108065,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/200",
+    "stats_base": {
+      "force": 2219399,
+      "attaque_physique": 256025,
+      "attaque_energie": 258909,
+      "defense_physique": 166014,
+      "defense_energie": 162162,
+      "critique": 4126,
+      "vitesse_regen_ki": 2127,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1433119,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -101156,6 +108533,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/199",
+    "stats_base": {
+      "force": 2153543,
+      "attaque_physique": 244103,
+      "attaque_energie": 228328,
+      "defense_physique": 180205,
+      "defense_energie": 177549,
+      "critique": 4041,
+      "vitesse_regen_ki": 2417,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1426054,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 99,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -101560,6 +108955,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/198",
+    "stats_base": {
+      "force": 2237481,
+      "attaque_physique": 258543,
+      "attaque_energie": 228477,
+      "defense_physique": 170558,
+      "defense_energie": 169937,
+      "critique": 4833,
+      "vitesse_regen_ki": 2185,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1456980,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -101735,6 +109148,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/193",
+    "stats_base": {
+      "force": 2281945,
+      "attaque_physique": 229975,
+      "attaque_energie": 211808,
+      "defense_physique": 166187,
+      "defense_energie": 162322,
+      "critique": 4396,
+      "vitesse_regen_ki": 2230,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1383121,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 104,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -102141,6 +109572,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/192",
+    "stats_base": {
+      "force": 2278327,
+      "attaque_physique": 237004,
+      "attaque_energie": 248123,
+      "defense_physique": 162322,
+      "defense_energie": 162632,
+      "critique": 4792,
+      "vitesse_regen_ki": 2241,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1443019,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -102570,6 +110019,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/191",
+    "stats_base": {
+      "force": 2362159,
+      "attaque_physique": 244138,
+      "attaque_energie": 259077,
+      "defense_physique": 170641,
+      "defense_energie": 169085,
+      "critique": 5268,
+      "vitesse_regen_ki": 2285,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1507468,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 95,
+      "choc": 106,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -102976,6 +110443,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/190",
+    "stats_base": {
+      "force": 2335315,
+      "attaque_physique": 255066,
+      "attaque_energie": 237077,
+      "defense_physique": 163581,
+      "defense_energie": 164465,
+      "critique": 5101,
+      "vitesse_regen_ki": 2331,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1476876,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 98,
+      "choc": 105,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -103379,6 +110864,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/189",
+    "stats_base": {
+      "force": 2381104,
+      "attaque_physique": 246627,
+      "attaque_energie": 226178,
+      "defense_physique": 162100,
+      "defense_energie": 160633,
+      "critique": 4279,
+      "vitesse_regen_ki": 2130,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1404128,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 96,
+      "choc": 101,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -103807,6 +111310,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/188",
+    "stats_base": {
+      "force": 2260224,
+      "attaque_physique": 226526,
+      "attaque_energie": 236713,
+      "defense_physique": 159480,
+      "defense_energie": 164646,
+      "critique": 4464,
+      "vitesse_regen_ki": 2480,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1414646,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 100,
+      "choc": 97,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -103924,6 +111445,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/187",
+    "stats_base": {
+      "force": 2242037,
+      "attaque_physique": 238955,
+      "attaque_energie": 256739,
+      "defense_physique": 157368,
+      "defense_energie": 154082,
+      "critique": 5193,
+      "vitesse_regen_ki": 2141,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1452713,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 103,
+      "choc": 101,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -104380,6 +111919,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/186",
+    "stats_base": {
+      "force": 2280454,
+      "attaque_physique": 255524,
+      "attaque_energie": 232421,
+      "defense_physique": 158783,
+      "defense_energie": 157644,
+      "critique": 4488,
+      "vitesse_regen_ki": 2449,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1432652,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 98,
+      "choc": 105,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -104784,6 +112341,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/185",
+    "stats_base": {
+      "force": 2276831,
+      "attaque_physique": 252361,
+      "attaque_energie": 214511,
+      "defense_physique": 156149,
+      "defense_energie": 153009,
+      "critique": 5529,
+      "vitesse_regen_ki": 2437,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1455518,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -105211,6 +112786,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/184",
+    "stats_base": {
+      "force": 2352903,
+      "attaque_physique": 250306,
+      "attaque_energie": 225649,
+      "defense_physique": 161890,
+      "defense_energie": 163930,
+      "critique": 4233,
+      "vitesse_regen_ki": 2449,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1422135,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -105330,6 +112923,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/183",
+    "stats_base": {
+      "force": 2222455,
+      "attaque_physique": 228479,
+      "attaque_energie": 246264,
+      "defense_physique": 170391,
+      "defense_energie": 166673,
+      "critique": 4025,
+      "vitesse_regen_ki": 2324,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1406820,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -105451,6 +113062,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/180",
+    "stats_base": {
+      "force": 2258626,
+      "attaque_physique": 227797,
+      "attaque_energie": 244378,
+      "defense_physique": 166141,
+      "defense_energie": 167083,
+      "critique": 4628,
+      "vitesse_regen_ki": 2489,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1441224,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 101,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -105638,6 +113267,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/179",
+    "stats_base": {
+      "force": 2322381,
+      "attaque_physique": 260099,
+      "attaque_energie": 220820,
+      "defense_physique": 170800,
+      "defense_energie": 169243,
+      "critique": 4362,
+      "vitesse_regen_ki": 2290,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1437787,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -105824,6 +113471,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/177",
+    "stats_base": {
+      "force": 2452751,
+      "attaque_physique": 252776,
+      "attaque_energie": 265698,
+      "defense_physique": 171108,
+      "defense_energie": 175594,
+      "critique": 4326,
+      "vitesse_regen_ki": 2629,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1505842,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 101,
+      "choc": 99,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -106263,6 +113928,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/176",
+    "stats_base": {
+      "force": 2233808,
+      "attaque_physique": 242627,
+      "attaque_energie": 215684,
+      "defense_physique": 160727,
+      "defense_energie": 163372,
+      "critique": 5219,
+      "vitesse_regen_ki": 2373,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1440330,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -106406,6 +114089,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/175",
+    "stats_base": {
+      "force": 2189099,
+      "attaque_physique": 207534,
+      "attaque_energie": 237779,
+      "defense_physique": 154034,
+      "defense_energie": 157392,
+      "critique": 4101,
+      "vitesse_regen_ki": 2655,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1369878,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 96
+    },
+    "delaiRemplacement": 8,
     "zAbilities": [
       {
         "tier": 1,
@@ -106834,6 +114535,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/174",
+    "stats_base": {
+      "force": 2197852,
+      "attaque_physique": 233163,
+      "attaque_energie": 235349,
+      "defense_physique": 154907,
+      "defense_energie": 156820,
+      "critique": 4561,
+      "vitesse_regen_ki": 2415,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1404962,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 100,
+      "choc": 99,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -107264,6 +114983,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/173",
+    "stats_base": {
+      "force": 2472870,
+      "attaque_physique": 252606,
+      "attaque_energie": 230177,
+      "defense_physique": 166926,
+      "defense_energie": 171289,
+      "critique": 3855,
+      "vitesse_regen_ki": 2292,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1422606,
+    "resistances": {
+      "tranchant": 105,
+      "perforant": 97,
+      "choc": 98,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -107402,7 +115139,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers rival",
       "Représentant d'Univers",
       "DBL09-03S",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type physique",
@@ -107412,6 +115148,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/172",
+    "stats_base": {
+      "force": 2240708,
+      "attaque_physique": 259112,
+      "attaque_energie": 223439,
+      "defense_physique": 164997,
+      "defense_energie": 161680,
+      "critique": 4097,
+      "vitesse_regen_ki": 2146,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1400158,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 104
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -107818,6 +115572,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/169",
+    "stats_base": {
+      "force": 2030932,
+      "attaque_physique": 208863,
+      "attaque_energie": 170232,
+      "defense_physique": 148303,
+      "defense_energie": 150732,
+      "critique": 4229,
+      "vitesse_regen_ki": 1778,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1243275,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -108223,6 +115995,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/168",
+    "stats_base": {
+      "force": 2236226,
+      "attaque_physique": 251544,
+      "attaque_energie": 235568,
+      "defense_physique": 158298,
+      "defense_energie": 159462,
+      "critique": 4841,
+      "vitesse_regen_ki": 2260,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1438403,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 99,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -108652,6 +116442,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/167",
+    "stats_base": {
+      "force": 2365722,
+      "attaque_physique": 224503,
+      "attaque_energie": 241866,
+      "defense_physique": 163452,
+      "defense_energie": 164652,
+      "critique": 4036,
+      "vitesse_regen_ki": 2227,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1394737,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 97,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -108797,6 +116605,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/166",
+    "stats_base": {
+      "force": 2353425,
+      "attaque_physique": 221648,
+      "attaque_energie": 246585,
+      "defense_physique": 156954,
+      "defense_energie": 155515,
+      "critique": 4715,
+      "vitesse_regen_ki": 2147,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1410097,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 104,
+      "choc": 100,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -109226,6 +117052,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/165",
+    "stats_base": {
+      "force": 2365057,
+      "attaque_physique": 235041,
+      "attaque_energie": 227567,
+      "defense_physique": 155095,
+      "defense_energie": 159107,
+      "critique": 4274,
+      "vitesse_regen_ki": 2227,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1388930,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 103,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -109322,6 +117166,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/164",
+    "stats_base": {
+      "force": 2444231,
+      "attaque_physique": 224141,
+      "attaque_energie": 245512,
+      "defense_physique": 157751,
+      "defense_energie": 155178,
+      "critique": 4662,
+      "vitesse_regen_ki": 2556,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1435830,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -109750,6 +117612,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/163",
+    "stats_base": {
+      "force": 2576544,
+      "attaque_physique": 266841,
+      "attaque_energie": 230205,
+      "defense_physique": 178669,
+      "defense_energie": 177349,
+      "critique": 4972,
+      "vitesse_regen_ki": 2358,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1520733,
+    "resistances": {
+      "tranchant": 104,
+      "perforant": 98,
+      "choc": 98,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -109918,6 +117798,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/162",
+    "stats_base": {
+      "force": 2337145,
+      "attaque_physique": 227480,
+      "attaque_energie": 229252,
+      "defense_physique": 166779,
+      "defense_energie": 169876,
+      "critique": 4152,
+      "vitesse_regen_ki": 2340,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1403196,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 100,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -110060,6 +117958,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/160",
+    "stats_base": {
+      "force": 2360713,
+      "attaque_physique": 213517,
+      "attaque_energie": 238973,
+      "defense_physique": 168872,
+      "defense_energie": 166563,
+      "critique": 3920,
+      "vitesse_regen_ki": 2117,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1376555,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -110137,6 +118053,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/157",
+    "stats_base": {
+      "force": 2327009,
+      "attaque_physique": 244814,
+      "attaque_energie": 230748,
+      "defense_physique": 166557,
+      "defense_energie": 168399,
+      "critique": 4550,
+      "vitesse_regen_ki": 2295,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1437301,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 105,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -110255,6 +118189,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/152",
+    "stats_base": {
+      "force": 2299749,
+      "attaque_physique": 217720,
+      "attaque_energie": 215709,
+      "defense_physique": 160311,
+      "defense_energie": 158840,
+      "critique": 4592,
+      "vitesse_regen_ki": 2609,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1395346,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 98,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -110655,6 +118607,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/151",
+    "stats_base": {
+      "force": 2198527,
+      "attaque_physique": 248099,
+      "attaque_energie": 228376,
+      "defense_physique": 158707,
+      "defense_energie": 160599,
+      "critique": 4373,
+      "vitesse_regen_ki": 2220,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1401399,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -111084,6 +119054,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/150",
+    "stats_base": {
+      "force": 2353508,
+      "attaque_physique": 223668,
+      "attaque_energie": 224018,
+      "defense_physique": 169198,
+      "defense_energie": 165510,
+      "critique": 4421,
+      "vitesse_regen_ki": 2320,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1405744,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -111445,6 +119433,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/149",
+    "stats_base": {
+      "force": 2452148,
+      "attaque_physique": 219898,
+      "attaque_energie": 223337,
+      "defense_physique": 167196,
+      "defense_energie": 168424,
+      "critique": 5053,
+      "vitesse_regen_ki": 2385,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1443631,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 99,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -111876,6 +119882,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/148",
+    "stats_base": {
+      "force": 2360991,
+      "attaque_physique": 246120,
+      "attaque_energie": 234919,
+      "defense_physique": 156867,
+      "defense_energie": 159438,
+      "critique": 4088,
+      "vitesse_regen_ki": 2231,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1400093,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 100,
+      "choc": 103,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -112306,6 +120330,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/147",
+    "stats_base": {
+      "force": 2277582,
+      "attaque_physique": 242192,
+      "attaque_energie": 219945,
+      "defense_physique": 158384,
+      "defense_energie": 155220,
+      "critique": 4391,
+      "vitesse_regen_ki": 2152,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1384129,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -112705,6 +120747,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/145",
+    "stats_base": {
+      "force": 2176631,
+      "attaque_physique": 218617,
+      "attaque_energie": 241848,
+      "defense_physique": 161106,
+      "defense_energie": 159533,
+      "critique": 4464,
+      "vitesse_regen_ki": 2385,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1398062,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 103,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -113163,6 +121223,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/144",
+    "stats_base": {
+      "force": 2223205,
+      "attaque_physique": 233878,
+      "attaque_energie": 250148,
+      "defense_physique": 151469,
+      "defense_energie": 159525,
+      "critique": 4220,
+      "vitesse_regen_ki": 2231,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1395183,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 105,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -113306,6 +121384,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/143",
+    "stats_base": {
+      "force": 2218899,
+      "attaque_physique": 250617,
+      "attaque_energie": 234694,
+      "defense_physique": 159310,
+      "defense_energie": 158879,
+      "critique": 4307,
+      "vitesse_regen_ki": 2121,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1402226,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 103,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -113716,6 +121812,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/142",
+    "stats_base": {
+      "force": 2169455,
+      "attaque_physique": 242663,
+      "attaque_energie": 201641,
+      "defense_physique": 151543,
+      "defense_energie": 143327,
+      "critique": 4067,
+      "vitesse_regen_ki": 2187,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1325904,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -113861,6 +121975,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/141",
+    "stats_base": {
+      "force": 2147770,
+      "attaque_physique": 218395,
+      "attaque_energie": 243711,
+      "defense_physique": 148492,
+      "defense_energie": 147974,
+      "critique": 3341,
+      "vitesse_regen_ki": 2077,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1302056,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -114005,6 +122137,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/140",
+    "stats_base": {
+      "force": 2429007,
+      "attaque_physique": 227166,
+      "attaque_energie": 231081,
+      "defense_physique": 174302,
+      "defense_energie": 174924,
+      "critique": 4508,
+      "vitesse_regen_ki": 2423,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1445356,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 103,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -114406,6 +122556,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/133",
+    "stats_base": {
+      "force": 2342200,
+      "attaque_physique": 244008,
+      "attaque_energie": 206368,
+      "defense_physique": 165223,
+      "defense_energie": 162546,
+      "critique": 4115,
+      "vitesse_regen_ki": 2180,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1378441,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 98,
+      "choc": 100,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -114578,6 +122746,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/131",
+    "stats_base": {
+      "force": 2337727,
+      "attaque_physique": 229824,
+      "attaque_energie": 229468,
+      "defense_physique": 177705,
+      "defense_energie": 176074,
+      "critique": 4527,
+      "vitesse_regen_ki": 2488,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1449069,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -114716,7 +122902,6 @@ window.DBL_CHARACTERS_SCRAPED = [
       "Univers rival",
       "Représentant d'Univers",
       "DBL09-04S",
-      "Représentant de l'Univers 6",
       "F",
       "SPARKING",
       "Type défense",
@@ -114726,6 +122911,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/128",
+    "stats_base": {
+      "force": 2381183,
+      "attaque_physique": 224482,
+      "attaque_energie": 237395,
+      "defense_physique": 176021,
+      "defense_energie": 172835,
+      "critique": 4572,
+      "vitesse_regen_ki": 2124,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1433678,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 100,
+      "choc": 103,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -115130,6 +123333,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/127",
+    "stats_base": {
+      "force": 2469416,
+      "attaque_physique": 224097,
+      "attaque_energie": 225842,
+      "defense_physique": 164548,
+      "defense_energie": 166835,
+      "critique": 3821,
+      "vitesse_regen_ki": 2403,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1386549,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -115533,6 +123754,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/126",
+    "stats_base": {
+      "force": 2177145,
+      "attaque_physique": 213839,
+      "attaque_energie": 244538,
+      "defense_physique": 162405,
+      "defense_energie": 165710,
+      "critique": 4466,
+      "vitesse_regen_ki": 2415,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1405085,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 104,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -115933,6 +124172,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/125",
+    "stats_base": {
+      "force": 2126124,
+      "attaque_physique": 235501,
+      "attaque_energie": 210314,
+      "defense_physique": 162654,
+      "defense_energie": 155719,
+      "critique": 4467,
+      "vitesse_regen_ki": 2183,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1367829,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 103,
+      "choc": 101,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -116395,6 +124652,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/124",
+    "stats_base": {
+      "force": 2237134,
+      "attaque_physique": 232543,
+      "attaque_energie": 244621,
+      "defense_physique": 156267,
+      "defense_energie": 158003,
+      "critique": 4505,
+      "vitesse_regen_ki": 2205,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1405476,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 103,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -116798,6 +125073,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/123",
+    "stats_base": {
+      "force": 2389628,
+      "attaque_physique": 236038,
+      "attaque_energie": 227847,
+      "defense_physique": 159493,
+      "defense_energie": 163610,
+      "critique": 4104,
+      "vitesse_regen_ki": 2260,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1393896,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -116912,6 +125205,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/115",
+    "stats_base": {
+      "force": 1739469,
+      "attaque_physique": 134204,
+      "attaque_energie": 133011,
+      "defense_physique": 139545,
+      "defense_energie": 141326,
+      "critique": 3914,
+      "vitesse_regen_ki": 2209,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1099600,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -116968,6 +125279,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/113",
+    "stats_base": {
+      "force": 2322296,
+      "attaque_physique": 220944,
+      "attaque_energie": 225105,
+      "defense_physique": 174436,
+      "defense_energie": 171548,
+      "critique": 4312,
+      "vitesse_regen_ki": 2289,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1406302,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 104,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -117398,6 +125727,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/112",
+    "stats_base": {
+      "force": 2158707,
+      "attaque_physique": 253433,
+      "attaque_energie": 249125,
+      "defense_physique": 151419,
+      "defense_energie": 146294,
+      "critique": 4361,
+      "vitesse_regen_ki": 2213,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1402284,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 102,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -117779,6 +126126,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/111",
+    "stats_base": {
+      "force": 2365151,
+      "attaque_physique": 233764,
+      "attaque_energie": 203073,
+      "defense_physique": 155328,
+      "defense_energie": 155518,
+      "critique": 3582,
+      "vitesse_regen_ki": 2154,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1321559,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 99,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -118181,6 +126546,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/109",
+    "stats_base": {
+      "force": 1890008,
+      "attaque_physique": 248973,
+      "attaque_energie": 183197,
+      "defense_physique": 150490,
+      "defense_energie": 149871,
+      "critique": 4477,
+      "vitesse_regen_ki": 1607,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1292131,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -118544,6 +126927,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/108",
+    "stats_base": {
+      "force": 2150067,
+      "attaque_physique": 226189,
+      "attaque_energie": 240420,
+      "defense_physique": 151252,
+      "defense_energie": 151244,
+      "critique": 3655,
+      "vitesse_regen_ki": 2154,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1332292,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 103,
+      "choc": 103,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -118944,6 +127345,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/107",
+    "stats_base": {
+      "force": 2218313,
+      "attaque_physique": 239454,
+      "attaque_energie": 221867,
+      "defense_physique": 153062,
+      "defense_energie": 155276,
+      "critique": 4025,
+      "vitesse_regen_ki": 2440,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1370196,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 101,
+      "choc": 102,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -119116,6 +127535,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/101",
+    "stats_base": {
+      "force": 2240262,
+      "attaque_physique": 186121,
+      "attaque_energie": 217129,
+      "defense_physique": 150177,
+      "defense_energie": 147159,
+      "critique": 3693,
+      "vitesse_regen_ki": 2539,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1290936,
+    "resistances": {
+      "tranchant": 95,
+      "perforant": 101,
+      "choc": 105,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -119287,6 +127724,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/97",
+    "stats_base": {
+      "force": 2341785,
+      "attaque_physique": 215706,
+      "attaque_energie": 248099,
+      "defense_physique": 161900,
+      "defense_energie": 160727,
+      "critique": 4021,
+      "vitesse_regen_ki": 2253,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1385651,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -119714,6 +128169,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/95",
+    "stats_base": {
+      "force": 2490086,
+      "attaque_physique": 219832,
+      "attaque_energie": 156308,
+      "defense_physique": 170852,
+      "defense_energie": 174353,
+      "critique": 3850,
+      "vitesse_regen_ki": 1994,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1308950,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 103,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -120116,6 +128589,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/94",
+    "stats_base": {
+      "force": 2276536,
+      "attaque_physique": 197212,
+      "attaque_energie": 243600,
+      "defense_physique": 150234,
+      "defense_energie": 150177,
+      "critique": 3642,
+      "vitesse_regen_ki": 2308,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1319892,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 100,
+      "choc": 102,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -120517,6 +129008,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/93",
+    "stats_base": {
+      "force": 2289889,
+      "attaque_physique": 196325,
+      "attaque_energie": 237466,
+      "defense_physique": 145095,
+      "defense_energie": 152629,
+      "critique": 3659,
+      "vitesse_regen_ki": 2133,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1303174,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -120879,6 +129388,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/82",
+    "stats_base": {
+      "force": 2248556,
+      "attaque_physique": 230797,
+      "attaque_energie": 255940,
+      "defense_physique": 158196,
+      "defense_energie": 159612,
+      "critique": 4511,
+      "vitesse_regen_ki": 2440,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1431398,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 98,
+      "choc": 99,
+      "explosion": 104
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -120975,6 +129502,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/81",
+    "stats_base": {
+      "force": 2389547,
+      "attaque_physique": 215059,
+      "attaque_energie": 256770,
+      "defense_physique": 162518,
+      "defense_energie": 163565,
+      "critique": 4192,
+      "vitesse_regen_ki": 2528,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1422615,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 99,
+      "choc": 98,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -121150,6 +129695,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/80",
+    "stats_base": {
+      "force": 2025301,
+      "attaque_physique": 247895,
+      "attaque_energie": 179400,
+      "defense_physique": 144837,
+      "defense_energie": 139258,
+      "critique": 4391,
+      "vitesse_regen_ki": 2062,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1298460,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 99,
+      "choc": 102,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -121551,6 +130114,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/79",
+    "stats_base": {
+      "force": 2127782,
+      "attaque_physique": 238645,
+      "attaque_energie": 215997,
+      "defense_physique": 162002,
+      "defense_energie": 151301,
+      "critique": 4720,
+      "vitesse_regen_ki": 2357,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1393047,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 96,
+      "choc": 98,
+      "explosion": 104
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -121950,6 +130531,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/78",
+    "stats_base": {
+      "force": 2506348,
+      "attaque_physique": 229419,
+      "attaque_energie": 198188,
+      "defense_physique": 156745,
+      "defense_energie": 156455,
+      "critique": 3474,
+      "vitesse_regen_ki": 1779,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1299946,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -122067,6 +130666,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/77",
+    "stats_base": {
+      "force": 2366264,
+      "attaque_physique": 227757,
+      "attaque_energie": 244931,
+      "defense_physique": 163410,
+      "defense_energie": 163405,
+      "critique": 4712,
+      "vitesse_regen_ki": 2329,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1438703,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 105,
+      "choc": 98,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -122500,6 +131117,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/76",
+    "stats_base": {
+      "force": 2155732,
+      "attaque_physique": 246800,
+      "attaque_energie": 209042,
+      "defense_physique": 154917,
+      "defense_energie": 153213,
+      "critique": 4566,
+      "vitesse_regen_ki": 2365,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1383637,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 98,
+      "choc": 100,
+      "explosion": 103
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -122964,6 +131599,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/75",
+    "stats_base": {
+      "force": 2248824,
+      "attaque_physique": 228701,
+      "attaque_energie": 200036,
+      "defense_physique": 167385,
+      "defense_energie": 169401,
+      "critique": 3727,
+      "vitesse_regen_ki": 1779,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1320144,
+    "resistances": {
+      "tranchant": 98,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -123366,6 +132019,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/66",
+    "stats_base": {
+      "force": 2334436,
+      "attaque_physique": 227603,
+      "attaque_energie": 243751,
+      "defense_physique": 163092,
+      "defense_energie": 167034,
+      "critique": 4194,
+      "vitesse_regen_ki": 2170,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1404709,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 100,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -123768,6 +132439,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/63",
+    "stats_base": {
+      "force": 1943871,
+      "attaque_physique": 226929,
+      "attaque_energie": 196325,
+      "defense_physique": 146417,
+      "defense_energie": 153411,
+      "critique": 5521,
+      "vitesse_regen_ki": 1779,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1347073,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 104,
+      "choc": 104,
+      "explosion": 95
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -124223,6 +132912,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/62",
+    "stats_base": {
+      "force": 2357726,
+      "attaque_physique": 227115,
+      "attaque_energie": 240126,
+      "defense_physique": 176091,
+      "defense_energie": 179064,
+      "critique": 4225,
+      "vitesse_regen_ki": 2217,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1431077,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 97
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -124681,6 +133388,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/61",
+    "stats_base": {
+      "force": 2202623,
+      "attaque_physique": 227950,
+      "attaque_energie": 242174,
+      "defense_physique": 162224,
+      "defense_energie": 161801,
+      "critique": 4167,
+      "vitesse_regen_ki": 2272,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1392340,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 97,
+      "choc": 102,
+      "explosion": 102
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -124756,6 +133481,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/60",
+    "stats_base": {
+      "force": 2087597,
+      "attaque_physique": 242446,
+      "attaque_energie": 237584,
+      "defense_physique": 159995,
+      "defense_energie": 156474,
+      "critique": 4698,
+      "vitesse_regen_ki": 2251,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1412522,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 103,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -124831,6 +133574,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/51",
+    "stats_base": {
+      "force": 2104793,
+      "attaque_physique": 206485,
+      "attaque_energie": 229774,
+      "defense_physique": 162424,
+      "defense_energie": 161816,
+      "critique": 3971,
+      "vitesse_regen_ki": 2106,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1334068,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 96
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -124949,6 +133710,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/50",
+    "stats_base": {
+      "force": 2301054,
+      "attaque_physique": 242240,
+      "attaque_energie": 255716,
+      "defense_physique": 157863,
+      "defense_energie": 158914,
+      "critique": 4509,
+      "vitesse_regen_ki": 2206,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1433286,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 101,
+      "choc": 101,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -125407,6 +134186,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/47",
+    "stats_base": {
+      "force": 1974405,
+      "attaque_physique": 180945,
+      "attaque_energie": 179274,
+      "defense_physique": 146191,
+      "defense_energie": 146545,
+      "critique": 4192,
+      "vitesse_regen_ki": 1958,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1221482,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 101,
+      "choc": 99,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -125807,6 +134604,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/46",
+    "stats_base": {
+      "force": 2097668,
+      "attaque_physique": 243548,
+      "attaque_energie": 220209,
+      "defense_physique": 180477,
+      "defense_energie": 173902,
+      "critique": 3859,
+      "vitesse_regen_ki": 2341,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1397380,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 99,
+      "choc": 99,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -125984,6 +134799,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/45",
+    "stats_base": {
+      "force": 2240543,
+      "attaque_physique": 230341,
+      "attaque_energie": 228190,
+      "defense_physique": 168305,
+      "defense_energie": 167977,
+      "critique": 4407,
+      "vitesse_regen_ki": 2378,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1412832,
+    "resistances": {
+      "tranchant": 99,
+      "perforant": 102,
+      "choc": 101,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -126104,6 +134937,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/38",
+    "stats_base": {
+      "force": 2159287,
+      "attaque_physique": 246207,
+      "attaque_energie": 224610,
+      "defense_physique": 164656,
+      "defense_energie": 164347,
+      "critique": 4437,
+      "vitesse_regen_ki": 2635,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1426772,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 99,
+      "choc": 98,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -126504,6 +135355,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/35",
+    "stats_base": {
+      "force": 2356655,
+      "attaque_physique": 244786,
+      "attaque_energie": 211972,
+      "defense_physique": 155434,
+      "defense_energie": 156951,
+      "critique": 4201,
+      "vitesse_regen_ki": 2323,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1381853,
+    "resistances": {
+      "tranchant": 100,
+      "perforant": 100,
+      "choc": 100,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -126649,6 +135518,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/32",
+    "stats_base": {
+      "force": 2281533,
+      "attaque_physique": 250883,
+      "attaque_energie": 217399,
+      "defense_physique": 158416,
+      "defense_energie": 160406,
+      "critique": 4217,
+      "vitesse_regen_ki": 2384,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1398656,
+    "resistances": {
+      "tranchant": 101,
+      "perforant": 99,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -127056,6 +135943,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/27",
+    "stats_base": {
+      "force": 2318160,
+      "attaque_physique": 212933,
+      "attaque_energie": 230484,
+      "defense_physique": 161805,
+      "defense_energie": 164487,
+      "critique": 4613,
+      "vitesse_regen_ki": 2237,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1396153,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 100,
+      "explosion": 101
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -127200,6 +136105,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/16",
+    "stats_base": {
+      "force": 1857658,
+      "attaque_physique": 196571,
+      "attaque_energie": 236132,
+      "defense_physique": 132220,
+      "defense_energie": 138015,
+      "critique": 3874,
+      "vitesse_regen_ki": 1678,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1233781,
+    "resistances": {
+      "tranchant": 97,
+      "perforant": 102,
+      "choc": 102,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -127601,6 +136524,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/15",
+    "stats_base": {
+      "force": 1994259,
+      "attaque_physique": 186204,
+      "attaque_energie": 175109,
+      "defense_physique": 147546,
+      "defense_energie": 153826,
+      "critique": 3910,
+      "vitesse_regen_ki": 1903,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1215685,
+    "resistances": {
+      "tranchant": 96,
+      "perforant": 104,
+      "choc": 102,
+      "explosion": 98
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -128007,6 +136948,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/14",
+    "stats_base": {
+      "force": 2318821,
+      "attaque_physique": 215183,
+      "attaque_energie": 254391,
+      "defense_physique": 164094,
+      "defense_energie": 160581,
+      "critique": 4156,
+      "vitesse_regen_ki": 2190,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1395537,
+    "resistances": {
+      "tranchant": 103,
+      "perforant": 99,
+      "choc": 98,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -128408,6 +137367,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/4",
+    "stats_base": {
+      "force": 2372283,
+      "attaque_physique": 218939,
+      "attaque_energie": 215599,
+      "defense_physique": 177283,
+      "defense_energie": 174969,
+      "critique": 3828,
+      "vitesse_regen_ki": 2172,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1374342,
+    "resistances": {
+      "tranchant": 105,
+      "perforant": 97,
+      "choc": 98,
+      "explosion": 100
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -128810,6 +137787,24 @@ window.DBL_CHARACTERS_SCRAPED = [
     ],
     "tagsInternes": [],
     "sourceUrl": "https://fr.dblegends.net/character/2",
+    "stats_base": {
+      "force": 1994149,
+      "attaque_physique": 232569,
+      "attaque_energie": 165563,
+      "defense_physique": 148555,
+      "defense_energie": 146930,
+      "critique": 3516,
+      "vitesse_regen_ki": 1687,
+      "vanish_recover": 2000
+    },
+    "powerLevel": 1216110,
+    "resistances": {
+      "tranchant": 102,
+      "perforant": 99,
+      "choc": 100,
+      "explosion": 99
+    },
+    "delaiRemplacement": 10,
     "zAbilities": [
       {
         "tier": 1,
@@ -128906,6 +137901,9 @@ window.DBL_CHARACTERS_SCRAPED = [
   }
 ];
 
+// Conditions dans lesquelles stats_base et powerLevel ont été calculés.
+window.DBL_STATS_CONTEXTE = {"niveau":5000,"etoiles":14,"soulBoost":true,"artsBoost":true,"zenkaiEx":false,"forme":"de base"};
+
 // Catégorie de chaque tag affichable (libellé → catégorie), déduite de la plage
 // de son identifiant sur le site ; utilisée par le bloc « Tags de l'équipe ».
 window.DBL_TAG_CATEGORIES = {
@@ -128961,8 +137959,6 @@ window.DBL_TAG_CATEGORIES = {
   "Troupe de Thalès": "Classe",
   "DAIMA": "Classe",
   "Porteur d'arme": "Classe",
-  "Représentant de l'Univers 7": "Classe",
-  "Représentant de l'Univers 6": "Classe",
   "Type assistance": "Style de combat",
   "Type défense": "Style de combat",
   "Type physique": "Style de combat",
