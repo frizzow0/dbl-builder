@@ -380,6 +380,7 @@
     'opti.open':             { fr: '⚡ Optimiser',            en: '⚡ Optimize' },
     'opti.open.title':       { fr: 'Chercher la meilleure combinaison d’items',
                                en: 'Find the best equipment combination' },
+    'opti.kicker':           { fr: 'Optimiseur d’items',      en: 'Equipment optimizer' },
     'opti.title.generic':    { fr: 'Optimiseur d’items',      en: 'Equipment optimizer' },
     'opti.title':            { fr: 'Optimiseur d’items — {name}', en: 'Equipment optimizer — {name}' },
     'opti.sub':              { fr: 'Classe les stats par importance : on teste toutes les combinaisons d’items compatibles, conditions d’équipe comprises.',

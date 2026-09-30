@@ -2414,6 +2414,7 @@
   // ── Interface ────────────────────────────────────────────────────────────
   const optiModalEl = document.getElementById("opti-modal");
   const optiTitleEl = document.getElementById("opti-title");
+  const optiAvatarEl = document.getElementById("opti-avatar");
   const optiSubEl = document.getElementById("opti-sub");
   const optiPresetsEl = document.getElementById("opti-presets");
   const optiPriosEl = document.getElementById("opti-prios");
@@ -2452,7 +2453,7 @@
     return `<div class="opti-item">
         <span class="item-img is-framed rar-${rar}">${img}</span>
         <span class="opti-item-txt">
-          <span class="opti-item-name">${escSvg(item.nom.trim())}</span>
+          <span class="opti-item-name" title="${escAttr(item.nom.trim())}">${escSvg(item.nom.trim())}</span>
           <span class="opti-item-rar">${rarityLabel(item.rarete)}</span>
         </span>
       </div>`;
@@ -2521,7 +2522,8 @@
     if (!slot || !slot.character || !optiModalEl) return;
     opti.slot = slotIdx;
     opti.prios = optiPriosParDefaut(slot.character);
-    if (optiTitleEl) optiTitleEl.textContent = T('opti.title', { name: slot.character.nom.trim() });
+    if (optiTitleEl) optiTitleEl.textContent = slot.character.nom.trim();
+    if (optiAvatarEl) optiAvatarEl.innerHTML = ceAvatarHTML(slot.character);
     if (optiSubEl) optiSubEl.textContent = T('opti.sub');
     renderOptiConfig();
     optiLancer();

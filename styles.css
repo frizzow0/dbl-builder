@@ -3685,18 +3685,19 @@ html { font-size: 16px; }
 @media print { .auto-btn { display: none; } }
 
 /* =====================  OPTIMISEUR D'ITEMS  =====================
-   Modale « ⚡ Optimiser » : à gauche le classement des stats (5 niveaux),
-   à droite les meilleures combinaisons d'items compatibles. Les entrées sont
-   le ⚡ du dépliant de chaque perso et l'en-tête des deux modales d'items. */
+   Même langage que le reste du site (Direction C · carte collector) :
+   papier et encre, OR pour la valeur (la note, le gain de tête), VIOLET HOLO
+   pour l'interaction, bande holographique en signature sur la modale et sur
+   la meilleure proposition, reflet irisé au survol des cartes. */
 
 /* Entrées ------------------------------------------------------------------ */
 .modal-head-actions { display: flex; align-items: center; gap: var(--s-2); }
 .opti-open {
-  padding: 6px 12px; border-radius: var(--r-pill);
-  background: var(--accent-tint); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-  color: var(--accent); font-size: var(--fs-xs); font-weight: 700;
+  padding: 8px 16px; border-radius: var(--r-pill);
+  background: var(--accent-tint); border: 1px solid var(--accent-tint-2);
+  color: var(--accent); font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 800;
   white-space: nowrap; cursor: pointer;
-  transition: background var(--t-micro), transform var(--t-micro);
+  transition: background var(--t-micro), color var(--t-micro), transform var(--t-micro);
 }
 .opti-open:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
 .opti-open:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -3708,8 +3709,8 @@ html { font-size: 16px; }
 }
 .builder-items-opti {
   border-radius: var(--r-2);
-  border: 1px solid var(--line); background: var(--surface-2);
-  color: var(--text-soft); font-size: 13px; line-height: 1;
+  border: 1px solid var(--line); background: var(--surface);
+  color: var(--text-soft); font-size: 14px; line-height: 1;
   display: grid; place-items: center; cursor: pointer;
   transition: all var(--t-micro);
 }
@@ -3719,141 +3720,224 @@ html { font-size: 16px; }
   width: 100%; align-self: auto; flex: 1 1 0; min-height: 24px;
 }
 
-/* Modale ------------------------------------------------------------------- */
-.opti-panel { max-width: 1060px; }
-/* Titre long + sous-titre sur plusieurs lignes : la croix garde sa place. */
-.opti-panel .modal-header { align-items: flex-start; gap: var(--s-3); }
-.opti-panel .btn-close { flex-shrink: 0; }
-.opti-head { min-width: 0; }
-.opti-sub {
-  margin-top: 2px; max-width: 72ch;
-  font-size: var(--fs-xs); color: var(--text-soft);
+/* Modale : bande holo en tête, en-tête à portrait ------------------------- */
+.opti-panel { max-width: 1120px; }
+.opti-panel::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 5px;
+  background: var(--holo-h); z-index: 3;
 }
+.opti-panel .modal-header {
+  align-items: center; gap: var(--s-3);
+  padding: var(--s-4) var(--s-5);
+  background: var(--surface-2);
+}
+.opti-panel .btn-close { flex-shrink: 0; align-self: flex-start; }
+.opti-avatar { flex-shrink: 0; }
+.opti-avatar .ce-avatar { width: 56px; height: 56px; border-radius: var(--r-3); border-width: 3px; }
+.opti-head { min-width: 0; }
+.opti-kicker {
+  display: block;
+  font-family: var(--font-body); font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+}
+.opti-panel .modal-header h3 {
+  font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: 800;
+  letter-spacing: -.02em; line-height: 1.1; color: var(--text);
+}
+.opti-sub { margin-top: 4px; max-width: 78ch; font-size: var(--fs-sm); color: var(--text-soft); }
+
 .opti-body {
-  display: grid; grid-template-columns: 250px minmax(0, 1fr);
-  gap: var(--s-4); padding: var(--s-4);
-  overflow: auto; min-height: 0;
+  display: grid; grid-template-columns: 290px minmax(0, 1fr);
+  gap: var(--s-5); padding: var(--s-5);
+  overflow: auto; min-height: 0; background: var(--bg);
 }
 
-/* Colonne de gauche : profils, classement, options */
+/* Colonne de gauche : la feuille de réglages -------------------------------- */
 .opti-config {
-  display: flex; flex-direction: column; gap: 6px; min-width: 0;
-  /* Le classement reste sous la main pendant qu on fait défiler les propositions. */
+  display: flex; flex-direction: column; gap: var(--s-2); min-width: 0;
   position: sticky; top: 0; align-self: start;
+  padding: var(--s-4); border-radius: var(--r-4);
+  background: var(--surface); border: 1px solid var(--line);
+  box-shadow: var(--shadow-1);
 }
 .opti-section {
-  margin-top: var(--s-2);
-  font-family: var(--font-display); font-size: var(--fs-xs);
-  text-transform: uppercase; letter-spacing: .06em; color: var(--text-soft);
+  margin: var(--s-3) 0 0;
+  font-family: var(--font-body); font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
 }
 .opti-section:first-child { margin-top: 0; }
-.opti-hint { font-size: var(--fs-xxs); color: var(--muted); }
+.opti-hint { margin: 0; font-size: var(--fs-xs); color: var(--text-soft); }
 .opti-presets { display: flex; flex-wrap: wrap; gap: 6px; }
 .opti-preset {
-  padding: 5px 10px; border-radius: var(--r-pill);
-  background: var(--surface-2); border: 1px solid var(--line);
-  color: var(--text-soft); font-size: var(--fs-xxs); font-weight: 600;
+  padding: 6px 13px; border-radius: var(--r-pill);
+  background: var(--surface); border: 1px solid var(--line-strong);
+  color: var(--text-soft); font-size: var(--fs-sm); font-weight: 600;
   cursor: pointer; transition: all var(--t-micro);
 }
 .opti-preset:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-tint); }
-.opti-prios { display: flex; flex-direction: column; gap: 6px; }
-.opti-prio { display: grid; grid-template-columns: 22px minmax(0, 1fr) 30px; align-items: center; gap: 6px; }
+.opti-preset:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.opti-prios { display: flex; flex-direction: column; gap: 7px; }
+.opti-prio { display: grid; grid-template-columns: 26px minmax(0, 1fr) 34px; align-items: center; gap: 8px; }
 .opti-prio-rank {
-  width: 22px; height: 22px; border-radius: 50%;
+  width: 26px; height: 26px; border-radius: 9px;
   background: var(--surface-3); border: 1px solid var(--line);
-  color: var(--text-soft); font-size: var(--fs-xxs); font-weight: 700;
+  color: var(--text-soft); font-family: var(--font-display); font-size: var(--fs-xs); font-weight: 800;
   display: grid; place-items: center;
 }
-.opti-prio:first-child .opti-prio-rank { background: var(--accent); border-color: var(--accent); color: #fff; }
+/* La stat n° 1 porte la valeur : encre et or, comme le leader et les totaux. */
+.opti-prio:first-child .opti-prio-rank { background: var(--text); border-color: var(--text); color: var(--gold); }
 .opti-prio-select {
-  width: 100%; min-width: 0; padding: 6px 8px;
-  border-radius: var(--r-2); border: 1px solid var(--line);
-  background: var(--surface-2); color: var(--text);
-  font-family: inherit; font-size: var(--fs-xs);
+  width: 100%; min-width: 0; padding: 8px 10px;
+  border-radius: var(--r-2); border: 1px solid var(--line-strong);
+  background: var(--surface); color: var(--text);
+  font-family: inherit; font-size: var(--fs-sm);
+  transition: border-color var(--t-micro), box-shadow var(--t-micro);
 }
-.opti-prio-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-.opti-prio-poids { font-size: var(--fs-xxs); color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.opti-prio-select:hover { border-color: var(--accent); }
+.opti-prio-select:focus-visible { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
+.opti-prio-poids {
+  font-family: var(--font-display); font-size: var(--fs-xs); font-weight: 700;
+  color: var(--muted); text-align: right; font-variant-numeric: tabular-nums;
+}
 .opti-options {
-  display: flex; flex-direction: column; gap: var(--s-2);
+  display: flex; flex-direction: column; gap: var(--s-3);
   margin-top: var(--s-3); padding-top: var(--s-3); border-top: 1px solid var(--line);
 }
-.opti-modes { display: flex; border: 1px solid var(--line); border-radius: var(--r-pill); overflow: hidden; }
+.opti-modes { display: flex; border: 1px solid var(--line-strong); border-radius: var(--r-pill); overflow: clip; }
 .opti-mode {
-  flex: 1 1 0; padding: 6px 8px; border: 0; background: transparent;
-  color: var(--text-soft); font-size: var(--fs-xxs); font-weight: 600;
+  flex: 1 1 0; padding: 8px 10px; border: 0; background: var(--surface);
+  color: var(--text-soft); font-size: var(--fs-xs); font-weight: 700;
   cursor: pointer; transition: all var(--t-micro);
 }
 .opti-mode:hover { color: var(--accent); }
 .opti-mode.is-on { background: var(--accent); color: #fff; }
-.opti-check { display: flex; gap: 6px; align-items: flex-start; font-size: var(--fs-xxs); color: var(--text-soft); cursor: pointer; }
+.opti-check { display: flex; gap: 8px; align-items: flex-start; font-size: var(--fs-xs); color: var(--text-soft); cursor: pointer; }
+.opti-check input { margin-top: 2px; accent-color: var(--accent); }
 
-/* Colonne de droite : les combinaisons proposées */
+/* Colonne de droite : les propositions ------------------------------------ */
 .opti-results { min-width: 0; display: flex; flex-direction: column; gap: var(--s-3); }
-.opti-count { font-size: var(--fs-xxs); color: var(--muted); }
-.opti-results-head { font-family: var(--font-display); font-size: var(--fs-sm); }
+.opti-count { font-size: var(--fs-xs); color: var(--muted); }
+.opti-results-head {
+  display: flex; align-items: center; gap: var(--s-3);
+  font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 800; color: var(--text);
+}
+.opti-results-head::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .opti-current { padding-bottom: var(--s-1); }
+
 .opti-build {
-  border: 1px solid var(--line); border-radius: var(--r-3);
-  background: var(--surface-2); padding: var(--s-3);
-  display: flex; flex-direction: column; gap: var(--s-2);
+  position: relative; overflow: clip;
+  border: 1px solid var(--line); border-radius: var(--r-4);
+  background: var(--surface); padding: var(--s-4);
+  display: flex; flex-direction: column; gap: var(--s-3);
+  box-shadow: var(--shadow-1);
+  transition: border-color var(--t-micro), box-shadow var(--t-micro), transform var(--t-micro);
 }
-.opti-build.is-best {
-  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
-  background: linear-gradient(180deg, var(--accent-tint), transparent 70%), var(--surface-2);
+.opti-build:hover { border-color: var(--line-strong); box-shadow: var(--shadow-2); transform: translateY(-1px); }
+/* La meilleure proposition porte la bande holographique, comme une carte rare. */
+.opti-build.is-best { border-color: var(--accent-tint-2); }
+.opti-build.is-best::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 4px;
+  background: var(--holo-h); z-index: 2;
 }
-.opti-build.is-current { border-style: dashed; background: var(--surface); }
-.opti-build-head { display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; }
-.opti-rank { font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 700; }
+.opti-build.is-current { background: var(--surface-2); border-style: dashed; box-shadow: none; }
+.opti-build.is-current:hover { transform: none; }
+
+.opti-build-head { display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap; }
+.opti-rank {
+  display: inline-grid; place-items: center; min-width: 38px; height: 30px; padding: 0 10px;
+  border-radius: 10px; background: var(--text); color: var(--gold);
+  font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 800;
+  letter-spacing: .02em; white-space: nowrap;
+}
+.opti-build.is-current .opti-rank { background: var(--surface-3); color: var(--text-soft); }
 .opti-badge {
-  padding: 2px 8px; border-radius: var(--r-pill);
-  background: var(--surface-3); border: 1px solid var(--line);
-  color: var(--text-soft); font-size: var(--fs-xxs); font-weight: 600;
+  padding: 4px 10px; border-radius: var(--r-pill);
+  background: var(--accent-tint); border: 1px solid var(--accent-tint-2);
+  color: var(--accent); font-size: var(--fs-xs); font-weight: 700;
 }
-.opti-score { font-size: var(--fs-xxs); color: var(--muted); font-variant-numeric: tabular-nums; cursor: help; }
+.opti-score {
+  font-family: var(--font-display); font-size: var(--fs-md); font-weight: 800;
+  color: var(--gold-deep); font-variant-numeric: tabular-nums; cursor: help;
+}
 .opti-equip {
-  margin-left: auto; padding: 7px 14px;
+  margin-left: auto; padding: 9px 20px;
   border: 0; border-radius: var(--r-pill);
   background: var(--accent); color: #fff;
-  font-family: var(--font-display); font-size: var(--fs-xs); font-weight: 700;
+  font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 800; letter-spacing: .01em;
+  box-shadow: var(--shadow-accent);
   cursor: pointer; transition: filter var(--t-micro), transform var(--t-micro);
 }
 .opti-equip:hover { filter: brightness(1.06); transform: translateY(-1px); }
 .opti-equip:active { transform: scale(.98); }
 .opti-equip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.opti-build-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--s-2); }
-.opti-item { display: flex; align-items: center; gap: var(--s-2); min-width: 0; }
-.opti-item .item-img { width: 44px; height: 44px; flex-shrink: 0; }
+
+.opti-build-items {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--s-3);
+  padding: var(--s-3) 0; border-block: 1px solid var(--line);
+}
+.opti-item { display: flex; align-items: center; gap: var(--s-3); min-width: 0; }
+.opti-item .item-img { width: 52px; height: 52px; flex-shrink: 0; }
 .opti-item-txt { display: flex; flex-direction: column; min-width: 0; }
 .opti-item-name {
-  font-size: var(--fs-xs); font-weight: 600; line-height: 1.25;
+  font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 700; line-height: 1.25;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  overflow-wrap: anywhere;   /* les noms d items sont longs : ils remplissent les 2 lignes */
 }
-.opti-item-rar { font-size: var(--fs-xxs); color: var(--muted); }
-.opti-gains { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.opti-item-rar { font-size: var(--fs-xs); color: var(--muted); letter-spacing: .06em; }
+
+.opti-gains { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .opti-gains li {
-  display: flex; align-items: baseline; gap: 5px;
-  padding: 4px 9px; border-radius: var(--r-pill);
-  background: var(--surface-3); border: 1px solid var(--line);
-  color: var(--text-soft); font-size: var(--fs-xxs);
+  display: flex; align-items: baseline; gap: 6px;
+  padding: 6px 12px; border-radius: var(--r-pill);
+  background: var(--surface-2); border: 1px solid var(--line);
+  color: var(--text-soft); font-size: var(--fs-xs);
 }
-.opti-gains li.is-first { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
-.opti-gains li.is-zero { opacity: .5; }
-.opti-gains b { color: var(--text); font-variant-numeric: tabular-nums; }
+/* Stat n° 1 : la valeur du build, en or. */
+.opti-gains li.is-first {
+  background: rgba(224, 184, 74, .12); border-color: rgba(201, 154, 29, .35); color: var(--text);
+}
+.opti-gains li.is-first b { color: var(--gold-deep); }
+.opti-gains li.is-zero { opacity: .45; }
+.opti-gains b { color: var(--text); font-family: var(--font-display); font-weight: 800; font-variant-numeric: tabular-nums; }
 .opti-delta { font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
 .opti-delta.is-up { color: var(--good); }
 .opti-delta.is-down { color: var(--danger); }
-.opti-build-note { font-size: var(--fs-xxs); color: var(--muted); }
-.opti-empty { font-size: var(--fs-sm); color: var(--text-soft); }
-.opti-foot { font-size: var(--fs-xxs); color: var(--muted); border-top: 1px solid var(--line); padding-top: var(--s-2); }
+.opti-build-note { font-size: var(--fs-xs); color: var(--muted); }
+.opti-empty {
+  padding: var(--s-5); border: 1px dashed var(--line-strong); border-radius: var(--r-4);
+  background: var(--surface); font-size: var(--fs-md); color: var(--text-soft); text-align: center;
+}
+.opti-foot { font-size: var(--fs-xs); color: var(--muted); border-top: 1px solid var(--line); padding-top: var(--s-3); }
+
+/* Reflet holographique au survol, comme sur les cartes de l'équipe. */
+@media (hover: hover) {
+  .opti-build:not(.is-current)::after {
+    content: ""; position: absolute; z-index: 3;
+    top: -15%; bottom: -15%; left: 0; width: 42%;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(61, 214, 245, .18) 28%,
+      rgba(255, 255, 255, .6) 50%,
+      rgba(255, 111, 181, .18) 72%,
+      transparent 100%);
+    transform: translateX(-140%) skewX(-18deg);
+    opacity: 0; pointer-events: none;
+  }
+  .opti-build:not(.is-current):hover::after { animation: holoSweep 1000ms cubic-bezier(.22, 1, .36, 1) both; }
+}
 
 @media (max-width: 860px) {
-  .opti-body { grid-template-columns: 1fr; }
+  .opti-body { grid-template-columns: 1fr; padding: var(--s-4); gap: var(--s-4); }
   .opti-config { position: static; }
-  .opti-open { font-size: var(--fs-xxs); padding: 5px 9px; }
+  /* En-tête étroit : le portrait s aligne en haut, avec le sur-titre. */
+  .opti-panel .modal-header { padding: var(--s-3) var(--s-4); align-items: flex-start; }
+  .opti-avatar .ce-avatar { width: 44px; height: 44px; }
+  .opti-panel .modal-header h3 { font-size: var(--fs-xl); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .opti-open, .opti-equip, .opti-preset, .opti-mode, .builder-items-opti { transition: none; }
-  .opti-open:hover, .opti-equip:hover { transform: none; }
+  .opti-open, .opti-equip, .opti-preset, .opti-mode, .opti-build, .builder-items-opti { transition: none; }
+  .opti-open:hover, .opti-equip:hover, .opti-build:hover { transform: none; }
+  .opti-build::after { animation: none !important; }
 }
 
 /* =====================  EFFETS NON CALCULÉS (vue d'équipe)  =====================
