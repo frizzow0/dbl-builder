@@ -568,6 +568,7 @@
     modalSlot: null,         // index du slot d'ITEM (0..2) ouvert dans la modale
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
+    detailsItemSlot: null,   // emplacement mis en avant dans cette modale (flèche)
     treeMode: "global",      // arbre des Cap Z : "global" (matrice) ou "targeted" (1 source)
     modalRarityFilter: null,
     modalSearch: "",
@@ -1451,16 +1452,23 @@
   }
 
   // Icône compacte d'un item dans la ligne builder (vide ou rempli).
+  // Un emplacement = la vignette (clic : choisir / changer) plus deux actions
+  // posées dessus : le crayon change l'item, la flèche ouvre son détail.
   function itemIconHTML(charSlot, itemSlotIdx) {
     const item = state.team[charSlot].items[itemSlotIdx];
     if (!item) {
-      return `<button class="builder-item-icon empty" data-open-item="${charSlot}:${itemSlotIdx}" type="button" title="${T('slot.choose')}">＋</button>`;
+      return `<div class="builder-item-slot"><button class="builder-item-icon empty" data-open-item="${charSlot}:${itemSlotIdx}" type="button" title="${T('slot.choose')}">＋</button></div>`;
     }
     const rar = (item.rarete || "").toLowerCase();
     const img = item.image
       ? `<img src="${item.image}" alt="${item.nom}" onerror="this.style.display='none'" />`
       : `<span class="builder-item-icon-fallback">${(item.nom || '?').slice(0, 2)}</span>`;
-    return `<button class="builder-item-icon filled rar-${rar}" data-open-item="${charSlot}:${itemSlotIdx}" type="button" title="${item.nom}">${img}</button>`;
+    return `<div class="builder-item-slot">` +
+      `<button class="builder-item-icon filled rar-${rar}" data-open-item="${charSlot}:${itemSlotIdx}" type="button" title="${item.nom}">${img}</button>` +
+      `<span class="builder-item-acts">` +
+        `<button class="builder-item-act" data-item-change="${charSlot}:${itemSlotIdx}" type="button" title="${T('item.change.one')}" aria-label="${T('item.change.one')}">✎</button>` +
+        `<button class="builder-item-act" data-item-detail="${charSlot}:${itemSlotIdx}" type="button" title="${T('item.detail.one')}" aria-label="${T('item.detail.one')}">▸</button>` +
+      `</span></div>`;
   }
 
   // HTML détaillé d'un slot d'item (vide ou rempli) — utilisé dans la modale de détails.
@@ -1549,7 +1557,7 @@
            </div>
          </div>`
       : `<div class="builder-items builder-items--locked" aria-hidden="true" title="${T('builder.items.empty')}">
-           <div class="builder-item-icons">${[0, 1, 2].map(() => `<span class="builder-item-icon empty">＋</span>`).join("")}</div>
+           <div class="builder-item-icons">${[0, 1, 2].map(() => `<span class="builder-item-slot"><span class="builder-item-icon empty">＋</span></span>`).join("")}</div>
            <div class="builder-items-actions"><span class="builder-items-opti">⚡</span><span class="builder-items-details">▾</span></div>
          </div>`;
     // Cap Z + items vivent dans un panneau qui se déroule vers la droite au survol
@@ -2009,6 +2017,8 @@
     if (chg) { const [cs, is] = chg.dataset.itemChange.split(":"); openItemModal(+cs, +is); return; }
     const clr = t.closest("[data-item-clear]");
     if (clr) { const [cs, is] = clr.dataset.itemClear.split(":"); state.team[+cs].items[+is] = null; renderAll(); return; }
+    const det1 = t.closest("[data-item-detail]");
+    if (det1) { const [cs, is] = det1.dataset.itemDetail.split(":"); openDetailsModal(+cs, +is); return; }
     const openIt = t.closest("[data-open-item]");
     if (openIt) { const [cs, is] = openIt.dataset.openItem.split(":"); openItemModal(+cs, +is); return; }
     // Perso : changer (✎) → on édite ET on analyse ce perso
@@ -2039,16 +2049,26 @@
     if (cs == null || !detailsModalBody) return;
     const c = state.team[cs].character;
     if (detailsModalTitle) detailsModalTitle.textContent = c ? T('items.details.title', { name: c.nom.trim() }) : T('items.details');
-    detailsModalBody.innerHTML = `<div class="details-items">${[0, 1, 2].map((j) => itemDetailHTML(cs, j)).join("")}</div>`;
+    // Ouverte depuis la flèche d'un emplacement : cet item est mis en avant.
+    const vise = state.detailsItemSlot;
+    detailsModalBody.innerHTML = `<div class="details-items">${[0, 1, 2]
+      .map((j) => itemDetailHTML(cs, j).replace('class="builder-item ', j === vise ? 'class="builder-item is-focused ' : 'class="builder-item '))
+      .join("")}</div>`;
+    if (vise != null) {
+      const cible = detailsModalBody.querySelector('.builder-item.is-focused');
+      if (cible) cible.scrollIntoView({ block: "nearest", behavior: "instant" });
+    }
   }
-  function openDetailsModal(charSlot) {
+  function openDetailsModal(charSlot, itemSlot = null) {
     state.detailsCharSlot = charSlot;
+    state.detailsItemSlot = itemSlot;
     renderDetailsModal();
     if (detailsModalEl) detailsModalEl.classList.remove("hidden");
   }
   function closeDetailsModal() {
     if (detailsModalEl) detailsModalEl.classList.add("hidden");
     state.detailsCharSlot = null;
+    state.detailsItemSlot = null;
   }
   if (detailsModalEl) {
     detailsModalEl.querySelector("[data-details-close]")?.addEventListener("click", closeDetailsModal);
