@@ -1,6 +1,6 @@
 // Auto-généré par scrape.js — ne pas éditer à la main.
 // Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, event)
-// 926 items, généré le 2026-09-25T16:46:25.141Z
+// 927 items, généré le 2026-09-30T16:07:49.303Z
 
 window.DBL_ITEMS_SCRAPED = [
   {
@@ -1765,6 +1765,132 @@ window.DBL_ITEMS_SCRAPED = [
       {
         "est_passif": true,
         "description_passif": "Annule les malus de stats",
+        "slot": 4
+      }
+    ]
+  },
+  {
+    "id": "equip_32013",
+    "sourceId": "32013",
+    "nom": "ULTRA !! - Golden Freezer",
+    "rarete": "platinum",
+    "sourceUrl": "https://fr.dblegends.net/equip/32013",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_32013.webp",
+    "tagsPorteur": [
+      [
+        "Freezer"
+      ]
+    ],
+    "porteursExacts": [
+      {
+        "id": "603",
+        "code": "DBL69-03U",
+        "nom": "Golden Freezer"
+      }
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 30,
+        "valeur_max": 30,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 60,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 60,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 60,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 60,
+        "valeur_max": 60,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 200,
+        "valeur_max": 200,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 250,
+        "valeur_max": 250,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Une fois entré en scène, les effets suivants s'activent :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Si vous avez 3 cartes ou moins, tire 1 carte",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Immunise contre les mises à couvert particulières (5 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Annule le désavantage d'attribut des dégâts subis (5 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand vous subissez une attaque d'art, réduit de 10 le Ki de l'adversaire",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "[Déblocage à ★7]",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand vous utilisez un art, dégâts infligés +20% (5 secondes)",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'un Rétablissement, dégâts infligés +100% (2 secondes)",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'un Rétablissement, les effets suivants s'activent après que l'attaque touche l'adversaire :",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dragon Balls de l'adversaire -2",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Augmente la jauge d'Overdrive de 50%",
         "slot": 4
       }
     ]
