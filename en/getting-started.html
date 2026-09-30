@@ -37,10 +37,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=102" />
+  <link rel="stylesheet" href="/styles.css?v=103" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=102"></script>
+  <script defer src="/site.js?v=103"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,7 +73,7 @@
         "description": "Step-by-step DBL Optimizer guide: add characters, pick your Leader, set Z Abilities and equipment, then read tags, conditions and team summaries.",
         "inLanguage": "en",
         "datePublished": "2026-09-16",
-        "dateModified": "2026-09-27",
+        "dateModified": "2026-09-30",
         "image": "https://dbl-optimizer.com/og-image-en.jpg",
         "author": {
           "@type": "Organization",
@@ -100,7 +100,7 @@
           }
         },
         "mainEntityOfPage": "https://dbl-optimizer.com/en/getting-started.html",
-        "wordCount": 841
+        "wordCount": 1048
       }
     ]
   }
@@ -134,7 +134,7 @@
       <header class="doc-hero">
         <h1>Getting started with DBL Optimizer</h1>
         <p class="doc-lead">From an empty slot to a detailed breakdown: every part of the optimizer explained, in the order you use it.</p>
-        <p class="doc-meta">Updated September 27, 2026 · 4 min read</p>
+        <p class="doc-meta">Updated September 30, 2026 · 5 min read</p>
       </header>
       <aside class="ad-slot" data-ad="doc-top" hidden></aside>
       <h2>Before you start</h2>
@@ -149,7 +149,13 @@
       </ul>
       <p>The mode doesn’t change Z Ability or equipment calculations: it renames the two trios and adds the Trio C analysis.</p>
 
-      <h2>2. Add characters</h2>
+      <h2>2. Generate a team automatically</h2>
+      <p>The <strong>“Generate a team”</strong> bar above the grid builds the best possible team around one criterion: a <strong>Class</strong> (Saiyan, Goku’s Family, Cyborg…) or an <strong>Episode</strong> (Saga Z - Frieza, Movie Saga…). Pick the criterion, then a specific tag — or leave <em>“best available”</em> and the tool compares the most promising tags in that category.</p>
+      <p>“Best” means the same thing as in the <strong>Global summary</strong>: the sum of the Z Ability and equipment gains of all 6 characters, conditions and Leader privilege included. The tool evaluates hundreds of teams, then keeps the trio split and the <strong>Leader</strong> that give the highest total — it reports the result and how many teams it evaluated.</p>
+      <p>You can <strong>lock</strong> the characters you want to keep: the 🔓 padlock on the tile turns into 🔒 and the generator keeps that character, with their equipment and Z Ability tier. It may however <strong>move them</strong> among the 6 spots, since the trio and the Leader decide how Z Abilities propagate. Lock all 6 and the generation only optimizes spots and Leader.</p>
+      <p>The <strong>“Undo”</strong> button restores the team from before the generation. If a tag doesn’t have 6 characters, the missing spots are left empty rather than filled off-criterion.</p>
+
+      <h2>3. Add characters</h2>
       <p>Click a <strong>“Click to add”</strong> slot. The selection window shows every card with its artwork, name and color. You can:</p>
       <ul>
         <li>search by <strong>name</strong>, <strong>card code</strong> (for example DBL99-01L) or <strong>tag</strong>;</li>
@@ -157,10 +163,10 @@
       </ul>
       <p>Characters already in your team are greyed out. On a placed card, <strong>✎</strong> swaps the character and <strong>✕</strong> removes it; either way, its equipment is removed too.</p>
 
-      <h2>3. Pick your Leader</h2>
+      <h2>4. Pick your Leader</h2>
       <p>The <strong>★</strong> star under each card sets the Leader. It matters a lot in the calculation: the Leader receives every Z Ability in the team unconditionally, and their own Z Ability applies unconditionally to their two trio teammates. The <strong>“Disable leader”</strong> button at the bottom of the panel lets you compare with a team without this privilege. Details are in the <a href="/en/z-abilities-guide.html">Z Abilities guide</a>.</p>
 
-      <h2>4. Set Z Abilities and equipment</h2>
+      <h2>5. Set Z Abilities and equipment</h2>
       <p>On desktop, hover a card: a panel unfolds to its right. On phones and tablets, these settings sit under each card.</p>
       <ul>
         <li><strong>Z Ability</strong> — pick the level you unlocked: <strong>I, II, III or IV</strong>. The Zenkai Z Ability, if the character has one, is counted at its maximum.</li>
@@ -169,12 +175,12 @@
         <li><strong>“OR” lines</strong> — some equipment rolls one of two stats at random. Pick the one you got so the calculation matches your real equipment.</li>
       </ul>
 
-      <h2>5. Read tags and conditions</h2>
+      <h2>6. Read tags and conditions</h2>
       <p>Under the cards, the <strong>“Team tags”</strong> table shows who carries which tag: one column per character, a dot under each carrier and the total on the right. Shared tags come first; tags carried by a single character are folded behind a button.</p>
       <p>The <strong>“Team Composition”</strong> panel then lists the equipment effects <strong>that do not trigger</strong>: those whose condition isn’t met in their wearer’s trio. Active effects are simply counted in the header (“Active: 6 · Inactive: 3”) — there is nothing to fix there.</p>
       <p>Blocked effects are grouped by missing tag. The group header recalls who already carries that tag in each trio, and every row shows the character, the equipment, the bonus lost (struck through) and what is missing (“1 missing”).</p>
 
-      <h2>6. Analyze the results</h2>
+      <h2>7. Analyze the results</h2>
       <ul>
         <li><strong>Global summary (Z Abilities)</strong> — the total Z Ability bonuses received by the whole team, with a per-stat chart.</li>
         <li><strong>Uncalculated Effects</strong> — the whole team, character by character: ULTRA Resonance, passives that can’t be quantified and effects whose condition isn’t met.</li>
@@ -184,7 +190,7 @@
         <li><strong>Z Ability Tree</strong> — in overview mode, the propagation matrix for the whole team; in focused mode, the chosen character’s Z Ability towards each teammate: a <strong>green</strong> arrow if everything applies, <strong>yellow</strong> if only part of it does, <strong>red</strong> if nothing does.</li>
       </ul>
 
-      <h2>7. In Proud mode: check your Trio C</h2>
+      <h2>8. In Proud mode: check your Trio C</h2>
       <p>In Proud mode, a <strong>“TRIO C”</strong> box appears under each character. Select 2 characters from one trio and 1 from the other: the Trio C analysis then compares their bonuses with their original trio, lists what is lost or gained and suggests the best possible Trio C. The <a href="/en/proud-mode-guide.html">Proud mode guide</a> explains how to read it.</p>
 
       <h2>Tips</h2>

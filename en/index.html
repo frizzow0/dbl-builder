@@ -39,10 +39,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://fr.dblegends.net" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/styles.css?v=102" />
+  <link rel="stylesheet" href="/styles.css?v=103" />
   <!-- Google AdSense (validation du site + annonces) ; emplacements pilotés par site.js -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3800762846820919" crossorigin="anonymous"></script>
-  <script defer src="/site.js?v=102"></script>
+  <script defer src="/site.js?v=103"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -146,6 +146,20 @@
         <span class="panel-hint" data-i18n="panel.builder.hint">click an empty slot to add a character · pick their items on the right</span>
       </h2>
 
+      <!-- Générateur : construit la meilleure équipe autour d une Classe ou d un Épisode.
+           Les persos verrouillés (cadenas sur la tuile) sont conservés ; seule leur place peut changer. -->
+      <div class="gen-bar" id="gen-bar">
+        <span class="gen-label" data-i18n="gen.label">Generate a team</span>
+        <div class="gen-cats" role="group" aria-label="Generation criterion" data-i18n-aria-label="gen.cats.aria">
+          <button class="gen-cat is-on" type="button" data-gen-cat="Classe" aria-pressed="true" data-i18n="gen.cat.classe">Class</button>
+          <button class="gen-cat" type="button" data-gen-cat="Épisode" aria-pressed="false" data-i18n="gen.cat.episode">Episode</button>
+        </div>
+        <select id="gen-tag" class="gen-select" aria-label="Target tag" data-i18n-aria-label="gen.tag.aria"></select>
+        <button id="gen-run" class="gen-run" type="button" data-i18n="gen.run">Generate</button>
+        <button id="gen-undo" class="gen-undo" type="button" data-i18n="gen.undo" hidden>Undo</button>
+        <span class="gen-locked" data-gen-locked></span>
+        <p id="gen-status" class="gen-status" aria-live="polite"></p>
+      </div>
       <div id="builder-grid" class="builder-grid"></div>
 
       <!-- Trio C (mode Proud uniquement) : sous chaque personnage, un rectangle
@@ -471,12 +485,12 @@
 
   <!-- ============ SCRIPTS ============ -->
   <!-- ?v= force le cache navigateur/CDN à récupérer les fichiers mis à jour -->
-  <script src="/i18n.js?v=102"></script>
-  <script src="/items.js?v=102"></script>
-  <script src="/characters.js?v=102"></script>
-  <script src="/data.js?v=102"></script>
-  <script src="/calc.js?v=102"></script>
-  <script src="/app.js?v=102"></script>
+  <script src="/i18n.js?v=103"></script>
+  <script src="/items.js?v=103"></script>
+  <script src="/characters.js?v=103"></script>
+  <script src="/data.js?v=103"></script>
+  <script src="/calc.js?v=103"></script>
+  <script src="/app.js?v=103"></script>
 
   <script>
     (function () {

@@ -464,6 +464,7 @@
     return {
       character: null,
       zTier: 4,
+      locked: false,          // verrouillé : le générateur le garde (mais peut le déplacer)
       items: [null, null, null],
       // itemChoices[itemSlotIdx] = { lineIdx: chosenAltIdx } pour les lignes "OR"
       itemChoices: [{}, {}, {}],
@@ -569,6 +570,7 @@
     modalCharSlot: null,     // index du perso (0..5) dont on édite un item
     detailsCharSlot: null,   // index du perso dont on consulte les détails d'items
     treeMode: "global",      // arbre des Cap Z : "global" (matrice) ou "targeted" (1 source)
+    gen: { categorie: "Classe", tag: "" },   // générateur d équipe : critère retenu
     modalRarityFilter: null,
     modalSearch: "",
     modalCompatOnly: false,
@@ -881,6 +883,16 @@
 
   // trio : trio de combat du receveur (défaut : son trio d'origine) — c'est lui
   // qui décide si le leader émetteur est un coéquipier.
+  // Les Cap Z sont des données statiques : on ne refusionne pas leurs tiers à
+  // chaque appel (le générateur note des centaines d équipes à la suite).
+  const _zCache = new Map();
+  function mergeZLinesCache(character, kind, sets, maxTier) {
+    const cle = character.id + "|" + kind + "|" + maxTier;
+    let lignes = _zCache.get(cle);
+    if (!lignes) { lignes = mergeZLines(sets, maxTier); _zCache.set(cle, lignes); }
+    return lignes;
+  }
+
   function buildTeamZItemsFor(targetSlotIdx, trio = trioDOrigine(targetSlotIdx)) {
     const target = state.team[targetSlotIdx];
     if (!target || !target.character) return [];
@@ -935,12 +947,12 @@
 
       // 1) Cap Z classique — cumul des tiers 1..tier choisi (max par stat + passifs)
       if (sender.character.zAbilities && sender.character.zAbilities.length) {
-        const lignes = mergeZLines(sender.character.zAbilities, sender.zTier);
+        const lignes = mergeZLinesCache(sender.character, "z", sender.character.zAbilities, sender.zTier);
         if (lignes.length) pushZItem(lignes, T('z.capz.label'), "z", sender.zTier);
       }
       // 2) Cap Z Zenkai — cumul jusqu'au tier IV, s'ajoute en plus
       if (sender.character.zAbilitiesZenkai && sender.character.zAbilitiesZenkai.length) {
-        const lignes = mergeZLines(sender.character.zAbilitiesZenkai, 4);
+        const lignes = mergeZLinesCache(sender.character, "zenkai", sender.character.zAbilitiesZenkai, 4);
         if (lignes.length) pushZItem(lignes, `${T('z.capz.label')} Zenkai`, "zenkai", 4);
       }
     }
@@ -1511,7 +1523,10 @@
     const img = c.image
       ? `<img class="builder-char-img" src="${c.image}" alt="" onerror="this.style.display='none'" />`
       : `<div class="builder-char-img"></div>`;
-    return `<div class="builder-char ${elementClass}">
+    const verrou = slot.locked
+      ? `<button class="builder-char-act is-lock is-on" data-lock-char="${charSlot}" title="${T('slot.unlock')}" aria-pressed="true" type="button">🔒</button>`
+      : `<button class="builder-char-act is-lock" data-lock-char="${charSlot}" title="${T('slot.lock')}" aria-pressed="false" type="button">🔓</button>`;
+    return `<div class="builder-char ${elementClass} ${slot.locked ? "is-locked" : ""}">
       <div class="builder-char-art">${img}</div>
       <div class="builder-char-info">
         <div class="builder-char-name" title="${c.nom.trim()}"><span>${c.nom.trim()}</span></div>
@@ -1520,6 +1535,7 @@
         ${resonanceTagHTML(charSlot)}
         <div class="builder-char-tools">
           <button class="builder-leader ${isLeader ? 'is-leader' : ''} ${state.noLeader ? 'is-leader-disabled' : ''}" data-leader="${charSlot}" title="${T('team.leader.title')}" type="button">★</button>
+          ${verrou}
           <button class="builder-char-act" data-change-char="${charSlot}" title="${T('slot.change')}" type="button">✎</button>
           <button class="builder-char-act is-danger" data-remove-char="${charSlot}" title="${T('slot.remove')}" type="button">✕</button>
         </div>
@@ -1867,6 +1883,22 @@
         renderAll();
         return it.nom.trim();
       },
+      // Générateur : noter une équipe donnée, ou relancer une recherche.
+      gen: {
+        evaluer: (ids, leader) => {
+          const persos = ids.map((id) => PERSONNAGES.find((c) => c.id === id) || null);
+          return evaluerAgencement(persos.map((c) => (c ? { ...emptyTeamSlot(), character: c } : null)), leader ?? null);
+        },
+        chercher: (tag) => {
+          const verrous = new Map();
+          state.team.forEach((s) => { if (s.locked && s.character) verrous.set(s.character.id, s); });
+          const compteur = { n: 0 };
+          const r = chercherEquipe(tag, verrous, compteur);
+          return { score: r.score, leader: r.leader, evals: compteur.n, noms: r.ordre.map((c) => (c ? c.nom.trim() : null)) };
+        },
+        pool: (tag, n = 40) => (personnagesParTag().get(tag) || [])
+          .slice().sort((a, b) => potentielZ(b, tag) - potentielZ(a, tag)).slice(0, n).map((c) => c.id),
+      },
       // Optimiseur : lancer une recherche hors interface et desserrer ses
       // bornes, pour vérifier que la présélection ne rate pas le meilleur trio.
       opti: {
@@ -1911,6 +1943,320 @@
     btn.addEventListener("click", equipeAleatoire);
     document.body.appendChild(btn);
   })();
+
+  // ===== GÉNÉRATEUR D'ÉQUIPE =====
+  // Construit la meilleure équipe possible autour d'un tag de Classe ou
+  // d'Épisode. « Meilleure » = la mesure déjà affichée par le Bilan global :
+  // la somme des gains (Cap Z reçues + items) des 6 personnages. Le calcul
+  // passe donc par le moteur, conditions et privilège du leader compris.
+  //
+  // Recherche en trois temps, parce que C(502, 6) est hors de portée :
+  //  1. présélection des candidats par un potentiel Z approché (instantané) ;
+  //  2. remplissage glouton puis échanges, notés par le moteur (exact) ;
+  //  3. agencement final : quel trio pour qui, et quel leader.
+  // Les persos verrouillés sont dans toutes les équipes testées, avec leurs
+  // items et leur palier, mais l'étape 3 peut les changer de place.
+  const GEN_TOP_CANDIDATS = 26;   // candidats croisés par la recherche exacte
+  const GEN_AUTO_TAGS = 3;        // tags testés quand on laisse l'outil choisir
+  const GEN_CATEGORIES = ["Classe", "Épisode"];
+
+  // Index tag → personnages, construit une seule fois (502 persos).
+  let _indexTags = null;
+  function personnagesParTag() {
+    if (_indexTags) return _indexTags;
+    _indexTags = new Map();
+    for (const c of PERSONNAGES) {
+      for (const t of c.traits || []) {
+        if (!_indexTags.has(t)) _indexTags.set(t, []);
+        _indexTags.get(t).push(c);
+      }
+    }
+    return _indexTags;
+  }
+
+  // Tags d'une catégorie, du plus fourni au moins fourni.
+  function tagsDeCategorie(categorie) {
+    const index = personnagesParTag();
+    return Object.keys(TAG_CATEGORIES)
+      .filter((t) => TAG_CATEGORIES[t] === categorie && index.has(t))
+      .map((t) => ({ tag: t, n: index.get(t).length }))
+      .sort((a, b) => b.n - a.n || a.tag.localeCompare(b.tag, "fr"));
+  }
+
+  // Potentiel approché d'un perso pour un tag : ce que sa Cap Z peut rapporter
+  // à une équipe qui porte ce tag. Sert uniquement à présélectionner —
+  // le classement final est fait par le moteur.
+  function potentielZ(c, tag) {
+    const sets = [...(c.zAbilities || []), ...(c.zAbilitiesZenkai || [])];
+    let total = 0;
+    for (const entry of sets) {
+      for (const l of entry.lignes || []) {
+        if (l.est_passif) continue;
+        const v = l.valeur_max ?? l.valeur_min ?? 0;
+        const cond = l.condition;
+        if (!cond) { total += v * 6; continue; }          // s'applique à tout le monde
+        const tags = (cond.tags_requis && cond.tags_requis.length ? cond.tags_requis : [cond.tag_requis]).filter(Boolean);
+        total += tags.includes(tag) ? v * 5 : v;          // ciblée sur le tag → presque toute l'équipe
+      }
+    }
+    return total;
+  }
+
+  // Score exact d'un agencement, sans toucher à l'état affiché.
+  // slots : 6 entrées (objets de slot déjà prêts, ou null).
+  function evaluerAgencement(slots, leader) {
+    const sauve = { team: state.team, leaderSlot: state.leaderSlot, noLeader: state.noLeader, activeSlot: state.activeSlot };
+    state.team = slots.map((s) => s || emptyTeamSlot());
+    state.activeSlot = 0;
+    state.noLeader = leader == null;
+    state.leaderSlot = leader == null ? 0 : leader;
+    let total = 0;
+    for (let i = 0; i < 6; i++) {
+      if (!state.team[i].character) continue;
+      const stats = getCombinedStatsFor(i);
+      if (stats) total += sommeGains(stats);
+    }
+    Object.assign(state, sauve);
+    return total;
+  }
+
+  // Slot de travail : on garde tel quel celui d'un perso verrouillé (ses items
+  // et son palier comptent dans la note), sinon un slot neuf au palier max.
+  function slotPourGeneration(perso, verrouilles) {
+    const garde = verrouilles.get(perso.id);
+    if (garde) return garde;
+    return { ...emptyTeamSlot(), character: perso };
+  }
+
+  function equipeVersSlots(persos, verrouilles) {
+    return [0, 1, 2, 3, 4, 5].map((i) => (persos[i] ? slotPourGeneration(persos[i], verrouilles) : null));
+  }
+
+  // Les 10 façons de répartir 6 persos en deux trios (les trios sont
+  // interchangeables : on fixe le premier perso dans le trio A).
+  function partitionsDeTrios() {
+    const res = [];
+    const autres = [1, 2, 3, 4, 5];
+    for (let a = 0; a < autres.length; a++) {
+      for (let b = a + 1; b < autres.length; b++) {
+        const trioA = [0, autres[a], autres[b]];
+        const trioB = autres.filter((x) => x !== autres[a] && x !== autres[b]);
+        res.push([...trioA, ...trioB]);
+      }
+    }
+    return res;
+  }
+  const GEN_PARTITIONS = partitionsDeTrios();
+
+  // Étape 3 : meilleure répartition en trios + meilleur leader.
+  function meilleurAgencement(persos, verrouilles, compteur) {
+    const presents = persos.filter(Boolean);
+    let best = { ordre: persos.slice(), leader: state.noLeader ? null : 0, score: -Infinity };
+    for (const perm of GEN_PARTITIONS) {
+      const ordre = perm.map((i) => presents[i] || null);
+      const slots = equipeVersSlots(ordre, verrouilles);
+      // Le leader doit être sur une place occupée.
+      const leaders = state.noLeader ? [null] : ordre.map((p, i) => (p ? i : null)).filter((i) => i !== null);
+      for (const leader of leaders) {
+        const score = evaluerAgencement(slots, leader);
+        compteur.n++;
+        if (score > best.score) best = { ordre, leader, score };
+      }
+    }
+    return best;
+  }
+
+  // Recherche complète pour UN tag donné.
+  function chercherEquipe(tag, verrouilles, compteur) {
+    const verrousPersos = [...verrouilles.values()].map((s) => s.character);
+    const dejaLa = new Set(verrousPersos.map((c) => c.id));
+    const pool = (personnagesParTag().get(tag) || [])
+      .filter((c) => !dejaLa.has(c.id))
+      .sort((a, b) => potentielZ(b, tag) - potentielZ(a, tag))
+      .slice(0, GEN_TOP_CANDIDATS);
+
+    // 1) Glouton : on ajoute à chaque tour le perso qui fait le plus monter la
+    //    note de l'équipe (sans leader : on ne mesure ici que la synergie).
+    const equipe = verrousPersos.slice(0, 6);
+    const restants = pool.slice();
+    while (equipe.length < 6 && restants.length) {
+      let meilleur = -1, meilleureNote = -Infinity;
+      for (let i = 0; i < restants.length; i++) {
+        const essai = [...equipe, restants[i]];
+        const note = evaluerAgencement(equipeVersSlots(essai, verrouilles), null);
+        compteur.n++;
+        if (note > meilleureNote) { meilleureNote = note; meilleur = i; }
+      }
+      if (meilleur < 0) break;
+      equipe.push(restants.splice(meilleur, 1)[0]);
+    }
+
+    // 2) Échanges : un non-verrouillé contre un candidat resté sur le banc.
+    let noteCourante = evaluerAgencement(equipeVersSlots(equipe, verrouilles), null);
+    compteur.n++;
+    for (let i = 0; i < equipe.length; i++) {
+      if (dejaLa.has(equipe[i].id)) continue;   // verrouillé : intouchable
+      for (let j = 0; j < restants.length; j++) {
+        const essai = equipe.slice();
+        essai[i] = restants[j];
+        const note = evaluerAgencement(equipeVersSlots(essai, verrouilles), null);
+        compteur.n++;
+        if (note > noteCourante) {
+          noteCourante = note;
+          const sorti = equipe[i];
+          equipe[i] = restants[j];
+          restants[j] = sorti;
+        }
+      }
+    }
+
+    // 3) Agencement : trios et leader.
+    return meilleurAgencement(equipe, verrouilles, compteur);
+  }
+
+  // Mode « au mieux » : on classe les tags de la catégorie sur le potentiel de
+  // leurs 6 meilleurs persos, puis on lance la recherche complète sur les
+  // premiers seulement (une recherche exacte par tag coûte cher).
+  function meilleursTags(categorie, verrouilles) {
+    const index = personnagesParTag();
+    const manquants = 6 - verrouilles.size;
+    return tagsDeCategorie(categorie)
+      .filter((t) => index.get(t.tag).length >= Math.max(1, manquants))
+      .map(({ tag }) => {
+        const top = index.get(tag)
+          .map((c) => potentielZ(c, tag))
+          .sort((a, b) => b - a)
+          .slice(0, 6)
+          .reduce((s, v) => s + v, 0);
+        return { tag, potentiel: top };
+      })
+      .sort((a, b) => b.potentiel - a.potentiel)
+      .slice(0, GEN_AUTO_TAGS)
+      .map((t) => t.tag);
+  }
+
+  // ── Interface ────────────────────────────────────────────────────────────
+  const genBarEl = document.getElementById("gen-bar");
+  const genTagEl = document.getElementById("gen-tag");
+  const genStatusEl = document.getElementById("gen-status");
+  const genUndoEl = document.getElementById("gen-undo");
+  let genSnapshot = null;   // équipe d'avant génération, pour « Annuler »
+
+  function renderGenBar() {
+    if (!genBarEl) return;
+    genBarEl.querySelectorAll("[data-gen-cat]").forEach((b) => {
+      b.classList.toggle("is-on", b.dataset.genCat === state.gen.categorie);
+      b.setAttribute("aria-pressed", String(b.dataset.genCat === state.gen.categorie));
+    });
+    if (genTagEl) {
+      const tags = tagsDeCategorie(state.gen.categorie);
+      const options = [`<option value="">${T('gen.tag.auto')}</option>`].concat(
+        tags.map((t) => `<option value="${escAttr(t.tag)}"${t.tag === state.gen.tag ? " selected" : ""}>${escAttr(t.tag)} (${t.n})</option>`)
+      );
+      genTagEl.innerHTML = options.join("");
+      genTagEl.value = state.gen.tag;
+    }
+    if (genUndoEl) genUndoEl.hidden = !genSnapshot;
+    const verrous = state.team.filter((s) => s.locked && s.character).length;
+    const info = genBarEl.querySelector("[data-gen-locked]");
+    if (info) {
+      info.textContent = verrous ? T('gen.locked', { n: verrous }) : T('gen.locked.none');
+      info.classList.toggle("is-on", verrous > 0);
+    }
+  }
+
+  function genStatus(html, etat) {
+    if (!genStatusEl) return;
+    genStatusEl.innerHTML = html;
+    genStatusEl.className = "gen-status" + (etat ? " is-" + etat : "");
+  }
+
+  function lancerGeneration() {
+    const t0 = performance.now();
+    // Les verrouillés gardent leur slot entier : items, palier, choix « OU ».
+    const verrouilles = new Map();
+    state.team.forEach((s) => { if (s.locked && s.character) verrouilles.set(s.character.id, s); });
+
+    const compteur = { n: 0 };
+    let resultat = null;
+    let tagRetenu = "";
+
+    if (verrouilles.size >= 6) {
+      // Rien à recruter : on optimise seulement les places et le leader.
+      resultat = meilleurAgencement([...verrouilles.values()].map((s) => s.character), verrouilles, compteur);
+    } else {
+      const tags = state.gen.tag ? [state.gen.tag] : meilleursTags(state.gen.categorie, verrouilles);
+      if (!tags.length) { genStatus(T('gen.status.notag'), "warn"); return; }
+      for (const tag of tags) {
+        const essai = chercherEquipe(tag, verrouilles, compteur);
+        if (!resultat || essai.score > resultat.score) { resultat = essai; tagRetenu = tag; }
+      }
+    }
+    if (!resultat || !resultat.ordre.some(Boolean)) { genStatus(T('gen.status.none'), "warn"); return; }
+
+    // Photo de l'équipe précédente, pour pouvoir revenir en arrière.
+    genSnapshot = { team: state.team.map((s) => ({ ...s, items: s.items.slice(), itemChoices: s.itemChoices.map((c) => ({ ...c })) })), leaderSlot: state.leaderSlot };
+
+    state.team = [0, 1, 2, 3, 4, 5].map((i) => {
+      const perso = resultat.ordre[i];
+      if (!perso) return emptyTeamSlot();
+      const garde = verrouilles.get(perso.id);
+      return garde ? garde : { ...emptyTeamSlot(), character: perso };
+    });
+    if (resultat.leader != null) { state.leaderSlot = resultat.leader; state.noLeader = false; }
+    state.activeSlot = 0;
+    state.trioC = [];
+    renderAll();
+    renderNoLeaderBtn();
+    renderGenBar();
+
+    const remplis = state.team.filter((s) => s.character).length;
+    const ms = Math.round(performance.now() - t0);
+    const detail = ` <span class="gen-detail">${T('gen.status.detail', { n: compteur.n, ms })}</span>`;
+    if (!tagRetenu) {
+      // Les 6 places étaient verrouillées : on n'a optimisé que l'ordre et le leader.
+      genStatus(T('gen.status.places', { total: Math.round(resultat.score) }) + detail, "ok");
+      return;
+    }
+    const porteurs = state.team.filter((s) => s.character && clesDeTags(s.character).has(tagRetenu)).length;
+    // Un tag peut ne pas réunir 6 personnages : on le dit plutôt que de compléter
+    // l'équipe avec des persos hors critère.
+    const manque = remplis < 6
+      ? ` <em class="gen-warn">${T('gen.status.short', { n: 6 - remplis })}</em>`
+      : "";
+    genStatus(
+      `<b>${escAttr(tagRetenu)}</b> · ` +
+      T('gen.status.ok', { total: Math.round(resultat.score), n: porteurs, m: remplis }) +
+      manque + detail,
+      "ok");
+  }
+
+  if (genBarEl) {
+    // Catégorie : Classe ou Épisode.
+    genBarEl.addEventListener("click", (e) => {
+      const cat = e.target.closest("[data-gen-cat]");
+      if (cat) {
+        state.gen.categorie = cat.dataset.genCat;
+        state.gen.tag = "";
+        renderGenBar();
+        return;
+      }
+      if (e.target.closest("#gen-run")) { lancerGeneration(); return; }
+      if (e.target.closest("#gen-undo")) {
+        if (!genSnapshot) return;
+        state.team = genSnapshot.team;
+        state.leaderSlot = genSnapshot.leaderSlot;
+        genSnapshot = null;
+        state.activeSlot = 0;
+        renderAll();
+        renderGenBar();
+        genStatus(T('gen.status.undone'), "");
+      }
+    });
+    genBarEl.addEventListener("change", (e) => {
+      if (e.target.closest("#gen-tag")) { state.gen.tag = e.target.value; }
+    });
+  }
 
   // ===== BASCULE DE MODE =====
   const modeSwitchEl = document.querySelector(".mode-switch");
@@ -2012,6 +2358,15 @@
     if (clr) { const [cs, is] = clr.dataset.itemClear.split(":"); state.team[+cs].items[+is] = null; renderAll(); return; }
     const openIt = t.closest("[data-open-item]");
     if (openIt) { const [cs, is] = openIt.dataset.openItem.split(":"); openItemModal(+cs, +is); return; }
+    // Cadenas → le générateur gardera ce perso (il pourra changer de place)
+    const lock = t.closest("[data-lock-char]");
+    if (lock) {
+      const i = +lock.dataset.lockChar;
+      state.team[i].locked = !state.team[i].locked;
+      renderTeamGrid();
+      renderGenBar();
+      return;
+    }
     // Perso : changer (✎) → on édite ET on analyse ce perso
     const chgChar = t.closest("[data-change-char]");
     if (chgChar) { state.charTargetSlot = +chgChar.dataset.changeChar; state.activeSlot = state.charTargetSlot; renderTeamGrid(); renderResults(); openCharModal(); return; }
@@ -4136,6 +4491,7 @@
   // ===== RENDU GLOBAL =====
   function renderAll() {
     renderTeamGrid();   // grille builder (persos + items)
+    renderGenBar();     // barre du générateur (verrous, tags)
     renderConditions();
     renderResults();
   }

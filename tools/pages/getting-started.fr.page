@@ -6,7 +6,7 @@
   "lead": "De la case vide au bilan chiffré : chaque zone de l’optimiseur expliquée, dans l’ordre où tu t’en sers.",
   "type": "article",
   "published": "2026-09-16",
-  "updated": "2026-09-27",
+  "updated": "2026-09-30",
   "cta": "Ouvrir l’optimiseur →"
 }
 -->
@@ -22,7 +22,13 @@
 </ul>
 <p>Le mode ne change pas les calculs de Cap Z ni d’items : il change le nom des deux trios et ajoute l’analyse du Trio C.</p>
 
-<h2>2. Ajouter des personnages</h2>
+<h2>2. Générer une équipe automatiquement</h2>
+<p>La barre <strong>« Générer une équipe »</strong>, au-dessus de la grille, construit la meilleure équipe possible autour d’un critère : une <strong>Classe</strong> (Saiyan, Famille Goku, Cyborg…) ou un <strong>Épisode</strong> (Saga Z - Freezer, Saga des films…). Choisis le critère, puis un tag précis — ou laisse <em>« au mieux »</em> et l’outil compare les tags les plus prometteurs de la catégorie.</p>
+<p>« Meilleure » veut dire ici la même chose que dans le <strong>Bilan global</strong> : la somme des gains de Cap Z et d’items des 6 personnages, conditions et privilège du Leader compris. L’outil évalue des centaines d’équipes, puis retient la répartition en trios et le <strong>Leader</strong> qui donnent le meilleur total — il affiche le résultat et le nombre d’équipes évaluées.</p>
+<p>Tu peux <strong>verrouiller</strong> les personnages à garder : le cadenas 🔓 de la tuile devient 🔒 et le générateur conserve ce personnage, avec ses items et son palier de Cap Z. En revanche il peut lui <strong>changer de place</strong> entre les 6 emplacements, puisque le trio et le Leader décident de la propagation des Cap Z. Verrouille les 6 et la génération se contente d’optimiser les places et le Leader.</p>
+<p>Le bouton <strong>« Annuler »</strong> restaure l’équipe d’avant la génération. Si un tag ne réunit pas 6 personnages, les places manquantes restent vides plutôt que d’être comblées hors critère.</p>
+
+<h2>3. Ajouter des personnages</h2>
 <p>Clique sur une case <strong>« Cliquer pour ajouter »</strong>. La fenêtre de sélection affiche toutes les cartes avec leur artwork, leur nom et leur couleur. Tu peux :</p>
 <ul>
   <li>chercher par <strong>nom</strong>, par <strong>code de carte</strong> (par exemple DBL99-01L) ou par <strong>tag</strong> (« Saiyan », « Famille Goku »…) ;</li>
@@ -30,10 +36,10 @@
 </ul>
 <p>Un personnage déjà présent dans l’équipe est grisé. Sur une carte placée, le bouton <strong>✎</strong> permet de changer de personnage et <strong>✕</strong> de le retirer ; dans les deux cas, ses items sont retirés avec lui.</p>
 
-<h2>3. Désigner le Leader</h2>
+<h2>4. Désigner le Leader</h2>
 <p>L’étoile <strong>★</strong> sous chaque carte désigne le Leader. Son rôle est important dans le calcul : il reçoit toutes les Cap Z de l’équipe sans condition, et sa propre Cap Z s’applique sans condition à ses deux coéquipiers de trio. Le bouton <strong>« Désactiver le leader »</strong>, en bas du panneau, permet de comparer avec une équipe sans ce privilège. Tout est détaillé dans le <a href="/guide-cap-z.html">guide des Cap Z</a>.</p>
 
-<h2>4. Régler la Cap Z et les items</h2>
+<h2>5. Régler la Cap Z et les items</h2>
 <p>Sur ordinateur, passe la souris sur une carte : un panneau se déplie à sa droite. Sur mobile et tablette, ces réglages sont affichés sous chaque carte.</p>
 <ul>
   <li><strong>Cap Z</strong> — choisis le palier <strong>I, II, III ou IV</strong> que tu as débloqué. La Cap Z Zenkai, si le personnage en a une, est comptée à son maximum.</li>
@@ -42,12 +48,12 @@
   <li><strong>Lignes « OU »</strong> — certains items tirent au hasard une stat parmi deux. Tu choisis celle que tu as obtenue pour que le calcul corresponde à ton équipement réel.</li>
 </ul>
 
-<h2>5. Lire les tags et les conditions</h2>
+<h2>6. Lire les tags et les conditions</h2>
 <p>Sous les cartes, le tableau <strong>« Tags de l’équipe »</strong> montre qui porte quel tag : une colonne par personnage, un point sous chaque porteur, le total à droite. Les tags partagés passent en premier ; ceux d’un seul personnage sont repliés derrière un bouton.</p>
 <p>Le panneau <strong>« Composition d’équipe »</strong> liste ensuite les effets d’items <strong>qui ne passent pas</strong> : ceux dont la condition n’est pas remplie dans le trio de leur porteur. Les effets actifs, eux, sont simplement comptés dans le bandeau (« Actifs : 6 · Inactifs : 3 ») — il n’y a rien à y corriger.</p>
 <p>Les effets bloqués sont regroupés par tag manquant. L’en-tête du groupe rappelle qui porte déjà ce tag dans chaque trio, et chaque ligne montre le personnage, l’item, le bonus perdu (barré) et ce qu’il manque (« Manque 1 »).</p>
 
-<h2>6. Analyser les résultats</h2>
+<h2>7. Analyser les résultats</h2>
 <ul>
   <li><strong>Bilan global (Cap Z)</strong> — le total des bonus de Cap Z reçus par toute l’équipe, et un graphique par stat.</li>
   <li><strong>Effets non calculés</strong> — toute l’équipe, perso par perso : la Résonance des ULTRA, les passifs impossibles à chiffrer et les effets dont la condition n’est pas remplie.</li>
@@ -57,7 +63,7 @@
   <li><strong>Arbre des Cap Z</strong> — en vue globale, la matrice des propagations de toute l’équipe ; en vue ciblée, la Cap Z du personnage choisi vers chaque coéquipier : flèche <strong>verte</strong> si tout passe, <strong>jaune</strong> si une partie seulement s’applique, <strong>rouge</strong> si rien ne passe.</li>
 </ul>
 
-<h2>7. En mode Proud : vérifier le Trio C</h2>
+<h2>8. En mode Proud : vérifier le Trio C</h2>
 <p>En mode Proud, un rectangle <strong>« TRIO C »</strong> apparaît sous chaque personnage. Désigne 2 personnages d’un trio et 1 de l’autre : l’analyse du Trio C compare alors leurs bonus à ceux de leur trio d’origine, liste ce qui est perdu ou gagné et propose le meilleur Trio C possible. Le <a href="/guide-mode-proud.html">guide du mode Proud</a> explique comment la lire.</p>
 
 <h2>Astuces</h2>
