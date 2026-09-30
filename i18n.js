@@ -262,16 +262,12 @@
     'group.utilitaire': { fr: 'Utilitaire', en: 'Utility' },
 
     // ── Labels de stats affichées ────────────────
-    'stat.force':       { fr: 'Force',                    en: 'Health' },
-    'stat.regen':       { fr: 'Quantité de régénération', en: 'HP Regen Amount' },
-    'stat.tech_spe':    { fr: 'Dégâts technique spéciale', en: 'Special Move DMG' },
-    'stat.ultime':      { fr: 'Dégâts technique ultime',  en: 'Ultimate Move DMG' },
 
     // ── Labels LABELS_CIBLES (calc.js) ───────────
-    'labels.attaque_physique':        { fr: 'Attaque physique',          en: 'Physical ATK' },
-    'labels.attaque_energie':         { fr: "Attaque d'énergie",         en: 'Energy ATK' },
-    'labels.defense_physique':        { fr: 'Défense physique',          en: 'Physical DEF' },
-    'labels.defense_energie':         { fr: "Défense d'énergie",         en: 'Energy DEF' },
+    'labels.attaque_physique':        { fr: 'Attaque physique',          en: 'Strike ATK' },
+    'labels.attaque_energie':         { fr: "Attaque d'énergie",         en: 'Blast ATK' },
+    'labels.defense_physique':        { fr: 'Défense physique',          en: 'Strike DEF' },
+    'labels.defense_energie':         { fr: "Défense d'énergie",         en: 'Blast DEF' },
     'labels.points_de_vie':           { fr: 'Points de vie',             en: 'Health Points' },
     'labels.vitesse_regen_ki':        { fr: 'Vitesse de régén. du Ki',   en: 'Ki Recovery Speed' },
     'labels.critique':                { fr: 'Critique',                  en: 'Critical Rate' },

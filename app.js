@@ -3392,44 +3392,17 @@
   const statsGrid = document.getElementById("stats-grid");
   const passifsZone = document.getElementById("passifs-zone");
 
-    // Stats regroupées par catégorie thématique — labels recalculés selon la langue
-    const DISPLAY_GROUPS = [
-      {
-        slug: "vie",
-        titre: T('group.vie'),
-        stats: [
-          { cible: "force",                 label: T('stat.force') },
-          { cible: "quantite_regen_force",  label: T('stat.regen') },
-        ],
-      },
-      {
-        slug: "attaque",
-        titre: T('group.attaque'),
-        stats: [
-          { cible: "attaque_physique",      label: "Strike ATK" },
-          { cible: "attaque_energie",       label: "Blast ATK" },
-          { cible: "critique",              label: "Critical Rate" },
-          { cible: "degats_tech_spe",       label: T('stat.tech_spe') },
-          { cible: "degats_ultime",         label: T('stat.ultime') },
-        ],
-      },
-      {
-        slug: "defense",
-        titre: T('group.defense'),
-        stats: [
-          { cible: "defense_physique",      label: "Strike DEF" },
-          { cible: "defense_energie",       label: "Blast DEF" },
-        ],
-      },
-      {
-        slug: "utilitaire",
-        titre: T('group.utilitaire'),
-        stats: [
-          { cible: "vitesse_regen_ki",      label: "Ki Recover" },
-          { cible: "vanish_recover",        label: "Vanish Recover" },
-        ],
-      },
-    ];
+  // Stats regroupées par catégorie thématique. Les noms viennent de
+  // LABELS_CIBLES, la seule table de noms de stats du site (optimiseur d'items,
+  // barres, bilans) : une stat porte le même nom partout, dans chaque langue.
+  // Recalculé à chaque rendu — sinon la bascule FR/EN sur place laisserait ce
+  // tableau dans la langue de chargement.
+  const groupesAffichage = () => [
+    { slug: "vie",        titre: T('group.vie'),        cibles: ["force", "quantite_regen_force"] },
+    { slug: "attaque",    titre: T('group.attaque'),    cibles: ["attaque_physique", "attaque_energie", "critique", "degats_tech_spe", "degats_ultime"] },
+    { slug: "defense",    titre: T('group.defense'),    cibles: ["defense_physique", "defense_energie"] },
+    { slug: "utilitaire", titre: T('group.utilitaire'), cibles: ["vitesse_regen_ki", "vanish_recover"] },
+  ].map((g) => ({ ...g, stats: g.cibles.map((cible) => ({ cible, label: LABELS_CIBLES[cible] })) }));
 
   // ===== ONGLETS PERSO (pilotent stats cumulées + effets non calculés) =====
   // S'assure que le perso analysé (activeSlot) pointe sur un perso occupé.
@@ -3536,7 +3509,7 @@
         </div>`;
     };
 
-    statsGrid.innerHTML = DISPLAY_GROUPS
+    statsGrid.innerHTML = groupesAffichage()
       .map((g) => {
         const rows = g.stats.map(renderStatRow).join("");
         return `
