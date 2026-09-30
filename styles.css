@@ -2364,7 +2364,12 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
   display: flex; align-items: flex-start; gap: var(--s-3);
 }
 .callout.passive  { border-color: var(--accent-tint-2); background: linear-gradient(180deg, var(--accent-tint), transparent 80%), var(--surface-2); }
-.callout.inactive { opacity: .6; }
+/* Effet bloqué : le texte s'efface, mais l'icône de l'item reste nette — c'est
+   elle qui dit d'un coup d'œil quel équipement est concerné. (Une opacité posée
+   sur l'encart entier l'aurait délavée aussi.) */
+.callout.inactive { background: var(--surface); color: var(--text-soft); }
+.callout.inactive .callout-body strong { color: var(--text-soft); }
+.callout .item-img { width: 42px; height: 42px; flex-shrink: 0; }
 .callout-tag {
   font-size: var(--fs-xxs);
   font-weight: 700;

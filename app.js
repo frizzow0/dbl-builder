@@ -3546,10 +3546,18 @@
     }).join("");
   }
 
-  function inactivesHTML(inactives) {
-    return inactives.map((c) => `
+  // slotIdx : le personnage concerné, pour retrouver l'item d'où vient l'effet
+  // et en montrer l'icône — c'est elle qui dit d'un coup d'œil quel équipement
+  // ne passe pas. Les index 0..2 sont ses trois emplacements ; au-delà ce sont
+  // les Cap Z, dont les conditions sont déjà résolues (jamais listées ici).
+  function inactivesHTML(inactives, slotIdx) {
+    const slot = state.team[slotIdx];
+    return inactives.map((c) => {
+      const item = c.slot < 3 && slot ? slot.items[c.slot] : null;
+      return `
       <div class="callout inactive">
         <div class="callout-tag">${T('inactive.tag')}</div>
+        ${item ? ceItemIconHTML(item) : ""}
         <div>
           <div class="callout-body">
             <strong>+${fmtPct(c.valeur).replace("%","")}% ${c.statLabel}</strong> — ${c.description}
@@ -3558,7 +3566,8 @@
             ${T('source.prefix')} ${c.itemNom} (slot ${c.slot + 1}) — ${c.valeurActuelle}/${c.seuil} « ${c.tag} »
           </div>
         </div>
-      </div>`).join("");
+      </div>`;
+    }).join("");
   }
 
   function renderEffetsNonCalcules() {
@@ -3571,7 +3580,7 @@
       const res = calculerStats({ items: [...prepare.items, ...buildTeamZItemsFor(i)], conditions: conds });
       const corps = (resonanceCalloutHTML(i) || "") +
         passifsGroupesHTML(res.passifs) +
-        inactivesHTML(res.conditionsInactives);
+        inactivesHTML(res.conditionsInactives, i);
       if (!corps) return;   // ce perso n'a rien à signaler
       const c = slot.character;
       const leader = (i === effectiveLeaderSlot() && !state.noLeader)
