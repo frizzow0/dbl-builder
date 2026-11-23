@@ -427,6 +427,7 @@
                                en: 'The ranking weighs each gain by the character’s base stat relative to the game’s median: a percentage on a stat they are strong in counts for more. Values at maximum (max-level equipment, slot 4 ★7 included); “OR” lines are assumed rolled on the most useful option.' },
 
     // ── Raretés ──────────────────────────────────
+    'rarity.awakenedplatinum': { fr: 'PLATINUM ÉVEILLÉ', en: 'AWAKENED PLATINUM' },
     'rarity.platinum':       { fr: 'PLATINUM',        en: 'PLATINUM' },
     'rarity.awakenedunique': { fr: 'UNIQUE ÉVEILLÉ',  en: 'AWAKENED UNIQUE' },
     'rarity.unique':         { fr: 'UNIQUE',          en: 'UNIQUE' },

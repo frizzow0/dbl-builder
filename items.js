@@ -1,6 +1,6 @@
 // Auto-généré par scrape.js — ne pas éditer à la main.
-// Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, event)
-// 927 items, généré le 2026-09-30T16:07:49.303Z
+// Source : fr.dblegends.net (raretés : iron, bronze, silver, gold, awakenedbronze, awakenedsilver, awakenedgold, unique, awakenedunique, platinum, awakenedplatinum, event)
+// 945 items, généré le 2026-11-23T19:39:12.595Z
 
 window.DBL_ITEMS_SCRAPED = [
   {
@@ -238,17 +238,185 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_33001",
+    "sourceId": "33001",
+    "nom": "ULTRA !! - Super Gogeta",
+    "rarete": "awakenedplatinum",
+    "sourceUrl": "https://fr.dblegends.net/equip/33001",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_32004.webp",
+    "tagsPorteur": [],
+    "porteursExacts": [
+      {
+        "id": "454",
+        "code": "DBL42-01U",
+        "nom": "Super Gogeta"
+      }
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 30,
+        "valeur_max": 30,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 100,
+        "valeur_max": 100,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 100,
+        "valeur_max": 100,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 100,
+        "valeur_max": 100,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 100,
+        "valeur_max": 100,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 330,
+        "valeur_max": 330,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 290,
+        "valeur_max": 290,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "est_passif": true,
+        "description_passif": "▼Une fois entré en scène :",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Si vous avez 3 cartes ou moins, tire 1 carte",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Régénère le Ki de 60",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Régénère la jauge unique de 80%",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Immunise contre les mises à couvert particulières (10 secondes)",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Préserve le Ki (10 secondes)",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Coût de tous les arts de tous les ennemis +25 (10 secondes) (immunité contre les malus de stats et annulation possibles)",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "▼Si la force restante est de 50% ou moins quand vous subissez une attaque d'art :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Régénère la force de 40% (3 fois)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Annule le désavantage d'attribut des dégâts subis (1 fois)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "[Déblocage à ★7]",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dégâts spéciaux et ultimes infligés +70%",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Garde contre les dégâts d'enchaînement dévastateur +70%",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Coût de tous les arts -10",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Vitesse de pioche de cartes d'arts +1 rang",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Immunise 3 fois contre les altérations d'état",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand vous êtes sur le terrain et que l'adversaire effectue un remplacement, scelle les enchaînements dévastateurs de l'adversaire (5 secondes)",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "▼Quand vous utilisez une carte d'art unique ou spécial :",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Si vous avez 3 cartes ou moins, tire 1 carte",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Annule les désavantages d'attribut (10 secondes)",
+        "slot": 4
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Prolonge de 2 secondes la durée de mise en attente de tous les ennemis",
+        "slot": 4
+      }
+    ]
+  },
+  {
     "id": "equip_32001",
     "sourceId": "32001",
     "nom": "ULTRA !! - Oméga Shenron",
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32001",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32001.webp",
-    "tagsPorteur": [
-      [
-        "Li Shenron"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "443",
@@ -376,11 +544,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32002",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32002.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "468",
@@ -507,11 +671,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32003",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32003.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "495",
@@ -636,11 +796,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32004",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32004.webp",
-    "tagsPorteur": [
-      [
-        "Gogeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "454",
@@ -767,11 +923,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32005",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32005.webp",
-    "tagsPorteur": [
-      [
-        "Goku Black"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "532",
@@ -884,11 +1036,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32006",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32006.webp",
-    "tagsPorteur": [
-      [
-        "Hit"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "511",
@@ -1010,11 +1158,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32007",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32007.webp",
-    "tagsPorteur": [
-      [
-        "Shallot"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "19800",
@@ -1146,11 +1290,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32008",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32008.webp",
-    "tagsPorteur": [
-      [
-        "Vegetto"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "487",
@@ -1277,11 +1417,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32009",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32009.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "385",
@@ -1403,11 +1539,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32010",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32010.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "586",
@@ -1529,11 +1661,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32011",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32011.webp",
-    "tagsPorteur": [
-      [
-        "Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "538",
@@ -1650,11 +1778,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32012",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32012.webp",
-    "tagsPorteur": [
-      [
-        "Vegetto"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "554",
@@ -1776,11 +1900,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "platinum",
     "sourceUrl": "https://fr.dblegends.net/equip/32013",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_32013.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "603",
@@ -1902,11 +2022,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50003",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1264.webp",
-    "tagsPorteur": [
-      [
-        "Beerus"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "166",
@@ -1973,11 +2089,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50010",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1382.webp",
-    "tagsPorteur": [
-      [
-        "Son Gohan"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "191",
@@ -2052,11 +2164,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50016",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1409.webp",
-    "tagsPorteur": [
-      [
-        "Son Goten"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "204",
@@ -2134,11 +2242,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50052",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1407.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "220",
@@ -2201,12 +2305,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50073",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1291.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -2302,14 +2401,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50112",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1293.webp",
-    "tagsPorteur": [
-      [
-        "Gogeta"
-      ],
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -2377,11 +2469,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50117",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1684.webp",
-    "tagsPorteur": [
-      [
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -2427,11 +2515,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50118",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1512.webp",
-    "tagsPorteur": [
-      [
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -2477,11 +2561,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50119",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1667.webp",
-    "tagsPorteur": [
-      [
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -2534,11 +2614,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50120",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1376.webp",
-    "tagsPorteur": [
-      [
-        "Type assistance"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -2591,12 +2667,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedunique",
     "sourceUrl": "https://fr.dblegends.net/equip/50211",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1574.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -2671,11 +2742,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1124",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1124.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -2725,11 +2792,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1157",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1157.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -2765,23 +2828,81 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_1175",
+    "sourceId": "1175",
+    "nom": "Jugement",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/1175",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1175.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_tech_spe",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un « Classe : Guerrier de l'au-delà » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Guerrier de l'au-delà",
+          "tags_requis": [
+            "Classe : Guerrier de l'au-delà"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 2
+      },
+      {
+        "stat": "degats_ultime",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un « Classe : Super Saiyan » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Super Saiyan",
+          "tags_requis": [
+            "Classe : Super Saiyan"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_1209",
     "sourceId": "1209",
     "nom": "Gohaaan !!",
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1209",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1209.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ],
-      [
-        "Lignée royale Vegeta"
-      ],
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -2831,11 +2952,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1228",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1228.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -2890,12 +3007,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1257",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1257.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -2941,11 +3053,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1263",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1263.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -3020,11 +3128,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1264",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1264.webp",
-    "tagsPorteur": [
-      [
-        "Beerus"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "166",
@@ -3091,11 +3195,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1284",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1284.webp",
-    "tagsPorteur": [
-      [
-        "Fusion"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -3134,12 +3234,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1291",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1291.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -3171,12 +3266,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1293",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1293.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -3237,14 +3327,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1298",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1298.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les cyborgs"
-      ],
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -3321,12 +3404,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1308",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1308.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -3368,14 +3446,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1325",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1325.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ],
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -3438,11 +3509,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1327",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1327.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -3517,12 +3584,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1342",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1342.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -3561,11 +3623,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1343",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1343.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -3640,11 +3698,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1352",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1352.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -3712,11 +3766,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1357",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1357.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -3755,12 +3805,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1364",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1364.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -3795,11 +3840,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1371",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1371.webp",
-    "tagsPorteur": [
-      [
-        "Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "432",
@@ -3878,11 +3919,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1380",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1380.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -3921,11 +3958,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1382",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1382.webp",
-    "tagsPorteur": [
-      [
-        "Son Gohan"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "191",
@@ -3993,11 +4026,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1393",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1393.webp",
-    "tagsPorteur": [
-      [
-        "Son Gohan"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "191",
@@ -4088,11 +4117,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1400",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1400.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -4160,11 +4185,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1406",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1406.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "414",
@@ -4222,11 +4243,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1407",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1407.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "220",
@@ -4261,14 +4278,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1408",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1408.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ],
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -4336,11 +4346,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1409",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1409.webp",
-    "tagsPorteur": [
-      [
-        "Son Goten"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "204",
@@ -4431,11 +4437,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1443",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1443.webp",
-    "tagsPorteur": [
-      [
-        "Vegetto"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "224",
@@ -4519,11 +4521,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1447",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1447.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -4591,12 +4589,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1455",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1455.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -4649,12 +4642,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1457",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1457.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -4729,11 +4717,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1458",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1458.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -4784,11 +4768,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1492",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1492.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "265",
@@ -4839,11 +4819,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1507",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1507.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -4882,11 +4858,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1516",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1516.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "251",
@@ -5054,11 +5026,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1524",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1524.webp",
-    "tagsPorteur": [
-      [
-        "Vegetto"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "318",
@@ -5133,11 +5101,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1528",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1528.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -5200,11 +5164,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1529",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1529.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Trunks du futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -5279,11 +5239,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1531",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1531.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -5351,11 +5307,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1533",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1533.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Trunks du futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -5394,11 +5346,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1534",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1534.webp",
-    "tagsPorteur": [
-      [
-        "Zamasu"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "395",
@@ -5456,12 +5404,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1561",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1561.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -5500,12 +5443,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1562",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1562.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -5544,12 +5482,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1569",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1569.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -5619,11 +5552,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1574",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1574.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -5698,11 +5627,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1577",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1577.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "253",
@@ -5746,11 +5671,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1578",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1578.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "304",
@@ -5801,11 +5722,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1579",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1579.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "346",
@@ -5863,11 +5780,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1580",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1580.webp",
-    "tagsPorteur": [
-      [
-        "Univers 11"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -5935,11 +5848,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1586",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1586.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -5978,11 +5887,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1587",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1587.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "366",
@@ -6047,11 +5952,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1595",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1595.webp",
-    "tagsPorteur": [
-      [
-        "Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "377",
@@ -6109,12 +6010,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1600",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1600.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -6153,12 +6049,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1601",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1601.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -6224,11 +6115,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1621",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1621.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "388",
@@ -6277,11 +6164,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1624",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1624.webp",
-    "tagsPorteur": [
-      [
-        "Gogeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "392",
@@ -6346,11 +6229,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1633",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1633.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -6418,12 +6297,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1642",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1642.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -6455,11 +6329,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1649",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1649.webp",
-    "tagsPorteur": [
-      [
-        "Saga exclusive au dessin animé"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -6498,11 +6368,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1652",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1652.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -6541,11 +6407,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1659",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1659.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -6613,11 +6475,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1661",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1661.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "400",
@@ -6654,11 +6512,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1662",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1662.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "385",
@@ -6708,12 +6562,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1666",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1666.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -6752,11 +6601,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1671",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1671.webp",
-    "tagsPorteur": [
-      [
-        "Trunks"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "451",
@@ -6831,11 +6676,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1672",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1672.webp",
-    "tagsPorteur": [
-      [
-        "Zamasu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -6881,11 +6722,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1675",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1675.webp",
-    "tagsPorteur": [
-      [
-        "Bardock"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "456",
@@ -6943,11 +6780,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1679",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1679.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -6986,11 +6819,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1680",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1680.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -7029,11 +6858,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1683",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1683.webp",
-    "tagsPorteur": [
-      [
-        "Jiren"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "462",
@@ -7098,12 +6923,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1687",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1687.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan divin SS",
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -7160,11 +6980,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1688",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1688.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -7203,11 +7019,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1689",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1689.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "576",
@@ -7289,11 +7101,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1690",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1690.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -7352,11 +7160,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1702",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1702.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -7406,11 +7210,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1703",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1703.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les cyborgs"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -7449,12 +7249,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1704",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1704.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -7511,11 +7306,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1710",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1710.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "370",
@@ -7564,11 +7355,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1711",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1711.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -7634,11 +7421,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1713",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1713.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "482",
@@ -7741,12 +7524,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1724",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1724.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -7803,12 +7581,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1725",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1725.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -7832,17 +7605,115 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_1731",
+    "sourceId": "1731",
+    "nom": "Coupure nette",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/1731",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1731.webp",
+    "tagsPorteur": [],
+    "porteursExacts": [
+      {
+        "id": "497",
+        "code": "DBL50-01S",
+        "nom": "Super Saiyan Trunks jeune"
+      }
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 70,
+        "valeur_max": 200,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 80,
+        "valeur_max": 240,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dégâts ultimes infligés par les « Classe : Saiyan métis », « Classe : Futur » ou « Classe : Lignée royale Vegeta » alliés 10.00% ~ 30.00%",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Une fois entré en scène, régénère la force de 5.00% ~ 15.00%.",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Une fois entré en scène, tire une carte d'art unique au tour suivant (2 fois)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand vous utilisez un art physique ou d'énergie, dégâts infligés +30% (5 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand vous subissez une attaque d'art, les effets suivants s'activent :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Réduit de 15 le Ki de l'adversaire",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Réduit de 1 seconde la durée de mise en attente des alliés",
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_1734",
     "sourceId": "1734",
     "nom": "Tu n'as pas besoin de le savoir",
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1734",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1734.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -7881,11 +7752,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1735",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1735.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -7937,12 +7804,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1736",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1736.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -7974,14 +7836,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1738",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1738.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ],
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -8071,17 +7926,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1745",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1745.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ],
-      [
-        "Ennemi puissant"
-      ],
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -8144,11 +7989,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1746",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1746.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -8216,11 +8057,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1747",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1747.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -8295,12 +8132,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1748",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1748.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -8346,11 +8178,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1749",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1749.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "501",
@@ -8427,11 +8255,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1750",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1750.webp",
-    "tagsPorteur": [
-      [
-        "Saga GT - Dragons maléfiques"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -8499,11 +8323,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1754",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1754.webp",
-    "tagsPorteur": [
-      [
-        "Trunks"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "514",
@@ -8589,11 +8409,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1755",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1755.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "265",
@@ -8690,11 +8506,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1756",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1756.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -8762,11 +8574,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1757",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1757.webp",
-    "tagsPorteur": [
-      [
-        "C-17"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "510",
@@ -8848,12 +8656,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1759",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1759.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -8892,11 +8695,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1761",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1761.webp",
-    "tagsPorteur": [
-      [
-        "Son Gohan"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "375",
@@ -8961,11 +8760,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1766",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1766.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif au jeu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -8997,11 +8792,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1771",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1771.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -9076,12 +8867,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1777",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1777.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -9113,11 +8899,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1780",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1780.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "536",
@@ -9175,11 +8957,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1782",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1782.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -9238,12 +9016,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1784",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1784.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -9282,11 +9055,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1786",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1786.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "539",
@@ -9370,11 +9139,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1794",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1794.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -9442,12 +9207,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1801",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1801.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -9493,11 +9253,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1805",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1805.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "551",
@@ -9553,11 +9309,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1806",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1806.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "551",
@@ -9636,11 +9388,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1807",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1807.webp",
-    "tagsPorteur": [
-      [
-        "Gamma 1"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "549",
@@ -9712,11 +9460,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1808",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1808.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films (SUPER HERO)"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -9755,11 +9499,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1812",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1812.webp",
-    "tagsPorteur": [
-      [
-        "Gamma 1"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "549",
@@ -9831,12 +9571,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1817",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1817.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -9882,11 +9617,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1831",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1831.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -9954,11 +9685,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1832",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1832.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -10054,11 +9781,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1836",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1836.webp",
-    "tagsPorteur": [
-      [
-        "Commando Ginyu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -10126,11 +9849,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1841",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1841.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -10198,11 +9917,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1842",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1842.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -10268,11 +9983,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1844",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1844.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "563",
@@ -10337,11 +10048,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1847",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1847.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -10380,14 +10087,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1852",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1852.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ],
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -10457,12 +10157,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1854",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1854.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_ultime",
@@ -10494,11 +10189,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1858",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1858.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -10564,12 +10255,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1861",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1861.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_ultime",
@@ -10608,11 +10294,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1864",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1864.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -10678,11 +10360,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1871",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1871.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -10737,11 +10415,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1872",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1872.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -10790,17 +10464,110 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_1873",
+    "sourceId": "1873",
+    "nom": "Merci bien, habitants de l'Univers !",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/1873",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1873.webp",
+    "tagsPorteur": [],
+    "porteursExacts": [
+      {
+        "id": "588",
+        "code": "DBL67-01S",
+        "nom": "Son Goku"
+      }
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 60,
+        "valeur_max": 180,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 70,
+        "valeur_max": 190,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dégâts spéciaux infligés 20.00% ~ 50.00%",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Quand la jauge unique est pleine, dégâts infligés par les « Classe : GT » alliés 7.00% ~ 20.00%",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'un art spécial, tire une carte d'art unique au tour suivant (1 fois)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "*Le nombre de déclenchements se réinitialise lors d'un remplacement",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Une fois entré en scène, si vous avez 3 cartes ou moins, tire 1 carte",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'une mise à couvert, coût de tous les arts de tous les ennemis +10 (5 secondes) (immunité contre les malus de stats et annulation possibles)",
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_1874",
     "sourceId": "1874",
     "nom": "En tout cas, je t'aurai prévenu",
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1874",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1874.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -10869,11 +10636,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1880",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1880.webp",
-    "tagsPorteur": [
-      [
-        "Shallot"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "19800",
@@ -10953,12 +10716,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1881",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1881.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -10997,14 +10755,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1882",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1882.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ],
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -11074,11 +10825,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1885",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1885.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -11168,11 +10915,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1888",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1888.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -11223,14 +10966,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1890",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1890.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ],
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -11293,11 +11029,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1893",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1893.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "448",
@@ -11442,14 +11174,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1898",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1898.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ],
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -11517,11 +11242,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1900",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1900.webp",
-    "tagsPorteur": [
-      [
-        "Potalas"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -11560,11 +11281,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1906",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1906.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -11610,12 +11327,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1908",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1908.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -11702,14 +11414,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1909",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1909.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ],
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -11777,11 +11482,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1910",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1910.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "615",
@@ -11858,12 +11559,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1912",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1912.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -11902,17 +11598,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1914",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1914.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ],
-      [
-        "Guerrier fusionné"
-      ],
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -11983,17 +11669,81 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_1918",
+    "sourceId": "1918",
+    "nom": "Non mais quel pot de colle, tu me laisseras tranquille un jour ?",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/1918",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1918.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un « Classe : Dragons maléfiques » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Dragons maléfiques",
+          "tags_requis": [
+            "Classe : Dragons maléfiques"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 10,
+        "valeur_max": 30,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si un « Classe : Dragons maléfiques » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Dragons maléfiques",
+          "tags_requis": [
+            "Classe : Dragons maléfiques"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_1919",
     "sourceId": "1919",
     "nom": "Concentration du Ki en un point",
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1919",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1919.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "253",
@@ -12108,14 +11858,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1923",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1923.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ],
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -12192,11 +11935,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1925",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1925.webp",
-    "tagsPorteur": [
-      [
-        "Troupe de Thalès"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -12264,14 +12003,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1927",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1927.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ],
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -12339,12 +12071,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1930",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1930.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -12376,12 +12103,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1934",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1934.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -12447,11 +12169,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1937",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1937.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -12490,11 +12208,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1938",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1938.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -12562,14 +12276,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1940",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1940.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ],
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -12645,11 +12352,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1941",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1941.webp",
-    "tagsPorteur": [
-      [
-        "Goku Black"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "648",
@@ -12758,11 +12461,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1945",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1945.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "624",
@@ -12866,12 +12565,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1947",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1947.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -12946,11 +12640,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1949",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1949.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -12982,11 +12672,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1961",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1961.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -13045,11 +12731,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1963",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1963.webp",
-    "tagsPorteur": [
-      [
-        "Porteur d'arme"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -13124,11 +12806,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1969",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1969.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -13196,11 +12874,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1971",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1971.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -13239,14 +12913,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1973",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1973.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ],
-      [
-        "Porteur d'arme"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -13316,12 +12983,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1974",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1974.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -13360,11 +13022,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1975",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1975.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "251",
@@ -13453,11 +13111,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1978",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1978.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "583",
@@ -13529,11 +13183,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1979",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1979.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "675",
@@ -13615,14 +13265,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1981",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1981.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ],
-      [
-        "Porteur d'arme"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -13673,11 +13316,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1986",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1986.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -13767,11 +13406,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1993",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1993.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -13841,11 +13476,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1996",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1996.webp",
-    "tagsPorteur": [
-      [
-        "Zamasu"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "661",
@@ -13922,12 +13553,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1997",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1997.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -13966,12 +13592,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1998",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1998.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -14039,12 +13660,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/1999",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1999.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -14076,11 +13692,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2003",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2003.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "690",
@@ -14157,11 +13769,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2004",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2004.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -14229,11 +13837,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2006",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2006.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -14301,14 +13905,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2012",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2012.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ],
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -14366,12 +13963,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2013",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2013.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -14403,11 +13995,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2015",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2015.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -14477,12 +14065,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2016",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2016.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -14510,11 +14093,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2019",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2019.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "414",
@@ -14598,17 +14177,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2020",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2020.webp",
-    "tagsPorteur": [
-      [
-        "Ginyu"
-      ],
-      [
-        "Jeese"
-      ],
-      [
-        "Reacum"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "562",
@@ -14697,12 +14266,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2025",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2025.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -14741,11 +14305,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2027",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2027.webp",
-    "tagsPorteur": [
-      [
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -14788,12 +14348,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2030",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2030.webp",
-    "tagsPorteur": [
-      [
-        "Porteur d'arme",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -14825,11 +14380,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2033",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2033.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -14868,12 +14419,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2034",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2034.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -14943,11 +14489,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2038",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2038.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -15037,11 +14579,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2042",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2042.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -15071,14 +14609,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2043",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2043.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ],
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -15139,14 +14670,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2045",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2045.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ],
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -15207,11 +14731,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2049",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2049.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -15259,11 +14779,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2050",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2050.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -15324,14 +14840,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2055",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2055.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ],
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "670",
@@ -15408,11 +14917,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2058",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2058.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -15480,12 +14985,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2061",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2061.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -15524,12 +15024,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2065",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2065.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -15604,14 +15099,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2074",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2074.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ],
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -15686,11 +15174,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2076",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2076.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "388",
@@ -15797,11 +15281,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2078",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2078.webp",
-    "tagsPorteur": [
-      [
-        "DRAGON BALL XENOVERSE 2"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "726",
@@ -15864,17 +15344,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2079",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2079.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ],
-      [
-        "Ki divin"
-      ],
-      [
-        "DRAGON BALL XENOVERSE 2"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -15904,17 +15374,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2080",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2080.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ],
-      [
-        "Ennemi puissant"
-      ],
-      [
-        "DRAGON BALL XENOVERSE 2"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -15944,11 +15404,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2081",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2081.webp",
-    "tagsPorteur": [
-      [
-        "Nappa"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "607",
@@ -16050,11 +15506,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2083",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2083.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif au jeu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -16086,11 +15538,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2085",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2085.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif au jeu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -16156,17 +15604,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2089",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2089.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ],
-      [
-        "Cyborg"
-      ],
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -16232,12 +15670,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2094",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2094.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -16267,11 +15700,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2097",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2097.webp",
-    "tagsPorteur": [
-      [
-        "Escadron blindé de Cooler"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "744",
@@ -16402,11 +15831,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/2099",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2099.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -16468,17 +15893,388 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_2105",
+    "sourceId": "2105",
+    "nom": "Tu veux le savoir ?",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2105",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2105.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "si un « Classe : Ki divin » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Ki divin",
+          "tags_requis": [
+            "Classe : Ki divin"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 2
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "si un « Classe : Ki divin » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Ki divin",
+          "tags_requis": [
+            "Classe : Ki divin"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un « Classe : Futur » plus « Classe : Lignée royale Vegeta » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Futur",
+          "tags_requis": [
+            "Classe : Futur",
+            "Classe : Lignée royale Vegeta"
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2106",
+    "sourceId": "2106",
+    "nom": "Et moi, je suis... le grand Vegeta, prince des Saiyans !",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2106",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2106.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "si un autre « Classe : Futur » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Futur",
+          "tags_requis": [
+            "Classe : Futur"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
+        },
+        "slot": 2
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": {
+          "description": "si un autre « Classe : Futur » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Futur",
+          "tags_requis": [
+            "Classe : Futur"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
+        },
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 3,
+        "valeur_max": 6,
+        "condition": {
+          "description": "par combattant de l'équipe portant ce même équipement",
+          "mode": "per_member",
+          "seuil": 1,
+          "tag_requis": null,
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 3,
+        "valeur_max": 6,
+        "condition": {
+          "description": "par combattant de l'équipe portant ce même équipement",
+          "mode": "per_member",
+          "seuil": 1,
+          "tag_requis": null,
+          "tags_requis": [],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2111",
+    "sourceId": "2111",
+    "nom": "Oh que si !",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2111",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2111.webp",
+    "tagsPorteur": [],
+    "porteursExacts": [
+      {
+        "id": "595",
+        "code": "DBL67-05S",
+        "nom": "Super C-17"
+      }
+    ],
+    "lignes": [
+      {
+        "stat": "force_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 25,
+        "valeur_max": 50,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "degats_infliges",
+        "valeur_min": 60,
+        "valeur_max": 170,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "garde_contre_degats",
+        "valeur_min": 90,
+        "valeur_max": 270,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Une fois entré en scène, régénère la force de 5.00% ~ 15.00%.",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Dégâts infligés 10.00% ~ 30.00% par combattant de l'équipe « Classe : GT » ou « Classe : Cyborg »",
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Lors d'un art ultime, annule les désavantages d'attribut (10 secondes)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "▼Si la force restante est de 50% ou moins quand vous subissez une attaque d'art (2 fois) :",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Coût de tous les arts de tous les ennemis +50 (5 secondes) (immunité contre les malus de stats et annulation possibles)",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Prolonge de 2 secondes la durée de mise en attente de tous les ennemis",
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "À l'activation du Mode Overdrive, régénère la force des alliés de 15% tant que vous n'êtes pas K.O.",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2114",
+    "sourceId": "2114",
+    "nom": "Ah...",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2114",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2114.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "est_passif": true,
+        "description_passif": "Attaque physique de base 10.00% ~ 25.00% - OR - Attaque d'énergie de base 10.00% ~ 25.00%",
+        "slot": 1
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un « Classe : GT » plus « Classe : Lignée royale Vegeta » fait partie des combattants de l'équipe. - OR - Augmente de 5.00% ~ 15.00% l'attaque physique si un « Classe : GT » plus « Classe : Famille Goku » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : GT",
+          "tags_requis": [
+            "Classe : GT",
+            "Classe : Lignée royale Vegeta",
+            "Classe : GT",
+            "Classe : Famille Goku"
+          ],
+          "portee": "equipe",
+          "combinaison": "et",
+          "exclure_soi": false
+        },
+        "slot": 2
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si 3 « Classe : GT » ou « Classe : Guerrier fusionné » font partie de l'équipe",
+          "mode": "threshold",
+          "seuil": 3,
+          "tag_requis": "Classe : GT",
+          "tags_requis": [
+            "Classe : GT",
+            "Classe : Guerrier fusionné"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si 3 « Classe : GT » ou « Classe : Guerrier fusionné » font partie de l'équipe",
+          "mode": "threshold",
+          "seuil": 3,
+          "tag_requis": "Classe : GT",
+          "tags_requis": [
+            "Classe : GT",
+            "Classe : Guerrier fusionné"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2117",
+    "sourceId": "2117",
+    "nom": "L'éveil de la bête",
+    "rarete": "unique",
+    "sourceUrl": "https://fr.dblegends.net/equip/2117",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2117.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 15,
+        "valeur_max": 30,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 15,
+        "valeur_max": 35,
+        "condition": null,
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_30001",
     "sourceId": "30001",
     "nom": "SPARKING !! - Boo",
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30001",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30001.webp",
-    "tagsPorteur": [
-      [
-        "Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "113",
@@ -16572,11 +16368,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30002",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30002.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "112",
@@ -16677,11 +16469,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30003",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30003.webp",
-    "tagsPorteur": [
-      [
-        "Son Gohan"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "186",
@@ -16768,11 +16556,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30004",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30004.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "216",
@@ -16851,11 +16635,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30005",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30005.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "185",
@@ -16927,11 +16707,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30006",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30006.webp",
-    "tagsPorteur": [
-      [
-        "Goku Black"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "126",
@@ -17013,11 +16789,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30007",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30007.webp",
-    "tagsPorteur": [
-      [
-        "C-16"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "95",
@@ -17118,11 +16890,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30008",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30008.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "32",
@@ -17192,11 +16960,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30009",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30009.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "16",
@@ -17278,11 +17042,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30010",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30010.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "76",
@@ -17345,11 +17105,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30011",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30011.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "271",
@@ -17424,11 +17180,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30012",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30012.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "270",
@@ -17505,11 +17257,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30013",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30013.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "93",
@@ -17600,11 +17348,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30014",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30014.webp",
-    "tagsPorteur": [
-      [
-        "Son Gohan"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "111",
@@ -17695,11 +17439,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30015",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30015.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "207",
@@ -17785,11 +17525,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30016",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30016.webp",
-    "tagsPorteur": [
-      [
-        "Cooler"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "168",
@@ -17878,11 +17614,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30017",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30017.webp",
-    "tagsPorteur": [
-      [
-        "Thalès"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "50",
@@ -17973,11 +17705,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30018",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30018.webp",
-    "tagsPorteur": [
-      [
-        "Slug"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "189",
@@ -18066,11 +17794,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30019",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30019.webp",
-    "tagsPorteur": [
-      [
-        "Glorio"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "645",
@@ -18135,11 +17859,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30020",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30020.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "568",
@@ -18218,11 +17938,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30021",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30021.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "569",
@@ -18301,11 +18017,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30022",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30022.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "252",
@@ -18382,11 +18094,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30023",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30023.webp",
-    "tagsPorteur": [
-      [
-        "Gogeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "148",
@@ -18475,11 +18183,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30024",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30024.webp",
-    "tagsPorteur": [
-      [
-        "C-21"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "300",
@@ -18563,11 +18267,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30025",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30025.webp",
-    "tagsPorteur": [
-      [
-        "Trunks"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "384",
@@ -18654,11 +18354,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30026",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30026.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "459",
@@ -18769,11 +18465,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30027",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30027.webp",
-    "tagsPorteur": [
-      [
-        "Zahha"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "524",
@@ -18885,11 +18577,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30028",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30028.webp",
-    "tagsPorteur": [
-      [
-        "Shin"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "611",
@@ -18991,11 +18679,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30029",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30029.webp",
-    "tagsPorteur": [
-      [
-        "Jiren"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "540",
@@ -19112,11 +18796,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30030",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30030.webp",
-    "tagsPorteur": [
-      [
-        "Caway"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "542",
@@ -19228,11 +18908,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "unique",
     "sourceUrl": "https://fr.dblegends.net/equip/30031",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_30031.webp",
-    "tagsPorteur": [
-      [
-        "Roi Cold"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "699",
@@ -19334,11 +19010,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50001",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1068.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -19392,12 +19064,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50002",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1117.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -19427,12 +19094,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50004",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1071.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -19464,12 +19126,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50006",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1307.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique",
@@ -19512,11 +19169,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50007",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1039.webp",
-    "tagsPorteur": [
-      [
-        "Shallot"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "19800",
@@ -19574,11 +19227,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50008",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1162.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -19621,15 +19270,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50012",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1113.webp",
-    "tagsPorteur": [
-      [
-        "C-17"
-      ],
-      [
-        "Cyborg",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -19679,11 +19320,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50014",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1289.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -19713,11 +19350,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50015",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1125.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -19756,11 +19389,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50018",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1267.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -19792,11 +19421,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50019",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1145.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -19826,17 +19451,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50020",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1034.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ],
-      [
-        "Son Goku"
-      ],
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "251",
@@ -19916,14 +19531,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50021",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1181.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ],
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -19953,11 +19561,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50025",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1197.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -20000,12 +19604,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50026",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1130.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -20046,12 +19645,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50027",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1300.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -20090,12 +19684,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50030",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1081.webp",
-    "tagsPorteur": [
-      [
-        "Filles",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -20139,12 +19728,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50031",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1009.webp",
-    "tagsPorteur": [
-      [
-        "JAU",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -20172,11 +19756,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50032",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1041.webp",
-    "tagsPorteur": [
-      [
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -20206,12 +19786,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50033",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1148.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -20241,12 +19816,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50035",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1037.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -20276,12 +19846,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50036",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1114.webp",
-    "tagsPorteur": [
-      [
-        "Filles",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -20318,12 +19883,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50037",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1044.webp",
-    "tagsPorteur": [
-      [
-        "ROU",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -20360,12 +19920,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50038",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1194.webp",
-    "tagsPorteur": [
-      [
-        "Legends Road",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "169",
@@ -20421,11 +19976,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50039",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1518.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -20466,11 +20017,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50041",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1553.webp",
-    "tagsPorteur": [
-      [
-        "Chaozu"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "9",
@@ -20556,12 +20103,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50042",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1066.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -20607,12 +20149,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50043",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1143.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -20662,11 +20199,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50044",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1074.webp",
-    "tagsPorteur": [
-      [
-        "Thalès"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -20708,12 +20241,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50045",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1040.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -20759,12 +20287,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50046",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1115.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -20803,12 +20326,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50047",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1210.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -20859,12 +20377,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50048",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1049.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -20901,12 +20414,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50049",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1140.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -20943,11 +20451,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50050",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1417.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -20984,12 +20488,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50053",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1184.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -21028,12 +20527,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50054",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1279.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -21070,12 +20564,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50055",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1273.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21128,12 +20617,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50057",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1521.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -21170,20 +20654,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50058",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1058.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "BLE"
-      ],
-      [
-        "Cyborg",
-        "VER"
-      ],
-      [
-        "Cyborg",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -21225,11 +20696,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50059",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1035.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -21273,12 +20740,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50060",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1226.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21317,12 +20779,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50061",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1038.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -21361,12 +20818,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50063",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1491.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Saga Super - Trunks du futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21405,11 +20857,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50064",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1159.webp",
-    "tagsPorteur": [
-      [
-        "Legends Road"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -21446,11 +20894,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50066",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1339.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -21489,12 +20933,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50068",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1203.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -21524,12 +20963,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50069",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1482.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21568,11 +21002,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50070",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1292.webp",
-    "tagsPorteur": [
-      [
-        "Fusion"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21609,11 +21039,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50072",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1109.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21650,11 +21076,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50074",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1047.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21691,16 +21113,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50075",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1613.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Type énergie"
-      ],
-      [
-        "Ki divin",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -21739,12 +21152,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50076",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1015.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -21783,16 +21191,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50078",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1137.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé",
-        "Type physique"
-      ],
-      [
-        "Guerrier transformé",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -21831,11 +21230,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50079",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1399.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -21874,12 +21269,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50080",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1142.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -21925,12 +21315,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50081",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1287.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Fusion"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -21967,11 +21352,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50082",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1526.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -21999,11 +21380,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50083",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1281.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -22040,12 +21417,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50084",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1674.webp",
-    "tagsPorteur": [
-      [
-        "Équipe Bardock",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -22082,12 +21454,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50085",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1282.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -22126,12 +21493,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50086",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1584.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival",
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -22170,12 +21532,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50087",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1644.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -22212,12 +21569,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50088",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1589.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -22263,12 +21615,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50089",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1014.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -22307,12 +21654,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50090",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1043.webp",
-    "tagsPorteur": [
-      [
-        "Trunks",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -22351,12 +21693,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50091",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1312.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -22395,12 +21732,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50092",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1629.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -22439,16 +21771,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50093",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1434.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta",
-        "Type physique"
-      ],
-      [
-        "Vegeta",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -22487,12 +21810,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50095",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1489.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -22524,12 +21842,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50096",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1134.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan 3",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "668",
@@ -22581,11 +21894,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50097",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1215.webp",
-    "tagsPorteur": [
-      [
-        "Namek"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -22624,11 +21933,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50098",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1444.webp",
-    "tagsPorteur": [
-      [
-        "Vegetto"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -22672,11 +21977,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50099",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1653.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -22713,11 +22014,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50100",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1619.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -22763,16 +22060,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50101",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1237.webp",
-    "tagsPorteur": [
-      [
-        "VER",
-        "Saga Z - Les cyborgs"
-      ],
-      [
-        "VER",
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -22807,14 +22095,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50102",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1625.webp",
-    "tagsPorteur": [
-      [
-        "Goku Black"
-      ],
-      [
-        "Zamasu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -22856,12 +22137,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50103",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1275.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -22907,12 +22183,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50104",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1607.webp",
-    "tagsPorteur": [
-      [
-        "Broly",
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -22958,11 +22229,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50105",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1510.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -23001,12 +22268,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50106",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1547.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -23045,11 +22307,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50107",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1623.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -23093,39 +22351,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50108",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1548.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan 4",
-        "Type physique"
-      ]
-    ],
-    "porteursExacts": [
-      {
-        "id": "621",
-        "code": "DBL73-01U",
-        "nom": "Super Saiyan 4 Gogeta"
-      },
-      {
-        "id": "670",
-        "code": "DBL81-04S",
-        "nom": "Super Saiyan 4 Son Goku"
-      },
-      {
-        "id": "501",
-        "code": "DBL53-01S",
-        "nom": "Super Saiyan 4 Son Goku & Vegeta"
-      },
-      {
-        "id": "388",
-        "code": "DBL34-01S",
-        "nom": "Super Saiyan 4 Son Goku"
-      },
-      {
-        "id": "270",
-        "code": "DBL19-05S",
-        "nom": "Super Saiyan 4 Son Goku"
-      }
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -23171,11 +22397,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50109",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1611.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan Rosé"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -23212,11 +22434,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50110",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1469.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -23262,12 +22480,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50111",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1709.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Fusion"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -23306,11 +22519,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50113",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1585.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -23340,12 +22549,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50114",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1614.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -23391,12 +22595,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50115",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1695.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -23433,14 +22632,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50116",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1493.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ],
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -23491,11 +22683,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50121",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1610.webp",
-    "tagsPorteur": [
-      [
-        "Goku Black"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -23541,11 +22729,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50122",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1626.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -23591,11 +22775,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50124",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1136.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan 3"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -23634,12 +22814,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50125",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1599.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -23685,11 +22860,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50126",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1602.webp",
-    "tagsPorteur": [
-      [
-        "Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -23728,12 +22899,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50127",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1429.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Enfant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -23770,12 +22936,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50128",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1419.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival",
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -23825,11 +22986,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50129",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1694.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -23859,12 +23016,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50130",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1575.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -23914,12 +23066,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50131",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1527.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -23956,11 +23103,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50132",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1110.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24009,12 +23152,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50133",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1179.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer",
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -24053,12 +23191,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50134",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1681.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24111,11 +23244,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50135",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1156.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24147,11 +23276,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50136",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1158.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -24208,11 +23333,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50137",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1150.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -24262,11 +23383,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50138",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1147.webp",
-    "tagsPorteur": [
-      [
-        "Janemba"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "572",
@@ -24337,12 +23454,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50139",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1146.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24379,11 +23491,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50140",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1582.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -24436,12 +23544,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50141",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1650.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24487,12 +23590,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50142",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1045.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -24542,11 +23640,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50143",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1540.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -24574,12 +23668,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50144",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1744.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24625,12 +23714,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50145",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1743.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -24676,12 +23760,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50146",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1252.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta",
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -24739,12 +23818,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50147",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1378.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24783,12 +23857,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50148",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1503.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24823,12 +23892,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50149",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1288.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -24878,11 +23942,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50150",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1522.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -24939,11 +23999,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50151",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1660.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -25018,16 +24074,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50152",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1070.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "VIO"
-      ],
-      [
-        "Saga des films",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -25090,14 +24137,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50153",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1678.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ],
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -25208,14 +24248,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50154",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1532.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ],
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -25245,11 +24278,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50155",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1781.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -25315,12 +24344,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50156",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1467.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -25378,11 +24402,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50157",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1549.webp",
-    "tagsPorteur": [
-      [
-        "Dragons maléfiques"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -25419,12 +24439,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50158",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1641.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -25502,12 +24517,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50159",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1853.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -25546,12 +24556,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50160",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1714.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -25597,11 +24602,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50161",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1559.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -25647,17 +24648,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50162",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1783.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ],
-      [
-        "Super Saiyan 2"
-      ],
-      [
-        "Super Saiyan 3"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -25714,11 +24705,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50163",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1138.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -25768,14 +24755,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50164",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1779.webp",
-    "tagsPorteur": [
-      [
-        "Porteur d'arme"
-      ],
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -25812,12 +24792,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50165",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1494.webp",
-    "tagsPorteur": [
-      [
-        "Goku Black",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "648",
@@ -25923,11 +24898,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50166",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1129.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -25984,11 +24955,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50167",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1537.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan divin SS"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -26046,12 +25013,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50168",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1211.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -26109,14 +25071,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50169",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1535.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ],
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -26173,11 +25128,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50170",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1305.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -26240,11 +25191,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50171",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1297.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -26281,14 +25228,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50172",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1373.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ],
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -26334,11 +25274,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50173",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1511.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -26406,11 +25342,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50174",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1166.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -26460,12 +25392,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50175",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1172.webp",
-    "tagsPorteur": [
-      [
-        "DB",
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -26509,11 +25436,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50176",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1182.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -26559,11 +25482,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50177",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1685.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -26620,11 +25539,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50178",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1436.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -26674,12 +25589,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50179",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1011.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -26736,12 +25646,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50180",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1655.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -26798,11 +25703,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50181",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1636.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -26868,11 +25769,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50182",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1628.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -26940,11 +25837,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50183",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1739.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -26983,11 +25876,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50184",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1513.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -27048,12 +25937,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50185",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1765.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -27097,11 +25981,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50186",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1217.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -27167,11 +26047,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50187",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1377.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -27212,13 +26088,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50188",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1089.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Saiyan métis",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -27262,12 +26132,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50189",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1302.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -27318,11 +26183,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50190",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1632.webp",
-    "tagsPorteur": [
-      [
-        "Famille Hera"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -27383,11 +26244,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50191",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1131.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -27462,12 +26319,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50192",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1341.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -27504,12 +26356,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50193",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1751.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -27577,12 +26424,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50194",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2018.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA",
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "714",
@@ -27662,11 +26504,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50195",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1597.webp",
-    "tagsPorteur": [
-      [
-        "Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -27716,12 +26554,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50196",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1701.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -27796,12 +26629,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50197",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1060.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -27862,12 +26690,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50198",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1670.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta",
-        "Saga Super - Trunks du futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -27931,12 +26754,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50199",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1959.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA",
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "722",
@@ -28031,11 +26849,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50200",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1870.webp",
-    "tagsPorteur": [
-      [
-        "Équipe Bardock"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -28092,12 +26906,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50201",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1332.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Absorption"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -28154,16 +26963,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50202",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1495.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Futur"
-      ],
-      [
-        "Ki divin",
-        "DRAGON BALL XENOVERSE 2"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -28233,11 +27033,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50203",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1381.webp",
-    "tagsPorteur": [
-      [
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -28287,11 +27083,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50204",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1280.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -28333,12 +27125,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50205",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1195.webp",
-    "tagsPorteur": [
-      [
-        "VIO",
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -28413,11 +27200,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50206",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1630.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -28485,12 +27268,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50207",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1931.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta",
-        "Super Saiyan 2"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -28558,11 +27336,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50208",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1787.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -28652,11 +27426,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50209",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1791.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -28738,11 +27508,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50210",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1816.webp",
-    "tagsPorteur": [
-      [
-        "Cooler"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -28799,14 +27565,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedgold",
     "sourceUrl": "https://fr.dblegends.net/equip/50212",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1403.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ],
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -28870,18 +27629,256 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_50213",
+    "sourceId": "50213",
+    "nom": "Les Saiyans n'ont aucune limite !",
+    "rarete": "awakenedgold",
+    "sourceUrl": "https://fr.dblegends.net/equip/50213",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1541.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 10,
+        "valeur_max": 25,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "critique_de_base",
+        "valeur_min": 6,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 6,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 6,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_energie",
+        "valeur_min": 3,
+        "valeur_max": 6,
+        "condition": {
+          "description": "par combattant de l'équipe d'« Classe : Lignée royale Vegeta »  ou « Classe : Futur »",
+          "mode": "per_member",
+          "seuil": 1,
+          "tag_requis": "Classe : Lignée royale Vegeta",
+          "tags_requis": [
+            "Classe : Lignée royale Vegeta",
+            "Classe : Futur"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_50214",
+    "sourceId": "50214",
+    "nom": "Laisse-moi combattre à tes côtés !",
+    "rarete": "awakenedgold",
+    "sourceUrl": "https://fr.dblegends.net/equip/50214",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1198.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "est_passif": true,
+        "description_passif": "Défense physique de base 10.00% ~ 25.00% - OR - Défense d'énergie de base 10.00% ~ 25.00%",
+        "slot": 1
+      },
+      {
+        "stat": "degats_tech_spe",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "degats_ultime",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Bonus d'attaque contre les Régénération 6.00% ~ 12.50%",
+        "slot": 3
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 6,
+        "valeur_max": 12.5,
+        "condition": null,
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_50215",
+    "sourceId": "50215",
+    "nom": "Je vais réduire cette planète en poussière !",
+    "rarete": "awakenedgold",
+    "sourceUrl": "https://fr.dblegends.net/equip/50215",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1551.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 10,
+        "valeur_max": 20,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "critique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un autre « Classe : Dragons maléfiques » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Dragons maléfiques",
+          "tags_requis": [
+            "Classe : Dragons maléfiques"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
+        },
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un autre « Classe : Dragons maléfiques » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Dragons maléfiques",
+          "tags_requis": [
+            "Classe : Dragons maléfiques"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": true
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_50216",
+    "sourceId": "50216",
+    "nom": "Je veux en finir aujourd'hui.",
+    "rarete": "awakenedgold",
+    "sourceUrl": "https://fr.dblegends.net/equip/50216",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1848.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "defense_physique_de_base",
+        "valeur_min": 8,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 8,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un « Épisode : Saga des films » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 2
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 8,
+        "valeur_max": 15,
+        "condition": {
+          "description": "si un « Épisode : Saga des films » fait partie des combattants de l'équipe",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Épisode : Saga des films",
+          "tags_requis": [
+            "Épisode : Saga des films"
+          ],
+          "portee": "equipe",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 2
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 6,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "stat": "quantite_regen_force",
+        "valeur_min": 6,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_1006",
     "sourceId": "1006",
     "nom": "Comment oses-tu...",
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1006",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1006.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -28932,11 +27929,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1009",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1009.webp",
-    "tagsPorteur": [
-      [
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -28966,11 +27959,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1010",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1010.webp",
-    "tagsPorteur": [
-      [
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29000,11 +27989,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1011",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1011.webp",
-    "tagsPorteur": [
-      [
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -29034,12 +28019,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1014",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1014.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -29071,12 +28051,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1015",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1015.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -29108,11 +28083,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1026",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1026.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -29140,11 +28111,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1034",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1034.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -29174,11 +28141,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1035",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1035.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29210,11 +28173,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1037",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1037.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -29246,11 +28205,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1038",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1038.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -29282,11 +28237,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1039",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1039.webp",
-    "tagsPorteur": [
-      [
-        "Shallot"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "19800",
@@ -29337,11 +28288,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1040",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1040.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -29373,11 +28320,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1041",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1041.webp",
-    "tagsPorteur": [
-      [
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -29407,11 +28350,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1042",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1042.webp",
-    "tagsPorteur": [
-      [
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -29441,11 +28380,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1043",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1043.webp",
-    "tagsPorteur": [
-      [
-        "Trunks"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -29477,12 +28412,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1044",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1044.webp",
-    "tagsPorteur": [
-      [
-        "ROU",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -29512,11 +28442,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1045",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1045.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -29559,11 +28485,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1046",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1046.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -29593,11 +28515,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1047",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1047.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -29629,11 +28547,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1049",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1049.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -29663,11 +28577,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1052",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1052.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29710,11 +28620,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1056",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1056.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -29746,11 +28652,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1058",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1058.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29780,11 +28682,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1060",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1060.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29814,11 +28712,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1066",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1066.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29850,11 +28744,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1067",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1067.webp",
-    "tagsPorteur": [
-      [
-        "Krillin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29886,11 +28776,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1068",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1068.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -29922,12 +28808,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1070",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1070.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -29971,11 +28852,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1071",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1071.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -30007,11 +28884,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1074",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1074.webp",
-    "tagsPorteur": [
-      [
-        "Thalès"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -30041,11 +28914,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1075",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1075.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -30075,14 +28944,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1078",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1078.webp",
-    "tagsPorteur": [
-      [
-        "C-21"
-      ],
-      [
-        "C-16"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -30121,11 +28983,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1081",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1081.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -30157,12 +29015,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1083",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1083.webp",
-    "tagsPorteur": [
-      [
-        "Filles",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -30204,11 +29057,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1084",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1084.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -30240,12 +29089,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1089",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1089.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -30277,11 +29121,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1090",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1090.webp",
-    "tagsPorteur": [
-      [
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -30309,11 +29149,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1091",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1091.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -30343,11 +29179,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1092",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1092.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -30377,12 +29209,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1093",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1093.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -30423,11 +29250,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1109",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1109.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -30459,11 +29282,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1110",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1110.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -30504,14 +29323,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1113",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1113.webp",
-    "tagsPorteur": [
-      [
-        "C-17"
-      ],
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -30541,12 +29353,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1114",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1114.webp",
-    "tagsPorteur": [
-      [
-        "Filles",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -30585,11 +29392,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1115",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1115.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -30621,14 +29424,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1117",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1117.webp",
-    "tagsPorteur": [
-      [
-        "C-17"
-      ],
-      [
-        "C-18"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -30658,11 +29454,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1118",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1118.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -30703,12 +29495,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1119",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1119.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -30745,11 +29532,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1121",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1121.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -30779,12 +29562,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1123",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1123.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -30827,11 +29605,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1125",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1125.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -30893,11 +29667,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1127",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1127.webp",
-    "tagsPorteur": [
-      [
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -30929,11 +29699,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1128",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1128.webp",
-    "tagsPorteur": [
-      [
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -30977,12 +29743,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1129",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1129.webp",
-    "tagsPorteur": [
-      [
-        "Filles",
-        "Type assistance"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -31025,12 +29786,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1130",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1130.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -31071,11 +29827,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1131",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1131.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -31107,11 +29859,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1132",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1132.webp",
-    "tagsPorteur": [
-      [
-        "Legends Road"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31154,11 +29902,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1133",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1133.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31190,12 +29934,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1134",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1134.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31227,11 +29966,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1136",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1136.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan 3"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -31263,12 +29998,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1137",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1137.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -31300,12 +30030,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1138",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1138.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -31348,11 +30073,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1139",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1139.webp",
-    "tagsPorteur": [
-      [
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -31382,11 +30103,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1140",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1140.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -31416,12 +30133,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1141",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1141.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -31464,12 +30176,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1142",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1142.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31508,11 +30215,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1143",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1143.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -31555,11 +30258,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1144",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1144.webp",
-    "tagsPorteur": [
-      [
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31589,11 +30288,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1145",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1145.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31625,11 +30320,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1146",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1146.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31673,12 +30364,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1147",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1147.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -31708,11 +30394,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1148",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1148.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -31742,11 +30424,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1149",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1149.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier de l'au-delà"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31785,12 +30463,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1150",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1150.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -31833,11 +30506,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1151",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1151.webp",
-    "tagsPorteur": [
-      [
-        "Legends Road"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -31880,11 +30549,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1152",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1152.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -31914,12 +30579,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1153",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1153.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -31949,11 +30609,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1156",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1156.webp",
-    "tagsPorteur": [
-      [
-        "Saga Dragon Ball"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -31985,11 +30641,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1158",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1158.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -32030,12 +30682,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1159",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1159.webp",
-    "tagsPorteur": [
-      [
-        "Legends Road",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "213",
@@ -32075,12 +30722,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1161",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1161.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Dragon Ball"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "672",
@@ -32155,11 +30797,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1162",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1162.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -32191,11 +30829,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1163",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1163.webp",
-    "tagsPorteur": [
-      [
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -32248,12 +30882,12 @@ window.DBL_ITEMS_SCRAPED = [
       },
       {
         "est_passif": true,
-        "description_passif": "Attaque physique de base 4.00% ~ 10.00% - OR - Attaque d'énergie de base 4.00% ~ 10.00% - OR - Défense physique de base 4.00% ~ 10.00% - OR - Défense d'énergie de base 4.00% ~ 10.00%",
+        "description_passif": "Attaque physique de base 4.00% ~ 10.00% - OR - Attaque d'énergie de base 4.00% ~ 10.00% - OR - Défense physique de base 4.00% ~ 10.00% - OR - Défense d'énergie de base 4.00% ~ 10.00% - OR - Attaque physique de base 1.00% ~ 10.00% - OR - Attaque d'énergie de base 1.00% ~ 10.00% - OR - Défense physique de base 1.00% ~ 10.00% - OR - Défense d'énergie de base 1.00% ~ 10.00%",
         "slot": 2
       },
       {
         "est_passif": true,
-        "description_passif": "Attaque physique de base 4.00% ~ 10.00% - OR - Attaque d'énergie de base 4.00% ~ 10.00% - OR - Défense physique de base 4.00% ~ 10.00% - OR - Défense d'énergie de base 4.00% ~ 10.00%",
+        "description_passif": "Attaque physique de base 4.00% ~ 10.00% - OR - Attaque d'énergie de base 4.00% ~ 10.00% - OR - Défense physique de base 4.00% ~ 10.00% - OR - Défense d'énergie de base 4.00% ~ 10.00% - OR - Attaque physique de base 1.00% ~ 10.00% - OR - Attaque d'énergie de base 1.00% ~ 10.00% - OR - Défense physique de base 1.00% ~ 10.00% - OR - Défense d'énergie de base 1.00% ~ 10.00%",
         "slot": 3
       }
     ]
@@ -32265,12 +30899,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1165",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1165.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -32316,11 +30945,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1166",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1166.webp",
-    "tagsPorteur": [
-      [
-        "Saga Dragon Ball"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -32363,14 +30988,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1167",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1167.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ],
-      [
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -32414,12 +31032,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1168",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1168.webp",
-    "tagsPorteur": [
-      [
-        "JAU",
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -32449,11 +31062,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1169",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1169.webp",
-    "tagsPorteur": [
-      [
-        "Legends Road"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -32496,11 +31105,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1171",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1171.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -32537,11 +31142,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1172",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1172.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -32578,17 +31179,50 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_1174",
+    "sourceId": "1174",
+    "nom": "Châtiment spirituel",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/1174",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_1174.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "defense_energie_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Augmente de 5.00% ~ 10.00% la défense et l'attaque physique si vous êtes de « Classe : Super Saiyan ».",
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_1176",
     "sourceId": "1176",
     "nom": "Bien sûr !",
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1176",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1176.webp",
-    "tagsPorteur": [
-      [
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -32678,11 +31312,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1179",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1179.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -32714,11 +31344,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1180",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1180.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -32761,11 +31387,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1181",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1181.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -32797,11 +31419,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1182",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1182.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -32833,12 +31451,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1183",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1183.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -32868,11 +31481,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1184",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1184.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -32904,11 +31513,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1187",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1187.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -32940,11 +31545,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1188",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1188.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -32976,11 +31577,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1189",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1189.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -33012,11 +31609,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1193",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1193.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -33048,11 +31641,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1194",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1194.webp",
-    "tagsPorteur": [
-      [
-        "Legends Road"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33089,12 +31678,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1195",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1195.webp",
-    "tagsPorteur": [
-      [
-        "VIO",
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -33126,12 +31710,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1196",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1196.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33177,11 +31756,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1197",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1197.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33213,11 +31788,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1198",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1198.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -33252,11 +31823,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1200",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1200.webp",
-    "tagsPorteur": [
-      [
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -33286,12 +31853,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1203",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1203.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -33321,11 +31883,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1204",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1204.webp",
-    "tagsPorteur": [
-      [
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33357,11 +31915,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1206",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1206.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -33393,11 +31947,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1207",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1207.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33427,12 +31977,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1208",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1208.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33478,11 +32023,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1210",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1210.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33512,12 +32053,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1211",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1211.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33549,12 +32085,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1212",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1212.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33593,12 +32124,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1213",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1213.webp",
-    "tagsPorteur": [
-      [
-        "BLE",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -33642,11 +32168,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1215",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1215.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33678,11 +32200,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1216",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1216.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -33752,17 +32270,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1217",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1217.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ],
-      [
-        "Cyborg"
-      ],
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -33797,11 +32305,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1218",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1218.webp",
-    "tagsPorteur": [
-      [
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -33833,11 +32337,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1221",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1221.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -33905,11 +32405,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1223",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1223.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -33952,12 +32448,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1226",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1226.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -33987,12 +32478,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1230",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1230.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -34031,11 +32517,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1235",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1235.webp",
-    "tagsPorteur": [
-      [
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -34067,11 +32549,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1237",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1237.webp",
-    "tagsPorteur": [
-      [
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -34103,12 +32581,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1239",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1239.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -34140,12 +32613,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1240",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1240.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34191,12 +32659,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1245",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1245.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34242,11 +32705,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1247",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1247.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -34289,11 +32748,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1248",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1248.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34335,11 +32790,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1250",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1250.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34389,11 +32840,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1252",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1252.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -34436,12 +32883,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1259",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1259.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34494,12 +32936,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1266",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1266.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -34529,11 +32966,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1267",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1267.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34565,12 +32998,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1268",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1268.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -34602,12 +33030,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1269",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1269.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -34639,11 +33062,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1270",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1270.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -34682,11 +33101,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1271",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1271.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34761,12 +33176,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1273",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1273.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34810,11 +33220,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1274",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1274.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34846,12 +33252,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1275",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1275.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -34890,14 +33291,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1276",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1276.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ],
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -34929,12 +33323,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1277",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1277.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -34969,11 +33358,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1279",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1279.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -35005,12 +33390,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1280",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1280.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -35042,11 +33422,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1281",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1281.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -35078,12 +33454,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1282",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1282.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35115,11 +33486,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1287",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1287.webp",
-    "tagsPorteur": [
-      [
-        "Fusion"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -35158,12 +33525,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1288",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1288.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier transformé",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35206,11 +33568,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1289",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1289.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35240,12 +33598,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1292",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1292.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "454",
@@ -35302,12 +33655,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1294",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1294.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -35339,11 +33687,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1295",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1295.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -35400,11 +33744,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1297",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1297.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -35432,11 +33772,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1299",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1299.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35486,12 +33822,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1300",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1300.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -35534,11 +33865,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1302",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1302.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35581,11 +33908,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1305",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1305.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35628,12 +33951,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1307",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1307.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35665,12 +33983,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1311",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1311.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35711,11 +34024,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1312",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1312.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35747,11 +34056,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1314",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1314.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -35788,12 +34093,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1332",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1332.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Absorption"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -35825,11 +34125,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1339",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1339.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -35859,12 +34155,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1341",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1341.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35907,11 +34198,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1353",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1353.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -35941,11 +34228,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1361",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1361.webp",
-    "tagsPorteur": [
-      [
-        "Cell"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -35984,11 +34267,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1362",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1362.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -36038,12 +34317,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1369",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1369.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -36082,11 +34356,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1372",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1372.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan 2"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -36136,11 +34406,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1373",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1373.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -36179,11 +34445,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1375",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1375.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -36215,11 +34477,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1377",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1377.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -36260,11 +34518,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1378",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1378.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -36296,11 +34550,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1381",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1381.webp",
-    "tagsPorteur": [
-      [
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -36332,14 +34582,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1388",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1388.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ],
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -36367,12 +34610,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1396",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1396.webp",
-    "tagsPorteur": [
-      [
-        "VER",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -36416,11 +34654,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1399",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1399.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -36459,11 +34693,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1402",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1402.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -36493,11 +34723,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1403",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1403.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -36540,12 +34766,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1404",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1404.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -36596,11 +34817,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1405",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1405.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -36643,11 +34860,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1411",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1411.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -36679,11 +34892,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1413",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1413.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -36713,11 +34922,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1417",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1417.webp",
-    "tagsPorteur": [
-      [
-        "Univers 6"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -36749,11 +34954,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1419",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1419.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -36796,12 +34997,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1427",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1427.webp",
-    "tagsPorteur": [
-      [
-        "Type physique",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -36845,11 +35041,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1429",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1429.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -36879,11 +35071,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1434",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1434.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -36915,11 +35103,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1436",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1436.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -36951,12 +35135,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1437",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1437.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -36986,11 +35165,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1438",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1438.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -37033,12 +35208,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1441",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1441.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -37068,12 +35238,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1444",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1444.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné",
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -37105,11 +35270,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1449",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1449.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -37159,11 +35320,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1450",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1450.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -37213,11 +35370,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1460",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1460.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -37243,12 +35396,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1466",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1466.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -37274,12 +35422,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1467",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1467.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -37320,11 +35463,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1469",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1469.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -37363,11 +35502,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1470",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1470.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37399,12 +35534,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1482",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1482.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37443,12 +35573,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1488",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1488.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Super - Beerus, dieu de la destruction"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "591",
@@ -37513,11 +35638,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1489",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1489.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -37549,12 +35670,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1490",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1490.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Super - Trunks du futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37607,12 +35723,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1491",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1491.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37644,14 +35755,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1493",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1493.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ],
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37692,11 +35796,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1494",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1494.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -37739,11 +35839,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1495",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1495.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -37784,14 +35880,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1498",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1498.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ],
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -37828,11 +35917,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1503",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1503.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37867,11 +35952,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1510",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1510.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37903,11 +35984,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1511",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1511.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -37951,11 +36028,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1513",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1513.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -37999,11 +36072,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1517",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1517.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -38042,11 +36111,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1518",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1518.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -38089,12 +36154,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1521",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1521.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -38124,11 +36184,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1522",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1522.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38169,11 +36225,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1526",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1526.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -38205,11 +36257,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1527",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1527.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -38239,11 +36287,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1532",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1532.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -38287,12 +36331,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1535",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1535.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -38340,16 +36379,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1536",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1536.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "VER"
-      ],
-      [
-        "Futur",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38392,12 +36422,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1537",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1537.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38438,12 +36463,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1539",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1539.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -38484,11 +36504,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1540",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1540.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -38516,11 +36532,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1541",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1541.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38570,12 +36582,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1543",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1543.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38618,11 +36625,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1544",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1544.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier de l'au-delà"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38652,12 +36655,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1545",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1545.webp",
-    "tagsPorteur": [
-      [
-        "ROU",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -38699,12 +36697,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1547",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1547.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38734,11 +36727,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1548",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1548.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan 4"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -38770,11 +36759,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1549",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1549.webp",
-    "tagsPorteur": [
-      [
-        "Dragons maléfiques"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -38804,11 +36789,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1550",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1550.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -38858,11 +36839,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1551",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1551.webp",
-    "tagsPorteur": [
-      [
-        "Dragons maléfiques"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -38894,12 +36871,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1553",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1553.webp",
-    "tagsPorteur": [
-      [
-        "Super guerrier",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -38929,11 +36901,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1555",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1555.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -39001,12 +36969,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1559",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1559.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -39045,11 +37008,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1564",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1564.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -39092,12 +37051,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1575",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1575.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -39140,11 +37094,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1582",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1582.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -39176,11 +37126,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1583",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1583.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -39215,11 +37161,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1584",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1584.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -39258,11 +37200,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1585",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1585.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -39306,12 +37244,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1589",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1589.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -39350,14 +37283,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1590",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1590.webp",
-    "tagsPorteur": [
-      [
-        "Dieu de la destruction"
-      ],
-      [
-        "Ange"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -39401,11 +37327,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1592",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1592.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -39454,12 +37376,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1593",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1593.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -39510,17 +37427,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1594",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1594.webp",
-    "tagsPorteur": [
-      [
-        "Raditz"
-      ],
-      [
-        "Nappa"
-      ],
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "138",
@@ -39588,11 +37495,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1596",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1596.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -39622,11 +37525,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1597",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1597.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -39663,12 +37562,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1599",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1599.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -39700,11 +37594,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1602",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1602.webp",
-    "tagsPorteur": [
-      [
-        "Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -39736,11 +37626,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1603",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1603.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -39772,12 +37658,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1604",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1604.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "Type assistance"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -39814,12 +37695,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1605",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1605.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -39872,12 +37748,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1607",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1607.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -39907,11 +37778,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1608",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1608.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan 2"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -39941,12 +37808,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1610",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1610.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -39985,11 +37847,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1611",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1611.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan Rosé"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -40019,11 +37877,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1613",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1613.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -40055,12 +37909,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1614",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1614.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40092,11 +37941,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1616",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1616.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -40146,11 +37991,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1618",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1618.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40182,11 +38023,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1619",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1619.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -40214,11 +38051,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1620",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1620.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -40268,11 +38101,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1622",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1622.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40304,11 +38133,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1623",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1623.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -40343,12 +38168,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1625",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1625.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -40378,11 +38198,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1626",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1626.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40414,11 +38230,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1627",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1627.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40450,11 +38262,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1628",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1628.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -40500,11 +38308,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1629",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1629.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -40536,11 +38340,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1630",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1630.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -40572,12 +38372,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1631",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1631.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -40607,12 +38402,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1632",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1632.webp",
-    "tagsPorteur": [
-      [
-        "Famille Hera",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40642,11 +38432,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1636",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1636.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -40676,11 +38462,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1641",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1641.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -40726,11 +38508,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1644",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1644.webp",
-    "tagsPorteur": [
-      [
-        "Univers rival"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -40762,11 +38540,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1646",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1646.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -40834,11 +38608,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1648",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1648.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -40870,12 +38640,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1650",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1650.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -40914,11 +38679,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1653",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1653.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -40946,12 +38707,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1654",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1654.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -40990,11 +38746,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1655",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1655.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -41026,11 +38778,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1656",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1656.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -41062,11 +38810,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1657",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1657.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -41116,12 +38860,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1658",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1658.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "604",
@@ -41196,11 +38935,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1660",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1660.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Les Saiyans"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -41232,11 +38967,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1663",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1663.webp",
-    "tagsPorteur": [
-      [
-        "Sbire"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -41266,12 +38997,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1664",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1664.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -41359,12 +39085,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1669",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1669.webp",
-    "tagsPorteur": [
-      [
-        "Type défense",
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -41394,11 +39115,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1670",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1670.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -41437,11 +39154,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1674",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1674.webp",
-    "tagsPorteur": [
-      [
-        "Équipe Bardock"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -41485,14 +39198,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1678",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1678.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ],
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -41603,11 +39309,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1681",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1681.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -41639,11 +39341,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1685",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1685.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -41675,11 +39373,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1691",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1691.webp",
-    "tagsPorteur": [
-      [
-        "Type assistance"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -41747,11 +39441,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1692",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1692.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -41783,11 +39473,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1694",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1694.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -41819,12 +39505,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1695",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1695.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -41854,12 +39535,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1698",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1698.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -41889,11 +39565,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1699",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1699.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -41923,12 +39595,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1700",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1700.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Super - La résurrection de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "732",
@@ -42003,12 +39670,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1701",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1701.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -42047,12 +39709,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1706",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1706.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -42105,11 +39762,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1708",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1708.webp",
-    "tagsPorteur": [
-      [
-        "Super guerrier"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -42155,12 +39808,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1709",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1709.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -42190,11 +39838,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1714",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1714.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -42226,13 +39870,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1715",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1715.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga des films",
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -42285,12 +39923,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1716",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1716.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -42329,11 +39962,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1717",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1717.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -42361,12 +39990,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1719",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1719.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -42398,13 +40022,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1722",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1722.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga des films",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -42457,12 +40075,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1726",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1726.webp",
-    "tagsPorteur": [
-      [
-        "EXTRÊME",
-        "Sbire"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -42490,11 +40103,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1727",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1727.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -42522,11 +40131,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1737",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1737.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -42556,12 +40161,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1739",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1739.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -42593,12 +40193,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1743",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1743.webp",
-    "tagsPorteur": [
-      [
-        "GT",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -42630,12 +40225,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1744",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1744.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -42667,11 +40257,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1751",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1751.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -42703,11 +40289,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1753",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1753.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Trunks du futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -42739,12 +40321,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1763",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1763.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga GT - À la recherche des Dragon Balls aux étoiles noires"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "713",
@@ -42814,11 +40391,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1765",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1765.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -42844,11 +40417,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1767",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1767.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -42878,11 +40447,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1769",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1769.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -42917,11 +40482,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1770",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1770.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -42958,11 +40519,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1772",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1772.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -43006,11 +40563,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1773",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1773.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -43056,12 +40609,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1775",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1775.webp",
-    "tagsPorteur": [
-      [
-        "Filles",
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -43092,11 +40640,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1778",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1778.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -43153,11 +40697,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1779",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1779.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -43189,12 +40729,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1781",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1781.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan",
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -43222,17 +40757,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1783",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1783.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ],
-      [
-        "Super Saiyan 2"
-      ],
-      [
-        "Super Saiyan 3"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -43282,14 +40807,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1787",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1787.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ],
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -43343,11 +40861,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1791",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1791.webp",
-    "tagsPorteur": [
-      [
-        "Représentant d'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "vitesse_regen_ki_de_base",
@@ -43397,14 +40911,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1798",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1798.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ],
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -43459,11 +40966,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1799",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1799.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -43513,11 +41016,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1810",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1810.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -43556,13 +41055,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1815",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1815.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga des films",
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "578",
@@ -43627,11 +41120,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1816",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1816.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -43682,11 +41171,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1821",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1821.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -43716,11 +41201,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1830",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1830.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -43788,11 +41269,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1834",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1834.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -43824,12 +41301,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1835",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1835.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga Z - Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -43882,11 +41354,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1846",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1846.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -43916,11 +41384,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1848",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1848.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier de l'au-delà"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -43971,12 +41435,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1853",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1853.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -44008,11 +41467,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1868",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1868.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films (SUPER HERO)"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -44085,11 +41540,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1870",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1870.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -44139,17 +41590,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1887",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1887.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ],
-      [
-        "Super guerrier"
-      ],
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -44217,11 +41658,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1897",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1897.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -44272,11 +41709,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1904",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1904.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -44326,14 +41759,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1907",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1907.webp",
-    "tagsPorteur": [
-      [
-        "Ki divin"
-      ],
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -44408,11 +41834,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1913",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1913.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -44462,11 +41884,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1915",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1915.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -44534,17 +41952,17 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1916",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1916.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga GT - Dragons maléfiques"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "443",
         "code": "DBL-EVT-38U",
         "nom": "Oméga Shenron"
+      },
+      {
+        "id": "758",
+        "code": "DBL-EVT-114S",
+        "nom": "San Shenron"
       },
       {
         "id": "620",
@@ -44604,11 +42022,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1921",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1921.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -44676,11 +42090,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1924",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1924.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -44748,11 +42158,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1928",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1928.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan métis"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -44827,11 +42233,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1931",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1931.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -44899,11 +42301,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1939",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1939.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Trunks du futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -44953,11 +42351,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1944",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1944.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -45007,14 +42401,13 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1946",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1946.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif aux événements",
-        "Saga des films",
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
+      {
+        "id": "759",
+        "code": "DBL-EVT-115S",
+        "nom": "Gamma 1"
+      },
       {
         "id": "625",
         "code": "DBL-EVT-86S",
@@ -45073,11 +42466,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1956",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1956.webp",
-    "tagsPorteur": [
-      [
-        "Porteur d'arme"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -45145,11 +42534,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1959",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1959.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -45199,14 +42584,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1960",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1960.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ],
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -45257,11 +42635,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1982",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1982.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -45329,11 +42703,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1990",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1990.webp",
-    "tagsPorteur": [
-      [
-        "DB"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -45370,17 +42740,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1992",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1992.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ],
-      [
-        "Ennemi puissant"
-      ],
-      [
-        "Super guerrier"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -45448,11 +42808,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1994",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1994.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -45502,11 +42858,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/1995",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1995.webp",
-    "tagsPorteur": [
-      [
-        "Ennemi puissant"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -45574,11 +42926,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2014",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2014.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -45628,14 +42976,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2017",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2017.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ],
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -45672,11 +43013,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2018",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2018.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -45746,11 +43083,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2023",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2023.webp",
-    "tagsPorteur": [
-      [
-        "GT"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -45800,11 +43133,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2029",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2029.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -45872,11 +43201,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2035",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2035.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "quantite_regen_force",
@@ -45944,14 +43269,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2041",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2041.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ],
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -46019,11 +43337,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2048",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2048.webp",
-    "tagsPorteur": [
-      [
-        "DAIMA"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -46060,11 +43374,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2052",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2052.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -46114,11 +43424,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2059",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2059.webp",
-    "tagsPorteur": [
-      [
-        "Guerrier fusionné"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -46149,17 +43455,74 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_2069",
+    "sourceId": "2069",
+    "nom": "Bien sûr, trop facile !",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/2069",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2069.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 10,
+        "valeur_max": 25,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "defense_physique",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si vous êtes un « Classe : Saiyan métis »",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Saiyan métis",
+          "tags_requis": [
+            "Classe : Saiyan métis"
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      },
+      {
+        "stat": "defense_energie",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": {
+          "description": "si vous êtes un « Classe : Saiyan métis »",
+          "mode": "threshold",
+          "seuil": 1,
+          "tag_requis": "Classe : Saiyan métis",
+          "tags_requis": [
+            "Classe : Saiyan métis"
+          ],
+          "portee": "porteur",
+          "combinaison": "ou",
+          "exclure_soi": false
+        },
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_2075",
     "sourceId": "2075",
     "nom": "Je vais essayer de te faire gagner un peu de temps !",
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2075",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2075.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Boo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -46229,11 +43592,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2084",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2084.webp",
-    "tagsPorteur": [
-      [
-        "Exclusif au jeu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -46292,11 +43651,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2086",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2086.webp",
-    "tagsPorteur": [
-      [
-        "Saga Super - Survie de l'Univers"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -46346,11 +43701,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2093",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2093.webp",
-    "tagsPorteur": [
-      [
-        "Saga des films"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -46387,11 +43738,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2096",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2096.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -46459,11 +43806,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/2100",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_2100.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -46507,17 +43850,80 @@ window.DBL_ITEMS_SCRAPED = [
     ]
   },
   {
+    "id": "equip_2104",
+    "sourceId": "2104",
+    "nom": "Il n'y a pas de raison que je perde contre un faux.",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/2104",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2104.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "attaque_energie_de_base",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "stat": "attaque_physique_de_base",
+        "valeur_min": 5,
+        "valeur_max": 10,
+        "condition": null,
+        "slot": 3
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Augmente de 5.00% ~ 10.00% la défense et l'attaque d'énergie si vous êtes un « Classe : Super Saiyan divin SS ».",
+        "slot": 3
+      }
+    ]
+  },
+  {
+    "id": "equip_2107",
+    "sourceId": "2107",
+    "nom": "C'est trop gentil, j'ai d'autres talents.",
+    "rarete": "gold",
+    "sourceUrl": "https://fr.dblegends.net/equip/2107",
+    "image": "https://fr.dblegends.net/assets/equips/EqIco_2107.webp",
+    "tagsPorteur": [],
+    "lignes": [
+      {
+        "stat": "degats_tech_spe",
+        "valeur_min": 5,
+        "valeur_max": 15,
+        "condition": null,
+        "slot": 1
+      },
+      {
+        "stat": "force_de_base",
+        "valeur_min": 5,
+        "valeur_max": 12,
+        "condition": null,
+        "slot": 2
+      },
+      {
+        "est_passif": true,
+        "description_passif": "Si vous êtes « Style de combat : Type physique » ou « Style de combat : Type énergie », attaque physique et d'énergie 5.00% ~ 12.00% - OR - Si vous êtes « Style de combat : Type défense » ou « Style de combat : Type assistance », défense physique et d'énergie 5.00% ~ 15.00%",
+        "slot": 3
+      }
+    ]
+  },
+  {
     "id": "equip_71011",
     "sourceId": "71011",
     "nom": "[TdP] Voilà le Kaioken !!",
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/71011",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1011.webp",
-    "tagsPorteur": [
-      [
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -46527,11 +43933,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/71123",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1123.webp",
-    "tagsPorteur": [
-      [
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -46541,11 +43943,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/71129",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1129.webp",
-    "tagsPorteur": [
-      [
-        "Type assistance"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -46555,11 +43953,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "gold",
     "sourceUrl": "https://fr.dblegends.net/equip/71139",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1139.webp",
-    "tagsPorteur": [
-      [
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -46579,12 +43973,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50005",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1008.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -46623,12 +44012,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50009",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1054.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -46667,11 +44051,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50011",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1017.webp",
-    "tagsPorteur": [
-      [
-        "Commando Ginyu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -46732,11 +44112,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50013",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1013.webp",
-    "tagsPorteur": [
-      [
-        "Généalogie maléfique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique",
@@ -46779,12 +44155,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50017",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1055.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg",
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -46827,12 +44198,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50028",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1001.webp",
-    "tagsPorteur": [
-      [
-        "VER",
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "est_passif": true,
@@ -46862,12 +44228,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50029",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1057.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan",
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -46899,12 +44260,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50034",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1061.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -46941,11 +44297,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50040",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1012.webp",
-    "tagsPorteur": [
-      [
-        "Super guerrier"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -46989,12 +44341,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50051",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1085.webp",
-    "tagsPorteur": [
-      [
-        "Filles",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -47051,11 +44398,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50056",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1185.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -47101,16 +44444,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50062",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1019.webp",
-    "tagsPorteur": [
-      [
-        "Saga Z - Freezer",
-        "HERO"
-      ],
-      [
-        "Saga Z - Freezer",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -47138,12 +44472,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50065",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1032.webp",
-    "tagsPorteur": [
-      [
-        "VIO",
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -47182,12 +44511,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50067",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1190.webp",
-    "tagsPorteur": [
-      [
-        "Futur",
-        "EXTRÊME"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -47231,11 +44555,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50071",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1031.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -47274,12 +44594,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50077",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1069.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer",
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -47325,12 +44640,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "awakenedsilver",
     "sourceUrl": "https://fr.dblegends.net/equip/50123",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1220.webp",
-    "tagsPorteur": [
-      [
-        "Régénération",
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -47362,11 +44672,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1001",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1001.webp",
-    "tagsPorteur": [
-      [
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -47398,11 +44704,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1002",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1002.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -47432,12 +44734,13 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1005",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1005.webp",
-    "tagsPorteur": [
-      [
-        "Chaozu"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
+      {
+        "id": "692",
+        "code": "DBL84-02S",
+        "nom": "Tenshinhan & Chaozu"
+      },
       {
         "id": "9",
         "code": "DBL01-12E",
@@ -47478,11 +44781,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1007",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1007.webp",
-    "tagsPorteur": [
-      [
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -47514,11 +44813,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1008",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1008.webp",
-    "tagsPorteur": [
-      [
-        "Piccolo"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -47550,14 +44845,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1012",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1012.webp",
-    "tagsPorteur": [
-      [
-        "Famille Goku"
-      ],
-      [
-        "Super guerrier"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -47589,11 +44877,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1013",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1013.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -47625,11 +44909,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1016",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1016.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -47661,11 +44941,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1017",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1017.webp",
-    "tagsPorteur": [
-      [
-        "Commando Ginyu"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -47695,12 +44971,13 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1018",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1018.webp",
-    "tagsPorteur": [
-      [
-        "Guldo"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
+      {
+        "id": "562",
+        "code": "DBL62-02S",
+        "nom": "Reacum & Guldo"
+      },
       {
         "id": "231",
         "code": "DBL14-09E",
@@ -47743,11 +45020,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1019",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1019.webp",
-    "tagsPorteur": [
-      [
-        "HERO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -47775,11 +45048,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1021",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1021.webp",
-    "tagsPorteur": [
-      [
-        "Reacum"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "562",
@@ -47828,11 +45097,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1022",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1022.webp",
-    "tagsPorteur": [
-      [
-        "Jeese"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "561",
@@ -47881,12 +45146,13 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1023",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1023.webp",
-    "tagsPorteur": [
-      [
-        "Butta"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
+      {
+        "id": "561",
+        "code": "DBL62-03S",
+        "nom": "Jeese & Butta"
+      },
       {
         "id": "232",
         "code": "DBL14-07E",
@@ -47927,11 +45193,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1024",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1024.webp",
-    "tagsPorteur": [
-      [
-        "Ginyu"
-      ]
-    ],
+    "tagsPorteur": [],
     "porteursExacts": [
       {
         "id": "560",
@@ -47990,11 +45252,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1027",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1027.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -48026,11 +45284,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1028",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1028.webp",
-    "tagsPorteur": [
-      [
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -48062,11 +45316,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1029",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1029.webp",
-    "tagsPorteur": [
-      [
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -48098,11 +45348,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1030",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1030.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -48132,11 +45378,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1031",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1031.webp",
-    "tagsPorteur": [
-      [
-        "Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -48168,11 +45410,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1032",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1032.webp",
-    "tagsPorteur": [
-      [
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -48204,14 +45442,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1036",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1036.webp",
-    "tagsPorteur": [
-      [
-        "Son Goku"
-      ],
-      [
-        "Super guerrier"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -48243,11 +45474,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1054",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1054.webp",
-    "tagsPorteur": [
-      [
-        "Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -48279,11 +45506,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1055",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1055.webp",
-    "tagsPorteur": [
-      [
-        "Cyborg"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -48315,11 +45538,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1057",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1057.webp",
-    "tagsPorteur": [
-      [
-        "Super Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -48351,11 +45570,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1061",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1061.webp",
-    "tagsPorteur": [
-      [
-        "Lignée royale Vegeta"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -48387,11 +45602,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1069",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1069.webp",
-    "tagsPorteur": [
-      [
-        "Armée de Freezer"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "critique_de_base",
@@ -48423,11 +45634,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1085",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1085.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -48459,11 +45666,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1086",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1086.webp",
-    "tagsPorteur": [
-      [
-        "Filles"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -48493,11 +45696,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1111",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1111.webp",
-    "tagsPorteur": [
-      [
-        "C-17"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "degats_tech_spe",
@@ -48527,11 +45726,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1185",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1185.webp",
-    "tagsPorteur": [
-      [
-        "Broly"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_energie_de_base",
@@ -48563,11 +45758,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1186",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1186.webp",
-    "tagsPorteur": [
-      [
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_energie_de_base",
@@ -48599,11 +45790,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1190",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1190.webp",
-    "tagsPorteur": [
-      [
-        "Futur"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -48635,11 +45822,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/1220",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1220.webp",
-    "tagsPorteur": [
-      [
-        "Régénération"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "defense_physique_de_base",
@@ -48671,11 +45854,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71001",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1001.webp",
-    "tagsPorteur": [
-      [
-        "VER"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48685,11 +45864,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71007",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1007.webp",
-    "tagsPorteur": [
-      [
-        "ROU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48699,11 +45874,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71008",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1008.webp",
-    "tagsPorteur": [
-      [
-        "Type physique"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48713,11 +45884,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71013",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1013.webp",
-    "tagsPorteur": [
-      [
-        "Type énergie"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48727,11 +45894,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71029",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1029.webp",
-    "tagsPorteur": [
-      [
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48741,11 +45904,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71030",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1030.webp",
-    "tagsPorteur": [
-      [
-        "BLE"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48755,11 +45914,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71032",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1032.webp",
-    "tagsPorteur": [
-      [
-        "VIO"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48769,11 +45924,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71055",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1055.webp",
-    "tagsPorteur": [
-      [
-        "Type assistance"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48783,11 +45934,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "silver",
     "sourceUrl": "https://fr.dblegends.net/equip/71061",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1061.webp",
-    "tagsPorteur": [
-      [
-        "Type défense"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": []
   },
   {
@@ -48886,11 +46033,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "bronze",
     "sourceUrl": "https://fr.dblegends.net/equip/1003",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1003.webp",
-    "tagsPorteur": [
-      [
-        "Super guerrier"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "attaque_physique_de_base",
@@ -48922,11 +46065,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "bronze",
     "sourceUrl": "https://fr.dblegends.net/equip/1020",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1020.webp",
-    "tagsPorteur": [
-      [
-        "JAU"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",
@@ -48958,11 +46097,7 @@ window.DBL_ITEMS_SCRAPED = [
     "rarete": "bronze",
     "sourceUrl": "https://fr.dblegends.net/equip/1033",
     "image": "https://fr.dblegends.net/assets/equips/EqIco_1033.webp",
-    "tagsPorteur": [
-      [
-        "Saiyan"
-      ]
-    ],
+    "tagsPorteur": [],
     "lignes": [
       {
         "stat": "force_de_base",

@@ -2861,9 +2861,9 @@
   function renderRarityFilters() {
     const counts = {};
     for (const it of ITEMS) counts[it.rarete] = (counts[it.rarete] || 0) + 1;
-    // Ordre fixe d'affichage
-    const ordre = ["platinum", "awakenedunique", "unique", "awakenedgold", "gold", "awakenedsilver", "silver", "awakenedbronze", "bronze", "iron", "event"];
-    const presentes = ordre.filter((r) => counts[r]);
+    // Même ordre que le tri de la liste (RARITY_ORDER) : une seule source,
+    // sinon une rareté ajoutée côté données n'apparaît pas dans les filtres.
+    const presentes = RARITY_ORDER.filter((r) => counts[r]);
     const total = ITEMS.length;
     const pills = [
       `<button class="rarity-pill ${state.modalRarityFilter === null ? "active" : ""}" data-rarity-filter="">${T('filter.all')} <span class="pill-count">${total}</span></button>`,
@@ -2879,6 +2879,7 @@
 
   // Ordre canonique d'affichage des raretés (du plus fort au plus faible)
   const RARITY_ORDER = [
+    "awakenedplatinum",
     "platinum",
     "awakenedunique",
     "unique",

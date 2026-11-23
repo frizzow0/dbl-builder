@@ -2521,6 +2521,7 @@ body:has(#item-modal:not(.hidden)) { overflow: hidden; }
    terne — on garde les teintes Unique du projet. --rar-ink = texte lisible
    posé sur un aplat de --rar (foncé sur les teintes claires). */
 .rar-platinum       { --rar: #7ec5f5; --rar-ink: #10222e; }
+.rar-awakenedplatinum { --rar: var(--rar-awakened); --rar-ink: #fff; }
 .rar-awakenedunique { --rar: var(--rar-awakened); --rar-ink: #fff; }
 .rar-unique         { --rar: var(--rar-unique); --rar-ink: #fff; }
 .rar-awakenedgold   { --rar: #caa52a; --rar-ink: #231a00; }
@@ -3148,6 +3149,8 @@ body:has(#item-modal:not(.hidden)) .site-footer { display: none !important; }
 .rar-gold:is(.filled, .is-framed)::after           { background-image: url(assets/frames/EqIco_frmGold.webp); }
 .rar-unique:is(.filled, .is-framed)::after         { background-image: url(assets/frames/EqIco_frmUnique.webp); }
 .rar-platinum:is(.filled, .is-framed)::after       { background-image: url(assets/frames/EqIco_frmPlatinum.webp); }
+/* Platinum éveillé : la source ne publie pas de cadre dédié, on reprend celui du Platinum. */
+.rar-awakenedplatinum:is(.filled, .is-framed)::after { background-image: url(assets/frames/EqIco_frmPlatinum.webp); }
 .rar-event:is(.filled, .is-framed)::after          { background-image: url(assets/frames/EqIco_frmEvent.webp); }
 .rar-awakenediron:is(.filled, .is-framed)::after   { background-image: url(assets/frames/EqIco_frmSpIron.webp); }
 .rar-awakenedbronze:is(.filled, .is-framed)::after { background-image: url(assets/frames/EqIco_frmSpBronze.webp); }
